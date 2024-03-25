@@ -1,0 +1,273 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <a name="integracao"></a>
+  <h3>Integração com a RNDS</h3>
+  <p> Para garantir a interoperabilidade entre as aplicações de Saúde Digital, em especial
+    Prontuário(s) Eletrônico(s) do Paciente (PEP), portais e aplicações (<i>web e mobile</i>), a
+    troca de informações ocorre por meio de serviços (<i>web services</i>) RESTful, desenvolvidos de
+    acordo com o padrão <a href="https://hl7.org/FHIR/">FHIR R4</a>. </p>
+
+  <a name="identificadores"></a>
+  <h3>Identificadores do Registro Enviado a RNDS</h3>
+  <p> Vale ressaltar que os registros são documentos computacionais, em formato JSON, compostos por
+    perfis (<i>profiles</i>) do padrão FHIR R4. Cada registro enviado à RNDS possui dois
+    identificadores: </p>
+  <ul>
+    <li>
+      <p><b>Identificador atribuído pelo sistema de origem</b>: também chamado de identificador
+        local, é o ID criado pelo sistema de origem para identificar univocamente o registro em sua
+        base.</p>
+      <p> No arquivo JSON, o identificador local deve ser informado no profile <i>Bundle</i>,
+        propriedade <code>identifier.value</code>. </p>
+
+      <pre><code>"identifier": {
+                "system": "http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-1111",
+                "value": "3112009-06246116057"
+            }</code></pre>
+
+      <p> Em "<i>system</i>"", deve-se completar a URI <code>
+        http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-</code> com o número do identificador do
+        solicitante (ver Identificador solicitante / <i>NamingSystem</i>). </p>
+    </li>
+    <li>
+      <p>
+        <b>Identificador atribuído pela RNDS</b>: também denominado de ID RNDS. Quando o registro é
+        enviado com sucesso (<i>header</i> de resposta 201) à RNDS, no <i>header</i> <code>location</code>
+        é gerada uma URL que é o identificador do registro na RNDS (ver Exemplos de consumo dos
+        serviços).
+      </p>
+      <p>
+        <b>IMPORTANTE</b>: os <i>softwares</i> integradores DEVEM SALVAR o identificador local e o
+        ID RNDS para que possam realizar ações futuras como: pesquisa, substituição (ver
+        Substituição de registro na RNDS) e exclusão.
+      </p>
+    </li>
+  </ul>
+
+  <a name="ambientes"></a>
+  <h3>Ambientes de Integração</h3>
+  <p>Seguindo as boas práticas serão disponibilizados dois ambientes para a integração: homologação
+    e produção.</p>
+
+  <a name="homologacao"></a>
+  <h4>Ambiente de Homologação</h4>
+  <p>O ambiente de homologação tem como finalidade validar a integração, seus parâmetros de
+    entradas, saídas e comportamentos negociais, permitindo a realização de testes antes da efetiva
+    comunicação com o ambiente de produção. O ambiente de homologação é único, ou seja, todos os
+    interessados em realizar o consumo dos serviços (<i>web services</i>) utilizarão o mesmo
+    ambiente. Porém, mesmo usando o mesmo ambiente, as informações trafegadas (incluídas ou
+    consultadas) estarão restritas aos estabelecimentos de saúde (CNES) elencados na etapa de
+    credenciamento. Os endereços dos componentes de integração, no ambiente de homologação, são:</p>
+
+  <ul>
+    <li>
+      <p>Utilizado para obtenção do token em ambiente de homologação:</p>
+      <pre><code>https://ehr-auth-hmg.saude.gov.br/api/</code></pre>
+    </li>
+    <li>
+      <p>
+        Utilizado para comunicação com demais serviços do ambiente de Homologação:
+      </p>
+      <pre><code>https://ehr-services.hmg.saude.gov.br/api/</code></pre>
+    </li>
+  </ul>
+
+  <a name="evidencias"></a>
+  <h4>Evidências da Homologação</h4>
+  <p>A partir dos testes realizados e da implementação local, serão aceitas como evidências dos
+    testes em
+    homologação um arquivo com:</p>
+  <ul>
+    <li>1 print do validador com sucesso;</li>
+    <li>1 print do <i>header</i> de resposta de criação do registro na RNDS;</li>
+    <li>1 print do <i>Bundle</i> enviado.</li>
+  </ul>
+  <p>Com essas evidências, o solicitante pode solicitar acesso ao ambiente de produção no <a
+      href="https://servicos-datasus.saude.gov.br/">Portal de
+      Serviços</a>.</p>
+
+  <a name="producao"></a>
+  <h3>Ambiente de Produção</h3>
+  <p>O ambiente de produção é o ambiente estável e real que provê os serviços (<i>web services</i>)
+    a serem consumidos. Para o ambiente produtivo, os integradores deverão acessar os endereços dos
+    seus estados (UF). Durante o credenciamento, a credencial de acesso (Certificado Digital) será
+    associada a um estabelecimento de saúde (CNES) (ou conjunto de estabelecimentos de saúde) no
+    Portal de Serviços do DATASUS. Com isso, a credencial de acesso pertencerá a um estado (UF)
+    específico. Acessos a estados diferentes não são permitidos e serão bloqueados automaticamente
+    pelos serviços (<i>web services</i>). Os endereços dos componentes de integração, no ambiente de
+    produção, por estado, são:</p>
+
+  <table class="grid">
+    <thead>
+      <tr>
+        <th>Estado</th>
+        <th>Endpoint</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Acre</td>
+        <td>
+          <code>https://ac-ehr-services.saude.gov.br/api/</code>
+        </td>
+      </tr>
+      <tr>
+        <td>Alagoas</td>
+        <td>
+          <code>https://al-ehr-services.saude.gov.br/api/</code>
+        </td>
+      </tr>
+      <tr>
+        <td>Amapá</td>
+        <td>
+          <code>https://ap-ehr-services.saude.gov.br/api/</code>
+        </td>
+      </tr>
+      <tr>
+        <td>Amazonas</td>
+        <td>
+          <code>https://am-ehr-services.saude.gov.br/api/</code>
+        </td>
+      </tr>
+      <tr>
+        <td>Bahia</td>
+        <td>
+          <code>https://ba-ehr-services.saude.gov.br/api/</code>
+        </td>
+      </tr>
+      <tr>
+        <td>Ceará</td>
+        <td>
+          <code>https://ce-ehr-services.saude.gov.br/api/</code>
+        </td>
+      </tr>
+      <tr>
+        <td>Distrito Federal</td>
+        <td>
+          <code>https://df-ehr-services.saude.gov.br/api/</code>
+        </td>
+      </tr>
+      <tr>
+        <td>Espírito Santo</td>
+        <td>
+          <code>https://es-ehr-services.saude.gov.br/api/</code>
+        </td>
+      </tr>
+      <tr>
+        <td>Goiás</td>
+        <td>
+          <code>https://go-ehr-services.saude.gov.br/api/</code>
+        </td>
+      </tr>
+      <tr>
+        <td>Maranhão</td>
+        <td>
+          <code>https://ma-ehr-services.saude.gov.br/api/</code>
+        </td>
+      </tr>
+      <tr>
+        <td>Mato Grosso</td>
+        <td>
+          <code>https://mt-ehr-services.saude.gov.br/api/</code>
+        </td>
+      </tr>
+      <tr>
+        <td>Mato Grosso do Sul</td>
+        <td>
+          <code>https://ms-ehr-services.saude.gov.br/api/</code>
+        </td>
+      </tr>
+      <tr>
+        <td>Minas Gerais</td>
+        <td>
+          <code>https://mg-ehr-services.saude.gov.br/api/</code>
+        </td>
+      </tr>
+      <tr>
+        <td>Pará</td>
+        <td>
+          <code>https://pa-ehr-services.saude.gov.br/api/</code>
+        </td>
+      </tr>
+      <tr>
+        <td>Paraíba</td>
+        <td>
+          <code>https://pb-ehr-services.saude.gov.br/api/</code>
+        </td>
+      </tr>
+      <tr>
+        <td>Paraná</td>
+        <td>
+          <code>https://pr-ehr-services.saude.gov.br/api/</code>
+        </td>
+      </tr>
+      <tr>
+        <td>Pernambuco</td>
+        <td>
+          <code>https://pe-ehr-services.saude.gov.br/api/</code>
+        </td>
+      </tr>
+      <tr>
+        <td>Piauí</td>
+        <td>
+          <code>https://pi-ehr-services.saude.gov.br/api/</code>
+        </td>
+      </tr>
+      <tr>
+        <td>Rio de Janeiro</td>
+        <td>
+          <code>https://rj-ehr-services.saude.gov.br/api/</code>
+        </td>
+      </tr>
+      <tr>
+        <td>Rio Grande do Norte</td>
+        <td>
+          <code>https://rn-ehr-services.saude.gov.br/api/</code>
+        </td>
+      </tr>
+      <tr>
+        <td>Rio Grande do Sul</td>
+        <td>
+          <code>https://rs-ehr-services.saude.gov.br/api/</code>
+        </td>
+      </tr>
+      <tr>
+        <td>Rondônia</td>
+        <td>
+          <code>https://ro-ehr-services.saude.gov.br/api/</code>
+        </td>
+      </tr>
+      <tr>
+        <td>Roraima</td>
+        <td>
+          <code>https://rr-ehr-services.saude.gov.br/api/</code>
+        </td>
+      </tr>
+      <tr>
+        <td>Santa Catarina</td>
+        <td>
+          <code>https://sc-ehr-services.saude.gov.br/api/</code>
+        </td>
+      </tr>
+      <tr>
+        <td>São Paulo</td>
+        <td>
+          <code>https://sp-ehr-services.saude.gov.br/api/</code>
+        </td>
+      </tr>
+      <tr>
+        <td>Sergipe</td>
+        <td>
+          <code>https://se-ehr-services.saude.gov.br/api/</code>
+        </td>
+      </tr>
+      <tr>
+        <td>Tocantins</td>
+        <td>
+          <code>https://to-ehr-services.saude.gov.br/api/</code>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

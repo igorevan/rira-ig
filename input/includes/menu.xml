@@ -1,0 +1,56 @@
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Principal</a>
+  </li>
+  <li>
+    <a href="credenciamento.html">Credenciamento</a>
+  </li>
+  <li>
+    <a href="seguranca.html">Segurança</a>
+  </li>
+  <li>
+    <a href="integracao.html">Integração</a>
+  </li>
+
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle"> O RIRA <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="mi.html">Modelo de Informação</a>
+        <a href="mc.html">Modelo Computacional</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle"> Especificação <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artefatos</a>
+        <a href="exemplos.html">Exemplos</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle"> Ajuda <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="toc.html">Índice</a>
+      </li>
+      <li>
+        <a target="_blank" href="{{site.data.fhir.path}}index.html"> FHIR Spec <img src="external.png"
+            style="text-align: baseline" />
+        </a>
+      </li>
+      <li>
+        <a href="changes.html">Histórico de mudanças</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+    </ul>
+  </li>
+</ul>

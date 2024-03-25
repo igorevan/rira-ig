@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="br.gov.saude.rnds.rira" />
+  <language value="pt-BR" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="informative" />
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1" />
+  </extension>
+  <url value="http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira" />
+  <version value="0.1.0" />
+  <name value="RIRARNDSIG" />
+  <title value="Guia de Implementação da Regulação Assistencial (RIRA) da RNDS" />
+  <status value="active" />
+  <experimental value="false" />
+  <publisher value="Ministério da Saúde do Brasil" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://www.saude.gov.br" />
+    </telecom>
+  </contact>
+  <description value="Guia de Implementação da Rede Nacional de Dados em Saúde (RNDS)" />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="BR" />
+    </coding>
+  </jurisdiction>
+  <packageId value="br.gov.saude.rnds.rira" />
+  <license value="CC0-1.0" />
+  <fhirVersion value="4.0.1" />
+  <definition>
+
+    <page>
+      <nameUrl value="toc.html" />
+      <title value="Índice" />
+      <generation value="html" />
+      <page>
+        <nameUrl value="index.html" />
+        <title value="Principal" />
+        <generation value="html" />
+      </page>
+      <page>
+        <nameUrl value="seguranca.html" />
+        <title value="Segurança" />
+        <generation value="html" />
+      </page>
+      <page>
+        <nameUrl value="integracao.html" />
+        <title value="Integração" />
+        <generation value="html" />
+      </page>
+      <page>
+        <nameUrl value="credenciamento.html" />
+        <title value="Credenciamento" />
+        <generation value="html" />
+      </page>
+      <page>
+        <nameUrl value="mc.html" />
+        <title value="O RIRA" />
+        <generation value="html" />
+      </page>
+      <page>
+        <nameUrl value="mi.html" />
+        <title value="Modelo de Informação" />
+        <generation value="html" />
+      </page>
+      <page>
+        <nameUrl value="exemplos.html" />
+        <title value="Exemplos" />
+        <generation value="html" />
+      </page>
+      <page>
+        <nameUrl value="downloads.html" />
+        <title value="Useful Downloads" />
+        <generation value="html" />
+      </page>
+      <page>
+        <nameUrl value="changes.html" />
+        <title value="Histórico de mudanças" />
+        <generation value="html" />
+      </page>
+    </page>
+    <parameter>
+      <code value="copyrightyear" />
+      <value value="2023+" />
+    </parameter>
+    <parameter>
+      <code value="releaselabel" />
+      <value value="CI Build" />
+    </parameter>
+    <parameter>
+      <code value="path-resource" />
+      <value value="input\history" />
+    </parameter>
+    <parameter>
+      <code value="shownav" />
+      <value value="true" />
+    </parameter>
+    <parameter>
+      <code value="path-resource" />
+      <value value="input/resources" />
+    </parameter>
+    <parameter>
+      <code value="path-pages" />
+      <value value="input/pagecontent" />
+    </parameter>
+  </definition>
+</ImplementationGuide>

@@ -1,0 +1,9 @@
+[
+  {
+    "id" : "br.gov.saude.rnds.rira",
+    "type" : "ImplementationGuide",
+    "url" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira",
+    "version" : "0.1.0",
+    "name" : "RIRARNDSIG"
+  }
+]

@@ -1,2 +1,5 @@
 # rira-ig
-Implementation Guide (IG) da Regulação Assistencial (RIRA) da Rede Nacional de Dados em Saúde (RNDS)
+
+Para subir esse IG no Github Pages é necessário mudar o nome da pasta "output" para "docs" sempre que gerar uma nova versão do IG.
+
+O arquivo "full-ig.zip" esta no .gitignore porque tem um tamanho que o Github não aceita em um commit.

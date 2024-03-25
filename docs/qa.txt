@@ -1,0 +1,16 @@
+RIRARNDSIG : Validation Results
+=========================================
+
+err = 1, warn = 4, info = 0
+IG Publisher Version: 1.6.3
+Generated Mon Mar 25 17:23:15 BRT 2024. FHIR version 4.0.1 for br.gov.saude.rnds.rira#0.1.0 (canonical = http://www.saude.gov.br/fhir/r4)
+ Build Errors : 0 / 4 / 0
+ C:\Users\Igor\rira-ig\input\myig : 1 / 0 / 1
+</table>
+== n/a ==
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== input\myig.xml ==
+ERROR: ImplementationGuide/br.gov.saude.rnds.rira: ImplementationGuide.definition: ImplementationGuide.definition.resource: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide|4.0.1)
