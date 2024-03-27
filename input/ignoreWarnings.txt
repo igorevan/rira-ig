@@ -3,3 +3,39 @@
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # instructions for ignoreWarnings.txt https://confluence.hl7.org/pages/viewpage.action?pageId=66938614#ImplementationGuideParameters-ManagingWarningsandHints
 # (And include comments like this justifying why)
+
+The Implementation Guide contains no examples for this profile
+
+The Implementation Guide contains no examples for this extension
+
+The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+
+An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+
+An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
+
+The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+
+Unable to resolve profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0
+
+Unable to resolve profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0
+
+Unable to resolve profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0
+
+Cannot check whether the target profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0 on Appointment.supportingInformation is valid constraint on the base because it is not known
+
+Cannot check whether the target profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0 on Appointment.participant.actor is valid constraint on the base because it is not known
+
+Cannot check whether the target profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0 on Composition.subject is valid constraint on the base because it is not known
+
+Cannot check whether the target profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0 on Composition.author is valid constraint on the base because it is not known
+
+Cannot check whether the target profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0 on Composition.author is valid constraint on the base because it is not known
+
+Cannot check whether the target profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0 on Composition.event.detail is valid constraint on the base because it is not known
+
+Cannot check whether the target profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0 on ServiceRequest.subject is valid constraint on the base because it is not known
+
+Cannot check whether the target profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0 on ServiceRequest.requester is valid constraint on the base because it is not known
+
+Cannot check whether the target profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0 on ServiceRequest.performer is valid constraint on the base because it is not known

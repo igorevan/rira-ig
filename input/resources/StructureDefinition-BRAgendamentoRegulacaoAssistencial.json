@@ -5,6 +5,7 @@
   "version": "1.0",
   "name": "BRAgendamentoRegulacaoAssistencial",
   "title": "Agendamento de Regulação Assistencial",
+  "description": "Agendamento de Regulação Assistencial",
   "status": "active",
   "experimental": false,
   "date": "2023-04-04",
