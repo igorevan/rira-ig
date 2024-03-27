@@ -1,0 +1,93 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoResolucaoDiagnosticoProblema-1.0> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "BREstadoResolucaoDiagnosticoProblema-1.0"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2020-03-12T13:09:54.402+00:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:language [ fhir:v "pt-BR"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"pt-BR\" lang=\"pt-BR\"><ul><li>Include these codes as defined in <a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-condition-clinical.html\"><code>http://terminology.hl7.org/CodeSystem/condition-clinical</code></a> version <code>*</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-condition-clinical.html#condition-clinical-active\">active</a></td><td>Ativo</td><td>The subject is currently experiencing the condition or situation, there is evidence of the condition or situation, or considered to be a significant risk.</td></tr><tr><td><a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-condition-clinical.html#condition-clinical-recurrence\">recurrence</a></td><td>Recorrente</td><td>The subject is experiencing a reoccurence or repeating of a previously resolved condition or situation, e.g. urinary tract infection, food insecurity.</td></tr><tr><td><a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-condition-clinical.html#condition-clinical-relapse\">relapse</a></td><td>Recidiva</td><td>The subject is experiencing a return of a condition or situation after a period of improvement or remission, e.g. relapse of cancer, alcoholism.</td></tr><tr><td><a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-condition-clinical.html#condition-clinical-inactive\">inactive</a></td><td>Inativo</td><td>The subject is no longer experiencing the condition or situation and there is no longer evidence or appreciable risk of the condition or situation.</td></tr><tr><td><a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-condition-clinical.html#condition-clinical-remission\">remission</a></td><td>Remissão</td><td>The subject is not presently experiencing the condition or situation, but there is a risk of the condition or situation returning.</td></tr><tr><td><a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-condition-clinical.html#condition-clinical-resolved\">resolved</a></td><td>Resolvido</td><td>The subject is not presently experiencing the condition or situation and there is a negligible perceived risk of the condition or situation returning.</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       fhir:v "1"^^xsd:integer ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
+         fhir:value [
+           fhir:v "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira"^^xsd:anyURI ;
+           fhir:link <http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       fhir:v "informative" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
+         fhir:value [
+           fhir:v "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira"^^xsd:anyURI ;
+           fhir:link <http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoResolucaoDiagnosticoProblema-1.0"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "BREstadoResolucaoDiagnosticoProblema"] ; # 
+  fhir:title [ fhir:v "Estado da Resolução de Diagnóstico ou Problema"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2020-03-12T13:09:53.3447193+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Ministério da Saúde do Brasil"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.saude.gov.br" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Estado da resolução de um diagnóstico ou problema."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "BR" ]
+     ] )
+  ] ) ; # 
+  fhir:immutable [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-clinical"^^xsd:anyURI ] ;
+       fhir:version [ fhir:v "*" ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "active" ] ;
+         fhir:display [ fhir:v "Ativo" ]
+       ] [
+         fhir:code [ fhir:v "recurrence" ] ;
+         fhir:display [ fhir:v "Recorrente" ]
+       ] [
+         fhir:code [ fhir:v "relapse" ] ;
+         fhir:display [ fhir:v "Recidiva" ]
+       ] [
+         fhir:code [ fhir:v "inactive" ] ;
+         fhir:display [ fhir:v "Inativo" ]
+       ] [
+         fhir:code [ fhir:v "remission" ] ;
+         fhir:display [ fhir:v "Remissão" ]
+       ] [
+         fhir:code [ fhir:v "resolved" ] ;
+         fhir:display [ fhir:v "Resolvido" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

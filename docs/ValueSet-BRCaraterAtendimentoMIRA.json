@@ -1,0 +1,73 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "BRCaraterAtendimentoMIRA",
+  "language" : "pt-BR",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"pt-BR\" lang=\"pt-BR\"><ul><li>Include these codes as defined in <a href=\"http://hl7.org/fhir/R4/codesystem-request-priority.html\"><code>http://hl7.org/fhir/request-priority</code></a> version <code>*</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td><td><b>Portuguese (Brazil) (pt)</b></td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-request-priority.html#request-priority-routine\">routine</a></td><td>Routine</td><td>The request has normal priority.</td><td>Eletivo</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-request-priority.html#request-priority-urgent\">urgent</a></td><td>Urgent</td><td>The request should be actioned promptly - higher priority than routine.</td><td>Urgência</td></tr></table></li></ul></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "informative",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira"
+      }]
+    }
+  }],
+  "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCaraterAtendimentoMIRA",
+  "version" : "0.1.0",
+  "name" : "BRCaraterAtendimentoMIRA",
+  "title" : "Caráter de Atendimento no MIRA",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-04-13T13:17:18.5012669+00:00",
+  "publisher" : "Ministério da Saúde do Brasil",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.saude.gov.br"
+    }]
+  }],
+  "description" : "Caráter da solicitação do procedimento.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "BR"
+    }]
+  }],
+  "immutable" : false,
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/request-priority",
+      "version" : "*",
+      "concept" : [{
+        "code" : "routine",
+        "display" : "Routine",
+        "designation" : [{
+          "language" : "pt-BR",
+          "value" : "Eletivo"
+        }]
+      },
+      {
+        "code" : "urgent",
+        "display" : "Urgent",
+        "designation" : [{
+          "language" : "pt-BR",
+          "value" : "Urgência"
+        }]
+      }]
+    }]
+  }
+}

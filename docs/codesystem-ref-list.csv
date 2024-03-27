@@ -1,1 +1,9 @@
 URL,Version,Status,OIDs,Name,Title,Descriptino,Used
+http://hl7.org/fhir/administrative-gender,4.0.1,active,"2.16.840.1.113883.4.642.4.2",AdministrativeGender,AdministrativeGender,"The gender of a person used for administrative purposes.","ValueSet/BRSexo-1.0"
+http://hl7.org/fhir/appointmentstatus,4.0.1,draft,"2.16.840.1.113883.4.642.4.485",AppointmentStatus,AppointmentStatus,"The free/busy status of an appointment.","ValueSet/BRStatusAgendamentoRegulacaoAssistencial"
+http://hl7.org/fhir/composition-status,4.0.1,draft,"2.16.840.1.113883.4.642.4.242",CompositionStatus,CompositionStatus,"The workflow/clinical status of the composition.","ValueSet/BREstadoDocumento-1.0"
+http://hl7.org/fhir/participationstatus,4.0.1,draft,"2.16.840.1.113883.4.642.4.487",ParticipationStatus,ParticipationStatus,"The Participation status of an appointment.","ValueSet/BRStatusParticipante"
+http://hl7.org/fhir/request-intent,4.0.1,draft,"2.16.840.1.113883.4.642.4.114",RequestIntent,RequestIntent,"Codes indicating the degree of authority/intentionality associated with a request.","ValueSet/BRIntencaoRegulacao"
+http://hl7.org/fhir/request-priority,4.0.1,draft,"2.16.840.1.113883.4.642.4.116",RequestPriority,RequestPriority,"Identifies the level of importance to be assigned to actioning the request.","ValueSet/BRCaraterAtendimentoMIRA"
+http://hl7.org/fhir/request-status,4.0.1,draft,"2.16.840.1.113883.4.642.4.112",RequestStatus,RequestStatus,"Codes identifying the lifecycle stage of a request.","ValueSet/BRStatusRequisicaoRegulacaoAssistencial"
+http://terminology.hl7.org/CodeSystem/condition-clinical,2.0.0,active,"2.16.840.1.113883.4.642.1.1074",ConditionClinicalStatusCodes,Condition Clinical Status Codes,"Preferred value set for Condition Clinical Status.","ValueSet/BREstadoResolucaoDiagnosticoProblema-1.0"

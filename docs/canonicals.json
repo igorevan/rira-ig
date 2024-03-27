@@ -5,5 +5,159 @@
     "url" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira",
     "version" : "0.1.0",
     "name" : "RIRARNDSIG"
+  },
+  {
+    "id" : "BRAgendamentoRegulacaoAssistencial",
+    "type" : "StructureDefinition",
+    "url" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial",
+    "version" : "0.1.0",
+    "name" : "BRAgendamentoRegulacaoAssistencial"
+  },
+  {
+    "id" : "BRCID10Avaliado-1.0",
+    "type" : "StructureDefinition",
+    "url" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0",
+    "version" : "0.1.0",
+    "name" : "BRCID10Avaliado"
+  },
+  {
+    "id" : "BRIndividuoNaoIdentificado-1.0",
+    "type" : "StructureDefinition",
+    "url" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuoNaoIdentificado-1.0",
+    "version" : "0.1.0",
+    "name" : "BRIndividuoNaoIdentificado"
+  },
+  {
+    "id" : "BRRegulacaoAssistencial",
+    "type" : "StructureDefinition",
+    "url" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial",
+    "version" : "0.1.0",
+    "name" : "BRRegulacaoAssistencial"
+  },
+  {
+    "id" : "BRRequisicaoRegulacaoAssistencial",
+    "type" : "StructureDefinition",
+    "url" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial",
+    "version" : "0.1.0",
+    "name" : "BRRequisicaoRegulacaoAssistencial"
+  },
+  {
+    "id" : "BRCID10-1.0",
+    "type" : "ValueSet",
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCID10-1.0",
+    "version" : "0.1.0",
+    "name" : "BRCID10"
+  },
+  {
+    "id" : "BRCaraterAtendimentoMIRA",
+    "type" : "ValueSet",
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCaraterAtendimentoMIRA",
+    "version" : "0.1.0",
+    "name" : "BRCaraterAtendimentoMIRA"
+  },
+  {
+    "id" : "BRCategoriaDiagnostico",
+    "type" : "ValueSet",
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCategoriaDiagnostico",
+    "version" : "0.1.0",
+    "name" : "BRCategoriaDiagnostico"
+  },
+  {
+    "id" : "BREstadoDocumento-1.0",
+    "type" : "ValueSet",
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoDocumento-1.0",
+    "version" : "0.1.0",
+    "name" : "BREstadoDocumento"
+  },
+  {
+    "id" : "BREstadoResolucaoDiagnosticoProblema-1.0",
+    "type" : "ValueSet",
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoResolucaoDiagnosticoProblema-1.0",
+    "version" : "0.1.0",
+    "name" : "BREstadoResolucaoDiagnosticoProblema"
+  },
+  {
+    "id" : "BRIntencaoRegulacao",
+    "type" : "ValueSet",
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRIntencaoRegulacao",
+    "version" : "0.1.0",
+    "name" : "BRIntencaoRegulacao"
+  },
+  {
+    "id" : "BRJustificativaIndividuoNaoIdentificado-1.0",
+    "type" : "ValueSet",
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRJustificativaIndividuoNaoIdentificado-1.0",
+    "version" : "0.1.0",
+    "name" : "BRJustificativaIndividuoNaoIdentificado"
+  },
+  {
+    "id" : "BRModalidadeAssistencialMIRA",
+    "type" : "ValueSet",
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRModalidadeAssistencialMIRA",
+    "version" : "0.1.0",
+    "name" : "BRModalidadeAssistencialMIRA"
+  },
+  {
+    "id" : "BROcupacao-1.0",
+    "type" : "ValueSet",
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BROcupacao-1.0",
+    "version" : "0.1.0",
+    "name" : "BROcupacao"
+  },
+  {
+    "id" : "BRProcedimentosNacionais-1.0",
+    "type" : "ValueSet",
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRProcedimentosNacionais-1.0",
+    "version" : "0.1.0",
+    "name" : "BRProcedimentosNacionais"
+  },
+  {
+    "id" : "BRSexo-1.0",
+    "type" : "ValueSet",
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRSexo-1.0",
+    "version" : "0.1.0",
+    "name" : "BRSexo"
+  },
+  {
+    "id" : "BRStatusAgendamentoRegulacaoAssistencial",
+    "type" : "ValueSet",
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial",
+    "version" : "0.1.0",
+    "name" : "BRStatusAgendamentoRegulacaoAssistencial"
+  },
+  {
+    "id" : "BRStatusParticipante",
+    "type" : "ValueSet",
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusParticipante",
+    "version" : "0.1.0",
+    "name" : "BRStatusParticipante"
+  },
+  {
+    "id" : "BRStatusRegulacaoAssistencial",
+    "type" : "ValueSet",
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial",
+    "version" : "0.1.0",
+    "name" : "BRStatusRegulacaoAssistencial"
+  },
+  {
+    "id" : "BRStatusRequisicaoRegulacaoAssistencial",
+    "type" : "ValueSet",
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRequisicaoRegulacaoAssistencial",
+    "version" : "0.1.0",
+    "name" : "BRStatusRequisicaoRegulacaoAssistencial"
+  },
+  {
+    "id" : "BRTipoDocumento-1.0",
+    "type" : "ValueSet",
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoDocumento-1.0",
+    "version" : "0.1.0",
+    "name" : "BRTipoDocumento"
+  },
+  {
+    "id" : "BRTipoParticipante",
+    "type" : "ValueSet",
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoParticipante",
+    "version" : "0.1.0",
+    "name" : "BRTipoParticipante"
   }
 ]

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="BRStatusRegulacaoAssistencial"/>
+  <language value="pt-BR"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR"><ul><li>Include all codes defined in <code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</code></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="informative">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"/>
+  <version value="0.1.0"/>
+  <name value="BRStatusRegulacaoAssistencial"/>
+  <title value="Status de regulação assistencial"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2023-04-13T13:17:18.5012669+00:00"/>
+  <publisher value="Ministério da Saúde do Brasil"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.saude.gov.br"/>
+    </telecom>
+  </contact>
+  <description value="Status de agendamento de regulação assistencial."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="BR"/>
+    </coding>
+  </jurisdiction>
+  <immutable value="false"/>
+  <compose>
+    <include>
+      <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial"/>
+      <version value="*"/>
+    </include>
+  </compose>
+</ValueSet>

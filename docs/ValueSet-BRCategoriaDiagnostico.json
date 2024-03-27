@@ -1,0 +1,60 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "BRCategoriaDiagnostico",
+  "meta" : {
+    "lastUpdated" : "2022-05-19T11:10:40.0457007+00:00"
+  },
+  "language" : "pt-BR",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"pt-BR\" lang=\"pt-BR\"><ul><li>Include all codes defined in <code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRCategoriaDiagnostico</code></li></ul></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "informative",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira"
+      }]
+    }
+  }],
+  "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCategoriaDiagnostico",
+  "version" : "0.1.0",
+  "name" : "BRCategoriaDiagnostico",
+  "title" : "Categoria do Diagnóstico",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2022-05-19T11:10:40.0457007+00:00",
+  "publisher" : "Ministério da Saúde do Brasil",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.saude.gov.br"
+    }]
+  }],
+  "description" : "ValueSet utilizado para definir o tipo de categoria do diagnóstico realizado.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "BR"
+    }]
+  }],
+  "immutable" : false,
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCategoriaDiagnostico",
+      "version" : "*"
+    }]
+  }
+}

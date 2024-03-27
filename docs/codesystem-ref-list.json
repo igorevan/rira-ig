@@ -1,3 +1,100 @@
 {
-  "codeSystems" : []
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/fhir/administrative-gender",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "AdministrativeGender",
+      "title" : "AdministrativeGender",
+      "description" : "The gender of a person used for administrative purposes.",
+      "oids" : ["2.16.840.1.113883.4.642.4.2"],
+      "uses" : {
+      },
+      "ValueSet-BRSexo-1.0.html" : "Sexo"
+    },
+    {
+      "url" : "http://hl7.org/fhir/appointmentstatus",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "AppointmentStatus",
+      "title" : "AppointmentStatus",
+      "description" : "The free/busy status of an appointment.",
+      "oids" : ["2.16.840.1.113883.4.642.4.485"],
+      "uses" : {
+      },
+      "ValueSet-BRStatusAgendamentoRegulacaoAssistencial.html" : "Status de agendamento de regulação assistencial"
+    },
+    {
+      "url" : "http://hl7.org/fhir/composition-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CompositionStatus",
+      "title" : "CompositionStatus",
+      "description" : "The workflow/clinical status of the composition.",
+      "oids" : ["2.16.840.1.113883.4.642.4.242"],
+      "uses" : {
+      },
+      "ValueSet-BREstadoDocumento-1.0.html" : "Estado do Documento"
+    },
+    {
+      "url" : "http://hl7.org/fhir/participationstatus",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ParticipationStatus",
+      "title" : "ParticipationStatus",
+      "description" : "The Participation status of an appointment.",
+      "oids" : ["2.16.840.1.113883.4.642.4.487"],
+      "uses" : {
+      },
+      "ValueSet-BRStatusParticipante.html" : "Status do Participante do agendamento"
+    },
+    {
+      "url" : "http://hl7.org/fhir/request-intent",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "RequestIntent",
+      "title" : "RequestIntent",
+      "description" : "Codes indicating the degree of authority/intentionality associated with a request.",
+      "oids" : ["2.16.840.1.113883.4.642.4.114"],
+      "uses" : {
+      },
+      "ValueSet-BRIntencaoRegulacao.html" : "Intenção de requisição de regulação assistencial"
+    },
+    {
+      "url" : "http://hl7.org/fhir/request-priority",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "RequestPriority",
+      "title" : "RequestPriority",
+      "description" : "Identifies the level of importance to be assigned to actioning the request.",
+      "oids" : ["2.16.840.1.113883.4.642.4.116"],
+      "uses" : {
+      },
+      "ValueSet-BRCaraterAtendimentoMIRA.html" : "Caráter de Atendimento no MIRA"
+    },
+    {
+      "url" : "http://hl7.org/fhir/request-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "RequestStatus",
+      "title" : "RequestStatus",
+      "description" : "Codes identifying the lifecycle stage of a request.",
+      "oids" : ["2.16.840.1.113883.4.642.4.112"],
+      "uses" : {
+      },
+      "ValueSet-BRStatusRequisicaoRegulacaoAssistencial.html" : "Status de requisição de regulação assistencial"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "ConditionClinicalStatusCodes",
+      "title" : "Condition Clinical Status Codes",
+      "description" : "Preferred value set for Condition Clinical Status.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1074"],
+      "uses" : {
+      },
+      "ValueSet-BREstadoResolucaoDiagnosticoProblema-1.0.html" : "Estado da Resolução de Diagnóstico ou Problema"
+    }
+  ]
 }

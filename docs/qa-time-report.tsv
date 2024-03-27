@@ -1,2 +1,24 @@
-Source File	Size	load-configure	scan	loadDepInfo	loadInfo	load	generateSnapshots	checkR4R4B	generateNarratives	validate	loadLists	checkConformanceResources	checkConformanceResources2	checkConformanceResources3	generateLogicalMaps	validateExpressions	scanForUsageStats	checkURLsUnique	processProvenanceDetails	generate1	generate2	generateLogicals	makeDependencies	generateExampleZip	generateValidationPack	scanProfilesForR5	scanExamplesForR5
-\input\myig.xml	3472	0	0	0	0	0	0	7	127	0	0	0	0	0	0	0	1	0	0	108	127	0	1	2	5	0	4
+Source File	Size	loadResources	load-configure	scan	loadDepInfo	loadInfo	load	generateSnapshots	checkR4R4B	generateNarratives	validate	loadLists	checkConformanceResources	checkConformanceResources2	checkConformanceResources3	generateLogicalMaps	validateExpressions	scanForUsageStats	checkURLsUnique	processProvenanceDetails	generate1	generate2	generateLogicals	makeDependencies	generateExampleZip	generateValidationPack	scanProfilesForR5	scanExamplesForR5
+\input\myig.xml	3472	-	0	0	0	0	0	0	3	83	0	0	0	0	0	0	0	4	0	0	161	203	0	0	4	4	0	12
+input/resources/StructureDefinition-BRAgendamentoRegulacaoAssistencial.json	363389	33	1	0	0	1	0	185	1	255	0	0	4	0	0	1	0	5	0	0	1207	3472	0	4	0	27	17	33
+input/resources/StructureDefinition-BRCID10Avaliado-1.0.json	19814	5	0	0	0	0	0	24	0	73	0	0	6	0	0	0	0	3	0	0	601	1275	0	0	0	17	2	25
+input/resources/StructureDefinition-BRIndividuoNaoIdentificado-1.0.json	5258	3	1	0	0	0	0	13	0	21	0	0	0	0	0	0	0	0	0	0	151	419	0	0	0	4	4	8
+input/resources/StructureDefinition-BRRegulacaoAssistencial.json	968998	47	0	0	0	0	0	179	0	215	0	0	1	0	0	0	0	7	0	0	2576	2494	0	2	0	73	7	82
+input/resources/StructureDefinition-BRRequisicaoRegulacaoAssistencial.json	319377	20	0	0	0	0	0	57	0	48	0	0	0	0	0	0	0	2	0	0	874	826	0	0	0	79	5	17
+input/resources/ValueSet-BRCID10-1.0.json	773	2	0	0	0	0	0	0	0	115	0	0	0	0	0	0	0	0	0	0	15	13102	0	2	0	1	0	0
+input/resources/ValueSet-BRCaraterAtendimentoMIRA.json	1193	2	0	0	0	0	0	0	0	16	0	0	0	0	0	0	0	0	0	0	17	173	0	0	1	1	0	1
+input/resources/ValueSet-BRCategoriaDiagnostico.json	794	1	0	0	0	0	0	0	0	8	0	0	0	0	0	0	0	0	0	0	15	61	0	0	0	1	0	0
+input/resources/ValueSet-BREstadoDocumento-1.0.json	1793	2	0	0	0	0	0	0	0	12	0	0	0	0	0	0	0	0	0	0	19	75	0	0	0	1	0	1
+input/resources/ValueSet-BREstadoResolucaoDiagnosticoProblema-1.0.json	1435	1	1	0	0	0	0	0	0	4	0	0	0	0	0	0	0	0	0	0	19	76	0	0	0	1	0	1
+input/resources/ValueSet-BRIntencaoRegulacao.json	3073	2	0	0	0	0	0	0	0	4	0	0	0	0	0	0	0	0	0	0	25	89	0	0	0	2	0	1
+input/resources/ValueSet-BRJustificativaIndividuoNaoIdentificado-1.0.json	1012	2	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	15	71	0	0	0	1	0	0
+input/resources/ValueSet-BRModalidadeAssistencialMIRA.json	970	1	0	0	0	0	0	0	1	4	0	0	0	0	0	0	0	0	0	0	14	67	0	0	0	0	0	0
+input/resources/ValueSet-BROcupacao-1.0.json	761	1	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	15	64	0	0	0	1	0	0
+input/resources/ValueSet-BRProcedimentosNacionais-1.0.json	1064	2	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0	0	0	0	16	66	0	0	0	0	0	0
+input/resources/ValueSet-BRSexo-1.0.json	1736	1	0	0	0	0	0	0	0	4	0	0	0	0	0	0	0	0	0	0	17	74	0	0	0	1	0	1
+input/resources/ValueSet-BRStatusAgendamentoRegulacaoAssistencial.json	3467	2	0	0	0	0	0	0	0	4	0	0	0	0	0	0	0	0	0	0	26	75	0	0	0	2	0	0
+input/resources/ValueSet-BRStatusParticipante.json	1710	2	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0	0	0	0	20	90	0	0	0	0	0	1
+input/resources/ValueSet-BRStatusRegulacaoAssistencial.json	728	2	1	0	0	0	0	0	0	4	0	0	0	0	0	0	0	0	0	0	14	63	0	0	0	1	0	0
+input/resources/ValueSet-BRStatusRequisicaoRegulacaoAssistencial.json	2533	2	0	0	0	0	0	0	0	4	0	0	0	0	0	0	0	0	0	0	22	103	0	0	0	1	0	0
+input/resources/ValueSet-BRTipoDocumento-1.0.json	763	1	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	17	59	0	0	1	1	0	1
+input/resources/ValueSet-BRTipoParticipante.json	684	2	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	15	56	0	0	0	0	0	0

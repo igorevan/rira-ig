@@ -40,7 +40,7 @@
 	  <script src="assets/js/prism.js"></script>
 
     <style type="text/css">h2{--heading-prefix:"10"}
-    h3,h4,h5,h6{--heading-prefix:"10"}</style>
+    h3,h4,h5,h6{--heading-prefix:"10.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -152,6 +152,8 @@
 
             <a href="#bottom">bottom</a>
 
+          | <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">next&gt;</a>
+
           </span>
 
         </ul>
@@ -182,12 +184,241 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
      xmlns:f="http://hl7.org/fhir"
      class="markdown-toc">
    <p>Contents:</p>
-   <ul/>
+   <ul>
+      <li>
+         <a href="#1">Structures: Resource Profiles</a>
+      </li>
+      <li>
+         <a href="#2">Structures: Extension Definitions</a>
+      </li>
+      <li>
+         <a href="#3">Terminology: Value Sets</a>
+      </li>
+   </ul>
 </div>
 <div xmlns:html="http://www.w3.org/1999/xhtml"
      xmlns="http://www.w3.org/1999/xhtml"
      xmlns:f="http://hl7.org/fhir">
    <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
+   <a name="1"> </a>
+   <h3>Structures: Resource Profiles </h3>
+    <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html"
+                  title="StructureDefinition/BRAgendamentoRegulacaoAssistencial">Agendamento de Regulação Assistencial</a>
+            </td>
+            <td>
+<p>Agendamento de Regulação Assistencial</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-BRCID10Avaliado-1.0.html"
+                  title="StructureDefinition/BRCID10Avaliado-1.0">CID10 Avaliado</a>
+            </td>
+            <td>
+<p>Diagnóstico atribuído pelo profissional de saúde ao indivíduo no contato assistencial.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-BRRegulacaoAssistencial.html"
+                  title="StructureDefinition/BRRegulacaoAssistencial">Regulação Assistencial</a>
+            </td>
+            <td>
+<p>Documento público que coleta os dados da regulação assistencial</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html"
+                  title="StructureDefinition/BRRequisicaoRegulacaoAssistencial">Requisição de Regulação Assistencial</a>
+            </td>
+            <td>
+<p>Requisição de Regulação Assistencial</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
+   <h3>Structures: Extension Definitions </h3>
+    <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-BRIndividuoNaoIdentificado-1.0.html"
+                  title="StructureDefinition/BRIndividuoNaoIdentificado-1.0">Informações Complementares de Indivíduos Não Identificados</a>
+            </td>
+            <td>
+<p>Informações complementares necessárias ao Contato Assistencial na hipótese do indivíduo não poder ser identificado.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
+   <h3>Terminology: Value Sets </h3>
+    <p>These define sets of codes used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-BRCaraterAtendimentoMIRA.html"
+                  title="ValueSet/BRCaraterAtendimentoMIRA">Caráter de Atendimento no MIRA</a>
+            </td>
+            <td>
+<p>Caráter da solicitação do procedimento.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-BRCategoriaDiagnostico.html"
+                  title="ValueSet/BRCategoriaDiagnostico">Categoria do Diagnóstico</a>
+            </td>
+            <td>
+<p>ValueSet utilizado para definir o tipo de categoria do diagnóstico realizado.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-BROcupacao-1.0.html" title="ValueSet/BROcupacao-1.0">Classificação Brasileira de Ocupações - CBO</a>
+            </td>
+            <td>
+<p>Classifica as profissões do mercado de trabalho brasileiro.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-BRCID10-1.0.html" title="ValueSet/BRCID10-1.0">Classificação Internacional de Doenças - Décima Revisão - CID-10</a>
+            </td>
+            <td>
+<p>Classificação Internacional de Doenças - Décima Revisão - CID-10</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-BREstadoResolucaoDiagnosticoProblema-1.0.html"
+                  title="ValueSet/BREstadoResolucaoDiagnosticoProblema-1.0">Estado da Resolução de Diagnóstico ou Problema</a>
+            </td>
+            <td>
+<p>Estado da resolução de um diagnóstico ou problema.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-BREstadoDocumento-1.0.html"
+                  title="ValueSet/BREstadoDocumento-1.0">Estado do Documento</a>
+            </td>
+            <td>
+<p>Classifica o estado do documento que está sendo trafegado.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-BRIntencaoRegulacao.html"
+                  title="ValueSet/BRIntencaoRegulacao">Intenção de requisição de regulação assistencial</a>
+            </td>
+            <td>
+<p>Intenção de requisição de regulação assistencial.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-BRJustificativaIndividuoNaoIdentificado-1.0.html"
+                  title="ValueSet/BRJustificativaIndividuoNaoIdentificado-1.0">Justificativa da Impossibilidade de Identificação do Indivíduo</a>
+            </td>
+            <td>
+<p>Classifica as razões pelo qual não foi possível obter os dados de identificação do indivíduo em um contato assistencial. (Port. nº 84/SAS/MS/1997 e Port. nº02/SAS/SGEP/MS/2012)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-BRModalidadeAssistencialMIRA.html"
+                  title="ValueSet/BRModalidadeAssistencialMIRA">Modalidade Assistencial MIRA</a>
+            </td>
+            <td>
+<p>Modalidade assistencial que gerou a solicitação do procedimento.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-BRProcedimentosNacionais-1.0.html"
+                  title="ValueSet/BRProcedimentosNacionais-1.0">Procedimento realizado</a>
+            </td>
+            <td>
+<p>ValueSet das classificações brasileiras para procedimentos adotadas em contexto nacional, os CodeSystems apresentam os códigos da competência atual, para o envio de competência anterior os códigos devem ser consultados na RTS.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-BRSexo-1.0.html" title="ValueSet/BRSexo-1.0">Sexo</a>
+            </td>
+            <td>
+<p>Sexo de um indivíduo.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-BRStatusAgendamentoRegulacaoAssistencial.html"
+                  title="ValueSet/BRStatusAgendamentoRegulacaoAssistencial">Status de agendamento de regulação assistencial</a>
+            </td>
+            <td>
+<p>Status de agendamento de regulação assistencial.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-BRStatusRegulacaoAssistencial.html"
+                  title="ValueSet/BRStatusRegulacaoAssistencial">Status de regulação assistencial</a>
+            </td>
+            <td>
+<p>Status de agendamento de regulação assistencial.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-BRStatusRequisicaoRegulacaoAssistencial.html"
+                  title="ValueSet/BRStatusRequisicaoRegulacaoAssistencial">Status de requisição de regulação assistencial</a>
+            </td>
+            <td>
+<p>Status de requisição de regulação assistencial.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-BRStatusParticipante.html"
+                  title="ValueSet/BRStatusParticipante">Status do Participante do agendamento</a>
+            </td>
+            <td>
+<p>Status do Participante do agendamento.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-BRTipoParticipante.html"
+                  title="ValueSet/BRTipoParticipante">Tipo Participante</a>
+            </td>
+            <td>
+<p>Identificação do tipo do participante envolvido na solicitação.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-BRTipoDocumento-1.0.html"
+                  title="ValueSet/BRTipoDocumento-1.0">Tipo de Documento</a>
+            </td>
+            <td>
+<p>Classifica o tipo de documento que está sendo trafegado.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
 </div>
 
 </div>
@@ -224,7 +455,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:right">&#xA0;
 
-                <span style="visibility:hidden">next&gt;</span>
+                <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">next&gt;</a>
 
               </td>
             </tr>
@@ -234,7 +465,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.saude.gov.br">Ministério da Saúde do Brasil</a>.  Package br.gov.saude.rnds.rira#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 25, 2024 17:22-0300">2024-03-25</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.saude.gov.br">Ministério da Saúde do Brasil</a>.  Package br.gov.saude.rnds.rira#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 27, 2024 14:51-0300">2024-03-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

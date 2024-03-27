@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="BRTipoDocumento-1.0"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2020-03-12T13:26:59.33+00:00"/>
+  </meta>
+  <language value="pt-BR"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR"><ul><li>Include all codes defined in <code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento</code></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="informative">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoDocumento-1.0"/>
+  <version value="0.1.0"/>
+  <name value="BRTipoDocumento"/>
+  <title value="Tipo de Documento"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2020-03-12T13:26:58.6069366+00:00"/>
+  <publisher value="Ministério da Saúde do Brasil"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.saude.gov.br"/>
+    </telecom>
+  </contact>
+  <description value="Classifica o tipo de documento que está sendo trafegado."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="BR"/>
+    </coding>
+  </jurisdiction>
+  <immutable value="false"/>
+  <compose>
+    <include>
+      <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento"/>
+      <version value="*"/>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="BRCID10-1.0"/>
+  <meta>
+    <lastUpdated value="2020-03-11T19:14:51.806+00:00"/>
+  </meta>
+  <language value="pt-BR"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR"><ul><li>Include all codes defined in <code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10</code></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="informative">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BRCID10-1.0"/>
+  <version value="0.1.0"/>
+  <name value="BRCID10"/>
+  <title value="Classificação Internacional de Doenças - Décima Revisão - CID-10"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2020-03-11T19:15:12.2909517+00:00"/>
+  <publisher value="Ministério da Saúde do Brasil"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.saude.gov.br"/>
+    </telecom>
+  </contact>
+  <description value="Classificação Internacional de Doenças - Décima Revisão - CID-10"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="BR"/>
+    </coding>
+  </jurisdiction>
+  <immutable value="false"/>
+  <compose>
+    <include>
+      <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10"/>
+      <version value="*"/>
+    </include>
+  </compose>
+</ValueSet>

@@ -26,7 +26,7 @@
   fhir:title [ fhir:v "Guia de Implementação da Regulação Assistencial (RIRA) da RNDS"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
-  fhir:date [ fhir:v "2024-03-25T17:22:42-03:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-03-27T14:51:27-03:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Ministério da Saúde do Brasil"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -541,6 +541,249 @@
          fhir:value [ fhir:v "true" ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] ) ;
+     fhir:resource ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial> ;
+         fhir:reference [ fhir:v "StructureDefinition/BRAgendamentoRegulacaoAssistencial" ]
+       ] ;
+       fhir:name [ fhir:v "Agendamento de Regulação Assistencial" ] ;
+       fhir:description [ fhir:v "Agendamento de Regulação Assistencial" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0> ;
+         fhir:reference [ fhir:v "StructureDefinition/BRCID10Avaliado-1.0" ]
+       ] ;
+       fhir:name [ fhir:v "CID10 Avaliado" ] ;
+       fhir:description [ fhir:v "Diagnóstico atribuído pelo profissional de saúde ao indivíduo no contato assistencial." ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuoNaoIdentificado-1.0> ;
+         fhir:reference [ fhir:v "StructureDefinition/BRIndividuoNaoIdentificado-1.0" ]
+       ] ;
+       fhir:name [ fhir:v "Informações Complementares de Indivíduos Não Identificados" ] ;
+       fhir:description [ fhir:v "Informações complementares necessárias ao Contato Assistencial na hipótese do indivíduo não poder ser identificado." ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial> ;
+         fhir:reference [ fhir:v "StructureDefinition/BRRegulacaoAssistencial" ]
+       ] ;
+       fhir:name [ fhir:v "Regulação Assistencial" ] ;
+       fhir:description [ fhir:v "Documento público que coleta os dados da regulação assistencial" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial> ;
+         fhir:reference [ fhir:v "StructureDefinition/BRRequisicaoRegulacaoAssistencial" ]
+       ] ;
+       fhir:name [ fhir:v "Requisição de Regulação Assistencial" ] ;
+       fhir:description [ fhir:v "Requisição de Regulação Assistencial" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://www.saude.gov.br/fhir/r4/ValueSet/BRCID10-1.0> ;
+         fhir:reference [ fhir:v "ValueSet/BRCID10-1.0" ]
+       ] ;
+       fhir:name [ fhir:v "Classificação Internacional de Doenças - Décima Revisão - CID-10" ] ;
+       fhir:description [ fhir:v "Classificação Internacional de Doenças - Décima Revisão - CID-10" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://www.saude.gov.br/fhir/r4/ValueSet/BRCaraterAtendimentoMIRA> ;
+         fhir:reference [ fhir:v "ValueSet/BRCaraterAtendimentoMIRA" ]
+       ] ;
+       fhir:name [ fhir:v "Caráter de Atendimento no MIRA" ] ;
+       fhir:description [ fhir:v "Caráter da solicitação do procedimento." ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://www.saude.gov.br/fhir/r4/ValueSet/BRCategoriaDiagnostico> ;
+         fhir:reference [ fhir:v "ValueSet/BRCategoriaDiagnostico" ]
+       ] ;
+       fhir:name [ fhir:v "Categoria do Diagnóstico" ] ;
+       fhir:description [ fhir:v "ValueSet utilizado para definir o tipo de categoria do diagnóstico realizado." ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoDocumento-1.0> ;
+         fhir:reference [ fhir:v "ValueSet/BREstadoDocumento-1.0" ]
+       ] ;
+       fhir:name [ fhir:v "Estado do Documento" ] ;
+       fhir:description [ fhir:v "Classifica o estado do documento que está sendo trafegado." ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoResolucaoDiagnosticoProblema-1.0> ;
+         fhir:reference [ fhir:v "ValueSet/BREstadoResolucaoDiagnosticoProblema-1.0" ]
+       ] ;
+       fhir:name [ fhir:v "Estado da Resolução de Diagnóstico ou Problema" ] ;
+       fhir:description [ fhir:v "Estado da resolução de um diagnóstico ou problema." ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://www.saude.gov.br/fhir/r4/ValueSet/BRIntencaoRegulacao> ;
+         fhir:reference [ fhir:v "ValueSet/BRIntencaoRegulacao" ]
+       ] ;
+       fhir:name [ fhir:v "Intenção de requisição de regulação assistencial" ] ;
+       fhir:description [ fhir:v "Intenção de requisição de regulação assistencial." ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://www.saude.gov.br/fhir/r4/ValueSet/BRJustificativaIndividuoNaoIdentificado-1.0> ;
+         fhir:reference [ fhir:v "ValueSet/BRJustificativaIndividuoNaoIdentificado-1.0" ]
+       ] ;
+       fhir:name [ fhir:v "Justificativa da Impossibilidade de Identificação do Indivíduo" ] ;
+       fhir:description [ fhir:v "Classifica as razões pelo qual não foi possível obter os dados de identificação do indivíduo em um contato assistencial. (Port. nº 84/SAS/MS/1997 e Port. nº02/SAS/SGEP/MS/2012)" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://www.saude.gov.br/fhir/r4/ValueSet/BRModalidadeAssistencialMIRA> ;
+         fhir:reference [ fhir:v "ValueSet/BRModalidadeAssistencialMIRA" ]
+       ] ;
+       fhir:name [ fhir:v "Modalidade Assistencial MIRA" ] ;
+       fhir:description [ fhir:v "Modalidade assistencial que gerou a solicitação do procedimento." ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://www.saude.gov.br/fhir/r4/ValueSet/BROcupacao-1.0> ;
+         fhir:reference [ fhir:v "ValueSet/BROcupacao-1.0" ]
+       ] ;
+       fhir:name [ fhir:v "Classificação Brasileira de Ocupações - CBO" ] ;
+       fhir:description [ fhir:v "Classifica as profissões do mercado de trabalho brasileiro." ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://www.saude.gov.br/fhir/r4/ValueSet/BRProcedimentosNacionais-1.0> ;
+         fhir:reference [ fhir:v "ValueSet/BRProcedimentosNacionais-1.0" ]
+       ] ;
+       fhir:name [ fhir:v "Procedimento realizado" ] ;
+       fhir:description [ fhir:v "ValueSet das classificações brasileiras para procedimentos adotadas em contexto nacional, os CodeSystems apresentam os códigos da competência atual, para o envio de competência anterior os códigos devem ser consultados na RTS." ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://www.saude.gov.br/fhir/r4/ValueSet/BRSexo-1.0> ;
+         fhir:reference [ fhir:v "ValueSet/BRSexo-1.0" ]
+       ] ;
+       fhir:name [ fhir:v "Sexo" ] ;
+       fhir:description [ fhir:v "Sexo de um indivíduo." ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial> ;
+         fhir:reference [ fhir:v "ValueSet/BRStatusAgendamentoRegulacaoAssistencial" ]
+       ] ;
+       fhir:name [ fhir:v "Status de agendamento de regulação assistencial" ] ;
+       fhir:description [ fhir:v "Status de agendamento de regulação assistencial." ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusParticipante> ;
+         fhir:reference [ fhir:v "ValueSet/BRStatusParticipante" ]
+       ] ;
+       fhir:name [ fhir:v "Status do Participante do agendamento" ] ;
+       fhir:description [ fhir:v "Status do Participante do agendamento." ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial> ;
+         fhir:reference [ fhir:v "ValueSet/BRStatusRegulacaoAssistencial" ]
+       ] ;
+       fhir:name [ fhir:v "Status de regulação assistencial" ] ;
+       fhir:description [ fhir:v "Status de agendamento de regulação assistencial." ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRequisicaoRegulacaoAssistencial> ;
+         fhir:reference [ fhir:v "ValueSet/BRStatusRequisicaoRegulacaoAssistencial" ]
+       ] ;
+       fhir:name [ fhir:v "Status de requisição de regulação assistencial" ] ;
+       fhir:description [ fhir:v "Status de requisição de regulação assistencial." ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoDocumento-1.0> ;
+         fhir:reference [ fhir:v "ValueSet/BRTipoDocumento-1.0" ]
+       ] ;
+       fhir:name [ fhir:v "Tipo de Documento" ] ;
+       fhir:description [ fhir:v "Classifica o tipo de documento que está sendo trafegado." ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoParticipante> ;
+         fhir:reference [ fhir:v "ValueSet/BRTipoParticipante" ]
+       ] ;
+       fhir:name [ fhir:v "Tipo Participante" ] ;
+       fhir:description [ fhir:v "Identificação do tipo do participante envolvido na solicitação." ]
      ] ) ;
      fhir:page [
        fhir:extension ( [

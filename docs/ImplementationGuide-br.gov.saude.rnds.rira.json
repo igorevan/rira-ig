@@ -20,7 +20,7 @@
   "title" : "Guia de Implementação da Regulação Assistencial (RIRA) da RNDS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2024-03-25T17:22:42-03:00",
+  "date" : "2024-03-27T14:51:27-03:00",
   "publisher" : "Ministério da Saúde do Brasil",
   "contact" : [{
     "telecom" : [{
@@ -634,6 +634,248 @@
         "valueString" : "true"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    }],
+    "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/BRAgendamentoRegulacaoAssistencial"
+      },
+      "name" : "Agendamento de Regulação Assistencial",
+      "description" : "Agendamento de Regulação Assistencial"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/BRCID10Avaliado-1.0"
+      },
+      "name" : "CID10 Avaliado",
+      "description" : "Diagnóstico atribuído pelo profissional de saúde ao indivíduo no contato assistencial."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/BRIndividuoNaoIdentificado-1.0"
+      },
+      "name" : "Informações Complementares de Indivíduos Não Identificados",
+      "description" : "Informações complementares necessárias ao Contato Assistencial na hipótese do indivíduo não poder ser identificado."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/BRRegulacaoAssistencial"
+      },
+      "name" : "Regulação Assistencial",
+      "description" : "Documento público que coleta os dados da regulação assistencial"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/BRRequisicaoRegulacaoAssistencial"
+      },
+      "name" : "Requisição de Regulação Assistencial",
+      "description" : "Requisição de Regulação Assistencial"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/BRCID10-1.0"
+      },
+      "name" : "Classificação Internacional de Doenças - Décima Revisão - CID-10",
+      "description" : "Classificação Internacional de Doenças - Décima Revisão - CID-10"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/BRCaraterAtendimentoMIRA"
+      },
+      "name" : "Caráter de Atendimento no MIRA",
+      "description" : "Caráter da solicitação do procedimento."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/BRCategoriaDiagnostico"
+      },
+      "name" : "Categoria do Diagnóstico",
+      "description" : "ValueSet utilizado para definir o tipo de categoria do diagnóstico realizado."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/BREstadoDocumento-1.0"
+      },
+      "name" : "Estado do Documento",
+      "description" : "Classifica o estado do documento que está sendo trafegado."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/BREstadoResolucaoDiagnosticoProblema-1.0"
+      },
+      "name" : "Estado da Resolução de Diagnóstico ou Problema",
+      "description" : "Estado da resolução de um diagnóstico ou problema."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/BRIntencaoRegulacao"
+      },
+      "name" : "Intenção de requisição de regulação assistencial",
+      "description" : "Intenção de requisição de regulação assistencial."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/BRJustificativaIndividuoNaoIdentificado-1.0"
+      },
+      "name" : "Justificativa da Impossibilidade de Identificação do Indivíduo",
+      "description" : "Classifica as razões pelo qual não foi possível obter os dados de identificação do indivíduo em um contato assistencial. (Port. nº 84/SAS/MS/1997 e Port. nº02/SAS/SGEP/MS/2012)"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/BRModalidadeAssistencialMIRA"
+      },
+      "name" : "Modalidade Assistencial MIRA",
+      "description" : "Modalidade assistencial que gerou a solicitação do procedimento."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/BROcupacao-1.0"
+      },
+      "name" : "Classificação Brasileira de Ocupações - CBO",
+      "description" : "Classifica as profissões do mercado de trabalho brasileiro."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/BRProcedimentosNacionais-1.0"
+      },
+      "name" : "Procedimento realizado",
+      "description" : "ValueSet das classificações brasileiras para procedimentos adotadas em contexto nacional, os CodeSystems apresentam os códigos da competência atual, para o envio de competência anterior os códigos devem ser consultados na RTS."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/BRSexo-1.0"
+      },
+      "name" : "Sexo",
+      "description" : "Sexo de um indivíduo."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/BRStatusAgendamentoRegulacaoAssistencial"
+      },
+      "name" : "Status de agendamento de regulação assistencial",
+      "description" : "Status de agendamento de regulação assistencial."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/BRStatusParticipante"
+      },
+      "name" : "Status do Participante do agendamento",
+      "description" : "Status do Participante do agendamento."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/BRStatusRegulacaoAssistencial"
+      },
+      "name" : "Status de regulação assistencial",
+      "description" : "Status de agendamento de regulação assistencial."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/BRStatusRequisicaoRegulacaoAssistencial"
+      },
+      "name" : "Status de requisição de regulação assistencial",
+      "description" : "Status de requisição de regulação assistencial."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/BRTipoDocumento-1.0"
+      },
+      "name" : "Tipo de Documento",
+      "description" : "Classifica o tipo de documento que está sendo trafegado."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/BRTipoParticipante"
+      },
+      "name" : "Tipo Participante",
+      "description" : "Identificação do tipo do participante envolvido na solicitação."
     }],
     "page" : {
       "extension" : [{

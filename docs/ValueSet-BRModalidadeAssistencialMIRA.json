@@ -1,0 +1,65 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "BRModalidadeAssistencialMIRA",
+  "language" : "pt-BR",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"pt-BR\" lang=\"pt-BR\"><ul><li>Include these codes as defined in <code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial</code> version <code>*</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>04</td><td>Atenção Hospitalar</td></tr><tr><td>09</td><td>Assistência Ambulatorial</td></tr></table></li></ul></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "informative",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira"
+      }]
+    }
+  }],
+  "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRModalidadeAssistencialMIRA",
+  "version" : "0.1.0",
+  "name" : "BRModalidadeAssistencialMIRA",
+  "title" : "Modalidade Assistencial MIRA",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-04-13T13:17:18.5012669+00:00",
+  "publisher" : "Ministério da Saúde do Brasil",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.saude.gov.br"
+    }]
+  }],
+  "description" : "Modalidade assistencial que gerou a solicitação do procedimento.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "BR"
+    }]
+  }],
+  "immutable" : false,
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial",
+      "version" : "*",
+      "concept" : [{
+        "code" : "04",
+        "display" : "Atenção Hospitalar"
+      },
+      {
+        "code" : "09",
+        "display" : "Assistência Ambulatorial"
+      }]
+    }]
+  }
+}

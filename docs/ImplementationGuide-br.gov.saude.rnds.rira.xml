@@ -19,7 +19,7 @@
   <title value="Guia de Implementação da Regulação Assistencial (RIRA) da RNDS"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2024-03-25T17:22:42-03:00"/>
+  <date value="2024-03-27T14:51:27-03:00"/>
   <publisher value="Ministério da Saúde do Brasil"/>
   <contact>
     <telecom>
@@ -473,6 +473,226 @@
         <valueString value="true"/>
       </extension>
     </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/BRAgendamentoRegulacaoAssistencial"/>
+      </reference>
+      <name value="Agendamento de Regulação Assistencial"/>
+      <description value="Agendamento de Regulação Assistencial"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/BRCID10Avaliado-1.0"/>
+      </reference>
+      <name value="CID10 Avaliado"/>
+      <description value="Diagnóstico atribuído pelo profissional de saúde ao indivíduo no contato assistencial."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/BRIndividuoNaoIdentificado-1.0"/>
+      </reference>
+      <name value="Informações Complementares de Indivíduos Não Identificados"/>
+      <description value="Informações complementares necessárias ao Contato Assistencial na hipótese do indivíduo não poder ser identificado."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/BRRegulacaoAssistencial"/>
+      </reference>
+      <name value="Regulação Assistencial"/>
+      <description value="Documento público que coleta os dados da regulação assistencial"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/BRRequisicaoRegulacaoAssistencial"/>
+      </reference>
+      <name value="Requisição de Regulação Assistencial"/>
+      <description value="Requisição de Regulação Assistencial"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/BRCID10-1.0"/>
+      </reference>
+      <name value="Classificação Internacional de Doenças - Décima Revisão - CID-10"/>
+      <description value="Classificação Internacional de Doenças - Décima Revisão - CID-10"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/BRCaraterAtendimentoMIRA"/>
+      </reference>
+      <name value="Caráter de Atendimento no MIRA"/>
+      <description value="Caráter da solicitação do procedimento."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/BRCategoriaDiagnostico"/>
+      </reference>
+      <name value="Categoria do Diagnóstico"/>
+      <description value="ValueSet utilizado para definir o tipo de categoria do diagnóstico realizado."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/BREstadoDocumento-1.0"/>
+      </reference>
+      <name value="Estado do Documento"/>
+      <description value="Classifica o estado do documento que está sendo trafegado."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/BREstadoResolucaoDiagnosticoProblema-1.0"/>
+      </reference>
+      <name value="Estado da Resolução de Diagnóstico ou Problema"/>
+      <description value="Estado da resolução de um diagnóstico ou problema."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/BRIntencaoRegulacao"/>
+      </reference>
+      <name value="Intenção de requisição de regulação assistencial"/>
+      <description value="Intenção de requisição de regulação assistencial."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/BRJustificativaIndividuoNaoIdentificado-1.0"/>
+      </reference>
+      <name value="Justificativa da Impossibilidade de Identificação do Indivíduo"/>
+      <description value="Classifica as razões pelo qual não foi possível obter os dados de identificação do indivíduo em um contato assistencial. (Port. nº 84/SAS/MS/1997 e Port. nº02/SAS/SGEP/MS/2012)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/BRModalidadeAssistencialMIRA"/>
+      </reference>
+      <name value="Modalidade Assistencial MIRA"/>
+      <description value="Modalidade assistencial que gerou a solicitação do procedimento."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/BROcupacao-1.0"/>
+      </reference>
+      <name value="Classificação Brasileira de Ocupações - CBO"/>
+      <description value="Classifica as profissões do mercado de trabalho brasileiro."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/BRProcedimentosNacionais-1.0"/>
+      </reference>
+      <name value="Procedimento realizado"/>
+      <description value="ValueSet das classificações brasileiras para procedimentos adotadas em contexto nacional, os CodeSystems apresentam os códigos da competência atual, para o envio de competência anterior os códigos devem ser consultados na RTS."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/BRSexo-1.0"/>
+      </reference>
+      <name value="Sexo"/>
+      <description value="Sexo de um indivíduo."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/BRStatusAgendamentoRegulacaoAssistencial"/>
+      </reference>
+      <name value="Status de agendamento de regulação assistencial"/>
+      <description value="Status de agendamento de regulação assistencial."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/BRStatusParticipante"/>
+      </reference>
+      <name value="Status do Participante do agendamento"/>
+      <description value="Status do Participante do agendamento."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/BRStatusRegulacaoAssistencial"/>
+      </reference>
+      <name value="Status de regulação assistencial"/>
+      <description value="Status de agendamento de regulação assistencial."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/BRStatusRequisicaoRegulacaoAssistencial"/>
+      </reference>
+      <name value="Status de requisição de regulação assistencial"/>
+      <description value="Status de requisição de regulação assistencial."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/BRTipoDocumento-1.0"/>
+      </reference>
+      <name value="Tipo de Documento"/>
+      <description value="Classifica o tipo de documento que está sendo trafegado."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/BRTipoParticipante"/>
+      </reference>
+      <name value="Tipo Participante"/>
+      <description value="Identificação do tipo do participante envolvido na solicitação."/>
+    </resource>
     <page>
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
         <valueCode value="informative"/>

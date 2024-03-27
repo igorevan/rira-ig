@@ -1,9 +1,1188 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="3c7966d6-0a89-4228-a8ab-beca0535e77d"/>
+  <id value="26acd975-fcd0-4ba3-9339-a0e37101fc6a"/>
   <meta>
-    <lastUpdated value="2024-03-25T17:22:42.764-03:00"/>
+    <lastUpdated value="2024-03-27T14:51:27.237-03:00"/>
   </meta>
   <type value="collection"/>
+  <entry>
+    <fullUrl value="http://www.saude.gov.br/fhir/r4/ValueSet/BRCaraterAtendimentoMIRA"/>
+    <resource>
+      <ValueSet>
+        <language value="pt-BR"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR">
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="http://hl7.org/fhir/R4/codesystem-request-priority.html">codesystem RequestPriority v4.0.1 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 2 concepts.</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-request-priority-routine"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-request-priority.html#request-priority-routine">routine</a>
+                </td>
+                <td>http://hl7.org/fhir/request-priority</td>
+                <td>Routine</td>
+                <td>
+                  <div>
+                    <p>The request has normal priority.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-request-priority-urgent"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-request-priority.html#request-priority-urgent">urgent</a>
+                </td>
+                <td>http://hl7.org/fhir/request-priority</td>
+                <td>Urgent</td>
+                <td>
+                  <div>
+                    <p>The request should be actioned promptly - higher priority than routine.</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BRCaraterAtendimentoMIRA"/>
+        <version value="0.1.0"/>
+        <name value="BRCaraterAtendimentoMIRA"/>
+        <title value="Caráter de Atendimento no MIRA"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2023-04-13T13:17:18.5012669+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="BR"/>
+          </coding>
+        </jurisdiction>
+        <immutable value="false"/>
+        <expansion>
+          <identifier value="urn:uuid:93693776-9e57-49b5-93f7-ba4929aed4fd"/>
+          <timestamp value="2024-03-27T14:52:05-03:00"/>
+          <total value="2"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="warning-draft"/>
+            <valueUri value="http://hl7.org/fhir/request-priority|4.0.1"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://hl7.org/fhir/request-priority|4.0.1"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/request-priority"/>
+            <code value="routine"/>
+            <display value="Routine"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/request-priority"/>
+            <code value="urgent"/>
+            <display value="Urgent"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoDocumento-1.0"/>
+    <resource>
+      <ValueSet>
+        <meta>
+          <lastUpdated value="2020-03-12T13:26:59.318+00:00"/>
+        </meta>
+        <language value="pt-BR"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR">
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="http://hl7.org/fhir/R4/codesystem-composition-status.html">codesystem CompositionStatus v4.0.1 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 4 concepts.</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-composition-status-preliminary"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-preliminary">preliminary</a>
+                </td>
+                <td>http://hl7.org/fhir/composition-status</td>
+                <td>Preliminary</td>
+                <td>
+                  <div>
+                    <p>This is a preliminary composition or document (also known as initial or interim). The content may be incomplete or unverified.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-composition-status-final"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-final">final</a>
+                </td>
+                <td>http://hl7.org/fhir/composition-status</td>
+                <td>Final</td>
+                <td>
+                  <div>
+                    <p>This version of the composition is complete and verified by an appropriate person and no further work is planned. Any subsequent updates would be on a new version of the composition.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-composition-status-amended"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-amended">amended</a>
+                </td>
+                <td>http://hl7.org/fhir/composition-status</td>
+                <td>Amended</td>
+                <td>
+                  <div>
+                    <p>The composition content or the referenced resources have been modified (edited or added to) subsequent to being released as &quot;final&quot; and the composition is complete and verified by an authorized person.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-composition-status-entered-in-error"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-entered-in-error">entered-in-error</a>
+                </td>
+                <td>http://hl7.org/fhir/composition-status</td>
+                <td>Entered in error</td>
+                <td>
+                  <div>
+                    <p>The composition or document was originally created/issued in error, and this is an amendment that marks that the entire series should not be considered as valid.</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoDocumento-1.0"/>
+        <version value="0.1.0"/>
+        <name value="BREstadoDocumento"/>
+        <title value="Estado do Documento"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2020-03-12T13:26:58.6069366+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="BR"/>
+          </coding>
+        </jurisdiction>
+        <immutable value="false"/>
+        <expansion>
+          <identifier value="urn:uuid:c8f3148c-355d-45f0-80b5-558848634187"/>
+          <timestamp value="2024-03-27T14:52:06-03:00"/>
+          <total value="4"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="warning-draft"/>
+            <valueUri value="http://hl7.org/fhir/composition-status|4.0.1"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://hl7.org/fhir/composition-status|4.0.1"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/composition-status"/>
+            <code value="preliminary"/>
+            <display value="Preliminary"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/composition-status"/>
+            <code value="final"/>
+            <display value="Final"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/composition-status"/>
+            <code value="amended"/>
+            <display value="Amended"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/composition-status"/>
+            <code value="entered-in-error"/>
+            <display value="Entered in error"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoResolucaoDiagnosticoProblema-1.0"/>
+    <resource>
+      <ValueSet>
+        <meta>
+          <lastUpdated value="2020-03-12T13:09:54.402+00:00"/>
+        </meta>
+        <language value="pt-BR"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR">
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="http://terminology.hl7.org/5.3.0/CodeSystem-condition-clinical.html">codesystem Condition Clinical Status Codes v2.0.0 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 6 concepts.</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-condition-clinical-active"> </a>  
+                  <a href="http://terminology.hl7.org/5.3.0/CodeSystem-condition-clinical.html#condition-clinical-active">active</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/condition-clinical</td>
+                <td>Ativo</td>
+                <td>
+                  <div>
+                    <p>The subject is currently experiencing the condition or situation, there is evidence of the condition or situation, or considered to be a significant risk.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-condition-clinical-recurrence"> </a>  
+                  <a href="http://terminology.hl7.org/5.3.0/CodeSystem-condition-clinical.html#condition-clinical-recurrence">recurrence</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/condition-clinical</td>
+                <td>Recorrente</td>
+                <td>
+                  <div>
+                    <p>The subject is experiencing a reoccurence or repeating of a previously resolved condition or situation, e.g. urinary tract infection, food insecurity.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-condition-clinical-relapse"> </a>  
+                  <a href="http://terminology.hl7.org/5.3.0/CodeSystem-condition-clinical.html#condition-clinical-relapse">relapse</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/condition-clinical</td>
+                <td>Recidiva</td>
+                <td>
+                  <div>
+                    <p>The subject is experiencing a return of a condition or situation after a period of improvement or remission, e.g. relapse of cancer, alcoholism.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-condition-clinical-inactive"> </a>  
+                  <a href="http://terminology.hl7.org/5.3.0/CodeSystem-condition-clinical.html#condition-clinical-inactive">inactive</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/condition-clinical</td>
+                <td>Inativo</td>
+                <td>
+                  <div>
+                    <p>The subject is no longer experiencing the condition or situation and there is no longer evidence or appreciable risk of the condition or situation.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-condition-clinical-remission"> </a>  
+                  <a href="http://terminology.hl7.org/5.3.0/CodeSystem-condition-clinical.html#condition-clinical-remission">remission</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/condition-clinical</td>
+                <td>Remissão</td>
+                <td>
+                  <div>
+                    <p>The subject is not presently experiencing the condition or situation, but there is a risk of the condition or situation returning.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-condition-clinical-resolved"> </a>  
+                  <a href="http://terminology.hl7.org/5.3.0/CodeSystem-condition-clinical.html#condition-clinical-resolved">resolved</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/condition-clinical</td>
+                <td>Resolvido</td>
+                <td>
+                  <div>
+                    <p>The subject is not presently experiencing the condition or situation and there is a negligible perceived risk of the condition or situation returning.</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoResolucaoDiagnosticoProblema-1.0"/>
+        <version value="0.1.0"/>
+        <name value="BREstadoResolucaoDiagnosticoProblema"/>
+        <title value="Estado da Resolução de Diagnóstico ou Problema"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2020-03-12T13:09:53.3447193+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="BR"/>
+          </coding>
+        </jurisdiction>
+        <immutable value="false"/>
+        <expansion>
+          <identifier value="urn:uuid:28e92675-16f4-405a-bfc7-918ca791e192"/>
+          <timestamp value="2024-03-27T14:52:06-03:00"/>
+          <total value="6"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://terminology.hl7.org/CodeSystem/condition-clinical|2.0.0"/>
+          </parameter>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+            <display value="Ativo"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="recurrence"/>
+            <display value="Recorrente"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="relapse"/>
+            <display value="Recidiva"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="inactive"/>
+            <display value="Inativo"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="remission"/>
+            <display value="Remissão"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="resolved"/>
+            <display value="Resolvido"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://www.saude.gov.br/fhir/r4/ValueSet/BRIntencaoRegulacao"/>
+    <resource>
+      <ValueSet>
+        <language value="pt-BR"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR">
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html">codesystem RequestIntent v4.0.1 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 9 concepts.</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-request-intent-proposal"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-proposal">proposal</a>
+                </td>
+                <td>http://hl7.org/fhir/request-intent</td>
+                <td>Proposal</td>
+                <td>
+                  <div>
+                    <p>The request is a suggestion made by someone/something that does not have an intention to ensure it occurs and without providing an authorization to act.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-request-intent-plan"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-plan">plan</a>
+                </td>
+                <td>http://hl7.org/fhir/request-intent</td>
+                <td>Plan</td>
+                <td>
+                  <div>
+                    <p>The request represents an intention to ensure something occurs without providing an authorization for others to act.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-request-intent-directive"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-directive">directive</a>
+                </td>
+                <td>http://hl7.org/fhir/request-intent</td>
+                <td>Directive</td>
+                <td>
+                  <div>
+                    <p>The request represents a legally binding instruction authored by a Patient or RelatedPerson.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-request-intent-order"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-order">order</a>
+                </td>
+                <td>http://hl7.org/fhir/request-intent</td>
+                <td>Order</td>
+                <td>
+                  <div>
+                    <p>The request represents a request/demand and authorization for action by a Practitioner.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-request-intent-original-order"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-original-order">original-order</a>
+                </td>
+                <td>http://hl7.org/fhir/request-intent</td>
+                <td>Original Order</td>
+                <td>
+                  <div>
+                    <p>The request represents an original authorization for action.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-request-intent-reflex-order"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-reflex-order">reflex-order</a>
+                </td>
+                <td>http://hl7.org/fhir/request-intent</td>
+                <td>Reflex Order</td>
+                <td>
+                  <div>
+                    <p>The request represents an automatically generated supplemental authorization for action based on a parent authorization together with initial results of the action taken against that parent authorization.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-request-intent-filler-order"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-filler-order">filler-order</a>
+                </td>
+                <td>http://hl7.org/fhir/request-intent</td>
+                <td>Filler Order</td>
+                <td>
+                  <div>
+                    <p>The request represents the view of an authorization instantiated by a fulfilling system representing the details of the fulfiller's intention to act upon a submitted order.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-request-intent-instance-order"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-instance-order">instance-order</a>
+                </td>
+                <td>http://hl7.org/fhir/request-intent</td>
+                <td>Instance Order</td>
+                <td>
+                  <div>
+                    <p>An order created in fulfillment of a broader order that represents the authorization for a single activity occurrence.  E.g. The administration of a single dose of a drug.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-request-intent-option"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-option">option</a>
+                </td>
+                <td>http://hl7.org/fhir/request-intent</td>
+                <td>Option</td>
+                <td>
+                  <div>
+                    <p>The request represents a component or option for a RequestGroup that establishes timing, conditionality and/or other constraints among a set of requests.  Refer to 
+                      <a href="http://hl7.org/fhir/R4/requestgroup.html#RequestGroup">RequestGroup</a> for additional information on how this status is used.
+                    </p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BRIntencaoRegulacao"/>
+        <version value="0.1.0"/>
+        <name value="BRIntencaoRegulacao"/>
+        <title value="Intenção de requisição de regulação assistencial"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2023-04-13T13:17:18.5012669+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="BR"/>
+          </coding>
+        </jurisdiction>
+        <immutable value="false"/>
+        <expansion>
+          <identifier value="urn:uuid:e43b82a0-8b4b-4c42-8710-b79c04855a77"/>
+          <timestamp value="2024-03-27T14:52:06-03:00"/>
+          <total value="9"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="warning-draft"/>
+            <valueUri value="http://hl7.org/fhir/request-intent|4.0.1"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://hl7.org/fhir/request-intent|4.0.1"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/request-intent"/>
+            <code value="proposal"/>
+            <display value="Proposal"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/request-intent"/>
+            <code value="plan"/>
+            <display value="Plan"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/request-intent"/>
+            <code value="directive"/>
+            <display value="Directive"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/request-intent"/>
+            <code value="order"/>
+            <display value="Order"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/request-intent"/>
+            <code value="original-order"/>
+            <display value="Original Order"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/request-intent"/>
+            <code value="reflex-order"/>
+            <display value="Reflex Order"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/request-intent"/>
+            <code value="filler-order"/>
+            <display value="Filler Order"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/request-intent"/>
+            <code value="instance-order"/>
+            <display value="Instance Order"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/request-intent"/>
+            <code value="option"/>
+            <display value="Option"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://www.saude.gov.br/fhir/r4/ValueSet/BRSexo-1.0"/>
+    <resource>
+      <ValueSet>
+        <meta>
+          <lastUpdated value="2021-12-24T12:00:59.742+00:00"/>
+        </meta>
+        <language value="pt-BR"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR">
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="http://hl7.org/fhir/R4/codesystem-administrative-gender.html">codesystem AdministrativeGender v4.0.1 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 3 concepts.</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-administrative-gender-male"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-administrative-gender.html#administrative-gender-male">male</a>
+                </td>
+                <td>http://hl7.org/fhir/administrative-gender</td>
+                <td>Masculino</td>
+                <td>
+                  <div>
+                    <p>Male.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-administrative-gender-female"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-administrative-gender.html#administrative-gender-female">female</a>
+                </td>
+                <td>http://hl7.org/fhir/administrative-gender</td>
+                <td>Feminino</td>
+                <td>
+                  <div>
+                    <p>Female.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-administrative-gender-unknown"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-administrative-gender.html#administrative-gender-unknown">unknown</a>
+                </td>
+                <td>http://hl7.org/fhir/administrative-gender</td>
+                <td>Ignorado</td>
+                <td>
+                  <div>
+                    <p>Unknown.</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BRSexo-1.0"/>
+        <version value="0.1.0"/>
+        <name value="BRSexo"/>
+        <title value="Sexo"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2020-04-07T21:07:00.8812267+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="BR"/>
+          </coding>
+        </jurisdiction>
+        <immutable value="false"/>
+        <expansion>
+          <identifier value="urn:uuid:f1f88b4f-c3c6-4b83-aaed-820fec027417"/>
+          <timestamp value="2024-03-27T14:52:06-03:00"/>
+          <total value="3"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://hl7.org/fhir/administrative-gender|4.0.1"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/administrative-gender"/>
+            <code value="male"/>
+            <display value="Masculino"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/administrative-gender"/>
+            <code value="female"/>
+            <display value="Feminino"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/administrative-gender"/>
+            <code value="unknown"/>
+            <display value="Ignorado"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusParticipante"/>
+    <resource>
+      <ValueSet>
+        <language value="pt-BR"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR">
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="http://hl7.org/fhir/R4/codesystem-participationstatus.html">codesystem ParticipationStatus v4.0.1 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 4 concepts.</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-participationstatus-accepted"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-accepted">accepted</a>
+                </td>
+                <td>http://hl7.org/fhir/participationstatus</td>
+                <td>Accepted</td>
+                <td>
+                  <div>
+                    <p>The participant has accepted the appointment.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-participationstatus-declined"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-declined">declined</a>
+                </td>
+                <td>http://hl7.org/fhir/participationstatus</td>
+                <td>Declined</td>
+                <td>
+                  <div>
+                    <p>The participant has declined the appointment and will not participate in the appointment.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-participationstatus-tentative"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-tentative">tentative</a>
+                </td>
+                <td>http://hl7.org/fhir/participationstatus</td>
+                <td>Tentative</td>
+                <td>
+                  <div>
+                    <p>The participant has  tentatively accepted the appointment. This could be automatically created by a system and requires further processing before it can be accepted. There is no commitment that attendance will occur.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-participationstatus-needs-action"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-needs-action">needs-action</a>
+                </td>
+                <td>http://hl7.org/fhir/participationstatus</td>
+                <td>Needs Action</td>
+                <td>
+                  <div>
+                    <p>The participant needs to indicate if they accept the appointment by changing this status to one of the other statuses.</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusParticipante"/>
+        <version value="0.1.0"/>
+        <name value="BRStatusParticipante"/>
+        <title value="Status do Participante do agendamento"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2023-04-13T13:17:18.5012669+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="BR"/>
+          </coding>
+        </jurisdiction>
+        <immutable value="false"/>
+        <expansion>
+          <identifier value="urn:uuid:bd1aa597-577e-4a91-8a14-a105c20019f4"/>
+          <timestamp value="2024-03-27T14:52:06-03:00"/>
+          <total value="4"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="warning-draft"/>
+            <valueUri value="http://hl7.org/fhir/participationstatus|4.0.1"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://hl7.org/fhir/participationstatus|4.0.1"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/participationstatus"/>
+            <code value="accepted"/>
+            <display value="Accepted"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/participationstatus"/>
+            <code value="declined"/>
+            <display value="Declined"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/participationstatus"/>
+            <code value="tentative"/>
+            <display value="Tentative"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/participationstatus"/>
+            <code value="needs-action"/>
+            <display value="Needs Action"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRequisicaoRegulacaoAssistencial"/>
+    <resource>
+      <ValueSet>
+        <language value="pt-BR"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR">
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="http://hl7.org/fhir/R4/codesystem-request-status.html">codesystem RequestStatus v4.0.1 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 7 concepts.</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-request-status-draft"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-draft">draft</a>
+                </td>
+                <td>http://hl7.org/fhir/request-status</td>
+                <td>Draft</td>
+                <td>
+                  <div>
+                    <p>The request has been created but is not yet complete or ready for action.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-request-status-active"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-active">active</a>
+                </td>
+                <td>http://hl7.org/fhir/request-status</td>
+                <td>Active</td>
+                <td>
+                  <div>
+                    <p>The request is in force and ready to be acted upon.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-request-status-on-hold"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-on-hold">on-hold</a>
+                </td>
+                <td>http://hl7.org/fhir/request-status</td>
+                <td>On Hold</td>
+                <td>
+                  <div>
+                    <p>The request (and any implicit authorization to act) has been temporarily withdrawn but is expected to resume in the future.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-request-status-revoked"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-revoked">revoked</a>
+                </td>
+                <td>http://hl7.org/fhir/request-status</td>
+                <td>Revoked</td>
+                <td>
+                  <div>
+                    <p>The request (and any implicit authorization to act) has been terminated prior to the known full completion of the intended actions.  No further activity should occur.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-request-status-completed"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-completed">completed</a>
+                </td>
+                <td>http://hl7.org/fhir/request-status</td>
+                <td>Completed</td>
+                <td>
+                  <div>
+                    <p>The activity described by the request has been fully performed.  No further activity will occur.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-request-status-entered-in-error"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-entered-in-error">entered-in-error</a>
+                </td>
+                <td>http://hl7.org/fhir/request-status</td>
+                <td>Entered in error</td>
+                <td>
+                  <div>
+                    <p>This request should never have existed and should be considered 'void'.  (It is possible that real-world decisions were based on it.  If real-world activity has occurred, the status should be &quot;revoked&quot; rather than &quot;entered-in-error&quot;.).</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-request-status-unknown"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-unknown">unknown</a>
+                </td>
+                <td>http://hl7.org/fhir/request-status</td>
+                <td>Unknown</td>
+                <td>
+                  <div>
+                    <p>The authoring/source system does not know which of the status values currently applies for this request.  Note: This concept is not to be used for &quot;other&quot; - one of the listed statuses is presumed to apply,  but the authoring/source system does not know which.</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRequisicaoRegulacaoAssistencial"/>
+        <version value="0.1.0"/>
+        <name value="BRStatusRequisicaoRegulacaoAssistencial"/>
+        <title value="Status de requisição de regulação assistencial"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2023-04-13T13:17:18.5012669+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="BR"/>
+          </coding>
+        </jurisdiction>
+        <immutable value="false"/>
+        <expansion>
+          <identifier value="urn:uuid:7b539962-089c-47ef-a817-bfb202b5d449"/>
+          <timestamp value="2024-03-27T14:52:06-03:00"/>
+          <total value="7"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="warning-draft"/>
+            <valueUri value="http://hl7.org/fhir/request-status|4.0.1"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://hl7.org/fhir/request-status|4.0.1"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/request-status"/>
+            <code value="draft"/>
+            <display value="Draft"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/request-status"/>
+            <code value="active"/>
+            <display value="Active"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/request-status"/>
+            <code value="on-hold"/>
+            <display value="On Hold"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/request-status"/>
+            <code value="revoked"/>
+            <display value="Revoked"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/request-status"/>
+            <code value="completed"/>
+            <display value="Completed"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/request-status"/>
+            <code value="entered-in-error"/>
+            <display value="Entered in error"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/request-status"/>
+            <code value="unknown"/>
+            <display value="Unknown"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
 </Bundle>
