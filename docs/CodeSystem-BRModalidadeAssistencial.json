@@ -1,0 +1,88 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "BRModalidadeAssistencial",
+  "language" : "pt-BR",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"pt-BR\" lang=\"pt-BR\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem BRModalidadeAssistencial</b></p><a name=\"BRModalidadeAssistencial\"> </a><a name=\"hcBRModalidadeAssistencial\"> </a><a name=\"BRModalidadeAssistencial-und\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: pt-BR</p></div><p>This case-sensitive code system <code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">01<a name=\"BRModalidadeAssistencial-01\"> </a></td><td>Atenção Básica</td></tr><tr><td style=\"white-space:nowrap\">02<a name=\"BRModalidadeAssistencial-02\"> </a></td><td>Atenção Domiciliar</td></tr><tr><td style=\"white-space:nowrap\">03<a name=\"BRModalidadeAssistencial-03\"> </a></td><td>Atenção Intermediária</td></tr><tr><td style=\"white-space:nowrap\">04<a name=\"BRModalidadeAssistencial-04\"> </a></td><td>Atenção Hospitalar</td></tr><tr><td style=\"white-space:nowrap\">05<a name=\"BRModalidadeAssistencial-05\"> </a></td><td>Atenção Psicossocial</td></tr><tr><td style=\"white-space:nowrap\">06<a name=\"BRModalidadeAssistencial-06\"> </a></td><td>Atenção à Urgência/Emergência</td></tr><tr><td style=\"white-space:nowrap\">07<a name=\"BRModalidadeAssistencial-07\"> </a></td><td>Ambulatorial Especializada</td></tr><tr><td style=\"white-space:nowrap\">08<a name=\"BRModalidadeAssistencial-08\"> </a></td><td>Assistência Farmacêutica</td></tr><tr><td style=\"white-space:nowrap\">09<a name=\"BRModalidadeAssistencial-09\"> </a></td><td>Assistência Ambulatorial</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "informative",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"
+      }]
+    }
+  }],
+  "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial",
+  "version" : "1.0.0",
+  "name" : "BRModalidadeAssistencial",
+  "title" : "Modalidade Assistencial",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2020-03-11T18:16:19.9468275+00:00",
+  "publisher" : "Ministério da Saúde do Brasil",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.saude.gov.br"
+    }]
+  }],
+  "description" : "Classifica os contatos assistenciais de acordo com as especificidades do modo, local e duração do atendimento",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "BR"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "concept" : [{
+    "code" : "01",
+    "display" : "Atenção Básica"
+  },
+  {
+    "code" : "02",
+    "display" : "Atenção Domiciliar"
+  },
+  {
+    "code" : "03",
+    "display" : "Atenção Intermediária"
+  },
+  {
+    "code" : "04",
+    "display" : "Atenção Hospitalar"
+  },
+  {
+    "code" : "05",
+    "display" : "Atenção Psicossocial"
+  },
+  {
+    "code" : "06",
+    "display" : "Atenção à Urgência/Emergência"
+  },
+  {
+    "code" : "07",
+    "display" : "Ambulatorial Especializada"
+  },
+  {
+    "code" : "08",
+    "display" : "Assistência Farmacêutica"
+  },
+  {
+    "code" : "09",
+    "display" : "Assistência Ambulatorial"
+  }]
+}

@@ -1,1 +1,10 @@
-URL,Version,Status,OIDs,Name,Title,Descriptino,Used
+URL,Version,Status,OIDs,Name,Title,Description,Used
+http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBHPMTUSS,1.0.0,active,,BRCBHPMTUSS,Classificação Brasileira Hierarquizada de Procedimentos Médicos (CBHPM) e da Terminologia Unificada da Saúde Suplementar (TUSS),"Classificações de procedimentos utilizadas no Brasil, no contexto da assistência à saúde privada, não complementar ao SUS, e eventualmente no SUS para classificar procedimento inexistente na Tabela SUS.",
+http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO,1.0.0,active,,BRCBO,Classificação Brasileira de Ocupações (CBO),"Classifica as profissões do mercado de trabalho brasileiro.",
+http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10,1.0.0,active,,BRCID10,Classificação Internacional de Doenças - Décima Revisão (CID-10),"Classifica as doenças e outros problemas em saúde registrados em diversos tipos de documentos clínicos.",
+http://www.saude.gov.br/fhir/r4/CodeSystem/BRCategoriaDiagnostico,1.0.0,active,,BRCategoriaDiagnostico,Categoria do Diagnóstico,"Códigos para representação do tipo de categoria do diagnóstico realizado.",
+http://www.saude.gov.br/fhir/r4/CodeSystem/BRJustificativaIndividuoNaoIdentificado,1.0.0,active,,BRJustificativaIndividuoNaoIdentificado,Justificativa da Impossibilidade de Identificação do Indivíduo,"Classifica as razões pelo qual não foi possível obter os dados de identificação do indivíduo em um contato assistencial. (Port. nº 84/SAS/MS/1997 e Port. nº02/SAS/SGEP/MS/2012)",
+http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial,1.0.0,active,,BRModalidadeAssistencial,Modalidade Assistencial,"Classifica os contatos assistenciais de acordo com as especificidades do modo, local e duração do atendimento",
+http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial,1.0.0,active,,BRStatusRegulacaoAssistencial,Status da regulação assistencial,"Status da regulação assistencial.",
+http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento,1.0.0,active,,BRTipoDocumento,Tipo de Documento,"Classificação dos tipos de documentos compartilhados no Brasil.",
+http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante,1.0.0,active,,BRTipoParticipante,Tipo do Participante,"Identificação do tipo do participante envolvido na solicitação.",

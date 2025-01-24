@@ -155,11 +155,11 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Condition.subject.extension:unidentifiedPatient.id","Condition.subject.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
-"Condition.subject.extension:unidentifiedPatient.extension","Condition.subject.extension.extension","","","",0,*,"","","","Extension {[]} {[]}
+"Condition.subject.extension:unidentifiedPatient.extension","Condition.subject.extension.extension","","","",3,3,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Condition.subject.extension:unidentifiedPatient.extension:gender","Condition.subject.extension.extension","gender","","",0,1,"Y","","","Extension {[]} {[]}
+"Condition.subject.extension:unidentifiedPatient.extension:gender","Condition.subject.extension.extension","gender","","",1,1,"Y","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Condition.subject.extension:unidentifiedPatient.extension:gender.id","Condition.subject.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
@@ -174,7 +174,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Condition.subject.extension:unidentifiedPatient.extension:gender.value[x]","Condition.subject.extension.extension.value[x]","","","",1,1,"","","","code {[]} {[]}
 ","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A"
-"Condition.subject.extension:unidentifiedPatient.extension:birthYear","Condition.subject.extension.extension","birthYear","","",0,1,"Y","","","Extension {[]} {[]}
+"Condition.subject.extension:unidentifiedPatient.extension:birthYear","Condition.subject.extension.extension","birthYear","","",1,1,"Y","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Condition.subject.extension:unidentifiedPatient.extension:birthYear.id","Condition.subject.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
@@ -189,7 +189,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Condition.subject.extension:unidentifiedPatient.extension:birthYear.value[x]","Condition.subject.extension.extension.value[x]","","","",1,1,"","","","date {[]} {[]}
 ","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A"
-"Condition.subject.extension:unidentifiedPatient.extension:reason","Condition.subject.extension.extension","reason","","",0,1,"Y","","","Extension {[]} {[]}
+"Condition.subject.extension:unidentifiedPatient.extension:reason","Condition.subject.extension.extension","reason","","",1,1,"Y","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Condition.subject.extension:unidentifiedPatient.extension:reason.id","Condition.subject.extension.extension.id","","","",0,1,"","","","string {[]} {[]}

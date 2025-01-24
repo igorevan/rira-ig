@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Intenção de requisição de regulação assistencial - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v0.1.0</title>
+    <title>Intenção de requisição de regulação assistencial - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -18,6 +18,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
@@ -38,18 +39,20 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
-    <style type="text/css">h2{--heading-prefix:"10.11"}
-    h3,h4,h5,h6{--heading-prefix:"10.11"}</style>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"10.12"}
+    h3,h4,h5,h6{--heading-prefix:"10.12"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 
 
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Guia de Implementação da Regulação Assistencial (RIRA) da RNDS</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - CI Build
+            <span style="display:inline-block;">1.0.0 - CI Build
 
 
 
@@ -167,7 +170,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Guia de Implementação da Regulação Assistencial (RIRA) da RNDS - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://www.saude.gov.br/fhir/r4/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Guia de Implementação da Regulação Assistencial (RIRA) da RNDS - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://www.saude.gov.br/fhir/r4/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -219,7 +222,7 @@
       <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://www.saude.gov.br/fhir/r4/ValueSet/BRIntencaoRegulacao<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://www.saude.gov.br/fhir/r4/ValueSet/BRIntencaoRegulacao"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://www.saude.gov.br/fhir/r4/ValueSet/BRIntencaoRegulacao|0.1.0"/></span>
+      <span class="copy-text">1.0.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://www.saude.gov.br/fhir/r4/ValueSet/BRIntencaoRegulacao|1.0.0"/></span>
       </td>
     </tr>
 
@@ -280,21 +283,23 @@
 
 <!-- Content Logical Definition heading in the fragment -->
   <h3>Logical Definition (CLD)</h3>
-<div xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR"><ul><li>Include these codes as defined in <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html"><code>http://hl7.org/fhir/request-intent</code></a> version <code>*</code><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td><td><b>Portuguese (Brazil) (pt)</b></td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-proposal">proposal</a></td><td>Proposal</td><td>The request is a suggestion made by someone/something that does not have an intention to ensure it occurs and without providing an authorization to act.</td><td>Proposto</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-plan">plan</a></td><td>Plan</td><td>The request represents an intention to ensure something occurs without providing an authorization for others to act.</td><td>Planejado</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-directive">directive</a></td><td>Directive</td><td>The request represents a legally binding instruction authored by a Patient or RelatedPerson.</td><td>Diretriz</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-order">order</a></td><td>Order</td><td>The request represents a request/demand and authorization for action by a Practitioner.</td><td>Autorizado</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-original-order">original-order</a></td><td>Original Order</td><td>The request represents an original authorization for action.</td><td>Autorização original</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-reflex-order">reflex-order</a></td><td>Reflex Order</td><td>The request represents an automatically generated supplemental authorization for action based on a parent authorization together with initial results of the action taken against that parent authorization.</td><td>Autorização suplementar</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-filler-order">filler-order</a></td><td>Filler Order</td><td>The request represents the view of an authorization instantiated by a fulfilling system representing the details of the fulfiller's intention to act upon a submitted order.</td><td>Intenção de autorização</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-instance-order">instance-order</a></td><td>Instance Order</td><td>An order created in fulfillment of a broader order that represents the authorization for a single activity occurrence.  E.g. The administration of a single dose of a drug.</td><td>Autorização de atividade única</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-option">option</a></td><td>Option</td><td>The request represents a component or option for a RequestGroup that establishes timing, conditionality and/or other constraints among a set of requests.  Refer to [[[RequestGroup]]] for additional information on how this status is used.</td><td>Condicional</td></tr></table></li></ul></div>
+<div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><p class="res-header-id"><b>Generated Narrative: ValueSet BRIntencaoRegulacao</b></p><a name="BRIntencaoRegulacao"> </a><a name="hcBRIntencaoRegulacao"> </a><a name="BRIntencaoRegulacao-und"> </a>
+<div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p></div>
+<ul><li>Include these codes as defined in <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html"><code>http://hl7.org/fhir/request-intent</code></a> version <code>*</code><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td><td><b>Portuguese (Brazil) (pt)</b></td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-proposal">proposal</a></td><td>Proposal</td><td>The request is a suggestion made by someone/something that does not have an intention to ensure it occurs and without providing an authorization to act.</td><td>Proposto</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-plan">plan</a></td><td>Plan</td><td>The request represents an intention to ensure something occurs without providing an authorization for others to act.</td><td>Planejado</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-directive">directive</a></td><td>Directive</td><td>The request represents a legally binding instruction authored by a Patient or RelatedPerson.</td><td>Diretriz</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-order">order</a></td><td>Order</td><td>The request represents a request/demand and authorization for action by a Practitioner.</td><td>Autorizado</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-original-order">original-order</a></td><td>Original Order</td><td>The request represents an original authorization for action.</td><td>Autorização original</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-reflex-order">reflex-order</a></td><td>Reflex Order</td><td>The request represents an automatically generated supplemental authorization for action based on a parent authorization together with initial results of the action taken against that parent authorization.</td><td>Autorização suplementar</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-filler-order">filler-order</a></td><td>Filler Order</td><td>The request represents the view of an authorization instantiated by a fulfilling system representing the details of the fulfiller's intention to act upon a submitted order.</td><td>Intenção de autorização</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-instance-order">instance-order</a></td><td>Instance Order</td><td>An order created in fulfillment of a broader order that represents the authorization for a single activity occurrence.  E.g. The administration of a single dose of a drug.</td><td>Autorização de atividade única</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-option">option</a></td><td>Option</td><td>The request represents a component or option for a RequestGroup that establishes timing, conditionality and/or other constraints among a set of requests.  Refer to [[[RequestGroup]]] for additional information on how this status is used.</td><td>Condicional</td></tr></table></li></ul></div>
 
   <p>&#160;</p>
   <a name="expansion"> </a>
   <h3 id="expansion">Expansion</h3>
 
-  <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR"><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html">codesystem RequestIntent v4.0.1 (CodeSystem)</a></p><p>This value set contains 9 concepts.</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-request-intent-proposal"> </a>  <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-proposal">proposal</a></td><td>http://hl7.org/fhir/request-intent</td><td>Proposal</td><td><div><p>The request is a suggestion made by someone/something that does not have an intention to ensure it occurs and without providing an authorization to act.</p>
-</div></td></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-request-intent-plan"> </a>  <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-plan">plan</a></td><td>http://hl7.org/fhir/request-intent</td><td>Plan</td><td><div><p>The request represents an intention to ensure something occurs without providing an authorization for others to act.</p>
-</div></td></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-request-intent-directive"> </a>  <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-directive">directive</a></td><td>http://hl7.org/fhir/request-intent</td><td>Directive</td><td><div><p>The request represents a legally binding instruction authored by a Patient or RelatedPerson.</p>
-</div></td></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-request-intent-order"> </a>  <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-order">order</a></td><td>http://hl7.org/fhir/request-intent</td><td>Order</td><td><div><p>The request represents a request/demand and authorization for action by a Practitioner.</p>
-</div></td></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-request-intent-original-order"> </a>  <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-original-order">original-order</a></td><td>http://hl7.org/fhir/request-intent</td><td>Original Order</td><td><div><p>The request represents an original authorization for action.</p>
-</div></td></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-request-intent-reflex-order"> </a>  <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-reflex-order">reflex-order</a></td><td>http://hl7.org/fhir/request-intent</td><td>Reflex Order</td><td><div><p>The request represents an automatically generated supplemental authorization for action based on a parent authorization together with initial results of the action taken against that parent authorization.</p>
-</div></td></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-request-intent-filler-order"> </a>  <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-filler-order">filler-order</a></td><td>http://hl7.org/fhir/request-intent</td><td>Filler Order</td><td><div><p>The request represents the view of an authorization instantiated by a fulfilling system representing the details of the fulfiller's intention to act upon a submitted order.</p>
-</div></td></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-request-intent-instance-order"> </a>  <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-instance-order">instance-order</a></td><td>http://hl7.org/fhir/request-intent</td><td>Instance Order</td><td><div><p>An order created in fulfillment of a broader order that represents the authorization for a single activity occurrence.  E.g. The administration of a single dose of a drug.</p>
-</div></td></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-request-intent-option"> </a>  <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-option">option</a></td><td>http://hl7.org/fhir/request-intent</td><td>Option</td><td><div><p>The request represents a component or option for a RequestGroup that establishes timing, conditionality and/or other constraints among a set of requests.  Refer to <a href="http://hl7.org/fhir/R4/requestgroup.html#RequestGroup">RequestGroup</a> for additional information on how this status is used.</p>
+  <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><p class="res-header-id"><b>Generated Narrative: ValueSet </b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p></div><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion done internally based on <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html">codesystem RequestIntent v4.0.1 (CodeSystem)</a></p><p>This value set contains 9 concepts</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap"><a name="x-http://hl7.org/fhir/request-intent-proposal"> </a>  <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-proposal">proposal</a></td><td>http://hl7.org/fhir/request-intent</td><td>Proposal</td><td><div><p>The request is a suggestion made by someone/something that does not have an intention to ensure it occurs and without providing an authorization to act.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://hl7.org/fhir/request-intent-plan"> </a>  <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-plan">plan</a></td><td>http://hl7.org/fhir/request-intent</td><td>Plan</td><td><div><p>The request represents an intention to ensure something occurs without providing an authorization for others to act.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://hl7.org/fhir/request-intent-directive"> </a>  <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-directive">directive</a></td><td>http://hl7.org/fhir/request-intent</td><td>Directive</td><td><div><p>The request represents a legally binding instruction authored by a Patient or RelatedPerson.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://hl7.org/fhir/request-intent-order"> </a>  <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-order">order</a></td><td>http://hl7.org/fhir/request-intent</td><td>Order</td><td><div><p>The request represents a request/demand and authorization for action by a Practitioner.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://hl7.org/fhir/request-intent-original-order"> </a>  <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-original-order">original-order</a></td><td>http://hl7.org/fhir/request-intent</td><td>Original Order</td><td><div><p>The request represents an original authorization for action.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://hl7.org/fhir/request-intent-reflex-order"> </a>  <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-reflex-order">reflex-order</a></td><td>http://hl7.org/fhir/request-intent</td><td>Reflex Order</td><td><div><p>The request represents an automatically generated supplemental authorization for action based on a parent authorization together with initial results of the action taken against that parent authorization.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://hl7.org/fhir/request-intent-filler-order"> </a>  <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-filler-order">filler-order</a></td><td>http://hl7.org/fhir/request-intent</td><td>Filler Order</td><td><div><p>The request represents the view of an authorization instantiated by a fulfilling system representing the details of the fulfiller's intention to act upon a submitted order.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://hl7.org/fhir/request-intent-instance-order"> </a>  <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-instance-order">instance-order</a></td><td>http://hl7.org/fhir/request-intent</td><td>Instance Order</td><td><div><p>An order created in fulfillment of a broader order that represents the authorization for a single activity occurrence.  E.g. The administration of a single dose of a drug.</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="x-http://hl7.org/fhir/request-intent-option"> </a>  <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-option">option</a></td><td>http://hl7.org/fhir/request-intent</td><td>Option</td><td><div><p>The request represents a component or option for a RequestGroup that establishes timing, conditionality and/or other constraints among a set of requests.  Refer to <a href="http://hl7.org/fhir/R4/requestgroup.html#RequestGroup">RequestGroup</a> for additional information on how this status is used.</p>
 </div></td></tr></table></div>
 
   <hr/>
@@ -347,13 +352,7 @@
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
 
-  <script type="text/javascript">
-    $(document).ready(function(){
-      if(window.location.hash != "") {
-          $('a[href="' + window.location.hash + '"]').click()
-      }
-    });
-  </script>
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
@@ -382,7 +381,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.saude.gov.br">Ministério da Saúde do Brasil</a>.  Package br.gov.saude.rnds.rira#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 27, 2024 14:51-0300">2024-03-27</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.saude.gov.br">Ministério da Saúde do Brasil</a>.  Package br.gov.saude.rira.fhir#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 24, 2025 13:58-0300">2025-01-24</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -399,7 +398,7 @@
     <div class="container">  <!-- container -->
     </div>  <!-- /container -->
   </div>  <!-- /segment-post-footer -->
-  
+
   <!-- JS and analytics only. -->
   <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -409,16 +408,7 @@
   <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
-  <script>anchors.options.visible = 'hover'
-anchors.add()</script>
-  
-<!-- feedback form - Google forms -->
-<!-- v0.1, 2021-01-09 -->
-
-
-
-<!-- / feedback form  -->
-
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
   <!-- Analytics Below
   ================================================== -->
   </body>

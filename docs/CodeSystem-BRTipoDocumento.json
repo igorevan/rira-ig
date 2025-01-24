@@ -1,0 +1,99 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "BRTipoDocumento",
+  "language" : "pt-BR",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"pt-BR\" lang=\"pt-BR\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem BRTipoDocumento</b></p><a name=\"BRTipoDocumento\"> </a><a name=\"hcBRTipoDocumento\"> </a><a name=\"BRTipoDocumento-und\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: pt-BR</p></div><p>This case-sensitive code system <code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">CMD<a name=\"BRTipoDocumento-CMD\"> </a></td><td>Conjunto Mínimo de Dados</td><td>Documento público que coleta os dados mínimos dos atendimentos em saúde realizados em qualquer estabelecimento de saúde do país, público ou privado, em cada contato assistencial.</td></tr><tr><td style=\"white-space:nowrap\">SA<a name=\"BRTipoDocumento-SA\"> </a></td><td>Sumário de Alta</td><td>Relato clínico objetivo sobre as intervenções realizadas, as instruções para continuidade do cuidado pós-alta e o estado de saúde do indivíduo ao final de sua permanência na internação em estabelecimentos de saúde como: hospital, clínica, hospital-dia, internação domiciliar e urgência.</td></tr><tr><td style=\"white-space:nowrap\">RAC<a name=\"BRTipoDocumento-RAC\"> </a></td><td>Registro de Atendimento Clínico</td><td>Registro de dados essenciais de uma consulta realizada a um indivíduo no âmbito da atenção básica, especializada ou domiciliar (atendimento diário).</td></tr><tr><td style=\"white-space:nowrap\">RIA<a name=\"BRTipoDocumento-RIA\"> </a></td><td>Registro de Imunobiológico Administrado</td><td/></tr><tr><td style=\"white-space:nowrap\">RPM<a name=\"BRTipoDocumento-RPM\"> </a></td><td>Registro de Prescrição de Medicamento</td><td/></tr><tr><td style=\"white-space:nowrap\">RDM<a name=\"BRTipoDocumento-RDM\"> </a></td><td>Registro de Dispensação de Medicamento</td><td/></tr><tr><td style=\"white-space:nowrap\">REL<a name=\"BRTipoDocumento-REL\"> </a></td><td>Resultado de Exame(s) Laboratoriais(s)</td><td/></tr><tr><td style=\"white-space:nowrap\">RA<a name=\"BRTipoDocumento-RA\"> </a></td><td>Regulação Assistencial</td><td/></tr><tr><td style=\"white-space:nowrap\">ATM<a name=\"BRTipoDocumento-ATM\"> </a></td><td>Atestado Médico/Odontológico</td><td/></tr><tr><td style=\"white-space:nowrap\">REPM<a name=\"BRTipoDocumento-REPM\"> </a></td><td>Registro Eletrônico da Prescrição de Medicamento</td><td/></tr><tr><td style=\"white-space:nowrap\">REDFM<a name=\"BRTipoDocumento-REDFM\"> </a></td><td>Registro Eletrônico de Dispensação ou Fornecimento de Medicamentos</td><td/></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "informative",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"
+      }]
+    }
+  }],
+  "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento",
+  "version" : "1.0.0",
+  "name" : "BRTipoDocumento",
+  "title" : "Tipo de Documento",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2020-03-26T13:19:46.9743559+00:00",
+  "publisher" : "Ministério da Saúde do Brasil",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.saude.gov.br"
+    }]
+  }],
+  "description" : "Classificação dos tipos de documentos compartilhados no Brasil.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "BR"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "concept" : [{
+    "code" : "CMD",
+    "display" : "Conjunto Mínimo de Dados",
+    "definition" : "Documento público que coleta os dados mínimos dos atendimentos em saúde realizados em qualquer estabelecimento de saúde do país, público ou privado, em cada contato assistencial."
+  },
+  {
+    "code" : "SA",
+    "display" : "Sumário de Alta",
+    "definition" : "Relato clínico objetivo sobre as intervenções realizadas, as instruções para continuidade do cuidado pós-alta e o estado de saúde do indivíduo ao final de sua permanência na internação em estabelecimentos de saúde como: hospital, clínica, hospital-dia, internação domiciliar e urgência."
+  },
+  {
+    "code" : "RAC",
+    "display" : "Registro de Atendimento Clínico",
+    "definition" : "Registro de dados essenciais de uma consulta realizada a um indivíduo no âmbito da atenção básica, especializada ou domiciliar (atendimento diário)."
+  },
+  {
+    "code" : "RIA",
+    "display" : "Registro de Imunobiológico Administrado"
+  },
+  {
+    "code" : "RPM",
+    "display" : "Registro de Prescrição de Medicamento"
+  },
+  {
+    "code" : "RDM",
+    "display" : "Registro de Dispensação de Medicamento"
+  },
+  {
+    "code" : "REL",
+    "display" : "Resultado de Exame(s) Laboratoriais(s)"
+  },
+  {
+    "code" : "RA",
+    "display" : "Regulação Assistencial"
+  },
+  {
+    "code" : "ATM",
+    "display" : "Atestado Médico/Odontológico"
+  },
+  {
+    "code" : "REPM",
+    "display" : "Registro Eletrônico da Prescrição de Medicamento"
+  },
+  {
+    "code" : "REDFM",
+    "display" : "Registro Eletrônico de Dispensação ou Fornecimento de Medicamentos"
+  }]
+}

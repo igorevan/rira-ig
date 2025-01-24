@@ -2,7 +2,7 @@
   "codeSystems" : [
     {
       "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCID10-1.0",
-      "version" : "0.1.0",
+      "version" : "1.0.0",
       "status" : "active",
       "name" : "BRCID10",
       "title" : "Classificação Internacional de Doenças - Décima Revisão - CID-10",
@@ -11,7 +11,7 @@
     },
     {
       "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCaraterAtendimentoMIRA",
-      "version" : "0.1.0",
+      "version" : "1.0.0",
       "status" : "active",
       "name" : "BRCaraterAtendimentoMIRA",
       "title" : "Caráter de Atendimento no MIRA",
@@ -20,7 +20,7 @@
     },
     {
       "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCategoriaDiagnostico",
-      "version" : "0.1.0",
+      "version" : "1.0.0",
       "status" : "active",
       "name" : "BRCategoriaDiagnostico",
       "title" : "Categoria do Diagnóstico",
@@ -31,7 +31,7 @@
     },
     {
       "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoDocumento-1.0",
-      "version" : "0.1.0",
+      "version" : "1.0.0",
       "status" : "active",
       "name" : "BREstadoDocumento",
       "title" : "Estado do Documento",
@@ -40,7 +40,7 @@
     },
     {
       "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoResolucaoDiagnosticoProblema-1.0",
-      "version" : "0.1.0",
+      "version" : "1.0.0",
       "status" : "active",
       "name" : "BREstadoResolucaoDiagnosticoProblema",
       "title" : "Estado da Resolução de Diagnóstico ou Problema",
@@ -49,7 +49,7 @@
     },
     {
       "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRIntencaoRegulacao",
-      "version" : "0.1.0",
+      "version" : "1.0.0",
       "status" : "active",
       "name" : "BRIntencaoRegulacao",
       "title" : "Intenção de requisição de regulação assistencial",
@@ -58,7 +58,7 @@
     },
     {
       "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRJustificativaIndividuoNaoIdentificado-1.0",
-      "version" : "0.1.0",
+      "version" : "1.0.0",
       "status" : "active",
       "name" : "BRJustificativaIndividuoNaoIdentificado",
       "title" : "Justificativa da Impossibilidade de Identificação do Indivíduo",
@@ -69,7 +69,7 @@
     },
     {
       "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRModalidadeAssistencialMIRA",
-      "version" : "0.1.0",
+      "version" : "1.0.0",
       "status" : "active",
       "name" : "BRModalidadeAssistencialMIRA",
       "title" : "Modalidade Assistencial MIRA",
@@ -80,7 +80,7 @@
     },
     {
       "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BROcupacao-1.0",
-      "version" : "0.1.0",
+      "version" : "1.0.0",
       "status" : "active",
       "name" : "BROcupacao",
       "title" : "Classificação Brasileira de Ocupações - CBO",
@@ -89,7 +89,7 @@
     },
     {
       "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRProcedimentosNacionais-1.0",
-      "version" : "0.1.0",
+      "version" : "1.0.0",
       "status" : "active",
       "name" : "BRProcedimentosNacionais",
       "title" : "Procedimento realizado",
@@ -101,7 +101,7 @@
     },
     {
       "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRSexo-1.0",
-      "version" : "0.1.0",
+      "version" : "1.0.0",
       "status" : "active",
       "name" : "BRSexo",
       "title" : "Sexo",
@@ -110,7 +110,7 @@
     },
     {
       "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial",
-      "version" : "0.1.0",
+      "version" : "1.0.0",
       "status" : "active",
       "name" : "BRStatusAgendamentoRegulacaoAssistencial",
       "title" : "Status de agendamento de regulação assistencial",
@@ -122,7 +122,7 @@
     },
     {
       "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusParticipante",
-      "version" : "0.1.0",
+      "version" : "1.0.0",
       "status" : "active",
       "name" : "BRStatusParticipante",
       "title" : "Status do Participante do agendamento",
@@ -131,7 +131,7 @@
     },
     {
       "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial",
-      "version" : "0.1.0",
+      "version" : "1.0.0",
       "status" : "active",
       "name" : "BRStatusRegulacaoAssistencial",
       "title" : "Status de regulação assistencial",
@@ -142,7 +142,7 @@
     },
     {
       "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRequisicaoRegulacaoAssistencial",
-      "version" : "0.1.0",
+      "version" : "1.0.0",
       "status" : "active",
       "name" : "BRStatusRequisicaoRegulacaoAssistencial",
       "title" : "Status de requisição de regulação assistencial",
@@ -151,7 +151,7 @@
     },
     {
       "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoDocumento-1.0",
-      "version" : "0.1.0",
+      "version" : "1.0.0",
       "status" : "active",
       "name" : "BRTipoDocumento",
       "title" : "Tipo de Documento",
@@ -160,7 +160,7 @@
     },
     {
       "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoParticipante",
-      "version" : "0.1.0",
+      "version" : "1.0.0",
       "status" : "active",
       "name" : "BRTipoParticipante",
       "title" : "Tipo Participante",

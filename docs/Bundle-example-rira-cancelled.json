@@ -1,0 +1,221 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "example-rira-cancelled",
+  "meta" : {
+    "lastUpdated" : "2024-02-27T17:11:44-03:00"
+  },
+  "identifier" : {
+    "system" : "http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-1964",
+    "value" : "AMB_271831370_0701172"
+  },
+  "type" : "document",
+  "timestamp" : "2024-02-27T17:11:44-03:00",
+  "entry" : [{
+    "fullUrl" : "urn:uuid:transient-0",
+    "resource" : {
+      "resourceType" : "Composition",
+      "id" : "transient-0",
+      "meta" : {
+        "lastUpdated" : "2024-02-27T17:11:44-03:00",
+        "profile" : ["http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Composition_transient-0\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Composition transient-0</b></p><a name=\"transient-0\"> </a><a name=\"hctransient-0\"> </a><a name=\"transient-0-und\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2024-02-27 17:11:44-0300</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-BRRegulacaoAssistencial.html\">Regulação Assistencial</a></p></div><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento RA}\">Regulação Assistencial</span></p><p><b>category</b>: <span title=\"Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial 09}\">Assistência Ambulatorial</span></p><p><b>date</b>: 2024-02-27 17:11:44-0300</p><p><b>author</b>: Identifier: <code>http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0</code>/5604613</p><p><b>title</b>: Registro de Informações da Regulação Assistencial</p><h3>Events</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Period</b></td><td><b>Detail</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial cancelled}\">Cancelled</span></td><td>2019-03-17 12:00:00-0300 --&gt; 2019-03-17 12:00:00-0300</td><td>Identifier: <code>http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0</code>/5604613</td></tr></table></div>"
+      },
+      "status" : "final",
+      "type" : {
+        "coding" : [{
+          "system" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento",
+          "code" : "RA"
+        }]
+      },
+      "category" : [{
+        "coding" : [{
+          "system" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial",
+          "code" : "09"
+        }]
+      }],
+      "subject" : {
+        "identifier" : {
+          "system" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+          "value" : "706004324048847"
+        }
+      },
+      "date" : "2024-02-27T17:11:44-03:00",
+      "author" : [{
+        "identifier" : {
+          "system" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0",
+          "value" : "5604613"
+        }
+      }],
+      "title" : "Registro de Informações da Regulação Assistencial",
+      "event" : [{
+        "code" : [{
+          "coding" : [{
+            "system" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial",
+            "code" : "cancelled"
+          }]
+        }],
+        "period" : {
+          "start" : "2019-03-17T12:00:00-03:00",
+          "end" : "2019-03-17T12:00:00-03:00"
+        },
+        "detail" : [{
+          "identifier" : {
+            "system" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0",
+            "value" : "5604613"
+          }
+        }]
+      }],
+      "section" : [{
+        "entry" : [{
+          "reference" : "urn:uuid:transient-1"
+        }]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:transient-1",
+    "resource" : {
+      "resourceType" : "Appointment",
+      "id" : "transient-1",
+      "meta" : {
+        "lastUpdated" : "2024-02-27T17:11:44-03:00",
+        "profile" : ["http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Appointment_transient-1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Appointment transient-1</b></p><a name=\"transient-1\"> </a><a name=\"hctransient-1\"> </a><a name=\"transient-1-und\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2024-02-27 17:11:44-0300</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-BRAgendamentoRegulacaoAssistencial.html\">Agendamento de Regulação Assistencial</a></p></div><p><b>status</b>: Fulfilled</p><p><b>serviceCategory</b>: <span title=\"Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial 09}\">Assistência Ambulatorial</span></p><p><b>serviceType</b>: <span title=\"Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS 0301010072}\">0301010072</span></p><p><b>specialty</b>: <span title=\"Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO 225127}\">MEDICO PNEUMOLOGISTA</span></p><p><b>appointmentType</b>: <span title=\"Codes:{http://hl7.org/fhir/request-priority routine}\">Routine</span></p><p><b>reasonReference</b>: <a href=\"Bundle-example-rira-attended.html#urn-uuid-transient-3\">Bundle: identifier = http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-1964#AMB_271831370_0701172; type = document; timestamp = 2024-02-27 17:11:44-0300</a></p><p><b>start</b>: 2019-03-17 21:00:00-0300</p><p><b>end</b>: 2019-03-17 21:00:00-0300</p><p><b>created</b>: 2019-01-16 22:00:00-0200</p><p><b>basedOn</b>: <a href=\"Bundle-example-rira-attended.html#urn-uuid-transient-2\">Bundle: identifier = http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-1964#AMB_271831370_0701172; type = document; timestamp = 2024-02-27 17:11:44-0300</a></p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Actor</b></td><td><b>Status</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante PCT}\">Paciente</span></td><td>Identifier: <code>http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0</code>/706004324048847</td><td>Accepted</td></tr></table></div>"
+      },
+      "status" : "fulfilled",
+      "serviceCategory" : [{
+        "coding" : [{
+          "system" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial",
+          "code" : "09"
+        }]
+      }],
+      "serviceType" : [{
+        "coding" : [{
+          "system" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS",
+          "code" : "0301010072"
+        }]
+      }],
+      "specialty" : [{
+        "coding" : [{
+          "system" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO",
+          "code" : "225127"
+        }]
+      }],
+      "appointmentType" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/request-priority",
+          "code" : "routine"
+        }]
+      },
+      "reasonReference" : [{
+        "reference" : "urn:uuid:transient-3"
+      }],
+      "start" : "2019-03-17T21:00:00.000-03:00",
+      "end" : "2019-03-17T21:00:00.000-03:00",
+      "created" : "2019-01-16T22:00:00.000-02:00",
+      "basedOn" : [{
+        "reference" : "urn:uuid:transient-2"
+      }],
+      "participant" : [{
+        "type" : [{
+          "coding" : [{
+            "system" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante",
+            "code" : "PCT"
+          }]
+        }],
+        "actor" : {
+          "identifier" : {
+            "system" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value" : "706004324048847"
+          }
+        },
+        "status" : "accepted"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:transient-2",
+    "resource" : {
+      "resourceType" : "ServiceRequest",
+      "id" : "transient-2",
+      "meta" : {
+        "lastUpdated" : "2024-02-27T17:11:44-03:00",
+        "profile" : ["http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ServiceRequest_transient-2\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest transient-2</b></p><a name=\"transient-2\"> </a><a name=\"hctransient-2\"> </a><a name=\"transient-2-und\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2024-02-27 17:11:44-0300</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-BRRequisicaoRegulacaoAssistencial.html\">Requisição de Regulação Assistencial</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial 09}\">Assistência Ambulatorial</span></p><p><b>priority</b>: Urgent</p><p><b>code</b>: <span title=\"Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS 0301010072}\">0301010072</span></p><p><b>subject</b>: Identifier: <code>http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0</code>/706004324048847</p><p><b>authoredOn</b>: 2019-01-16 22:00:00-0200</p><p><b>requester</b>: Identifier: <code>http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0</code>/6689477</p><p><b>performerType</b>: <span title=\"Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO 225127}\">MEDICO PNEUMOLOGISTA</span></p><p><b>reasonReference</b>: <a href=\"Bundle-example-rira-attended.html#urn-uuid-transient-3\">Bundle: identifier = http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-1964#AMB_271831370_0701172; type = document; timestamp = 2024-02-27 17:11:44-0300</a></p></div>"
+      },
+      "status" : "active",
+      "intent" : "order",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial",
+          "code" : "09"
+        }]
+      }],
+      "priority" : "urgent",
+      "code" : {
+        "coding" : [{
+          "system" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS",
+          "code" : "0301010072"
+        }]
+      },
+      "subject" : {
+        "identifier" : {
+          "system" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+          "value" : "706004324048847"
+        }
+      },
+      "authoredOn" : "2019-01-16T22:00:00.000-02:00",
+      "requester" : {
+        "identifier" : {
+          "system" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0",
+          "value" : "6689477"
+        }
+      },
+      "performerType" : {
+        "coding" : [{
+          "system" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO",
+          "code" : "225127"
+        }]
+      },
+      "reasonReference" : [{
+        "reference" : "urn:uuid:transient-3"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:transient-3",
+    "resource" : {
+      "resourceType" : "Condition",
+      "id" : "transient-3",
+      "meta" : {
+        "lastUpdated" : "2024-02-27T17:11:44-03:00",
+        "profile" : ["http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_transient-3\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition transient-3</b></p><a name=\"transient-3\"> </a><a name=\"hctransient-3\"> </a><a name=\"transient-3-und\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2024-02-27 17:11:44-0300</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-BRCID10Avaliado-1.0.html\">CID10 Avaliado</a></p></div><p><b>code</b>: <span title=\"Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10 R06}\">Anormalidades da respiração</span></p><p><b>subject</b>: Identifier: <code>http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0</code>/706004324048847</p></div>"
+      },
+      "code" : {
+        "coding" : [{
+          "system" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+          "code" : "R06"
+        }]
+      },
+      "subject" : {
+        "identifier" : {
+          "system" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+          "value" : "706004324048847"
+        }
+      }
+    }
+  }]
+}

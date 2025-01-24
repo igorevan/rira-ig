@@ -1,0 +1,108 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "BRStatusRegulacaoAssistencial",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem BRStatusRegulacaoAssistencial</b></p><a name=\"BRStatusRegulacaoAssistencial\"> </a><a name=\"hcBRStatusRegulacaoAssistencial\"> </a><a name=\"BRStatusRegulacaoAssistencial-und\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p></div><p>This case-sensitive code system <code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Portuguese (Brazil) (pt)</b></td></tr><tr><td style=\"white-space:nowrap\">pending<a name=\"BRStatusRegulacaoAssistencial-pending\"> </a></td><td>Pending</td><td>Pendente</td></tr><tr><td style=\"white-space:nowrap\">booked<a name=\"BRStatusRegulacaoAssistencial-booked\"> </a></td><td>Booked</td><td>Agendado</td></tr><tr><td style=\"white-space:nowrap\">attended<a name=\"BRStatusRegulacaoAssistencial-attended\"> </a></td><td>Attended/Hospitalized</td><td>Atendido/Internado</td></tr><tr><td style=\"white-space:nowrap\">cancelled<a name=\"BRStatusRegulacaoAssistencial-cancelled\"> </a></td><td>Cancelled</td><td>Negado/Cancelado</td></tr><tr><td style=\"white-space:nowrap\">absence<a name=\"BRStatusRegulacaoAssistencial-absence\"> </a></td><td>Absence</td><td>Falta</td></tr><tr><td style=\"white-space:nowrap\">excluded<a name=\"BRStatusRegulacaoAssistencial-excluded\"> </a></td><td>Excluded</td><td>Excluído</td></tr><tr><td style=\"white-space:nowrap\">returned-to-requester<a name=\"BRStatusRegulacaoAssistencial-returned-to-requester\"> </a></td><td>Returned to requester.</td><td>Devolvido para o solicitante.</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "informative",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"
+      }]
+    }
+  }],
+  "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial",
+  "version" : "1.0.0",
+  "name" : "BRStatusRegulacaoAssistencial",
+  "title" : "Status da regulação assistencial",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2020-03-26T13:19:46.9743559+00:00",
+  "publisher" : "Ministério da Saúde do Brasil",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.saude.gov.br"
+    }]
+  }],
+  "description" : "Status da regulação assistencial.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "BR"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "concept" : [{
+    "code" : "pending",
+    "display" : "Pending",
+    "designation" : [{
+      "language" : "pt-BR",
+      "value" : "Pendente"
+    }]
+  },
+  {
+    "code" : "booked",
+    "display" : "Booked",
+    "designation" : [{
+      "language" : "pt-BR",
+      "value" : "Agendado"
+    }]
+  },
+  {
+    "code" : "attended",
+    "display" : "Attended/Hospitalized",
+    "designation" : [{
+      "language" : "pt-BR",
+      "value" : "Atendido/Internado"
+    }]
+  },
+  {
+    "code" : "cancelled",
+    "display" : "Cancelled",
+    "designation" : [{
+      "language" : "pt-BR",
+      "value" : "Negado/Cancelado"
+    }]
+  },
+  {
+    "code" : "absence",
+    "display" : "Absence",
+    "designation" : [{
+      "language" : "pt-BR",
+      "value" : "Falta"
+    }]
+  },
+  {
+    "code" : "excluded",
+    "display" : "Excluded",
+    "designation" : [{
+      "language" : "pt-BR",
+      "value" : "Excluído"
+    }]
+  },
+  {
+    "code" : "returned-to-requester",
+    "display" : "Returned to requester.",
+    "designation" : [{
+      "language" : "pt-BR",
+      "value" : "Devolvido para o solicitante."
+    }]
+  }]
+}

@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "BRCaraterAtendimentoMIRA",
-  "language": "pt-BR",
+  "language": "en",
   "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRCaraterAtendimentoMIRA",
   "version": "1.0",
   "name": "BRCaraterAtendimentoMIRA",

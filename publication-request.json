@@ -1,0 +1,14 @@
+{
+  "package-id": "br.gov.saude.rira.fhir",
+  "title": "RIRA IG",
+  "category": "base",
+  "introduction": "Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS",
+  "version": "1.0.0",
+  "desc": "1.0.0 Release",
+  "mode": "milestone",
+  "path": "http://www.saude.gov.br/fhir/r4/rira/v1.0.0",
+  "ci-build": "https://igorevan.github.io/rira-ig/",
+  "first": true,
+  "status": "release",
+  "sequence": "Releases"
+}

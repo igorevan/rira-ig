@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="example-rira-booked"/>
+  <meta>
+    <lastUpdated value="2024-02-27T17:11:44-03:00"/>
+  </meta>
+  <identifier>
+    <system value="http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-1964"/>
+    <value value="AMB_271831370_0701172"/>
+  </identifier>
+  <type value="document"/>
+  <timestamp value="2024-02-27T17:11:44-03:00"/>
+  <entry>
+    <fullUrl value="urn:uuid:transient-0"/>
+    <resource>
+      <Composition>
+        <id value="transient-0"/>
+        <meta>
+          <lastUpdated value="2024-02-27T17:11:44-03:00"/>
+          <profile value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Composition_transient-0"> </a><p class="res-header-id"><b>Generated Narrative: Composition transient-0</b></p><a name="transient-0"> </a><a name="hctransient-0"> </a><a name="transient-0-und"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Last updated: 2024-02-27 17:11:44-0300</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-BRRegulacaoAssistencial.html">Regulação Assistencial</a></p></div><p><b>status</b>: Final</p><p><b>type</b>: <span title="Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento RA}">Regulação Assistencial</span></p><p><b>category</b>: <span title="Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial 09}">Assistência Ambulatorial</span></p><p><b>date</b>: 2024-02-27 17:11:44-0300</p><p><b>author</b>: Identifier: <code>http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0</code>/5604613</p><p><b>title</b>: Registro de Informações da Regulação Assistencial</p><blockquote><p><b>event</b></p><p><b>code</b>: <span title="Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial booked}">Booked</span></p><p><b>period</b>: 2019-03-07 12:00:00-0300 --&gt; 2019-03-07 12:00:00-0300</p><p><b>detail</b>: </p><ul><li>Identifier: <code>http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0</code>/5604613</li><li><a href="Bundle-example-rira-attended.html#urn-uuid-transient-1">Bundle: identifier = http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-1964#AMB_271831370_0701172; type = document; timestamp = 2024-02-27 17:11:44-0300</a></li></ul></blockquote></div>
+        </text>
+        <status value="final"/>
+        <type>
+          <coding>
+            <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento"/>
+            <code value="RA"/>
+          </coding>
+        </type>
+        <category>
+          <coding>
+            <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial"/>
+            <code value="09"/>
+          </coding>
+        </category>
+        <subject>
+          <identifier>
+            <system value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"/>
+            <value value="706004324048847"/>
+          </identifier>
+        </subject>
+        <date value="2024-02-27T17:11:44-03:00"/>
+        <author>
+          <identifier>
+            <system value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"/>
+            <value value="5604613"/>
+          </identifier>
+        </author>
+        <title value="Registro de Informações da Regulação Assistencial"/>
+        <event>
+          <code>
+            <coding>
+              <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial"/>
+              <code value="booked"/>
+            </coding>
+          </code>
+          <period>
+            <start value="2019-03-07T12:00:00-03:00"/>
+            <end value="2019-03-07T12:00:00-03:00"/>
+          </period>
+          <detail>
+            <identifier>
+              <system value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"/>
+              <value value="5604613"/>
+            </identifier>
+          </detail>
+          <detail>
+            <reference value="urn:uuid:transient-1"/>
+          </detail>
+        </event>
+        <section>
+          <entry>
+            <reference value="urn:uuid:transient-1"/>
+          </entry>
+        </section>
+      </Composition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:transient-1"/>
+    <resource>
+      <Appointment>
+        <id value="transient-1"/>
+        <meta>
+          <lastUpdated value="2024-02-27T17:11:44-03:00"/>
+          <profile value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Appointment_transient-1"> </a><p class="res-header-id"><b>Generated Narrative: Appointment transient-1</b></p><a name="transient-1"> </a><a name="hctransient-1"> </a><a name="transient-1-und"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Last updated: 2024-02-27 17:11:44-0300</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">Agendamento de Regulação Assistencial</a></p></div><p><b>status</b>: Booked</p><p><b>serviceCategory</b>: <span title="Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial 09}">Assistência Ambulatorial</span></p><p><b>serviceType</b>: <span title="Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS 0301010072}">0301010072</span></p><p><b>specialty</b>: <span title="Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO 225127}">MEDICO PNEUMOLOGISTA</span></p><p><b>appointmentType</b>: <span title="Codes:{http://hl7.org/fhir/request-priority routine}">Routine</span></p><p><b>reasonReference</b>: <a href="Bundle-example-rira-attended.html#urn-uuid-transient-3">Bundle: identifier = http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-1964#AMB_271831370_0701172; type = document; timestamp = 2024-02-27 17:11:44-0300</a></p><p><b>start</b>: 2019-03-17 21:00:00-0300</p><p><b>end</b>: 2019-03-17 21:00:00-0300</p><p><b>created</b>: 2019-01-16 22:00:00-0200</p><p><b>basedOn</b>: <a href="Bundle-example-rira-attended.html#urn-uuid-transient-2">Bundle: identifier = http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-1964#AMB_271831370_0701172; type = document; timestamp = 2024-02-27 17:11:44-0300</a></p><h3>Participants</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Actor</b></td><td><b>Status</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante PCT}">Paciente</span></td><td>Identifier: <code>http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0</code>/706004324048847</td><td>Accepted</td></tr></table></div>
+        </text>
+        <status value="booked"/>
+        <serviceCategory>
+          <coding>
+            <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial"/>
+            <code value="09"/>
+          </coding>
+        </serviceCategory>
+        <serviceType>
+          <coding>
+            <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS"/>
+            <code value="0301010072"/>
+          </coding>
+        </serviceType>
+        <specialty>
+          <coding>
+            <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO"/>
+            <code value="225127"/>
+          </coding>
+        </specialty>
+        <appointmentType>
+          <coding>
+            <system value="http://hl7.org/fhir/request-priority"/>
+            <code value="routine"/>
+          </coding>
+        </appointmentType>
+        <reasonReference>
+          <reference value="urn:uuid:transient-3"/>
+        </reasonReference>
+        <start value="2019-03-17T21:00:00.000-03:00"/>
+        <end value="2019-03-17T21:00:00.000-03:00"/>
+        <created value="2019-01-16T22:00:00.000-02:00"/>
+        <basedOn>
+          <reference value="urn:uuid:transient-2"/>
+        </basedOn>
+        <participant>
+          <type>
+            <coding>
+              <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante"/>
+              <code value="PCT"/>
+            </coding>
+          </type>
+          <actor>
+            <identifier>
+              <system value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"/>
+              <value value="706004324048847"/>
+            </identifier>
+          </actor>
+          <status value="accepted"/>
+        </participant>
+      </Appointment>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:transient-2"/>
+    <resource>
+      <ServiceRequest>
+        <id value="transient-2"/>
+        <meta>
+          <lastUpdated value="2024-02-27T17:11:44-03:00"/>
+          <profile value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="ServiceRequest_transient-2"> </a><p class="res-header-id"><b>Generated Narrative: ServiceRequest transient-2</b></p><a name="transient-2"> </a><a name="hctransient-2"> </a><a name="transient-2-und"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Last updated: 2024-02-27 17:11:44-0300</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">Requisição de Regulação Assistencial</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title="Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial 09}">Assistência Ambulatorial</span></p><p><b>priority</b>: Urgent</p><p><b>code</b>: <span title="Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS 0301010072}">0301010072</span></p><p><b>subject</b>: Identifier: <code>http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0</code>/706004324048847</p><p><b>authoredOn</b>: 2019-01-16 22:00:00-0200</p><p><b>requester</b>: Identifier: <code>http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0</code>/6689477</p><p><b>performerType</b>: <span title="Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO 225127}">MEDICO PNEUMOLOGISTA</span></p><p><b>reasonReference</b>: <a href="Bundle-example-rira-attended.html#urn-uuid-transient-3">Bundle: identifier = http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-1964#AMB_271831370_0701172; type = document; timestamp = 2024-02-27 17:11:44-0300</a></p></div>
+        </text>
+        <status value="active"/>
+        <intent value="order"/>
+        <category>
+          <coding>
+            <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial"/>
+            <code value="09"/>
+          </coding>
+        </category>
+        <priority value="urgent"/>
+        <code>
+          <coding>
+            <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS"/>
+            <code value="0301010072"/>
+          </coding>
+        </code>
+        <subject>
+          <identifier>
+            <system value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"/>
+            <value value="706004324048847"/>
+          </identifier>
+        </subject>
+        <authoredOn value="2019-01-16T22:00:00.000-02:00"/>
+        <requester>
+          <identifier>
+            <system value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"/>
+            <value value="6689477"/>
+          </identifier>
+        </requester>
+        <performerType>
+          <coding>
+            <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO"/>
+            <code value="225127"/>
+          </coding>
+        </performerType>
+        <reasonReference>
+          <reference value="urn:uuid:transient-3"/>
+        </reasonReference>
+      </ServiceRequest>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:transient-3"/>
+    <resource>
+      <Condition>
+        <id value="transient-3"/>
+        <meta>
+          <lastUpdated value="2024-02-27T17:11:44-03:00"/>
+          <profile value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Condition_transient-3"> </a><p class="res-header-id"><b>Generated Narrative: Condition transient-3</b></p><a name="transient-3"> </a><a name="hctransient-3"> </a><a name="transient-3-und"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Last updated: 2024-02-27 17:11:44-0300</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-BRCID10Avaliado-1.0.html">CID10 Avaliado</a></p></div><p><b>code</b>: <span title="Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10 R06}">Anormalidades da respiração</span></p><p><b>subject</b>: Identifier: <code>http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0</code>/706004324048847</p></div>
+        </text>
+        <code>
+          <coding>
+            <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10"/>
+            <code value="R06"/>
+          </coding>
+        </code>
+        <subject>
+          <identifier>
+            <system value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"/>
+            <value value="706004324048847"/>
+          </identifier>
+        </subject>
+      </Condition>
+    </resource>
+  </entry>
+</Bundle>

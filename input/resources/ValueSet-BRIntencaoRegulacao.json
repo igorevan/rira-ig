@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "BRIntencaoRegulacao",
-  "language": "pt-BR",
+  "language": "en",
   "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRIntencaoRegulacao",
   "version": "1.0",
   "name": "BRIntencaoRegulacao",

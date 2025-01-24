@@ -4,7 +4,7 @@
   "meta": {
     "lastUpdated": "2020-03-12T13:09:54.402+00:00"
   },
-  "language": "pt-BR",
+  "language": "en",
   "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoResolucaoDiagnosticoProblema-1.0",
   "version": "02.00",
   "name": "BREstadoResolucaoDiagnosticoProblema",
@@ -23,27 +23,63 @@
         "concept": [
           {
             "code": "active",
-            "display": "Ativo"
+            "display": "Active",
+            "designation": [
+              {
+                "language": "pt-BR",
+                "value": "Ativo"
+              }
+            ]
           },
           {
             "code": "recurrence",
-            "display": "Recorrente"
+            "display": "Recurrence",
+            "designation": [
+              {
+                "language": "pt-BR",
+                "value": "Recorrente"
+              }
+            ]
           },
           {
             "code": "relapse",
-            "display": "Recidiva"
+            "display": "Relapse",
+            "designation": [
+              {
+                "language": "pt-BR",
+                "value": "Recidiva"
+              }
+            ]
           },
           {
             "code": "inactive",
-            "display": "Inativo"
+            "display": "Inactive",
+            "designation": [
+              {
+                "language": "pt-BR",
+                "value": "Inativo"
+              }
+            ]
           },
           {
             "code": "remission",
-            "display": "Remissão"
+            "display": "Remission",
+            "designation": [
+              {
+                "language": "pt-BR",
+                "value": "Remissão"
+              }
+            ]
           },
           {
             "code": "resolved",
-            "display": "Resolvido"
+            "display": "Resolved",
+            "designation": [
+              {
+                "language": "pt-BR",
+                "value": "Resolvido"
+              }
+            ]
           }
         ]
       }

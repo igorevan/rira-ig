@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="BRStatusRegulacaoAssistencial"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><p class="res-header-id"><b>Generated Narrative: CodeSystem BRStatusRegulacaoAssistencial</b></p><a name="BRStatusRegulacaoAssistencial"> </a><a name="hcBRStatusRegulacaoAssistencial"> </a><a name="BRStatusRegulacaoAssistencial-und"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p></div><p>This case-sensitive code system <code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Portuguese (Brazil) (pt)</b></td></tr><tr><td style="white-space:nowrap">pending<a name="BRStatusRegulacaoAssistencial-pending"> </a></td><td>Pending</td><td>Pendente</td></tr><tr><td style="white-space:nowrap">booked<a name="BRStatusRegulacaoAssistencial-booked"> </a></td><td>Booked</td><td>Agendado</td></tr><tr><td style="white-space:nowrap">attended<a name="BRStatusRegulacaoAssistencial-attended"> </a></td><td>Attended/Hospitalized</td><td>Atendido/Internado</td></tr><tr><td style="white-space:nowrap">cancelled<a name="BRStatusRegulacaoAssistencial-cancelled"> </a></td><td>Cancelled</td><td>Negado/Cancelado</td></tr><tr><td style="white-space:nowrap">absence<a name="BRStatusRegulacaoAssistencial-absence"> </a></td><td>Absence</td><td>Falta</td></tr><tr><td style="white-space:nowrap">excluded<a name="BRStatusRegulacaoAssistencial-excluded"> </a></td><td>Excluded</td><td>Excluído</td></tr><tr><td style="white-space:nowrap">returned-to-requester<a name="BRStatusRegulacaoAssistencial-returned-to-requester"> </a></td><td>Returned to requester.</td><td>Devolvido para o solicitante.</td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="informative">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial"/>
+  <version value="1.0.0"/>
+  <name value="BRStatusRegulacaoAssistencial"/>
+  <title value="Status da regulação assistencial"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2020-03-26T13:19:46.9743559+00:00"/>
+  <publisher value="Ministério da Saúde do Brasil"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.saude.gov.br"/>
+    </telecom>
+  </contact>
+  <description value="Status da regulação assistencial."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="BR"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <concept>
+    <code value="pending"/>
+    <display value="Pending"/>
+    <designation>
+      <language value="pt-BR"/>
+      <value value="Pendente"/>
+    </designation>
+  </concept>
+  <concept>
+    <code value="booked"/>
+    <display value="Booked"/>
+    <designation>
+      <language value="pt-BR"/>
+      <value value="Agendado"/>
+    </designation>
+  </concept>
+  <concept>
+    <code value="attended"/>
+    <display value="Attended/Hospitalized"/>
+    <designation>
+      <language value="pt-BR"/>
+      <value value="Atendido/Internado"/>
+    </designation>
+  </concept>
+  <concept>
+    <code value="cancelled"/>
+    <display value="Cancelled"/>
+    <designation>
+      <language value="pt-BR"/>
+      <value value="Negado/Cancelado"/>
+    </designation>
+  </concept>
+  <concept>
+    <code value="absence"/>
+    <display value="Absence"/>
+    <designation>
+      <language value="pt-BR"/>
+      <value value="Falta"/>
+    </designation>
+  </concept>
+  <concept>
+    <code value="excluded"/>
+    <display value="Excluded"/>
+    <designation>
+      <language value="pt-BR"/>
+      <value value="Excluído"/>
+    </designation>
+  </concept>
+  <concept>
+    <code value="returned-to-requester"/>
+    <display value="Returned to requester."/>
+    <designation>
+      <language value="pt-BR"/>
+      <value value="Devolvido para o solicitante."/>
+    </designation>
+  </concept>
+</CodeSystem>

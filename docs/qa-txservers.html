@@ -11,7 +11,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Terminology Server Report for RIRARNDSIG</h1>
- <p>Generated Wed Mar 27 14:53:02 BRT 2024, FHIR version 4.0.1 for br.gov.saude.rnds.rira#0.1.0 (canonical = <a href="http://www.saude.gov.br/fhir/r4">http://www.saude.gov.br/fhir/r4</a> (<a href="http://www.saude.gov.br/fhir/r4/history.html">history</a>))</p>
+ <p>Generated Fri Jan 24 14:07:34 GMT-03:00 2025, FHIR version 4.0.1 for br.gov.saude.rira.fhir#1.0.0 (canonical = <a href="http://www.saude.gov.br/fhir/r4">http://www.saude.gov.br/fhir/r4</a> (<a href="http://www.saude.gov.br/fhir/r4/history.html">history</a>))</p>
 <p>This page provides a report on which terminology servers were used while publishing this IG. Note that terminology caching reduces the server hit count - this page only reports content that wasn't cached</p>
 <h2>Terminology Parameters</h2>
 <ul>
@@ -21,13 +21,358 @@
   </li>
 </ul>
 <h2>Tx Manager report for 'http://tx.fhir.org/tx-reg'</h2>
-<ul>
-  <li>(No Errors/Reports - all good)</li>
-</ul>
+<p>
+  <b>Decisions</b>
+</p>
+<table class="grid">
+  <tr>
+    <td>
+      <b>Message</b>
+    </td>
+    <td>
+      <b>Server</b>
+    </td>
+    <td>
+      <b>ValueSet</b>
+    </td>
+    <td>
+      <b>Systems</b>
+    </td>
+    <td>
+      <b>Choices</b>
+    </td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://hl7.org/fhir/fhir-types</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://hl7.org/fhir/fhir-types</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial|*</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial|*</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Systems handled by multiple servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>[http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial, http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial|*]</td>
+    <td>[auth = , candidates=, auth = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>[http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial, http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial|*]</td>
+    <td>[auth = , candidates=, auth = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRCategoriaDiagnostico</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRCategoriaDiagnostico</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10</td>
+    <td>auth = , candidates=</td>
+  </tr>
+</table>
 <h2>Primary Server: http://tx.fhir.org/r4</h2>
-<p>Use Count: 0. Code Systems used: </p>
-<ul>
-  <li>(None)</li>
-</ul>
+<a href="http://tx.fhir.org/r4"></a>
+<p>Use Count: 17. Code Systems used: </p>
+<table class="grid">
+  <tr>
+    <th>
+      <b>System</b>
+    </th>
+    <th>
+      <b>#Exp.</b>
+    </th>
+    <th>
+      <b>#Val.</b>
+    </th>
+    <th>
+      <b>Details</b>
+    </th>
+  </tr>
+  <tr>
+    <td>http://hl7.org/fhir/fhir-types</td>
+    <td>0</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO</td>
+    <td>0</td>
+    <td>2</td>
+    <td>
+      <a href="CodeSystem-BRCBO.html">Classificação Brasileira de Ocupações (CBO)</a>
+    </td>
+  </tr>
+  <tr>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10</td>
+    <td>0</td>
+    <td>2</td>
+    <td>
+      <a href="CodeSystem-BRCID10.html">Classificação Internacional de Doenças - Décima Revisão (CID-10)</a>
+    </td>
+  </tr>
+  <tr>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRCategoriaDiagnostico</td>
+    <td>0</td>
+    <td>1</td>
+    <td>
+      <a href="CodeSystem-BRCategoriaDiagnostico.html">Categoria do Diagnóstico</a>
+    </td>
+  </tr>
+  <tr>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial</td>
+    <td>0</td>
+    <td>3</td>
+    <td>
+      <a href="CodeSystem-BRModalidadeAssistencial.html">Modalidade Assistencial</a>
+    </td>
+  </tr>
+  <tr>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial|*</td>
+    <td>0</td>
+    <td>2</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td>
+    <td>0</td>
+    <td>4</td>
+    <td>
+      <a href="CodeSystem-BRStatusRegulacaoAssistencial.html">Status da regulação assistencial</a>
+    </td>
+  </tr>
+  <tr>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS</td>
+    <td>0</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento</td>
+    <td>0</td>
+    <td>1</td>
+    <td>
+      <a href="CodeSystem-BRTipoDocumento.html">Tipo de Documento</a>
+    </td>
+  </tr>
+  <tr>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante</td>
+    <td>0</td>
+    <td>1</td>
+    <td>
+      <a href="CodeSystem-BRTipoParticipante.html">Tipo do Participante</a>
+    </td>
+  </tr>
+</table>
 </body>
 </html>

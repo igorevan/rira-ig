@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="BRModalidadeAssistencial"/>
+  <language value="pt-BR"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR"><p class="res-header-id"><b>Generated Narrative: CodeSystem BRModalidadeAssistencial</b></p><a name="BRModalidadeAssistencial"> </a><a name="hcBRModalidadeAssistencial"> </a><a name="BRModalidadeAssistencial-und"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: pt-BR</p></div><p>This case-sensitive code system <code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">01<a name="BRModalidadeAssistencial-01"> </a></td><td>Atenção Básica</td></tr><tr><td style="white-space:nowrap">02<a name="BRModalidadeAssistencial-02"> </a></td><td>Atenção Domiciliar</td></tr><tr><td style="white-space:nowrap">03<a name="BRModalidadeAssistencial-03"> </a></td><td>Atenção Intermediária</td></tr><tr><td style="white-space:nowrap">04<a name="BRModalidadeAssistencial-04"> </a></td><td>Atenção Hospitalar</td></tr><tr><td style="white-space:nowrap">05<a name="BRModalidadeAssistencial-05"> </a></td><td>Atenção Psicossocial</td></tr><tr><td style="white-space:nowrap">06<a name="BRModalidadeAssistencial-06"> </a></td><td>Atenção à Urgência/Emergência</td></tr><tr><td style="white-space:nowrap">07<a name="BRModalidadeAssistencial-07"> </a></td><td>Ambulatorial Especializada</td></tr><tr><td style="white-space:nowrap">08<a name="BRModalidadeAssistencial-08"> </a></td><td>Assistência Farmacêutica</td></tr><tr><td style="white-space:nowrap">09<a name="BRModalidadeAssistencial-09"> </a></td><td>Assistência Ambulatorial</td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="informative">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial"/>
+  <version value="1.0.0"/>
+  <name value="BRModalidadeAssistencial"/>
+  <title value="Modalidade Assistencial"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2020-03-11T18:16:19.9468275+00:00"/>
+  <publisher value="Ministério da Saúde do Brasil"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.saude.gov.br"/>
+    </telecom>
+  </contact>
+  <description value="Classifica os contatos assistenciais de acordo com as especificidades do modo, local e duração do atendimento"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="BR"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <concept>
+    <code value="01"/>
+    <display value="Atenção Básica"/>
+  </concept>
+  <concept>
+    <code value="02"/>
+    <display value="Atenção Domiciliar"/>
+  </concept>
+  <concept>
+    <code value="03"/>
+    <display value="Atenção Intermediária"/>
+  </concept>
+  <concept>
+    <code value="04"/>
+    <display value="Atenção Hospitalar"/>
+  </concept>
+  <concept>
+    <code value="05"/>
+    <display value="Atenção Psicossocial"/>
+  </concept>
+  <concept>
+    <code value="06"/>
+    <display value="Atenção à Urgência/Emergência"/>
+  </concept>
+  <concept>
+    <code value="07"/>
+    <display value="Ambulatorial Especializada"/>
+  </concept>
+  <concept>
+    <code value="08"/>
+    <display value="Assistência Farmacêutica"/>
+  </concept>
+  <concept>
+    <code value="09"/>
+    <display value="Assistência Ambulatorial"/>
+  </concept>
+</CodeSystem>

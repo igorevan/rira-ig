@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Status de agendamento de regulação assistencial - TTL Representation - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v0.1.0</title>
+    <title>Status de agendamento de regulação assistencial - TTL Representation - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -20,6 +20,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
@@ -40,18 +41,20 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
-    <style type="text/css">h2{--heading-prefix:"10.17"}
-    h3,h4,h5,h6{--heading-prefix:"10.17"}</style>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"10.6"}
+    h3,h4,h5,h6{--heading-prefix:"10.6"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 
 
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Guia de Implementação da Regulação Assistencial (RIRA) da RNDS</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - CI Build
+            <span style="display:inline-block;">1.0.0 - CI Build
 
 
 
@@ -154,7 +157,7 @@
 
             <a href="#bottom">bottom</a>
 
-          | <a href="ValueSet-BRStatusParticipante.html">next&gt;</a>
+          | <a href="ValueSet-BRCID10-1.0.html">next&gt;</a>
 
           </span>
 
@@ -169,7 +172,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 9" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">Guia de Implementação da Regulação Assistencial (RIRA) da RNDS - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://www.saude.gov.br/fhir/r4/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">Guia de Implementação da Regulação Assistencial (RIRA) da RNDS - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://www.saude.gov.br/fhir/r4/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -254,10 +257,10 @@
  a fhir:ValueSet ;
   <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;BRStatusAgendamentoRegulacaoAssistencial&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.language">fhir:language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;pt-BR&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.language">fhir:language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;en&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;extensions&quot; ] ;
-fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot; xml:lang=\&quot;pt-BR\&quot; lang=\&quot;pt-BR\&quot;&gt;&lt;p&gt;This value set includes codes based on the following rules:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-appointmentstatus.html\&quot;&gt;&lt;code&gt;http://hl7.org/fhir/appointmentstatus&lt;/code&gt;&lt;/a&gt; version &lt;code&gt;*&lt;/code&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Portuguese (Brazil) (pt)&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-proposed\&quot;&gt;proposed&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Proposed&lt;/td&gt;&lt;td&gt;None of the participant(s) have finalized their acceptance of the appointment request, and the start/end time might not be set yet.&lt;/td&gt;&lt;td&gt;Solicitado&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-pending\&quot;&gt;pending&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Pending&lt;/td&gt;&lt;td&gt;Some or all of the participant(s) have not finalized their acceptance of the appointment request.&lt;/td&gt;&lt;td&gt;Pendente&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-booked\&quot;&gt;booked&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Booked&lt;/td&gt;&lt;td&gt;All participant(s) have been considered and the appointment is confirmed to go ahead at the date/times specified.&lt;/td&gt;&lt;td&gt;Agendado&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-arrived\&quot;&gt;arrived&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Arrived&lt;/td&gt;&lt;td&gt;The patient/patients has/have arrived and is/are waiting to be seen.&lt;/td&gt;&lt;td&gt;Recebido&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-fulfilled\&quot;&gt;fulfilled&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Fulfilled&lt;/td&gt;&lt;td&gt;The planning stages of the appointment are now complete, the encounter resource will exist and will track further status changes. Note that an encounter may exist before the appointment status is fulfilled for many reasons.&lt;/td&gt;&lt;td&gt;Atendido/Internado&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-cancelled\&quot;&gt;cancelled&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Cancelled&lt;/td&gt;&lt;td&gt;The appointment has been cancelled.&lt;/td&gt;&lt;td&gt;Negado/Cancelado&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-noshow\&quot;&gt;noshow&lt;/a&gt;&lt;/td&gt;&lt;td&gt;No Show&lt;/td&gt;&lt;td&gt;Some or all of the participant(s) have not/did not appear for the appointment (usually the patient).&lt;/td&gt;&lt;td&gt;Falta&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-entered-in-error\&quot;&gt;entered-in-error&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Entered in error&lt;/td&gt;&lt;td&gt;This instance should not have been part of this patient's medical record.&lt;/td&gt;&lt;td&gt;Em estado de erro&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-checked-in\&quot;&gt;checked-in&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Checked in&lt;/td&gt;&lt;td&gt;When checked in, all pre-encounter administrative work is complete, and the encounter may begin. (where multiple patients are involved, they are all present).&lt;/td&gt;&lt;td&gt;Confirmado&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-waitlist\&quot;&gt;waitlist&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Waitlisted&lt;/td&gt;&lt;td&gt;The appointment has been placed on a waitlist, to be scheduled/confirmed in the future when a slot/service is available.\nA specific time might or might not be pre-allocated.&lt;/td&gt;&lt;td&gt;Em espera&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;li&gt;Include all codes defined in &lt;code&gt;http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusAgendamentoRegulacaoAssistencial&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;
+fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot; xml:lang=\&quot;en\&quot; lang=\&quot;en\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: ValueSet BRStatusAgendamentoRegulacaoAssistencial&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;BRStatusAgendamentoRegulacaoAssistencial\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcBRStatusAgendamentoRegulacaoAssistencial\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;BRStatusAgendamentoRegulacaoAssistencial-und\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Language: en&lt;/p&gt;&lt;/div&gt;&lt;p&gt;This value set includes codes based on the following rules:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-appointmentstatus.html\&quot;&gt;&lt;code&gt;http://hl7.org/fhir/appointmentstatus&lt;/code&gt;&lt;/a&gt; version &lt;code&gt;*&lt;/code&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Portuguese (Brazil) (pt)&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-proposed\&quot;&gt;proposed&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Proposed&lt;/td&gt;&lt;td&gt;None of the participant(s) have finalized their acceptance of the appointment request, and the start/end time might not be set yet.&lt;/td&gt;&lt;td&gt;Solicitado&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-pending\&quot;&gt;pending&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Pending&lt;/td&gt;&lt;td&gt;Some or all of the participant(s) have not finalized their acceptance of the appointment request.&lt;/td&gt;&lt;td&gt;Pendente&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-booked\&quot;&gt;booked&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Booked&lt;/td&gt;&lt;td&gt;All participant(s) have been considered and the appointment is confirmed to go ahead at the date/times specified.&lt;/td&gt;&lt;td&gt;Agendado&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-arrived\&quot;&gt;arrived&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Arrived&lt;/td&gt;&lt;td&gt;The patient/patients has/have arrived and is/are waiting to be seen.&lt;/td&gt;&lt;td&gt;Recebido&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-fulfilled\&quot;&gt;fulfilled&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Fulfilled&lt;/td&gt;&lt;td&gt;The planning stages of the appointment are now complete, the encounter resource will exist and will track further status changes. Note that an encounter may exist before the appointment status is fulfilled for many reasons.&lt;/td&gt;&lt;td&gt;Atendido/Internado&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-cancelled\&quot;&gt;cancelled&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Cancelled&lt;/td&gt;&lt;td&gt;The appointment has been cancelled.&lt;/td&gt;&lt;td&gt;Negado/Cancelado&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-noshow\&quot;&gt;noshow&lt;/a&gt;&lt;/td&gt;&lt;td&gt;No Show&lt;/td&gt;&lt;td&gt;Some or all of the participant(s) have not/did not appear for the appointment (usually the patient).&lt;/td&gt;&lt;td&gt;Falta&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-entered-in-error\&quot;&gt;entered-in-error&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Entered in error&lt;/td&gt;&lt;td&gt;This instance should not have been part of this patient's medical record.&lt;/td&gt;&lt;td&gt;Em estado de erro&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-checked-in\&quot;&gt;checked-in&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Checked in&lt;/td&gt;&lt;td&gt;When checked in, all pre-encounter administrative work is complete, and the encounter may begin. (where multiple patients are involved, they are all present).&lt;/td&gt;&lt;td&gt;Confirmado&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-waitlist\&quot;&gt;waitlist&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Waitlisted&lt;/td&gt;&lt;td&gt;The appointment has been placed on a waitlist, to be scheduled/confirmed in the future when a slot/service is available.\nA specific time might or might not be pre-allocated.&lt;/td&gt;&lt;td&gt;Em espera&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;li&gt;Include all codes defined in &lt;code&gt;http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusAgendamentoRegulacaoAssistencial&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;
   ] ; # 
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.extension">fhir:extension</a> ( [
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm&quot;^^xsd:anyURI ] ;
@@ -266,8 +269,8 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot; xml:lang
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#integer#integer.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira&gt;         ]       ] )     ]
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir&gt;         ]       ] )     ]
   ] [
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
@@ -275,11 +278,11 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot; xml:lang
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#code#code.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira&gt;         ]       ] )     ]
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir&gt;         ]       ] )     ]
   ] ) ; # 
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial&quot;^^xsd:anyURI] ; # 
-  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">fhir:version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;0.1.0&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">fhir:version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.0.0&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;BRStatusAgendamentoRegulacaoAssistencial&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">fhir:title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Status de agendamento de regulação assistencial&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;active&quot;] ; # 
@@ -375,13 +378,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot; xml:lang
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
 
-  <script type="text/javascript">
-    $(document).ready(function(){
-      if(window.location.hash != "") {
-          $('a[href="' + window.location.hash + '"]').click()
-      }
-    });
-  </script>
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
@@ -400,7 +397,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot; xml:lang
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="ValueSet-BRStatusParticipante.html">next&gt;</a>
+                <a href="ValueSet-BRCID10-1.0.html">next&gt;</a>
 
               </td>
             </tr>
@@ -410,7 +407,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot; xml:lang
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.saude.gov.br">Ministério da Saúde do Brasil</a>.  Package br.gov.saude.rnds.rira#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 27, 2024 14:51-0300">2024-03-27</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.saude.gov.br">Ministério da Saúde do Brasil</a>.  Package br.gov.saude.rira.fhir#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 24, 2025 13:58-0300">2025-01-24</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -427,7 +424,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot; xml:lang
     <div class="container">  <!-- container -->
     </div>  <!-- /container -->
   </div>  <!-- /segment-post-footer -->
-  
+
   <!-- JS and analytics only. -->
   <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -437,16 +434,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot; xml:lang
   <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
-  <script>anchors.options.visible = 'hover'
-anchors.add()</script>
-  
-<!-- feedback form - Google forms -->
-<!-- v0.1, 2021-01-09 -->
-
-
-
-<!-- / feedback form  -->
-
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
   <!-- Analytics Below
   ================================================== -->
   </body>

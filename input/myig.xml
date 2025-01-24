@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="br.gov.saude.rnds.rira" />
+  <id value="br.gov.saude.rira.fhir" />
   <language value="pt-BR" />
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
     <valueCode value="informative" />
@@ -8,8 +8,8 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1" />
   </extension>
-  <url value="http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira" />
-  <version value="0.1.0" />
+  <url value="http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir" />
+  <version value="1.0.0" />
   <name value="RIRARNDSIG" />
   <title value="Guia de Implementação da Regulação Assistencial (RIRA) da RNDS" />
   <status value="active" />
@@ -28,11 +28,56 @@
       <code value="BR" />
     </coding>
   </jurisdiction>
-  <packageId value="br.gov.saude.rnds.rira" />
+  <packageId value="br.gov.saude.rira.fhir" />
   <license value="CC0-1.0" />
   <fhirVersion value="4.0.1" />
   <definition>
-
+    <resource>
+      <reference>
+        <reference value="ValueSet/BRStatusAgendamentoRegulacaoAssistencial" />
+      </reference>
+      <name value="Status de agendamento de regulação assistencial" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/example-rira-attended" />
+      </reference>
+      <name value="Bundle de exemplo do RIRA (Atendido/Internado)" />
+      <description
+        value="Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Atendido/Internado (Attended)" />
+      <exampleCanonical
+        value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/example-rira-booked" />
+      </reference>
+      <name value="Bundle de exemplo do RIRA (Agendado)" />
+      <description
+        value="Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Agendado (Booked)" />
+      <exampleCanonical
+        value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/example-rira-cancelled" />
+      </reference>
+      <name value="Bundle de exemplo do RIRA (Negado/Cancelado)" />
+      <description
+        value="Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Negado/Cancelado (Cancelled)" />
+      <exampleCanonical
+        value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/example-rira-pending" />
+      </reference>
+      <name value="Bundle de exemplo do RIRA (Pendente)" />
+      <description
+        value="Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Pendente (Pending)" />
+      <exampleCanonical
+        value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial" />
+    </resource>
     <page>
       <nameUrl value="toc.html" />
       <title value="Índice" />

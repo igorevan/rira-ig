@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "BRStatusAgendamentoRegulacaoAssistencial",
-  "language": "pt-BR",
+  "language": "en",
   "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial",
   "version": "1.0",
   "name": "BRStatusAgendamentoRegulacaoAssistencial",

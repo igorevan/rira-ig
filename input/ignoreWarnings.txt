@@ -4,38 +4,34 @@
 # instructions for ignoreWarnings.txt https://confluence.hl7.org/pages/viewpage.action?pageId=66938614#ImplementationGuideParameters-ManagingWarningsandHints
 # (And include comments like this justifying why)
 
+The Implementation Guide contains no explicitly linked examples for this profile
 The Implementation Guide contains no examples for this profile
-
 The Implementation Guide contains no examples for this extension
-
 The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
-
 An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
-
 An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
-
+An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
 The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 
-Unable to resolve profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0
+# Errors related to the Patient, Practitioner and Organization Resources
+%StructureDefinition/BRIndividuo-1.0%
+%StructureDefinition/BRProfissional-1.0%
+%StructureDefinition/BREstabelecimentoSaude-1.0%
+%StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0%
+%StructureDefinition/BRLotacaoProfissional-1.0%
 
-Unable to resolve profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0
+# Errors related to the RNDS CodeSystem specifications
+Reference to draft CodeSystem http://hl7.org/fhir/composition-status|4.0.1 from hl7.fhir.r4.core#4.0.1
+This property has only a code ('healthcare') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
+This property has only a code ('regulated') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
+Binding http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial could not be expanded
+The value set expansion is too large, and only a subset has been displayed
+Error from http://tx.fhir.org/r4: Unable to provide support for code system http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBHPMTUSS version *
+Error from http://tx.fhir.org/r4: Unable to provide support for code system http://hl7.org/fhir/appointmentstatus version * (known versions = 4.0.1)
+The code '04' is not valid in the system http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial version * (04)
+A definition for CodeSystem 'http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial' version '*' could not be found, so the code cannot be validated. Valid versions: []
+The code '09' is not valid in the system http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial version * (09)
 
-Unable to resolve profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0
-
-Cannot check whether the target profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0 on Appointment.supportingInformation is valid constraint on the base because it is not known
-
-Cannot check whether the target profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0 on Appointment.participant.actor is valid constraint on the base because it is not known
-
-Cannot check whether the target profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0 on Composition.subject is valid constraint on the base because it is not known
-
-Cannot check whether the target profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0 on Composition.author is valid constraint on the base because it is not known
-
-Cannot check whether the target profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0 on Composition.author is valid constraint on the base because it is not known
-
-Cannot check whether the target profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0 on Composition.event.detail is valid constraint on the base because it is not known
-
-Cannot check whether the target profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0 on ServiceRequest.subject is valid constraint on the base because it is not known
-
-Cannot check whether the target profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0 on ServiceRequest.requester is valid constraint on the base because it is not known
-
-Cannot check whether the target profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0 on ServiceRequest.performer is valid constraint on the base because it is not known
+# Errors related to the RNDS specifications
+Details for urn:uuid:transient-1 matching against profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial|1.0.0
+Unable to find a profile match for urn:uuid:transient-1 among choices: http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial

@@ -1,0 +1,256 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.saude.gov.br/fhir/r4/Bundle/example-rira-pending> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example-rira-pending"] ; # 
+  fhir:identifier [
+     fhir:system [ fhir:v "http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-12345"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "c1256970-5464-403d-99f9-f1ef1d1f81ea" ]
+  ] ; # 
+  fhir:type [ fhir:v "document"] ; # 
+  fhir:timestamp [ fhir:v "2024-06-18T12:14:01-03:00"^^xsd:dateTime] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "urn:uuid:transient-0"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:transient-0> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:transient-1"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:transient-1> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:transient-2"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:transient-2> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:transient-3"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:transient-3> )
+  ] ) . # 
+
+<urn:uuid:transient-0> a fhir:Composition ;
+  fhir:id [ fhir:v "transient-0"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial"^^xsd:anyURI ;
+       fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Composition_transient-0\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Composition transient-0</b></p><a name=\"transient-0\"> </a><a name=\"hctransient-0\"> </a><a name=\"transient-0-und\"> </a><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento RA}\">Regulação Assistencial</span></p><p><b>category</b>: <span title=\"Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial 04}\">Atenção Hospitalar</span></p><p><b>date</b>: 2024-06-18 12:14:01-0300</p><p><b>author</b>: Identifier: <code>http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0</code>/6450091</p><p><b>title</b>: Registro de Informações da Regulação Assistencial</p><blockquote><p><b>event</b></p><p><b>code</b>: <span title=\"Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial pending}\">Pending</span></p><p><b>period</b>: 2024-06-18 12:14:01-0300 --&gt; 2024-06-18 12:14:01-0300</p><p><b>detail</b>: </p><ul><li>Identifier: <code>http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0</code>/6689477</li><li><a href=\"Bundle-example-rira-attended.html#urn-uuid-transient-2\">Bundle: identifier = http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-1964#AMB_271831370_0701172; type = document; timestamp = 2024-02-27 17:11:44-0300</a></li></ul></blockquote></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "RA" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "04" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:identifier [
+       fhir:system [ fhir:v "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "708165325093340" ]
+     ]
+  ] ; # 
+  fhir:date [ fhir:v "2024-06-18T12:14:01-03:00"^^xsd:dateTime] ; # 
+  fhir:author ( [
+     fhir:identifier [
+       fhir:system [ fhir:v "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "6450091" ]
+     ]
+  ] ) ; # 
+  fhir:title [ fhir:v "Registro de Informações da Regulação Assistencial"] ; # 
+  fhir:event ( [
+     fhir:code ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "pending" ]
+       ] )
+     ] ) ;
+     fhir:period [
+       fhir:start [ fhir:v "2024-06-18T12:14:01.000-03:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2024-06-18T12:14:01.000-03:00"^^xsd:dateTime ]
+     ] ;
+     fhir:detail ( [
+       fhir:identifier [
+         fhir:system [ fhir:v "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "6689477" ]
+       ]
+     ] [
+       fhir:reference [ fhir:v "urn:uuid:transient-2" ]
+     ] )
+  ] ) ; # 
+  fhir:section ( [
+     fhir:entry ( [
+       fhir:reference [ fhir:v "urn:uuid:transient-1" ]
+     ] )
+  ] ) . # 
+
+<urn:uuid:transient-1> a fhir:Appointment ;
+  fhir:id [ fhir:v "transient-1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial"^^xsd:anyURI ;
+       fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Appointment_transient-1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Appointment transient-1</b></p><a name=\"transient-1\"> </a><a name=\"hctransient-1\"> </a><a name=\"transient-1-und\"> </a><p><b>status</b>: Booked</p><p><b>serviceCategory</b>: <span title=\"Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial 04}\">Atenção Hospitalar</span></p><p><b>serviceType</b>: <span title=\"Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS 0209010029}\">0209010029</span></p><p><b>specialty</b>: <span title=\"Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO 225225}\">MEDICO CIRURGIAO GERAL</span></p><p><b>appointmentType</b>: <span title=\"Codes:{http://hl7.org/fhir/request-priority routine}\">Routine</span></p><p><b>reasonReference</b>: <a href=\"Bundle-example-rira-attended.html#urn-uuid-transient-3\">Bundle: identifier = http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-1964#AMB_271831370_0701172; type = document; timestamp = 2024-02-27 17:11:44-0300</a></p><p><b>start</b>: 2021-11-29 08:40:00-0300</p><p><b>end</b>: 2021-11-29 08:40:00-0300</p><p><b>created</b>: 2021-11-03 07:56:13-0300</p><p><b>basedOn</b>: <a href=\"Bundle-example-rira-attended.html#urn-uuid-transient-2\">Bundle: identifier = http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-1964#AMB_271831370_0701172; type = document; timestamp = 2024-02-27 17:11:44-0300</a></p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Actor</b></td><td><b>Status</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante PCT}\">Paciente</span></td><td>Identifier: <code>http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0</code>/708108612093340</td><td>Accepted</td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "booked"] ; # 
+  fhir:serviceCategory ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "04" ]
+     ] )
+  ] ) ; # 
+  fhir:serviceType ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "0209010029" ]
+     ] )
+  ] ) ; # 
+  fhir:specialty ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "225225" ]
+     ] )
+  ] ) ; # 
+  fhir:appointmentType [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/request-priority"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "routine" ]
+     ] )
+  ] ; # 
+  fhir:reasonReference ( [
+     fhir:reference [ fhir:v "urn:uuid:transient-3" ]
+  ] ) ; # 
+  fhir:start [ fhir:v "2021-11-29T08:40:00-03:00"^^xsd:dateTime] ; # 
+  fhir:end [ fhir:v "2021-11-29T08:40:00-03:00"^^xsd:dateTime] ; # 
+  fhir:created [ fhir:v "2021-11-03T07:56:13-03:00"^^xsd:dateTime] ; # 
+  fhir:basedOn ( [
+     fhir:reference [ fhir:v "urn:uuid:transient-2" ]
+  ] ) ; # 
+  fhir:participant ( [
+     fhir:type ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PCT" ]
+       ] )
+     ] ) ;
+     fhir:actor [
+       fhir:identifier [
+         fhir:system [ fhir:v "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "708108612093340" ]
+       ]
+     ] ;
+     fhir:status [ fhir:v "accepted" ]
+  ] ) . # 
+
+<urn:uuid:transient-2> a fhir:ServiceRequest ;
+  fhir:id [ fhir:v "transient-2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial"^^xsd:anyURI ;
+       fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ServiceRequest_transient-2\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest transient-2</b></p><a name=\"transient-2\"> </a><a name=\"hctransient-2\"> </a><a name=\"transient-2-und\"> </a><p><b>status</b>: Active</p><p><b>intent</b>: Proposal</p><p><b>category</b>: <span title=\"Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial 04}\">Atenção Hospitalar</span></p><p><b>priority</b>: Routine</p><p><b>code</b>: <span title=\"Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS 0209010029}\">0209010029</span></p><p><b>subject</b>: Identifier: <code>http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0</code>/708108612093340</p><p><b>authoredOn</b>: 2021-11-02 23:18:43-0300</p><p><b>requester</b>: Identifier: <code>http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0</code>/6994547</p><p><b>performerType</b>: <span title=\"Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO 225225}\">MEDICO CIRURGIAO GERAL</span></p><p><b>performer</b>: Identifier: <code>http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0</code>/0440620</p><p><b>reasonReference</b>: <a href=\"Bundle-example-rira-attended.html#urn-uuid-transient-3\">Bundle: identifier = http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-1964#AMB_271831370_0701172; type = document; timestamp = 2024-02-27 17:11:44-0300</a></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "proposal"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "04" ]
+     ] )
+  ] ) ; # 
+  fhir:priority [ fhir:v "routine"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "0209010029" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:identifier [
+       fhir:system [ fhir:v "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "708108612093340" ]
+     ]
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2021-11-02T23:18:43-03:00"^^xsd:dateTime] ; # 
+  fhir:requester [
+     fhir:identifier [
+       fhir:system [ fhir:v "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "6994547" ]
+     ]
+  ] ; # 
+  fhir:performerType [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "225225" ]
+     ] )
+  ] ; # 
+  fhir:performer ( [
+     fhir:identifier [
+       fhir:system [ fhir:v "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "0440620" ]
+     ]
+  ] ) ; # 
+  fhir:reasonReference ( [
+     fhir:reference [ fhir:v "urn:uuid:transient-3" ]
+  ] ) . # 
+
+<urn:uuid:transient-3> a fhir:Condition ;
+  fhir:id [ fhir:v "transient-3"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0"^^xsd:anyURI ;
+       fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_transient-3\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition transient-3</b></p><a name=\"transient-3\"> </a><a name=\"hctransient-3\"> </a><a name=\"transient-3-und\"> </a><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>category</b>: <span title=\"Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRCategoriaDiagnostico 01}\">Principal</span></p><p><b>code</b>: <span title=\"Codes:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10 K922}\">Hemorragia gastrointestinal, sem outra especificação</span></p><p><b>subject</b>: Identifier: <code>http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0</code>/708108612093340</p><p><b>note</b>: Sem observações</p></div>"
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-clinical"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "active" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCategoriaDiagnostico"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "01" ] ;
+       fhir:display [ fhir:v "Principal" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "K922" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:identifier [
+       fhir:system [ fhir:v "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "708108612093340" ]
+     ]
+  ] ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Sem observações" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

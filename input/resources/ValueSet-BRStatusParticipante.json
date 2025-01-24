@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "BRStatusParticipante",
-  "language": "pt-BR",
+  "language": "en",
   "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusParticipante",
   "version": "1.0",
   "name": "BRStatusParticipante",

@@ -305,13 +305,13 @@
           ],
           "rules": "open"
         },
-        "min": 0
+        "min": 3
       },
       {
         "id": "Condition.subject.extension:unidentifiedPatient.extension:gender",
         "path": "Condition.subject.extension.extension",
         "sliceName": "gender",
-        "min": 0,
+        "min": 1,
         "mustSupport": true
       },
       {
@@ -323,7 +323,7 @@
         "id": "Condition.subject.extension:unidentifiedPatient.extension:birthYear",
         "path": "Condition.subject.extension.extension",
         "sliceName": "birthYear",
-        "min": 0,
+        "min": 1,
         "mustSupport": true
       },
       {
@@ -335,7 +335,7 @@
         "id": "Condition.subject.extension:unidentifiedPatient.extension:reason",
         "path": "Condition.subject.extension.extension",
         "sliceName": "reason",
-        "min": 0,
+        "min": 1,
         "mustSupport": true
       },
       {

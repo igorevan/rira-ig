@@ -86,7 +86,7 @@
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
-      "version" : "2.0.0",
+      "version" : "3.0.0",
       "status" : "active",
       "name" : "ConditionClinicalStatusCodes",
       "title" : "Condition Clinical Status Codes",
@@ -95,6 +95,105 @@
       "uses" : {
       },
       "ValueSet-BREstadoResolucaoDiagnosticoProblema-1.0.html" : "Estado da Resolução de Diagnóstico ou Problema"
+    },
+    {
+      "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBHPMTUSS",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "BRCBHPMTUSS",
+      "title" : "Classificação Brasileira Hierarquizada de Procedimentos Médicos (CBHPM) e da Terminologia Unificada da Saúde Suplementar (TUSS)",
+      "description" : "Classificações de procedimentos utilizadas no Brasil, no contexto da assistência à saúde privada, não complementar ao SUS, e eventualmente no SUS para classificar procedimento inexistente na Tabela SUS.",
+      "uses" : {
+      },
+      "ValueSet-BRProcedimentosNacionais-1.0.html" : "Procedimento realizado"
+    },
+    {
+      "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "BRCBO",
+      "title" : "Classificação Brasileira de Ocupações (CBO)",
+      "description" : "Classifica as profissões do mercado de trabalho brasileiro.",
+      "uses" : {
+      },
+      "ValueSet-BROcupacao-1.0.html" : "Classificação Brasileira de Ocupações - CBO"
+    },
+    {
+      "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "BRCID10",
+      "title" : "Classificação Internacional de Doenças - Décima Revisão (CID-10)",
+      "description" : "Classifica as doenças e outros problemas em saúde registrados em diversos tipos de documentos clínicos.",
+      "uses" : {
+      },
+      "ValueSet-BRCID10-1.0.html" : "Classificação Internacional de Doenças - Décima Revisão - CID-10"
+    },
+    {
+      "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCategoriaDiagnostico",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "BRCategoriaDiagnostico",
+      "title" : "Categoria do Diagnóstico",
+      "description" : "Códigos para representação do tipo de categoria do diagnóstico realizado.",
+      "uses" : {
+      },
+      "ValueSet-BRCategoriaDiagnostico.html" : "Categoria do Diagnóstico"
+    },
+    {
+      "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRJustificativaIndividuoNaoIdentificado",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "BRJustificativaIndividuoNaoIdentificado",
+      "title" : "Justificativa da Impossibilidade de Identificação do Indivíduo",
+      "description" : "Classifica as razões pelo qual não foi possível obter os dados de identificação do indivíduo em um contato assistencial. (Port. nº 84/SAS/MS/1997 e Port. nº02/SAS/SGEP/MS/2012)",
+      "uses" : {
+      },
+      "ValueSet-BRJustificativaIndividuoNaoIdentificado-1.0.html" : "Justificativa da Impossibilidade de Identificação do Indivíduo"
+    },
+    {
+      "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "BRModalidadeAssistencial",
+      "title" : "Modalidade Assistencial",
+      "description" : "Classifica os contatos assistenciais de acordo com as especificidades do modo, local e duração do atendimento",
+      "uses" : {
+      },
+      "ValueSet-BRModalidadeAssistencialMIRA.html" : "Modalidade Assistencial MIRA"
+    },
+    {
+      "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "BRStatusRegulacaoAssistencial",
+      "title" : "Status da regulação assistencial",
+      "description" : "Status da regulação assistencial.",
+      "uses" : {
+      },
+      "ValueSet-BRStatusRegulacaoAssistencial.html" : "Status de regulação assistencial"
+    },
+    {
+      "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "BRTipoDocumento",
+      "title" : "Tipo de Documento",
+      "description" : "Classificação dos tipos de documentos compartilhados no Brasil.",
+      "uses" : {
+      },
+      "ValueSet-BRTipoDocumento-1.0.html" : "Tipo de Documento"
+    },
+    {
+      "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "BRTipoParticipante",
+      "title" : "Tipo do Participante",
+      "description" : "Identificação do tipo do participante envolvido na solicitação.",
+      "uses" : {
+      },
+      "ValueSet-BRTipoParticipante.html" : "Tipo Participante"
     }
   ]
 }

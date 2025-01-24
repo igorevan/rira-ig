@@ -131,7 +131,7 @@
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
         "comment": "The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
         "min": 0,
-        "max": "0",
+        "max": "1",
         "base": {
           "path": "Resource.id",
           "min": 0,
@@ -312,7 +312,7 @@
         "comment": "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
         "alias": ["narrative", "html", "xhtml", "display"],
         "min": 0,
-        "max": "0",
+        "max": "1",
         "base": {
           "path": "DomainResource.text",
           "min": 0,
@@ -5995,7 +5995,6 @@
           },
           {
             "identity": "rnds",
-            "language": "MI-RIRA",
             "map": "Data de autorização",
             "comment": "Portaria conjunta SAES/SEIDIGI nº 3, de 18 de abril de 2023"
           }
@@ -8514,7 +8513,7 @@
       {
         "id": "Appointment.id",
         "path": "Appointment.id",
-        "max": "0"
+        "max": "1"
       },
       {
         "id": "Appointment.implicitRules",
@@ -8529,7 +8528,7 @@
       {
         "id": "Appointment.text",
         "path": "Appointment.text",
-        "max": "0"
+        "max": "1"
       },
       {
         "id": "Appointment.contained",
@@ -8898,7 +8897,6 @@
         "mapping": [
           {
             "identity": "rnds",
-            "language": "MI-RIRA",
             "map": "Data de autorização",
             "comment": "Portaria conjunta SAES/SEIDIGI nº 3, de 18 de abril de 2023"
           }

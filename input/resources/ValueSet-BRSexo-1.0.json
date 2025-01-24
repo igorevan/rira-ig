@@ -4,7 +4,7 @@
   "meta": {
     "lastUpdated": "2021-12-24T12:00:59.742+00:00"
   },
-  "language": "pt-BR",
+  "language": "en",
   "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRSexo-1.0",
   "version": "01.01",
   "name": "BRSexo",

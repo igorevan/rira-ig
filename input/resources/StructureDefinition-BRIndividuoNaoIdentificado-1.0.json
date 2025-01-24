@@ -64,7 +64,9 @@
             }
           ],
           "rules": "open"
-        }
+        },
+        "min": 3,
+        "max": "3"
       },
       {
         "id": "Extension.extension:gender",

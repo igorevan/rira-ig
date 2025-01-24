@@ -87,8 +87,11 @@
     <sch:title>f:Condition/f:subject/f:extension</sch:title>
     <sch:rule context="f:Condition/f:subject/f:extension">
       <sch:assert test="count(f:id) &lt;= 1">id: maximum cardinality of 'id' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'gender']) &gt;= 1">extension with URL = 'gender': minimum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'gender']) &lt;= 1">extension with URL = 'gender': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'birthYear']) &gt;= 1">extension with URL = 'birthYear': minimum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'birthYear']) &lt;= 1">extension with URL = 'birthYear': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'reason']) &gt;= 1">extension with URL = 'reason': minimum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'reason']) &lt;= 1">extension with URL = 'reason': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:url) &gt;= 1">url: minimum cardinality of 'url' is 1</sch:assert>
       <sch:assert test="count(f:url) &lt;= 1">url: maximum cardinality of 'url' is 1</sch:assert>

@@ -1,0 +1,68 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "BRTipoParticipante",
+  "language" : "pt-BR",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"pt-BR\" lang=\"pt-BR\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem BRTipoParticipante</b></p><a name=\"BRTipoParticipante\"> </a><a name=\"hcBRTipoParticipante\"> </a><a name=\"BRTipoParticipante-und\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: pt-BR</p></div><p>This case-sensitive code system <code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">PCT<a name=\"BRTipoParticipante-PCT\"> </a></td><td>Paciente</td></tr><tr><td style=\"white-space:nowrap\">ESS<a name=\"BRTipoParticipante-ESS\"> </a></td><td>Estabelecimento de saúde solicitante</td></tr><tr><td style=\"white-space:nowrap\">ESE<a name=\"BRTipoParticipante-ESE\"> </a></td><td>Estabelecimento de saúde executante</td></tr><tr><td style=\"white-space:nowrap\">ESR<a name=\"BRTipoParticipante-ESR\"> </a></td><td>Estabelecimento de saúde regulador</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "informative",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"
+      }]
+    }
+  }],
+  "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante",
+  "version" : "1.0.0",
+  "name" : "BRTipoParticipante",
+  "title" : "Tipo do Participante",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-04-13T18:16:19.9468275+00:00",
+  "publisher" : "Ministério da Saúde do Brasil",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.saude.gov.br"
+    }]
+  }],
+  "description" : "Identificação do tipo do participante envolvido na solicitação.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "BR"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "concept" : [{
+    "code" : "PCT",
+    "display" : "Paciente"
+  },
+  {
+    "code" : "ESS",
+    "display" : "Estabelecimento de saúde solicitante"
+  },
+  {
+    "code" : "ESE",
+    "display" : "Estabelecimento de saúde executante"
+  },
+  {
+    "code" : "ESR",
+    "display" : "Estabelecimento de saúde regulador"
+  }]
+}

@@ -1,0 +1,103 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "BRTipoDocumento"] ; # 
+  fhir:language [ fhir:v "pt-BR"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"pt-BR\" lang=\"pt-BR\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem BRTipoDocumento</b></p><a name=\"BRTipoDocumento\"> </a><a name=\"hcBRTipoDocumento\"> </a><a name=\"BRTipoDocumento-und\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: pt-BR</p></div><p>This case-sensitive code system <code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">CMD<a name=\"BRTipoDocumento-CMD\"> </a></td><td>Conjunto Mínimo de Dados</td><td>Documento público que coleta os dados mínimos dos atendimentos em saúde realizados em qualquer estabelecimento de saúde do país, público ou privado, em cada contato assistencial.</td></tr><tr><td style=\"white-space:nowrap\">SA<a name=\"BRTipoDocumento-SA\"> </a></td><td>Sumário de Alta</td><td>Relato clínico objetivo sobre as intervenções realizadas, as instruções para continuidade do cuidado pós-alta e o estado de saúde do indivíduo ao final de sua permanência na internação em estabelecimentos de saúde como: hospital, clínica, hospital-dia, internação domiciliar e urgência.</td></tr><tr><td style=\"white-space:nowrap\">RAC<a name=\"BRTipoDocumento-RAC\"> </a></td><td>Registro de Atendimento Clínico</td><td>Registro de dados essenciais de uma consulta realizada a um indivíduo no âmbito da atenção básica, especializada ou domiciliar (atendimento diário).</td></tr><tr><td style=\"white-space:nowrap\">RIA<a name=\"BRTipoDocumento-RIA\"> </a></td><td>Registro de Imunobiológico Administrado</td><td/></tr><tr><td style=\"white-space:nowrap\">RPM<a name=\"BRTipoDocumento-RPM\"> </a></td><td>Registro de Prescrição de Medicamento</td><td/></tr><tr><td style=\"white-space:nowrap\">RDM<a name=\"BRTipoDocumento-RDM\"> </a></td><td>Registro de Dispensação de Medicamento</td><td/></tr><tr><td style=\"white-space:nowrap\">REL<a name=\"BRTipoDocumento-REL\"> </a></td><td>Resultado de Exame(s) Laboratoriais(s)</td><td/></tr><tr><td style=\"white-space:nowrap\">RA<a name=\"BRTipoDocumento-RA\"> </a></td><td>Regulação Assistencial</td><td/></tr><tr><td style=\"white-space:nowrap\">ATM<a name=\"BRTipoDocumento-ATM\"> </a></td><td>Atestado Médico/Odontológico</td><td/></tr><tr><td style=\"white-space:nowrap\">REPM<a name=\"BRTipoDocumento-REPM\"> </a></td><td>Registro Eletrônico da Prescrição de Medicamento</td><td/></tr><tr><td style=\"white-space:nowrap\">REDFM<a name=\"BRTipoDocumento-REDFM\"> </a></td><td>Registro Eletrônico de Dispensação ou Fornecimento de Medicamentos</td><td/></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       fhir:v "1"^^xsd:integer ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
+         fhir:value [
+           fhir:v "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"^^xsd:anyURI ;
+           fhir:link <http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       fhir:v "informative" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
+         fhir:value [
+           fhir:v "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"^^xsd:anyURI ;
+           fhir:link <http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "BRTipoDocumento"] ; # 
+  fhir:title [ fhir:v "Tipo de Documento"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2020-03-26T13:19:46.9743559+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Ministério da Saúde do Brasil"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.saude.gov.br" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Classificação dos tipos de documentos compartilhados no Brasil."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "BR" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "CMD" ] ;
+     fhir:display [ fhir:v "Conjunto Mínimo de Dados" ] ;
+     fhir:definition [ fhir:v "Documento público que coleta os dados mínimos dos atendimentos em saúde realizados em qualquer estabelecimento de saúde do país, público ou privado, em cada contato assistencial." ]
+  ] [
+     fhir:code [ fhir:v "SA" ] ;
+     fhir:display [ fhir:v "Sumário de Alta" ] ;
+     fhir:definition [ fhir:v "Relato clínico objetivo sobre as intervenções realizadas, as instruções para continuidade do cuidado pós-alta e o estado de saúde do indivíduo ao final de sua permanência na internação em estabelecimentos de saúde como: hospital, clínica, hospital-dia, internação domiciliar e urgência." ]
+  ] [
+     fhir:code [ fhir:v "RAC" ] ;
+     fhir:display [ fhir:v "Registro de Atendimento Clínico" ] ;
+     fhir:definition [ fhir:v "Registro de dados essenciais de uma consulta realizada a um indivíduo no âmbito da atenção básica, especializada ou domiciliar (atendimento diário)." ]
+  ] [
+     fhir:code [ fhir:v "RIA" ] ;
+     fhir:display [ fhir:v "Registro de Imunobiológico Administrado" ]
+  ] [
+     fhir:code [ fhir:v "RPM" ] ;
+     fhir:display [ fhir:v "Registro de Prescrição de Medicamento" ]
+  ] [
+     fhir:code [ fhir:v "RDM" ] ;
+     fhir:display [ fhir:v "Registro de Dispensação de Medicamento" ]
+  ] [
+     fhir:code [ fhir:v "REL" ] ;
+     fhir:display [ fhir:v "Resultado de Exame(s) Laboratoriais(s)" ]
+  ] [
+     fhir:code [ fhir:v "RA" ] ;
+     fhir:display [ fhir:v "Regulação Assistencial" ]
+  ] [
+     fhir:code [ fhir:v "ATM" ] ;
+     fhir:display [ fhir:v "Atestado Médico/Odontológico" ]
+  ] [
+     fhir:code [ fhir:v "REPM" ] ;
+     fhir:display [ fhir:v "Registro Eletrônico da Prescrição de Medicamento" ]
+  ] [
+     fhir:code [ fhir:v "REDFM" ] ;
+     fhir:display [ fhir:v "Registro Eletrônico de Dispensação ou Fornecimento de Medicamentos" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,10 +1,10 @@
 {
   "resourceType" : "ValueSet",
   "id" : "BRStatusParticipante",
-  "language" : "pt-BR",
+  "language" : "en",
   "text" : {
     "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"pt-BR\" lang=\"pt-BR\"><ul><li>Include these codes as defined in <a href=\"http://hl7.org/fhir/R4/codesystem-participationstatus.html\"><code>http://hl7.org/fhir/participationstatus</code></a> version <code>*</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td><td><b>Portuguese (Brazil) (pt)</b></td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-accepted\">accepted</a></td><td>Accepted</td><td>The participant has accepted the appointment.</td><td>Aceito</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-declined\">declined</a></td><td>Declined</td><td>The participant has declined the appointment and will not participate in the appointment.</td><td>Negado</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-tentative\">tentative</a></td><td>Tentative</td><td>The participant has  tentatively accepted the appointment. This could be automatically created by a system and requires further processing before it can be accepted. There is no commitment that attendance will occur.</td><td>Tentativa</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-needs-action\">needs-action</a></td><td>Needs Action</td><td>The participant needs to indicate if they accept the appointment by changing this status to one of the other statuses.</td><td>Aguardando resposta</td></tr></table></li></ul></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet BRStatusParticipante</b></p><a name=\"BRStatusParticipante\"> </a><a name=\"hcBRStatusParticipante\"> </a><a name=\"BRStatusParticipante-und\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p></div><ul><li>Include these codes as defined in <a href=\"http://hl7.org/fhir/R4/codesystem-participationstatus.html\"><code>http://hl7.org/fhir/participationstatus</code></a> version <code>*</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td><td><b>Portuguese (Brazil) (pt)</b></td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-accepted\">accepted</a></td><td>Accepted</td><td>The participant has accepted the appointment.</td><td>Aceito</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-declined\">declined</a></td><td>Declined</td><td>The participant has declined the appointment and will not participate in the appointment.</td><td>Negado</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-tentative\">tentative</a></td><td>Tentative</td><td>The participant has  tentatively accepted the appointment. This could be automatically created by a system and requires further processing before it can be accepted. There is no commitment that attendance will occur.</td><td>Tentativa</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-needs-action\">needs-action</a></td><td>Needs Action</td><td>The participant needs to indicate if they accept the appointment by changing this status to one of the other statuses.</td><td>Aguardando resposta</td></tr></table></li></ul></div>"
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
@@ -12,7 +12,7 @@
     "_valueInteger" : {
       "extension" : [{
         "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
-        "valueCanonical" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira"
+        "valueCanonical" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"
       }]
     }
   },
@@ -22,12 +22,12 @@
     "_valueCode" : {
       "extension" : [{
         "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
-        "valueCanonical" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira"
+        "valueCanonical" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"
       }]
     }
   }],
   "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusParticipante",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "BRStatusParticipante",
   "title" : "Status do Participante do agendamento",
   "status" : "active",

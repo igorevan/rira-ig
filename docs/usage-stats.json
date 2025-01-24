@@ -1,6 +1,6 @@
 {
-  "package": "br.gov.saude.rnds.rira",
-  "version": "0.1.0",
+  "package": "br.gov.saude.rira.fhir",
+  "version": "1.0.0",
   "fhirVersion": "4.0.1",
   "jurisdiction": "BR",
   "extensions": [
@@ -113,19 +113,23 @@
       "StructureDefinition.snapshot.element.type"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm": [
+      "CodeSystem",
       "ImplementationGuide",
       "StructureDefinition",
       "ValueSet"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version": [
-      "StructureDefinition.differential.element"
+      "StructureDefinition.differential.element",
+      "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
+      "CodeSystem",
       "ImplementationGuide",
       "ImplementationGuide.definition.page",
       "ImplementationGuide.definition.page.page",
       "StructureDefinition",
       "StructureDefinition.differential.element",
+      "StructureDefinition.snapshot.element",
       "ValueSet"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [

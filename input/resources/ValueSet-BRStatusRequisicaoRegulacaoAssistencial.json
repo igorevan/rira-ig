@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "BRStatusRequisicaoRegulacaoAssistencial",
-  "language": "pt-BR",
+  "language": "en",
   "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRequisicaoRegulacaoAssistencial",
   "version": "1.0",
   "name": "BRStatusRequisicaoRegulacaoAssistencial",

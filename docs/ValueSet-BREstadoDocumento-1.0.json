@@ -4,10 +4,10 @@
   "meta" : {
     "lastUpdated" : "2020-03-12T13:26:59.318+00:00"
   },
-  "language" : "pt-BR",
+  "language" : "en",
   "text" : {
     "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"pt-BR\" lang=\"pt-BR\"><ul><li>Include these codes as defined in <a href=\"http://hl7.org/fhir/R4/codesystem-composition-status.html\"><code>http://hl7.org/fhir/composition-status</code></a> version <code>*</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td><td><b>Portuguese (Brazil) (pt)</b></td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-preliminary\">preliminary</a></td><td>Preliminary</td><td>This is a preliminary composition or document (also known as initial or interim). The content may be incomplete or unverified.</td><td>Preliminar</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-final\">final</a></td><td>Final</td><td>This version of the composition is complete and verified by an appropriate person and no further work is planned. Any subsequent updates would be on a new version of the composition.</td><td>Finalizado</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-amended\">amended</a></td><td>Amended</td><td>The composition content or the referenced resources have been modified (edited or added to) subsequent to being released as &quot;final&quot; and the composition is complete and verified by an authorized person.</td><td>Atualizado</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-entered-in-error\">entered-in-error</a></td><td>Entered in error</td><td>The composition or document was originally created/issued in error, and this is an amendment that marks that the entire series should not be considered as valid.</td><td>Em estado de erro</td></tr></table></li></ul></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet BREstadoDocumento-1.0</b></p><a name=\"BREstadoDocumento-1.0\"> </a><a name=\"hcBREstadoDocumento-1.0\"> </a><a name=\"BREstadoDocumento-1.0-und\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2020-03-12 13:26:59+0000; Language: en</p></div><ul><li>Include these codes as defined in <a href=\"http://hl7.org/fhir/R4/codesystem-composition-status.html\"><code>http://hl7.org/fhir/composition-status</code></a> version <code>*</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td><td><b>Portuguese (Brazil) (pt)</b></td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-preliminary\">preliminary</a></td><td>Preliminary</td><td>This is a preliminary composition or document (also known as initial or interim). The content may be incomplete or unverified.</td><td>Preliminar</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-final\">final</a></td><td>Final</td><td>This version of the composition is complete and verified by an appropriate person and no further work is planned. Any subsequent updates would be on a new version of the composition.</td><td>Finalizado</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-amended\">amended</a></td><td>Amended</td><td>The composition content or the referenced resources have been modified (edited or added to) subsequent to being released as &quot;final&quot; and the composition is complete and verified by an authorized person.</td><td>Atualizado</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-entered-in-error\">entered-in-error</a></td><td>Entered in error</td><td>The composition or document was originally created/issued in error, and this is an amendment that marks that the entire series should not be considered as valid.</td><td>Em estado de erro</td></tr></table></li></ul></div>"
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
@@ -15,7 +15,7 @@
     "_valueInteger" : {
       "extension" : [{
         "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
-        "valueCanonical" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira"
+        "valueCanonical" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"
       }]
     }
   },
@@ -25,12 +25,12 @@
     "_valueCode" : {
       "extension" : [{
         "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
-        "valueCanonical" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rnds.rira"
+        "valueCanonical" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"
       }]
     }
   }],
   "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoDocumento-1.0",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "BREstadoDocumento",
   "title" : "Estado do Documento",
   "status" : "active",
