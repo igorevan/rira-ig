@@ -45,6 +45,7 @@
   <date value="2020-03-11T03:42:04.5654018+00:00"/>
   <publisher value="Ministério da Saúde do Brasil"/>
   <contact>
+    <name value="Ministério da Saúde do Brasil"/>
     <telecom>
       <system value="url"/>
       <value value="http://www.saude.gov.br"/>

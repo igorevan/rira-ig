@@ -19,9 +19,10 @@
   <title value="Guia de Implementação da Regulação Assistencial (RIRA) da RNDS"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2025-01-24T13:58:07-03:00"/>
+  <date value="2025-01-31T10:47:18-03:00"/>
   <publisher value="Ministério da Saúde do Brasil"/>
   <contact>
+    <name value="Ministério da Saúde do Brasil"/>
     <telecom>
       <system value="url"/>
       <value value="http://www.saude.gov.br"/>
@@ -67,7 +68,7 @@
         <valueString value="releaselabel"/>
       </extension>
       <extension url="value">
-        <valueString value="CI Build"/>
+        <valueString value="STU1"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -278,7 +279,7 @@
         <valueCode value="releaselabel"/>
       </extension>
       <extension url="value">
-        <valueString value="CI Build"/>
+        <valueString value="STU1"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -853,6 +854,17 @@
           <valueCode value="informative"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="abstract.html"/>
+        </extension>
+        <nameUrl value="abstract.html"/>
+        <title value="Abstract"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
           <valueUrl value="seguranca.html"/>
         </extension>
         <nameUrl value="seguranca.html"/>
@@ -922,7 +934,7 @@
           <valueUrl value="downloads.html"/>
         </extension>
         <nameUrl value="downloads.html"/>
-        <title value="Useful Downloads"/>
+        <title value="Downloads"/>
         <generation value="html"/>
       </page>
       <page>
@@ -937,18 +949,6 @@
         <generation value="html"/>
       </page>
     </page>
-    <parameter>
-      <code value="path-resource"/>
-      <value value="input\history"/>
-    </parameter>
-    <parameter>
-      <code value="path-resource"/>
-      <value value="input/resources"/>
-    </parameter>
-    <parameter>
-      <code value="path-pages"/>
-      <value value="input/pagecontent"/>
-    </parameter>
     <parameter>
       <code value="path-resource"/>
       <value value="input/capabilities"/>
@@ -975,7 +975,15 @@
     </parameter>
     <parameter>
       <code value="path-resource"/>
+      <value value="input/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
       <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/maps"/>
     </parameter>
     <parameter>
       <code value="path-resource"/>

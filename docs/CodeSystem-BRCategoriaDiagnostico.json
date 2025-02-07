@@ -35,6 +35,7 @@
   "date" : "2022-05-19T11:00:40.0457007+00:00",
   "publisher" : "Ministério da Saúde do Brasil",
   "contact" : [{
+    "name" : "Ministério da Saúde do Brasil",
     "telecom" : [{
       "system" : "url",
       "value" : "http://www.saude.gov.br"

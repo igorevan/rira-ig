@@ -130,6 +130,7 @@
   <date value="2023-04-04"/>
   <publisher value="Ministério da Saúde do Brasil"/>
   <contact>
+    <name value="Ministério da Saúde do Brasil"/>
     <telecom>
       <system value="url"/>
       <value value="http://www.saude.gov.br"/>

@@ -20,9 +20,10 @@
   "title" : "Guia de Implementação da Regulação Assistencial (RIRA) da RNDS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-01-24T13:58:07-03:00",
+  "date" : "2025-01-31T10:47:18-03:00",
   "publisher" : "Ministério da Saúde do Brasil",
   "contact" : [{
+    "name" : "Ministério da Saúde do Brasil",
     "telecom" : [{
       "system" : "url",
       "value" : "http://www.saude.gov.br"
@@ -77,7 +78,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "CI Build"
+        "valueString" : "STU1"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -367,7 +368,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "CI Build"
+        "valueString" : "STU1"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -1056,6 +1057,19 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "abstract.html"
+        }],
+        "nameUrl" : "abstract.html",
+        "title" : "Abstract",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+          "valueCode" : "informative"
+        },
+        {
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "seguranca.html"
         }],
         "nameUrl" : "seguranca.html",
@@ -1137,7 +1151,7 @@
           "valueUrl" : "downloads.html"
         }],
         "nameUrl" : "downloads.html",
-        "title" : "Useful Downloads",
+        "title" : "Downloads",
         "generation" : "html"
       },
       {
@@ -1155,18 +1169,6 @@
       }]
     },
     "parameter" : [{
-      "code" : "path-resource",
-      "value" : "input\\history"
-    },
-    {
-      "code" : "path-resource",
-      "value" : "input/resources"
-    },
-    {
-      "code" : "path-pages",
-      "value" : "input/pagecontent"
-    },
-    {
       "code" : "path-resource",
       "value" : "input/capabilities"
     },
@@ -1192,7 +1194,15 @@
     },
     {
       "code" : "path-resource",
+      "value" : "input/resources"
+    },
+    {
+      "code" : "path-resource",
       "value" : "input/vocabulary"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/maps"
     },
     {
       "code" : "path-resource",

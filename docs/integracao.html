@@ -41,8 +41,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"3"}
-    h3,h4,h5,h6{--heading-prefix:"3"}</style>
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -52,7 +52,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Guia de Implementação da Regulação Assistencial (RIRA) da RNDS</span>
             <br/>
-            <span style="display:inline-block;">1.0.0 - CI Build
+            <span style="display:inline-block;">1.0.0 - STU1
 
 
 
@@ -83,6 +83,9 @@
               <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
     <a href="index.html">Principal</a>
+  </li>
+  <li>
+    <a href="abstract.html">Abstract</a>
   </li>
   <li>
     <a href="credenciamento.html">Credenciamento</a>
@@ -123,7 +126,8 @@
         <a href="toc.html">Índice</a>
       </li>
       <li>
-        <a target="_blank" href="http://hl7.org/fhir/R4/index.html"> FHIR Spec <img src="external.png"
+        <a target="_blank" href="http://hl7.org/fhir/R4/index.html"> FHIR Spec <img
+            src="external.png"
             style="text-align: baseline" />
         </a>
       </li>
@@ -194,13 +198,197 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </table>
 
   
-  <div xmlns="http://www.w3.org/1999/xhtml"><div class="markdown-toc"><p>Contents:</p><ul><li><a href="#integracao">Integração com a RNDS</a></li><li><a href="#identificadores">Identificadores do Registro Enviado a RNDS</a></li><li><a href="#ambientes">Ambientes de Integração</a></li><li><a href="#producao">Ambiente de Produção</a></li></ul></div>
+  <div xmlns="http://www.w3.org/1999/xhtml"><div class="markdown-toc"><p>Contents:</p><ul><li><a href="#integracao">Integração com a RNDS</a></li><li><a href="#auxiliares">Serviços Auxiliares</a></li><li><a href="#principais">Serviços Principais</a></li><li><a href="#exclusao">Exclusão de Registros na RNDS</a></li><li><a href="#identificadores">Identificadores do Registro Enviado a RNDS</a></li><li><a href="#ambientes">Ambientes de Integração</a></li><li><a href="#producao">Ambiente de Produção</a></li></ul></div>
   <a name="integracao"> </a>
   <h3>Integração com a RNDS</h3>
   <p> Para garantir a interoperabilidade entre as aplicações de Saúde Digital, em especial
     Prontuário(s) Eletrônico(s) do Paciente (PEP), portais e aplicações (<i>web e mobile</i>), a
     troca de informações ocorre por meio de serviços (<i>web services</i>) RESTful, desenvolvidos de
     acordo com o padrão <a href="https://hl7.org/FHIR/">FHIR R4</a>. </p>
+
+  <a name="auxiliares"> </a>
+  <h3>Serviços Auxiliares</h3>
+  <p>
+    A seguir estão listados os serviços que irão auxiliar no envio da informação principal, o RIRA.
+  </p>
+  <p>
+  <table class="grid">
+    <tbody>
+      <tr>
+        <td>
+          <b>Serviço</b>
+        </td>
+        <td>
+          <b>Componente</b>
+        </td>
+        <td>
+          <b>Objetivo</b>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <code>
+              <b>GET</b>
+            </code>
+          <code>/fhir/r4/Patient</code>
+        </td>
+        <td>
+          <i>EHR Services</i>
+        </td>
+        <td>Permitir a pesquisa de pacientes</td>
+      </tr>
+      <tr>
+        <td>
+          <code>
+              <b>GET</b>
+            </code>
+          <code>/fhir/r4/Organization</code>
+        </td>
+        <td>
+          <i>EHR Services</i>
+        </td>
+        <td>Permitir a pesquisa de estabelecimentos de saúde </td>
+      </tr>
+      <tr>
+        <td>
+          <code>
+              <b>GET</b>
+            </code>
+          <code>/fhir/r4/Practitioner</code>
+        </td>
+        <td>
+          <i>EHR Services</i>
+        </td>
+        <td>Permitir a pesquisa de profissionais de saúde</td>
+      </tr>
+      <tr>
+        <td>
+          <code>
+              <b>GET</b>
+            </code>
+          <code>/fhir/r4/PractitionerRole</code>
+        </td>
+        <td>
+          <i>EHR Services</i>
+        </td>
+        <td>Permitir a pesquisa de perfis de profissionais de Saúde</td>
+      </tr>
+    </tbody>
+  </table>
+  </p>
+  <p> Em relação ao serviço <code><b>GET</b> /fhir/r4/Patient</code>, quando não for possível captar
+    o CPF ou CNS do cidadão/paciente, é importante que o sistema/solução capture os dados
+    demográficos do usuário por meio eletrônico ou físico (nas fichas de registro regular do caso de
+    uso). Desta forma, será possível realizar a busca demográfica ou a criação do CNS (CADSUS
+    inserir endereço eletrônico) a ser utilizado como identificador do paciente no documento
+    eletrônico. </p>
+
+  <a name="principais"> </a>
+  <h3>Serviços Principais</h3>
+  <p>
+    A seguir estão listados os serviços que deverão ser usados para o envio ou consulta da
+    informação principal, o RIRA.
+  </p>
+  <p>
+  <table class="grid">
+    <tbody>
+      <tr>
+        <td>
+          <b>Serviço</b>
+        </td>
+        <td>
+          <b>Componente</b>
+        </td>
+        <td>
+          <b>Objetivo</b>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <code>
+              <b>POST</b>
+            </code>
+          <code>/token</code>
+        </td>
+        <td>
+          <i>EHR Auth</i>
+        </td>
+        <td>Permitir autenticação com Certificado Digital do tipo e-CNPJ ou e-CPF (ICP Brasil)</td>
+      </tr>
+      <tr>
+        <td>
+          <code>
+              <b>POST</b>
+            </code>
+          <code>/fhir/r4/Bundle</code>
+        </td>
+        <td>
+          <i>EHR Services</i>
+        </td>
+        <td>Permitir o envio (inclusão) de um documento clínico. Neste caso, o Modelo de Informação de Regulação
+          Assistencial (RIRA).</td>
+      </tr>
+      <tr>
+        <td>
+          <code>
+              <b>POST</b>
+            </code>
+          <code>/contexto-atendimento</code>
+        </td>
+        <td>
+          <i>EHR Services</i>
+        </td>
+        <td>Permitir a geração de um contexto de atendimento. Necessário para consultar documentos
+          clínicos por meio do SUS Digital Profissional</td>
+      </tr>
+      <tr>
+        <td>
+          <code>
+              <b>DELETE</b>
+            </code>
+          <code>/fhir/r4/Bundle</code>
+        </td>
+        <td>
+          <i>EHR Services</i>
+        </td>
+        <td>Permitir a exclusão de um documento</td>
+      </tr>
+    </tbody>
+  </table>
+  </p>
+
+  <a name="exclusao"> </a>
+  <h3>Exclusão de Registros na RNDS</h3>
+  <p> Recomenda-se que a transação para exclusão de registros (<code>DELETE</code>) somente seja
+    efetuada nas seguintes situações: </p>
+  <p>
+  <ul>
+    <li><b>1ª situação</b>: Paciente/cidadão errado. As informações registradas e enviadas não se
+      referem ao cidadão vinculado ao documento clínico.</li>
+    <li><b>2ª situação</b>: Registros duplicados. Foi enviado mais de um documento clínico
+      contendo as mesmas informações sobre o mesmo evento e um mesmo paciente/cidadão. Neste caso,
+      cabe ao integrador definir qual dos documentos se mantém e quais serão excluídos.</li>
+  </ul>
+  </p>
+  <p> Como critério de segurança para efetivar a exclusão, será mantida a estrutura atual presente
+    no FHIR, ou seja, o sistema de autorização irá considerar: UF, CNES, identificador do sistema (<code>
+    identifier.system</code>) e o autor do documento (<i>author</i>). A estrutura FHIR deverá
+    previamente verificar a existência do documento antes de realizar a ação de exclusão. Caso seja
+    detectado que o documento não existe, a requisição será cancelada e apresentará o erro 404. </p>
+  <p> O status do documento excluído será (<code>entered-in-error</code>) e o status do documento
+    válido será (<code>final</code>). Este registro não aparecerá mais nos resultados da pesquisa e
+    as tentativas de ler o recurso falharão com uma resposta "<i>HTTP 410 Gone</i>"" (ver exemplos
+    de consumo dos serviços). </p>
+  <p>
+    <b>Nota</b>: <i>O <a href="https://www.gov.br/saude/pt-br/composicao/seidigi/meu-sus-digital">SUS
+        Digital Profissional</a> é uma plataforma desenvolvida pelo Ministério da Saúde para
+      materializar a Estratégia de Saúde para o Brasil, e tem como objetivo a troca de informações em
+      saúde entre profissionais de saúde de toda a rede de atenção à saúde. Dessa forma, os
+      profissionais acessam as informações de saúde de um determinado paciente a partir de seu
+      histórico já padronizado, sempre dentro de um contexto de atendimento. O contexto de atendimento
+      indica que o paciente passou por atendimento em um estabelecimento de saúde com um profissional
+      de saúde.</i>
+  </p>
 
   <a name="identificadores"> </a>
   <h3>Identificadores do Registro Enviado a RNDS</h3>
@@ -257,13 +445,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <ul>
     <li>
       <p>Utilizado para obtenção do token em ambiente de homologação:</p>
-      <pre><code>https://ehr-auth-hmg.saude.gov.br/api/</code></pre>
+      <pre><code>https://ehr-auth-hmg.saude.gov.br/api/token</code></pre>
     </li>
     <li>
       <p>
         Utilizado para comunicação com demais serviços do ambiente de Homologação:
       </p>
-      <pre><code>https://ehr-services.hmg.saude.gov.br/api/</code></pre>
+      <pre><code>https://ehr-services-hmg.saude.gov.br/api/</code></pre>
     </li>
   </ul>
 
@@ -503,7 +691,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.saude.gov.br">Ministério da Saúde do Brasil</a>.  Package br.gov.saude.rira.fhir#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 24, 2025 13:58-0300">2025-01-24</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.saude.gov.br">Ministério da Saúde do Brasil</a>.  Package br.gov.saude.rira.fhir#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 31, 2025 10:47-0300">2025-01-31</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

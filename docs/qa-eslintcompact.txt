@@ -12,4 +12,4 @@ RIRARNDSIG
 /home/igor/rira-ig/input/examples/example-rira-pending.json: line 88, col 16, Error - Unable to find a profile match for urn:uuid:transient-1 among choices: http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial (STRUCTURE)
 
 err = 9, warn = 0, info = 0
-IG Publisher Version: 1.8.9
+IG Publisher Version: 1.8.10

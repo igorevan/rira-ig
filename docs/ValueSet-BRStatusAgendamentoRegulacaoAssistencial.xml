@@ -30,6 +30,7 @@ A specific time might or might not be pre-allocated.</td><td>Em espera</td></tr>
   <date value="2023-04-13T13:17:18.5012669+00:00"/>
   <publisher value="Ministério da Saúde do Brasil"/>
   <contact>
+    <name value="Ministério da Saúde do Brasil"/>
     <telecom>
       <system value="url"/>
       <value value="http://www.saude.gov.br"/>

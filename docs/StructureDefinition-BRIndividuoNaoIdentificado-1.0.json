@@ -38,6 +38,7 @@
   "date" : "2020-03-11T03:42:04.5654018+00:00",
   "publisher" : "Ministério da Saúde do Brasil",
   "contact" : [{
+    "name" : "Ministério da Saúde do Brasil",
     "telecom" : [{
       "system" : "url",
       "value" : "http://www.saude.gov.br"
