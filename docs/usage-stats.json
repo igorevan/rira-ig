@@ -80,7 +80,7 @@
     "Composition": [
       {
         "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial",
-        "title": "Regulação Assistencial"
+        "title": "Regulação Assistencial (RIRA)"
       }
     ],
     "ServiceRequest": [
@@ -98,6 +98,9 @@
       "StructureDefinition.snapshot.element.constraint"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding": [
       "StructureDefinition.snapshot.element.binding"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
@@ -147,6 +150,9 @@
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
+      "StructureDefinition.snapshot"
     ],
     "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuoNaoIdentificado-1.0": [
       "Composition.subject",

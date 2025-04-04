@@ -374,7 +374,7 @@ Reference is intended to point to a structure that can potentially be expressed 
 "Composition.relatesTo.target[x].display","Composition.relatesTo.target[x].display","","","",0,0,"","","Y","string {[]} {[]}
 ","Text alternative for the resource","Plain text narrative that identifies the resource in addition to the resource reference.","This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it.","","","","","","","","",,,,,"",,,,"Reference.display",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A"
-"Composition.event","Composition.event","","","",1,*,"","","Y","BackboneElement {[]} {[]}
+"Composition.event","Composition.event","","","",1,1,"","","Y","BackboneElement {[]} {[]}
 ","Evento de regulação","Definição dos eventos de um processo de regulação","The event needs to be consistent with the type element, though can provide further information if desired.","Provides context for the composition and creates a linkage between a resource describing an event and the composition created describing the event.","","","","","","","",,,,,"","value:code.coding.code}
 ","",,"open","Composition.event",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","outboundRelationship[typeCode=""SUBJ""].target[classCode<'ACT']",".documentationOf.serviceEvent","DocumentReference.event"
@@ -399,7 +399,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Composition.event.detail","Composition.event.detail","","","",0,*,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]}
 ","The event(s) being documented","The description and/or reference of the event(s) being documented. For example, this could be used to document such a colonoscopy or an appendectomy.","","","","","","","","","",,,,,"",,,,"Composition.event.detail",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".outboundRelationship[typeCode=""SUBJ""].target","n/a"
-"Composition.event:pending","Composition.event","pending","","",0,*,"","","Y","BackboneElement {[]} {[]}
+"Composition.event:pending","Composition.event","pending","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","Evento de solicitação de procedimento regulado","Evento destinado a modelar a solicitação de um serviço, bem como o estabelecimento solicitante.","The event needs to be consistent with the type element, though can provide further information if desired.","Provides context for the composition and creates a linkage between a resource describing an event and the composition created describing the event.","","","","","","","",,,,,"",,,,"Composition.event",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","outboundRelationship[typeCode=""SUBJ""].target[classCode<'ACT']",".documentationOf.serviceEvent","DocumentReference.event"
 "Composition.event:pending.id","Composition.event.id","","","",0,0,"","","","string {[]} {[]}
@@ -561,7 +561,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Composition.event:pending.detail.display","Composition.event.detail.display","","","",0,0,"","","Y","string {[]} {[]}
 ","Text alternative for the resource","Plain text narrative that identifies the resource in addition to the resource reference.","This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it.","","","","","","","","",,,,,"",,,,"Reference.display",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A"
-"Composition.event:returned-to-requester","Composition.event","returned-to-requester","","",0,*,"","","Y","BackboneElement {[]} {[]}
+"Composition.event:returned-to-requester","Composition.event","returned-to-requester","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","Evento de devolução ao solicitante","Evento destinado a modelar a devolução (feita por um estabelecimento regulador) de um serviço ao estabelecimento solicitante.","The event needs to be consistent with the type element, though can provide further information if desired.","Provides context for the composition and creates a linkage between a resource describing an event and the composition created describing the event.","","","","","","","",,,,,"",,,,"Composition.event",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","outboundRelationship[typeCode=""SUBJ""].target[classCode<'ACT']",".documentationOf.serviceEvent","DocumentReference.event"
 "Composition.event:returned-to-requester.id","Composition.event.id","","","",0,0,"","","","string {[]} {[]}
@@ -688,7 +688,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Composition.event:returned-to-requester.detail.display","Composition.event.detail.display","","","",0,0,"","","Y","string {[]} {[]}
 ","Text alternative for the resource","Plain text narrative that identifies the resource in addition to the resource reference.","This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it.","","","","","","","","",,,,,"",,,,"Reference.display",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A"
-"Composition.event:booked","Composition.event","booked","","",0,*,"","","Y","BackboneElement {[]} {[]}
+"Composition.event:booked","Composition.event","booked","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","Evento de agendamento de procedimento regulado","Evento destinado a modelar o agendamento de um serviço, bem como o estabelecimento executante.","The event needs to be consistent with the type element, though can provide further information if desired.","Provides context for the composition and creates a linkage between a resource describing an event and the composition created describing the event.","","","","","","","",,,,,"",,,,"Composition.event",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","outboundRelationship[typeCode=""SUBJ""].target[classCode<'ACT']",".documentationOf.serviceEvent","DocumentReference.event"
 "Composition.event:booked.id","Composition.event.id","","","",0,0,"","","","string {[]} {[]}
@@ -815,7 +815,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Composition.event:booked.detail.display","Composition.event.detail.display","","","",0,0,"","","Y","string {[]} {[]}
 ","Text alternative for the resource","Plain text narrative that identifies the resource in addition to the resource reference.","This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it.","","","","","","","","",,,,,"",,,,"Reference.display",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A"
-"Composition.event:attended","Composition.event","attended","","",0,*,"","","Y","BackboneElement {[]} {[]}
+"Composition.event:attended","Composition.event","attended","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","Evento de atendimento de procedimento regulado","Evento destinado a modelar o atendimento de um serviço, bem como o estabelecimento executante.","The event needs to be consistent with the type element, though can provide further information if desired.","Provides context for the composition and creates a linkage between a resource describing an event and the composition created describing the event.","","","","","","","",,,,,"",,,,"Composition.event",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","outboundRelationship[typeCode=""SUBJ""].target[classCode<'ACT']",".documentationOf.serviceEvent","DocumentReference.event"
 "Composition.event:attended.id","Composition.event.id","","","",0,0,"","","","string {[]} {[]}
@@ -942,7 +942,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Composition.event:attended.detail.display","Composition.event.detail.display","","","",0,0,"","","Y","string {[]} {[]}
 ","Text alternative for the resource","Plain text narrative that identifies the resource in addition to the resource reference.","This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it.","","","","","","","","",,,,,"",,,,"Reference.display",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A"
-"Composition.event:cancelled","Composition.event","cancelled","","",0,*,"","","Y","BackboneElement {[]} {[]}
+"Composition.event:cancelled","Composition.event","cancelled","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","The clinical service(s) being documented","The clinical service, such as a colonoscopy or an appendectomy, being documented.","The event needs to be consistent with the type element, though can provide further information if desired.","Provides context for the composition and creates a linkage between a resource describing an event and the composition created describing the event.","","","","","","","",,,,,"",,,,"Composition.event",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","outboundRelationship[typeCode=""SUBJ""].target[classCode<'ACT']",".documentationOf.serviceEvent","DocumentReference.event"
 "Composition.event:cancelled.id","Composition.event.id","","","",0,0,"","","","string {[]} {[]}
@@ -1069,7 +1069,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Composition.event:cancelled.detail.display","Composition.event.detail.display","","","",0,0,"","","Y","string {[]} {[]}
 ","Text alternative for the resource","Plain text narrative that identifies the resource in addition to the resource reference.","This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it.","","","","","","","","",,,,,"",,,,"Reference.display",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A"
-"Composition.event:absence","Composition.event","absence","","",0,*,"","","Y","BackboneElement {[]} {[]}
+"Composition.event:absence","Composition.event","absence","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","The clinical service(s) being documented","The clinical service, such as a colonoscopy or an appendectomy, being documented.","The event needs to be consistent with the type element, though can provide further information if desired.","Provides context for the composition and creates a linkage between a resource describing an event and the composition created describing the event.","","","","","","","",,,,,"",,,,"Composition.event",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","outboundRelationship[typeCode=""SUBJ""].target[classCode<'ACT']",".documentationOf.serviceEvent","DocumentReference.event"
 "Composition.event:absence.id","Composition.event.id","","","",0,0,"","","","string {[]} {[]}
@@ -1196,7 +1196,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Composition.event:absence.detail.display","Composition.event.detail.display","","","",0,0,"","","Y","string {[]} {[]}
 ","Text alternative for the resource","Plain text narrative that identifies the resource in addition to the resource reference.","This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it.","","","","","","","","",,,,,"",,,,"Reference.display",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A"
-"Composition.event:excluded","Composition.event","excluded","","",0,*,"","","Y","BackboneElement {[]} {[]}
+"Composition.event:excluded","Composition.event","excluded","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","The clinical service(s) being documented","The clinical service, such as a colonoscopy or an appendectomy, being documented.","The event needs to be consistent with the type element, though can provide further information if desired.","Provides context for the composition and creates a linkage between a resource describing an event and the composition created describing the event.","","","","","","","",,,,,"",,,,"Composition.event",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","outboundRelationship[typeCode=""SUBJ""].target[classCode<'ACT']",".documentationOf.serviceEvent","DocumentReference.event"
 "Composition.event:excluded.id","Composition.event.id","","","",0,0,"","","","string {[]} {[]}

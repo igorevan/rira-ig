@@ -202,7 +202,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <a name="seguranca"> </a>
   <h3>Segurança</h3>
   <p> Somente com uma solicitação de acesso aprovada será possível realizar o consumo dos serviços (<i>web
-    services</i>) do <i>EHR Services</i>. </p>
+      services</i>) do <i>EHR Services</i>. </p>
   <p> Após a aprovação, o primeiro passo para realizar o consumo dos serviços é realizar a
     autenticação utilizando o serviço <code>POST@/token</code> no componente <i>EHR Auth</i>.
     Durante o processo de autenticação é verificado se o certificado digital está dentro do período
@@ -210,7 +210,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <p> Caso não ocorra nenhum destes problemas, a operação de autenticação será realizada com sucesso
     e será retornado um <i>token</i> (<code>access_token</code>) com tempo de vida de 30 minutos.
     Este <i>token</i> deverá ser utilizado como token de autenticação nas chamadas dos serviços (<i>web
-    services</i>) do <i>EHR Services</i>. A estrutura do <i>token</i> retornado é a seguinte: </p>
+      services</i>) do <i>EHR Services</i>. A estrutura do <i>token</i> retornado é a seguinte: </p>
 
   <pre><code>{
       "access_token": "eyJraWQiOiJybmRzIGF...",
@@ -230,9 +230,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     usadas utilizando somente este, não gerando a degradação de performance relacionada ao uso do
     certificado digital. Por isso, recomenda-se reutilizar o "<i>ticket</i>" ao máximo durante seu
     tempo de vida e só então obter um novo token repetindo a operação de autenticação com “<i>Two-way
-    SSL</i>”.</p>
+      SSL</i>”.</p>
   <p>Na página da RNDS no <a href="https://servicos-datasus.saude.gov.br/">Portal de Serviços do
-    DATASUS</a> há um projeto de exemplo para obtenção do <i>token</i> utilizando a linguagem <a href="https://www.java.com/">
+      DATASUS</a> há um projeto de exemplo para obtenção do <i>token</i> utilizando a linguagem <a href="https://www.java.com/">
       <i>Java</i>
     </a>. </p>
 </div>
@@ -274,7 +274,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.saude.gov.br">Ministério da Saúde do Brasil</a>.  Package br.gov.saude.rira.fhir#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 31, 2025 10:47-0300">2025-01-31</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.saude.gov.br">Ministério da Saúde do Brasil</a>.  Package br.gov.saude.rira.fhir#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 4, 2025 16:18-0300">2025-04-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -1,5 +1,248 @@
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R4/fhir-single.xsd">
   <!-- The spaces between the open and close "a" tag are mandatory.  (Cuz HTML renderers are dumb...) -->
+
+  <a name="computacional"> </a>
+  <h3>Modelo Computacional</h3>
+  <p> Para a modelagem do modelo computacionais do Registro de Informação de Regulação Assistencial (RIRA),
+    foram mapeados os campos do Modelo de Informação (MI) aos recursos do <a href="https://hl7.org/fhir/R4/">FHIR
+      R4</a>. Assim, foi realizada a modelagem fechada dos perfis de modo a atender o contexto
+    nacional. </p>
+  <p>Foi criado um <a href="https://simplifier.net/redenacionaldedadosemsaude/">Projeto Rede
+      Nacional de Dados em Saúde</a>, na plataforma <a href="https://simplifier.net/">SIMPLIFIER.NET</a>,
+    para a publicação e distribuição dos perfis relacionados aos documentos computacionais em produção na rede.</p>
+
+  <a name="bundle-rira"> </a>
+  <h3>Bundle de Envio do RIRA</h3>
+  <p> O diagrama abaixo apresenta o pacote <i>Bundle</i> no qual é condensado o RIRA, referenciando todos os dados
+    relevantes para caracterizar uma regulação assistencial. </p>
+  <p>
+    <center>
+      <b>Figura 1 - Diagrama do <i>Bundle</i> do RIRA</b>
+    </center>
+  </p>
+  <center>
+    <div>
+
+      <img height="500" src="riraMC.png" alt="Diagrama do Bundle do RIRA" />
+
+    </div>
+  </center>
+
+  <a name="recursos"> </a>
+  <h3>Recursos FHIR</h3>
+  <p> O modelo computacional do RIRA é definido pelo perfil Regulação Assistencial (RIRA) [<code>Composition</code>] e
+    os
+    demais Recursos FHIR apresentados abaixo.</p>
+
+  <table class="grid">
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Profile</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><i>Composition</i></td>
+        <td>
+          <code>
+                <a href="StructureDefinition-BRRegulacaoAssistencial.html">BRRegulacaoAssistencial</a>
+          </code>
+        </td>
+      </tr>
+      <tr>
+        <td><i>Appointment</i></td>
+        <td>
+          <code>
+                <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">BRAgendamentoRegulacaoAssistencial</a>
+          </code>
+        </td>
+      </tr>
+      <tr>
+        <td><i>ServiceRequest</i></td>
+        <td>
+          <code>
+                <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">BRRequisicaoRegulacaoAssistencial</a>
+          </code>
+        </td>
+      </tr>
+      <tr>
+        <td><i>Condition</i></td>
+        <td>
+          <code>
+                <a href="StructureDefinition-BRCID10Avaliado-1.0.html">BRCID10Avaliado-1.0</a>
+          </code>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Perfis dos tipos <i>ValueSet</i> e <i>CodeSystem</i> estão associados a recursos
+    terminológicos. No contexto de regulação assistencial e os domínios utilizados, foram criados <i>CodeSystems</i>
+    específicos
+    definidos pelo <a
+      href="https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/cgsd">Comitê
+      Gestor de Saúde Digital (CGSD)</a>.</p>
+
+  <p>Vale destacar que os perfis terminológicos podem passar por atualizações e versionamentos com
+    periodicidade específica de cada domínio, por isso é importante acompanhar a disponibilização
+    dessas atualizações no projeto <a href="https://simplifier.net/redenacionaldedadosemsaude">RNDS no Simplifier</a>.
+  </p>
+
+  <p>Note que na estrutura dos perfis há elementos com bindings para <i>ValueSets</i> que apontam
+    para <i>CodeSystems</i>. Já no JSON (<code>Bundle</code>), o elemento “<i>system</i>” sempre
+    indicará os <i>CodeSystems</i> relacionados aos códigos (“<i>value</i>”) indicados pelo
+    integrador (autor do registro). </p>
+
+  <table class="grid">
+    <thead>
+      <tr style="background-color: #538ce9">
+        <th>Perfil FHIR</th>
+        <th>Elemento FHIR</th>
+        <th>ValueSet</th>
+        <th>CodeSystem</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="5">
+          <code>
+          <a href="StructureDefinition-BRRegulacaoAssistencial.html">BRRegulacaoAssistencial</a>
+          </code>
+        </td>
+        <td>status</td>
+        <td>BREstadoDocumento-1.0</td>
+        <td><a href="http://hl7.org/fhir/composition-status">composition-status</a></td>
+      </tr>
+      <tr>
+        <td>type</td>
+        <td>BRTipoDocumento-1.0</td>
+        <td>BRTipoDocumento</td>
+      </tr>
+      <tr>
+        <td>category</td>
+        <td>BRModalidadeAssistencialMIRA</td>
+        <td>BRModalidadeAssistencial</td>
+      </tr>
+      <tr>
+        <td>relatesTo.code</td>
+        <td>document-relationship-type</td>
+        <td><a href="http://hl7.org/fhir/document-relationship-type">document-relationship-type</a>
+        </td>
+      </tr>
+      <tr>
+        <td>event.code</td>
+        <td>BRStatusRegulacaoAssistencial</td>
+        <td>BRStatusRegulacaoAssistencial</td>
+      </tr>
+      <tr>
+        <td rowspan="8">
+          <code>
+          <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">BRAgendamentoRegulacaoAssistencial</a>
+          </code>
+        </td>
+        <td>status</td>
+        <td>BRStatusAgendamentoRegulacaoAssistencial</td>
+        <td><a href="http://hl7.org/fhir/appointmentstatus">appointmentstatus</a></td>
+      </tr>
+      <tr>
+        <td>serviceCategory</td>
+        <td>BRModalidadeAssistencialMIRA</td>
+        <td>BRModalidadeAssistencial</td>
+      </tr>
+      <tr>
+        <td>serviceType</td>
+        <td>BRProcedimentosNacionais-1.0</td>
+        <td>BRTabelaSUS</td>
+      </tr>
+      <tr>
+        <td>serviceType</td>
+        <td>BRProcedimentosNacionais-1.0</td>
+        <td>BRCBHPMTUSS</td>
+      </tr>
+      <tr>
+        <td>specialty</td>
+        <td>BROcupacao-1.0</td>
+        <td>BRCBO</td>
+      </tr>
+      <tr>
+        <td>appointmentType</td>
+        <td>BRCaraterAtendimentoMIRA</td>
+        <td><a href="http://hl7.org/fhir/request-priority">request-priority</a></td>
+      </tr>
+      <tr>
+        <td>participant.type</td>
+        <td>BRTipoParticipante</td>
+        <td>BRTipoParticipante</td>
+      </tr>
+      <tr>
+        <td>participant.status</td>
+        <td>BRStatusParticipante</td>
+        <td><a href="http://hl7.org/fhir/participationstatus">participationstatus</a></td>
+      </tr>
+      <tr>
+        <td rowspan="7">
+          <code>
+          <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">BRRequisicaoRegulacaoAssistencial</a>
+          </code>
+        </td>
+        <td>status</td>
+        <td>BRStatusRequisicaoRegulacaoAssistencial</td>
+        <td><a href="http://hl7.org/fhir/request-status">request-status</a></td>
+      </tr>
+      <tr>
+        <td>intent</td>
+        <td>BRIntencaoRegulacao</td>
+        <td><a href="http://hl7.org/fhir/request-intent">request-intent</a></td>
+      </tr>
+      <tr>
+        <td>category</td>
+        <td>BRModalidadeAssistencialMIRA</td>
+        <td>BRModalidadeAssistencial</td>
+      </tr>
+      <tr>
+        <td>priority</td>
+        <td>BRCaraterAtendimentoMIRA</td>
+        <td><a href="http://hl7.org/fhir/request-priority">request-priority</a></td>
+      </tr>
+      <tr>
+        <td>code</td>
+        <td>BRProcedimentosNacionais-1.0</td>
+        <td>BRTabelaSUS</td>
+      </tr>
+      <tr>
+        <td>code</td>
+        <td>BRProcedimentosNacionais-1.0</td>
+        <td>BRCBHPMTUSS</td>
+      </tr>
+      <tr>
+        <td>performerType</td>
+        <td>BROcupacao-1.0</td>
+        <td>BRCBO</td>
+      </tr>
+      <tr>
+        <td rowspan="3">
+          <code>
+          <a href="StructureDefinition-BRCID10Avaliado-1.0.html">BRCID10Avaliado-1.0</a>
+          </code>
+        </td>
+        <td>clinicalStatus</td>
+        <td>BREstadoResolucaoDiagnosticoProblema-1.0</td>
+        <td><a href="http://terminology.hl7.org/CodeSystem/condition-clinical">condition-clinical</a>
+        </td>
+      </tr>
+      <tr>
+        <td>category</td>
+        <td>BRCategoriaDiagnostico</td>
+        <td>BRCategoriaDiagnostico</td>
+      </tr>
+      <tr>
+        <td>code</td>
+        <td>BRCID10-1.0</td>
+        <td>BRCID10</td>
+      </tr>
+    </tbody>
+  </table>
 
 </div>

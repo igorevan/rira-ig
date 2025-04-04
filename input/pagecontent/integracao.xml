@@ -1,5 +1,5 @@
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R4/fhir-single.xsd">
   <a name="integracao"></a>
   <h3>Integração com a RNDS</h3>
   <p> Para garantir a interoperabilidade entre as aplicações de Saúde Digital, em especial

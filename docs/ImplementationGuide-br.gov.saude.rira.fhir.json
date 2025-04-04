@@ -18,9 +18,9 @@
   "version" : "1.0.0",
   "name" : "RIRARNDSIG",
   "title" : "Guia de Implementação da Regulação Assistencial (RIRA) da RNDS",
-  "status" : "active",
+  "status" : "draft",
   "experimental" : false,
-  "date" : "2025-01-31T10:47:18-03:00",
+  "date" : "2025-04-04T16:18:11-03:00",
   "publisher" : "Ministério da Saúde do Brasil",
   "contact" : [{
     "name" : "Ministério da Saúde do Brasil",
@@ -47,7 +47,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "6.1.0"
+    "version" : "6.2.0"
   },
   {
     "id" : "hl7ext",
@@ -57,7 +57,7 @@
     }],
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
-    "version" : "5.1.0"
+    "version" : "5.2.0"
   }],
   "definition" : {
     "extension" : [{
@@ -348,7 +348,7 @@
     },
     {
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools.r4#0.3.0"
+      "valueCode" : "hl7.fhir.uv.tools.r4#0.4.1"
     },
     {
       "extension" : [{
@@ -639,65 +639,6 @@
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/BRStatusAgendamentoRegulacaoAssistencial"
-      },
-      "name" : "Status de agendamento de regulação assistencial",
-      "description" : "Status de agendamento de regulação assistencial."
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/example-rira-attended"
-      },
-      "name" : "Bundle de exemplo do RIRA (Atendido/Internado)",
-      "description" : "Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Atendido/Internado (Attended)",
-      "exampleCanonical" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/example-rira-booked"
-      },
-      "name" : "Bundle de exemplo do RIRA (Agendado)",
-      "description" : "Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Agendado (Booked)",
-      "exampleCanonical" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/example-rira-cancelled"
-      },
-      "name" : "Bundle de exemplo do RIRA (Negado/Cancelado)",
-      "description" : "Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Negado/Cancelado (Cancelled)",
-      "exampleCanonical" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/example-rira-pending"
-      },
-      "name" : "Bundle de exemplo do RIRA (Pendente)",
-      "description" : "Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Pendente (Pending)",
-      "exampleCanonical" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
       }],
       "reference" : {
@@ -835,7 +776,7 @@
       "reference" : {
         "reference" : "StructureDefinition/BRRegulacaoAssistencial"
       },
-      "name" : "Regulação Assistencial",
+      "name" : "Regulação Assistencial (RIRA)",
       "description" : "Documento público que coleta os dados da regulação assistencial"
     },
     {
@@ -969,6 +910,17 @@
       },
       "name" : "Sexo",
       "description" : "Sexo de um indivíduo."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/BRStatusAgendamentoRegulacaoAssistencial"
+      },
+      "name" : "Status de agendamento de regulação assistencial",
+      "description" : "Status de agendamento de regulação assistencial."
     },
     {
       "extension" : [{
@@ -1112,7 +1064,7 @@
           "valueUrl" : "mc.html"
         }],
         "nameUrl" : "mc.html",
-        "title" : "O RIRA",
+        "title" : "Modelo Computacional",
         "generation" : "html"
       },
       {
