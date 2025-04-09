@@ -4,7 +4,7 @@
   "language" : "pt-BR",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"pt-BR\" lang=\"pt-BR\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide br.gov.saude.rira.fhir</b></p><a name=\"br.gov.saude.rira.fhir\"> </a><a name=\"hcbr.gov.saude.rira.fhir\"> </a><a name=\"br.gov.saude.rira.fhir-und\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: pt-BR</p></div><h2>RIRARNDSIG</h2><p>The official URL for this implementation guide is: </p><pre>http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir</pre><div><p>Guia de Implementação da Rede Nacional de Dados em Saúde (RNDS)</p>\n</div></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"pt-BR\" lang=\"pt-BR\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide br.gov.saude.rira.fhir</b></p><a name=\"br.gov.saude.rira.fhir\"> </a><a name=\"hcbr.gov.saude.rira.fhir\"> </a><a name=\"br.gov.saude.rira.fhir-pt-BR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: pt-BR</p></div><h2>RIRARNDSIG</h2><p>The official URL for this implementation guide is: </p><pre>http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir</pre><div><p>Guia de Implementação da Rede Nacional de Dados em Saúde (RNDS)</p>\n</div></div>"
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
@@ -20,7 +20,7 @@
   "title" : "Guia de Implementação da Regulação Assistencial (RIRA) da RNDS",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-04-04T16:18:11-03:00",
+  "date" : "2025-04-09T12:39:07-03:00",
   "publisher" : "Ministério da Saúde do Brasil",
   "contact" : [{
     "name" : "Ministério da Saúde do Brasil",
@@ -708,10 +708,32 @@
         "valueString" : "CodeSystem"
       }],
       "reference" : {
+        "reference" : "CodeSystem/BRStatusAgendamentoRegulacaoAssistencial"
+      },
+      "name" : "Status de agendamento de regulação assistencial",
+      "description" : "Status de agendamento de regulação assistencial."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
         "reference" : "CodeSystem/BRStatusRegulacaoAssistencial"
       },
       "name" : "Status da regulação assistencial",
       "description" : "Status da regulação assistencial."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/BRTabelaSUS"
+      },
+      "name" : "Tabela de procedimentos, medicamentos e OPM do SUS",
+      "description" : "Padroniza os códigos e as nomenclaturas dos procedimentos, medicamentos e OPM para as informações trafegadas no SUS"
     },
     {
       "extension" : [{

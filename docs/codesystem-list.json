@@ -49,12 +49,28 @@
       "description" : "Classifica os contatos assistenciais de acordo com as especificidades do modo, local e duração do atendimento"
     },
     {
+      "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusAgendamentoRegulacaoAssistencial",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "BRStatusAgendamentoRegulacaoAssistencial",
+      "title" : "Status de agendamento de regulação assistencial",
+      "description" : "Status de agendamento de regulação assistencial."
+    },
+    {
       "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial",
       "version" : "1.0.0",
       "status" : "active",
       "name" : "BRStatusRegulacaoAssistencial",
       "title" : "Status da regulação assistencial",
       "description" : "Status da regulação assistencial."
+    },
+    {
+      "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "BRTabelaSUS",
+      "title" : "Tabela de procedimentos, medicamentos e OPM do SUS",
+      "description" : "Padroniza os códigos e as nomenclaturas dos procedimentos, medicamentos e OPM para as informações trafegadas no SUS"
     },
     {
       "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento",

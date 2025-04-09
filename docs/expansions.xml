@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="835aef2b-dd23-4c81-8e09-bfa639fd3c94"/>
+  <id value="20f9eb05-075f-441c-9d2e-60fca1e02300"/>
   <meta>
-    <lastUpdated value="2025-04-04T16:18:34.178-03:00"/>
+    <lastUpdated value="2025-04-09T12:39:31.020-03:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -8054,13 +8054,13 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:586ed246-6e9b-4408-adda-b99d162dd3ff"/>
-          <timestamp value="2025-04-04T16:26:11-03:00"/>
+          <identifier value="urn:uuid:da33cad7-ead6-47ab-8c1b-19c8568ee672"/>
+          <timestamp value="2025-04-09T12:47:11-03:00"/>
           <total value="14230"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
-            <valueCode value="und"/>
+            <valueCode value="pt-BR"/>
           </parameter>
           <parameter>
             <name value="count"/>
@@ -13118,7 +13118,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-request-priority.html#request-priority-routine">routine</a>
                 </td>
                 <td>http://hl7.org/fhir/request-priority</td>
-                <td>Routine</td>
+                <td>Eletivo</td>
                 <td>
                   <div>
                     <p>The request has normal priority.</p>
@@ -13132,7 +13132,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-request-priority.html#request-priority-urgent">urgent</a>
                 </td>
                 <td>http://hl7.org/fhir/request-priority</td>
-                <td>Urgent</td>
+                <td>Urgência</td>
                 <td>
                   <div>
                     <p>The request should be actioned promptly - higher priority than routine.</p>
@@ -13158,13 +13158,13 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:76772bcc-95e2-41f3-8bbd-da1fb4fa8823"/>
-          <timestamp value="2025-04-04T16:26:13-03:00"/>
+          <identifier value="urn:uuid:0c338927-097c-4f0c-a3ff-00ff49240537"/>
+          <timestamp value="2025-04-09T12:47:13-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
-            <valueCode value="und"/>
+            <valueCode value="pt-BR"/>
           </parameter>
           <parameter>
             <name value="count"/>
@@ -13189,12 +13189,12 @@
           <contains>
             <system value="http://hl7.org/fhir/request-priority"/>
             <code value="routine"/>
-            <display value="Routine"/>
+            <display value="Eletivo"/>
           </contains>
           <contains>
             <system value="http://hl7.org/fhir/request-priority"/>
             <code value="urgent"/>
-            <display value="Urgent"/>
+            <display value="Urgência"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -13264,13 +13264,13 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:60a656cc-7d32-4f09-ba6f-3a8540034cdb"/>
-          <timestamp value="2025-04-04T16:26:13-03:00"/>
+          <identifier value="urn:uuid:8728f72a-d2b2-4bc8-81b0-cbefb2a8c515"/>
+          <timestamp value="2025-04-09T12:47:13-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
-            <valueCode value="und"/>
+            <valueCode value="pt-BR"/>
           </parameter>
           <parameter>
             <name value="count"/>
@@ -13341,7 +13341,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-preliminary">preliminary</a>
                 </td>
                 <td>http://hl7.org/fhir/composition-status</td>
-                <td>Preliminary</td>
+                <td>Preliminar</td>
                 <td>
                   <div>
                     <p>This is a preliminary composition or document (also known as initial or interim). The content may be incomplete or unverified.</p>
@@ -13355,7 +13355,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-final">final</a>
                 </td>
                 <td>http://hl7.org/fhir/composition-status</td>
-                <td>Final</td>
+                <td>Finalizado</td>
                 <td>
                   <div>
                     <p>This version of the composition is complete and verified by an appropriate person and no further work is planned. Any subsequent updates would be on a new version of the composition.</p>
@@ -13369,7 +13369,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-amended">amended</a>
                 </td>
                 <td>http://hl7.org/fhir/composition-status</td>
-                <td>Amended</td>
+                <td>Atualizado</td>
                 <td>
                   <div>
                     <p>The composition content or the referenced resources have been modified (edited or added to) subsequent to being released as &quot;final&quot; and the composition is complete and verified by an authorized person.</p>
@@ -13383,7 +13383,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-entered-in-error">entered-in-error</a>
                 </td>
                 <td>http://hl7.org/fhir/composition-status</td>
-                <td>Entered in error</td>
+                <td>Em estado de erro</td>
                 <td>
                   <div>
                     <p>The composition or document was originally created/issued in error, and this is an amendment that marks that the entire series should not be considered as valid.</p>
@@ -13409,13 +13409,13 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:6267f923-9bd3-4d1f-922c-a55c4b719f7d"/>
-          <timestamp value="2025-04-04T16:26:13-03:00"/>
+          <identifier value="urn:uuid:ea2b996f-af15-4dae-88da-0adb6052b267"/>
+          <timestamp value="2025-04-09T12:47:13-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
-            <valueCode value="und"/>
+            <valueCode value="pt-BR"/>
           </parameter>
           <parameter>
             <name value="count"/>
@@ -13440,22 +13440,22 @@
           <contains>
             <system value="http://hl7.org/fhir/composition-status"/>
             <code value="preliminary"/>
-            <display value="Preliminary"/>
+            <display value="Preliminar"/>
           </contains>
           <contains>
             <system value="http://hl7.org/fhir/composition-status"/>
             <code value="final"/>
-            <display value="Final"/>
+            <display value="Finalizado"/>
           </contains>
           <contains>
             <system value="http://hl7.org/fhir/composition-status"/>
             <code value="amended"/>
-            <display value="Amended"/>
+            <display value="Atualizado"/>
           </contains>
           <contains>
             <system value="http://hl7.org/fhir/composition-status"/>
             <code value="entered-in-error"/>
-            <display value="Entered in error"/>
+            <display value="Em estado de erro"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -13500,7 +13500,7 @@
                   <a href="http://terminology.hl7.org/6.2.0/CodeSystem-condition-clinical.html#condition-clinical-active">active</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/condition-clinical</td>
-                <td>Active</td>
+                <td>Ativo</td>
                 <td>
                   <div>
                     <p>The subject is currently experiencing the condition or situation, there is evidence of the condition or situation, or considered to be a significant risk.</p>
@@ -13514,7 +13514,7 @@
                   <a href="http://terminology.hl7.org/6.2.0/CodeSystem-condition-clinical.html#condition-clinical-recurrence">recurrence</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/condition-clinical</td>
-                <td>Recurrence</td>
+                <td>Recorrente</td>
                 <td>
                   <div>
                     <p>The subject is experiencing a reoccurence or repeating of a previously resolved condition or situation, e.g. urinary tract infection, food insecurity.</p>
@@ -13528,7 +13528,7 @@
                   <a href="http://terminology.hl7.org/6.2.0/CodeSystem-condition-clinical.html#condition-clinical-relapse">relapse</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/condition-clinical</td>
-                <td>Relapse</td>
+                <td>Recidiva</td>
                 <td>
                   <div>
                     <p>The subject is experiencing a return of a condition or situation after a period of improvement or remission, e.g. relapse of cancer, alcoholism.</p>
@@ -13542,7 +13542,7 @@
                   <a href="http://terminology.hl7.org/6.2.0/CodeSystem-condition-clinical.html#condition-clinical-inactive">inactive</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/condition-clinical</td>
-                <td>Inactive</td>
+                <td>Inativo</td>
                 <td>
                   <div>
                     <p>The subject is no longer experiencing the condition or situation and there is no longer evidence or appreciable risk of the condition or situation.</p>
@@ -13556,7 +13556,7 @@
                   <a href="http://terminology.hl7.org/6.2.0/CodeSystem-condition-clinical.html#condition-clinical-remission">remission</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/condition-clinical</td>
-                <td>Remission</td>
+                <td>Remissão</td>
                 <td>
                   <div>
                     <p>The subject is not presently experiencing the condition or situation, but there is a risk of the condition or situation returning.</p>
@@ -13570,7 +13570,7 @@
                   <a href="http://terminology.hl7.org/6.2.0/CodeSystem-condition-clinical.html#condition-clinical-resolved">resolved</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/condition-clinical</td>
-                <td>Resolved</td>
+                <td>Resolvido</td>
                 <td>
                   <div>
                     <p>The subject is not presently experiencing the condition or situation and there is a negligible perceived risk of the condition or situation returning.</p>
@@ -13596,13 +13596,13 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:74663673-6662-45f2-96a4-3ddab0a9f600"/>
-          <timestamp value="2025-04-04T16:26:13-03:00"/>
+          <identifier value="urn:uuid:a71b2c99-afde-44ed-a5b5-5bcb2fb05709"/>
+          <timestamp value="2025-04-09T12:47:13-03:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
-            <valueCode value="und"/>
+            <valueCode value="pt-BR"/>
           </parameter>
           <parameter>
             <name value="count"/>
@@ -13623,32 +13623,32 @@
           <contains>
             <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
             <code value="active"/>
-            <display value="Active"/>
+            <display value="Ativo"/>
           </contains>
           <contains>
             <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
             <code value="recurrence"/>
-            <display value="Recurrence"/>
+            <display value="Recorrente"/>
           </contains>
           <contains>
             <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
             <code value="relapse"/>
-            <display value="Relapse"/>
+            <display value="Recidiva"/>
           </contains>
           <contains>
             <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
             <code value="inactive"/>
-            <display value="Inactive"/>
+            <display value="Inativo"/>
           </contains>
           <contains>
             <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
             <code value="remission"/>
-            <display value="Remission"/>
+            <display value="Remissão"/>
           </contains>
           <contains>
             <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
             <code value="resolved"/>
-            <display value="Resolved"/>
+            <display value="Resolvido"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -13690,7 +13690,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-proposal">proposal</a>
                 </td>
                 <td>http://hl7.org/fhir/request-intent</td>
-                <td>Proposal</td>
+                <td>Proposto</td>
                 <td>
                   <div>
                     <p>The request is a suggestion made by someone/something that does not have an intention to ensure it occurs and without providing an authorization to act.</p>
@@ -13704,7 +13704,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-plan">plan</a>
                 </td>
                 <td>http://hl7.org/fhir/request-intent</td>
-                <td>Plan</td>
+                <td>Planejado</td>
                 <td>
                   <div>
                     <p>The request represents an intention to ensure something occurs without providing an authorization for others to act.</p>
@@ -13718,7 +13718,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-directive">directive</a>
                 </td>
                 <td>http://hl7.org/fhir/request-intent</td>
-                <td>Directive</td>
+                <td>Diretriz</td>
                 <td>
                   <div>
                     <p>The request represents a legally binding instruction authored by a Patient or RelatedPerson.</p>
@@ -13732,7 +13732,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-order">order</a>
                 </td>
                 <td>http://hl7.org/fhir/request-intent</td>
-                <td>Order</td>
+                <td>Autorizado</td>
                 <td>
                   <div>
                     <p>The request represents a request/demand and authorization for action by a Practitioner.</p>
@@ -13746,7 +13746,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-original-order">original-order</a>
                 </td>
                 <td>http://hl7.org/fhir/request-intent</td>
-                <td>Original Order</td>
+                <td>Autorização original</td>
                 <td>
                   <div>
                     <p>The request represents an original authorization for action.</p>
@@ -13760,7 +13760,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-reflex-order">reflex-order</a>
                 </td>
                 <td>http://hl7.org/fhir/request-intent</td>
-                <td>Reflex Order</td>
+                <td>Autorização suplementar</td>
                 <td>
                   <div>
                     <p>The request represents an automatically generated supplemental authorization for action based on a parent authorization together with initial results of the action taken against that parent authorization.</p>
@@ -13774,7 +13774,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-filler-order">filler-order</a>
                 </td>
                 <td>http://hl7.org/fhir/request-intent</td>
-                <td>Filler Order</td>
+                <td>Intenção de autorização</td>
                 <td>
                   <div>
                     <p>The request represents the view of an authorization instantiated by a fulfilling system representing the details of the fulfiller's intention to act upon a submitted order.</p>
@@ -13788,7 +13788,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-instance-order">instance-order</a>
                 </td>
                 <td>http://hl7.org/fhir/request-intent</td>
-                <td>Instance Order</td>
+                <td>Autorização de atividade única</td>
                 <td>
                   <div>
                     <p>An order created in fulfillment of a broader order that represents the authorization for a single activity occurrence.  E.g. The administration of a single dose of a drug.</p>
@@ -13802,7 +13802,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-option">option</a>
                 </td>
                 <td>http://hl7.org/fhir/request-intent</td>
-                <td>Option</td>
+                <td>Condicional</td>
                 <td>
                   <div>
                     <p>The request represents a component or option for a RequestGroup that establishes timing, conditionality and/or other constraints among a set of requests.  Refer to 
@@ -13830,13 +13830,13 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:5b4454e3-3bc7-4dd4-be32-87eb692cfd3f"/>
-          <timestamp value="2025-04-04T16:26:13-03:00"/>
+          <identifier value="urn:uuid:9c37b009-b8f5-4b68-a90b-13b98853d688"/>
+          <timestamp value="2025-04-09T12:47:13-03:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
-            <valueCode value="und"/>
+            <valueCode value="pt-BR"/>
           </parameter>
           <parameter>
             <name value="count"/>
@@ -13861,47 +13861,47 @@
           <contains>
             <system value="http://hl7.org/fhir/request-intent"/>
             <code value="proposal"/>
-            <display value="Proposal"/>
+            <display value="Proposto"/>
           </contains>
           <contains>
             <system value="http://hl7.org/fhir/request-intent"/>
             <code value="plan"/>
-            <display value="Plan"/>
+            <display value="Planejado"/>
           </contains>
           <contains>
             <system value="http://hl7.org/fhir/request-intent"/>
             <code value="directive"/>
-            <display value="Directive"/>
+            <display value="Diretriz"/>
           </contains>
           <contains>
             <system value="http://hl7.org/fhir/request-intent"/>
             <code value="order"/>
-            <display value="Order"/>
+            <display value="Autorizado"/>
           </contains>
           <contains>
             <system value="http://hl7.org/fhir/request-intent"/>
             <code value="original-order"/>
-            <display value="Original Order"/>
+            <display value="Autorização original"/>
           </contains>
           <contains>
             <system value="http://hl7.org/fhir/request-intent"/>
             <code value="reflex-order"/>
-            <display value="Reflex Order"/>
+            <display value="Autorização suplementar"/>
           </contains>
           <contains>
             <system value="http://hl7.org/fhir/request-intent"/>
             <code value="filler-order"/>
-            <display value="Filler Order"/>
+            <display value="Intenção de autorização"/>
           </contains>
           <contains>
             <system value="http://hl7.org/fhir/request-intent"/>
             <code value="instance-order"/>
-            <display value="Instance Order"/>
+            <display value="Autorização de atividade única"/>
           </contains>
           <contains>
             <system value="http://hl7.org/fhir/request-intent"/>
             <code value="option"/>
-            <display value="Option"/>
+            <display value="Condicional"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -14003,13 +14003,13 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:30221d3e-8827-4cd8-9fc5-3410cc08acf3"/>
-          <timestamp value="2025-04-04T16:26:13-03:00"/>
+          <identifier value="urn:uuid:5a202b75-8489-4f29-aab3-e49d1b0d2d58"/>
+          <timestamp value="2025-04-09T12:47:13-03:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
-            <valueCode value="und"/>
+            <valueCode value="pt-BR"/>
           </parameter>
           <parameter>
             <name value="count"/>
@@ -14122,13 +14122,13 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:68c127cb-120f-4d25-be41-345e3d1e8da8"/>
-          <timestamp value="2025-04-04T16:26:13-03:00"/>
+          <identifier value="urn:uuid:20a2b25c-0b02-4e75-b369-bfe7314203fd"/>
+          <timestamp value="2025-04-09T12:47:13-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
-            <valueCode value="und"/>
+            <valueCode value="pt-BR"/>
           </parameter>
           <parameter>
             <name value="count"/>
@@ -22208,13 +22208,13 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:0908274f-5437-4baa-9b46-fcd77c74d7e9"/>
-          <timestamp value="2025-04-04T16:26:13-03:00"/>
+          <identifier value="urn:uuid:9d3a564a-f6f8-411e-8807-91350bfddb04"/>
+          <timestamp value="2025-04-09T12:47:13-03:00"/>
           <total value="2714"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
-            <valueCode value="und"/>
+            <valueCode value="pt-BR"/>
           </parameter>
           <parameter>
             <name value="count"/>
@@ -27329,13 +27329,13 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:42d1a7f9-1aa9-4868-b856-b7f3b2fcea0d"/>
-          <timestamp value="2025-04-04T16:26:15-03:00"/>
+          <identifier value="urn:uuid:ba563f73-2101-4ae1-857b-a743efd5048c"/>
+          <timestamp value="2025-04-09T12:47:15-03:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
-            <valueCode value="und"/>
+            <valueCode value="pt-BR"/>
           </parameter>
           <parameter>
             <name value="count"/>
@@ -27408,7 +27408,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-accepted">accepted</a>
                 </td>
                 <td>http://hl7.org/fhir/participationstatus</td>
-                <td>Accepted</td>
+                <td>Aceito</td>
                 <td>
                   <div>
                     <p>The participant has accepted the appointment.</p>
@@ -27422,7 +27422,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-declined">declined</a>
                 </td>
                 <td>http://hl7.org/fhir/participationstatus</td>
-                <td>Declined</td>
+                <td>Negado</td>
                 <td>
                   <div>
                     <p>The participant has declined the appointment and will not participate in the appointment.</p>
@@ -27436,7 +27436,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-tentative">tentative</a>
                 </td>
                 <td>http://hl7.org/fhir/participationstatus</td>
-                <td>Tentative</td>
+                <td>Tentativa</td>
                 <td>
                   <div>
                     <p>The participant has  tentatively accepted the appointment. This could be automatically created by a system and requires further processing before it can be accepted. There is no commitment that attendance will occur.</p>
@@ -27450,7 +27450,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-needs-action">needs-action</a>
                 </td>
                 <td>http://hl7.org/fhir/participationstatus</td>
-                <td>Needs Action</td>
+                <td>Aguardando resposta</td>
                 <td>
                   <div>
                     <p>The participant needs to indicate if they accept the appointment by changing this status to one of the other statuses.</p>
@@ -27476,13 +27476,13 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:6502e67a-dd70-4418-985d-5db02de7d89d"/>
-          <timestamp value="2025-04-04T16:26:15-03:00"/>
+          <identifier value="urn:uuid:1f744430-0496-4d09-9718-88ba3b040d46"/>
+          <timestamp value="2025-04-09T12:47:15-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
-            <valueCode value="und"/>
+            <valueCode value="pt-BR"/>
           </parameter>
           <parameter>
             <name value="count"/>
@@ -27507,22 +27507,22 @@
           <contains>
             <system value="http://hl7.org/fhir/participationstatus"/>
             <code value="accepted"/>
-            <display value="Accepted"/>
+            <display value="Aceito"/>
           </contains>
           <contains>
             <system value="http://hl7.org/fhir/participationstatus"/>
             <code value="declined"/>
-            <display value="Declined"/>
+            <display value="Negado"/>
           </contains>
           <contains>
             <system value="http://hl7.org/fhir/participationstatus"/>
             <code value="tentative"/>
-            <display value="Tentative"/>
+            <display value="Tentativa"/>
           </contains>
           <contains>
             <system value="http://hl7.org/fhir/participationstatus"/>
             <code value="needs-action"/>
-            <display value="Needs Action"/>
+            <display value="Aguardando resposta"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -27561,7 +27561,7 @@
                   <a href="CodeSystem-BRStatusRegulacaoAssistencial.html#BRStatusRegulacaoAssistencial-pending">pending</a>
                 </td>
                 <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td>
-                <td>Pending</td>
+                <td>Pendente</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -27569,7 +27569,7 @@
                   <a href="CodeSystem-BRStatusRegulacaoAssistencial.html#BRStatusRegulacaoAssistencial-booked">booked</a>
                 </td>
                 <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td>
-                <td>Booked</td>
+                <td>Agendado</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -27577,7 +27577,7 @@
                   <a href="CodeSystem-BRStatusRegulacaoAssistencial.html#BRStatusRegulacaoAssistencial-attended">attended</a>
                 </td>
                 <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td>
-                <td>Attended/Hospitalized</td>
+                <td>Atendido/Internado</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -27585,7 +27585,7 @@
                   <a href="CodeSystem-BRStatusRegulacaoAssistencial.html#BRStatusRegulacaoAssistencial-cancelled">cancelled</a>
                 </td>
                 <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td>
-                <td>Cancelled</td>
+                <td>Negado/Cancelado</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -27593,7 +27593,7 @@
                   <a href="CodeSystem-BRStatusRegulacaoAssistencial.html#BRStatusRegulacaoAssistencial-absence">absence</a>
                 </td>
                 <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td>
-                <td>Absence</td>
+                <td>Falta</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -27601,7 +27601,7 @@
                   <a href="CodeSystem-BRStatusRegulacaoAssistencial.html#BRStatusRegulacaoAssistencial-excluded">excluded</a>
                 </td>
                 <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td>
-                <td>Excluded</td>
+                <td>Excluído</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -27609,7 +27609,7 @@
                   <a href="CodeSystem-BRStatusRegulacaoAssistencial.html#BRStatusRegulacaoAssistencial-returned-to-requester">returned-to-requester</a>
                 </td>
                 <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td>
-                <td>Returned to requester.</td>
+                <td>Devolvido para o solicitante.</td>
               </tr>
             </table>
           </div>
@@ -27629,13 +27629,13 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:f3a9d3b0-8820-4f13-b72c-4054d1fa131b"/>
-          <timestamp value="2025-04-04T16:26:15-03:00"/>
+          <identifier value="urn:uuid:d3ea71a8-c539-4e54-b4e4-ec1fbec6e446"/>
+          <timestamp value="2025-04-09T12:47:16-03:00"/>
           <total value="7"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
-            <valueCode value="und"/>
+            <valueCode value="pt-BR"/>
           </parameter>
           <parameter>
             <name value="count"/>
@@ -27656,37 +27656,37 @@
           <contains>
             <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial"/>
             <code value="pending"/>
-            <display value="Pending"/>
+            <display value="Pendente"/>
           </contains>
           <contains>
             <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial"/>
             <code value="booked"/>
-            <display value="Booked"/>
+            <display value="Agendado"/>
           </contains>
           <contains>
             <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial"/>
             <code value="attended"/>
-            <display value="Attended/Hospitalized"/>
+            <display value="Atendido/Internado"/>
           </contains>
           <contains>
             <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial"/>
             <code value="cancelled"/>
-            <display value="Cancelled"/>
+            <display value="Negado/Cancelado"/>
           </contains>
           <contains>
             <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial"/>
             <code value="absence"/>
-            <display value="Absence"/>
+            <display value="Falta"/>
           </contains>
           <contains>
             <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial"/>
             <code value="excluded"/>
-            <display value="Excluded"/>
+            <display value="Excluído"/>
           </contains>
           <contains>
             <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial"/>
             <code value="returned-to-requester"/>
-            <display value="Returned to requester."/>
+            <display value="Devolvido para o solicitante."/>
           </contains>
         </expansion>
       </ValueSet>
@@ -27728,7 +27728,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-draft">draft</a>
                 </td>
                 <td>http://hl7.org/fhir/request-status</td>
-                <td>Draft</td>
+                <td>Rascunho</td>
                 <td>
                   <div>
                     <p>The request has been created but is not yet complete or ready for action.</p>
@@ -27742,7 +27742,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-active">active</a>
                 </td>
                 <td>http://hl7.org/fhir/request-status</td>
-                <td>Active</td>
+                <td>Ativo</td>
                 <td>
                   <div>
                     <p>The request is in force and ready to be acted upon.</p>
@@ -27756,7 +27756,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-on-hold">on-hold</a>
                 </td>
                 <td>http://hl7.org/fhir/request-status</td>
-                <td>On Hold</td>
+                <td>Em espera</td>
                 <td>
                   <div>
                     <p>The request (and any implicit authorization to act) has been temporarily withdrawn but is expected to resume in the future.</p>
@@ -27770,7 +27770,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-revoked">revoked</a>
                 </td>
                 <td>http://hl7.org/fhir/request-status</td>
-                <td>Revoked</td>
+                <td>Revogado</td>
                 <td>
                   <div>
                     <p>The request (and any implicit authorization to act) has been terminated prior to the known full completion of the intended actions.  No further activity should occur.</p>
@@ -27784,7 +27784,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-completed">completed</a>
                 </td>
                 <td>http://hl7.org/fhir/request-status</td>
-                <td>Completed</td>
+                <td>Completo</td>
                 <td>
                   <div>
                     <p>The activity described by the request has been fully performed.  No further activity will occur.</p>
@@ -27798,7 +27798,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-entered-in-error">entered-in-error</a>
                 </td>
                 <td>http://hl7.org/fhir/request-status</td>
-                <td>Entered in error</td>
+                <td>Em estado de erro</td>
                 <td>
                   <div>
                     <p>This request should never have existed and should be considered 'void'.  (It is possible that real-world decisions were based on it.  If real-world activity has occurred, the status should be &quot;revoked&quot; rather than &quot;entered-in-error&quot;.).</p>
@@ -27812,7 +27812,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-unknown">unknown</a>
                 </td>
                 <td>http://hl7.org/fhir/request-status</td>
-                <td>Unknown</td>
+                <td>Desconhecido</td>
                 <td>
                   <div>
                     <p>The authoring/source system does not know which of the status values currently applies for this request.  Note: This concept is not to be used for &quot;other&quot; - one of the listed statuses is presumed to apply,  but the authoring/source system does not know which.</p>
@@ -27838,13 +27838,13 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:90e433fc-997d-46cb-bc13-a4340cab6adf"/>
-          <timestamp value="2025-04-04T16:26:15-03:00"/>
+          <identifier value="urn:uuid:d7d53671-ff72-4790-8cf7-f2a2395821c6"/>
+          <timestamp value="2025-04-09T12:47:16-03:00"/>
           <total value="7"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
-            <valueCode value="und"/>
+            <valueCode value="pt-BR"/>
           </parameter>
           <parameter>
             <name value="count"/>
@@ -27869,37 +27869,37 @@
           <contains>
             <system value="http://hl7.org/fhir/request-status"/>
             <code value="draft"/>
-            <display value="Draft"/>
+            <display value="Rascunho"/>
           </contains>
           <contains>
             <system value="http://hl7.org/fhir/request-status"/>
             <code value="active"/>
-            <display value="Active"/>
+            <display value="Ativo"/>
           </contains>
           <contains>
             <system value="http://hl7.org/fhir/request-status"/>
             <code value="on-hold"/>
-            <display value="On Hold"/>
+            <display value="Em espera"/>
           </contains>
           <contains>
             <system value="http://hl7.org/fhir/request-status"/>
             <code value="revoked"/>
-            <display value="Revoked"/>
+            <display value="Revogado"/>
           </contains>
           <contains>
             <system value="http://hl7.org/fhir/request-status"/>
             <code value="completed"/>
-            <display value="Completed"/>
+            <display value="Completo"/>
           </contains>
           <contains>
             <system value="http://hl7.org/fhir/request-status"/>
             <code value="entered-in-error"/>
-            <display value="Entered in error"/>
+            <display value="Em estado de erro"/>
           </contains>
           <contains>
             <system value="http://hl7.org/fhir/request-status"/>
             <code value="unknown"/>
-            <display value="Unknown"/>
+            <display value="Desconhecido"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -28087,13 +28087,13 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:20c2f50b-6fd0-4b55-9153-71344919df48"/>
-          <timestamp value="2025-04-04T16:26:15-03:00"/>
+          <identifier value="urn:uuid:593e54b5-6670-4025-baf3-260fe66434de"/>
+          <timestamp value="2025-04-09T12:47:16-03:00"/>
           <total value="11"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
-            <valueCode value="und"/>
+            <valueCode value="pt-BR"/>
           </parameter>
           <parameter>
             <name value="count"/>
@@ -28247,13 +28247,13 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:a599a5f0-6dca-445f-841b-1932e0bec3c6"/>
-          <timestamp value="2025-04-04T16:26:15-03:00"/>
+          <identifier value="urn:uuid:7cf209cc-8717-4e49-843b-734bfb44c86e"/>
+          <timestamp value="2025-04-09T12:47:16-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
-            <valueCode value="und"/>
+            <valueCode value="pt-BR"/>
           </parameter>
           <parameter>
             <name value="count"/>

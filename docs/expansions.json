@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "835aef2b-dd23-4c81-8e09-bfa639fd3c94",
+  "id" : "20f9eb05-075f-441c-9d2e-60fca1e02300",
   "meta" : {
-    "lastUpdated" : "2025-04-04T16:18:34.178-03:00"
+    "lastUpdated" : "2025-04-09T12:39:31.020-03:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -32,13 +32,13 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:586ed246-6e9b-4408-adda-b99d162dd3ff",
-        "timestamp" : "2025-04-04T16:26:11-03:00",
+        "identifier" : "urn:uuid:da33cad7-ead6-47ab-8c1b-19c8568ee672",
+        "timestamp" : "2025-04-09T12:47:11-03:00",
         "total" : 14230,
         "offset" : 0,
         "parameter" : [{
           "name" : "displayLanguage",
-          "valueCode" : "und"
+          "valueCode" : "pt-BR"
         },
         {
           "name" : "count",
@@ -5066,7 +5066,7 @@
       "language" : "en",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"http://hl7.org/fhir/R4/codesystem-request-priority.html\">codesystem RequestPriority v4.0.1 (CodeSystem)</a></p><p>This value set contains 2 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-priority-routine\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-priority.html#request-priority-routine\">routine</a></td><td>http://hl7.org/fhir/request-priority</td><td>Routine</td><td><div><p>The request has normal priority.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-priority-urgent\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-priority.html#request-priority-urgent\">urgent</a></td><td>http://hl7.org/fhir/request-priority</td><td>Urgent</td><td><div><p>The request should be actioned promptly - higher priority than routine.</p>\n</div></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"http://hl7.org/fhir/R4/codesystem-request-priority.html\">codesystem RequestPriority v4.0.1 (CodeSystem)</a></p><p>This value set contains 2 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-priority-routine\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-priority.html#request-priority-routine\">routine</a></td><td>http://hl7.org/fhir/request-priority</td><td>Eletivo</td><td><div><p>The request has normal priority.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-priority-urgent\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-priority.html#request-priority-urgent\">urgent</a></td><td>http://hl7.org/fhir/request-priority</td><td>Urgência</td><td><div><p>The request should be actioned promptly - higher priority than routine.</p>\n</div></td></tr></table></div>"
       },
       "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCaraterAtendimentoMIRA",
       "version" : "1.0.0",
@@ -5083,13 +5083,13 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:76772bcc-95e2-41f3-8bbd-da1fb4fa8823",
-        "timestamp" : "2025-04-04T16:26:13-03:00",
+        "identifier" : "urn:uuid:0c338927-097c-4f0c-a3ff-00ff49240537",
+        "timestamp" : "2025-04-09T12:47:13-03:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
           "name" : "displayLanguage",
-          "valueCode" : "und"
+          "valueCode" : "pt-BR"
         },
         {
           "name" : "count",
@@ -5114,12 +5114,12 @@
         "contains" : [{
           "system" : "http://hl7.org/fhir/request-priority",
           "code" : "routine",
-          "display" : "Routine"
+          "display" : "Eletivo"
         },
         {
           "system" : "http://hl7.org/fhir/request-priority",
           "code" : "urgent",
-          "display" : "Urgent"
+          "display" : "Urgência"
         }]
       }
     }
@@ -5151,13 +5151,13 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:60a656cc-7d32-4f09-ba6f-3a8540034cdb",
-        "timestamp" : "2025-04-04T16:26:13-03:00",
+        "identifier" : "urn:uuid:8728f72a-d2b2-4bc8-81b0-cbefb2a8c515",
+        "timestamp" : "2025-04-09T12:47:13-03:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
           "name" : "displayLanguage",
-          "valueCode" : "und"
+          "valueCode" : "pt-BR"
         },
         {
           "name" : "count",
@@ -5198,7 +5198,7 @@
       "language" : "en",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"http://hl7.org/fhir/R4/codesystem-composition-status.html\">codesystem CompositionStatus v4.0.1 (CodeSystem)</a></p><p>This value set contains 4 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/composition-status-preliminary\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-preliminary\">preliminary</a></td><td>http://hl7.org/fhir/composition-status</td><td>Preliminary</td><td><div><p>This is a preliminary composition or document (also known as initial or interim). The content may be incomplete or unverified.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/composition-status-final\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-final\">final</a></td><td>http://hl7.org/fhir/composition-status</td><td>Final</td><td><div><p>This version of the composition is complete and verified by an appropriate person and no further work is planned. Any subsequent updates would be on a new version of the composition.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/composition-status-amended\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-amended\">amended</a></td><td>http://hl7.org/fhir/composition-status</td><td>Amended</td><td><div><p>The composition content or the referenced resources have been modified (edited or added to) subsequent to being released as &quot;final&quot; and the composition is complete and verified by an authorized person.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/composition-status-entered-in-error\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-entered-in-error\">entered-in-error</a></td><td>http://hl7.org/fhir/composition-status</td><td>Entered in error</td><td><div><p>The composition or document was originally created/issued in error, and this is an amendment that marks that the entire series should not be considered as valid.</p>\n</div></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"http://hl7.org/fhir/R4/codesystem-composition-status.html\">codesystem CompositionStatus v4.0.1 (CodeSystem)</a></p><p>This value set contains 4 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/composition-status-preliminary\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-preliminary\">preliminary</a></td><td>http://hl7.org/fhir/composition-status</td><td>Preliminar</td><td><div><p>This is a preliminary composition or document (also known as initial or interim). The content may be incomplete or unverified.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/composition-status-final\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-final\">final</a></td><td>http://hl7.org/fhir/composition-status</td><td>Finalizado</td><td><div><p>This version of the composition is complete and verified by an appropriate person and no further work is planned. Any subsequent updates would be on a new version of the composition.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/composition-status-amended\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-amended\">amended</a></td><td>http://hl7.org/fhir/composition-status</td><td>Atualizado</td><td><div><p>The composition content or the referenced resources have been modified (edited or added to) subsequent to being released as &quot;final&quot; and the composition is complete and verified by an authorized person.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/composition-status-entered-in-error\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-entered-in-error\">entered-in-error</a></td><td>http://hl7.org/fhir/composition-status</td><td>Em estado de erro</td><td><div><p>The composition or document was originally created/issued in error, and this is an amendment that marks that the entire series should not be considered as valid.</p>\n</div></td></tr></table></div>"
       },
       "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoDocumento-1.0",
       "version" : "1.0.0",
@@ -5215,13 +5215,13 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:6267f923-9bd3-4d1f-922c-a55c4b719f7d",
-        "timestamp" : "2025-04-04T16:26:13-03:00",
+        "identifier" : "urn:uuid:ea2b996f-af15-4dae-88da-0adb6052b267",
+        "timestamp" : "2025-04-09T12:47:13-03:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
           "name" : "displayLanguage",
-          "valueCode" : "und"
+          "valueCode" : "pt-BR"
         },
         {
           "name" : "count",
@@ -5246,22 +5246,22 @@
         "contains" : [{
           "system" : "http://hl7.org/fhir/composition-status",
           "code" : "preliminary",
-          "display" : "Preliminary"
+          "display" : "Preliminar"
         },
         {
           "system" : "http://hl7.org/fhir/composition-status",
           "code" : "final",
-          "display" : "Final"
+          "display" : "Finalizado"
         },
         {
           "system" : "http://hl7.org/fhir/composition-status",
           "code" : "amended",
-          "display" : "Amended"
+          "display" : "Atualizado"
         },
         {
           "system" : "http://hl7.org/fhir/composition-status",
           "code" : "entered-in-error",
-          "display" : "Entered in error"
+          "display" : "Em estado de erro"
         }]
       }
     }
@@ -5276,7 +5276,7 @@
       "language" : "en",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"http://terminology.hl7.org/6.2.0/CodeSystem-condition-clinical.html\">codesystem Condition Clinical Status Codes v3.0.0 (CodeSystem)</a></p><p>This value set contains 6 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://terminology.hl7.org/CodeSystem/condition-clinical-active\"> </a>\u00a0\u00a0<a href=\"http://terminology.hl7.org/6.2.0/CodeSystem-condition-clinical.html#condition-clinical-active\">active</a></td><td>http://terminology.hl7.org/CodeSystem/condition-clinical</td><td>Active</td><td><div><p>The subject is currently experiencing the condition or situation, there is evidence of the condition or situation, or considered to be a significant risk.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://terminology.hl7.org/CodeSystem/condition-clinical-recurrence\"> </a>\u00a0\u00a0<a href=\"http://terminology.hl7.org/6.2.0/CodeSystem-condition-clinical.html#condition-clinical-recurrence\">recurrence</a></td><td>http://terminology.hl7.org/CodeSystem/condition-clinical</td><td>Recurrence</td><td><div><p>The subject is experiencing a reoccurence or repeating of a previously resolved condition or situation, e.g. urinary tract infection, food insecurity.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://terminology.hl7.org/CodeSystem/condition-clinical-relapse\"> </a>\u00a0\u00a0<a href=\"http://terminology.hl7.org/6.2.0/CodeSystem-condition-clinical.html#condition-clinical-relapse\">relapse</a></td><td>http://terminology.hl7.org/CodeSystem/condition-clinical</td><td>Relapse</td><td><div><p>The subject is experiencing a return of a condition or situation after a period of improvement or remission, e.g. relapse of cancer, alcoholism.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://terminology.hl7.org/CodeSystem/condition-clinical-inactive\"> </a>\u00a0\u00a0<a href=\"http://terminology.hl7.org/6.2.0/CodeSystem-condition-clinical.html#condition-clinical-inactive\">inactive</a></td><td>http://terminology.hl7.org/CodeSystem/condition-clinical</td><td>Inactive</td><td><div><p>The subject is no longer experiencing the condition or situation and there is no longer evidence or appreciable risk of the condition or situation.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://terminology.hl7.org/CodeSystem/condition-clinical-remission\"> </a>\u00a0\u00a0<a href=\"http://terminology.hl7.org/6.2.0/CodeSystem-condition-clinical.html#condition-clinical-remission\">remission</a></td><td>http://terminology.hl7.org/CodeSystem/condition-clinical</td><td>Remission</td><td><div><p>The subject is not presently experiencing the condition or situation, but there is a risk of the condition or situation returning.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://terminology.hl7.org/CodeSystem/condition-clinical-resolved\"> </a>\u00a0\u00a0<a href=\"http://terminology.hl7.org/6.2.0/CodeSystem-condition-clinical.html#condition-clinical-resolved\">resolved</a></td><td>http://terminology.hl7.org/CodeSystem/condition-clinical</td><td>Resolved</td><td><div><p>The subject is not presently experiencing the condition or situation and there is a negligible perceived risk of the condition or situation returning.</p>\n</div></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"http://terminology.hl7.org/6.2.0/CodeSystem-condition-clinical.html\">codesystem Condition Clinical Status Codes v3.0.0 (CodeSystem)</a></p><p>This value set contains 6 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://terminology.hl7.org/CodeSystem/condition-clinical-active\"> </a>\u00a0\u00a0<a href=\"http://terminology.hl7.org/6.2.0/CodeSystem-condition-clinical.html#condition-clinical-active\">active</a></td><td>http://terminology.hl7.org/CodeSystem/condition-clinical</td><td>Ativo</td><td><div><p>The subject is currently experiencing the condition or situation, there is evidence of the condition or situation, or considered to be a significant risk.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://terminology.hl7.org/CodeSystem/condition-clinical-recurrence\"> </a>\u00a0\u00a0<a href=\"http://terminology.hl7.org/6.2.0/CodeSystem-condition-clinical.html#condition-clinical-recurrence\">recurrence</a></td><td>http://terminology.hl7.org/CodeSystem/condition-clinical</td><td>Recorrente</td><td><div><p>The subject is experiencing a reoccurence or repeating of a previously resolved condition or situation, e.g. urinary tract infection, food insecurity.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://terminology.hl7.org/CodeSystem/condition-clinical-relapse\"> </a>\u00a0\u00a0<a href=\"http://terminology.hl7.org/6.2.0/CodeSystem-condition-clinical.html#condition-clinical-relapse\">relapse</a></td><td>http://terminology.hl7.org/CodeSystem/condition-clinical</td><td>Recidiva</td><td><div><p>The subject is experiencing a return of a condition or situation after a period of improvement or remission, e.g. relapse of cancer, alcoholism.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://terminology.hl7.org/CodeSystem/condition-clinical-inactive\"> </a>\u00a0\u00a0<a href=\"http://terminology.hl7.org/6.2.0/CodeSystem-condition-clinical.html#condition-clinical-inactive\">inactive</a></td><td>http://terminology.hl7.org/CodeSystem/condition-clinical</td><td>Inativo</td><td><div><p>The subject is no longer experiencing the condition or situation and there is no longer evidence or appreciable risk of the condition or situation.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://terminology.hl7.org/CodeSystem/condition-clinical-remission\"> </a>\u00a0\u00a0<a href=\"http://terminology.hl7.org/6.2.0/CodeSystem-condition-clinical.html#condition-clinical-remission\">remission</a></td><td>http://terminology.hl7.org/CodeSystem/condition-clinical</td><td>Remissão</td><td><div><p>The subject is not presently experiencing the condition or situation, but there is a risk of the condition or situation returning.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://terminology.hl7.org/CodeSystem/condition-clinical-resolved\"> </a>\u00a0\u00a0<a href=\"http://terminology.hl7.org/6.2.0/CodeSystem-condition-clinical.html#condition-clinical-resolved\">resolved</a></td><td>http://terminology.hl7.org/CodeSystem/condition-clinical</td><td>Resolvido</td><td><div><p>The subject is not presently experiencing the condition or situation and there is a negligible perceived risk of the condition or situation returning.</p>\n</div></td></tr></table></div>"
       },
       "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoResolucaoDiagnosticoProblema-1.0",
       "version" : "1.0.0",
@@ -5293,13 +5293,13 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:74663673-6662-45f2-96a4-3ddab0a9f600",
-        "timestamp" : "2025-04-04T16:26:13-03:00",
+        "identifier" : "urn:uuid:a71b2c99-afde-44ed-a5b5-5bcb2fb05709",
+        "timestamp" : "2025-04-09T12:47:13-03:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
           "name" : "displayLanguage",
-          "valueCode" : "und"
+          "valueCode" : "pt-BR"
         },
         {
           "name" : "count",
@@ -5320,32 +5320,32 @@
         "contains" : [{
           "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
           "code" : "active",
-          "display" : "Active"
+          "display" : "Ativo"
         },
         {
           "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
           "code" : "recurrence",
-          "display" : "Recurrence"
+          "display" : "Recorrente"
         },
         {
           "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
           "code" : "relapse",
-          "display" : "Relapse"
+          "display" : "Recidiva"
         },
         {
           "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
           "code" : "inactive",
-          "display" : "Inactive"
+          "display" : "Inativo"
         },
         {
           "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
           "code" : "remission",
-          "display" : "Remission"
+          "display" : "Remissão"
         },
         {
           "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
           "code" : "resolved",
-          "display" : "Resolved"
+          "display" : "Resolvido"
         }]
       }
     }
@@ -5357,7 +5357,7 @@
       "language" : "en",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"http://hl7.org/fhir/R4/codesystem-request-intent.html\">codesystem RequestIntent v4.0.1 (CodeSystem)</a></p><p>This value set contains 9 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-intent-proposal\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-proposal\">proposal</a></td><td>http://hl7.org/fhir/request-intent</td><td>Proposal</td><td><div><p>The request is a suggestion made by someone/something that does not have an intention to ensure it occurs and without providing an authorization to act.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-intent-plan\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-plan\">plan</a></td><td>http://hl7.org/fhir/request-intent</td><td>Plan</td><td><div><p>The request represents an intention to ensure something occurs without providing an authorization for others to act.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-intent-directive\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-directive\">directive</a></td><td>http://hl7.org/fhir/request-intent</td><td>Directive</td><td><div><p>The request represents a legally binding instruction authored by a Patient or RelatedPerson.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-intent-order\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-order\">order</a></td><td>http://hl7.org/fhir/request-intent</td><td>Order</td><td><div><p>The request represents a request/demand and authorization for action by a Practitioner.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-intent-original-order\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-original-order\">original-order</a></td><td>http://hl7.org/fhir/request-intent</td><td>Original Order</td><td><div><p>The request represents an original authorization for action.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-intent-reflex-order\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-reflex-order\">reflex-order</a></td><td>http://hl7.org/fhir/request-intent</td><td>Reflex Order</td><td><div><p>The request represents an automatically generated supplemental authorization for action based on a parent authorization together with initial results of the action taken against that parent authorization.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-intent-filler-order\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-filler-order\">filler-order</a></td><td>http://hl7.org/fhir/request-intent</td><td>Filler Order</td><td><div><p>The request represents the view of an authorization instantiated by a fulfilling system representing the details of the fulfiller's intention to act upon a submitted order.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-intent-instance-order\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-instance-order\">instance-order</a></td><td>http://hl7.org/fhir/request-intent</td><td>Instance Order</td><td><div><p>An order created in fulfillment of a broader order that represents the authorization for a single activity occurrence.  E.g. The administration of a single dose of a drug.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-intent-option\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-option\">option</a></td><td>http://hl7.org/fhir/request-intent</td><td>Option</td><td><div><p>The request represents a component or option for a RequestGroup that establishes timing, conditionality and/or other constraints among a set of requests.  Refer to <a href=\"http://hl7.org/fhir/R4/requestgroup.html#RequestGroup\">RequestGroup</a> for additional information on how this status is used.</p>\n</div></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"http://hl7.org/fhir/R4/codesystem-request-intent.html\">codesystem RequestIntent v4.0.1 (CodeSystem)</a></p><p>This value set contains 9 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-intent-proposal\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-proposal\">proposal</a></td><td>http://hl7.org/fhir/request-intent</td><td>Proposto</td><td><div><p>The request is a suggestion made by someone/something that does not have an intention to ensure it occurs and without providing an authorization to act.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-intent-plan\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-plan\">plan</a></td><td>http://hl7.org/fhir/request-intent</td><td>Planejado</td><td><div><p>The request represents an intention to ensure something occurs without providing an authorization for others to act.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-intent-directive\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-directive\">directive</a></td><td>http://hl7.org/fhir/request-intent</td><td>Diretriz</td><td><div><p>The request represents a legally binding instruction authored by a Patient or RelatedPerson.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-intent-order\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-order\">order</a></td><td>http://hl7.org/fhir/request-intent</td><td>Autorizado</td><td><div><p>The request represents a request/demand and authorization for action by a Practitioner.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-intent-original-order\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-original-order\">original-order</a></td><td>http://hl7.org/fhir/request-intent</td><td>Autorização original</td><td><div><p>The request represents an original authorization for action.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-intent-reflex-order\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-reflex-order\">reflex-order</a></td><td>http://hl7.org/fhir/request-intent</td><td>Autorização suplementar</td><td><div><p>The request represents an automatically generated supplemental authorization for action based on a parent authorization together with initial results of the action taken against that parent authorization.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-intent-filler-order\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-filler-order\">filler-order</a></td><td>http://hl7.org/fhir/request-intent</td><td>Intenção de autorização</td><td><div><p>The request represents the view of an authorization instantiated by a fulfilling system representing the details of the fulfiller's intention to act upon a submitted order.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-intent-instance-order\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-instance-order\">instance-order</a></td><td>http://hl7.org/fhir/request-intent</td><td>Autorização de atividade única</td><td><div><p>An order created in fulfillment of a broader order that represents the authorization for a single activity occurrence.  E.g. The administration of a single dose of a drug.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-intent-option\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-intent.html#request-intent-option\">option</a></td><td>http://hl7.org/fhir/request-intent</td><td>Condicional</td><td><div><p>The request represents a component or option for a RequestGroup that establishes timing, conditionality and/or other constraints among a set of requests.  Refer to <a href=\"http://hl7.org/fhir/R4/requestgroup.html#RequestGroup\">RequestGroup</a> for additional information on how this status is used.</p>\n</div></td></tr></table></div>"
       },
       "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRIntencaoRegulacao",
       "version" : "1.0.0",
@@ -5374,13 +5374,13 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:5b4454e3-3bc7-4dd4-be32-87eb692cfd3f",
-        "timestamp" : "2025-04-04T16:26:13-03:00",
+        "identifier" : "urn:uuid:9c37b009-b8f5-4b68-a90b-13b98853d688",
+        "timestamp" : "2025-04-09T12:47:13-03:00",
         "total" : 9,
         "offset" : 0,
         "parameter" : [{
           "name" : "displayLanguage",
-          "valueCode" : "und"
+          "valueCode" : "pt-BR"
         },
         {
           "name" : "count",
@@ -5405,47 +5405,47 @@
         "contains" : [{
           "system" : "http://hl7.org/fhir/request-intent",
           "code" : "proposal",
-          "display" : "Proposal"
+          "display" : "Proposto"
         },
         {
           "system" : "http://hl7.org/fhir/request-intent",
           "code" : "plan",
-          "display" : "Plan"
+          "display" : "Planejado"
         },
         {
           "system" : "http://hl7.org/fhir/request-intent",
           "code" : "directive",
-          "display" : "Directive"
+          "display" : "Diretriz"
         },
         {
           "system" : "http://hl7.org/fhir/request-intent",
           "code" : "order",
-          "display" : "Order"
+          "display" : "Autorizado"
         },
         {
           "system" : "http://hl7.org/fhir/request-intent",
           "code" : "original-order",
-          "display" : "Original Order"
+          "display" : "Autorização original"
         },
         {
           "system" : "http://hl7.org/fhir/request-intent",
           "code" : "reflex-order",
-          "display" : "Reflex Order"
+          "display" : "Autorização suplementar"
         },
         {
           "system" : "http://hl7.org/fhir/request-intent",
           "code" : "filler-order",
-          "display" : "Filler Order"
+          "display" : "Intenção de autorização"
         },
         {
           "system" : "http://hl7.org/fhir/request-intent",
           "code" : "instance-order",
-          "display" : "Instance Order"
+          "display" : "Autorização de atividade única"
         },
         {
           "system" : "http://hl7.org/fhir/request-intent",
           "code" : "option",
-          "display" : "Option"
+          "display" : "Condicional"
         }]
       }
     }
@@ -5477,13 +5477,13 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:30221d3e-8827-4cd8-9fc5-3410cc08acf3",
-        "timestamp" : "2025-04-04T16:26:13-03:00",
+        "identifier" : "urn:uuid:5a202b75-8489-4f29-aab3-e49d1b0d2d58",
+        "timestamp" : "2025-04-09T12:47:13-03:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
           "name" : "displayLanguage",
-          "valueCode" : "und"
+          "valueCode" : "pt-BR"
         },
         {
           "name" : "count",
@@ -5558,13 +5558,13 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:68c127cb-120f-4d25-be41-345e3d1e8da8",
-        "timestamp" : "2025-04-04T16:26:13-03:00",
+        "identifier" : "urn:uuid:20a2b25c-0b02-4e75-b369-bfe7314203fd",
+        "timestamp" : "2025-04-09T12:47:13-03:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
           "name" : "displayLanguage",
-          "valueCode" : "und"
+          "valueCode" : "pt-BR"
         },
         {
           "name" : "count",
@@ -5622,13 +5622,13 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:0908274f-5437-4baa-9b46-fcd77c74d7e9",
-        "timestamp" : "2025-04-04T16:26:13-03:00",
+        "identifier" : "urn:uuid:9d3a564a-f6f8-411e-8807-91350bfddb04",
+        "timestamp" : "2025-04-09T12:47:13-03:00",
         "total" : 2714,
         "offset" : 0,
         "parameter" : [{
           "name" : "displayLanguage",
-          "valueCode" : "und"
+          "valueCode" : "pt-BR"
         },
         {
           "name" : "count",
@@ -10676,13 +10676,13 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:42d1a7f9-1aa9-4868-b856-b7f3b2fcea0d",
-        "timestamp" : "2025-04-04T16:26:15-03:00",
+        "identifier" : "urn:uuid:ba563f73-2101-4ae1-857b-a743efd5048c",
+        "timestamp" : "2025-04-09T12:47:15-03:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
           "name" : "displayLanguage",
-          "valueCode" : "und"
+          "valueCode" : "pt-BR"
         },
         {
           "name" : "count",
@@ -10725,7 +10725,7 @@
       "language" : "en",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"http://hl7.org/fhir/R4/codesystem-participationstatus.html\">codesystem ParticipationStatus v4.0.1 (CodeSystem)</a></p><p>This value set contains 4 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/participationstatus-accepted\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-accepted\">accepted</a></td><td>http://hl7.org/fhir/participationstatus</td><td>Accepted</td><td><div><p>The participant has accepted the appointment.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/participationstatus-declined\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-declined\">declined</a></td><td>http://hl7.org/fhir/participationstatus</td><td>Declined</td><td><div><p>The participant has declined the appointment and will not participate in the appointment.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/participationstatus-tentative\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-tentative\">tentative</a></td><td>http://hl7.org/fhir/participationstatus</td><td>Tentative</td><td><div><p>The participant has  tentatively accepted the appointment. This could be automatically created by a system and requires further processing before it can be accepted. There is no commitment that attendance will occur.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/participationstatus-needs-action\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-needs-action\">needs-action</a></td><td>http://hl7.org/fhir/participationstatus</td><td>Needs Action</td><td><div><p>The participant needs to indicate if they accept the appointment by changing this status to one of the other statuses.</p>\n</div></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"http://hl7.org/fhir/R4/codesystem-participationstatus.html\">codesystem ParticipationStatus v4.0.1 (CodeSystem)</a></p><p>This value set contains 4 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/participationstatus-accepted\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-accepted\">accepted</a></td><td>http://hl7.org/fhir/participationstatus</td><td>Aceito</td><td><div><p>The participant has accepted the appointment.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/participationstatus-declined\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-declined\">declined</a></td><td>http://hl7.org/fhir/participationstatus</td><td>Negado</td><td><div><p>The participant has declined the appointment and will not participate in the appointment.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/participationstatus-tentative\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-tentative\">tentative</a></td><td>http://hl7.org/fhir/participationstatus</td><td>Tentativa</td><td><div><p>The participant has  tentatively accepted the appointment. This could be automatically created by a system and requires further processing before it can be accepted. There is no commitment that attendance will occur.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/participationstatus-needs-action\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-needs-action\">needs-action</a></td><td>http://hl7.org/fhir/participationstatus</td><td>Aguardando resposta</td><td><div><p>The participant needs to indicate if they accept the appointment by changing this status to one of the other statuses.</p>\n</div></td></tr></table></div>"
       },
       "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusParticipante",
       "version" : "1.0.0",
@@ -10742,13 +10742,13 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:6502e67a-dd70-4418-985d-5db02de7d89d",
-        "timestamp" : "2025-04-04T16:26:15-03:00",
+        "identifier" : "urn:uuid:1f744430-0496-4d09-9718-88ba3b040d46",
+        "timestamp" : "2025-04-09T12:47:15-03:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
           "name" : "displayLanguage",
-          "valueCode" : "und"
+          "valueCode" : "pt-BR"
         },
         {
           "name" : "count",
@@ -10773,22 +10773,22 @@
         "contains" : [{
           "system" : "http://hl7.org/fhir/participationstatus",
           "code" : "accepted",
-          "display" : "Accepted"
+          "display" : "Aceito"
         },
         {
           "system" : "http://hl7.org/fhir/participationstatus",
           "code" : "declined",
-          "display" : "Declined"
+          "display" : "Negado"
         },
         {
           "system" : "http://hl7.org/fhir/participationstatus",
           "code" : "tentative",
-          "display" : "Tentative"
+          "display" : "Tentativa"
         },
         {
           "system" : "http://hl7.org/fhir/participationstatus",
           "code" : "needs-action",
-          "display" : "Needs Action"
+          "display" : "Aguardando resposta"
         }]
       }
     }
@@ -10800,7 +10800,7 @@
       "language" : "pt-BR",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"pt-BR\" lang=\"pt-BR\"><p class=\"res-header-id\"><b>ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-BRStatusRegulacaoAssistencial.html\">codesystem Status da regulação assistencial v1.0.0 (CodeSystem)</a></p><p>This value set contains 7 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display (pt-BR)</b> - Portuguese (Brazil) (pt)</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial-pending\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BRStatusRegulacaoAssistencial.html#BRStatusRegulacaoAssistencial-pending\">pending</a></td><td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td><td>Pending</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial-booked\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BRStatusRegulacaoAssistencial.html#BRStatusRegulacaoAssistencial-booked\">booked</a></td><td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td><td>Booked</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial-attended\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BRStatusRegulacaoAssistencial.html#BRStatusRegulacaoAssistencial-attended\">attended</a></td><td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td><td>Attended/Hospitalized</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial-cancelled\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BRStatusRegulacaoAssistencial.html#BRStatusRegulacaoAssistencial-cancelled\">cancelled</a></td><td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td><td>Cancelled</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial-absence\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BRStatusRegulacaoAssistencial.html#BRStatusRegulacaoAssistencial-absence\">absence</a></td><td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td><td>Absence</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial-excluded\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BRStatusRegulacaoAssistencial.html#BRStatusRegulacaoAssistencial-excluded\">excluded</a></td><td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td><td>Excluded</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial-returned-to-requester\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BRStatusRegulacaoAssistencial.html#BRStatusRegulacaoAssistencial-returned-to-requester\">returned-to-requester</a></td><td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td><td>Returned to requester.</td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"pt-BR\" lang=\"pt-BR\"><p class=\"res-header-id\"><b>ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-BRStatusRegulacaoAssistencial.html\">codesystem Status da regulação assistencial v1.0.0 (CodeSystem)</a></p><p>This value set contains 7 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display (pt-BR)</b> - Portuguese (Brazil) (pt)</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial-pending\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BRStatusRegulacaoAssistencial.html#BRStatusRegulacaoAssistencial-pending\">pending</a></td><td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td><td>Pendente</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial-booked\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BRStatusRegulacaoAssistencial.html#BRStatusRegulacaoAssistencial-booked\">booked</a></td><td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td><td>Agendado</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial-attended\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BRStatusRegulacaoAssistencial.html#BRStatusRegulacaoAssistencial-attended\">attended</a></td><td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td><td>Atendido/Internado</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial-cancelled\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BRStatusRegulacaoAssistencial.html#BRStatusRegulacaoAssistencial-cancelled\">cancelled</a></td><td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td><td>Negado/Cancelado</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial-absence\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BRStatusRegulacaoAssistencial.html#BRStatusRegulacaoAssistencial-absence\">absence</a></td><td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td><td>Falta</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial-excluded\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BRStatusRegulacaoAssistencial.html#BRStatusRegulacaoAssistencial-excluded\">excluded</a></td><td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td><td>Excluído</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial-returned-to-requester\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BRStatusRegulacaoAssistencial.html#BRStatusRegulacaoAssistencial-returned-to-requester\">returned-to-requester</a></td><td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</td><td>Devolvido para o solicitante.</td></tr></table></div>"
       },
       "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial",
       "version" : "1.0.0",
@@ -10817,13 +10817,13 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:f3a9d3b0-8820-4f13-b72c-4054d1fa131b",
-        "timestamp" : "2025-04-04T16:26:15-03:00",
+        "identifier" : "urn:uuid:d3ea71a8-c539-4e54-b4e4-ec1fbec6e446",
+        "timestamp" : "2025-04-09T12:47:16-03:00",
         "total" : 7,
         "offset" : 0,
         "parameter" : [{
           "name" : "displayLanguage",
-          "valueCode" : "und"
+          "valueCode" : "pt-BR"
         },
         {
           "name" : "count",
@@ -10844,37 +10844,37 @@
         "contains" : [{
           "system" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial",
           "code" : "pending",
-          "display" : "Pending"
+          "display" : "Pendente"
         },
         {
           "system" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial",
           "code" : "booked",
-          "display" : "Booked"
+          "display" : "Agendado"
         },
         {
           "system" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial",
           "code" : "attended",
-          "display" : "Attended/Hospitalized"
+          "display" : "Atendido/Internado"
         },
         {
           "system" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial",
           "code" : "cancelled",
-          "display" : "Cancelled"
+          "display" : "Negado/Cancelado"
         },
         {
           "system" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial",
           "code" : "absence",
-          "display" : "Absence"
+          "display" : "Falta"
         },
         {
           "system" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial",
           "code" : "excluded",
-          "display" : "Excluded"
+          "display" : "Excluído"
         },
         {
           "system" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial",
           "code" : "returned-to-requester",
-          "display" : "Returned to requester."
+          "display" : "Devolvido para o solicitante."
         }]
       }
     }
@@ -10886,7 +10886,7 @@
       "language" : "en",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"http://hl7.org/fhir/R4/codesystem-request-status.html\">codesystem RequestStatus v4.0.1 (CodeSystem)</a></p><p>This value set contains 7 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-status-draft\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-draft\">draft</a></td><td>http://hl7.org/fhir/request-status</td><td>Draft</td><td><div><p>The request has been created but is not yet complete or ready for action.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-status-active\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-active\">active</a></td><td>http://hl7.org/fhir/request-status</td><td>Active</td><td><div><p>The request is in force and ready to be acted upon.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-status-on-hold\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-on-hold\">on-hold</a></td><td>http://hl7.org/fhir/request-status</td><td>On Hold</td><td><div><p>The request (and any implicit authorization to act) has been temporarily withdrawn but is expected to resume in the future.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-status-revoked\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-revoked\">revoked</a></td><td>http://hl7.org/fhir/request-status</td><td>Revoked</td><td><div><p>The request (and any implicit authorization to act) has been terminated prior to the known full completion of the intended actions.  No further activity should occur.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-status-completed\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-completed\">completed</a></td><td>http://hl7.org/fhir/request-status</td><td>Completed</td><td><div><p>The activity described by the request has been fully performed.  No further activity will occur.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-status-entered-in-error\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-entered-in-error\">entered-in-error</a></td><td>http://hl7.org/fhir/request-status</td><td>Entered in error</td><td><div><p>This request should never have existed and should be considered 'void'.  (It is possible that real-world decisions were based on it.  If real-world activity has occurred, the status should be &quot;revoked&quot; rather than &quot;entered-in-error&quot;.).</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-status-unknown\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-unknown\">unknown</a></td><td>http://hl7.org/fhir/request-status</td><td>Unknown</td><td><div><p>The authoring/source system does not know which of the status values currently applies for this request.  Note: This concept is not to be used for &quot;other&quot; - one of the listed statuses is presumed to apply,  but the authoring/source system does not know which.</p>\n</div></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"http://hl7.org/fhir/R4/codesystem-request-status.html\">codesystem RequestStatus v4.0.1 (CodeSystem)</a></p><p>This value set contains 7 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-status-draft\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-draft\">draft</a></td><td>http://hl7.org/fhir/request-status</td><td>Rascunho</td><td><div><p>The request has been created but is not yet complete or ready for action.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-status-active\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-active\">active</a></td><td>http://hl7.org/fhir/request-status</td><td>Ativo</td><td><div><p>The request is in force and ready to be acted upon.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-status-on-hold\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-on-hold\">on-hold</a></td><td>http://hl7.org/fhir/request-status</td><td>Em espera</td><td><div><p>The request (and any implicit authorization to act) has been temporarily withdrawn but is expected to resume in the future.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-status-revoked\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-revoked\">revoked</a></td><td>http://hl7.org/fhir/request-status</td><td>Revogado</td><td><div><p>The request (and any implicit authorization to act) has been terminated prior to the known full completion of the intended actions.  No further activity should occur.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-status-completed\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-completed\">completed</a></td><td>http://hl7.org/fhir/request-status</td><td>Completo</td><td><div><p>The activity described by the request has been fully performed.  No further activity will occur.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-status-entered-in-error\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-entered-in-error\">entered-in-error</a></td><td>http://hl7.org/fhir/request-status</td><td>Em estado de erro</td><td><div><p>This request should never have existed and should be considered 'void'.  (It is possible that real-world decisions were based on it.  If real-world activity has occurred, the status should be &quot;revoked&quot; rather than &quot;entered-in-error&quot;.).</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/request-status-unknown\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-request-status.html#request-status-unknown\">unknown</a></td><td>http://hl7.org/fhir/request-status</td><td>Desconhecido</td><td><div><p>The authoring/source system does not know which of the status values currently applies for this request.  Note: This concept is not to be used for &quot;other&quot; - one of the listed statuses is presumed to apply,  but the authoring/source system does not know which.</p>\n</div></td></tr></table></div>"
       },
       "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRequisicaoRegulacaoAssistencial",
       "version" : "1.0.0",
@@ -10903,13 +10903,13 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:90e433fc-997d-46cb-bc13-a4340cab6adf",
-        "timestamp" : "2025-04-04T16:26:15-03:00",
+        "identifier" : "urn:uuid:d7d53671-ff72-4790-8cf7-f2a2395821c6",
+        "timestamp" : "2025-04-09T12:47:16-03:00",
         "total" : 7,
         "offset" : 0,
         "parameter" : [{
           "name" : "displayLanguage",
-          "valueCode" : "und"
+          "valueCode" : "pt-BR"
         },
         {
           "name" : "count",
@@ -10934,37 +10934,37 @@
         "contains" : [{
           "system" : "http://hl7.org/fhir/request-status",
           "code" : "draft",
-          "display" : "Draft"
+          "display" : "Rascunho"
         },
         {
           "system" : "http://hl7.org/fhir/request-status",
           "code" : "active",
-          "display" : "Active"
+          "display" : "Ativo"
         },
         {
           "system" : "http://hl7.org/fhir/request-status",
           "code" : "on-hold",
-          "display" : "On Hold"
+          "display" : "Em espera"
         },
         {
           "system" : "http://hl7.org/fhir/request-status",
           "code" : "revoked",
-          "display" : "Revoked"
+          "display" : "Revogado"
         },
         {
           "system" : "http://hl7.org/fhir/request-status",
           "code" : "completed",
-          "display" : "Completed"
+          "display" : "Completo"
         },
         {
           "system" : "http://hl7.org/fhir/request-status",
           "code" : "entered-in-error",
-          "display" : "Entered in error"
+          "display" : "Em estado de erro"
         },
         {
           "system" : "http://hl7.org/fhir/request-status",
           "code" : "unknown",
-          "display" : "Unknown"
+          "display" : "Desconhecido"
         }]
       }
     }
@@ -10997,13 +10997,13 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:20c2f50b-6fd0-4b55-9153-71344919df48",
-        "timestamp" : "2025-04-04T16:26:15-03:00",
+        "identifier" : "urn:uuid:593e54b5-6670-4025-baf3-260fe66434de",
+        "timestamp" : "2025-04-09T12:47:16-03:00",
         "total" : 11,
         "offset" : 0,
         "parameter" : [{
           "name" : "displayLanguage",
-          "valueCode" : "und"
+          "valueCode" : "pt-BR"
         },
         {
           "name" : "count",
@@ -11103,13 +11103,13 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:a599a5f0-6dca-445f-841b-1932e0bec3c6",
-        "timestamp" : "2025-04-04T16:26:15-03:00",
+        "identifier" : "urn:uuid:7cf209cc-8717-4e49-843b-734bfb44c86e",
+        "timestamp" : "2025-04-09T12:47:16-03:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
           "name" : "displayLanguage",
-          "valueCode" : "und"
+          "valueCode" : "pt-BR"
         },
         {
           "name" : "count",

@@ -112,29 +112,28 @@
           </code>
         </td>
         <td>status</td>
-        <td>BREstadoDocumento-1.0</td>
+        <td><a href="ValueSet-BREstadoDocumento-1.0.html">BREstadoDocumento-1.0</a></td>
         <td><a href="http://hl7.org/fhir/composition-status">composition-status</a></td>
       </tr>
       <tr>
         <td>type</td>
-        <td>BRTipoDocumento-1.0</td>
-        <td>BRTipoDocumento</td>
+        <td><a href="ValueSet-BRTipoDocumento-1.0.html">BRTipoDocumento-1.0</a></td>
+        <td><a href="CodeSystem-BRTipoDocumento.html">BRTipoDocumento</a></td>
       </tr>
       <tr>
         <td>category</td>
-        <td>BRModalidadeAssistencialMIRA</td>
-        <td>BRModalidadeAssistencial</td>
+        <td><a href="ValueSet-BRModalidadeAssistencialMIRA.html">BRModalidadeAssistencialMIRA</a></td>
+        <td><a href="CodeSystem-BRModalidadeAssistencial.html">BRModalidadeAssistencial</a></td>
       </tr>
       <tr>
         <td>relatesTo.code</td>
-        <td>document-relationship-type</td>
-        <td><a href="http://hl7.org/fhir/document-relationship-type">document-relationship-type</a>
-        </td>
+        <td><a href="http://hl7.org/fhir/ValueSet/document-relationship-type">document-relationship-type</a></td>
+        <td><a href="http://hl7.org/fhir/document-relationship-type">document-relationship-type</a></td>
       </tr>
       <tr>
         <td>event.code</td>
-        <td>BRStatusRegulacaoAssistencial</td>
-        <td>BRStatusRegulacaoAssistencial</td>
+        <td><a href="ValueSet-BRStatusRegulacaoAssistencial.html">BRStatusRegulacaoAssistencial</a></td>
+        <td><a href="CodeSystem-BRStatusRegulacaoAssistencial.html">BRStatusRegulacaoAssistencial</a></td>
       </tr>
       <tr>
         <td rowspan="8">
@@ -143,42 +142,42 @@
           </code>
         </td>
         <td>status</td>
-        <td>BRStatusAgendamentoRegulacaoAssistencial</td>
+        <td><a
+            href="ValueSet-BRStatusAgendamentoRegulacaoAssistencial.html">BRStatusAgendamentoRegulacaoAssistencial</a>
+        </td>
         <td><a href="http://hl7.org/fhir/appointmentstatus">appointmentstatus</a></td>
       </tr>
       <tr>
         <td>serviceCategory</td>
-        <td>BRModalidadeAssistencialMIRA</td>
-        <td>BRModalidadeAssistencial</td>
+        <td><a href="ValueSet-BRModalidadeAssistencialMIRA.html">BRModalidadeAssistencialMIRA</a></td>
+        <td><a href="CodeSystem-BRModalidadeAssistencial.html">BRModalidadeAssistencial</a></td>
       </tr>
       <tr>
-        <td>serviceType</td>
-        <td>BRProcedimentosNacionais-1.0</td>
-        <td>BRTabelaSUS</td>
+        <td rowspan="2">serviceType</td>
+        <td rowspan="2"><a href="ValueSet-BRProcedimentosNacionais-1.0.html">BRProcedimentosNacionais-1.0</a></td>
+        <td><a href="CodeSystem-BRTabelaSUS.html">BRTabelaSUS</a></td>
       </tr>
       <tr>
-        <td>serviceType</td>
-        <td>BRProcedimentosNacionais-1.0</td>
-        <td>BRCBHPMTUSS</td>
+        <td><a href="CodeSystem-BRCBHPMTUSS.html">BRCBHPMTUSS</a></td>
       </tr>
       <tr>
         <td>specialty</td>
-        <td>BROcupacao-1.0</td>
-        <td>BRCBO</td>
+        <td><a href="ValueSet-BROcupacao-1.0.html">BROcupacao-1.0</a></td>
+        <td><a href="CodeSystem-BRCBO.html">BRCBO</a></td>
       </tr>
       <tr>
         <td>appointmentType</td>
-        <td>BRCaraterAtendimentoMIRA</td>
+        <td><a href="ValueSet-BRCaraterAtendimentoMIRA.html">BRCaraterAtendimentoMIRA</a></td>
         <td><a href="http://hl7.org/fhir/request-priority">request-priority</a></td>
       </tr>
       <tr>
         <td>participant.type</td>
-        <td>BRTipoParticipante</td>
-        <td>BRTipoParticipante</td>
+        <td><a href="ValueSet-BRTipoParticipante.html">BRTipoParticipante</a></td>
+        <td><a href="CodeSystem-BRTipoParticipante.html">BRTipoParticipante</a></td>
       </tr>
       <tr>
         <td>participant.status</td>
-        <td>BRStatusParticipante</td>
+        <td><a href="ValueSet-BRStatusParticipante.html">BRStatusParticipante</a></td>
         <td><a href="http://hl7.org/fhir/participationstatus">participationstatus</a></td>
       </tr>
       <tr>
@@ -188,38 +187,37 @@
           </code>
         </td>
         <td>status</td>
-        <td>BRStatusRequisicaoRegulacaoAssistencial</td>
+        <td><a href="ValueSet-BRStatusRequisicaoRegulacaoAssistencial.html">BRStatusRequisicaoRegulacaoAssistencial</a>
+        </td>
         <td><a href="http://hl7.org/fhir/request-status">request-status</a></td>
       </tr>
       <tr>
         <td>intent</td>
-        <td>BRIntencaoRegulacao</td>
+        <td><a href="ValueSet-BRIntencaoRegulacao.html">BRIntencaoRegulacao</a></td>
         <td><a href="http://hl7.org/fhir/request-intent">request-intent</a></td>
       </tr>
       <tr>
         <td>category</td>
-        <td>BRModalidadeAssistencialMIRA</td>
-        <td>BRModalidadeAssistencial</td>
+        <td><a href="ValueSet-BRModalidadeAssistencialMIRA.html">BRModalidadeAssistencialMIRA</a></td>
+        <td><a href="CodeSystem-BRModalidadeAssistencial.html">BRModalidadeAssistencial</a></td>
       </tr>
       <tr>
         <td>priority</td>
-        <td>BRCaraterAtendimentoMIRA</td>
+        <td><a href="ValueSet-BRCaraterAtendimentoMIRA.html">BRCaraterAtendimentoMIRA</a></td>
         <td><a href="http://hl7.org/fhir/request-priority">request-priority</a></td>
       </tr>
       <tr>
-        <td>code</td>
-        <td>BRProcedimentosNacionais-1.0</td>
-        <td>BRTabelaSUS</td>
+        <td rowspan="2">code</td>
+        <td rowspan="2"><a href="ValueSet-BRProcedimentosNacionais-1.0.html">BRProcedimentosNacionais-1.0</a></td>
+        <td><a href="CodeSystem-BRTabelaSUS.html">BRTabelaSUS</a></td>
       </tr>
       <tr>
-        <td>code</td>
-        <td>BRProcedimentosNacionais-1.0</td>
-        <td>BRCBHPMTUSS</td>
+        <td><a href="CodeSystem-BRCBHPMTUSS.html">BRCBHPMTUSS</a></td>
       </tr>
       <tr>
         <td>performerType</td>
-        <td>BROcupacao-1.0</td>
-        <td>BRCBO</td>
+        <td><a href="ValueSet-BROcupacao-1.0.html">BROcupacao-1.0</a></td>
+        <td><a href="CodeSystem-BRCBO.html">BRCBO</a></td>
       </tr>
       <tr>
         <td rowspan="3">
@@ -228,19 +226,20 @@
           </code>
         </td>
         <td>clinicalStatus</td>
-        <td>BREstadoResolucaoDiagnosticoProblema-1.0</td>
-        <td><a href="http://terminology.hl7.org/CodeSystem/condition-clinical">condition-clinical</a>
+        <td><a
+            href="ValueSet-BREstadoResolucaoDiagnosticoProblema-1.0.html">BREstadoResolucaoDiagnosticoProblema-1.0</a>
         </td>
+        <td><a href="http://terminology.hl7.org/CodeSystem/condition-clinical">condition-clinical</a></td>
       </tr>
       <tr>
         <td>category</td>
-        <td>BRCategoriaDiagnostico</td>
-        <td>BRCategoriaDiagnostico</td>
+        <td><a href="ValueSet-BRCategoriaDiagnostico.html">BRCategoriaDiagnostico</a></td>
+        <td><a href="CodeSystem-BRCategoriaDiagnostico.html">BRCategoriaDiagnostico</a></td>
       </tr>
       <tr>
         <td>code</td>
-        <td>BRCID10-1.0</td>
-        <td>BRCID10</td>
+        <td><a href="ValueSet-BRCID10-1.0.html">BRCID10-1.0</a></td>
+        <td><a href="CodeSystem-BRCID10.html">BRCID10</a></td>
       </tr>
     </tbody>
   </table>

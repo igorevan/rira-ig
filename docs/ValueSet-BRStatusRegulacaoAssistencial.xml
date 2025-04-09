@@ -4,7 +4,7 @@
   <id value="BRStatusRegulacaoAssistencial"/>
   <language value="pt-BR"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR"><p class="res-header-id"><b>Generated Narrative: ValueSet BRStatusRegulacaoAssistencial</b></p><a name="BRStatusRegulacaoAssistencial"> </a><a name="hcBRStatusRegulacaoAssistencial"> </a><a name="BRStatusRegulacaoAssistencial-und"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: pt-BR</p></div><ul><li>Include all codes defined in <a href="CodeSystem-BRStatusRegulacaoAssistencial.html"><code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</code></a></li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR"><p class="res-header-id"><b>Generated Narrative: ValueSet BRStatusRegulacaoAssistencial</b></p><a name="BRStatusRegulacaoAssistencial"> </a><a name="hcBRStatusRegulacaoAssistencial"> </a><a name="BRStatusRegulacaoAssistencial-pt-BR"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: pt-BR</p></div><ul><li>Include all codes defined in <a href="CodeSystem-BRStatusRegulacaoAssistencial.html"><code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</code></a></li></ul></div>
   </text>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1">

@@ -1,0 +1,71 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "BRStatusAgendamentoRegulacaoAssistencial",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem BRStatusAgendamentoRegulacaoAssistencial</b></p><a name=\"BRStatusAgendamentoRegulacaoAssistencial\"> </a><a name=\"hcBRStatusAgendamentoRegulacaoAssistencial\"> </a><a name=\"BRStatusAgendamentoRegulacaoAssistencial-pt-BR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p></div><p>This case-sensitive code system <code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusAgendamentoRegulacaoAssistencial</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td><td><b>Portuguese (Brazil) (pt)</b></td></tr><tr><td style=\"white-space:nowrap\">excluded<a name=\"BRStatusAgendamentoRegulacaoAssistencial-excluded\"> </a></td><td>Excluded</td><td>When document was excluded.</td><td>Excluído</td></tr><tr><td style=\"white-space:nowrap\">returned-to-requester<a name=\"BRStatusAgendamentoRegulacaoAssistencial-returned-to-requester\"> </a></td><td>Returned to requester.</td><td>When document was returned to requester</td><td>Devolvido para o solicitante.</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "informative",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"
+      }]
+    }
+  }],
+  "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusAgendamentoRegulacaoAssistencial",
+  "version" : "1.0.0",
+  "name" : "BRStatusAgendamentoRegulacaoAssistencial",
+  "title" : "Status de agendamento de regulação assistencial",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2020-03-26T13:19:46.9743559+00:00",
+  "publisher" : "Ministério da Saúde do Brasil",
+  "contact" : [{
+    "name" : "Ministério da Saúde do Brasil",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.saude.gov.br"
+    }]
+  }],
+  "description" : "Status de agendamento de regulação assistencial.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "BR"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "concept" : [{
+    "code" : "excluded",
+    "display" : "Excluded",
+    "definition" : "When document was excluded.",
+    "designation" : [{
+      "language" : "pt-BR",
+      "value" : "Excluído"
+    }]
+  },
+  {
+    "code" : "returned-to-requester",
+    "display" : "Returned to requester.",
+    "definition" : "When document was returned to requester",
+    "designation" : [{
+      "language" : "pt-BR",
+      "value" : "Devolvido para o solicitante."
+    }]
+  }]
+}

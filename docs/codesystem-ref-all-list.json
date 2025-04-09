@@ -177,15 +177,15 @@
       "oids" : ["2.16.840.1.113883.6.96"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-medication-as-needed-reason.html" : "SNOMED CT Medication As Needed Reason Codes",
-      "http://hl7.org/fhir/R4/valueset-encounter-reason.html" : "Encounter Reason Codes",
-      "http://hl7.org/fhir/R4/valueset-condition-severity.html" : "Condition/Diagnosis Severity",
-      "http://hl7.org/fhir/R4/valueset-manifestation-or-symptom.html" : "Manifestation and Symptom Codes",
       "http://hl7.org/fhir/R4/valueset-servicerequest-orderdetail.html" : "Service Request Order Details Codes",
-      "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
       "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes",
+      "http://hl7.org/fhir/R4/valueset-condition-stage-type.html" : "Condition Stage Type",
+      "http://hl7.org/fhir/R4/valueset-medication-as-needed-reason.html" : "SNOMED CT Medication As Needed Reason Codes",
       "http://hl7.org/fhir/R4/valueset-condition-stage.html" : "Condition Stage",
-      "http://hl7.org/fhir/R4/valueset-condition-stage-type.html" : "Condition Stage Type"
+      "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
+      "http://hl7.org/fhir/R4/valueset-manifestation-or-symptom.html" : "Manifestation and Symptom Codes",
+      "http://hl7.org/fhir/R4/valueset-encounter-reason.html" : "Encounter Reason Codes",
+      "http://hl7.org/fhir/R4/valueset-condition-severity.html" : "Condition/Diagnosis Severity"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason",
@@ -362,6 +362,17 @@
       "ValueSet-BRModalidadeAssistencialMIRA.html" : "Modalidade Assistencial MIRA"
     },
     {
+      "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusAgendamentoRegulacaoAssistencial",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "BRStatusAgendamentoRegulacaoAssistencial",
+      "title" : "Status de agendamento de regulação assistencial",
+      "description" : "Status de agendamento de regulação assistencial.",
+      "uses" : {
+      },
+      "ValueSet-BRStatusAgendamentoRegulacaoAssistencial.html" : "Status de agendamento de regulação assistencial"
+    },
+    {
       "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial",
       "version" : "1.0.0",
       "status" : "active",
@@ -371,6 +382,17 @@
       "uses" : {
       },
       "ValueSet-BRStatusRegulacaoAssistencial.html" : "Status de regulação assistencial"
+    },
+    {
+      "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "BRTabelaSUS",
+      "title" : "Tabela de procedimentos, medicamentos e OPM do SUS",
+      "description" : "Padroniza os códigos e as nomenclaturas dos procedimentos, medicamentos e OPM para as informações trafegadas no SUS",
+      "uses" : {
+      },
+      "ValueSet-BRProcedimentosNacionais-1.0.html" : "Procedimento realizado"
     },
     {
       "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento",

@@ -42,11 +42,25 @@
     "name" : "BRModalidadeAssistencial"
   },
   {
+    "id" : "BRStatusAgendamentoRegulacaoAssistencial",
+    "type" : "CodeSystem",
+    "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusAgendamentoRegulacaoAssistencial",
+    "version" : "1.0.0",
+    "name" : "BRStatusAgendamentoRegulacaoAssistencial"
+  },
+  {
     "id" : "BRStatusRegulacaoAssistencial",
     "type" : "CodeSystem",
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial",
     "version" : "1.0.0",
     "name" : "BRStatusRegulacaoAssistencial"
+  },
+  {
+    "id" : "BRTabelaSUS",
+    "type" : "CodeSystem",
+    "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS",
+    "version" : "1.0.0",
+    "name" : "BRTabelaSUS"
   },
   {
     "id" : "BRTipoDocumento",
