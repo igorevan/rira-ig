@@ -1,0 +1,1729 @@
+{
+  "date" : "Wed, 04 Jun, 2025 15:05:55 -0300",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [
+    {
+      "name" : "/input/myig.xml",
+      "size" : 7500,
+      "processes" : [
+        {
+          "activity" : "load",
+          "start" : 22,
+          "length" : 5
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 23,
+          "length" : 3
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 24,
+          "length" : 1751
+        },
+        {
+          "activity" : "validate",
+          "start" : 312,
+          "length" : 16586
+        },
+        {
+          "activity" : "generate1",
+          "start" : 359,
+          "length" : 54
+        },
+        {
+          "activity" : "generate2",
+          "start" : 519,
+          "length" : 53
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 624,
+          "length" : 2
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 935,
+          "length" : 9
+        }
+      ]
+    },
+    {
+      "name" : "input/examples/exemplo_RIRA_attended.json",
+      "size" : 7683,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 18,
+          "length" : 5
+        },
+        {
+          "activity" : "load",
+          "start" : 20,
+          "length" : 20
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 23,
+          "length" : 1
+        },
+        {
+          "activity" : "loadDepInfo",
+          "start" : 23,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 25,
+          "length" : 4702
+        },
+        {
+          "activity" : "validate",
+          "start" : 329,
+          "length" : 14904
+        },
+        {
+          "activity" : "generate1",
+          "start" : 359,
+          "length" : 16
+        },
+        {
+          "activity" : "generate2",
+          "start" : 520,
+          "length" : 16
+        }
+      ]
+    },
+    {
+      "name" : "input/examples/exemplo_RIRA_booked.json",
+      "size" : 7676,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 18,
+          "length" : 3
+        },
+        {
+          "activity" : "load",
+          "start" : 20,
+          "length" : 3
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 23,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 30,
+          "length" : 4037
+        },
+        {
+          "activity" : "validate",
+          "start" : 344,
+          "length" : 1049
+        },
+        {
+          "activity" : "generate1",
+          "start" : 359,
+          "length" : 15
+        },
+        {
+          "activity" : "generate2",
+          "start" : 520,
+          "length" : 15
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 935,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "input/examples/exemplo_RIRA_cancelled.json",
+      "size" : 7597,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 18,
+          "length" : 3
+        },
+        {
+          "activity" : "load",
+          "start" : 20,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 34,
+          "length" : 4136
+        },
+        {
+          "activity" : "validate",
+          "start" : 345,
+          "length" : 1023
+        },
+        {
+          "activity" : "generate1",
+          "start" : 359,
+          "length" : 15
+        },
+        {
+          "activity" : "generate2",
+          "start" : 520,
+          "length" : 15
+        }
+      ]
+    },
+    {
+      "name" : "input/examples/exemplo_RIRA_pending.json",
+      "size" : 8283,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 18,
+          "length" : 2
+        },
+        {
+          "activity" : "load",
+          "start" : 20,
+          "length" : 4
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 38,
+          "length" : 4101
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 329,
+          "length" : 1
+        },
+        {
+          "activity" : "validate",
+          "start" : 346,
+          "length" : 12694
+        },
+        {
+          "activity" : "generate1",
+          "start" : 359,
+          "length" : 15
+        },
+        {
+          "activity" : "generate2",
+          "start" : 520,
+          "length" : 14
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/CodeSystem-BRCBHPMTUSS.xml",
+      "size" : 10952306,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 18,
+          "length" : 1407
+        },
+        {
+          "activity" : "load",
+          "start" : 20,
+          "length" : 809
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 23,
+          "length" : 27
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 23,
+          "length" : 103
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 42,
+          "length" : 45664
+        },
+        {
+          "activity" : "validate",
+          "start" : 124,
+          "length" : 171754
+        },
+        {
+          "activity" : "checkConformanceResources",
+          "start" : 329,
+          "length" : 21
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 329,
+          "length" : 42
+        },
+        {
+          "activity" : "generate1",
+          "start" : 359,
+          "length" : 14890
+        },
+        {
+          "activity" : "generate2",
+          "start" : 520,
+          "length" : 75749
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 624,
+          "length" : 823
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 935,
+          "length" : 98
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/CodeSystem-BRCBO.xml",
+      "size" : 945748,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 19,
+          "length" : 116
+        },
+        {
+          "activity" : "load",
+          "start" : 21,
+          "length" : 272
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 23,
+          "length" : 1
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 23,
+          "length" : 11
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 88,
+          "length" : 1832
+        },
+        {
+          "activity" : "validate",
+          "start" : 296,
+          "length" : 690
+        },
+        {
+          "activity" : "checkConformanceResources",
+          "start" : 329,
+          "length" : 1
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 329,
+          "length" : 2
+        },
+        {
+          "activity" : "generate1",
+          "start" : 374,
+          "length" : 726
+        },
+        {
+          "activity" : "generate2",
+          "start" : 595,
+          "length" : 716
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 625,
+          "length" : 54
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 935,
+          "length" : 15
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/CodeSystem-BRCID10.xml",
+      "size" : 1929894,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 242
+        },
+        {
+          "activity" : "load",
+          "start" : 21,
+          "length" : 304
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 23,
+          "length" : 4
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 23,
+          "length" : 17
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 90,
+          "length" : 3018
+        },
+        {
+          "activity" : "validate",
+          "start" : 297,
+          "length" : 8959
+        },
+        {
+          "activity" : "checkConformanceResources",
+          "start" : 329,
+          "length" : 3
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 329,
+          "length" : 4
+        },
+        {
+          "activity" : "generate1",
+          "start" : 374,
+          "length" : 2381
+        },
+        {
+          "activity" : "generate2",
+          "start" : 596,
+          "length" : 2685
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 625,
+          "length" : 312
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 935,
+          "length" : 15
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/CodeSystem-BRCategoriaDiagnostico.xml",
+      "size" : 851,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 4
+        },
+        {
+          "activity" : "load",
+          "start" : 21,
+          "length" : 3
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 93,
+          "length" : 1000
+        },
+        {
+          "activity" : "validate",
+          "start" : 306,
+          "length" : 5
+        },
+        {
+          "activity" : "generate1",
+          "start" : 377,
+          "length" : 8
+        },
+        {
+          "activity" : "generate2",
+          "start" : 599,
+          "length" : 32
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/CodeSystem-BRJustificativaIndividuoNaoIdentificado.xml",
+      "size" : 1584,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 3
+        },
+        {
+          "activity" : "load",
+          "start" : 21,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 94,
+          "length" : 1022
+        },
+        {
+          "activity" : "validate",
+          "start" : 306,
+          "length" : 3
+        },
+        {
+          "activity" : "generate1",
+          "start" : 377,
+          "length" : 8
+        },
+        {
+          "activity" : "generate2",
+          "start" : 599,
+          "length" : 19
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/CodeSystem-BRModalidadeAssistencial.xml",
+      "size" : 1632,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 3
+        },
+        {
+          "activity" : "load",
+          "start" : 21,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 95,
+          "length" : 1023
+        },
+        {
+          "activity" : "validate",
+          "start" : 306,
+          "length" : 3
+        },
+        {
+          "activity" : "generate1",
+          "start" : 377,
+          "length" : 8
+        },
+        {
+          "activity" : "generate2",
+          "start" : 599,
+          "length" : 20
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 625,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/CodeSystem-BRStatusAgendamentoRegulacaoAssistencial.xml",
+      "size" : 1260,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 4
+        },
+        {
+          "activity" : "load",
+          "start" : 21,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 96,
+          "length" : 925
+        },
+        {
+          "activity" : "validate",
+          "start" : 306,
+          "length" : 4
+        },
+        {
+          "activity" : "generate1",
+          "start" : 377,
+          "length" : 7
+        },
+        {
+          "activity" : "generate2",
+          "start" : 599,
+          "length" : 19
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/CodeSystem-BRStatusRegulacaoAssistencial.xml",
+      "size" : 2052,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 3
+        },
+        {
+          "activity" : "load",
+          "start" : 21,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 97,
+          "length" : 912
+        },
+        {
+          "activity" : "validate",
+          "start" : 306,
+          "length" : 4
+        },
+        {
+          "activity" : "generate1",
+          "start" : 377,
+          "length" : 7
+        },
+        {
+          "activity" : "generate2",
+          "start" : 599,
+          "length" : 18
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/CodeSystem-BRTabelaSUS.xml",
+      "size" : 1678071,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 193
+        },
+        {
+          "activity" : "load",
+          "start" : 21,
+          "length" : 126
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 23,
+          "length" : 2
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 23,
+          "length" : 7
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 98,
+          "length" : 1442
+        },
+        {
+          "activity" : "validate",
+          "start" : 306,
+          "length" : 1133
+        },
+        {
+          "activity" : "checkConformanceResources",
+          "start" : 329,
+          "length" : 1
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 329,
+          "length" : 2
+        },
+        {
+          "activity" : "generate1",
+          "start" : 377,
+          "length" : 2326
+        },
+        {
+          "activity" : "generate2",
+          "start" : 599,
+          "length" : 853
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 625,
+          "length" : 158
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 935,
+          "length" : 2
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/CodeSystem-BRTipoDocumento.xml",
+      "size" : 2654,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 5
+        },
+        {
+          "activity" : "load",
+          "start" : 22,
+          "length" : 3
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 99,
+          "length" : 1072
+        },
+        {
+          "activity" : "validate",
+          "start" : 307,
+          "length" : 5
+        },
+        {
+          "activity" : "generate1",
+          "start" : 379,
+          "length" : 10
+        },
+        {
+          "activity" : "generate2",
+          "start" : 600,
+          "length" : 21
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/CodeSystem-BRTipoParticipante.xml",
+      "size" : 1048,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 4
+        },
+        {
+          "activity" : "load",
+          "start" : 22,
+          "length" : 2
+        },
+        {
+          "activity" : "scan",
+          "start" : 23,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 100,
+          "length" : 1071
+        },
+        {
+          "activity" : "validate",
+          "start" : 307,
+          "length" : 3
+        },
+        {
+          "activity" : "generate1",
+          "start" : 379,
+          "length" : 7
+        },
+        {
+          "activity" : "generate2",
+          "start" : 600,
+          "length" : 18
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 626,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/StructureDefinition-BRAgendamentoRegulacaoAssistencial.json",
+      "size" : 354203,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 19
+        },
+        {
+          "activity" : "load",
+          "start" : 22,
+          "length" : 48
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 22,
+          "length" : 136
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 101,
+          "length" : 1028
+        },
+        {
+          "activity" : "validate",
+          "start" : 311,
+          "length" : 371
+        },
+        {
+          "activity" : "checkConformanceResources",
+          "start" : 329,
+          "length" : 1
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 329,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 379,
+          "length" : 336
+        },
+        {
+          "activity" : "generate2",
+          "start" : 600,
+          "length" : 579
+        },
+        {
+          "activity" : "generate2",
+          "start" : 606,
+          "length" : 730
+        },
+        {
+          "activity" : "makeDependencies",
+          "start" : 610,
+          "length" : 1
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 626,
+          "length" : 12
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 935,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/StructureDefinition-BRCID10Avaliado-1.0.json",
+      "size" : 19221,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 4
+        },
+        {
+          "activity" : "load",
+          "start" : 22,
+          "length" : 6
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 22,
+          "length" : 25
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 102,
+          "length" : 1124
+        },
+        {
+          "activity" : "validate",
+          "start" : 311,
+          "length" : 275
+        },
+        {
+          "activity" : "validate",
+          "start" : 312,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 380,
+          "length" : 220
+        },
+        {
+          "activity" : "generate2",
+          "start" : 600,
+          "length" : 372
+        },
+        {
+          "activity" : "generate2",
+          "start" : 607,
+          "length" : 236
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 626,
+          "length" : 9
+        },
+        {
+          "activity" : "scanProfilesForR5",
+          "start" : 935,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/StructureDefinition-BRIndividuoNaoIdentificado-1.0.json",
+      "size" : 5135,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 2
+        },
+        {
+          "activity" : "load",
+          "start" : 22,
+          "length" : 3
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 22,
+          "length" : 12
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 103,
+          "length" : 1132
+        },
+        {
+          "activity" : "validate",
+          "start" : 311,
+          "length" : 67
+        },
+        {
+          "activity" : "generate1",
+          "start" : 380,
+          "length" : 48
+        },
+        {
+          "activity" : "generate2",
+          "start" : 601,
+          "length" : 116
+        },
+        {
+          "activity" : "generate2",
+          "start" : 607,
+          "length" : 40
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 626,
+          "length" : 2
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/StructureDefinition-BRRegulacaoAssistencial.json",
+      "size" : 48084,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 6
+        },
+        {
+          "activity" : "load",
+          "start" : 22,
+          "length" : 12
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 22,
+          "length" : 150
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 105,
+          "length" : 1117
+        },
+        {
+          "activity" : "validate",
+          "start" : 311,
+          "length" : 624
+        },
+        {
+          "activity" : "checkConformanceResources",
+          "start" : 329,
+          "length" : 1
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 329,
+          "length" : 2
+        },
+        {
+          "activity" : "generate1",
+          "start" : 380,
+          "length" : 837
+        },
+        {
+          "activity" : "generate2",
+          "start" : 601,
+          "length" : 1045
+        },
+        {
+          "activity" : "generate2",
+          "start" : 607,
+          "length" : 456
+        },
+        {
+          "activity" : "makeDependencies",
+          "start" : 610,
+          "length" : 1
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 626,
+          "length" : 35
+        },
+        {
+          "activity" : "scanProfilesForR5",
+          "start" : 935,
+          "length" : 1
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 935,
+          "length" : 2
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/StructureDefinition-BRRequisicaoRegulacaoAssistencial.json",
+      "size" : 311280,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 18
+        },
+        {
+          "activity" : "load",
+          "start" : 22,
+          "length" : 111
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 22,
+          "length" : 22
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 106,
+          "length" : 1065
+        },
+        {
+          "activity" : "validate",
+          "start" : 312,
+          "length" : 257
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 329,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 381,
+          "length" : 332
+        },
+        {
+          "activity" : "generate2",
+          "start" : 602,
+          "length" : 427
+        },
+        {
+          "activity" : "generate2",
+          "start" : 608,
+          "length" : 154
+        },
+        {
+          "activity" : "makeDependencies",
+          "start" : 610,
+          "length" : 1
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 626,
+          "length" : 14
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 935,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/ValueSet-BRCID10-1.0.json",
+      "size" : 747,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 2
+        },
+        {
+          "activity" : "load",
+          "start" : 22,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 107,
+          "length" : 922
+        },
+        {
+          "activity" : "validate",
+          "start" : 307,
+          "length" : 18
+        },
+        {
+          "activity" : "generate1",
+          "start" : 381,
+          "length" : 8
+        },
+        {
+          "activity" : "generate2",
+          "start" : 602,
+          "length" : 1786
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 626,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/ValueSet-BRCaraterAtendimentoMIRA.json",
+      "size" : 1145,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 22,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 108,
+          "length" : 988
+        },
+        {
+          "activity" : "validate",
+          "start" : 307,
+          "length" : 6
+        },
+        {
+          "activity" : "generate1",
+          "start" : 381,
+          "length" : 7
+        },
+        {
+          "activity" : "generate2",
+          "start" : 604,
+          "length" : 26
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 626,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/ValueSet-BRCategoriaDiagnostico.json",
+      "size" : 768,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 2
+        },
+        {
+          "activity" : "load",
+          "start" : 22,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 109,
+          "length" : 1022
+        },
+        {
+          "activity" : "validate",
+          "start" : 307,
+          "length" : 4
+        },
+        {
+          "activity" : "generate1",
+          "start" : 381,
+          "length" : 7
+        },
+        {
+          "activity" : "generate2",
+          "start" : 604,
+          "length" : 24
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/ValueSet-BREstadoDocumento-1.0.json",
+      "size" : 1722,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 22,
+          "length" : 2
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 23,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 110,
+          "length" : 1024
+        },
+        {
+          "activity" : "validate",
+          "start" : 307,
+          "length" : 4
+        },
+        {
+          "activity" : "generate1",
+          "start" : 381,
+          "length" : 8
+        },
+        {
+          "activity" : "generate2",
+          "start" : 604,
+          "length" : 31
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/ValueSet-BREstadoResolucaoDiagnosticoProblema-1.0.json",
+      "size" : 2274,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 22,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 111,
+          "length" : 1025
+        },
+        {
+          "activity" : "validate",
+          "start" : 307,
+          "length" : 6
+        },
+        {
+          "activity" : "generate1",
+          "start" : 381,
+          "length" : 8
+        },
+        {
+          "activity" : "generate2",
+          "start" : 604,
+          "length" : 38
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/ValueSet-BRIntencaoRegulacao.json",
+      "size" : 2955,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 2
+        },
+        {
+          "activity" : "load",
+          "start" : 22,
+          "length" : 2
+        },
+        {
+          "activity" : "load",
+          "start" : 22,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 112,
+          "length" : 1125
+        },
+        {
+          "activity" : "validate",
+          "start" : 307,
+          "length" : 5
+        },
+        {
+          "activity" : "generate1",
+          "start" : 381,
+          "length" : 9
+        },
+        {
+          "activity" : "generate2",
+          "start" : 604,
+          "length" : 46
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 626,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/ValueSet-BRJustificativaIndividuoNaoIdentificado-1.0.json",
+      "size" : 986,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 22,
+          "length" : 1
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 23,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 113,
+          "length" : 1023
+        },
+        {
+          "activity" : "validate",
+          "start" : 307,
+          "length" : 3
+        },
+        {
+          "activity" : "generate1",
+          "start" : 381,
+          "length" : 7
+        },
+        {
+          "activity" : "generate2",
+          "start" : 604,
+          "length" : 36
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/ValueSet-BRModalidadeAssistencialMIRA.json",
+      "size" : 937,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 2
+        },
+        {
+          "activity" : "load",
+          "start" : 22,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 114,
+          "length" : 1024
+        },
+        {
+          "activity" : "validate",
+          "start" : 307,
+          "length" : 3656
+        },
+        {
+          "activity" : "generate1",
+          "start" : 381,
+          "length" : 7
+        },
+        {
+          "activity" : "generate2",
+          "start" : 604,
+          "length" : 26
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/ValueSet-BROcupacao-1.0.json",
+      "size" : 735,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 22,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 115,
+          "length" : 1025
+        },
+        {
+          "activity" : "validate",
+          "start" : 311,
+          "length" : 7
+        },
+        {
+          "activity" : "generate1",
+          "start" : 381,
+          "length" : 6
+        },
+        {
+          "activity" : "generate2",
+          "start" : 604,
+          "length" : 1725
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/ValueSet-BRProcedimentosNacionais-1.0.json",
+      "size" : 1034,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 2
+        },
+        {
+          "activity" : "load",
+          "start" : 22,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 116,
+          "length" : 1113
+        },
+        {
+          "activity" : "validate",
+          "start" : 311,
+          "length" : 9
+        },
+        {
+          "activity" : "generate1",
+          "start" : 381,
+          "length" : 7
+        },
+        {
+          "activity" : "generate2",
+          "start" : 606,
+          "length" : 18
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 626,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/ValueSet-BRSexo-1.0.json",
+      "size" : 1663,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 22,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 117,
+          "length" : 1003
+        },
+        {
+          "activity" : "validate",
+          "start" : 311,
+          "length" : 28
+        },
+        {
+          "activity" : "generate1",
+          "start" : 381,
+          "length" : 7
+        },
+        {
+          "activity" : "generate2",
+          "start" : 606,
+          "length" : 27
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/ValueSet-BRStatusAgendamentoRegulacaoAssistencial.json",
+      "size" : 3335,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 2
+        },
+        {
+          "activity" : "load",
+          "start" : 22,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 118,
+          "length" : 1000
+        },
+        {
+          "activity" : "validate",
+          "start" : 311,
+          "length" : 13
+        },
+        {
+          "activity" : "generate1",
+          "start" : 381,
+          "length" : 9
+        },
+        {
+          "activity" : "generate2",
+          "start" : 606,
+          "length" : 19
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/ValueSet-BRStatusParticipante.json",
+      "size" : 1642,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 22,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 119,
+          "length" : 978
+        },
+        {
+          "activity" : "validate",
+          "start" : 311,
+          "length" : 7
+        },
+        {
+          "activity" : "generate1",
+          "start" : 381,
+          "length" : 8
+        },
+        {
+          "activity" : "generate2",
+          "start" : 606,
+          "length" : 29
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 626,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/ValueSet-BRStatusRegulacaoAssistencial.json",
+      "size" : 705,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 22,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 120,
+          "length" : 1127
+        },
+        {
+          "activity" : "validate",
+          "start" : 311,
+          "length" : 5
+        },
+        {
+          "activity" : "generate1",
+          "start" : 381,
+          "length" : 6
+        },
+        {
+          "activity" : "generate2",
+          "start" : 606,
+          "length" : 33
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/ValueSet-BRStatusRequisicaoRegulacaoAssistencial.json",
+      "size" : 2435,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 22,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 121,
+          "length" : 1026
+        },
+        {
+          "activity" : "validate",
+          "start" : 311,
+          "length" : 4
+        },
+        {
+          "activity" : "generate1",
+          "start" : 381,
+          "length" : 9
+        },
+        {
+          "activity" : "generate2",
+          "start" : 606,
+          "length" : 34
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/ValueSet-BRTipoDocumento-1.0.json",
+      "size" : 736,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 2
+        },
+        {
+          "activity" : "load",
+          "start" : 22,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 122,
+          "length" : 1022
+        },
+        {
+          "activity" : "validate",
+          "start" : 311,
+          "length" : 4
+        },
+        {
+          "activity" : "generate1",
+          "start" : 381,
+          "length" : 6
+        },
+        {
+          "activity" : "generate2",
+          "start" : 606,
+          "length" : 48
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/ValueSet-BRTipoParticipante.json",
+      "size" : 661,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 20,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 22,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 123,
+          "length" : 1026
+        },
+        {
+          "activity" : "validate",
+          "start" : 311,
+          "length" : 4
+        },
+        {
+          "activity" : "generate1",
+          "start" : 381,
+          "length" : 6
+        },
+        {
+          "activity" : "generate2",
+          "start" : 606,
+          "length" : 29
+        }
+      ]
+    }
+  ]
+}

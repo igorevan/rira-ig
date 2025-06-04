@@ -4,7 +4,7 @@
   "language" : "pt-BR",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"pt-BR\" lang=\"pt-BR\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide br.gov.saude.rira.fhir</b></p><a name=\"br.gov.saude.rira.fhir\"> </a><a name=\"hcbr.gov.saude.rira.fhir\"> </a><a name=\"br.gov.saude.rira.fhir-pt-BR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: pt-BR</p></div><h2>RIRARNDSIG</h2><p>The official URL for this implementation guide is: </p><pre>http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir</pre><div><p>Guia de Implementação da Rede Nacional de Dados em Saúde (RNDS)</p>\n</div></div>"
+    "div" : "<div xml:lang=\"pt-BR\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"pt-BR\"><p class=\"res-header-id\"><b>Narrativa gerada: ImplementationGuide br.gov.saude.rira.fhir</b></p><a name=\"br.gov.saude.rira.fhir\"> </a><a name=\"hcbr.gov.saude.rira.fhir\"> </a><a name=\"br.gov.saude.rira.fhir-pt-BR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Língua: pt-BR</p></div><h2>RIRARNDSIG</h2><p>O URL oficial para este guia de implementação é: </p><pre>http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir</pre><div><p>Guia de Implementação da Rede Nacional de Dados em Saúde (RNDS)</p>\n</div></div>"
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
@@ -20,7 +20,7 @@
   "title" : "Guia de Implementação da Regulação Assistencial (RIRA) da RNDS",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-04-09T12:39:07-03:00",
+  "date" : "2025-06-04T15:05:32-03:00",
   "publisher" : "Ministério da Saúde do Brasil",
   "contact" : [{
     "name" : "Ministério da Saúde do Brasil",
@@ -47,7 +47,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "6.2.0"
+    "version" : "6.4.0"
   },
   {
     "id" : "hl7ext",
@@ -348,7 +348,7 @@
     },
     {
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools.r4#0.4.1"
+      "valueCode" : "hl7.fhir.uv.tools.r4#0.5.0"
     },
     {
       "extension" : [{
@@ -637,6 +637,54 @@
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     }],
     "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/Example-RIRA-Attended"
+      },
+      "name" : "Bundle de exemplo do RIRA (Atendido/Internado)",
+      "description" : "Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Atendido/Internado     (Attended)",
+      "exampleCanonical" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/Example-RIRA-Booked"
+      },
+      "name" : "Bundle de exemplo do RIRA (Agendado)",
+      "description" : "Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Agendado (Booked)",
+      "exampleCanonical" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/Example-RIRA-Cancelled"
+      },
+      "name" : "Bundle de exemplo do RIRA (Negado/Cancelado)",
+      "description" : "Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Negado/Cancelado (Cancelled)",
+      "exampleCanonical" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/Example-RIRA-Pending"
+      },
+      "name" : "Bundle de exemplo do RIRA (Pendente)",
+      "description" : "Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Pendente (Pending)",
+      "exampleCanonical" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial"
+    },
+    {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"

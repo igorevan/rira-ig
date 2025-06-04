@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="20f9eb05-075f-441c-9d2e-60fca1e02300"/>
+  <id value="eb6b474d-1f7a-4f66-abc4-3550873ca393"/>
   <meta>
-    <lastUpdated value="2025-04-09T12:39:31.020-03:00"/>
+    <lastUpdated value="2025-06-04T15:05:55.860-03:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -17,23 +17,21 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR">
-            <p class="res-header-id">
-              <b>ValueSet </b>
-            </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansão efectuada internamente com base em 
               <a href="CodeSystem-BRCID10.html">codesystem Classificação Internacional de Doenças - Décima Revisão (CID-10) v1.0.0 (CodeSystem)</a>
             </p>
-            <p style="border: maroon 1px solid; background-color: #FFCCCC; font-weight: bold; padding: 8px">This value set has 14.230 codes in it. In order to keep the publication size manageable, only a selection (1.000 codes) of the whole set of codes is shown.</p>
+            <p style="border: maroon 1px solid; background-color: #FFCCCC; font-weight: bold; padding: 8px">Este conjunto de valores contém 14.230 códigos. A fim de manter o tamanho da publicação gerível, é apresentada apenas uma seleção (1.000 códigos) de todo o conjunto de códigos.</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
-                  <b>Code</b>
+                  <b>Código</b>
                 </td>
                 <td>
-                  <b>System</b>
+                  <b>Sistema</b>
                 </td>
                 <td>
-                  <b>Display (pt-BR)</b> - Portuguese (Brazil) (pt)
+                  <b>Ecrã (pt-BR)</b> - Portuguese (Brazil) (pt)
                 </td>
               </tr>
               <tr>
@@ -8054,8 +8052,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:da33cad7-ead6-47ab-8c1b-19c8568ee672"/>
-          <timestamp value="2025-04-09T12:47:11-03:00"/>
+          <identifier value="urn:uuid:463ddcb6-ffbb-4a63-a530-8a7d7e13fb73"/>
+          <timestamp value="2025-06-04T15:15:35-03:00"/>
           <total value="14230"/>
           <offset value="0"/>
           <parameter>
@@ -13090,26 +13088,24 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-            <p class="res-header-id">
-              <b>ValueSet </b>
-            </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansão efectuada internamente com base em 
               <a href="http://hl7.org/fhir/R4/codesystem-request-priority.html">codesystem RequestPriority v4.0.1 (CodeSystem)</a>
             </p>
-            <p>This value set contains 2 concepts</p>
+            <p>Este conjunto de valores contém 2 conceitos</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
-                  <b>Code</b>
+                  <b>Código</b>
                 </td>
                 <td>
-                  <b>System</b>
+                  <b>Sistema</b>
                 </td>
                 <td>
-                  <b>Display (en)</b>
+                  <b>Ecrã (en)</b>
                 </td>
                 <td>
-                  <b>Definition</b>
+                  <b>Definição</b>
                 </td>
               </tr>
               <tr>
@@ -13158,8 +13154,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:0c338927-097c-4f0c-a3ff-00ff49240537"/>
-          <timestamp value="2025-04-09T12:47:13-03:00"/>
+          <identifier value="urn:uuid:2da52604-c3a8-4616-8c44-154ea0d54963"/>
+          <timestamp value="2025-06-04T15:15:37-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -13211,23 +13207,21 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR">
-            <p class="res-header-id">
-              <b>ValueSet </b>
-            </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansão efectuada internamente com base em 
               <a href="CodeSystem-BRCategoriaDiagnostico.html">codesystem Categoria do Diagnóstico v1.0.0 (CodeSystem)</a>
             </p>
-            <p>This value set contains 2 concepts</p>
+            <p>Este conjunto de valores contém 2 conceitos</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
-                  <b>Code</b>
+                  <b>Código</b>
                 </td>
                 <td>
-                  <b>System</b>
+                  <b>Sistema</b>
                 </td>
                 <td>
-                  <b>Display (pt-BR)</b> - Portuguese (Brazil) (pt)
+                  <b>Ecrã (pt-BR)</b> - Portuguese (Brazil) (pt)
                 </td>
               </tr>
               <tr>
@@ -13264,8 +13258,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:8728f72a-d2b2-4bc8-81b0-cbefb2a8c515"/>
-          <timestamp value="2025-04-09T12:47:13-03:00"/>
+          <identifier value="urn:uuid:f1c9e67c-5b23-40b4-9091-102b476e37aa"/>
+          <timestamp value="2025-06-04T15:15:37-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -13313,26 +13307,24 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-            <p class="res-header-id">
-              <b>ValueSet </b>
-            </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansão efectuada internamente com base em 
               <a href="http://hl7.org/fhir/R4/codesystem-composition-status.html">codesystem CompositionStatus v4.0.1 (CodeSystem)</a>
             </p>
-            <p>This value set contains 4 concepts</p>
+            <p>Este conjunto de valores contém 4 conceitos</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
-                  <b>Code</b>
+                  <b>Código</b>
                 </td>
                 <td>
-                  <b>System</b>
+                  <b>Sistema</b>
                 </td>
                 <td>
-                  <b>Display (en)</b>
+                  <b>Ecrã (en)</b>
                 </td>
                 <td>
-                  <b>Definition</b>
+                  <b>Definição</b>
                 </td>
               </tr>
               <tr>
@@ -13409,8 +13401,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:ea2b996f-af15-4dae-88da-0adb6052b267"/>
-          <timestamp value="2025-04-09T12:47:13-03:00"/>
+          <identifier value="urn:uuid:0b3afad2-01bf-4436-8e0a-b32ba069e72d"/>
+          <timestamp value="2025-06-04T15:15:37-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -13472,32 +13464,30 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-            <p class="res-header-id">
-              <b>ValueSet </b>
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansão efectuada internamente com base em 
+              <a href="http://terminology.hl7.org/6.4.0/CodeSystem-condition-clinical.html">codesystem Condition Clinical Status Codes v3.0.0 (CodeSystem)</a>
             </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
-              <a href="http://terminology.hl7.org/6.2.0/CodeSystem-condition-clinical.html">codesystem Condition Clinical Status Codes v3.0.0 (CodeSystem)</a>
-            </p>
-            <p>This value set contains 6 concepts</p>
+            <p>Este conjunto de valores contém 6 conceitos</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
-                  <b>Code</b>
+                  <b>Código</b>
                 </td>
                 <td>
-                  <b>System</b>
+                  <b>Sistema</b>
                 </td>
                 <td>
-                  <b>Display (en)</b>
+                  <b>Ecrã (en)</b>
                 </td>
                 <td>
-                  <b>Definition</b>
+                  <b>Definição</b>
                 </td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
                   <a name="x-http://terminology.hl7.org/CodeSystem/condition-clinical-active"> </a>  
-                  <a href="http://terminology.hl7.org/6.2.0/CodeSystem-condition-clinical.html#condition-clinical-active">active</a>
+                  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-condition-clinical.html#condition-clinical-active">active</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/condition-clinical</td>
                 <td>Ativo</td>
@@ -13511,7 +13501,7 @@
               <tr>
                 <td style="white-space:nowrap">
                   <a name="x-http://terminology.hl7.org/CodeSystem/condition-clinical-recurrence"> </a>  
-                  <a href="http://terminology.hl7.org/6.2.0/CodeSystem-condition-clinical.html#condition-clinical-recurrence">recurrence</a>
+                  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-condition-clinical.html#condition-clinical-recurrence">recurrence</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/condition-clinical</td>
                 <td>Recorrente</td>
@@ -13525,7 +13515,7 @@
               <tr>
                 <td style="white-space:nowrap">
                   <a name="x-http://terminology.hl7.org/CodeSystem/condition-clinical-relapse"> </a>  
-                  <a href="http://terminology.hl7.org/6.2.0/CodeSystem-condition-clinical.html#condition-clinical-relapse">relapse</a>
+                  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-condition-clinical.html#condition-clinical-relapse">relapse</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/condition-clinical</td>
                 <td>Recidiva</td>
@@ -13539,7 +13529,7 @@
               <tr>
                 <td style="white-space:nowrap">
                   <a name="x-http://terminology.hl7.org/CodeSystem/condition-clinical-inactive"> </a>  
-                  <a href="http://terminology.hl7.org/6.2.0/CodeSystem-condition-clinical.html#condition-clinical-inactive">inactive</a>
+                  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-condition-clinical.html#condition-clinical-inactive">inactive</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/condition-clinical</td>
                 <td>Inativo</td>
@@ -13553,7 +13543,7 @@
               <tr>
                 <td style="white-space:nowrap">
                   <a name="x-http://terminology.hl7.org/CodeSystem/condition-clinical-remission"> </a>  
-                  <a href="http://terminology.hl7.org/6.2.0/CodeSystem-condition-clinical.html#condition-clinical-remission">remission</a>
+                  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-condition-clinical.html#condition-clinical-remission">remission</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/condition-clinical</td>
                 <td>Remissão</td>
@@ -13567,7 +13557,7 @@
               <tr>
                 <td style="white-space:nowrap">
                   <a name="x-http://terminology.hl7.org/CodeSystem/condition-clinical-resolved"> </a>  
-                  <a href="http://terminology.hl7.org/6.2.0/CodeSystem-condition-clinical.html#condition-clinical-resolved">resolved</a>
+                  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-condition-clinical.html#condition-clinical-resolved">resolved</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/condition-clinical</td>
                 <td>Resolvido</td>
@@ -13596,8 +13586,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:a71b2c99-afde-44ed-a5b5-5bcb2fb05709"/>
-          <timestamp value="2025-04-09T12:47:13-03:00"/>
+          <identifier value="urn:uuid:1a4b56ad-5d9b-413d-81f1-9d685edb189a"/>
+          <timestamp value="2025-06-04T15:15:37-03:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -13662,26 +13652,24 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-            <p class="res-header-id">
-              <b>ValueSet </b>
-            </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansão efectuada internamente com base em 
               <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html">codesystem RequestIntent v4.0.1 (CodeSystem)</a>
             </p>
-            <p>This value set contains 9 concepts</p>
+            <p>Este conjunto de valores contém 9 conceitos</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
-                  <b>Code</b>
+                  <b>Código</b>
                 </td>
                 <td>
-                  <b>System</b>
+                  <b>Sistema</b>
                 </td>
                 <td>
-                  <b>Display (en)</b>
+                  <b>Ecrã (en)</b>
                 </td>
                 <td>
-                  <b>Definition</b>
+                  <b>Definição</b>
                 </td>
               </tr>
               <tr>
@@ -13830,8 +13818,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:9c37b009-b8f5-4b68-a90b-13b98853d688"/>
-          <timestamp value="2025-04-09T12:47:13-03:00"/>
+          <identifier value="urn:uuid:74bcec91-ccd3-4300-b09c-27c18561b5ae"/>
+          <timestamp value="2025-06-04T15:15:37-03:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>
@@ -13918,23 +13906,21 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR">
-            <p class="res-header-id">
-              <b>ValueSet </b>
-            </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansão efectuada internamente com base em 
               <a href="CodeSystem-BRJustificativaIndividuoNaoIdentificado.html">codesystem Justificativa da Impossibilidade de Identificação do Indivíduo v1.0.0 (CodeSystem)</a>
             </p>
-            <p>This value set contains 6 concepts</p>
+            <p>Este conjunto de valores contém 6 conceitos</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
-                  <b>Code</b>
+                  <b>Código</b>
                 </td>
                 <td>
-                  <b>System</b>
+                  <b>Sistema</b>
                 </td>
                 <td>
-                  <b>Display (pt-BR)</b> - Portuguese (Brazil) (pt)
+                  <b>Ecrã (pt-BR)</b> - Portuguese (Brazil) (pt)
                 </td>
               </tr>
               <tr>
@@ -14003,8 +13989,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:5a202b75-8489-4f29-aab3-e49d1b0d2d58"/>
-          <timestamp value="2025-04-09T12:47:13-03:00"/>
+          <identifier value="urn:uuid:d08e5a4a-9594-41d5-ba95-058cd36f72bc"/>
+          <timestamp value="2025-06-04T15:15:37-03:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -14069,23 +14055,21 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR">
-            <p class="res-header-id">
-              <b>ValueSet </b>
-            </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansão efectuada internamente com base em 
               <a href="CodeSystem-BRModalidadeAssistencial.html">codesystem Modalidade Assistencial v1.0.0 (CodeSystem)</a>
             </p>
-            <p>This value set contains 2 concepts</p>
+            <p>Este conjunto de valores contém 2 conceitos</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
-                  <b>Code</b>
+                  <b>Código</b>
                 </td>
                 <td>
-                  <b>System</b>
+                  <b>Sistema</b>
                 </td>
                 <td>
-                  <b>Display (pt-BR)</b> - Portuguese (Brazil) (pt)
+                  <b>Ecrã (pt-BR)</b> - Portuguese (Brazil) (pt)
                 </td>
               </tr>
               <tr>
@@ -14122,8 +14106,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:20a2b25c-0b02-4e75-b369-bfe7314203fd"/>
-          <timestamp value="2025-04-09T12:47:13-03:00"/>
+          <identifier value="urn:uuid:d2cddcc4-889b-4b84-bfcc-baa52f773516"/>
+          <timestamp value="2025-06-04T15:15:37-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -14171,23 +14155,21 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR">
-            <p class="res-header-id">
-              <b>ValueSet </b>
-            </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansão efectuada internamente com base em 
               <a href="CodeSystem-BRCBO.html">codesystem Classificação Brasileira de Ocupações (CBO) v1.0.0 (CodeSystem)</a>
             </p>
-            <p style="border: maroon 1px solid; background-color: #FFCCCC; font-weight: bold; padding: 8px">This value set has 2.714 codes in it. In order to keep the publication size manageable, only a selection (1.000 codes) of the whole set of codes is shown.</p>
+            <p style="border: maroon 1px solid; background-color: #FFCCCC; font-weight: bold; padding: 8px">Este conjunto de valores contém 2.714 códigos. A fim de manter o tamanho da publicação gerível, é apresentada apenas uma seleção (1.000 códigos) de todo o conjunto de códigos.</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
-                  <b>Code</b>
+                  <b>Código</b>
                 </td>
                 <td>
-                  <b>System</b>
+                  <b>Sistema</b>
                 </td>
                 <td>
-                  <b>Display (pt-BR)</b> - Portuguese (Brazil) (pt)
+                  <b>Ecrã (pt-BR)</b> - Portuguese (Brazil) (pt)
                 </td>
               </tr>
               <tr>
@@ -22208,8 +22190,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:9d3a564a-f6f8-411e-8807-91350bfddb04"/>
-          <timestamp value="2025-04-09T12:47:13-03:00"/>
+          <identifier value="urn:uuid:dfafbde2-7cac-48e0-a0b4-14fd2cb5e9f4"/>
+          <timestamp value="2025-06-04T15:15:37-03:00"/>
           <total value="2714"/>
           <offset value="0"/>
           <parameter>
@@ -27247,26 +27229,24 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-            <p class="res-header-id">
-              <b>ValueSet </b>
-            </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansão efectuada internamente com base em 
               <a href="http://hl7.org/fhir/R4/codesystem-administrative-gender.html">codesystem AdministrativeGender v4.0.1 (CodeSystem)</a>
             </p>
-            <p>This value set contains 3 concepts</p>
+            <p>Este conjunto de valores contém 3 conceitos</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
-                  <b>Code</b>
+                  <b>Código</b>
                 </td>
                 <td>
-                  <b>System</b>
+                  <b>Sistema</b>
                 </td>
                 <td>
-                  <b>Display (en)</b>
+                  <b>Ecrã (en)</b>
                 </td>
                 <td>
-                  <b>Definition</b>
+                  <b>Definição</b>
                 </td>
               </tr>
               <tr>
@@ -27329,8 +27309,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:ba563f73-2101-4ae1-857b-a743efd5048c"/>
-          <timestamp value="2025-04-09T12:47:15-03:00"/>
+          <identifier value="urn:uuid:a70d88d9-9d2b-444d-a059-a57e3156c1c8"/>
+          <timestamp value="2025-06-04T15:15:39-03:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -27380,26 +27360,24 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-            <p class="res-header-id">
-              <b>ValueSet </b>
-            </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansão efectuada internamente com base em 
               <a href="http://hl7.org/fhir/R4/codesystem-participationstatus.html">codesystem ParticipationStatus v4.0.1 (CodeSystem)</a>
             </p>
-            <p>This value set contains 4 concepts</p>
+            <p>Este conjunto de valores contém 4 conceitos</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
-                  <b>Code</b>
+                  <b>Código</b>
                 </td>
                 <td>
-                  <b>System</b>
+                  <b>Sistema</b>
                 </td>
                 <td>
-                  <b>Display (en)</b>
+                  <b>Ecrã (en)</b>
                 </td>
                 <td>
-                  <b>Definition</b>
+                  <b>Definição</b>
                 </td>
               </tr>
               <tr>
@@ -27476,8 +27454,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:1f744430-0496-4d09-9718-88ba3b040d46"/>
-          <timestamp value="2025-04-09T12:47:15-03:00"/>
+          <identifier value="urn:uuid:f520d42f-be96-47c7-8f20-32b18d33463f"/>
+          <timestamp value="2025-06-04T15:15:39-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -27536,23 +27514,21 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR">
-            <p class="res-header-id">
-              <b>ValueSet </b>
-            </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansão efectuada internamente com base em 
               <a href="CodeSystem-BRStatusRegulacaoAssistencial.html">codesystem Status da regulação assistencial v1.0.0 (CodeSystem)</a>
             </p>
-            <p>This value set contains 7 concepts</p>
+            <p>Este conjunto de valores contém 7 conceitos</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
-                  <b>Code</b>
+                  <b>Código</b>
                 </td>
                 <td>
-                  <b>System</b>
+                  <b>Sistema</b>
                 </td>
                 <td>
-                  <b>Display (pt-BR)</b> - Portuguese (Brazil) (pt)
+                  <b>Ecrã (pt-BR)</b> - Portuguese (Brazil) (pt)
                 </td>
               </tr>
               <tr>
@@ -27629,8 +27605,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:d3ea71a8-c539-4e54-b4e4-ec1fbec6e446"/>
-          <timestamp value="2025-04-09T12:47:16-03:00"/>
+          <identifier value="urn:uuid:1e8f0d0c-c938-452f-8a3e-53f9118d5464"/>
+          <timestamp value="2025-06-04T15:15:39-03:00"/>
           <total value="7"/>
           <offset value="0"/>
           <parameter>
@@ -27700,26 +27676,24 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-            <p class="res-header-id">
-              <b>ValueSet </b>
-            </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansão efectuada internamente com base em 
               <a href="http://hl7.org/fhir/R4/codesystem-request-status.html">codesystem RequestStatus v4.0.1 (CodeSystem)</a>
             </p>
-            <p>This value set contains 7 concepts</p>
+            <p>Este conjunto de valores contém 7 conceitos</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
-                  <b>Code</b>
+                  <b>Código</b>
                 </td>
                 <td>
-                  <b>System</b>
+                  <b>Sistema</b>
                 </td>
                 <td>
-                  <b>Display (en)</b>
+                  <b>Ecrã (en)</b>
                 </td>
                 <td>
-                  <b>Definition</b>
+                  <b>Definição</b>
                 </td>
               </tr>
               <tr>
@@ -27838,8 +27812,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:d7d53671-ff72-4790-8cf7-f2a2395821c6"/>
-          <timestamp value="2025-04-09T12:47:16-03:00"/>
+          <identifier value="urn:uuid:5cba7501-f467-41d9-bd6e-f30ab36abead"/>
+          <timestamp value="2025-06-04T15:15:39-03:00"/>
           <total value="7"/>
           <offset value="0"/>
           <parameter>
@@ -27917,26 +27891,24 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR">
-            <p class="res-header-id">
-              <b>ValueSet </b>
-            </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansão efectuada internamente com base em 
               <a href="CodeSystem-BRTipoDocumento.html">codesystem Tipo de Documento v1.0.0 (CodeSystem)</a>
             </p>
-            <p>This value set contains 11 concepts</p>
+            <p>Este conjunto de valores contém 11 conceitos</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
-                  <b>Code</b>
+                  <b>Código</b>
                 </td>
                 <td>
-                  <b>System</b>
+                  <b>Sistema</b>
                 </td>
                 <td>
-                  <b>Display (pt-BR)</b>
+                  <b>Ecrã (pt-BR)</b>
                 </td>
                 <td>
-                  <b>Definition</b>
+                  <b>Definição</b>
                 </td>
               </tr>
               <tr>
@@ -28087,8 +28059,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:593e54b5-6670-4025-baf3-260fe66434de"/>
-          <timestamp value="2025-04-09T12:47:16-03:00"/>
+          <identifier value="urn:uuid:db7466a4-2af8-48ab-8339-47cac59dea65"/>
+          <timestamp value="2025-06-04T15:15:39-03:00"/>
           <total value="11"/>
           <offset value="0"/>
           <parameter>
@@ -28178,23 +28150,21 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR">
-            <p class="res-header-id">
-              <b>ValueSet </b>
-            </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansão efectuada internamente com base em 
               <a href="CodeSystem-BRTipoParticipante.html">codesystem Tipo do Participante v1.0.0 (CodeSystem)</a>
             </p>
-            <p>This value set contains 4 concepts</p>
+            <p>Este conjunto de valores contém 4 conceitos</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
-                  <b>Code</b>
+                  <b>Código</b>
                 </td>
                 <td>
-                  <b>System</b>
+                  <b>Sistema</b>
                 </td>
                 <td>
-                  <b>Display (pt-BR)</b> - Portuguese (Brazil) (pt)
+                  <b>Ecrã (pt-BR)</b> - Portuguese (Brazil) (pt)
                 </td>
               </tr>
               <tr>
@@ -28247,8 +28217,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:7cf209cc-8717-4e49-843b-734bfb44c86e"/>
-          <timestamp value="2025-04-09T12:47:16-03:00"/>
+          <identifier value="urn:uuid:3eba21ba-6387-4bcd-99e6-a1f616615809"/>
+          <timestamp value="2025-06-04T15:15:39-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>

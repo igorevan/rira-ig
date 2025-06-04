@@ -178,7 +178,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 5" class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Guia de Implementação da Regulação Assistencial (RIRA) da RNDS - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://www.saude.gov.br/fhir/r4/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Guia de Implementação da Regulação Assistencial (RIRA) da RNDS - Compilação de desenvolvimento local (v1.0.0) construída pelas ferramentas de compilação FHIR (HL7&reg; FHIR&reg; Standard). Veja o <a href='http://www.saude.gov.br/fhir/r4/history.html'>Diretório de versões publicadas</a></p><!--EndReleaseHeader-->
   
 
 
@@ -270,7 +270,7 @@
 
 
 
-  <a name="workflow"> </a><h3>Mappings for Workflow Pattern (<a href="http://hl7.org/fhir/workflow.html">http://hl7.org/fhir/workflow</a>)</h3><table class="grid">
+  <a name="workflow"> </a><h3>Mapeamentos para Workflow Pattern (<a href="http://hl7.org/fhir/workflow.html">http://hl7.org/fhir/workflow</a>)</h3><table class="grid">
  <tr><td colspan="3"><b>BRCID10Avaliado</b></td></tr>
  <tr><td>Condition</td><td>Event</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;clinicalStatus</td><td>Event.status</td> </tr>
@@ -279,7 +279,7 @@
  <tr><td>&nbsp;&nbsp;&nbsp;onset[x]</td><td>Event.occurrence[x]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>Event.note</td> </tr>
 </table>
-<a name="sct-concept"> </a><h3>Mappings for SNOMED CT Concept Domain Binding (http://snomed.info/conceptdomain)</h3><table class="grid">
+<a name="sct-concept"> </a><h3>Mapeamentos para SNOMED CT Concept Domain Binding (http://snomed.info/conceptdomain)</h3><table class="grid">
  <tr><td colspan="3"><b>BRCID10Avaliado</b></td></tr>
  <tr><td>Condition</td><td>&lt; 243796009 |Situation with explicit context| : 246090004 |Associated finding| = ( ( &lt; 404684003 |Clinical finding| MINUS ( &lt;&lt; 420134006 |Propensity to adverse reactions| OR &lt;&lt; 473010000 |Hypersensitivity condition| OR &lt;&lt; 79899007 |Drug interaction| OR &lt;&lt; 69449002 |Drug action| OR &lt;&lt; 441742003 |Evaluation finding| OR &lt;&lt; 307824009 |Administrative status| OR &lt;&lt; 385356007 |Tumor stage finding|)) OR &lt; 272379006 |Event|)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;clinicalStatus</td><td>&lt; 303105007 |Disease phases|</td> </tr>
@@ -295,7 +295,7 @@
 OR &lt; 413350009 |Finding with explicit context|
 OR &lt; 272379006 |Event|</td> </tr>
 </table>
-<a name="v2"> </a><h3>Mappings for HL7 v2 Mapping (<a href="http://hl7.org/comparison-v2.html">http://hl7.org/v2</a>)</h3><table class="grid">
+<a name="v2"> </a><h3>Mapeamentos para HL7 v2 Mapping (<a href="http://hl7.org/comparison-v2.html">http://hl7.org/v2</a>)</h3><table class="grid">
  <tr><td colspan="3"><b>BRCID10Avaliado</b></td></tr>
  <tr><td>Condition</td><td>PPR message</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;clinicalStatus</td><td>PRB-14</td> </tr>
@@ -317,7 +317,7 @@ OR &lt; 272379006 |Event|</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>NTE child of PRB</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>N/A</td> </tr>
 </table>
-<a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
+<a name="rim"> </a><h3>Mapeamentos para RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
  <tr><td colspan="3"><b>BRCID10Avaliado</b></td></tr>
  <tr><td>Condition</td><td>Entity. Role, or Act, Observation[classCode=OBS, moodCode=EVN, code=ASSERTION, value&lt;Diagnosis]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;text</td><td>Act.text?</td> </tr>
@@ -377,7 +377,7 @@ OR &lt; 272379006 |Event|</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>Act.text</td> </tr>
 </table>
-<a name="w5"> </a><h3>Mappings for FiveWs Pattern Mapping (http://hl7.org/fhir/fivews)</h3><table class="grid">
+<a name="w5"> </a><h3>Mapeamentos para FiveWs Pattern Mapping (http://hl7.org/fhir/fivews)</h3><table class="grid">
  <tr><td colspan="3"><b>BRCID10Avaliado</b></td></tr>
  <tr><td>Condition</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;clinicalStatus</td><td>FiveWs.status</td> </tr>
@@ -386,7 +386,7 @@ OR &lt; 272379006 |Event|</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>FiveWs.subject[x], FiveWs.subject</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;onset[x]</td><td>FiveWs.init</td> </tr>
 </table>
-<a name="sct-attr"> </a><h3>Mappings for SNOMED CT Attribute Binding (http://snomed.org/attributebinding)</h3><table class="grid">
+<a name="sct-attr"> </a><h3>Mapeamentos para SNOMED CT Attribute Binding (http://snomed.org/attributebinding)</h3><table class="grid">
  <tr><td colspan="3"><b>BRCID10Avaliado</b></td></tr>
  <tr><td>Condition</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>246090004</td> </tr>
@@ -439,7 +439,7 @@ OR &lt; 272379006 |Event|</td> </tr>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.saude.gov.br">Ministério da Saúde do Brasil</a>.  Package br.gov.saude.rira.fhir#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Apr 9, 2025 12:39-0300">2025-04-09</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.saude.gov.br">Ministério da Saúde do Brasil</a>.  Package br.gov.saude.rira.fhir#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jun 4, 2025 15:05-0300">2025-06-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

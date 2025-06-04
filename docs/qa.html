@@ -1,0 +1,808 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- broken links = 0, errors = 5, warn = 0, info = 8-->
+<head>
+  <title>RIRARNDSIG : Validation Results</title>
+  <link href="fhir.css" rel="stylesheet"/>
+  <meta charset="utf-8"/>
+  <style>
+    span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
+    span.toggle  { background-color: #e6f2ff; color: black; border: solid 1px #0056b3; padding: 2px; font-size: 10px }
+    button { padding: 0px 8px; font-size: 12px; cursor: pointer; border-radius: 2px; border: 1px solid #ccc; background-color: #f0f0f0 }
+    button:hover { background-color: #e0e0e0; }
+    .code-value { display: inline; }
+    .code-hidden { display: none; }
+    span.toggle  { font-size: 10px }
+  </style>
+  <script>
+    function flip(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Reasoning') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Reasoning';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Reasoning';
+      }
+    }
+    function toggle(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Validation Information') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Validation Information';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Validation Information';
+      }
+    }
+    function toggleCodes() {
+      const codes = document.getElementsByClassName('code-value');
+      for (let code of codes) {
+        code.classList.toggle('code-hidden');
+      }
+    }
+  </script>
+</head>
+<body style="margin: 20px; background-color: #ffffff">
+ <h1>Validation Results for RIRARNDSIG</h1>
+ <p>Generated Wed Jun 04 15:21:15 GMT-03:00 2025, FHIR version 4.0.1 for br.gov.saude.rira.fhir#1.0.0 (canonical = <a href="http://www.saude.gov.br/fhir/r4">http://www.saude.gov.br/fhir/r4</a> (<a href="http://www.saude.gov.br/fhir/r4/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a> &amp; <a href="qa-ipreview.html">IP</a></p>
+<table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
+ <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v2.0.4</span></td></tr>
+ <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = br.gov.saude.rira.fhir, Canonical = http://www.saude.gov.br/fhir/r4</td></tr>
+ <tr><td>Realm Check for n/a:</td><td><span style="color: maroon; font-weight: bold"></span><ul><li>n/a</li></ul></td></tr>
+ <tr><td>Language Info:</td><td>Stated Languages: n/a. IG Resource Lang: pt-BR. 32 of 38 (84%) of resources have a language. <a href="https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-resource-language-policy">Population Policy</a>: NONE</td></tr>
+ <tr><td>Publication Request:</td><td><table class="grid">
+ <tr><td>package-id</d><td>br.gov.saude.rira.fhir</td></tr>
+ <tr><td>version</d><td>1.0.0</td></tr>
+ <tr><td>path</d><td>http://www.saude.gov.br/fhir/r4/rira/v1.0.0</td></tr>
+ <tr><td>Pub-Mode</d><td>milestone</td></tr>
+ <tr><td>status</d><td>release</td></tr>
+ <tr><td>Release-Label</d><td>STU1</td></tr>
+ <tr><td>Sequence (Group)</d><td>Releases</td></tr>
+ <tr><td>desc</d><td>1.0.0 Release</td></tr>
+ <tr><td>first</d><td>true</td></tr>
+ <tr><td>category</d><td>base</td></tr>
+ <tr><td>title</d><td>RIRA IG</td></tr>
+ <tr><td>introduction</d><td>Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS</td></tr>
+ <tr><td>ci-build</d><td>https://igorevan.github.io/rira-ig/</td></tr>
+ <tr><td>RelatedIgs</d><td>(None Found)</td></tr>
+</table>
+<ul><li>Error fetching package-list from http://www.saude.gov.br/fhir/r4: Error parsing JSON source: Unexpected content '<' in json format at Line 1 (path=[null]) <img src="icon-error.gif" height="16px" width="16px"/></li>
+<li>This IG has never been published, so the version should start with '0.' or include a patch version e.g. '-ballot' <img src="icon-warning.png" height="16px" width="16px"/></li>
+<li>Proposed path for this milestone publication should usually be canonical with either sequence or version appended <img src="icon-warning.png" height="16px" width="16px"/></li>
+</ul>
+</td></tr>
+ <tr><td>Supressed Messages:</td><td><a href="#suppressed">27 Suppressed Issues</a>
+</td></tr>
+ <tr><td>Dependency Checks:</td><td><div><table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="dep" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top" data-fhir="generated-heirarchy"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="The NPM Package Id">Package</span></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="The version of the package">Version</span></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="The version of FHIR that the package is based on">FHIR</span></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="Canonical URL">Canonical</span></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="Web Reference Base">Web Base</span></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="Comments about this entry">Comment</span></th></tr><tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/igor/rira-ig/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> br.gov.saude.rira.fhir</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1.0.0</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://www.saude.gov.br/fhir/r4</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="aa" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/igor/rira-ig/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAACwSURBVDhP7ZLBDsIwCIaLZz34xG3f2cQYo5UfYalJoY07ePFL4GcbpZSVWmvJgwifG+njkLDACgfVIehAQ5ffdMDvxSS2Dmqty62UUmS1rIWD8UuWd9xxVt1AnoaSGx6Buap+0G80K3BTtbtwhLPZQL0CSIA9OwUXON7dZkBeASTAThb3bffMjnCHGy00ZgUeqi5f3YOcsw01vsqYMrMljwgLrBDOwP53xL+D3R2k9ALHsmr3Yu73+gAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> hl7.terminology.r4</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">6.4.0 <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: green" title="Latest Milestone Release">M</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://terminology.hl7.org</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://terminology.hl7.org/6.4.0</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aaa" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/igor/rira-ig/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAMUlEQVR4Xu3NoQ0AIBRDwb9r958B0KAgAcw1OfNMK0ntGGtze+n3PwAAcG4JAAAAt3RWK0BWYk6o4QAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> hl7.fhir.uv.extensions.r4</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">5.2.0 <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: green" title="Latest Milestone Release">M</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/extensions</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/extensions/5.2.0</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ab" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/igor/rira-ig/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALElEQVR4Xu3IsQ0AIAwEsez6+89AqKGGJj7JzVWS+mm3zgcAAMxwDQAAgFcaYAVAgNGLTjgAAAAASUVORK5CYII=)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> hl7.fhir.uv.extensions.r4</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">5.2.0 <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: green" title="Latest Milestone Release">M</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/extensions</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/extensions/5.2.0</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">see above</td></tr>
+</table><para>Templates: fhir.base.template#current. Tools: 0.5.0</para></div></td></tr>
+ <tr><td>Related IGs:</td><td>n/a</td></tr>
+ <tr><td>Dependent IGs:</td><td><a href="qa-dep.html">no references</a></td></tr>
+ <tr><td>Global Profiles:</td><td>(none declared)</td></tr>
+ <tr><td>Terminology Server(s):</td><td><a href="https://tx.fhir.org/r4">https://tx.fhir.org/r4</a> (<a href="qa-txservers.html">details</a>)</td></tr>
+ <tr><td>HTA Analysis:</td><td><i>Non-HL7 Igs are exempt from terminology dependency analysis</i></td></tr>
+ <tr><td>R5 Dependencies:</td><td><span style="color: grey">(none)</span></td></tr>
+ <tr><td>Draft Dependencies:</td><td><ul>
+  <li>
+hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-parameter-code.html">GuideParameterCode</a>
+ (15 uses),     <a href="http://hl7.org/fhir/R4/codesystem-request-priority.html">RequestPriority</a>
+ (5 uses),     <a href="http://hl7.org/fhir/R4/appointment.html">Appointment</a>
+ (5 uses),     <a href="http://hl7.org/fhir/R4/valueset-languages.html">CommonLanguages</a>
+ (4 uses),     <a href="http://hl7.org/fhir/R4/valueset-appointment-cancellation-reason.html">AppointmentCancellationReason</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-encounter-reason.html">EncounterReasonCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/organization.html">Organization</a>
+ (20 uses),     <a href="http://hl7.org/fhir/R4/slot.html">Slot</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-participantrequired.html">ParticipantRequired</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/condition.html">Condition</a>
+ (6 uses),     <a href="http://hl7.org/fhir/R4/valueset-condition-ver-status.html">ConditionVerificationStatus</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-condition-severity.html">Condition/DiagnosisSeverity</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-body-site.html">SNOMEDCTBodyStructures</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/encounter.html">Encounter</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/practitioner.html">Practitioner</a>
+ (5 uses),     <a href="http://hl7.org/fhir/R4/practitionerrole.html">PractitionerRole</a>
+ (4 uses),     <a href="http://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a>
+ (5 uses),     <a href="http://hl7.org/fhir/R4/valueset-condition-stage.html">ConditionStage</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/clinicalimpression.html">ClinicalImpression</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/diagnosticreport.html">DiagnosticReport</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-condition-stage-type.html">ConditionStageType</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-manifestation-or-symptom.html">ManifestationAndSymptomCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/composition.html">Composition</a>
+ (4 uses),     <a href="http://hl7.org/fhir/R4/valueset-composition-attestation-mode.html">CompositionAttestationMode</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-document-relationship-type.html">DocumentRelationshipType</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-doc-section-codes.html">DocumentSectionCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/device.html">Device</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-list-mode.html">ListMode</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-list-order.html">ListOrderCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-list-empty-reason.html">ListEmptyReasons</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/servicerequest.html">ServiceRequest</a>
+ (4 uses),     <a href="http://hl7.org/fhir/R4/activitydefinition.html">ActivityDefinition</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/plandefinition.html">PlanDefinition</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/careplan.html">CarePlan</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/medicationrequest.html">MedicationRequest</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-servicerequest-orderdetail.html">ServiceRequestOrderDetailsCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-medication-as-needed-reason.html">SNOMEDCTMedicationAsNeededReasonCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/location.html">Location</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-procedure-reason.html">ProcedureReasonCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/coverage.html">Coverage</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/claimresponse.html">ClaimResponse</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/specimen.html">Specimen</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/provenance.html">Provenance</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/codesystem-composition-status.html">CompositionStatus</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/codesystem-request-intent.html">RequestIntent</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/codesystem-appointmentstatus.html">AppointmentStatus</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/codesystem-participationstatus.html">ParticipationStatus</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/codesystem-request-status.html">RequestStatus</a>
+ (1 uses)
+  </li>
+  <li>
+hl7.fhir.uv.extensions.r4#5.2.0:     <a href="http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-structuredefinition-conformance-derivedFrom.html">SDStatusDerivation</a>
+ (66 uses)
+  </li>
+</ul>
+</td></tr>
+ <tr><td>Modifier Extensions:</td><td><span style="color: grey">(none)</span></td></tr>
+ <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://www.saude.gov.br/fhir/r4 (Problem #1 with package-list.json at http://www.saude.gov.br/fhir/r4: Error parsing JSON source: Unexpected content '<' in json format at Line 1 (path=[null]))</td></tr>
+ <tr><td>IPA Comparison:</td><td> n/a</td></tr>
+ <tr><td>IPS Comparison:</td><td> n/a</td></tr>
+ <tr><td>Validation Flags:</td><td> On: autoLoad; Off: hintAboutNonMustSupport, anyExtensionsAllowed, checkAggregation, showReferenceMessages, noExperimentalContent, displayWarnings</td></tr>
+ <tr><td>Summary:</td><td> errors = 5, warn = 0, info = 8, broken links = 0, pinned = n/a.  <button onclick="toggleCodes()">Show Message Ids</button></td></tr>
+</table>
+ <table class="grid">
+   <tr>
+     <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_igor_rira-ig_input_examples_exemplo_RIRA_attended"><b>/home/igor/rira-ig/input/examples/exemplo_RIRA_attended</b></a></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_igor_rira-ig_input_examples_exemplo_RIRA_booked"><b>/home/igor/rira-ig/input/examples/exemplo_RIRA_booked</b></a></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_examples_exemplo_RIRA_cancelled"><b>/home/igor/rira-ig/input/examples/exemplo_RIRA_cancelled</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_igor_rira-ig_input_examples_exemplo_RIRA_pending"><b>/home/igor/rira-ig/input/examples/exemplo_RIRA_pending</b></a></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_myig"><b>/home/igor/rira-ig/input/myig</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_CodeSystem-BRCBHPMTUSS"><b>/home/igor/rira-ig/input/resources/CodeSystem-BRCBHPMTUSS</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_CodeSystem-BRCBO"><b>/home/igor/rira-ig/input/resources/CodeSystem-BRCBO</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>2</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_CodeSystem-BRCID10"><b>/home/igor/rira-ig/input/resources/CodeSystem-BRCID10</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_CodeSystem-BRCategoriaDiagnostico"><b>/home/igor/rira-ig/input/resources/CodeSystem-BRCategoriaDiagnostico</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_CodeSystem-BRJustificativaIndividuoNaoIdentificado"><b>/home/igor/rira-ig/input/resources/CodeSystem-BRJustificativaIndividuoNaoIdentificado</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_CodeSystem-BRModalidadeAssistencial"><b>/home/igor/rira-ig/input/resources/CodeSystem-BRModalidadeAssistencial</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_CodeSystem-BRStatusAgendamentoRegulacaoAssistencial"><b>/home/igor/rira-ig/input/resources/CodeSystem-BRStatusAgendamentoRegulacaoAssistencial</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_CodeSystem-BRStatusRegulacaoAssistencial"><b>/home/igor/rira-ig/input/resources/CodeSystem-BRStatusRegulacaoAssistencial</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_CodeSystem-BRTabelaSUS"><b>/home/igor/rira-ig/input/resources/CodeSystem-BRTabelaSUS</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_CodeSystem-BRTipoDocumento"><b>/home/igor/rira-ig/input/resources/CodeSystem-BRTipoDocumento</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_CodeSystem-BRTipoParticipante"><b>/home/igor/rira-ig/input/resources/CodeSystem-BRTipoParticipante</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_StructureDefinition-BRAgendamentoRegulacaoAssistencial"><b>/home/igor/rira-ig/input/resources/StructureDefinition-BRAgendamentoRegulacaoAssistencial</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_StructureDefinition-BRCID10Avaliado-1.0"><b>/home/igor/rira-ig/input/resources/StructureDefinition-BRCID10Avaliado-1.0</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_StructureDefinition-BRIndividuoNaoIdentificado-1.0"><b>/home/igor/rira-ig/input/resources/StructureDefinition-BRIndividuoNaoIdentificado-1.0</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_StructureDefinition-BRRegulacaoAssistencial"><b>/home/igor/rira-ig/input/resources/StructureDefinition-BRRegulacaoAssistencial</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_StructureDefinition-BRRequisicaoRegulacaoAssistencial"><b>/home/igor/rira-ig/input/resources/StructureDefinition-BRRequisicaoRegulacaoAssistencial</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>4</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_ValueSet-BRCID10-1.0"><b>/home/igor/rira-ig/input/resources/ValueSet-BRCID10-1.0</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_ValueSet-BRCaraterAtendimentoMIRA"><b>/home/igor/rira-ig/input/resources/ValueSet-BRCaraterAtendimentoMIRA</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_ValueSet-BRCategoriaDiagnostico"><b>/home/igor/rira-ig/input/resources/ValueSet-BRCategoriaDiagnostico</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_ValueSet-BREstadoDocumento-1.0"><b>/home/igor/rira-ig/input/resources/ValueSet-BREstadoDocumento-1.0</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_ValueSet-BREstadoResolucaoDiagnosticoProblema-1.0"><b>/home/igor/rira-ig/input/resources/ValueSet-BREstadoResolucaoDiagnosticoProblema-1.0</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_ValueSet-BRIntencaoRegulacao"><b>/home/igor/rira-ig/input/resources/ValueSet-BRIntencaoRegulacao</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_ValueSet-BRJustificativaIndividuoNaoIdentificado-1.0"><b>/home/igor/rira-ig/input/resources/ValueSet-BRJustificativaIndividuoNaoIdentificado-1.0</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_igor_rira-ig_input_resources_ValueSet-BRModalidadeAssistencialMIRA"><b>/home/igor/rira-ig/input/resources/ValueSet-BRModalidadeAssistencialMIRA</b></a></td><td><b>2</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_ValueSet-BROcupacao-1.0"><b>/home/igor/rira-ig/input/resources/ValueSet-BROcupacao-1.0</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_ValueSet-BRProcedimentosNacionais-1.0"><b>/home/igor/rira-ig/input/resources/ValueSet-BRProcedimentosNacionais-1.0</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_ValueSet-BRSexo-1.0"><b>/home/igor/rira-ig/input/resources/ValueSet-BRSexo-1.0</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_ValueSet-BRStatusAgendamentoRegulacaoAssistencial"><b>/home/igor/rira-ig/input/resources/ValueSet-BRStatusAgendamentoRegulacaoAssistencial</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_ValueSet-BRStatusParticipante"><b>/home/igor/rira-ig/input/resources/ValueSet-BRStatusParticipante</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_ValueSet-BRStatusRegulacaoAssistencial"><b>/home/igor/rira-ig/input/resources/ValueSet-BRStatusRegulacaoAssistencial</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_ValueSet-BRStatusRequisicaoRegulacaoAssistencial"><b>/home/igor/rira-ig/input/resources/ValueSet-BRStatusRequisicaoRegulacaoAssistencial</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_ValueSet-BRTipoDocumento-1.0"><b>/home/igor/rira-ig/input/resources/ValueSet-BRTipoDocumento-1.0</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_igor_rira-ig_input_resources_ValueSet-BRTipoParticipante"><b>/home/igor/rira-ig/input/resources/ValueSet-BRTipoParticipante</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="internal"> </a>
+<h2><a href="">n/a</a> <span id="sv" class="toggle" onclick="toggle('v')">Show Validation Information</span> <span class="vcount" onclick="toggle('v')"></span></h2>
+ <div style="border: 1px grey solid; display: none" id="v"></div>
+ <table class="grid">
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_examples_exemplo_RIRA_attended"> </a>
+<h2><a href="Bundle-Example-RIRA-Attended.html">input/examples/exemplo_RIRA_attended.json</a> <span id="svi1" class="toggle" onclick="toggle('vi1')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi1')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi1"><ul style="font-size: 7px"><li>Bundle.entry[0].resource: Validated against </li><li>Bundle.entry[1].resource: Validated against </li><li>Bundle.entry[2].resource: Validated against </li><li>Bundle.entry[3].resource: Validated against </li><li>Bundle/Example-RIRA-Attended: Bundle.entry[0].resource: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle&#8203;.entry[0]&#8203;.resource&#8203;.event[0]&#8203;.detail[1] (l82&#8203;/c16)</b></td><td><b>error</b></td><td><b>Não foi possível resolver a referência de perfil 'http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0'</b><br/><br/><span style="display: block; border: 1px grey solid; border-radius: 5px; background-color: #eeeeee; padding: 3px; margin: 3px "><i><b>Editor's Comment</b>: Errors related to the Patient, Practitioner and Organization Resources</i></span> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Reference_REF_CantResolveProfile</span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_examples_exemplo_RIRA_booked"> </a>
+<h2><a href="Bundle-Example-RIRA-Booked.html">input/examples/exemplo_RIRA_booked.json</a> <span id="svi2" class="toggle" onclick="toggle('vi2')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi2')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi2"><ul style="font-size: 7px"><li>Bundle.entry[0].resource: Validated against </li><li>Bundle.entry[1].resource: Validated against </li><li>Bundle.entry[2].resource: Validated against </li><li>Bundle.entry[3].resource: Validated against </li><li>Bundle/Example-RIRA-Booked: Bundle.entry[0].resource: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle&#8203;.entry[0]&#8203;.resource&#8203;.event[0]&#8203;.detail[1] (l82&#8203;/c16)</b></td><td><b>error</b></td><td><b>Não foi possível resolver a referência de perfil 'http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0'</b><br/><br/><span style="display: block; border: 1px grey solid; border-radius: 5px; background-color: #eeeeee; padding: 3px; margin: 3px "><i><b>Editor's Comment</b>: Errors related to the Patient, Practitioner and Organization Resources</i></span> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Reference_REF_CantResolveProfile</span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_examples_exemplo_RIRA_cancelled"> </a>
+<h2><a href="Bundle-Example-RIRA-Cancelled.html">input/examples/exemplo_RIRA_cancelled.json</a> <span id="svi3" class="toggle" onclick="toggle('vi3')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi3')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi3"><ul style="font-size: 7px"><li>Bundle.entry[0].resource: Validated against </li><li>Bundle.entry[1].resource: Validated against </li><li>Bundle.entry[2].resource: Validated against </li><li>Bundle.entry[3].resource: Validated against </li><li>Bundle/Example-RIRA-Cancelled: Bundle.entry[0].resource: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_examples_exemplo_RIRA_pending"> </a>
+<h2><a href="Bundle-Example-RIRA-Pending.html">input/examples/exemplo_RIRA_pending.json</a> <span id="svi4" class="toggle" onclick="toggle('vi4')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi4')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi4"><ul style="font-size: 7px"><li>Bundle.entry[0].resource: Validated against </li><li>Bundle.entry[1].resource: Validated against </li><li>Bundle.entry[2].resource: Validated against </li><li>Bundle.entry[3].resource: Validated against </li><li>Bundle/Example-RIRA-Pending: Bundle.entry[0].resource: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle&#8203;.entry[0]&#8203;.resource&#8203;.event[0]&#8203;.detail[1] (l78&#8203;/c16)</b></td><td><b>error</b></td><td><b>Não foi possível resolver a referência de perfil 'http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0'</b><br/><br/><span style="display: block; border: 1px grey solid; border-radius: 5px; background-color: #eeeeee; padding: 3px; margin: 3px "><i><b>Editor's Comment</b>: Errors related to the Patient, Practitioner and Organization Resources</i></span> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Reference_REF_CantResolveProfile</span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_myig"> </a>
+<h2><a href="index.html">input/myig.xml</a> <span id="svi5" class="toggle" onclick="toggle('vi5')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi5')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi5"><ul style="font-size: 7px"><li>ImplementationGuide/br.gov.saude.rira.fhir: ImplementationGuide: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_CodeSystem-BRCBHPMTUSS"> </a>
+<h2><a href="CodeSystem-BRCBHPMTUSS.html">input/resources/CodeSystem-BRCBHPMTUSS.xml</a> <span id="svi6" class="toggle" onclick="toggle('vi6')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi6')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi6"><ul style="font-size: 7px"><li>CodeSystem: Validated against </li><li>CodeSystem/BRCBHPMTUSS: CodeSystem: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_CodeSystem-BRCBO"> </a>
+<h2><a href="CodeSystem-BRCBO.html">input/resources/CodeSystem-BRCBO.xml</a> <span id="svi7" class="toggle" onclick="toggle('vi7')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi7')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi7"><ul style="font-size: 7px"><li>CodeSystem: Validated against </li><li>CodeSystem/BRCBO: CodeSystem: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>CodeSystem.property[0] (l1/c847107)</b></td><td><b>information</b></td><td><b>Esta propriedade tem apenas um código ('healthcare') e não um URI, pelo que não tem um significado claramente definido no ecossistema terminológico</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_PROPERTY_UNKNOWN_CODE</span></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>CodeSystem.property[1] (l1/c847107)</b></td><td><b>information</b></td><td><b>Esta propriedade tem apenas um código ('regulated') e não um URI, pelo que não tem um significado claramente definido no ecossistema terminológico</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_PROPERTY_UNKNOWN_CODE</span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_CodeSystem-BRCID10"> </a>
+<h2><a href="CodeSystem-BRCID10.html">input/resources/CodeSystem-BRCID10.xml</a> <span id="svi8" class="toggle" onclick="toggle('vi8')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi8')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi8"><ul style="font-size: 7px"><li>CodeSystem: Validated against </li><li>CodeSystem/BRCID10: CodeSystem: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_CodeSystem-BRCategoriaDiagnostico"> </a>
+<h2><a href="CodeSystem-BRCategoriaDiagnostico.html">input/resources/CodeSystem-BRCategoriaDiagnostico.xml</a> <span id="svi9" class="toggle" onclick="toggle('vi9')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi9')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi9"><ul style="font-size: 7px"><li>CodeSystem: Validated against </li><li>CodeSystem/BRCategoriaDiagnostico: CodeSystem: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_CodeSystem-BRJustificativaIndividuoNaoIdentificado"> </a>
+<h2><a href="CodeSystem-BRJustificativaIndividuoNaoIdentificado.html">input/resources/CodeSystem-BRJustificativaIndividuoNaoIdentificado.xml</a> <span id="svi10" class="toggle" onclick="toggle('vi10')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi10')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi10"><ul style="font-size: 7px"><li>CodeSystem: Validated against </li><li>CodeSystem/BRJustificativaIndividuoNaoIdentificado: CodeSystem: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_CodeSystem-BRModalidadeAssistencial"> </a>
+<h2><a href="CodeSystem-BRModalidadeAssistencial.html">input/resources/CodeSystem-BRModalidadeAssistencial.xml</a> <span id="svi11" class="toggle" onclick="toggle('vi11')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi11')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi11"><ul style="font-size: 7px"><li>CodeSystem: Validated against </li><li>CodeSystem/BRModalidadeAssistencial: CodeSystem: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_CodeSystem-BRStatusAgendamentoRegulacaoAssistencial"> </a>
+<h2><a href="CodeSystem-BRStatusAgendamentoRegulacaoAssistencial.html">input/resources/CodeSystem-BRStatusAgendamentoRegulacaoAssistencial.xml</a> <span id="svi12" class="toggle" onclick="toggle('vi12')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi12')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi12"><ul style="font-size: 7px"><li>CodeSystem: Validated against </li><li>CodeSystem/BRStatusAgendamentoRegulacaoAssistencial: CodeSystem: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_CodeSystem-BRStatusRegulacaoAssistencial"> </a>
+<h2><a href="CodeSystem-BRStatusRegulacaoAssistencial.html">input/resources/CodeSystem-BRStatusRegulacaoAssistencial.xml</a> <span id="svi13" class="toggle" onclick="toggle('vi13')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi13')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi13"><ul style="font-size: 7px"><li>CodeSystem: Validated against </li><li>CodeSystem/BRStatusRegulacaoAssistencial: CodeSystem: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_CodeSystem-BRTabelaSUS"> </a>
+<h2><a href="CodeSystem-BRTabelaSUS.html">input/resources/CodeSystem-BRTabelaSUS.xml</a> <span id="svi14" class="toggle" onclick="toggle('vi14')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi14')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi14"><ul style="font-size: 7px"><li>CodeSystem: Validated against </li><li>CodeSystem/BRTabelaSUS: CodeSystem: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_CodeSystem-BRTipoDocumento"> </a>
+<h2><a href="CodeSystem-BRTipoDocumento.html">input/resources/CodeSystem-BRTipoDocumento.xml</a> <span id="svi15" class="toggle" onclick="toggle('vi15')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi15')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi15"><ul style="font-size: 7px"><li>CodeSystem: Validated against </li><li>CodeSystem/BRTipoDocumento: CodeSystem: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_CodeSystem-BRTipoParticipante"> </a>
+<h2><a href="CodeSystem-BRTipoParticipante.html">input/resources/CodeSystem-BRTipoParticipante.xml</a> <span id="svi16" class="toggle" onclick="toggle('vi16')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi16')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi16"><ul style="font-size: 7px"><li>CodeSystem: Validated against </li><li>CodeSystem/BRTipoParticipante: CodeSystem: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_StructureDefinition-BRAgendamentoRegulacaoAssistencial"> </a>
+<h2><a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">input/resources/StructureDefinition-BRAgendamentoRegulacaoAssistencial.json</a> <span id="svi17" class="toggle" onclick="toggle('vi17')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi17')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi17"><ul style="font-size: 7px"><li>StructureDefinition: Validated against </li><li>StructureDefinition/BRAgendamentoRegulacaoAssistencial: StructureDefinition: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[4]&#8203;.binding&#8203;.extension[0] (l1&#8203;/c205067)</b></td><td><b>information</b></td><td><b>O extensão http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 está obsoleto</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DEPENDS_ON_DEPRECATED</span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_StructureDefinition-BRCID10Avaliado-1.0"> </a>
+<h2><a href="StructureDefinition-BRCID10Avaliado-1.0.html">input/resources/StructureDefinition-BRCID10Avaliado-1.0.json</a> <span id="svi18" class="toggle" onclick="toggle('vi18')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi18')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi18"><ul style="font-size: 7px"><li>StructureDefinition: Validated against </li><li>StructureDefinition/BRCID10Avaliado-1.0: StructureDefinition: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_StructureDefinition-BRIndividuoNaoIdentificado-1.0"> </a>
+<h2><a href="StructureDefinition-BRIndividuoNaoIdentificado-1.0.html">input/resources/StructureDefinition-BRIndividuoNaoIdentificado-1.0.json</a> <span id="svi19" class="toggle" onclick="toggle('vi19')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi19')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi19"><ul style="font-size: 7px"><li>StructureDefinition: Validated against </li><li>StructureDefinition/BRIndividuoNaoIdentificado-1.0: StructureDefinition: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_StructureDefinition-BRRegulacaoAssistencial"> </a>
+<h2><a href="StructureDefinition-BRRegulacaoAssistencial.html">input/resources/StructureDefinition-BRRegulacaoAssistencial.json</a> <span id="svi20" class="toggle" onclick="toggle('vi20')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi20')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi20"><ul style="font-size: 7px"><li>StructureDefinition: Validated against </li><li>StructureDefinition/BRRegulacaoAssistencial: StructureDefinition: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[109]</b></td><td><b>information</b></td><td><b>The slice definition for Composition.event has a maximum of 1 but the slices add up to a maximum of 7. Check that this is what is intended</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_StructureDefinition-BRRequisicaoRegulacaoAssistencial"> </a>
+<h2><a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">input/resources/StructureDefinition-BRRequisicaoRegulacaoAssistencial.json</a> <span id="svi21" class="toggle" onclick="toggle('vi21')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi21')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi21"><ul style="font-size: 7px"><li>StructureDefinition: Validated against </li><li>StructureDefinition/BRRequisicaoRegulacaoAssistencial: StructureDefinition: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[57]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c277738)</b></td><td><b>information</b></td><td><b>O valor da cadeia de caracteres contém texto que se assemelha a etiquetas HTML incorporadas. Se este conteúdo for transformado em HTML sem um pós-processamento adequado, pode constituir um risco para a segurança</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SECURITY_STRING_CONTENT_WARNING</span></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[64]&#8203;.type[0]&#8203;.extension[1] (l1&#8203;/c287737)</b></td><td><b>information</b></td><td><b>O extensão http://hl7.org/fhir/StructureDefinition/regex|5.2.0 está obsoleto com a nota This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DEPENDS_ON_DEPRECATED_NOTE</span></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[79]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c312962)</b></td><td><b>information</b></td><td><b>O valor da cadeia de caracteres contém texto que se assemelha a etiquetas HTML incorporadas. Se este conteúdo for transformado em HTML sem um pós-processamento adequado, pode constituir um risco para a segurança</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SECURITY_STRING_CONTENT_WARNING</span></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[106]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c355837)</b></td><td><b>information</b></td><td><b>O valor da cadeia de caracteres contém texto que se assemelha a etiquetas HTML incorporadas. Se este conteúdo for transformado em HTML sem um pós-processamento adequado, pode constituir um risco para a segurança</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SECURITY_STRING_CONTENT_WARNING</span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_ValueSet-BRCID10-1.0"> </a>
+<h2><a href="ValueSet-BRCID10-1.0.html">input/resources/ValueSet-BRCID10-1.0.json</a> <span id="svi22" class="toggle" onclick="toggle('vi22')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi22')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi22"><ul style="font-size: 7px"><li>ValueSet: Validated against </li><li>ValueSet/BRCID10-1.0: ValueSet: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_ValueSet-BRCaraterAtendimentoMIRA"> </a>
+<h2><a href="ValueSet-BRCaraterAtendimentoMIRA.html">input/resources/ValueSet-BRCaraterAtendimentoMIRA.json</a> <span id="svi23" class="toggle" onclick="toggle('vi23')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi23')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi23"><ul style="font-size: 7px"><li>ValueSet: Validated against </li><li>ValueSet/BRCaraterAtendimentoMIRA: ValueSet: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_ValueSet-BRCategoriaDiagnostico"> </a>
+<h2><a href="ValueSet-BRCategoriaDiagnostico.html">input/resources/ValueSet-BRCategoriaDiagnostico.json</a> <span id="svi24" class="toggle" onclick="toggle('vi24')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi24')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi24"><ul style="font-size: 7px"><li>ValueSet: Validated against </li><li>ValueSet/BRCategoriaDiagnostico: ValueSet: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_ValueSet-BREstadoDocumento-1.0"> </a>
+<h2><a href="ValueSet-BREstadoDocumento-1.0.html">input/resources/ValueSet-BREstadoDocumento-1.0.json</a> <span id="svi25" class="toggle" onclick="toggle('vi25')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi25')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi25"><ul style="font-size: 7px"><li>ValueSet: Validated against </li><li>ValueSet/BREstadoDocumento-1.0: ValueSet: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_ValueSet-BREstadoResolucaoDiagnosticoProblema-1.0"> </a>
+<h2><a href="ValueSet-BREstadoResolucaoDiagnosticoProblema-1.0.html">input/resources/ValueSet-BREstadoResolucaoDiagnosticoProblema-1.0.json</a> <span id="svi26" class="toggle" onclick="toggle('vi26')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi26')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi26"><ul style="font-size: 7px"><li>ValueSet: Validated against </li><li>ValueSet/BREstadoResolucaoDiagnosticoProblema-1.0: ValueSet: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_ValueSet-BRIntencaoRegulacao"> </a>
+<h2><a href="ValueSet-BRIntencaoRegulacao.html">input/resources/ValueSet-BRIntencaoRegulacao.json</a> <span id="svi27" class="toggle" onclick="toggle('vi27')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi27')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi27"><ul style="font-size: 7px"><li>ValueSet: Validated against </li><li>ValueSet/BRIntencaoRegulacao: ValueSet: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_ValueSet-BRJustificativaIndividuoNaoIdentificado-1.0"> </a>
+<h2><a href="ValueSet-BRJustificativaIndividuoNaoIdentificado-1.0.html">input/resources/ValueSet-BRJustificativaIndividuoNaoIdentificado-1.0.json</a> <span id="svi28" class="toggle" onclick="toggle('vi28')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi28')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi28"><ul style="font-size: 7px"><li>ValueSet: Validated against </li><li>ValueSet/BRJustificativaIndividuoNaoIdentificado-1.0: ValueSet: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_ValueSet-BRModalidadeAssistencialMIRA"> </a>
+<h2><a href="ValueSet-BRModalidadeAssistencialMIRA.html">input/resources/ValueSet-BRModalidadeAssistencialMIRA.json</a> <span id="svi29" class="toggle" onclick="toggle('vi29')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi29')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi29"><ul style="font-size: 7px"><li>ValueSet: Validated against </li><li>ValueSet/BRModalidadeAssistencialMIRA: ValueSet: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>ValueSet&#8203;.compose&#8203;.include[0]&#8203;.concept[0] (l1&#8203;/c2674)</b></td><td><b>error</b></td><td><b>O código '04' não é válido no sistema http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial versão * (04)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">VALUESET_INCLUDE_INVALID_CONCEPT_CODE_VER</span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>ValueSet&#8203;.compose&#8203;.include[0]&#8203;.concept[1] (l1&#8203;/c2725)</b></td><td><b>error</b></td><td><b>O código '09' não é válido no sistema http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial versão * (09)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">VALUESET_INCLUDE_INVALID_CONCEPT_CODE_VER</span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_ValueSet-BROcupacao-1.0"> </a>
+<h2><a href="ValueSet-BROcupacao-1.0.html">input/resources/ValueSet-BROcupacao-1.0.json</a> <span id="svi30" class="toggle" onclick="toggle('vi30')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi30')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi30"><ul style="font-size: 7px"><li>ValueSet: Validated against </li><li>ValueSet/BROcupacao-1.0: ValueSet: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_ValueSet-BRProcedimentosNacionais-1.0"> </a>
+<h2><a href="ValueSet-BRProcedimentosNacionais-1.0.html">input/resources/ValueSet-BRProcedimentosNacionais-1.0.json</a> <span id="svi31" class="toggle" onclick="toggle('vi31')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi31')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi31"><ul style="font-size: 7px"><li>ValueSet: Validated against </li><li>ValueSet/BRProcedimentosNacionais-1.0: ValueSet: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_ValueSet-BRSexo-1.0"> </a>
+<h2><a href="ValueSet-BRSexo-1.0.html">input/resources/ValueSet-BRSexo-1.0.json</a> <span id="svi32" class="toggle" onclick="toggle('vi32')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi32')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi32"><ul style="font-size: 7px"><li>ValueSet: Validated against </li><li>ValueSet/BRSexo-1.0: ValueSet: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_ValueSet-BRStatusAgendamentoRegulacaoAssistencial"> </a>
+<h2><a href="ValueSet-BRStatusAgendamentoRegulacaoAssistencial.html">input/resources/ValueSet-BRStatusAgendamentoRegulacaoAssistencial.json</a> <span id="svi33" class="toggle" onclick="toggle('vi33')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi33')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi33"><ul style="font-size: 7px"><li>ValueSet: Validated against </li><li>ValueSet/BRStatusAgendamentoRegulacaoAssistencial: ValueSet: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_ValueSet-BRStatusParticipante"> </a>
+<h2><a href="ValueSet-BRStatusParticipante.html">input/resources/ValueSet-BRStatusParticipante.json</a> <span id="svi34" class="toggle" onclick="toggle('vi34')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi34')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi34"><ul style="font-size: 7px"><li>ValueSet: Validated against </li><li>ValueSet/BRStatusParticipante: ValueSet: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_ValueSet-BRStatusRegulacaoAssistencial"> </a>
+<h2><a href="ValueSet-BRStatusRegulacaoAssistencial.html">input/resources/ValueSet-BRStatusRegulacaoAssistencial.json</a> <span id="svi35" class="toggle" onclick="toggle('vi35')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi35')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi35"><ul style="font-size: 7px"><li>ValueSet: Validated against </li><li>ValueSet/BRStatusRegulacaoAssistencial: ValueSet: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_ValueSet-BRStatusRequisicaoRegulacaoAssistencial"> </a>
+<h2><a href="ValueSet-BRStatusRequisicaoRegulacaoAssistencial.html">input/resources/ValueSet-BRStatusRequisicaoRegulacaoAssistencial.json</a> <span id="svi36" class="toggle" onclick="toggle('vi36')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi36')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi36"><ul style="font-size: 7px"><li>ValueSet: Validated against </li><li>ValueSet/BRStatusRequisicaoRegulacaoAssistencial: ValueSet: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_ValueSet-BRTipoDocumento-1.0"> </a>
+<h2><a href="ValueSet-BRTipoDocumento-1.0.html">input/resources/ValueSet-BRTipoDocumento-1.0.json</a> <span id="svi37" class="toggle" onclick="toggle('vi37')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi37')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi37"><ul style="font-size: 7px"><li>ValueSet: Validated against </li><li>ValueSet/BRTipoDocumento-1.0: ValueSet: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_igor_rira-ig_input_resources_ValueSet-BRTipoParticipante"> </a>
+<h2><a href="ValueSet-BRTipoParticipante.html">input/resources/ValueSet-BRTipoParticipante.json</a> <span id="svi38" class="toggle" onclick="toggle('vi38')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi38')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi38"><ul style="font-size: 7px"><li>ValueSet: Validated against </li><li>ValueSet/BRTipoParticipante: ValueSet: Validated against </li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<a name="suppressed"> </a>
+<p><b>Suppressed Messages (Warnings, hints, broken links)</b></p>
+<p><b>(And include comments like this justifying why)</b></p><ul>
+ <li>An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide <span style="color: navy">(1 uses)</span></li>
+ <li>An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide <span style="color: navy">(1 uses)</span></li>
+ <li>An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide <span style="color: maroon">(0 uses)</span></li>
+ <li>The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide <span style="color: navy">(1 uses)</span></li>
+ <li>The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide <span style="color: navy">(1 uses)</span></li>
+ <li>The Implementation Guide contains no examples for this extension <span style="color: navy">(1 uses)</span></li>
+ <li>The Implementation Guide contains no examples for this profile <span style="color: maroon">(0 uses)</span></li>
+ <li>The Implementation Guide contains no explicitly linked examples for this profile <span style="color: navy">(3 uses)</span></li>
+</ul>
+<p><b>Errors related to the Patient, Practitioner and Organization Resources</b></p><ul>
+ <li>%StructureDefinition/BREstabelecimentoSaude-1.0% <span style="color: navy">(64 uses)</span></li>
+ <li>%StructureDefinition/BRIndividuo-1.0% <span style="color: navy">(23 uses)</span></li>
+ <li>%StructureDefinition/BRLotacaoProfissional-1.0% <span style="color: maroon">(0 uses)</span></li>
+ <li>%StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0% <span style="color: navy">(5 uses)</span></li>
+ <li>%StructureDefinition/BRProfissional-1.0% <span style="color: maroon">(0 uses)</span></li>
+</ul>
+<p><b>Errors related to the RNDS CodeSystem specifications</b></p><ul>
+ <li>%Reference to draft CodeSystem% <span style="color: navy">(4 uses)</span></li>
+ <li>A definition for CodeSystem 'http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial' version '*' could not be found, so the code cannot be validated. Valid versions: [] <span style="color: navy">(1 uses)</span></li>
+ <li>Binding http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial could not be expanded <span style="color: navy">(1 uses)</span></li>
+ <li>Error from http://tx.fhir.org/r4: Unable to provide support for code system http://hl7.org/fhir/appointmentstatus version * (known versions = 4.0.1) <span style="color: navy">(1 uses)</span></li>
+ <li>Error from http://tx.fhir.org/r4: Unable to provide support for code system http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBHPMTUSS version * <span style="color: navy">(1 uses)</span></li>
+ <li>The code '04' is not valid in the system http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial version * (04) <span style="color: maroon">(0 uses)</span></li>
+ <li>The code '09' is not valid in the system http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial version * (09) <span style="color: maroon">(0 uses)</span></li>
+ <li>The value set expansion is too large, and only a subset has been displayed <span style="color: navy">(2 uses)</span></li>
+ <li>This property has only a code ('healthcare') and not a URI, so it has no clearly defined meaning in the terminology ecosystem <span style="color: maroon">(0 uses)</span></li>
+ <li>This property has only a code ('regulated') and not a URI, so it has no clearly defined meaning in the terminology ecosystem <span style="color: maroon">(0 uses)</span></li>
+</ul>
+<p><b>Errors related to the RNDS specifications</b></p><ul>
+ <li>%Não foi possível encontrar uma definição para o valor URL% <span style="color: maroon">(0 uses)</span></li>
+ <li>%Os UUIDs devem ser válidos e em minúsculas% <span style="color: maroon">(0 uses)</span></li>
+ <li>Details for urn:uuid:transient-1 matching against profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial|1.0.0 <span style="color: maroon">(0 uses)</span></li>
+ <li>Unable to find a profile match for urn:uuid:transient-1 among choices: http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial <span style="color: maroon">(0 uses)</span></li>
+</ul>
+<a name="sorted"> </a>
+<p><b>Errors sorted by type</b></p>
+<hr/>
+<a name="CODESYSTEM_PROPERTY_UNKNOWN_CODE"> </a>
+<h2>CODESYSTEM_PROPERTY_UNKNOWN_CODE</h2>
+ <table class="grid">
+   <tr style="background-color: #fffff2">
+     <td><a href="CodeSystem-BRCBO.html">input/resources/CodeSystem-BRCBO.xml</a></td><td><b>Esta propriedade tem apenas um código ('healthcare') e não um URI, pelo que não tem um significado claramente definido no ecossistema terminológico</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="CodeSystem-BRCBO.html">input/resources/CodeSystem-BRCBO.xml</a></td><td><b>Esta propriedade tem apenas um código ('regulated') e não um URI, pelo que não tem um significado claramente definido no ecossistema terminológico</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="MSG_DEPENDS_ON_DEPRECATED"> </a>
+<h2>MSG_DEPENDS_ON_DEPRECATED</h2>
+ <table class="grid">
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">input/resources/StructureDefinition-BRAgendamentoRegulacaoAssistencial.json</a></td><td><b>O extensão http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 está obsoleto</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="MSG_DEPENDS_ON_DEPRECATED_NOTE"> </a>
+<h2>MSG_DEPENDS_ON_DEPRECATED_NOTE</h2>
+ <table class="grid">
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">input/resources/StructureDefinition-BRRequisicaoRegulacaoAssistencial.json</a></td><td><b>O extensão http://hl7.org/fhir/StructureDefinition/regex|5.2.0 está obsoleto com a nota This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="Reference_REF_CantResolveProfile"> </a>
+<h2>Reference_REF_CantResolveProfile</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-Example-RIRA-Attended.html">input/examples/exemplo_RIRA_attended.json</a></td><td><b>Não foi possível resolver a referência de perfil 'http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0'</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-Example-RIRA-Booked.html">input/examples/exemplo_RIRA_booked.json</a></td><td><b>Não foi possível resolver a referência de perfil 'http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0'</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-Example-RIRA-Pending.html">input/examples/exemplo_RIRA_pending.json</a></td><td><b>Não foi possível resolver a referência de perfil 'http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0'</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="SECURITY_STRING_CONTENT_WARNING"> </a>
+<h2>SECURITY_STRING_CONTENT_WARNING</h2>
+ <table class="grid">
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">input/resources/StructureDefinition-BRRequisicaoRegulacaoAssistencial.json</a></td><td><b>O valor da cadeia de caracteres contém texto que se assemelha a etiquetas HTML incorporadas. Se este conteúdo for transformado em HTML sem um pós-processamento adequado, pode constituir um risco para a segurança</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">input/resources/StructureDefinition-BRRequisicaoRegulacaoAssistencial.json</a></td><td><b>O valor da cadeia de caracteres contém texto que se assemelha a etiquetas HTML incorporadas. Se este conteúdo for transformado em HTML sem um pós-processamento adequado, pode constituir um risco para a segurança</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">input/resources/StructureDefinition-BRRequisicaoRegulacaoAssistencial.json</a></td><td><b>O valor da cadeia de caracteres contém texto que se assemelha a etiquetas HTML incorporadas. Se este conteúdo for transformado em HTML sem um pós-processamento adequado, pode constituir um risco para a segurança</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="VALUESET_INCLUDE_INVALID_CONCEPT_CODE_VER"> </a>
+<h2>VALUESET_INCLUDE_INVALID_CONCEPT_CODE_VER</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="ValueSet-BRModalidadeAssistencialMIRA.html">input/resources/ValueSet-BRModalidadeAssistencialMIRA.json</a></td><td><b>O código '04' não é válido no sistema http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial versão * (04)</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="ValueSet-BRModalidadeAssistencialMIRA.html">input/resources/ValueSet-BRModalidadeAssistencialMIRA.json</a></td><td><b>O código '09' não é válido no sistema http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial versão * (09)</b></td>
+   </tr>
+</table>
+</body>
+</html>

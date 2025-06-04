@@ -12,7 +12,7 @@
   fhir:language [ fhir:v "pt-BR"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"pt-BR\" lang=\"pt-BR\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide br.gov.saude.rira.fhir</b></p><a name=\"br.gov.saude.rira.fhir\"> </a><a name=\"hcbr.gov.saude.rira.fhir\"> </a><a name=\"br.gov.saude.rira.fhir-pt-BR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: pt-BR</p></div><h2>RIRARNDSIG</h2><p>The official URL for this implementation guide is: </p><pre>http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir</pre><div><p>Guia de Implementação da Rede Nacional de Dados em Saúde (RNDS)</p>\n</div></div>"^^rdf:XMLLiteral
+     fhir:div "<div xml:lang=\"pt-BR\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"pt-BR\"><p class=\"res-header-id\"><b>Narrativa gerada: ImplementationGuide br.gov.saude.rira.fhir</b></p><a name=\"br.gov.saude.rira.fhir\"> </a><a name=\"hcbr.gov.saude.rira.fhir\"> </a><a name=\"br.gov.saude.rira.fhir-pt-BR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Língua: pt-BR</p></div><h2>RIRARNDSIG</h2><p>O URL oficial para este guia de implementação é: </p><pre>http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir</pre><div><p>Guia de Implementação da Rede Nacional de Dados em Saúde (RNDS)</p>\n</div></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
@@ -33,7 +33,7 @@
   fhir:title [ fhir:v "Guia de Implementação da Regulação Assistencial (RIRA) da RNDS"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v false] ; # 
-  fhir:date [ fhir:v "2025-04-09T12:39:07-03:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-06-04T15:05:32-03:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Ministério da Saúde do Brasil"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Ministério da Saúde do Brasil" ] ;
@@ -66,7 +66,7 @@
        fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
      ] ;
      fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
-     fhir:version [ fhir:v "6.2.0" ]
+     fhir:version [ fhir:v "6.4.0" ]
   ] [
      fhir:id [ fhir:v "hl7ext" ] ;
      fhir:extension ( [
@@ -478,7 +478,7 @@
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency"^^xsd:anyURI ] ;
        fhir:value [
          a fhir:code ;
-         fhir:v "hl7.fhir.uv.tools.r4#0.4.1"
+         fhir:v "hl7.fhir.uv.tools.r4#0.5.0"
        ]
      ] [
        fhir:extension ( [
@@ -872,6 +872,82 @@
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] ) ;
      fhir:resource ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://www.saude.gov.br/fhir/r4/Bundle/Example-RIRA-Attended> ;
+         fhir:reference [ fhir:v "Bundle/Example-RIRA-Attended" ]
+       ] ;
+       fhir:name [ fhir:v "Bundle de exemplo do RIRA (Atendido/Internado)" ] ;
+       fhir:description [ fhir:v "Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Atendido/Internado     (Attended)" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial"^^xsd:anyURI ;
+         fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://www.saude.gov.br/fhir/r4/Bundle/Example-RIRA-Booked> ;
+         fhir:reference [ fhir:v "Bundle/Example-RIRA-Booked" ]
+       ] ;
+       fhir:name [ fhir:v "Bundle de exemplo do RIRA (Agendado)" ] ;
+       fhir:description [ fhir:v "Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Agendado (Booked)" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial"^^xsd:anyURI ;
+         fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://www.saude.gov.br/fhir/r4/Bundle/Example-RIRA-Cancelled> ;
+         fhir:reference [ fhir:v "Bundle/Example-RIRA-Cancelled" ]
+       ] ;
+       fhir:name [ fhir:v "Bundle de exemplo do RIRA (Negado/Cancelado)" ] ;
+       fhir:description [ fhir:v "Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Negado/Cancelado (Cancelled)" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial"^^xsd:anyURI ;
+         fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://www.saude.gov.br/fhir/r4/Bundle/Example-RIRA-Pending> ;
+         fhir:reference [ fhir:v "Bundle/Example-RIRA-Pending" ]
+       ] ;
+       fhir:name [ fhir:v "Bundle de exemplo do RIRA (Pendente)" ] ;
+       fhir:description [ fhir:v "Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Pendente (Pending)" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial"^^xsd:anyURI ;
+         fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial>
+       ]
+     ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
