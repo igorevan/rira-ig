@@ -51,9 +51,9 @@
     <version value="5.1.0" />
   </dependsOn> -->
   <definition>
-    <!-- <resource>
+    <resource>
       <reference>
-        <reference value="Bundle/example-rira-attended" />
+        <reference value="Bundle/Example-RIRA-Attended" />
       </reference>
       <name value="Bundle de exemplo do RIRA (Atendido/Internado)" />
       <description
@@ -64,7 +64,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/example-rira-booked" />
+        <reference value="Bundle/Example-RIRA-Booked" />
       </reference>
       <name value="Bundle de exemplo do RIRA (Agendado)" />
       <description
@@ -74,25 +74,25 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/example-rira-cancelled" />
+        <reference value="Bundle/Example-RIRA-Cancelled" />
       </reference>
       <name value="Bundle de exemplo do RIRA (Negado/Cancelado)" />
       <description
         value="Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Negado/Cancelado (Cancelled)"
-    />
+      />
       <exampleCanonical
         value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial" />
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/example-rira-pending" />
+        <reference value="Bundle/Example-RIRA-Pending" />
       </reference>
       <name value="Bundle de exemplo do RIRA (Pendente)" />
       <description
         value="Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Pendente (Pending)" />
       <exampleCanonical
         value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial" />
-    </resource> -->
+    </resource>
     <page>
       <nameUrl value="toc.html" />
       <title value="Índice" />
