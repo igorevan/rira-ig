@@ -16,4 +16,4 @@ RIRARNDSIG
 /home/igor/rira-ig/input/resources/ValueSet-BRModalidadeAssistencialMIRA.json: line 1, col 2725, Error - O código '09' não é válido no sistema http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial versão * (09) (BUSINESSRULE)
 
 err = 5, warn = 0, info = 8
-IG Publisher Version: 2.0.4
+IG Publisher Version: 2.0.5

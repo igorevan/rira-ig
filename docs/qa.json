@@ -6,8 +6,8 @@
   "status" : "draft",
   "package-id" : "br.gov.saude.rira.fhir",
   "ig-ver" : "1.0.0",
-  "date" : "Wed, 04 Jun, 2025 15:05:55 -0300",
-  "dateISO8601" : "2025-06-04T15:05:55-03:00",
+  "date" : "Thu, 05 Jun, 2025 16:48:10 -0300",
+  "dateISO8601" : "2025-06-05T16:48:10-03:00",
   "errs" : 5,
   "warnings" : 0,
   "hints" : 8,
@@ -15,5 +15,5 @@
   "suppressed-warnings" : 97,
   "version" : "4.0.1",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 5784259680
+  "maxMemory" : 5563646888
 }

@@ -4,6 +4,21 @@
   <a name="exemplos"> </a>
   <h3>Exemplos</h3>
   <p>
-
+  <p>
+    <a href="Bundle-Example-RIRA-Attended.html">Bundle de exemplo do Registro de Regulação Assistencial (RIRA)
+      Atendido/Internado (Attended)</a>
+  </p>
+  <p>
+    <a href="Bundle-Example-RIRA-Booked.html">Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Agendado
+      (Booked)</a>
+  </p>
+  <p>
+    <a href="Bundle-Example-RIRA-Cancelled.html">Bundle de exemplo do Registro de Regulação Assistencial (RIRA)
+      Negado/Cancelado (Cancelled)</a>
+  </p>
+  <p>
+    <a href="Bundle-Example-RIRA-Pending.html">Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Pendente
+      (Pending)</a>
+  </p>
   </p>
 </div>
