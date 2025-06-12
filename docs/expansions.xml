@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="104ff457-a9c9-45f7-ab7a-7307dad60c35"/>
+  <id value="f81ea8eb-99b3-403e-a12a-0002393a9f37"/>
   <meta>
-    <lastUpdated value="2025-06-05T16:48:10.578-03:00"/>
+    <lastUpdated value="2025-06-12T09:39:41.775-03:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -8052,8 +8052,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:d7cc9c22-2c07-4949-9b33-4871919ec462"/>
-          <timestamp value="2025-06-05T16:57:43-03:00"/>
+          <identifier value="urn:uuid:cde66b73-96aa-4cc6-a104-d17004664b98"/>
+          <timestamp value="2025-06-12T09:49:23-03:00"/>
           <total value="14230"/>
           <offset value="0"/>
           <parameter>
@@ -13115,12 +13115,7 @@
                 </td>
                 <td>http://hl7.org/fhir/request-priority</td>
                 <td>Eletivo</td>
-                <td>
-                  <div>
-                    <p>The request has normal priority.</p>
-
-                  </div>
-                </td>
+                <td>The request has normal priority.</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -13129,12 +13124,7 @@
                 </td>
                 <td>http://hl7.org/fhir/request-priority</td>
                 <td>Urgência</td>
-                <td>
-                  <div>
-                    <p>The request should be actioned promptly - higher priority than routine.</p>
-
-                  </div>
-                </td>
+                <td>The request should be actioned promptly - higher priority than routine.</td>
               </tr>
             </table>
           </div>
@@ -13154,8 +13144,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:329ed2f3-e2ea-47da-8ea3-0638eb07ef14"/>
-          <timestamp value="2025-06-05T16:57:44-03:00"/>
+          <identifier value="urn:uuid:29c8f5a1-0084-4187-bb3b-47523391bec5"/>
+          <timestamp value="2025-06-12T09:49:25-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -13258,8 +13248,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:c3fd440b-ac9a-4993-ac3d-b84e1892098f"/>
-          <timestamp value="2025-06-05T16:57:44-03:00"/>
+          <identifier value="urn:uuid:9fc96851-3f29-443b-a49c-93d1d961d716"/>
+          <timestamp value="2025-06-12T09:49:25-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -13334,12 +13324,7 @@
                 </td>
                 <td>http://hl7.org/fhir/composition-status</td>
                 <td>Preliminar</td>
-                <td>
-                  <div>
-                    <p>This is a preliminary composition or document (also known as initial or interim). The content may be incomplete or unverified.</p>
-
-                  </div>
-                </td>
+                <td>This is a preliminary composition or document (also known as initial or interim). The content may be incomplete or unverified.</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -13348,12 +13333,7 @@
                 </td>
                 <td>http://hl7.org/fhir/composition-status</td>
                 <td>Finalizado</td>
-                <td>
-                  <div>
-                    <p>This version of the composition is complete and verified by an appropriate person and no further work is planned. Any subsequent updates would be on a new version of the composition.</p>
-
-                  </div>
-                </td>
+                <td>This version of the composition is complete and verified by an appropriate person and no further work is planned. Any subsequent updates would be on a new version of the composition.</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -13362,12 +13342,7 @@
                 </td>
                 <td>http://hl7.org/fhir/composition-status</td>
                 <td>Atualizado</td>
-                <td>
-                  <div>
-                    <p>The composition content or the referenced resources have been modified (edited or added to) subsequent to being released as &quot;final&quot; and the composition is complete and verified by an authorized person.</p>
-
-                  </div>
-                </td>
+                <td>The composition content or the referenced resources have been modified (edited or added to) subsequent to being released as &quot;final&quot; and the composition is complete and verified by an authorized person.</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -13376,12 +13351,7 @@
                 </td>
                 <td>http://hl7.org/fhir/composition-status</td>
                 <td>Em estado de erro</td>
-                <td>
-                  <div>
-                    <p>The composition or document was originally created/issued in error, and this is an amendment that marks that the entire series should not be considered as valid.</p>
-
-                  </div>
-                </td>
+                <td>The composition or document was originally created/issued in error, and this is an amendment that marks that the entire series should not be considered as valid.</td>
               </tr>
             </table>
           </div>
@@ -13401,8 +13371,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:8366c495-a6b9-4946-801a-7decf66f580c"/>
-          <timestamp value="2025-06-05T16:57:44-03:00"/>
+          <identifier value="urn:uuid:dc985985-0890-460b-b15a-84bfec6730a8"/>
+          <timestamp value="2025-06-12T09:49:25-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -13491,12 +13461,7 @@
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/condition-clinical</td>
                 <td>Ativo</td>
-                <td>
-                  <div>
-                    <p>The subject is currently experiencing the condition or situation, there is evidence of the condition or situation, or considered to be a significant risk.</p>
-
-                  </div>
-                </td>
+                <td>The subject is currently experiencing the condition or situation, there is evidence of the condition or situation, or considered to be a significant risk.</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -13505,12 +13470,7 @@
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/condition-clinical</td>
                 <td>Recorrente</td>
-                <td>
-                  <div>
-                    <p>The subject is experiencing a reoccurence or repeating of a previously resolved condition or situation, e.g. urinary tract infection, food insecurity.</p>
-
-                  </div>
-                </td>
+                <td>The subject is experiencing a reoccurence or repeating of a previously resolved condition or situation, e.g. urinary tract infection, food insecurity.</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -13519,12 +13479,7 @@
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/condition-clinical</td>
                 <td>Recidiva</td>
-                <td>
-                  <div>
-                    <p>The subject is experiencing a return of a condition or situation after a period of improvement or remission, e.g. relapse of cancer, alcoholism.</p>
-
-                  </div>
-                </td>
+                <td>The subject is experiencing a return of a condition or situation after a period of improvement or remission, e.g. relapse of cancer, alcoholism.</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -13533,12 +13488,7 @@
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/condition-clinical</td>
                 <td>Inativo</td>
-                <td>
-                  <div>
-                    <p>The subject is no longer experiencing the condition or situation and there is no longer evidence or appreciable risk of the condition or situation.</p>
-
-                  </div>
-                </td>
+                <td>The subject is no longer experiencing the condition or situation and there is no longer evidence or appreciable risk of the condition or situation.</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -13547,12 +13497,7 @@
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/condition-clinical</td>
                 <td>Remissão</td>
-                <td>
-                  <div>
-                    <p>The subject is not presently experiencing the condition or situation, but there is a risk of the condition or situation returning.</p>
-
-                  </div>
-                </td>
+                <td>The subject is not presently experiencing the condition or situation, but there is a risk of the condition or situation returning.</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -13561,12 +13506,7 @@
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/condition-clinical</td>
                 <td>Resolvido</td>
-                <td>
-                  <div>
-                    <p>The subject is not presently experiencing the condition or situation and there is a negligible perceived risk of the condition or situation returning.</p>
-
-                  </div>
-                </td>
+                <td>The subject is not presently experiencing the condition or situation and there is a negligible perceived risk of the condition or situation returning.</td>
               </tr>
             </table>
           </div>
@@ -13586,8 +13526,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:e95e00fb-2ccf-49f9-ad09-b340c8696a93"/>
-          <timestamp value="2025-06-05T16:57:44-03:00"/>
+          <identifier value="urn:uuid:ec4894c4-3ec4-4a85-901c-ced2a6bebc5b"/>
+          <timestamp value="2025-06-12T09:49:25-03:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -13818,8 +13758,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:11549684-1d82-40af-883c-1113479d34a2"/>
-          <timestamp value="2025-06-05T16:57:44-03:00"/>
+          <identifier value="urn:uuid:7faba36a-ca55-45bb-94fd-9c8d51b06af4"/>
+          <timestamp value="2025-06-12T09:49:25-03:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>
@@ -13989,8 +13929,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:adef1fc0-641f-4d61-b551-39ca6627444d"/>
-          <timestamp value="2025-06-05T16:57:44-03:00"/>
+          <identifier value="urn:uuid:846f7e19-56e2-414d-a7d5-a7ce1d7d2134"/>
+          <timestamp value="2025-06-12T09:49:25-03:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -14106,8 +14046,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:b6317ca2-498b-4487-99ee-29853bf74363"/>
-          <timestamp value="2025-06-05T16:57:44-03:00"/>
+          <identifier value="urn:uuid:a3112538-4848-4548-a9b3-9d9fec90cfc8"/>
+          <timestamp value="2025-06-12T09:49:25-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -22190,8 +22130,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:b22ec9b3-9b7e-4515-a007-476ed6d4cc45"/>
-          <timestamp value="2025-06-05T16:57:44-03:00"/>
+          <identifier value="urn:uuid:bfcfe4f6-f9da-4187-a35b-c3dd5a423c04"/>
+          <timestamp value="2025-06-12T09:49:25-03:00"/>
           <total value="2714"/>
           <offset value="0"/>
           <parameter>
@@ -27256,12 +27196,7 @@
                 </td>
                 <td>http://hl7.org/fhir/administrative-gender</td>
                 <td>Masculino</td>
-                <td>
-                  <div>
-                    <p>Male.</p>
-
-                  </div>
-                </td>
+                <td>Male.</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -27270,12 +27205,7 @@
                 </td>
                 <td>http://hl7.org/fhir/administrative-gender</td>
                 <td>Feminino</td>
-                <td>
-                  <div>
-                    <p>Female.</p>
-
-                  </div>
-                </td>
+                <td>Female.</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -27284,12 +27214,7 @@
                 </td>
                 <td>http://hl7.org/fhir/administrative-gender</td>
                 <td>Ignorado</td>
-                <td>
-                  <div>
-                    <p>Unknown.</p>
-
-                  </div>
-                </td>
+                <td>Unknown.</td>
               </tr>
             </table>
           </div>
@@ -27309,8 +27234,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:a84a4003-7d7f-435c-9e02-60caa9195497"/>
-          <timestamp value="2025-06-05T16:57:46-03:00"/>
+          <identifier value="urn:uuid:04e9b031-e114-4dac-8e54-42a929f66d18"/>
+          <timestamp value="2025-06-12T09:49:27-03:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -27387,12 +27312,7 @@
                 </td>
                 <td>http://hl7.org/fhir/participationstatus</td>
                 <td>Aceito</td>
-                <td>
-                  <div>
-                    <p>The participant has accepted the appointment.</p>
-
-                  </div>
-                </td>
+                <td>The participant has accepted the appointment.</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -27401,12 +27321,7 @@
                 </td>
                 <td>http://hl7.org/fhir/participationstatus</td>
                 <td>Negado</td>
-                <td>
-                  <div>
-                    <p>The participant has declined the appointment and will not participate in the appointment.</p>
-
-                  </div>
-                </td>
+                <td>The participant has declined the appointment and will not participate in the appointment.</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -27415,12 +27330,7 @@
                 </td>
                 <td>http://hl7.org/fhir/participationstatus</td>
                 <td>Tentativa</td>
-                <td>
-                  <div>
-                    <p>The participant has  tentatively accepted the appointment. This could be automatically created by a system and requires further processing before it can be accepted. There is no commitment that attendance will occur.</p>
-
-                  </div>
-                </td>
+                <td>The participant has  tentatively accepted the appointment. This could be automatically created by a system and requires further processing before it can be accepted. There is no commitment that attendance will occur.</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -27429,12 +27339,7 @@
                 </td>
                 <td>http://hl7.org/fhir/participationstatus</td>
                 <td>Aguardando resposta</td>
-                <td>
-                  <div>
-                    <p>The participant needs to indicate if they accept the appointment by changing this status to one of the other statuses.</p>
-
-                  </div>
-                </td>
+                <td>The participant needs to indicate if they accept the appointment by changing this status to one of the other statuses.</td>
               </tr>
             </table>
           </div>
@@ -27454,8 +27359,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:10d36461-c2f0-4df0-b59d-cbc19dee2e76"/>
-          <timestamp value="2025-06-05T16:57:46-03:00"/>
+          <identifier value="urn:uuid:e9a1eee4-1f01-4cde-ac92-5e8176d36276"/>
+          <timestamp value="2025-06-12T09:49:27-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -27605,8 +27510,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:c827befe-7d67-4e6b-866a-53ff99e74386"/>
-          <timestamp value="2025-06-05T16:57:46-03:00"/>
+          <identifier value="urn:uuid:846f1f76-af6c-40c5-901a-3d319e8be0c5"/>
+          <timestamp value="2025-06-12T09:49:27-03:00"/>
           <total value="7"/>
           <offset value="0"/>
           <parameter>
@@ -27703,12 +27608,7 @@
                 </td>
                 <td>http://hl7.org/fhir/request-status</td>
                 <td>Rascunho</td>
-                <td>
-                  <div>
-                    <p>The request has been created but is not yet complete or ready for action.</p>
-
-                  </div>
-                </td>
+                <td>The request has been created but is not yet complete or ready for action.</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -27717,12 +27617,7 @@
                 </td>
                 <td>http://hl7.org/fhir/request-status</td>
                 <td>Ativo</td>
-                <td>
-                  <div>
-                    <p>The request is in force and ready to be acted upon.</p>
-
-                  </div>
-                </td>
+                <td>The request is in force and ready to be acted upon.</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -27731,12 +27626,7 @@
                 </td>
                 <td>http://hl7.org/fhir/request-status</td>
                 <td>Em espera</td>
-                <td>
-                  <div>
-                    <p>The request (and any implicit authorization to act) has been temporarily withdrawn but is expected to resume in the future.</p>
-
-                  </div>
-                </td>
+                <td>The request (and any implicit authorization to act) has been temporarily withdrawn but is expected to resume in the future.</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -27745,12 +27635,7 @@
                 </td>
                 <td>http://hl7.org/fhir/request-status</td>
                 <td>Revogado</td>
-                <td>
-                  <div>
-                    <p>The request (and any implicit authorization to act) has been terminated prior to the known full completion of the intended actions.  No further activity should occur.</p>
-
-                  </div>
-                </td>
+                <td>The request (and any implicit authorization to act) has been terminated prior to the known full completion of the intended actions.  No further activity should occur.</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -27759,12 +27644,7 @@
                 </td>
                 <td>http://hl7.org/fhir/request-status</td>
                 <td>Completo</td>
-                <td>
-                  <div>
-                    <p>The activity described by the request has been fully performed.  No further activity will occur.</p>
-
-                  </div>
-                </td>
+                <td>The activity described by the request has been fully performed.  No further activity will occur.</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -27773,12 +27653,7 @@
                 </td>
                 <td>http://hl7.org/fhir/request-status</td>
                 <td>Em estado de erro</td>
-                <td>
-                  <div>
-                    <p>This request should never have existed and should be considered 'void'.  (It is possible that real-world decisions were based on it.  If real-world activity has occurred, the status should be &quot;revoked&quot; rather than &quot;entered-in-error&quot;.).</p>
-
-                  </div>
-                </td>
+                <td>This request should never have existed and should be considered 'void'.  (It is possible that real-world decisions were based on it.  If real-world activity has occurred, the status should be &quot;revoked&quot; rather than &quot;entered-in-error&quot;.).</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -27787,12 +27662,7 @@
                 </td>
                 <td>http://hl7.org/fhir/request-status</td>
                 <td>Desconhecido</td>
-                <td>
-                  <div>
-                    <p>The authoring/source system does not know which of the status values currently applies for this request.  Note: This concept is not to be used for &quot;other&quot; - one of the listed statuses is presumed to apply,  but the authoring/source system does not know which.</p>
-
-                  </div>
-                </td>
+                <td>The authoring/source system does not know which of the status values currently applies for this request.  Note: This concept is not to be used for &quot;other&quot; - one of the listed statuses is presumed to apply,  but the authoring/source system does not know which.</td>
               </tr>
             </table>
           </div>
@@ -27812,8 +27682,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:5efab42f-06b0-402d-85da-bc94f046831d"/>
-          <timestamp value="2025-06-05T16:57:46-03:00"/>
+          <identifier value="urn:uuid:8cad868c-8dcf-42bd-9019-7e3e2838ec5a"/>
+          <timestamp value="2025-06-12T09:49:27-03:00"/>
           <total value="7"/>
           <offset value="0"/>
           <parameter>
@@ -27918,12 +27788,7 @@
                 </td>
                 <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento</td>
                 <td>Conjunto Mínimo de Dados</td>
-                <td>
-                  <div>
-                    <p>Documento público que coleta os dados mínimos dos atendimentos em saúde realizados em qualquer estabelecimento de saúde do país, público ou privado, em cada contato assistencial.</p>
-
-                  </div>
-                </td>
+                <td>Documento público que coleta os dados mínimos dos atendimentos em saúde realizados em qualquer estabelecimento de saúde do país, público ou privado, em cada contato assistencial.</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -27932,12 +27797,7 @@
                 </td>
                 <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento</td>
                 <td>Sumário de Alta</td>
-                <td>
-                  <div>
-                    <p>Relato clínico objetivo sobre as intervenções realizadas, as instruções para continuidade do cuidado pós-alta e o estado de saúde do indivíduo ao final de sua permanência na internação em estabelecimentos de saúde como: hospital, clínica, hospital-dia, internação domiciliar e urgência.</p>
-
-                  </div>
-                </td>
+                <td>Relato clínico objetivo sobre as intervenções realizadas, as instruções para continuidade do cuidado pós-alta e o estado de saúde do indivíduo ao final de sua permanência na internação em estabelecimentos de saúde como: hospital, clínica, hospital-dia, internação domiciliar e urgência.</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -27946,12 +27806,7 @@
                 </td>
                 <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento</td>
                 <td>Registro de Atendimento Clínico</td>
-                <td>
-                  <div>
-                    <p>Registro de dados essenciais de uma consulta realizada a um indivíduo no âmbito da atenção básica, especializada ou domiciliar (atendimento diário).</p>
-
-                  </div>
-                </td>
+                <td>Registro de dados essenciais de uma consulta realizada a um indivíduo no âmbito da atenção básica, especializada ou domiciliar (atendimento diário).</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -27960,9 +27815,7 @@
                 </td>
                 <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento</td>
                 <td>Registro de Imunobiológico Administrado</td>
-                <td>
-                  <div/>
-                </td>
+                <td/>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -27971,9 +27824,7 @@
                 </td>
                 <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento</td>
                 <td>Registro de Prescrição de Medicamento</td>
-                <td>
-                  <div/>
-                </td>
+                <td/>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -27982,9 +27833,7 @@
                 </td>
                 <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento</td>
                 <td>Registro de Dispensação de Medicamento</td>
-                <td>
-                  <div/>
-                </td>
+                <td/>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -27993,9 +27842,7 @@
                 </td>
                 <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento</td>
                 <td>Resultado de Exame(s) Laboratoriais(s)</td>
-                <td>
-                  <div/>
-                </td>
+                <td/>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -28004,9 +27851,7 @@
                 </td>
                 <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento</td>
                 <td>Regulação Assistencial</td>
-                <td>
-                  <div/>
-                </td>
+                <td/>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -28015,9 +27860,7 @@
                 </td>
                 <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento</td>
                 <td>Atestado Médico/Odontológico</td>
-                <td>
-                  <div/>
-                </td>
+                <td/>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -28026,9 +27869,7 @@
                 </td>
                 <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento</td>
                 <td>Registro Eletrônico da Prescrição de Medicamento</td>
-                <td>
-                  <div/>
-                </td>
+                <td/>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -28037,9 +27878,7 @@
                 </td>
                 <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento</td>
                 <td>Registro Eletrônico de Dispensação ou Fornecimento de Medicamentos</td>
-                <td>
-                  <div/>
-                </td>
+                <td/>
               </tr>
             </table>
           </div>
@@ -28059,8 +27898,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:2fa9f2f3-d28e-4000-80e6-6baa06c5e231"/>
-          <timestamp value="2025-06-05T16:57:46-03:00"/>
+          <identifier value="urn:uuid:1d968a95-be07-435f-a802-3267d1a36eb3"/>
+          <timestamp value="2025-06-12T09:49:27-03:00"/>
           <total value="11"/>
           <offset value="0"/>
           <parameter>
@@ -28217,8 +28056,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:04cd8089-553d-46f7-ab8f-1ae1e2107015"/>
-          <timestamp value="2025-06-05T16:57:46-03:00"/>
+          <identifier value="urn:uuid:f5922982-8024-44e5-bbc9-b490390078b5"/>
+          <timestamp value="2025-06-12T09:49:27-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>

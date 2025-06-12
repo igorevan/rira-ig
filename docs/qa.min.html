@@ -47,9 +47,9 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for RIRARNDSIG</h1>
- <p>Generated Thu Jun 05 17:03:23 GMT-03:00 2025, FHIR version 4.0.1 for br.gov.saude.rira.fhir#1.0.0 (canonical = <a href="http://www.saude.gov.br/fhir/r4">http://www.saude.gov.br/fhir/r4</a> (<a href="http://www.saude.gov.br/fhir/r4/history.html">history</a>)). See <a href="qa.html">Full QA Report</a> &amp; <a href="qa-ipreview.html">IP</a></p>
+ <p>Generated Thu Jun 12 09:55:42 GMT-03:00 2025, FHIR version 4.0.1 for br.gov.saude.rira.fhir#1.0.0 (canonical = <a href="http://www.saude.gov.br/fhir/r4">http://www.saude.gov.br/fhir/r4</a> (<a href="http://www.saude.gov.br/fhir/r4/history.html">history</a>)). See <a href="qa.html">Full QA Report</a> &amp; <a href="qa-ipreview.html">IP</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
- <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v2.0.5</span></td></tr>
+ <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v2.0.6</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = br.gov.saude.rira.fhir, Canonical = http://www.saude.gov.br/fhir/r4</td></tr>
  <tr><td>Realm Check for n/a:</td><td><span style="color: maroon; font-weight: bold"></span><ul><li>n/a</li></ul></td></tr>
  <tr><td>Language Info:</td><td>Stated Languages: n/a. IG Resource Lang: pt-BR. 32 of 38 (84%) of resources have a language. <a href="https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-resource-language-policy">Population Policy</a>: NONE</td></tr>
@@ -69,7 +69,7 @@
  <tr><td>ci-build</d><td>https://igorevan.github.io/rira-ig/</td></tr>
  <tr><td>RelatedIgs</d><td>(None Found)</td></tr>
 </table>
-<ul><li>Error fetching package-list from http://www.saude.gov.br/fhir/r4: Error parsing JSON source: Unexpected content '<' in json format at Line 1 (path=[null]) <img src="icon-error.gif" height="16px" width="16px"/></li>
+<ul><li>Error fetching package-list from http://www.saude.gov.br/fhir/r4: (certificate_unknown) PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target <img src="icon-error.gif" height="16px" width="16px"/></li>
 <li>This IG has never been published, so the version should start with '0.' or include a patch version e.g. '-ballot' <img src="icon-warning.png" height="16px" width="16px"/></li>
 <li>Proposed path for this milestone publication should usually be canonical with either sequence or version appended <img src="icon-warning.png" height="16px" width="16px"/></li>
 </ul>
@@ -146,7 +146,7 @@ hl7.fhir.uv.extensions.r4#5.2.0:     <a href="http://hl7.org/fhir/extensions/5.2
 </ul>
 </td></tr>
  <tr><td>Modifier Extensions:</td><td><span style="color: grey">(none)</span></td></tr>
- <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://www.saude.gov.br/fhir/r4 (Problem #1 with package-list.json at http://www.saude.gov.br/fhir/r4: Error parsing JSON source: Unexpected content '<' in json format at Line 1 (path=[null]))</td></tr>
+ <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://www.saude.gov.br/fhir/r4 (Problem #1 with package-list.json at http://www.saude.gov.br/fhir/r4: (certificate_unknown) PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target)</td></tr>
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
  <tr><td>IPS Comparison:</td><td> n/a</td></tr>
  <tr><td>Validation Flags:</td><td> On: autoLoad; Off: hintAboutNonMustSupport, anyExtensionsAllowed, checkAggregation, showReferenceMessages, noExperimentalContent, displayWarnings</td></tr>

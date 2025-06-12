@@ -157,8 +157,8 @@
       },
       "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
       "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial",
-      "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial (RIRA)",
-      "StructureDefinition-BRCID10Avaliado-1.0.html" : "CID10 Avaliado"
+      "StructureDefinition-BRCID10Avaliado-1.0.html" : "CID10 Avaliado",
+      "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial (RIRA)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
@@ -174,8 +174,8 @@
       },
       "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
       "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial",
-      "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial (RIRA)",
-      "StructureDefinition-BRCID10Avaliado-1.0.html" : "CID10 Avaliado"
+      "StructureDefinition-BRCID10Avaliado-1.0.html" : "CID10 Avaliado",
+      "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial (RIRA)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/languages",
@@ -191,8 +191,8 @@
       },
       "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
       "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial",
-      "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial (RIRA)",
-      "StructureDefinition-BRCID10Avaliado-1.0.html" : "CID10 Avaliado"
+      "StructureDefinition-BRCID10Avaliado-1.0.html" : "CID10 Avaliado",
+      "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial (RIRA)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/list-empty-reason",
@@ -306,8 +306,8 @@
       },
       "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
       "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial",
-      "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial (RIRA)",
-      "StructureDefinition-BRCID10Avaliado-1.0.html" : "CID10 Avaliado"
+      "StructureDefinition-BRCID10Avaliado-1.0.html" : "CID10 Avaliado",
+      "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial (RIRA)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/servicerequest-orderdetail",
