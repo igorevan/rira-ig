@@ -244,4 +244,21 @@
     </tbody>
   </table>
 
+  <a name="status"> </a>
+  <h3>Relação de Status</h3>
+  <p>Abaixo é apresentado uma relação dos Status possíveis no MC do RIRA.</p>
+
+  <p>
+    <center>
+      <b>Figura 2 - Relação de Status possíveis no MC do RIRA</b>
+    </center>
+  </p>
+  <center>
+    <div>
+
+      <img height="200" src="relacaoStatus.png" alt="Relação de Status possíveis no MC do RIRA" />
+
+    </div>
+  </center>
+
 </div>
