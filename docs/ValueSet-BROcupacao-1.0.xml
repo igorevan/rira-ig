@@ -7,7 +7,7 @@
   </meta>
   <language value="pt-BR"/>
   <text>
-    <status value="generated"/><div xml:lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR"><p class="res-header-id"><b>Narrativa gerada: ValueSet BROcupacao-1.0</b></p><a name="BROcupacao-1.0"> </a><a name="hcBROcupacao-1.0"> </a><a name="BROcupacao-1.0-pt-BR"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Última atualização: 2020-03-12 13:22:07+0000; Língua: pt-BR</p></div><ul><li>Include todos os códigos definidos em <a href="CodeSystem-BRCBO.html"><code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO</code></a></li></ul></div>
+    <status value="generated"/><div xml:lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR"><p class="res-header-id"><b>Narrativa gerada: ValueSet BROcupacao-1.0</b></p><a name="BROcupacao-1.0"> </a><a name="hcBROcupacao-1.0"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Última atualização: 2020-03-12 13:22:07+0000; Língua: pt-BR</p></div><ul><li>Include todos os códigos definidos em <a href="CodeSystem-BRCBO.html"><code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO</code></a></li></ul></div>
   </text>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1">
