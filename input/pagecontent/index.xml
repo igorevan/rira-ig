@@ -12,7 +12,7 @@
       href="https://rnds-guia.saude.gov.br/docs/rira/mi-rira/">Regulação Assistencial (RIRA)</a>
     seguindo as especificações do padrão <a href="https://hl7.org/fhir/R4/">HL7
       FHIR versão R4</a>. </p>
-  <a name="contextualizacao"></a>
+  <a name="contextualizacao"> </a>
   <h3>Contextualização</h3>
   <p> A RNDS é uma plataforma nacional de integração de dados em saúde que faz parte do <a
       href="https://www.gov.br/saude/pt-br/composicao/seidigi/meu-sus-digital">Meu SUS Digital</a>,
@@ -30,14 +30,28 @@
   <p> Dessa forma, os serviços (<i>web services</i>) permitirão que as entidades da área da saúde
     compartilhem as informações de Regulação Assistencial (RIRA) com a RNDS de forma oportuna e
     confiável a quem precisa desta informação. </p>
-  <a name="interoperabilidade"></a>
+  <a name="interoperabilidade"> </a>
   <h3>Interoperabilidade</h3>
   <p> Para garantir a interoperabilidade entre as aplicações de Saúde Digital, em especial
     Prontuário(s) Eletrônico(s) do Paciente, portais e aplicações (<i>web e mobile</i>), a troca de
     informações ocorre por meio de serviços (<i>web services</i>) <a
       href="https://pt.wikipedia.org/wiki/REST">RESTful</a>, desenvolvidos de acordo com o padrão <a
       href="https://hl7.org/FHIR/">FHIR R4</a>. </p>
-  <a name="walkthrough"></a>
+
+  <a name="flow"> </a>
+  <h3>Fluxo para Integração com a RNDS</h3>
+  <p>Abaixo você encontra um material com o fluxo oficial para integração com a RNDS.</p>
+
+  <iframe
+    src="https://mobileapps.saude.gov.br/portal-servicos/files/f3bd659c8c8ae3ee966e575fde27eb58/0e3affbe4f1b86b50ae78ab652b2ebaa_pgst0fpqe.pdf"
+    width="100%" height="600px">
+    Seu navegador não suporta visualização de PDF. <a
+      href="https://mobileapps.saude.gov.br/portal-servicos/files/f3bd659c8c8ae3ee966e575fde27eb58/0e3affbe4f1b86b50ae78ab652b2ebaa_pgst0fpqe.pdf">Clique
+      aqui para abrir</a>.
+  </iframe>
+
+
+  <a name="walkthrough"> </a>
   <h3>Roteiro</h3>
   <ul>
     <li>
@@ -72,4 +86,5 @@
       <a href="downloads.html">Downloads</a>: Artefatos empregados pelos integradores.
     </li>
   </ul>
+
 </div>
