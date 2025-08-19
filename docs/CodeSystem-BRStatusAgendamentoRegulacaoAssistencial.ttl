@@ -74,6 +74,13 @@
      fhir:designation ( [
        fhir:language [ fhir:v "pt-BR" ] ;
        fhir:value [ fhir:v "Excluído" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/designation-usage"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "display" ]
+       ] ;
+       fhir:value [ fhir:v "Excluded" ]
      ] )
   ] [
      fhir:code [ fhir:v "returned-to-requester" ] ;
@@ -82,6 +89,13 @@
      fhir:designation ( [
        fhir:language [ fhir:v "pt-BR" ] ;
        fhir:value [ fhir:v "Devolvido para o solicitante." ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/designation-usage"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "display" ]
+       ] ;
+       fhir:value [ fhir:v "Returned to requester." ]
      ] )
   ] ) . # 
 

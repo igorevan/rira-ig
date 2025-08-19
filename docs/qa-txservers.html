@@ -12,7 +12,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Terminology Server Report for RIRARNDSIG</h1>
- <p>Generated Thu Jul 03 13:57:19 GMT-03:00 2025, FHIR version 4.0.1 for br.gov.saude.rira.fhir#1.0.0 (canonical = <a href="http://www.saude.gov.br/fhir/r4">http://www.saude.gov.br/fhir/r4</a> (<a href="http://www.saude.gov.br/fhir/r4/history.html">history</a>))</p>
+ <p>Generated Tue Aug 19 11:52:14 BRT 2025, FHIR version 4.0.1 for br.gov.saude.rira.fhir#1.0.0 (canonical = <a href="http://www.saude.gov.br/fhir/r4">http://www.saude.gov.br/fhir/r4</a> (<a href="http://www.saude.gov.br/fhir/r4/history.html">history</a>))</p>
 <p>This page provides a report on which terminology servers were used while publishing this IG. Note that terminology caching reduces the server hit count - this page only reports content that wasn't cached</p>
 <h2>Terminology Parameters</h2>
 <ul>
@@ -21,7 +21,7 @@
 :     <code>dc8fd4bc-091a-424a-8a3b-6198ef146891</code>
   </li>
   <li>
-    <b>displayLanguage</b>
+    <b>defaultDisplayLanguage</b>
 :     <code>pt-BR</code>
   </li>
 </ul>
@@ -46,6 +46,55 @@
     <td>
       <b>Choices</b>
     </td>
+  </tr>
+  <tr>
+    <td>Found candidate server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:iso:std:iso:3166</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://nzhts.digital.health.nz/fhir</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://hl7.org/fhir/request-priority|*</td>
+    <td>auth = http://tx.fhir.org/r4, candidates=https://tx.ontoserver.csiro.au/fhir|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://hl7.org/fhir/composition-status|*</td>
+    <td>auth = http://tx.fhir.org/r4, candidates=https://tx.ontoserver.csiro.au/fhir|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://terminology.hl7.org/CodeSystem/condition-clinical|*</td>
+    <td>auth = http://tx.fhir.org/r4, candidates=https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://nzhts.digital.health.nz/fhir</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://hl7.org/fhir/request-intent|*</td>
+    <td>auth = http://tx.fhir.org/r4, candidates=https://tx.ontoserver.csiro.au/fhir|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial|*</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial|*</td>
+    <td>auth = , candidates=</td>
   </tr>
   <tr>
     <td>System not handled by any servers. Using primary server</td>
@@ -74,6 +123,34 @@
     <td>null</td>
     <td>[http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial, http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial|*]</td>
     <td>[auth = , candidates=, auth = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://hl7.org/fhir/administrative-gender|*</td>
+    <td>auth = http://tx.fhir.org/r4, candidates=https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://nzhts.digital.health.nz/fhir</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://hl7.org/fhir/appointmentstatus|*</td>
+    <td>auth = http://tx.fhir.org/r4, candidates=https://tx.ontoserver.csiro.au/fhir|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://hl7.org/fhir/participationstatus|*</td>
+    <td>auth = http://tx.fhir.org/r4, candidates=https://tx.ontoserver.csiro.au/fhir|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://hl7.org/fhir/request-status|*</td>
+    <td>auth = http://tx.fhir.org/r4, candidates=https://tx.ontoserver.csiro.au/fhir|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4</td>
   </tr>
   <tr>
     <td>System not handled by any servers. Using primary server</td>
@@ -305,6 +382,54 @@
     </th>
   </tr>
   <tr>
+    <td>http://hl7.org/fhir/administrative-gender|*</td>
+    <td>0</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>http://hl7.org/fhir/appointmentstatus|*</td>
+    <td>0</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>http://hl7.org/fhir/composition-status|*</td>
+    <td>0</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>http://hl7.org/fhir/participationstatus|*</td>
+    <td>0</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>http://hl7.org/fhir/request-intent|*</td>
+    <td>0</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>http://hl7.org/fhir/request-priority|*</td>
+    <td>0</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>http://hl7.org/fhir/request-status|*</td>
+    <td>0</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>http://terminology.hl7.org/CodeSystem/condition-clinical|*</td>
+    <td>0</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
     <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO</td>
     <td>0</td>
     <td>2</td>
@@ -339,7 +464,7 @@
   <tr>
     <td>http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial|*</td>
     <td>0</td>
-    <td>2</td>
+    <td>3</td>
     <td></td>
   </tr>
   <tr>
@@ -372,6 +497,14 @@
     <td>1</td>
     <td>
       <a href="CodeSystem-BRTipoParticipante.html">Tipo do Participante</a>
+    </td>
+  </tr>
+  <tr>
+    <td>urn:iso:std:iso:3166</td>
+    <td>0</td>
+    <td>1</td>
+    <td>
+      <a href="http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>
     </td>
   </tr>
 </table>

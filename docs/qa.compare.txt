@@ -1,7 +1,7 @@
 RIRARNDSIG : Validation Results
 =========================================
 
-err = 5, warn = 0, info = 8
+err = 8, warn = 0, info = 0
 $--
 Generated $--. FHIR version $-- for br.gov.saude.rira.fhir#$-- (canonical = http://www.saude.gov.br/fhir/r4)
  Build Errors : 0 / 0 / 0
@@ -16,12 +16,12 @@ Generated $--. FHIR version $-- for br.gov.saude.rira.fhir#$-- (canonical = http
  /home/igor/rira-ig/input/resources/CodeSystem-BRCategoriaDiagnostico : 0 / 0 / 1
  /home/igor/rira-ig/input/resources/CodeSystem-BRJustificativaIndividuoNaoIdentificado : 0 / 0 / 1
  /home/igor/rira-ig/input/resources/CodeSystem-BRModalidadeAssistencial : 0 / 0 / 1
- /home/igor/rira-ig/input/resources/CodeSystem-BRStatusAgendamentoRegulacaoAssistencial : 0 / 0 / 1
+ /home/igor/rira-ig/input/resources/CodeSystem-BRStatusAgendamentoRegulacaoAssistencial : 2 / 2 / 1
  /home/igor/rira-ig/input/resources/CodeSystem-BRStatusRegulacaoAssistencial : 0 / 0 / 1
  /home/igor/rira-ig/input/resources/CodeSystem-BRTabelaSUS : 0 / 0 / 1
  /home/igor/rira-ig/input/resources/CodeSystem-BRTipoDocumento : 0 / 0 / 1
  /home/igor/rira-ig/input/resources/CodeSystem-BRTipoParticipante : 0 / 0 / 1
- /home/igor/rira-ig/input/resources/StructureDefinition-BRAgendamentoRegulacaoAssistencial : 0 / 16 / 3
+ /home/igor/rira-ig/input/resources/StructureDefinition-BRAgendamentoRegulacaoAssistencial : 1 / 15 / 3
  /home/igor/rira-ig/input/resources/StructureDefinition-BRCID10Avaliado-1.0 : 0 / 5 / 2
  /home/igor/rira-ig/input/resources/StructureDefinition-BRIndividuoNaoIdentificado-1.0 : 0 / 1 / 1
  /home/igor/rira-ig/input/resources/StructureDefinition-BRRegulacaoAssistencial : 0 / 45 / 2
@@ -35,9 +35,9 @@ Generated $--. FHIR version $-- for br.gov.saude.rira.fhir#$-- (canonical = http
  /home/igor/rira-ig/input/resources/ValueSet-BRJustificativaIndividuoNaoIdentificado-1.0 : 0 / 0 / 1
  /home/igor/rira-ig/input/resources/ValueSet-BRModalidadeAssistencialMIRA : 2 / 0 / 2
  /home/igor/rira-ig/input/resources/ValueSet-BROcupacao-1.0 : 0 / 0 / 2
- /home/igor/rira-ig/input/resources/ValueSet-BRProcedimentosNacionais-1.0 : 0 / 1 / 1
+ /home/igor/rira-ig/input/resources/ValueSet-BRProcedimentosNacionais-1.0 : 0 / 0 / 2
  /home/igor/rira-ig/input/resources/ValueSet-BRSexo-1.0 : 0 / 0 / 1
- /home/igor/rira-ig/input/resources/ValueSet-BRStatusAgendamentoRegulacaoAssistencial : 0 / 1 / 1
+ /home/igor/rira-ig/input/resources/ValueSet-BRStatusAgendamentoRegulacaoAssistencial : 0 / 0 / 1
  /home/igor/rira-ig/input/resources/ValueSet-BRStatusParticipante : 0 / 0 / 1
  /home/igor/rira-ig/input/resources/ValueSet-BRStatusRegulacaoAssistencial : 0 / 0 / 1
  /home/igor/rira-ig/input/resources/ValueSet-BRStatusRequisicaoRegulacaoAssistencial : 0 / 0 / 1
@@ -55,28 +55,23 @@ ERROR: Bundle/Example-RIRA-Pending: Bundle.entry[0].resource.event[0].detail[1]:
 == input/myig.xml ==
 == input/resources/CodeSystem-BRCBHPMTUSS.xml ==
 == input/resources/CodeSystem-BRCBO.xml ==
-INFORMATION: CodeSystem/BRCBO: CodeSystem.property[0]: Esta propriedade tem apenas um código ('healthcare') e não um URI, pelo que não tem um significado claramente definido no ecossistema terminológico
-INFORMATION: CodeSystem/BRCBO: CodeSystem.property[1]: Esta propriedade tem apenas um código ('regulated') e não um URI, pelo que não tem um significado claramente definido no ecossistema terminológico
 == input/resources/CodeSystem-BRCID10.xml ==
 == input/resources/CodeSystem-BRCategoriaDiagnostico.xml ==
 == input/resources/CodeSystem-BRJustificativaIndividuoNaoIdentificado.xml ==
 == input/resources/CodeSystem-BRModalidadeAssistencial.xml ==
 == input/resources/CodeSystem-BRStatusAgendamentoRegulacaoAssistencial.xml ==
+ERROR: CodeSystem/BRStatusAgendamentoRegulacaoAssistencial: CodeSystem.concept[0].designation[1].use.system: Não foi possível encontrar uma definição para o valor URL 'http://terminology.hl7.org/CodeSystem/designation-usage'
+ERROR: CodeSystem/BRStatusAgendamentoRegulacaoAssistencial: CodeSystem.concept[1].designation[1].use.system: Não foi possível encontrar uma definição para o valor URL 'http://terminology.hl7.org/CodeSystem/designation-usage'
 == input/resources/CodeSystem-BRStatusRegulacaoAssistencial.xml ==
 == input/resources/CodeSystem-BRTabelaSUS.xml ==
 == input/resources/CodeSystem-BRTipoDocumento.xml ==
 == input/resources/CodeSystem-BRTipoParticipante.xml ==
 == input/resources/StructureDefinition-BRAgendamentoRegulacaoAssistencial.json ==
-INFORMATION: StructureDefinition/BRAgendamentoRegulacaoAssistencial: StructureDefinition.snapshot.element[4].binding.extension[0]: O extensão http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 está obsoleto
+ERROR: Agendamento de Regulação Assistencial.Appointment.status: Binding http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial is not a subset of binding http://hl7.org/fhir/ValueSet/appointmentstatus|4.0.1 because The codes 'excluded,returned-to-requester' are not in the base valueset
 == input/resources/StructureDefinition-BRCID10Avaliado-1.0.json ==
 == input/resources/StructureDefinition-BRIndividuoNaoIdentificado-1.0.json ==
 == input/resources/StructureDefinition-BRRegulacaoAssistencial.json ==
-INFORMATION: StructureDefinition.snapshot.element[109]: The slice definition for Composition.event has a maximum of 1 but the slices add up to a maximum of 7. Check that this is what is intended
 == input/resources/StructureDefinition-BRRequisicaoRegulacaoAssistencial.json ==
-INFORMATION: StructureDefinition/BRRequisicaoRegulacaoAssistencial: StructureDefinition.snapshot.element[57].mapping[2].map: O valor da cadeia de caracteres contém texto que se assemelha a etiquetas HTML incorporadas. Se este conteúdo for transformado em HTML sem um pós-processamento adequado, pode constituir um risco para a segurança
-INFORMATION: StructureDefinition/BRRequisicaoRegulacaoAssistencial: StructureDefinition.snapshot.element[64].type[0].extension[1]: O extensão http://hl7.org/fhir/StructureDefinition/regex|5.2.0 está obsoleto com a nota This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex
-INFORMATION: StructureDefinition/BRRequisicaoRegulacaoAssistencial: StructureDefinition.snapshot.element[79].mapping[2].map: O valor da cadeia de caracteres contém texto que se assemelha a etiquetas HTML incorporadas. Se este conteúdo for transformado em HTML sem um pós-processamento adequado, pode constituir um risco para a segurança
-INFORMATION: StructureDefinition/BRRequisicaoRegulacaoAssistencial: StructureDefinition.snapshot.element[106].mapping[2].map: O valor da cadeia de caracteres contém texto que se assemelha a etiquetas HTML incorporadas. Se este conteúdo for transformado em HTML sem um pós-processamento adequado, pode constituir um risco para a segurança
 == input/resources/ValueSet-BRCID10-1.0.json ==
 == input/resources/ValueSet-BRCaraterAtendimentoMIRA.json ==
 == input/resources/ValueSet-BRCategoriaDiagnostico.json ==

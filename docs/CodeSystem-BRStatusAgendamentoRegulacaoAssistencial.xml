@@ -52,6 +52,14 @@
       <language value="pt-BR"/>
       <value value="Excluído"/>
     </designation>
+    <designation>
+      <language value="en"/>
+      <use>
+        <system value="http://terminology.hl7.org/CodeSystem/designation-usage"/>
+        <code value="display"/>
+      </use>
+      <value value="Excluded"/>
+    </designation>
   </concept>
   <concept>
     <code value="returned-to-requester"/>
@@ -60,6 +68,14 @@
     <designation>
       <language value="pt-BR"/>
       <value value="Devolvido para o solicitante."/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <use>
+        <system value="http://terminology.hl7.org/CodeSystem/designation-usage"/>
+        <code value="display"/>
+      </use>
+      <value value="Returned to requester."/>
     </designation>
   </concept>
 </CodeSystem>

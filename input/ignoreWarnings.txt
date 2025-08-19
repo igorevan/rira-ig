@@ -31,9 +31,19 @@ Error from http://tx.fhir.org/r4: Unable to provide support for code system http
 The code '04' is not valid in the system http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial version * (04)
 A definition for CodeSystem 'http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial' version '*' could not be found, so the code cannot be validated. Valid versions: []
 The code '09' is not valid in the system http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial version * (09)
+Esta propriedade tem apenas um código ('healthcare') e não um URI, pelo que não tem um significado claramente definido no ecossistema terminológico
+Esta propriedade tem apenas um código ('regulated') e não um URI, pelo que não tem um significado claramente definido no ecossistema terminológico
+%http://terminology.hl7.org/CodeSystem/designation-usage%
+%http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet%
+%http://hl7.org/fhir/ValueSet/appointmentstatus%
+O código '04' não é válido no sistema http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial versão * (04)
+O código '09' não é válido no sistema http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial versão * (09)
 
 # Errors related to the RNDS specifications
 %Os UUIDs devem ser válidos e em minúsculas%
 %Não foi possível encontrar uma definição para o valor URL%
 Details for urn:uuid:transient-1 matching against profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial|1.0.0
 Unable to find a profile match for urn:uuid:transient-1 among choices: http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial
+The slice definition for Composition.event has a maximum of 1 but the slices add up to a maximum of 7. Check that this is what is intended
+%http://hl7.org/fhir/StructureDefinition/regex%
+%O valor da cadeia de caracteres contém texto que se assemelha a etiquetas HTML incorporadas%
