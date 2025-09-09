@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="097e83ab-250f-4e2d-b8b4-ef9fa0273eec"/>
+  <id value="04af12d9-3eb6-411f-b1e7-b0ba959bc5c2"/>
   <meta>
-    <lastUpdated value="2025-08-19T11:36:01.783-03:00"/>
+    <lastUpdated value="2025-09-09T09:25:54.921-03:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -21,7 +21,7 @@
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansão efectuada internamente com base em 
               <a href="CodeSystem-BRCID10.html">codesystem Classificação Internacional de Doenças - Décima Revisão (CID-10) v1.0.0 (CodeSystem)</a>
             </p>
-            <p style="border: maroon 1px solid; background-color: #FFCCCC; font-weight: bold; padding: 8px">Este conjunto de valores contém 14,230 códigos. A fim de manter o tamanho da publicação gerível, é apresentada apenas uma seleção (1,000 códigos) de todo o conjunto de códigos.</p>
+            <p style="border: maroon 1px solid; background-color: #FFCCCC; font-weight: bold; padding: 8px">Este conjunto de valores contém 14.230 códigos. A fim de manter o tamanho da publicação gerível, é apresentada apenas uma seleção (1.000 códigos) de todo o conjunto de códigos.</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
@@ -8052,8 +8052,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:f8eea3b0-75a3-4f33-8a28-01308a7357c6"/>
-          <timestamp value="2025-08-19T11:45:58-03:00"/>
+          <identifier value="urn:uuid:13e44bbd-b824-4739-bbba-4abf9c9fc725"/>
+          <timestamp value="2025-09-09T09:37:14-03:00"/>
           <total value="14230"/>
           <offset value="0"/>
           <parameter>
@@ -13140,8 +13140,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:dcfb6e96-b984-4012-9c29-8e104c6f8ee5"/>
-          <timestamp value="2025-08-19T11:45:59-03:00"/>
+          <identifier value="urn:uuid:4e5c7723-e4da-4613-996a-8bae111b7a3c"/>
+          <timestamp value="2025-09-09T09:37:16-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -13240,8 +13240,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:5b200baf-d932-45f8-ac4c-a0b704357529"/>
-          <timestamp value="2025-08-19T11:45:59-03:00"/>
+          <identifier value="urn:uuid:870fc6ce-8d08-41c2-9edc-abdc4eb88185"/>
+          <timestamp value="2025-09-09T09:37:16-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -13359,8 +13359,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:68a89847-6aec-4c4a-b789-aa183c810da9"/>
-          <timestamp value="2025-08-19T11:45:59-03:00"/>
+          <identifier value="urn:uuid:66864553-89e7-4672-97c8-9faddd07e0cb"/>
+          <timestamp value="2025-09-09T09:37:16-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -13510,8 +13510,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:4b6ea7c9-1d20-4976-84f0-0e2703acbfac"/>
-          <timestamp value="2025-08-19T11:45:59-03:00"/>
+          <identifier value="urn:uuid:5d332605-9df1-4539-b8b9-2af248db15da"/>
+          <timestamp value="2025-09-09T09:37:16-03:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -13738,8 +13738,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:e227d64d-c97b-4108-b098-647782718621"/>
-          <timestamp value="2025-08-19T11:45:59-03:00"/>
+          <identifier value="urn:uuid:6b7124bc-c0f5-44a5-a5ad-49308f3dc5d0"/>
+          <timestamp value="2025-09-09T09:37:16-03:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>
@@ -13905,8 +13905,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:b1aaa7bd-d136-435b-8373-7d55050da29f"/>
-          <timestamp value="2025-08-19T11:45:59-03:00"/>
+          <identifier value="urn:uuid:dea255aa-8b5a-4564-b404-805b9e15458f"/>
+          <timestamp value="2025-09-09T09:37:16-03:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -14018,8 +14018,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:cfecb26d-513f-46de-9ebe-4671e3d8694e"/>
-          <timestamp value="2025-08-19T11:45:59-03:00"/>
+          <identifier value="urn:uuid:062e161b-4ed8-4ca0-8eba-6523720c68e7"/>
+          <timestamp value="2025-09-09T09:37:16-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -14067,7 +14067,7 @@
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansão efectuada internamente com base em 
               <a href="CodeSystem-BRCBO.html">codesystem Classificação Brasileira de Ocupações (CBO) v1.0.0 (CodeSystem)</a>
             </p>
-            <p style="border: maroon 1px solid; background-color: #FFCCCC; font-weight: bold; padding: 8px">Este conjunto de valores contém 2,714 códigos. A fim de manter o tamanho da publicação gerível, é apresentada apenas uma seleção (1,000 códigos) de todo o conjunto de códigos.</p>
+            <p style="border: maroon 1px solid; background-color: #FFCCCC; font-weight: bold; padding: 8px">Este conjunto de valores contém 2.714 códigos. A fim de manter o tamanho da publicação gerível, é apresentada apenas uma seleção (1.000 códigos) de todo o conjunto de códigos.</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
@@ -22098,8 +22098,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:ad39a4d5-1fb1-4699-af36-96ab919836f9"/>
-          <timestamp value="2025-08-19T11:45:59-03:00"/>
+          <identifier value="urn:uuid:5c04986a-24a4-4fae-b1d7-4d9875e5bbcb"/>
+          <timestamp value="2025-09-09T09:37:16-03:00"/>
           <total value="2714"/>
           <offset value="0"/>
           <parameter>
@@ -27145,7 +27145,7 @@
                 </li>
               </ul>
             </div>
-            <p style="border: maroon 1px solid; background-color: #FFCCCC; font-weight: bold; padding: 8px">Este conjunto de valores contém 55,698 códigos. A fim de manter o tamanho da publicação gerível, é apresentada apenas uma seleção (1,000 códigos) de todo o conjunto de códigos.</p>
+            <p style="border: maroon 1px solid; background-color: #FFCCCC; font-weight: bold; padding: 8px">Este conjunto de valores contém 55.698 códigos. A fim de manter o tamanho da publicação gerível, é apresentada apenas uma seleção (1.000 códigos) de todo o conjunto de códigos.</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
@@ -36179,8 +36179,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:9ce435ba-d27f-4f00-8bfc-2c6313c75376"/>
-          <timestamp value="2025-08-19T11:46:01-03:00"/>
+          <identifier value="urn:uuid:546062fb-035f-4fb3-98e0-ec8a8db3e864"/>
+          <timestamp value="2025-09-09T09:37:18-03:00"/>
           <total value="55698"/>
           <offset value="0"/>
           <parameter>
@@ -41283,8 +41283,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:ba2a62d3-9d13-4432-b065-c192ec72b9bd"/>
-          <timestamp value="2025-08-19T11:46:02-03:00"/>
+          <identifier value="urn:uuid:ab67705d-d18e-4cdc-bfa0-d07244fa4d24"/>
+          <timestamp value="2025-09-09T09:37:19-03:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -41535,8 +41535,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:a4625997-9768-47bc-b57e-c554c605ea82"/>
-          <timestamp value="2025-08-19T11:46:02-03:00"/>
+          <identifier value="urn:uuid:c0db3439-d6ac-4930-bab8-3c78093b49bb"/>
+          <timestamp value="2025-09-09T09:37:19-03:00"/>
           <total value="12"/>
           <offset value="0"/>
           <parameter>
@@ -41709,8 +41709,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:52281361-0ae5-415f-a347-3f2a5469a33c"/>
-          <timestamp value="2025-08-19T11:46:03-03:00"/>
+          <identifier value="urn:uuid:507bc572-eeba-4fcb-9aa1-5cab20df63e0"/>
+          <timestamp value="2025-09-09T09:37:19-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -41856,8 +41856,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:214d2603-9e3c-4f4f-8b21-130f7578985e"/>
-          <timestamp value="2025-08-19T11:46:03-03:00"/>
+          <identifier value="urn:uuid:3e06a4a7-21ac-4a67-b0b7-6795598e76cd"/>
+          <timestamp value="2025-09-09T09:37:19-03:00"/>
           <total value="7"/>
           <offset value="0"/>
           <parameter>
@@ -42024,8 +42024,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:55a41a7d-571e-4889-b4f9-d3ef8d788b54"/>
-          <timestamp value="2025-08-19T11:46:03-03:00"/>
+          <identifier value="urn:uuid:03c00b4f-392a-4a47-8e49-eb23f1a09256"/>
+          <timestamp value="2025-09-09T09:37:20-03:00"/>
           <total value="7"/>
           <offset value="0"/>
           <parameter>
@@ -42236,8 +42236,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:03b8849b-3576-4304-bd81-98a27fb6e8c7"/>
-          <timestamp value="2025-08-19T11:46:03-03:00"/>
+          <identifier value="urn:uuid:856d98f7-8e93-46f1-8d4a-cacc5af5aa48"/>
+          <timestamp value="2025-09-09T09:37:20-03:00"/>
           <total value="11"/>
           <offset value="0"/>
           <parameter>
@@ -42390,8 +42390,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:c59c3c6a-fcd9-4f8f-8185-decf31dad16c"/>
-          <timestamp value="2025-08-19T11:46:03-03:00"/>
+          <identifier value="urn:uuid:d6552b44-ebb3-4970-8bce-94c725f84a40"/>
+          <timestamp value="2025-09-09T09:37:20-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>

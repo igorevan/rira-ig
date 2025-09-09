@@ -383,7 +383,7 @@
         </extension>
         <strength value="preferred"/>
         <description value="A human language."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/languages"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/languages|4.0.1"/>
       </binding>
     </element>
     <element id="Appointment.text">
@@ -653,7 +653,7 @@
           <valueString value="cancelation-reason"/>
         </extension>
         <strength value="example"/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/appointment-cancellation-reason"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/appointment-cancellation-reason|4.0.1"/>
       </binding>
       <mapping>
         <identity value="rim"/>
@@ -2535,7 +2535,7 @@
         </extension>
         <strength value="preferred"/>
         <description value="The Reason for the appointment to take place."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/encounter-reason"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/encounter-reason|4.0.1"/>
       </binding>
       <mapping>
         <identity value="workflow"/>
@@ -2719,7 +2719,7 @@
         </extension>
         <strength value="extensible"/>
         <description value="Aa resource (or, for logical models, the URI of the logical model)."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/resource-types"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/resource-types|4.0.1"/>
       </binding>
       <mapping>
         <identity value="rim"/>
@@ -3056,7 +3056,7 @@
         </extension>
         <strength value="extensible"/>
         <description value="Aa resource (or, for logical models, the URI of the logical model)."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/resource-types"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/resource-types|4.0.1"/>
       </binding>
       <mapping>
         <identity value="rim"/>
@@ -3242,7 +3242,7 @@
         </extension>
         <strength value="extensible"/>
         <description value="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/identifier-type"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/identifier-type|4.0.1"/>
       </binding>
       <mapping>
         <identity value="v2"/>
@@ -3389,7 +3389,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization|4.0.1"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -3625,7 +3625,7 @@
         </extension>
         <strength value="extensible"/>
         <description value="Aa resource (or, for logical models, the URI of the logical model)."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/resource-types"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/resource-types|4.0.1"/>
       </binding>
       <mapping>
         <identity value="rim"/>
@@ -3811,7 +3811,7 @@
         </extension>
         <strength value="extensible"/>
         <description value="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/identifier-type"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/identifier-type|4.0.1"/>
       </binding>
       <mapping>
         <identity value="v2"/>
@@ -3959,7 +3959,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization|4.0.1"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -4157,7 +4157,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Slot"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Slot|4.0.1"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -4466,7 +4466,7 @@
         </extension>
         <strength value="extensible"/>
         <description value="Aa resource (or, for logical models, the URI of the logical model)."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/resource-types"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/resource-types|4.0.1"/>
       </binding>
       <mapping>
         <identity value="rim"/>
@@ -5336,7 +5336,7 @@
         </extension>
         <strength value="extensible"/>
         <description value="Aa resource (or, for logical models, the URI of the logical model)."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/resource-types"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/resource-types|4.0.1"/>
       </binding>
       <mapping>
         <identity value="rim"/>
@@ -5522,7 +5522,7 @@
         </extension>
         <strength value="extensible"/>
         <description value="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/identifier-type"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/identifier-type|4.0.1"/>
       </binding>
       <mapping>
         <identity value="v2"/>
@@ -5669,7 +5669,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization|4.0.1"/>
       </type>
       <constraint>
         <key value="ele-1"/>

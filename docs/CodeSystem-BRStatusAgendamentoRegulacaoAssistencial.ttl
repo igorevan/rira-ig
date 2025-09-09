@@ -12,7 +12,7 @@
   fhir:language [ fhir:v "en"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xml:lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"><p class=\"res-header-id\"><b>Narrativa gerada: CodeSystem BRStatusAgendamentoRegulacaoAssistencial</b></p><a name=\"BRStatusAgendamentoRegulacaoAssistencial\"> </a><a name=\"hcBRStatusAgendamentoRegulacaoAssistencial\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Língua: en</p></div><p>Este case-sensitive sistema de código <code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusAgendamentoRegulacaoAssistencial</code> define o seguinte códigos:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Código</b></td><td><b>Ecrã</b></td><td><b>Definição</b></td><td><b>Portuguese (Brazil) (pt)</b></td></tr><tr><td style=\"white-space:nowrap\">excluded<a name=\"BRStatusAgendamentoRegulacaoAssistencial-excluded\"> </a></td><td>Excluded</td><td>When document was excluded.</td><td>Excluído</td></tr><tr><td style=\"white-space:nowrap\">returned-to-requester<a name=\"BRStatusAgendamentoRegulacaoAssistencial-returned-to-requester\"> </a></td><td>Returned to requester.</td><td>When document was returned to requester</td><td>Devolvido para o solicitante.</td></tr></table></div>"^^rdf:XMLLiteral
+     fhir:div "<div xml:lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"><p class=\"res-header-id\"><b>Narrativa gerada: CodeSystem BRStatusAgendamentoRegulacaoAssistencial</b></p><a name=\"BRStatusAgendamentoRegulacaoAssistencial\"> </a><a name=\"hcBRStatusAgendamentoRegulacaoAssistencial\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Língua: en</p></div><p>Este  sistema de código  define o seguinte código:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Código</b></td><td><b>Ecrã</b></td><td><b>Definição</b></td><td><b>Portuguese (Brazil) (pt)</b></td></tr><tr><td style=\"white-space:nowrap\">excluded<a name=\"BRStatusAgendamentoRegulacaoAssistencial-excluded\"> </a></td><td>Excluded</td><td>When document was excluded.</td><td>Excluído</td></tr><tr><td style=\"white-space:nowrap\">returned-to-requester<a name=\"BRStatusAgendamentoRegulacaoAssistencial-returned-to-requester\"> </a></td><td>Returned to requester.</td><td>When document was returned to requester</td><td>Devolvido para o solicitante.</td></tr></table></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
@@ -77,8 +77,8 @@
      ] [
        fhir:language [ fhir:v "en" ] ;
        fhir:use [
-         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/designation-usage"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "display" ]
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "preferredForLanguage" ]
        ] ;
        fhir:value [ fhir:v "Excluded" ]
      ] )
@@ -92,8 +92,8 @@
      ] [
        fhir:language [ fhir:v "en" ] ;
        fhir:use [
-         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/designation-usage"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "display" ]
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "preferredForLanguage" ]
        ] ;
        fhir:value [ fhir:v "Returned to requester." ]
      ] )

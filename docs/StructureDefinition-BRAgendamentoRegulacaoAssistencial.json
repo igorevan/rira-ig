@@ -300,7 +300,7 @@
         }],
         "strength" : "preferred",
         "description" : "A human language.",
-        "valueSet" : "http://hl7.org/fhir/ValueSet/languages"
+        "valueSet" : "http://hl7.org/fhir/ValueSet/languages|4.0.1"
       }
     },
     {
@@ -578,7 +578,7 @@
           "valueString" : "cancelation-reason"
         }],
         "strength" : "example",
-        "valueSet" : "http://hl7.org/fhir/ValueSet/appointment-cancellation-reason"
+        "valueSet" : "http://hl7.org/fhir/ValueSet/appointment-cancellation-reason|4.0.1"
       },
       "mapping" : [{
         "identity" : "rim",
@@ -2526,7 +2526,7 @@
         }],
         "strength" : "preferred",
         "description" : "The Reason for the appointment to take place.",
-        "valueSet" : "http://hl7.org/fhir/ValueSet/encounter-reason"
+        "valueSet" : "http://hl7.org/fhir/ValueSet/encounter-reason|4.0.1"
       },
       "mapping" : [{
         "identity" : "workflow",
@@ -2717,7 +2717,7 @@
         }],
         "strength" : "extensible",
         "description" : "Aa resource (or, for logical models, the URI of the logical model).",
-        "valueSet" : "http://hl7.org/fhir/ValueSet/resource-types"
+        "valueSet" : "http://hl7.org/fhir/ValueSet/resource-types|4.0.1"
       },
       "mapping" : [{
         "identity" : "rim",
@@ -3066,7 +3066,7 @@
         }],
         "strength" : "extensible",
         "description" : "Aa resource (or, for logical models, the URI of the logical model).",
-        "valueSet" : "http://hl7.org/fhir/ValueSet/resource-types"
+        "valueSet" : "http://hl7.org/fhir/ValueSet/resource-types|4.0.1"
       },
       "mapping" : [{
         "identity" : "rim",
@@ -3260,7 +3260,7 @@
         }],
         "strength" : "extensible",
         "description" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.",
-        "valueSet" : "http://hl7.org/fhir/ValueSet/identifier-type"
+        "valueSet" : "http://hl7.org/fhir/ValueSet/identifier-type|4.0.1"
       },
       "mapping" : [{
         "identity" : "v2",
@@ -3411,7 +3411,7 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Organization"]
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Organization|4.0.1"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -3656,7 +3656,7 @@
         }],
         "strength" : "extensible",
         "description" : "Aa resource (or, for logical models, the URI of the logical model).",
-        "valueSet" : "http://hl7.org/fhir/ValueSet/resource-types"
+        "valueSet" : "http://hl7.org/fhir/ValueSet/resource-types|4.0.1"
       },
       "mapping" : [{
         "identity" : "rim",
@@ -3850,7 +3850,7 @@
         }],
         "strength" : "extensible",
         "description" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.",
-        "valueSet" : "http://hl7.org/fhir/ValueSet/identifier-type"
+        "valueSet" : "http://hl7.org/fhir/ValueSet/identifier-type|4.0.1"
       },
       "mapping" : [{
         "identity" : "v2",
@@ -4002,7 +4002,7 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Organization"]
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Organization|4.0.1"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -4206,7 +4206,7 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Slot"]
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Slot|4.0.1"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -4525,7 +4525,7 @@
         }],
         "strength" : "extensible",
         "description" : "Aa resource (or, for logical models, the URI of the logical model).",
-        "valueSet" : "http://hl7.org/fhir/ValueSet/resource-types"
+        "valueSet" : "http://hl7.org/fhir/ValueSet/resource-types|4.0.1"
       },
       "mapping" : [{
         "identity" : "rim",
@@ -5426,7 +5426,7 @@
         }],
         "strength" : "extensible",
         "description" : "Aa resource (or, for logical models, the URI of the logical model).",
-        "valueSet" : "http://hl7.org/fhir/ValueSet/resource-types"
+        "valueSet" : "http://hl7.org/fhir/ValueSet/resource-types|4.0.1"
       },
       "mapping" : [{
         "identity" : "rim",
@@ -5620,7 +5620,7 @@
         }],
         "strength" : "extensible",
         "description" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.",
-        "valueSet" : "http://hl7.org/fhir/ValueSet/identifier-type"
+        "valueSet" : "http://hl7.org/fhir/ValueSet/identifier-type|4.0.1"
       },
       "mapping" : [{
         "identity" : "v2",
@@ -5771,7 +5771,7 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Organization"]
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Organization|4.0.1"]
       }],
       "constraint" : [{
         "key" : "ele-1",
