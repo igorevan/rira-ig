@@ -4,7 +4,7 @@
   <id value="BRStatusRegulacaoAssistencial"/>
   <language value="pt-BR"/>
   <text>
-    <status value="generated"/><div xml:lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR"><p class="res-header-id"><b>Narrativa gerada: ValueSet BRStatusRegulacaoAssistencial</b></p><a name="BRStatusRegulacaoAssistencial"> </a><a name="hcBRStatusRegulacaoAssistencial"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Língua: pt-BR</p></div><ul><li>Include todos os códigos definidos em <a href="CodeSystem-BRStatusRegulacaoAssistencial.html"><code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</code></a></li></ul></div>
+    <status value="generated"/><div xml:lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR"><p class="res-header-id"><b>Narrativa gerada: ValueSet BRStatusRegulacaoAssistencial</b></p><a name="BRStatusRegulacaoAssistencial"> </a><a name="hcBRStatusRegulacaoAssistencial"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Língua: pt-BR</p></div><ul><li>Include todos os códigos definidos em <code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</code><span title="Version is explicitly stated to be *"> versão &#x1F4CD;</span></li></ul></div>
   </text>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1">

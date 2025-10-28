@@ -17,17 +17,13 @@
   <p> O diagrama abaixo apresenta o pacote <i>Bundle</i> no qual é condensado o RIRA, referenciando todos os dados
     relevantes para caracterizar uma regulação assistencial. </p>
   <p>
-    <center>
-      <b>Figura 1 - Diagrama do <i>Bundle</i> do RIRA</b>
-    </center>
+    <b>Figura 1 - Diagrama do <i>Bundle</i> do RIRA</b>
   </p>
-  <center>
-    <div>
+  <div>
 
-      <img height="500" src="riraMC.png" alt="Diagrama do Bundle do RIRA" />
+    <img height="500" src="riraMC.png" alt="Diagrama do Bundle do RIRA" />
 
-    </div>
-  </center>
+  </div>
 
   <a name="recursos"> </a>
   <h3>Recursos FHIR</h3>
@@ -249,16 +245,12 @@
   <p>Abaixo é apresentado uma relação dos Status possíveis no MC do RIRA.</p>
 
   <p>
-    <center>
-      <b>Figura 2 - Relação de Status possíveis no MC do RIRA</b>
-    </center>
+    <b>Figura 2 - Relação de Status possíveis no MC do RIRA</b>
   </p>
-  <center>
-    <div>
+  <div>
 
-      <img height="200" src="relacaoStatus.png" alt="Relação de Status possíveis no MC do RIRA" />
+    <img height="200" src="relacaoStatus.png" alt="Relação de Status possíveis no MC do RIRA" />
 
-    </div>
-  </center>
+  </div>
 
 </div>

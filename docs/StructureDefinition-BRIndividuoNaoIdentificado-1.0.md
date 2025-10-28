@@ -1,0 +1,261 @@
+# Informações Complementares de Indivíduos Não Identificados - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0
+
+* [**Índice**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Informações Complementares de Indivíduos Não Identificados**
+
+## Extension: Informações Complementares de Indivíduos Não Identificados 
+
+| | | |
+| :--- | :--- | :--- |
+| *Official URL*:http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuoNaoIdentificado-1.0 | *Version*:1.0.0 | |
+| *Standards status:*[Informative](http://hl7.org/fhir/R4/versions.html#std-process) | [Maturity Level](http://hl7.org/fhir/versions.html#maturity): 1 | *Computable Name*:BRIndividuoNaoIdentificado |
+
+Informações complementares necessárias ao Contato Assistencial na hipótese do indivíduo não poder ser identificado.
+
+Deve ser utilizado sempre nas hipóteses legais previstas na Port. nº 84/SAS/MS/1997 e na Port. nº02/SAS/SGEP/MS/2012, situações onde é impossível identificar o indivíduo durante o Contato Assistencial.
+
+**Context of Use**
+
+**Usage info**
+
+**Usos:**
+
+* Usa este Extensão: [CID10 Avaliado](StructureDefinition-BRCID10Avaliado-1.0.md) and [Regulação Assistencial (RIRA)](StructureDefinition-BRRegulacaoAssistencial.md)
+
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/br.gov.saude.rira.fhir|current/StructureDefinition/BRIndividuoNaoIdentificado-1.0)
+
+### Formal Views of Extension Content
+
+ [Description of Profiles, Differentials, Snapshots, and how the XML and JSON presentations work](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+
+ 
+
+Other representations of profile: [CSV](StructureDefinition-BRIndividuoNaoIdentificado-1.0.csv), [Excel](StructureDefinition-BRIndividuoNaoIdentificado-1.0.xlsx), [Schematron](StructureDefinition-BRIndividuoNaoIdentificado-1.0.sch) 
+
+#### Restrições
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "BRIndividuoNaoIdentificado-1.0",
+  "meta" : {
+    "lastUpdated" : "2020-03-11T03:42:05.139+00:00"
+  },
+  "language" : "pt-BR",
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger" : 1,
+      "_valueInteger" : {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+            "valueCanonical" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"
+          }
+        ]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode" : "informative",
+      "_valueCode" : {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+            "valueCanonical" : "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"
+          }
+        ]
+      }
+    }
+  ],
+  "url" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuoNaoIdentificado-1.0",
+  "version" : "1.0.0",
+  "name" : "BRIndividuoNaoIdentificado",
+  "title" : "Informações Complementares de Indivíduos Não Identificados",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2020-03-11T03:42:04.5654018+00:00",
+  "publisher" : "Ministério da Saúde do Brasil",
+  "contact" : [
+    {
+      "name" : "Ministério da Saúde do Brasil",
+      "telecom" : [
+        {
+          "system" : "url",
+          "value" : "http://www.saude.gov.br"
+        }
+      ]
+    }
+  ],
+  "description" : "Informações complementares necessárias ao Contato Assistencial na hipótese do indivíduo não poder ser identificado.",
+  "jurisdiction" : [
+    {
+      "coding" : [
+        {
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "BR"
+        }
+      ]
+    }
+  ],
+  "purpose" : "Deve ser utilizado sempre nas hipóteses legais previstas na Port. nº 84/SAS/MS/1997 e na Port. nº02/SAS/SGEP/MS/2012, situações onde é impossível identificar o indivíduo durante o Contato Assistencial.",
+  "fhirVersion" : "4.0.1",
+  "mapping" : [
+    {
+      "identity" : "rim",
+      "uri" : "http://hl7.org/v3",
+      "name" : "RIM Mapping"
+    }
+  ],
+  "kind" : "complex-type",
+  "abstract" : false,
+  "context" : [
+    {
+      "type" : "element",
+      "expression" : "Composition.subject"
+    },
+    {
+      "type" : "element",
+      "expression" : "Encounter.subject"
+    },
+    {
+      "type" : "element",
+      "expression" : "Condition.subject"
+    },
+    {
+      "type" : "element",
+      "expression" : "Procedure.subject"
+    },
+    {
+      "type" : "element",
+      "expression" : "Immunization.patient"
+    }
+  ],
+  "type" : "Extension",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation" : "constraint",
+  "differential" : {
+    "element" : [
+      {
+        "id" : "Extension",
+        "path" : "Extension",
+        "short" : "Indivíduo não identificado",
+        "definition" : "Informações demográficas básicas e justificativa dos indivíduos que não podem ser identificados por razões clínicas ou sociais, conforme legislação brasileira, com finalidade estatística.",
+        "max" : "1",
+        "isModifier" : false
+      },
+      {
+        "id" : "Extension.extension",
+        "path" : "Extension.extension",
+        "slicing" : {
+          "discriminator" : [
+            {
+              "type" : "value",
+              "path" : "url"
+            }
+          ],
+          "rules" : "open"
+        },
+        "min" : 3,
+        "max" : "3"
+      },
+      {
+        "id" : "Extension.extension:gender",
+        "path" : "Extension.extension",
+        "sliceName" : "gender",
+        "short" : "Sexo",
+        "definition" : "Sexo biológico obtido por meio de exame clínico ou de outros métodos diagnósticos referente ao indivíduo da hipótese de impossibilidade de identificação.",
+        "min" : 1,
+        "max" : "1",
+        "binding" : {
+          "strength" : "required",
+          "valueSet" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRSexo-1.0"
+        }
+      },
+      {
+        "id" : "Extension.extension:gender.url",
+        "path" : "Extension.extension.url",
+        "fixedUri" : "gender"
+      },
+      {
+        "id" : "Extension.extension:gender.value[x]",
+        "path" : "Extension.extension.value[x]",
+        "min" : 1,
+        "type" : [
+          {
+            "code" : "code"
+          }
+        ]
+      },
+      {
+        "id" : "Extension.extension:birthYear",
+        "path" : "Extension.extension",
+        "sliceName" : "birthYear",
+        "short" : "Ano de nascimento estimado",
+        "definition" : "Estimativa do ano de nascimento por meio de observação direta da idade do indivíduo na hipótese de impossibilidade de identificação..",
+        "min" : 1,
+        "max" : "1"
+      },
+      {
+        "id" : "Extension.extension:birthYear.url",
+        "path" : "Extension.extension.url",
+        "fixedUri" : "birthYear"
+      },
+      {
+        "id" : "Extension.extension:birthYear.value[x]",
+        "path" : "Extension.extension.value[x]",
+        "min" : 1,
+        "type" : [
+          {
+            "code" : "date"
+          }
+        ]
+      },
+      {
+        "id" : "Extension.extension:reason",
+        "path" : "Extension.extension",
+        "sliceName" : "reason",
+        "short" : "Justificativa da impossibilidade de identificação do indivíduo",
+        "definition" : "Razão pela qual não foi possível obter os dados de identificação do indivíduo no contato assistencial.",
+        "min" : 1,
+        "max" : "1",
+        "binding" : {
+          "strength" : "required",
+          "valueSet" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRJustificativaIndividuoNaoIdentificado-1.0"
+        }
+      },
+      {
+        "id" : "Extension.extension:reason.url",
+        "path" : "Extension.extension.url",
+        "fixedUri" : "reason"
+      },
+      {
+        "id" : "Extension.extension:reason.value[x]",
+        "path" : "Extension.extension.value[x]",
+        "min" : 1,
+        "type" : [
+          {
+            "code" : "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id" : "Extension.url",
+        "path" : "Extension.url",
+        "fixedUri" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuoNaoIdentificado-1.0"
+      },
+      {
+        "id" : "Extension.value[x]",
+        "path" : "Extension.value[x]",
+        "max" : "0"
+      }
+    ]
+  }
+}
+
+```

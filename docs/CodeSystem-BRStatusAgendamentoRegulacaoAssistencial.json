@@ -57,14 +57,6 @@
     "designation" : [{
       "language" : "pt-BR",
       "value" : "Excluído"
-    },
-    {
-      "language" : "en",
-      "use" : {
-        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
-        "code" : "preferredForLanguage"
-      },
-      "value" : "Excluded"
     }]
   },
   {
@@ -74,14 +66,6 @@
     "designation" : [{
       "language" : "pt-BR",
       "value" : "Devolvido para o solicitante."
-    },
-    {
-      "language" : "en",
-      "use" : {
-        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
-        "code" : "preferredForLanguage"
-      },
-      "value" : "Returned to requester."
     }]
   }]
 }

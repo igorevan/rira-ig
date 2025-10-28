@@ -12,38 +12,53 @@
   fhir:language [ fhir:v "en"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xml:lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"><p class=\"res-header-id\"><b>Narrativa gerada: CodeSystem BRStatusRegulacaoAssistencial</b></p><a name=\"BRStatusRegulacaoAssistencial\"> </a><a name=\"hcBRStatusRegulacaoAssistencial\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Língua: en</p></div><p>Este  sistema de código  define o seguinte código:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Código</b></td><td><b>Ecrã</b></td><td><b>Portuguese (Brazil) (pt)</b></td></tr><tr><td style=\"white-space:nowrap\">pending<a name=\"BRStatusRegulacaoAssistencial-pending\"> </a></td><td>Pending</td><td>Pendente</td></tr><tr><td style=\"white-space:nowrap\">booked<a name=\"BRStatusRegulacaoAssistencial-booked\"> </a></td><td>Booked</td><td>Agendado</td></tr><tr><td style=\"white-space:nowrap\">attended<a name=\"BRStatusRegulacaoAssistencial-attended\"> </a></td><td>Attended/Hospitalized</td><td>Atendido/Internado</td></tr><tr><td style=\"white-space:nowrap\">cancelled<a name=\"BRStatusRegulacaoAssistencial-cancelled\"> </a></td><td>Cancelled</td><td>Negado/Cancelado</td></tr><tr><td style=\"white-space:nowrap\">absence<a name=\"BRStatusRegulacaoAssistencial-absence\"> </a></td><td>Absence</td><td>Falta</td></tr><tr><td style=\"white-space:nowrap\">excluded<a name=\"BRStatusRegulacaoAssistencial-excluded\"> </a></td><td>Excluded</td><td>Excluído</td></tr><tr><td style=\"white-space:nowrap\">returned-to-requester<a name=\"BRStatusRegulacaoAssistencial-returned-to-requester\"> </a></td><td>Returned to requester.</td><td>Devolvido para o solicitante.</td></tr></table></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xml:lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"><p class=\"res-header-id\"><b>Narrativa gerada: CodeSystem BRStatusRegulacaoAssistencial</b></p><a name=\"BRStatusRegulacaoAssistencial\"> </a><a name=\"hcBRStatusRegulacaoAssistencial\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Língua: en</p></div><p>Este  sistema de código  define o seguinte código:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Código</b></td><td><b>Ecrã</b></td><td><b>Portuguese (Brazil) (pt)</b></td></tr><tr><td style=\"white-space:nowrap\">pending<a name=\"BRStatusRegulacaoAssistencial-pending\"> </a></td><td>Pending</td><td>Pendente</td></tr><tr><td style=\"white-space:nowrap\">booked<a name=\"BRStatusRegulacaoAssistencial-booked\"> </a></td><td>Booked</td><td>Agendado</td></tr><tr><td style=\"white-space:nowrap\">attended<a name=\"BRStatusRegulacaoAssistencial-attended\"> </a></td><td>Attended/Hospitalized</td><td>Atendido/Internado</td></tr><tr><td style=\"white-space:nowrap\">cancelled<a name=\"BRStatusRegulacaoAssistencial-cancelled\"> </a></td><td>Cancelled</td><td>Negado/Cancelado</td></tr><tr><td style=\"white-space:nowrap\">absence<a name=\"BRStatusRegulacaoAssistencial-absence\"> </a></td><td>Absence</td><td>Falta</td></tr><tr><td style=\"white-space:nowrap\">excluded<a name=\"BRStatusRegulacaoAssistencial-excluded\"> </a></td><td>Excluded</td><td>Excluído</td></tr><tr><td style=\"white-space:nowrap\">returned-to-requester<a name=\"BRStatusRegulacaoAssistencial-returned-to-requester\"> </a></td><td>Returned to requester.</td><td>Devolvido para o solicitante.</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
-     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm>
+     ] ;
      fhir:value [
-       a fhir:integer ;
+       a fhir:Integer ;
        fhir:v 1 ;
        fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
          fhir:value [
-           a fhir:canonical ;
+           a fhir:Canonical ;
            fhir:v "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"^^xsd:anyURI ;
-           fhir:link <http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir>
+           fhir:l <http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir>
          ]
        ] )
      ]
   ] [
-     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "informative" ;
        fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
          fhir:value [
-           a fhir:canonical ;
+           a fhir:Canonical ;
            fhir:v "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"^^xsd:anyURI ;
-           fhir:link <http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir>
+           fhir:l <http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir>
          ]
        ] )
      ]
   ] ) ; # 
-  fhir:url [ fhir:v "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial"^^xsd:anyURI] ; # 
+  fhir:url [
+     fhir:v "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial"^^xsd:anyURI ;
+     fhir:l <http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial>
+  ] ; # 
   fhir:version [ fhir:v "1.0.0"] ; # 
   fhir:name [ fhir:v "BRStatusRegulacaoAssistencial"] ; # 
   fhir:title [ fhir:v "Status da regulação assistencial"] ; # 
@@ -61,7 +76,10 @@
   fhir:description [ fhir:v "Status da regulação assistencial."] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
-       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
        fhir:code [ fhir:v "BR" ]
      ] )
   ] ) ; # 

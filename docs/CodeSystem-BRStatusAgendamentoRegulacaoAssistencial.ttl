@@ -12,38 +12,53 @@
   fhir:language [ fhir:v "en"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xml:lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"><p class=\"res-header-id\"><b>Narrativa gerada: CodeSystem BRStatusAgendamentoRegulacaoAssistencial</b></p><a name=\"BRStatusAgendamentoRegulacaoAssistencial\"> </a><a name=\"hcBRStatusAgendamentoRegulacaoAssistencial\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Língua: en</p></div><p>Este  sistema de código  define o seguinte código:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Código</b></td><td><b>Ecrã</b></td><td><b>Definição</b></td><td><b>Portuguese (Brazil) (pt)</b></td></tr><tr><td style=\"white-space:nowrap\">excluded<a name=\"BRStatusAgendamentoRegulacaoAssistencial-excluded\"> </a></td><td>Excluded</td><td>When document was excluded.</td><td>Excluído</td></tr><tr><td style=\"white-space:nowrap\">returned-to-requester<a name=\"BRStatusAgendamentoRegulacaoAssistencial-returned-to-requester\"> </a></td><td>Returned to requester.</td><td>When document was returned to requester</td><td>Devolvido para o solicitante.</td></tr></table></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xml:lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"><p class=\"res-header-id\"><b>Narrativa gerada: CodeSystem BRStatusAgendamentoRegulacaoAssistencial</b></p><a name=\"BRStatusAgendamentoRegulacaoAssistencial\"> </a><a name=\"hcBRStatusAgendamentoRegulacaoAssistencial\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Língua: en</p></div><p>Este  sistema de código  define o seguinte código:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Código</b></td><td><b>Ecrã</b></td><td><b>Definição</b></td><td><b>Portuguese (Brazil) (pt)</b></td></tr><tr><td style=\"white-space:nowrap\">excluded<a name=\"BRStatusAgendamentoRegulacaoAssistencial-excluded\"> </a></td><td>Excluded</td><td>When document was excluded.</td><td>Excluído</td></tr><tr><td style=\"white-space:nowrap\">returned-to-requester<a name=\"BRStatusAgendamentoRegulacaoAssistencial-returned-to-requester\"> </a></td><td>Returned to requester.</td><td>When document was returned to requester</td><td>Devolvido para o solicitante.</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
-     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm>
+     ] ;
      fhir:value [
-       a fhir:integer ;
+       a fhir:Integer ;
        fhir:v 1 ;
        fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
          fhir:value [
-           a fhir:canonical ;
+           a fhir:Canonical ;
            fhir:v "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"^^xsd:anyURI ;
-           fhir:link <http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir>
+           fhir:l <http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir>
          ]
        ] )
      ]
   ] [
-     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "informative" ;
        fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
          fhir:value [
-           a fhir:canonical ;
+           a fhir:Canonical ;
            fhir:v "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"^^xsd:anyURI ;
-           fhir:link <http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir>
+           fhir:l <http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir>
          ]
        ] )
      ]
   ] ) ; # 
-  fhir:url [ fhir:v "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusAgendamentoRegulacaoAssistencial"^^xsd:anyURI] ; # 
+  fhir:url [
+     fhir:v "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusAgendamentoRegulacaoAssistencial"^^xsd:anyURI ;
+     fhir:l <http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusAgendamentoRegulacaoAssistencial>
+  ] ; # 
   fhir:version [ fhir:v "1.0.0"] ; # 
   fhir:name [ fhir:v "BRStatusAgendamentoRegulacaoAssistencial"] ; # 
   fhir:title [ fhir:v "Status de agendamento de regulação assistencial"] ; # 
@@ -61,7 +76,10 @@
   fhir:description [ fhir:v "Status de agendamento de regulação assistencial."] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
-       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
        fhir:code [ fhir:v "BR" ]
      ] )
   ] ) ; # 
@@ -74,13 +92,6 @@
      fhir:designation ( [
        fhir:language [ fhir:v "pt-BR" ] ;
        fhir:value [ fhir:v "Excluído" ]
-     ] [
-       fhir:language [ fhir:v "en" ] ;
-       fhir:use [
-         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "preferredForLanguage" ]
-       ] ;
-       fhir:value [ fhir:v "Excluded" ]
      ] )
   ] [
      fhir:code [ fhir:v "returned-to-requester" ] ;
@@ -89,13 +100,6 @@
      fhir:designation ( [
        fhir:language [ fhir:v "pt-BR" ] ;
        fhir:value [ fhir:v "Devolvido para o solicitante." ]
-     ] [
-       fhir:language [ fhir:v "en" ] ;
-       fhir:use [
-         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "preferredForLanguage" ]
-       ] ;
-       fhir:value [ fhir:v "Returned to requester." ]
      ] )
   ] ) . # 
 

@@ -1,0 +1,73 @@
+# br.gov.saude.rira.fhir#1.0.0: Guia de Implementação da Regulação Assistencial (RIRA) da RNDS
+
+## Pages
+
+* [Principal](index.md)
+* [Modelo Computacional](mc.md)
+* [Segurança](seguranca.md)
+* [Histórico de mudanças](changes.md)
+* [Artifacts Summary](artifacts.md)
+* [Downloads](downloads.md)
+* [Integração](integracao.md)
+* [Exemplos](exemplos.md)
+* [Abstract](abstract.md)
+* [Modelo de Informação](mi.md)
+* [Credenciamento](credenciamento.md)
+
+## Resources
+
+### CodeSystems
+
+* [Classificação Brasileira Hierarquizada de Procedimentos Médicos (CBHPM) e da Terminologia Unificada da Saúde Suplementar (TUSS)](CodeSystem-BRCBHPMTUSS.md)
+* [Classificação Brasileira de Ocupações (CBO)](CodeSystem-BRCBO.md)
+* [Classificação Internacional de Doenças - Décima Revisão (CID-10)](CodeSystem-BRCID10.md)
+* [Categoria do Diagnóstico](CodeSystem-BRCategoriaDiagnostico.md)
+* [Justificativa da Impossibilidade de Identificação do Indivíduo](CodeSystem-BRJustificativaIndividuoNaoIdentificado.md)
+* [Modalidade Assistencial](CodeSystem-BRModalidadeAssistencial.md)
+* [Status de agendamento de regulação assistencial](CodeSystem-BRStatusAgendamentoRegulacaoAssistencial.md)
+* [Status da regulação assistencial](CodeSystem-BRStatusRegulacaoAssistencial.md)
+* [Tabela de procedimentos, medicamentos e OPM do SUS](CodeSystem-BRTabelaSUS.md)
+* [Tipo de Documento](CodeSystem-BRTipoDocumento.md)
+* [Tipo do Participante](CodeSystem-BRTipoParticipante.md)
+
+### ValueSets
+
+* [Classificação Internacional de Doenças - Décima Revisão - CID-10](ValueSet-BRCID10-1.0.md)
+* [Caráter de Atendimento no MIRA](ValueSet-BRCaraterAtendimentoMIRA.md)
+* [Categoria do Diagnóstico](ValueSet-BRCategoriaDiagnostico.md)
+* [Estado do Documento](ValueSet-BREstadoDocumento-1.0.md)
+* [Estado da Resolução de Diagnóstico ou Problema](ValueSet-BREstadoResolucaoDiagnosticoProblema-1.0.md)
+* [Intenção de requisição de regulação assistencial](ValueSet-BRIntencaoRegulacao.md)
+* [Justificativa da Impossibilidade de Identificação do Indivíduo](ValueSet-BRJustificativaIndividuoNaoIdentificado-1.0.md)
+* [Modalidade Assistencial MIRA](ValueSet-BRModalidadeAssistencialMIRA.md)
+* [Classificação Brasileira de Ocupações - CBO](ValueSet-BROcupacao-1.0.md)
+* [Procedimento realizado](ValueSet-BRProcedimentosNacionais-1.0.md)
+* [Sexo](ValueSet-BRSexo-1.0.md)
+* [Status de agendamento de regulação assistencial](ValueSet-BRStatusAgendamentoRegulacaoAssistencial.md)
+* [Status do Participante do agendamento](ValueSet-BRStatusParticipante.md)
+* [Status de regulação assistencial](ValueSet-BRStatusRegulacaoAssistencial.md)
+* [Status de requisição de regulação assistencial](ValueSet-BRStatusRequisicaoRegulacaoAssistencial.md)
+* [Tipo de Documento](ValueSet-BRTipoDocumento-1.0.md)
+* [Tipo Participante](ValueSet-BRTipoParticipante.md)
+
+### Resource Profiles
+
+* [Agendamento de Regulação Assistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md)
+* [CID10 Avaliado](StructureDefinition-BRCID10Avaliado-1.0.md)
+* [Regulação Assistencial (RIRA)](StructureDefinition-BRRegulacaoAssistencial.md)
+* [Requisição de Regulação Assistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md)
+
+### Extensions
+
+* [Informações Complementares de Indivíduos Não Identificados](StructureDefinition-BRIndividuoNaoIdentificado-1.0.md)
+
+### ImplementationGuides
+
+* [Guia de Implementação da Regulação Assistencial (RIRA) da RNDS](index.md)
+
+### Examples
+
+* [Example-RIRA-Attended (Bundle)](Bundle-Example-RIRA-Attended.md)
+* [Example-RIRA-Booked (Bundle)](Bundle-Example-RIRA-Booked.md)
+* [Example-RIRA-Cancelled (Bundle)](Bundle-Example-RIRA-Cancelled.md)
+* [Example-RIRA-Pending (Bundle)](Bundle-Example-RIRA-Pending.md)

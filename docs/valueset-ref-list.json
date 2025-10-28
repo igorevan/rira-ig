@@ -101,8 +101,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
       "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial (RIRA)",
+      "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
       "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial"
     },
     {

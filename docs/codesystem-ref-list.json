@@ -86,12 +86,12 @@
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
-      "version" : "3.0.0",
-      "status" : "active",
+      "version" : "4.0.1",
+      "status" : "draft",
       "name" : "ConditionClinicalStatusCodes",
       "title" : "Condition Clinical Status Codes",
       "description" : "Preferred value set for Condition Clinical Status.",
-      "oids" : ["2.16.840.1.113883.4.642.1.1074"],
+      "oids" : ["2.16.840.1.113883.4.642.4.1074"],
       "uses" : {
       },
       "ValueSet-BREstadoResolucaoDiagnosticoProblema-1.0.html" : "Estado da Resolução de Diagnóstico ou Problema"
