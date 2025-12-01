@@ -20,7 +20,7 @@ Classifica as doenças e outros problemas em saúde registrados em diversos tipo
 
 Língua: pt-BR
 
-Este sistema de código define o seguinte código:
+Este case-sensitive sistema de código `http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10` define o seguinte códigos:
 
 
 

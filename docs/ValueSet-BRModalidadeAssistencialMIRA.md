@@ -30,7 +30,9 @@ Língua: pt-BR
 
 ### Expansion
 
-No Expansion for this valueset (Unknown Code System)
+Expansão a partir de tx.fhir.org com base em [codesystem Modalidade Assistencial v1.0.0 (CodeSystem)](CodeSystem-BRModalidadeAssistencial.md)
+
+Este conjunto de valores contém 2 conceitos
 
 -------
 

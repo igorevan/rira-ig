@@ -26,7 +26,7 @@ Língua: pt-BR
 
 **Conceitos**
 
-Este sistema de código define o seguinte código:
+Este case-sensitive sistema de código `http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO` define o seguinte códigos:
 
 
 

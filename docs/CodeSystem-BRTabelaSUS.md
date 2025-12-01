@@ -20,7 +20,7 @@ Padroniza os códigos e as nomenclaturas dos procedimentos, medicamentos e OPM p
 
 Língua: pt-BR
 
-Este sistema de código define o seguinte código:
+Este case-sensitive sistema de código `http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS` define o seguinte códigos:
 
 
 

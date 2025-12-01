@@ -28,7 +28,9 @@ Língua: pt-BR
 
 ### Expansion
 
-No Expansion for this valueset (Unknown Code System)
+Expansão a partir de tx.fhir.org com base em [codesystem Status da regulação assistencial v1.0.0 (CodeSystem)](CodeSystem-BRStatusRegulacaoAssistencial.md)
+
+Este conjunto de valores contém 7 conceitos
 
 -------
 

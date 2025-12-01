@@ -28,7 +28,9 @@ Classifica as razões pelo qual não foi possível obter os dados de identifica�
 
 ### Expansion
 
-No Expansion for this valueset (Unknown Code System)
+Expansão a partir de tx.fhir.org com base em [codesystem Justificativa da Impossibilidade de Identificação do Indivíduo v1.0.0 (CodeSystem)](CodeSystem-BRJustificativaIndividuoNaoIdentificado.md)
+
+Este conjunto de valores contém 6 conceitos
 
 -------
 

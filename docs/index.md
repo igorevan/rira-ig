@@ -72,7 +72,7 @@ Abaixo você encontra um material com o fluxo oficial para integração com a RN
   "title" : "Guia de Implementação da Regulação Assistencial (RIRA) da RNDS",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-28T17:13:07-03:00",
+  "date" : "2025-12-01T14:10:03-03:00",
   "publisher" : "Ministério da Saúde do Brasil",
   "contact" : [
     {
@@ -110,7 +110,7 @@ Abaixo você encontra um material com o fluxo oficial para integração com a RN
       ],
       "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
       "packageId" : "hl7.terminology.r4",
-      "version" : "6.5.0"
+      "version" : "7.0.0"
     },
     {
       "id" : "hl7ext",

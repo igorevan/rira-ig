@@ -28,7 +28,9 @@ Classificação Internacional de Doenças - Décima Revisão - CID-10
 
 ### Expansion
 
-No Expansion for this valueset (Unknown Code System)
+Expansão a partir de tx.fhir.org com base em [codesystem Classificação Internacional de Doenças - Décima Revisão (CID-10) v1.0.0 (CodeSystem)](CodeSystem-BRCID10.md)
+
+Este conjunto de valores contém mais de 1000 códigos. A fim de manter o tamanho da publicação gerível, é apresentada apenas uma seleção (1000 códigos) de todo o conjunto de códigos
 
 -------
 

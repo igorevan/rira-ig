@@ -29,7 +29,9 @@ Classifica as profissões do mercado de trabalho brasileiro.
 
 ### Expansion
 
-No Expansion for this valueset (Unknown Code System)
+Expansão a partir de tx.fhir.org com base em [codesystem Classificação Brasileira de Ocupações (CBO) v1.0.0 (CodeSystem)](CodeSystem-BRCBO.md)
+
+Este conjunto de valores contém 2.714 códigos. A fim de manter o tamanho da publicação gerível, é apresentada apenas uma seleção (1.000 códigos) de todo o conjunto de códigos.
 
 -------
 

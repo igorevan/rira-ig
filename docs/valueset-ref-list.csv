@@ -1,4 +1,4 @@
-URL,Version,Status,OIDs,Name,Title,Descriptino,Uses,Used,Sources
+URL,Version,Status,OIDs,Name,Title,Description,Uses,Used,Sources
 http://www.saude.gov.br/fhir/r4/ValueSet/BRCID10-1.0,1.0.0,active,,BRCID10,Classificação Internacional de Doenças - Décima Revisão - CID-10,"Classificação Internacional de Doenças - Décima Revisão - CID-10","StructureDefinition/BRCID10Avaliado-1.0","Internal"
 http://www.saude.gov.br/fhir/r4/ValueSet/BRCaraterAtendimentoMIRA,1.0.0,active,,BRCaraterAtendimentoMIRA,Caráter de Atendimento no MIRA,"Caráter da solicitação do procedimento.","StructureDefinition/BRAgendamentoRegulacaoAssistencial,StructureDefinition/BRRequisicaoRegulacaoAssistencial","FHIR"
 http://www.saude.gov.br/fhir/r4/ValueSet/BRCategoriaDiagnostico,1.0.0,active,,BRCategoriaDiagnostico,Categoria do Diagnóstico,"ValueSet utilizado para definir o tipo de categoria do diagnóstico realizado.","StructureDefinition/BRCID10Avaliado-1.0","Internal"

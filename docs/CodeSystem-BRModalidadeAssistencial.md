@@ -20,7 +20,7 @@ Classifica os contatos assistenciais de acordo com as especificidades do modo, l
 
 Língua: pt-BR
 
-Este sistema de código define o seguinte código:
+Este case-sensitive sistema de código `http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial` define o seguinte códigos:
 
 
 

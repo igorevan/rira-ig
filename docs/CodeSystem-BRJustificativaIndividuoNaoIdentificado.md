@@ -20,7 +20,7 @@ Classifica as razões pelo qual não foi possível obter os dados de identifica�
 
 Língua: pt-BR
 
-Este sistema de código define o seguinte código:
+Este case-sensitive sistema de código `http://www.saude.gov.br/fhir/r4/CodeSystem/BRJustificativaIndividuoNaoIdentificado` define o seguinte códigos:
 
 
 

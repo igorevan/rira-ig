@@ -28,7 +28,9 @@ Língua: pt-BR
 
 ### Expansion
 
-No Expansion for this valueset (Unknown Code System)
+Expansão a partir de tx.fhir.org com base em [codesystem Tipo do Participante v1.0.0 (CodeSystem)](CodeSystem-BRTipoParticipante.md)
+
+Este conjunto de valores contém 4 conceitos
 
 -------
 
