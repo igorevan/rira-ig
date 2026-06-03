@@ -4,7 +4,7 @@
   <url value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento" />
   <version value="1.1" />
   <name value="BRTipoDocumento" />
-  <title value="Tipo de Documento" />
+  <title value="Tipo de Documento (CodeSystem)" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-03-26T13:19:46.9743559+00:00" />

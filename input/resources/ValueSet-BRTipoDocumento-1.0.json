@@ -5,7 +5,7 @@
   "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoDocumento-1.0",
   "version": "1.0",
   "name": "BRTipoDocumento",
-  "title": "Tipo de Documento",
+  "title": "Tipo de Documento (ValueSet)",
   "status": "active",
   "experimental": false,
   "date": "2020-03-12T13:26:58.6069366+00:00",

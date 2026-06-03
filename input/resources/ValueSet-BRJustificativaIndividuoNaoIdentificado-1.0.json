@@ -8,7 +8,7 @@
   "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRJustificativaIndividuoNaoIdentificado-1.0",
   "version": "1.0",
   "name": "BRJustificativaIndividuoNaoIdentificado",
-  "title": "Justificativa da Impossibilidade de Identificação do Indivíduo",
+  "title": "Justificativa da Impossibilidade de Identificação do Indivíduo (ValueSet)",
   "status": "active",
   "experimental": false,
   "date": "2020-04-07T20:51:17.5349531+00:00",

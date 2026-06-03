@@ -4,12 +4,13 @@
   <url value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRJustificativaIndividuoNaoIdentificado" />
   <version value="1.1" />
   <name value="BRJustificativaIndividuoNaoIdentificado" />
-  <title value="Justificativa da Impossibilidade de Identificação do Indivíduo" />
+  <title value="Justificativa da Impossibilidade de Identificação do Indivíduo (CodeSystem)" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-03-11T18:15:25.4061393+00:00" />
   <publisher value="Ministério da Saúde do Brasil" />
-  <description value="Classifica as razões pelo qual não foi possível obter os dados de identificação do indivíduo em um contato assistencial. (Port. nº 84/SAS/MS/1997 e Port. nº02/SAS/SGEP/MS/2012)" />
+  <description
+    value="Classifica as razões pelo qual não foi possível obter os dados de identificação do indivíduo em um contato assistencial. (Port. nº 84/SAS/MS/1997 e Port. nº02/SAS/SGEP/MS/2012)" />
   <caseSensitive value="true" />
   <content value="complete" />
   <concept>

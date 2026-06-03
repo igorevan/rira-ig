@@ -8,7 +8,7 @@
   "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRCategoriaDiagnostico",
   "version": "1.0",
   "name": "BRCategoriaDiagnostico",
-  "title": "Categoria do Diagnóstico",
+  "title": "Categoria do Diagnóstico (ValueSet)",
   "status": "active",
   "experimental": false,
   "date": "2022-05-19T11:10:40.0457007+00:00",
