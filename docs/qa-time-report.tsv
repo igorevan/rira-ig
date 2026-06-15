@@ -1,60 +1,77 @@
-Source File	Size	loadResources	load	generateSnapshots	load-configure	scan	loadDepInfo	loadInfo	checkR4R4B	generateNarratives	validate	loadLists	checkConformanceResources	checkConformanceResources2	checkConformanceResources3	generateLogicalMaps	validateExpressions	scanForUsageStats	checkURLsUnique	processProvenanceDetails	generate1	generate2	generateLogicals	makeDependencies	generateExampleZip	generateValidationPack	scanProfilesForR5	scanExamplesForR5
-/input/myig.xml	7500	-	0	0	0	0	0	0	10	72	0	0	1	0	0	0	0	1	0	0	51	82	0	0	0	3	0	3
-input/examples/exemplo_RIRA_attended.json	7683	9	25	0	1	0	0	0	1	317	0	0	0	0	0	0	0	0	0	0	16	29	0	0	0	0	0	0
-input/examples/exemplo_RIRA_booked.json	7676	8	2	0	0	0	0	0	0	8	0	0	0	0	0	0	0	0	0	0	14	21	0	0	0	0	0	0
-input/examples/exemplo_RIRA_cancelled.json	7597	8	2	0	0	0	0	0	1	7	0	0	0	0	0	0	0	0	0	0	13	17	0	0	0	0	0	0
-input/examples/exemplo_RIRA_pending.json	8283	7	3	0	0	0	0	0	0	14	0	0	0	0	0	0	0	1	0	0	13	19	0	0	0	0	0	1
-input/resources/CodeSystem-BRCBHPMTUSS.xml	10952306	2166	0	0	33	0	0	0	338	37458	0	0	20	0	0	0	0	42	0	0	10605	63590	0	0	0	836	0	94
-input/resources/CodeSystem-BRCBO.xml	945748	318	0	0	1	0	0	0	53	491	0	0	1	0	0	0	0	3	0	0	497	799	0	0	0	43	0	7
-input/resources/CodeSystem-BRCID10.xml	1929894	265	0	0	3	0	0	0	85	1833	0	0	3	0	0	0	0	4	0	0	1651	2906	0	0	0	185	0	12
-input/resources/CodeSystem-BRCategoriaDiagnostico.xml	851	5	0	0	0	0	0	0	1	9	0	0	0	0	0	0	0	0	0	0	9	19	0	0	0	0	0	0
-input/resources/CodeSystem-BRJustificativaIndividuoNaoIdentificado.xml	1584	4	0	0	0	0	0	0	0	9	0	0	0	0	0	0	0	0	0	0	8	19	0	0	0	1	0	0
-input/resources/CodeSystem-BRModalidadeAssistencial.xml	1632	4	0	0	1	0	0	0	0	8	0	0	0	0	0	0	0	0	0	0	8	18	0	0	0	0	0	0
-input/resources/CodeSystem-BRStatusAgendamentoRegulacaoAssistencial.xml	1260	4	0	0	0	0	0	0	0	8	0	0	0	0	0	0	0	0	0	0	8	18	0	0	0	0	0	0
-input/resources/CodeSystem-BRStatusRegulacaoAssistencial.xml	2052	4	0	0	0	0	0	0	0	9	0	0	0	0	0	0	0	0	0	0	7	17	0	0	0	0	0	0
-input/resources/CodeSystem-BRTabelaSUS.xml	1678071	155	0	0	1	0	0	0	31	430	0	0	2	0	0	0	0	1	0	0	1587	1028	0	0	0	161	0	5
-input/resources/CodeSystem-BRTipoDocumento.xml	2654	5	0	0	0	0	0	0	1	4	0	0	0	0	0	0	0	1	0	0	10	17	0	0	0	0	0	0
-input/resources/CodeSystem-BRTipoParticipante.xml	1048	4	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	7	16	0	0	0	1	0	0
-input/resources/StructureDefinition-BRAgendamentoRegulacaoAssistencial.json	354203	18	0	90	0	0	0	0	0	85	0	0	0	0	0	0	0	0	0	0	217	1007	0	2	0	15	0	1
-input/resources/StructureDefinition-BRCID10Avaliado-1.0.json	19221	4	0	50	0	0	0	0	1	37	0	0	1	0	0	0	0	1	0	0	142	20930	0	0	0	9	1	2
-input/resources/StructureDefinition-BRIndividuoNaoIdentificado-1.0.json	5135	2	0	11	0	0	0	0	0	11	0	0	0	0	0	0	0	0	0	0	34	143	0	0	0	3	0	0
-input/resources/StructureDefinition-BRRegulacaoAssistencial.json	48084	6	0	172	0	0	0	0	0	132	0	0	0	0	0	0	0	1	0	0	546	1070	0	2	0	39	0	4
-input/resources/StructureDefinition-BRRequisicaoRegulacaoAssistencial.json	311280	17	0	60	1	0	0	0	0	47	0	0	1	0	0	0	0	1	0	0	196	437	0	0	0	14	0	1
-input/resources/ValueSet-BRCID10-1.0.json	747	2	0	0	0	0	0	0	0	31	0	0	0	0	0	0	0	0	0	0	8	1584	0	0	0	0	0	0
-input/resources/ValueSet-BRCaraterAtendimentoMIRA.json	1145	2	0	0	0	0	0	0	0	5	0	0	0	0	0	0	0	0	0	0	6	41	0	0	0	0	0	0
-input/resources/ValueSet-BRCategoriaDiagnostico.json	768	1	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0	0	0	0	6	32	0	0	0	0	0	0
-input/resources/ValueSet-BREstadoDocumento-1.0.json	1722	2	0	0	0	0	0	0	0	4	0	0	0	0	0	0	0	0	0	0	7	33	0	0	0	1	0	0
-input/resources/ValueSet-BREstadoResolucaoDiagnosticoProblema-1.0.json	2274	2	0	0	0	0	0	0	1	3	0	0	0	0	0	0	0	0	0	0	7	31	0	0	0	0	0	0
-input/resources/ValueSet-BRIntencaoRegulacao.json	2955	1	0	0	0	0	0	0	0	4	0	0	0	0	0	0	0	0	0	0	7	27	0	0	0	0	0	0
-input/resources/ValueSet-BRJustificativaIndividuoNaoIdentificado-1.0.json	986	2	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	7	961	0	0	0	0	0	0
-input/resources/ValueSet-BRModalidadeAssistencialMIRA.json	937	1	0	0	0	0	0	0	0	1804	0	0	0	0	0	0	0	0	0	0	6	813	0	0	0	1	0	0
-input/resources/ValueSet-BROcupacao-1.0.json	735	2	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0	0	0	0	6	5441	0	0	0	0	0	0
-input/resources/ValueSet-BRProcedimentosNacionais-1.0.json	1034	2	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0	0	0	0	6	18	0	0	0	0	0	0
-input/resources/ValueSet-BRSexo-1.0.json	1663	2	0	0	1	0	0	0	0	5	0	0	0	0	0	0	0	0	0	0	7	23	0	0	0	0	0	0
-input/resources/ValueSet-BRStatusAgendamentoRegulacaoAssistencial.json	3335	1	0	0	0	0	0	0	0	4	0	0	0	0	0	0	0	0	0	0	8	19	0	0	0	1	0	0
-input/resources/ValueSet-BRStatusParticipante.json	1642	2	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0	0	0	0	8	17	0	0	0	0	0	0
-input/resources/ValueSet-BRStatusRegulacaoAssistencial.json	705	2	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0	0	0	0	7	1290	0	0	0	0	0	0
-input/resources/ValueSet-BRStatusRequisicaoRegulacaoAssistencial.json	2435	1	0	0	0	0	0	0	1	3	0	0	0	0	0	0	0	0	0	0	7	18	0	0	0	0	0	1
-input/resources/ValueSet-BRTipoDocumento-1.0.json	647	2	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	7	967	0	0	0	0	0	0
-input/resources/ValueSet-BRTipoParticipante.json	661	1	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	6	1014	0	0	0	1	0	0
-/input/includes/menu.xml	1555	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
-/input/pagecontent/mi.xml	20589	-	-	-	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	58	0	0	0	0	0	0
-/input/pagecontent/index.xml	4778	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	25	0	0	0	0	0	0
-/input/pagecontent/exemplos.xml	995	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	17	0	0	0	0	0	0
-/input/pagecontent/mc.xml	10354	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	21	0	0	0	0	0	0
-/input/pagecontent/integracao.xml	15320	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	24	0	0	0	0	0	0
-/input/pagecontent/changes.xml	422	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	12	0	0	0	0	0	0
-/input/pagecontent/credenciamento.xml	5683	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	15	0	0	0	0	0	0
-/input/pagecontent/abstract.xml	2995	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	11	0	0	0	0	0	0
-/input/pagecontent/seguranca.xml	2609	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	11	0	0	0	0	0	0
-/input/pagecontent/downloads.xml	1337	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	10	0	0	0	0	0	0
-/template/config	0	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-/template/config/_config.yml	140	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-/input/images	0	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-/input/images/gerenciadorCredenciais.png	92837	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
-/input/images/portalServicos.png	266125	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-/input/images/relacaoStatus.png	164526	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
-/input/images/acessoGov.png	615672	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
-/input/images/riraMC.png	49821	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-/input/images/estabelecimentosFilhos.png	33060	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-/temp/pages/_includes/artifacts.xml	18181	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	1	0	0	0	0	0	0
+Source File	Size	loadResources	load	generateSnapshots	load-configure	scan	loadDepInfo	loadInfo	checkR4R4B	generateNarratives	validate	loadLists	checkConformanceResources	checkConformanceResources2	checkConformanceResources3	generateLogicalMaps	validateExpressions	scanForUsageStats	checkURLsUnique	processProvenanceDetails	translate	generate1	generate2	generateLogicals	makeDependencies	generateExampleZip	generateValidationPack	scanProfilesForR5	scanExamplesForR5
+/input/myig.xml	7032	-	0	0	0	0	0	0	13	53	0	0	0	0	0	0	0	1	0	0	0	81	106	0	0	0	3	0	6
+input/examples/exemplo_RIRA_attended.json	7683	4	20	0	1	0	0	0	1	324	0	0	0	0	0	0	0	0	0	0	0	25	40	0	0	0	0	0	0
+input/examples/exemplo_RIRA_booked.json	7676	4	2	0	0	0	0	0	1	10	0	0	0	0	0	0	0	0	0	0	0	22	41	0	0	0	0	0	0
+input/examples/exemplo_RIRA_cancelled.json	7597	3	1	0	1	0	0	0	1	8	0	0	0	0	0	0	0	0	0	0	0	22	37	0	0	0	0	0	0
+input/examples/exemplo_RIRA_pending.json	8283	3	2	0	0	0	0	0	1	12	0	0	0	0	0	0	0	0	0	0	0	22	41	0	0	0	0	0	0
+input/resources/CodeSystem-BRCBHPMTUSS.xml	10952306	1880	0	0	38	0	1	0	236	52998	0	0	22	0	0	0	0	42	0	0	0	12233	190033	0	0	0	846	0	126
+input/resources/CodeSystem-BRCBO.xml	945748	136	0	0	1	0	0	0	27	324	0	0	0	0	0	0	0	3	0	0	0	664	1503	0	0	0	45	0	21
+input/resources/CodeSystem-BRCID10.xml	1929894	331	0	0	3	0	0	0	47	1415	0	0	4	0	0	0	0	2	0	0	0	2001	6345	0	0	0	181	0	6
+input/resources/CodeSystem-BRCategoriaDiagnostico.xml	864	4	0	0	0	0	0	0	0	2	0	0	0	0	1	0	0	0	0	0	0	7	24	0	0	0	1	0	0
+input/resources/CodeSystem-BRJustificativaIndividuoNaoIdentificado.xml	1601	4	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	8	25	0	0	0	0	0	0
+input/resources/CodeSystem-BRModalidadeAssistencial.xml	1632	2	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	8	25	0	0	0	0	0	0
+input/resources/CodeSystem-BRStatusAgendamentoRegulacaoAssistencial.xml	1273	3	0	0	0	0	0	0	1	2	0	0	0	0	0	0	0	0	0	0	0	8	25	0	0	0	1	0	0
+input/resources/CodeSystem-BRStatusRegulacaoAssistencial.xml	2052	4	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	10	26	0	0	0	0	0	0
+input/resources/CodeSystem-BRTabelaSUS.xml	1678071	182	0	0	1	0	0	0	18	367	0	0	2	0	0	0	0	1	0	0	0	1883	1629	0	0	0	164	0	4
+input/resources/CodeSystem-BRTipoDocumento.xml	2667	4	0	0	0	0	0	0	0	3	0	0	0	0	1	0	0	0	0	0	0	9	24	0	0	0	1	0	0
+input/resources/CodeSystem-BRTipoParticipante.xml	1048	4	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	8	22	0	0	0	1	0	0
+input/resources/StructureDefinition-BRAgendamentoRegulacaoAssistencial.json	354226	118	0	90	1	0	0	0	0	112	0	0	0	0	0	0	0	1	0	0	0	269	1162	0	1	0	14	0	1
+input/resources/StructureDefinition-BRCID10Avaliado-1.0.json	19221	3	0	44	0	0	0	0	1	37	0	0	1	0	0	0	0	1	0	0	0	185	621	0	0	0	10	1	1
+input/resources/StructureDefinition-BRIndividuoNaoIdentificado-1.0.json	5135	3	0	8	0	0	0	0	0	10	0	0	0	0	0	0	0	0	0	0	0	42	239	0	0	0	3	0	0
+input/resources/StructureDefinition-BRRegulacaoAssistencial.json	48084	7	0	105	0	0	0	0	0	334	0	0	1	0	0	0	0	1	0	0	0	682	1775	0	2	0	39	0	3
+input/resources/StructureDefinition-BRRequisicaoRegulacaoAssistencial.json	311303	22	0	40	0	0	0	0	0	40	0	0	0	0	0	0	0	1	0	0	0	245	541	0	0	0	13	0	1
+input/resources/ValueSet-BRCID10-1.0.json	655	1	0	0	0	0	0	0	0	38	0	0	0	0	1	0	0	0	0	0	0	9	189	0	0	0	1	0	0
+input/resources/ValueSet-BRCaraterAtendimentoMIRA.json	1121	2	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0	0	0	0	0	8	37	0	0	0	0	0	0
+input/resources/ValueSet-BRCategoriaDiagnostico.json	755	1	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	8	33	0	0	0	0	0	0
+input/resources/ValueSet-BREstadoDocumento-1.0.json	1630	1	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0	0	0	0	0	13	33	0	0	0	1	0	0
+input/resources/ValueSet-BREstadoResolucaoDiagnosticoProblema-1.0.json	2250	1	0	0	0	0	0	0	0	4	0	0	0	0	0	0	0	0	0	0	0	16	33	0	0	0	0	0	0
+input/resources/ValueSet-BRIntencaoRegulacao.json	2931	1	0	0	0	0	0	0	0	5	0	0	0	0	0	0	0	0	0	0	0	19	38	0	0	0	0	0	0
+input/resources/ValueSet-BRJustificativaIndividuoNaoIdentificado-1.0.json	973	1	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	12	32	0	0	0	1	0	0
+input/resources/ValueSet-BRModalidadeAssistencialMIRA.json	814	1	0	0	0	0	0	0	0	3	0	0	0	0	1	0	0	0	0	0	0	11	31	0	0	0	0	0	0
+input/resources/ValueSet-BROcupacao-1.0.json	711	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	12	140	0	0	0	0	0	0
+input/resources/ValueSet-BRProcedimentosNacionais-1.0.json	986	1	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	0	0	0	15	290	0	0	0	1	0	0
+input/resources/ValueSet-BRSexo-1.0.json	1581	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	10	27	0	0	0	1	0	0
+input/resources/ValueSet-BRStatusAgendamentoRegulacaoAssistencial.json	3298	1	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	16	32	0	0	0	1	0	0
+input/resources/ValueSet-BRStatusParticipante.json	1618	1	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	9	28	0	0	0	0	0	0
+input/resources/ValueSet-BRStatusRegulacaoAssistencial.json	681	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	7	26	0	0	0	1	0	0
+input/resources/ValueSet-BRStatusRequisicaoRegulacaoAssistencial.json	2411	1	0	0	0	0	0	0	0	3	0	0	0	0	1	0	0	0	0	0	0	10	29	0	0	0	0	0	0
+input/resources/ValueSet-BRTipoDocumento-1.0.json	634	1	0	0	1	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	8	26	0	0	0	0	0	0
+input/resources/ValueSet-BRTipoParticipante.json	637	1	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	8	27	0	1	0	0	0	0
+/input/includes/menu.xml	1782	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/input/pagecontent/exemplos.xml	995	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	18	0	0	0	0	0	0
+/input/pagecontent/index.xml	4986	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	22	0	0	0	0	0	0
+/input/pagecontent/changes.xml	445	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	14	0	0	0	0	0	0
+/input/pagecontent/suporte.xml	771	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	12	0	0	0	0	0	0
+/input/pagecontent/downloads.xml	1301	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	11	0	0	0	0	0	0
+/input/pagecontent/integracao.xml	17469	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	23	0	0	0	0	0	0
+/input/pagecontent/credenciamento.xml	5683	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	13	0	0	0	0	0	0
+/input/pagecontent/mi.xml	20589	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	15	0	0	0	0	0	0
+/input/pagecontent/seguranca.xml	2609	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	9	0	0	0	0	0	0
+/input/pagecontent/mc.xml	10354	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	12	0	0	0	0	0	0
+/input/pagecontent/lives.xml	2227	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	9	0	0	0	0	0	0
+/input/pagecontent/abstract.xml	2995	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	9	0	0	0	0	0	0
+/input/pagecontent/forms.xml	504	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	9	0	0	0	0	0	0
+/input/pagecontent	0	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/input/pagecontent/exemplos.xml	995	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/input/pagecontent/index.xml	4986	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+/input/pagecontent/changes.xml	445	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/input/pagecontent/suporte.xml	771	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/input/pagecontent/downloads.xml	1301	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/input/pagecontent/integracao.xml	17469	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+/input/pagecontent/credenciamento.xml	5683	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/input/pagecontent/mi.xml	20589	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+/input/pagecontent/seguranca.xml	2609	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/input/pagecontent/mc.xml	10354	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/input/pagecontent/lives.xml	2227	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+/input/pagecontent/abstract.xml	2995	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/input/pagecontent/forms.xml	504	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/template/config	0	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/template/config/_config.yml	140	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/input/images	0	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/input/images/riraMC.png	49821	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/input/images/portalServicos.png	266125	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/input/images/gerenciadorCredenciais.png	92837	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/input/images/estabelecimentosFilhos.png	33060	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/input/images/relacaoStatus.png	164526	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+/input/images/acessoGov.png	615672	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/temp/pages/_includes/artifacts.xml	24524	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	3	0	0	0	0	0	0

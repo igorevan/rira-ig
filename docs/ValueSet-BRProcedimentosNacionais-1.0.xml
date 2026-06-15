@@ -7,24 +7,30 @@
   </meta>
   <language value="pt-BR"/>
   <text>
-    <status value="generated"/><div xml:lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR"><p class="res-header-id"><b>Narrativa gerada: ValueSet BRProcedimentosNacionais-1.0</b></p><a name="BRProcedimentosNacionais-1.0"> </a><a name="hcBRProcedimentosNacionais-1.0"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Última atualização: 2020-04-07 18:23:28+0000; Língua: pt-BR</p></div><p>Este conjunto de valores inclui códigos baseados nas seguintes regras:</p><ul><li>Incluir todos os códigos definidos em <code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBHPMTUSS</code><span title="Version is explicitly stated to be *"> versão &#x1F4CD;</span></li><li>Incluir todos os códigos definidos em <code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS</code><span title="Version is explicitly stated to be *"> versão &#x1F4CD;</span></li></ul></div>
+    <status value="generated"/><div xml:lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR"><p class="res-header-id"><b>Narrativa gerada: ValueSet BRProcedimentosNacionais-1.0</b></p><a name="BRProcedimentosNacionais-1.0"> </a><a name="hcBRProcedimentosNacionais-1.0"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Última atualização: 2020-04-07 18:23:28+0000; Língua: pt-BR</p></div><p>Este conjunto de valores inclui códigos baseados nas seguintes regras:</p><ul><li>Incluir todos os códigos definidos em <a href="CodeSystem-BRCBHPMTUSS.html"><code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBHPMTUSS</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> versão &#x1F4E6;1.0.0-release</span></li><li>Incluir todos os códigos definidos em <a href="CodeSystem-BRTabelaSUS.html"><code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> versão &#x1F4E6;1.0.0-release</span></li></ul></div>
   </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="ehr"/>
+  </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
-        <valueCanonical value="http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"/>
+        <valueCanonical value="https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir"/>
       </extension>
     </valueInteger>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-    <valueCode value="informative">
+    <valueCode value="normative">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
-        <valueCanonical value="http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"/>
+        <valueCanonical value="https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir"/>
       </extension>
     </valueCode>
   </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+    <valueCode value="4.0.1"/>
+  </extension>
   <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BRProcedimentosNacionais-1.0"/>
-  <version value="1.0.0"/>
+  <version value="1.0.0-release"/>
   <name value="BRProcedimentosNacionais"/>
   <title value="Procedimento realizado"/>
   <status value="active"/>
@@ -36,6 +42,10 @@
     <telecom>
       <system value="url"/>
       <value value="http://www.saude.gov.br"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="cgiis.datasus@saude.gov.br"/>
     </telecom>
   </contact>
   <description value="ValueSet das classificações brasileiras para procedimentos adotadas em contexto nacional, os CodeSystems apresentam os códigos da competência atual, para o envio de competência anterior os códigos devem ser consultados na RTS."/>
@@ -49,11 +59,9 @@
   <compose>
     <include>
       <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBHPMTUSS"/>
-      <version value="*"/>
     </include>
     <include>
       <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS"/>
-      <version value="*"/>
     </include>
   </compose>
 </ValueSet>

@@ -16,15 +16,12 @@
     "include": [
       {
         "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial",
-        "version": "*",
         "concept": [
           {
-            "code": "04",
-            "display": "Atenção Hospitalar"
+            "code": "04"
           },
           {
-            "code": "09",
-            "display": "Assistência Ambulatorial"
+            "code": "09"
           }
         ]
       }

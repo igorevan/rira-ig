@@ -1,221 +1,219 @@
 {
-  "codeSystems" : [
-    {
-      "url" : "http://hl7.org/fhir/administrative-gender",
-      "version" : "4.0.1",
-      "status" : "active",
-      "name" : "AdministrativeGender",
-      "title" : "AdministrativeGender",
-      "description" : "The gender of a person used for administrative purposes.",
-      "oids" : ["2.16.840.1.113883.4.642.4.2"],
-      "uses" : {
-      },
-      "ValueSet-BRSexo-1.0.html" : "Sexo"
+  "codeSystems" : [{
+    "url" : "http://hl7.org/fhir/administrative-gender",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "AdministrativeGender",
+    "title" : "AdministrativeGender",
+    "description" : "The gender of a person used for administrative purposes.",
+    "oids" : ["2.16.840.1.113883.4.642.4.2"],
+    "uses" : {
     },
-    {
-      "url" : "http://hl7.org/fhir/appointmentstatus",
-      "version" : "4.0.1",
-      "status" : "draft",
-      "name" : "AppointmentStatus",
-      "title" : "AppointmentStatus",
-      "description" : "The free/busy status of an appointment.",
-      "oids" : ["2.16.840.1.113883.4.642.4.485"],
-      "uses" : {
-      },
-      "ValueSet-BRStatusAgendamentoRegulacaoAssistencial.html" : "Status de agendamento de regulação assistencial"
+    "ValueSet-BRSexo-1.0.html" : "Sexo"
+  },
+  {
+    "url" : "http://hl7.org/fhir/appointmentstatus",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "AppointmentStatus",
+    "title" : "AppointmentStatus",
+    "description" : "The free/busy status of an appointment.",
+    "oids" : ["2.16.840.1.113883.4.642.4.485"],
+    "uses" : {
     },
-    {
-      "url" : "http://hl7.org/fhir/composition-status",
-      "version" : "4.0.1",
-      "status" : "draft",
-      "name" : "CompositionStatus",
-      "title" : "CompositionStatus",
-      "description" : "The workflow/clinical status of the composition.",
-      "oids" : ["2.16.840.1.113883.4.642.4.242"],
-      "uses" : {
-      },
-      "ValueSet-BREstadoDocumento-1.0.html" : "Estado do Documento"
+    "ValueSet-BRStatusAgendamentoRegulacaoAssistencial.html" : "Status de agendamento de regulação assistencial (ValueSet)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/composition-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "CompositionStatus",
+    "title" : "CompositionStatus",
+    "description" : "The workflow/clinical status of the composition.",
+    "oids" : ["2.16.840.1.113883.4.642.4.242"],
+    "uses" : {
     },
-    {
-      "url" : "http://hl7.org/fhir/participationstatus",
-      "version" : "4.0.1",
-      "status" : "draft",
-      "name" : "ParticipationStatus",
-      "title" : "ParticipationStatus",
-      "description" : "The Participation status of an appointment.",
-      "oids" : ["2.16.840.1.113883.4.642.4.487"],
-      "uses" : {
-      },
-      "ValueSet-BRStatusParticipante.html" : "Status do Participante do agendamento"
+    "ValueSet-BREstadoDocumento-1.0.html" : "Estado do Documento"
+  },
+  {
+    "url" : "http://hl7.org/fhir/participationstatus",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ParticipationStatus",
+    "title" : "ParticipationStatus",
+    "description" : "The Participation status of an appointment.",
+    "oids" : ["2.16.840.1.113883.4.642.4.487"],
+    "uses" : {
     },
-    {
-      "url" : "http://hl7.org/fhir/request-intent",
-      "version" : "4.0.1",
-      "status" : "draft",
-      "name" : "RequestIntent",
-      "title" : "RequestIntent",
-      "description" : "Codes indicating the degree of authority/intentionality associated with a request.",
-      "oids" : ["2.16.840.1.113883.4.642.4.114"],
-      "uses" : {
-      },
-      "ValueSet-BRIntencaoRegulacao.html" : "Intenção de requisição de regulação assistencial"
+    "ValueSet-BRStatusParticipante.html" : "Status do Participante do agendamento"
+  },
+  {
+    "url" : "http://hl7.org/fhir/request-intent",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "RequestIntent",
+    "title" : "RequestIntent",
+    "description" : "Codes indicating the degree of authority/intentionality associated with a request.",
+    "oids" : ["2.16.840.1.113883.4.642.4.114"],
+    "uses" : {
     },
-    {
-      "url" : "http://hl7.org/fhir/request-priority",
-      "version" : "4.0.1",
-      "status" : "draft",
-      "name" : "RequestPriority",
-      "title" : "RequestPriority",
-      "description" : "Identifies the level of importance to be assigned to actioning the request.",
-      "oids" : ["2.16.840.1.113883.4.642.4.116"],
-      "uses" : {
-      },
-      "ValueSet-BRCaraterAtendimentoMIRA.html" : "Caráter de Atendimento no MIRA"
+    "ValueSet-BRIntencaoRegulacao.html" : "Intenção de requisição de regulação assistencial"
+  },
+  {
+    "url" : "http://hl7.org/fhir/request-priority",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "RequestPriority",
+    "title" : "RequestPriority",
+    "description" : "Identifies the level of importance to be assigned to actioning the request.",
+    "oids" : ["2.16.840.1.113883.4.642.4.116"],
+    "uses" : {
     },
-    {
-      "url" : "http://hl7.org/fhir/request-status",
-      "version" : "4.0.1",
-      "status" : "draft",
-      "name" : "RequestStatus",
-      "title" : "RequestStatus",
-      "description" : "Codes identifying the lifecycle stage of a request.",
-      "oids" : ["2.16.840.1.113883.4.642.4.112"],
-      "uses" : {
-      },
-      "ValueSet-BRStatusRequisicaoRegulacaoAssistencial.html" : "Status de requisição de regulação assistencial"
+    "ValueSet-BRCaraterAtendimentoMIRA.html" : "Caráter de Atendimento no MIRA"
+  },
+  {
+    "url" : "http://hl7.org/fhir/request-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "RequestStatus",
+    "title" : "RequestStatus",
+    "description" : "Codes identifying the lifecycle stage of a request.",
+    "oids" : ["2.16.840.1.113883.4.642.4.112"],
+    "uses" : {
     },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
-      "version" : "4.0.1",
-      "status" : "draft",
-      "name" : "ConditionClinicalStatusCodes",
-      "title" : "Condition Clinical Status Codes",
-      "description" : "Preferred value set for Condition Clinical Status.",
-      "oids" : ["2.16.840.1.113883.4.642.4.1074"],
-      "uses" : {
-      },
-      "ValueSet-BREstadoResolucaoDiagnosticoProblema-1.0.html" : "Estado da Resolução de Diagnóstico ou Problema"
+    "ValueSet-BRStatusRequisicaoRegulacaoAssistencial.html" : "Status de requisição de regulação assistencial"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ConditionClinicalStatusCodes",
+    "title" : "Condition Clinical Status Codes",
+    "description" : "Preferred value set for Condition Clinical Status.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1074"],
+    "uses" : {
     },
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBHPMTUSS",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BRCBHPMTUSS",
-      "title" : "Classificação Brasileira Hierarquizada de Procedimentos Médicos (CBHPM) e da Terminologia Unificada da Saúde Suplementar (TUSS)",
-      "description" : "Classificações de procedimentos utilizadas no Brasil, no contexto da assistência à saúde privada, não complementar ao SUS, e eventualmente no SUS para classificar procedimento inexistente na Tabela SUS.",
-      "uses" : {
-      },
-      "ValueSet-BRProcedimentosNacionais-1.0.html" : "Procedimento realizado"
+    "ValueSet-BREstadoResolucaoDiagnosticoProblema-1.0.html" : "Estado da Resolução de Diagnóstico ou Problema"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBHPMTUSS",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRCBHPMTUSS",
+    "title" : "Classificação Brasileira Hierarquizada de Procedimentos Médicos (CBHPM) e da Terminologia Unificada da Saúde Suplementar (TUSS)",
+    "description" : "Classificações de procedimentos utilizadas no Brasil, no contexto da assistência à saúde privada, não complementar ao SUS, e eventualmente no SUS para classificar procedimento inexistente na Tabela SUS.",
+    "uses" : {
     },
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BRCBO",
-      "title" : "Classificação Brasileira de Ocupações (CBO)",
-      "description" : "Classifica as profissões do mercado de trabalho brasileiro.",
-      "uses" : {
-      },
-      "ValueSet-BROcupacao-1.0.html" : "Classificação Brasileira de Ocupações - CBO"
+    "ValueSet-BRProcedimentosNacionais-1.0.html" : "Procedimento realizado"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRCBO",
+    "title" : "Classificação Brasileira de Ocupações (CBO)",
+    "description" : "Classifica as profissões do mercado de trabalho brasileiro.",
+    "uses" : {
     },
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BRCID10",
-      "title" : "Classificação Internacional de Doenças - Décima Revisão (CID-10)",
-      "description" : "Classifica as doenças e outros problemas em saúde registrados em diversos tipos de documentos clínicos.",
-      "uses" : {
-      },
-      "ValueSet-BRCID10-1.0.html" : "Classificação Internacional de Doenças - Décima Revisão - CID-10"
+    "ValueSet-BROcupacao-1.0.html" : "Classificação Brasileira de Ocupações - CBO"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRCID10",
+    "title" : "Classificação Internacional de Doenças - Décima Revisão (CID-10)",
+    "description" : "Classifica as doenças e outros problemas em saúde registrados em diversos tipos de documentos clínicos.",
+    "uses" : {
     },
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCategoriaDiagnostico",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BRCategoriaDiagnostico",
-      "title" : "Categoria do Diagnóstico",
-      "description" : "Códigos para representação do tipo de categoria do diagnóstico realizado.",
-      "uses" : {
-      },
-      "ValueSet-BRCategoriaDiagnostico.html" : "Categoria do Diagnóstico"
+    "ValueSet-BRCID10-1.0.html" : "Classificação Internacional de Doenças - Décima Revisão - CID-10"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCategoriaDiagnostico",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRCategoriaDiagnostico",
+    "title" : "Categoria do Diagnóstico (CodeSystem)",
+    "description" : "Códigos para representação do tipo de categoria do diagnóstico realizado.",
+    "uses" : {
     },
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRJustificativaIndividuoNaoIdentificado",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BRJustificativaIndividuoNaoIdentificado",
-      "title" : "Justificativa da Impossibilidade de Identificação do Indivíduo",
-      "description" : "Classifica as razões pelo qual não foi possível obter os dados de identificação do indivíduo em um contato assistencial. (Port. nº 84/SAS/MS/1997 e Port. nº02/SAS/SGEP/MS/2012)",
-      "uses" : {
-      },
-      "ValueSet-BRJustificativaIndividuoNaoIdentificado-1.0.html" : "Justificativa da Impossibilidade de Identificação do Indivíduo"
+    "ValueSet-BRCategoriaDiagnostico.html" : "Categoria do Diagnóstico (ValueSet)"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRJustificativaIndividuoNaoIdentificado",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRJustificativaIndividuoNaoIdentificado",
+    "title" : "Justificativa da Impossibilidade de Identificação do Indivíduo (CodeSystem)",
+    "description" : "Classifica as razões pelo qual não foi possível obter os dados de identificação do indivíduo em um contato assistencial. (Port. nº 84/SAS/MS/1997 e Port. nº02/SAS/SGEP/MS/2012)",
+    "uses" : {
     },
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BRModalidadeAssistencial",
-      "title" : "Modalidade Assistencial",
-      "description" : "Classifica os contatos assistenciais de acordo com as especificidades do modo, local e duração do atendimento",
-      "uses" : {
-      },
-      "ValueSet-BRModalidadeAssistencialMIRA.html" : "Modalidade Assistencial MIRA"
+    "ValueSet-BRJustificativaIndividuoNaoIdentificado-1.0.html" : "Justificativa da Impossibilidade de Identificação do Indivíduo (ValueSet)"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRModalidadeAssistencial",
+    "title" : "Modalidade Assistencial",
+    "description" : "Classifica os contatos assistenciais de acordo com as especificidades do modo, local e duração do atendimento",
+    "uses" : {
     },
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusAgendamentoRegulacaoAssistencial",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BRStatusAgendamentoRegulacaoAssistencial",
-      "title" : "Status de agendamento de regulação assistencial",
-      "description" : "Status de agendamento de regulação assistencial.",
-      "uses" : {
-      },
-      "ValueSet-BRStatusAgendamentoRegulacaoAssistencial.html" : "Status de agendamento de regulação assistencial"
+    "ValueSet-BRModalidadeAssistencialMIRA.html" : "Modalidade Assistencial MIRA"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusAgendamentoRegulacaoAssistencial",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRStatusAgendamentoRegulacaoAssistencial",
+    "title" : "Status de agendamento de regulação assistencial (CodeSystem)",
+    "description" : "Status de agendamento de regulação assistencial.",
+    "uses" : {
     },
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BRStatusRegulacaoAssistencial",
-      "title" : "Status da regulação assistencial",
-      "description" : "Status da regulação assistencial.",
-      "uses" : {
-      },
-      "ValueSet-BRStatusRegulacaoAssistencial.html" : "Status de regulação assistencial"
+    "ValueSet-BRStatusAgendamentoRegulacaoAssistencial.html" : "Status de agendamento de regulação assistencial (ValueSet)"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRStatusRegulacaoAssistencial",
+    "title" : "Status da regulação assistencial",
+    "description" : "Status da regulação assistencial.",
+    "uses" : {
     },
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BRTabelaSUS",
-      "title" : "Tabela de procedimentos, medicamentos e OPM do SUS",
-      "description" : "Padroniza os códigos e as nomenclaturas dos procedimentos, medicamentos e OPM para as informações trafegadas no SUS",
-      "uses" : {
-      },
-      "ValueSet-BRProcedimentosNacionais-1.0.html" : "Procedimento realizado"
+    "ValueSet-BRStatusRegulacaoAssistencial.html" : "Status de regulação assistencial"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRTabelaSUS",
+    "title" : "Tabela de procedimentos, medicamentos e OPM do SUS",
+    "description" : "Padroniza os códigos e as nomenclaturas dos procedimentos, medicamentos e OPM para as informações trafegadas no SUS",
+    "uses" : {
     },
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BRTipoDocumento",
-      "title" : "Tipo de Documento",
-      "description" : "Classificação dos tipos de documentos compartilhados no Brasil.",
-      "uses" : {
-      },
-      "ValueSet-BRTipoDocumento-1.0.html" : "Tipo de Documento"
+    "ValueSet-BRProcedimentosNacionais-1.0.html" : "Procedimento realizado"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRTipoDocumento",
+    "title" : "Tipo de Documento (CodeSystem)",
+    "description" : "Classificação dos tipos de documentos compartilhados no Brasil.",
+    "uses" : {
     },
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BRTipoParticipante",
-      "title" : "Tipo do Participante",
-      "description" : "Identificação do tipo do participante envolvido na solicitação.",
-      "uses" : {
-      },
-      "ValueSet-BRTipoParticipante.html" : "Tipo Participante"
-    }
-  ]
+    "ValueSet-BRTipoDocumento-1.0.html" : "Tipo de Documento (ValueSet)"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRTipoParticipante",
+    "title" : "Tipo do Participante",
+    "description" : "Identificação do tipo do participante envolvido na solicitação.",
+    "uses" : {
+    },
+    "ValueSet-BRTipoParticipante.html" : "Tipo Participante"
+  }]
 }

@@ -1,0 +1,35 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <a name="lives"> </a>
+  <h3>Lives do RIRA</h3>
+  <p> Seguem as lives sobre o RIRA realizadas pelo Datasus. Essas transmissões têm teor informativo e
+    abordam tanto o contexto negocial quanto técnico do modelo. Os vídeos cobrem detalhadamente as etapas de
+    credenciamento, APIs, homologação, além de aprofundar nos modelos informacional e computacional, na montagem dos
+    Bundles e em dicas gerais e orientações para a implementação. </p>
+
+  <a name="live1"> </a>
+  <h4><a href="https://www.youtube.com/live/Vhw-UMVZ1JI?si=EP9nHsd7opXaVGl3">Live do RIRA (27/08/2024)</a></h4>
+  <p>Essa live trata das orientações e procedimentos para a integração de sistemas próprios e de terceiros de regulação
+    assistencial à RNDS.</p>
+  <p>O objetivo principal é orientar estados, municípios e empresas desenvolvedoras de software sobre como enviar dados
+    de regulação (listas de espera, procedimentos, status de solicitações) para a RNDS, utilizando o
+    modelo RIRA.</p>
+
+  <div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Vhw-UMVZ1JI?origin=https://fhir.saude.gov.br"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="allowfullscreen">
+    </iframe>
+  </div>
+
+  <a name="live2"> </a>
+  <h4><a href="https://www.youtube.com/live/lTY-ZiyQVqs?si=PQqa2CV0ICJpSvwk">Live do RIRA (12/12/2025)</a></h4>
+  <p>Essa live tem como objetivo principal apresentar atualizações do modelo e regras técnicas para o RIRA.</p>
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/lTY-ZiyQVqs?origin=https://fhir.saude.gov.br"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="allowfullscreen">
+  </iframe>
+</div>

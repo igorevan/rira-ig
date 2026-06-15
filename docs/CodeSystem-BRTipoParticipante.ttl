@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante> a fhir:CodeSystem ;
+<https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/CodeSystem/BRTipoParticipante> a fhir:CodeSystem ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "BRTipoParticipante"] ; # 
   fhir:language [ fhir:v "pt-BR"] ; # 
@@ -15,51 +15,48 @@
      fhir:div [ fhir:v "<div xml:lang=\"pt-BR\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"pt-BR\"><p class=\"res-header-id\"><b>Narrativa gerada: CodeSystem BRTipoParticipante</b></p><a name=\"BRTipoParticipante\"> </a><a name=\"hcBRTipoParticipante\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Língua: pt-BR</p></div><p>Este case-sensitive sistema de código <code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante</code> define o seguinte códigos:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Código</b></td><td><b>Ecrã</b></td></tr><tr><td style=\"white-space:nowrap\">PCT<a name=\"BRTipoParticipante-PCT\"> </a></td><td>Paciente</td></tr><tr><td style=\"white-space:nowrap\">ESS<a name=\"BRTipoParticipante-ESS\"> </a></td><td>Estabelecimento de saúde solicitante</td></tr><tr><td style=\"white-space:nowrap\">ESE<a name=\"BRTipoParticipante-ESE\"> </a></td><td>Estabelecimento de saúde executante</td></tr><tr><td style=\"white-space:nowrap\">ESR<a name=\"BRTipoParticipante-ESR\"> </a></td><td>Estabelecimento de saúde regulador</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
-     fhir:url [
-       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ;
-       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm>
-     ] ;
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:Integer ;
+       a fhir:code ;
+       fhir:v "ehr"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
        fhir:v 1 ;
        fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
-         ] ;
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
          fhir:value [
-           a fhir:Canonical ;
-           fhir:v "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"^^xsd:anyURI ;
-           fhir:l <http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir>
+           a fhir:canonical ;
+           fhir:v "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir"^^xsd:anyURI ;
+           fhir:link <https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir>
          ]
        ] )
      ]
   ] [
-     fhir:url [
-       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
-       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
-     ] ;
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:Code ;
-       fhir:v "informative" ;
+       a fhir:code ;
+       fhir:v "normative" ;
        fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
-         ] ;
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
          fhir:value [
-           a fhir:Canonical ;
-           fhir:v "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"^^xsd:anyURI ;
-           fhir:l <http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir>
+           a fhir:canonical ;
+           fhir:v "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir"^^xsd:anyURI ;
+           fhir:link <https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir>
          ]
        ] )
      ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "4.0.1"
+     ]
   ] ) ; # 
-  fhir:url [
-     fhir:v "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante"^^xsd:anyURI ;
-     fhir:l <http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante>
-  ] ; # 
-  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:url [ fhir:v "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.0-release"] ; # 
   fhir:name [ fhir:v "BRTipoParticipante"] ; # 
   fhir:title [ fhir:v "Tipo do Participante"] ; # 
   fhir:status [ fhir:v "active"] ; # 
@@ -71,15 +68,15 @@
      fhir:telecom ( [
        fhir:system [ fhir:v "url" ] ;
        fhir:value [ fhir:v "http://www.saude.gov.br" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "cgiis.datasus@saude.gov.br" ]
      ] )
   ] ) ; # 
   fhir:description [ fhir:v "Identificação do tipo do participante envolvido na solicitação."] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
-         fhir:l <urn:iso:std:iso:3166>
-       ] ;
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "BR" ]
      ] )
   ] ) ; # 

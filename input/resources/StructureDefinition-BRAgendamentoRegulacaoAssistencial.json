@@ -1,6 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "BRAgendamentoRegulacaoAssistencial",
+  "language": "pt-BR",
   "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial",
   "version": "1.0",
   "name": "BRAgendamentoRegulacaoAssistencial",

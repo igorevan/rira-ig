@@ -6,45 +6,51 @@
     <a href="abstract.html">Abstract</a>
   </li>
   <li>
-    <a href="credenciamento.html">Credenciamento</a>
+    <a href="lives.html">Lives</a>
   </li>
   <li>
-    <a href="seguranca.html">Segurança</a>
+    <a href="credenciamento.html">Credenciamento</a>
   </li>
   <li>
     <a href="integracao.html">Integração</a>
   </li>
 
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle"> O RIRA <b class="caret"></b>
+    <a data-toggle="dropdown" href="mi.html" class="dropdown-toggle"> RIRA <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
       <li>
         <a href="mi.html">Modelo de Informação</a>
+      </li>
+      <li>
         <a href="mc.html">Modelo Computacional</a>
       </li>
     </ul>
   </li>
 
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle"> Especificação <b class="caret"></b>
+    <a data-toggle="dropdown" href="artifacts.html" class="dropdown-toggle"> Especificação <b
+        class="caret"></b>
     </a>
     <ul class="dropdown-menu">
       <li>
         <a href="artifacts.html">Artefatos</a>
+      </li>
+      <li>
         <a href="exemplos.html">Exemplos</a>
       </li>
     </ul>
   </li>
+
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle"> Ajuda <b class="caret"></b>
+    <a data-toggle="dropdown" href="toc.html" class="dropdown-toggle"> Ajuda <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
       <li>
         <a href="toc.html">Índice</a>
       </li>
       <li>
-        <a target="_blank" href="{{site.data.fhir.path}}index.html"> FHIR Spec <img
+        <a target="_blank" href="{{site.data.fhir.path}}index.html"> Especificações do FHIR R4 <img
             src="external.png"
             style="text-align: baseline" />
         </a>
@@ -54,6 +60,12 @@
       </li>
       <li>
         <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="forms.html">Feedback</a>
+      </li>
+      <li>
+        <a href="suporte.html">Suporte da RNDS</a>
       </li>
     </ul>
   </li>

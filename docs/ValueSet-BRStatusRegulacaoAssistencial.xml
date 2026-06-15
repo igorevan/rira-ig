@@ -4,24 +4,30 @@
   <id value="BRStatusRegulacaoAssistencial"/>
   <language value="pt-BR"/>
   <text>
-    <status value="generated"/><div xml:lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR"><p class="res-header-id"><b>Narrativa gerada: ValueSet BRStatusRegulacaoAssistencial</b></p><a name="BRStatusRegulacaoAssistencial"> </a><a name="hcBRStatusRegulacaoAssistencial"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Língua: pt-BR</p></div><ul><li>Include todos os códigos definidos em <code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</code><span title="Version is explicitly stated to be *"> versão &#x1F4CD;</span></li></ul></div>
+    <status value="generated"/><div xml:lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR"><p class="res-header-id"><b>Narrativa gerada: ValueSet BRStatusRegulacaoAssistencial</b></p><a name="BRStatusRegulacaoAssistencial"> </a><a name="hcBRStatusRegulacaoAssistencial"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Língua: pt-BR</p></div><ul><li>Include todos os códigos definidos em <a href="CodeSystem-BRStatusRegulacaoAssistencial.html"><code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> versão &#x1F4E6;1.0.0-release</span></li></ul></div>
   </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="ehr"/>
+  </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
-        <valueCanonical value="http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"/>
+        <valueCanonical value="https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir"/>
       </extension>
     </valueInteger>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-    <valueCode value="informative">
+    <valueCode value="normative">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
-        <valueCanonical value="http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"/>
+        <valueCanonical value="https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir"/>
       </extension>
     </valueCode>
   </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+    <valueCode value="4.0.1"/>
+  </extension>
   <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"/>
-  <version value="1.0.0"/>
+  <version value="1.0.0-release"/>
   <name value="BRStatusRegulacaoAssistencial"/>
   <title value="Status de regulação assistencial"/>
   <status value="active"/>
@@ -33,6 +39,10 @@
     <telecom>
       <system value="url"/>
       <value value="http://www.saude.gov.br"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="cgiis.datasus@saude.gov.br"/>
     </telecom>
   </contact>
   <description value="Status de agendamento de regulação assistencial."/>
@@ -46,7 +56,6 @@
   <compose>
     <include>
       <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial"/>
-      <version value="*"/>
     </include>
   </compose>
 </ValueSet>

@@ -16,7 +16,6 @@
     "include": [
       {
         "system": "http://hl7.org/fhir/request-priority",
-        "version": "*",
         "concept": [
           {
             "code": "routine",

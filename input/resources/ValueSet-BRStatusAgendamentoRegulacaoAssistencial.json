@@ -16,7 +16,6 @@
     "include": [
       {
         "system": "http://hl7.org/fhir/appointmentstatus",
-        "version": "*",
         "concept": [
           {
             "code": "proposed",
@@ -121,8 +120,7 @@
         ]
       },
       {
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusAgendamentoRegulacaoAssistencial",
-        "version": "*"
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusAgendamentoRegulacaoAssistencial"
       }
     ]
   }

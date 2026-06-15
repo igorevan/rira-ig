@@ -6,60 +6,57 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial> a fhir:ValueSet ;
+<https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ValueSet/BRStatusRegulacaoAssistencial> a fhir:ValueSet ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "BRStatusRegulacaoAssistencial"] ; # 
   fhir:language [ fhir:v "pt-BR"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xml:lang=\"pt-BR\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"pt-BR\"><p class=\"res-header-id\"><b>Narrativa gerada: ValueSet BRStatusRegulacaoAssistencial</b></p><a name=\"BRStatusRegulacaoAssistencial\"> </a><a name=\"hcBRStatusRegulacaoAssistencial\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Língua: pt-BR</p></div><ul><li>Include todos os códigos definidos em <code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</code><span title=\"Version is explicitly stated to be *\"> versão ?</span></li></ul></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xml:lang=\"pt-BR\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"pt-BR\"><p class=\"res-header-id\"><b>Narrativa gerada: ValueSet BRStatusRegulacaoAssistencial</b></p><a name=\"BRStatusRegulacaoAssistencial\"> </a><a name=\"hcBRStatusRegulacaoAssistencial\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Língua: pt-BR</p></div><ul><li>Include todos os códigos definidos em <a href=\"CodeSystem-BRStatusRegulacaoAssistencial.html\"><code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> versão ?1.0.0-release</span></li></ul></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
-     fhir:url [
-       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ;
-       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm>
-     ] ;
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:Integer ;
+       a fhir:code ;
+       fhir:v "ehr"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
        fhir:v 1 ;
        fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
-         ] ;
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
          fhir:value [
-           a fhir:Canonical ;
-           fhir:v "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"^^xsd:anyURI ;
-           fhir:l <http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir>
+           a fhir:canonical ;
+           fhir:v "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir"^^xsd:anyURI ;
+           fhir:link <https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir>
          ]
        ] )
      ]
   ] [
-     fhir:url [
-       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
-       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
-     ] ;
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:Code ;
-       fhir:v "informative" ;
+       a fhir:code ;
+       fhir:v "normative" ;
        fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
-         ] ;
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
          fhir:value [
-           a fhir:Canonical ;
-           fhir:v "http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"^^xsd:anyURI ;
-           fhir:l <http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir>
+           a fhir:canonical ;
+           fhir:v "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir"^^xsd:anyURI ;
+           fhir:link <https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir>
          ]
        ] )
      ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "4.0.1"
+     ]
   ] ) ; # 
-  fhir:url [
-     fhir:v "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"^^xsd:anyURI ;
-     fhir:l <http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial>
-  ] ; # 
-  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:url [ fhir:v "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.0-release"] ; # 
   fhir:name [ fhir:v "BRStatusRegulacaoAssistencial"] ; # 
   fhir:title [ fhir:v "Status de regulação assistencial"] ; # 
   fhir:status [ fhir:v "active"] ; # 
@@ -71,26 +68,22 @@
      fhir:telecom ( [
        fhir:system [ fhir:v "url" ] ;
        fhir:value [ fhir:v "http://www.saude.gov.br" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "cgiis.datasus@saude.gov.br" ]
      ] )
   ] ) ; # 
   fhir:description [ fhir:v "Status de agendamento de regulação assistencial."] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
-         fhir:l <urn:iso:std:iso:3166>
-       ] ;
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "BR" ]
      ] )
   ] ) ; # 
   fhir:immutable [ fhir:v false] ; # 
   fhir:compose [
      fhir:include ( [
-       fhir:system [
-         fhir:v "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial"^^xsd:anyURI ;
-         fhir:l <http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial>
-       ] ;
-       fhir:version [ fhir:v "*" ]
+       fhir:system [ fhir:v "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial"^^xsd:anyURI ]
      ] )
   ] . # 
 

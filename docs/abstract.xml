@@ -1,0 +1,39 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R4/fhir-single.xsd">
+  <!-- The spaces between the open and close "a" tag are mandatory.  (Cuz HTML renderers are dumb...) -->
+  <a name="abstract"> </a>
+  <h3>Introduction</h3>
+  <p>The Implementation Guide for the Assistance Regulation Information Model (RIRA) of the <a
+      href="https://www.gov.br/saude/pt-br/composicao/seidigi/rnds">National Health Data Network (RNDS)</a> is a
+    comprehensive document designed to guide various health entities, including states,
+    municipalities, the Federal District, health establishments, and private companies, in utilizing
+    the services developed for the RNDS. This guide aims to ensure the seamless integration of local
+    systems with the national network for the submission of <a
+      href="https://servicos-datasus.saude.gov.br/detalhe/u286CON7Qz">Assistance Regulation Information Model (RIRA)</a>
+    following
+    the <a href="https://hl7.org/fhir/R4/">HL7 FHIR R4 standard</a>.</p>
+
+  <a name="contextualization"> </a>
+  <h3>Contextualization</h3>
+  <p>The RNDS is a national platform that integrates health data as part of the <a
+      href="https://www.gov.br/saude/pt-br/composicao/seidigi/meu-sus-digital">"Meu SUS Digital"</a>
+    program, which is a federal initiative to materialize <a
+      href="https://www.gov.br/saude/pt-br/composicao/seidigi/saude-digital">Brazil's Digital Health Strategy</a>. By
+    leveraging cloud computing and emerging technologies, the RNDS creates a repository of health documents that stores
+    citizens' health information in an accessible and interoperable manner. This platform not only facilitates
+    healthcare professionals' access to patients' clinical histories, ensuring continuity of care, but also empowers
+    individuals by providing them access to their health data.</p>
+
+  <p>The guide emphasizes the importance of interoperability, detailing how information exchange
+    between digital health applications, such as electronic health records, portals, and mobile
+    applications, is achieved through <a href="https://en.wikipedia.org/wiki/REST">RESTful</a> web services developed
+    according to the FHIR R4 standard. It outlines the necessary steps for credentialing, security measures to protect
+    transactions, and the operations required for integration with the RNDS. Additionally, it
+    defines the information and computational models for the RIRA, consolidates <a href="https://hl7.org/FHIR/">FHIR</a>
+    resources for the computational model, and provides example instances and downloadable artifacts for
+    integrators.</p>
+
+  <p>In essence, the Implementation Guide for the RIRA of the RNDS is a crucial resource for ensuring
+    that health data is shared timely and reliably across Brazil's healthcare ecosystem, thereby enhancing the quality
+    and continuity of patient care.</p>
+</div>

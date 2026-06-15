@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="br.gov.saude.rira.fhir" />
   <language value="pt-BR" />
@@ -15,7 +16,7 @@
   </extension>
   <url
     value="https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir" />
-  <version value="1.0.0" />
+  <version value="1.0.0-release" />
   <name value="RIRARNDSIG" />
   <title value="Guia de Implementação da Regulação Assistencial (RIRA) da RNDS" />
   <status value="active" />
@@ -26,6 +27,10 @@
     <telecom>
       <system value="url" />
       <value value="http://www.saude.gov.br" />
+    </telecom>
+    <telecom>
+      <system value="email" />
+      <value value="cgiis.datasus@saude.gov.br" />
     </telecom>
   </contact>
   <description value="Guia de Implementação da Rede Nacional de Dados em Saúde (RNDS)" />
@@ -115,13 +120,8 @@
         <generation value="html" />
       </page>
       <page>
-        <nameUrl value="seguranca.html" />
-        <title value="Segurança" />
-        <generation value="html" />
-      </page>
-      <page>
-        <nameUrl value="integracao.html" />
-        <title value="Integração" />
+        <nameUrl value="lives.html" />
+        <title value="Lives" />
         <generation value="html" />
       </page>
       <page>
@@ -130,8 +130,8 @@
         <generation value="html" />
       </page>
       <page>
-        <nameUrl value="mc.html" />
-        <title value="Modelo Computacional" />
+        <nameUrl value="integracao.html" />
+        <title value="Integração" />
         <generation value="html" />
       </page>
       <page>
@@ -140,8 +140,18 @@
         <generation value="html" />
       </page>
       <page>
+        <nameUrl value="mc.html" />
+        <title value="Modelo Computacional" />
+        <generation value="html" />
+      </page>
+      <page>
         <nameUrl value="exemplos.html" />
         <title value="Exemplos" />
+        <generation value="html" />
+      </page>
+      <page>
+        <nameUrl value="changes.html" />
+        <title value="Histórico de mudanças" />
         <generation value="html" />
       </page>
       <page>
@@ -150,18 +160,27 @@
         <generation value="html" />
       </page>
       <page>
-        <nameUrl value="changes.html" />
-        <title value="Histórico de mudanças" />
+        <nameUrl value="forms.html" />
+        <title value="Feedback" />
+        <generation value="html" />
+      </page>
+      <page>
+        <nameUrl value="suporte.html" />
+        <title value="Suporte da RNDS" />
         <generation value="html" />
       </page>
     </page>
     <parameter>
       <code value="copyrightyear" />
-      <value value="2023+" />
+      <value value="2026+" />
     </parameter>
     <parameter>
       <code value="releaselabel" />
       <value value="STU1" />
+    </parameter>
+    <parameter>
+      <code value="path-resource" />
+      <value value="input\history" />
     </parameter>
     <parameter>
       <code value="shownav" />
@@ -169,63 +188,15 @@
     </parameter>
     <parameter>
       <code value="path-resource" />
-      <value value="input/capabilities" />
-    </parameter>
-    <parameter>
-      <code value="path-resource" />
-      <value value="input/examples" />
-    </parameter>
-    <parameter>
-      <code value="path-resource" />
-      <value value="input/extensions" />
-    </parameter>
-    <parameter>
-      <code value="path-resource" />
-      <value value="input/models" />
-    </parameter>
-    <parameter>
-      <code value="path-resource" />
-      <value value="input/operations" />
-    </parameter>
-    <parameter>
-      <code value="path-resource" />
-      <value value="input/profiles" />
-    </parameter>
-    <parameter>
-      <code value="path-resource" />
       <value value="input/resources" />
     </parameter>
     <parameter>
-      <code value="path-resource" />
-      <value value="input/vocabulary" />
-    </parameter>
-    <parameter>
-      <code value="path-resource" />
-      <value value="input/maps" />
-    </parameter>
-    <parameter>
-      <code value="path-resource" />
-      <value value="input/testing" />
-    </parameter>
-    <parameter>
-      <code value="path-resource" />
-      <value value="input/history" />
-    </parameter>
-    <parameter>
-      <code value="path-resource" />
-      <value value="fsh-generated/resources" />
-    </parameter>
-    <parameter>
       <code value="path-pages" />
-      <value value="template/config" />
+      <value value="input/pagecontent" />
     </parameter>
     <parameter>
-      <code value="path-pages" />
-      <value value="input/images" />
-    </parameter>
-    <parameter>
-      <code value="path-tx-cache" />
-      <value value="input-cache/txcache" />
+      <code value="special-url-base" />
+      <value value="http://www.saude.gov.br/fhir/r4" />
     </parameter>
   </definition>
 </ImplementationGuide>

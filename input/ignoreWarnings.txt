@@ -1,53 +1,29 @@
 == Suppressed Messages ==
 
-# Add warning and/or information messages here after you've confirmed that they aren't really a problem
-# instructions for ignoreWarnings.txt https://confluence.hl7.org/pages/viewpage.action?pageId=66938614#ImplementationGuideParameters-ManagingWarningsandHints
-# (And include comments like this justifying why)
+# Errors relacionados aos recursos Patient, Practitioner and Organization
+%StructureDefinition/BRIndividuo-1.0%
+%StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0%
+%StructureDefinition/BREstabelecimentoSaude-1.0%
 
-The Implementation Guide contains no explicitly linked examples for this profile
+# Errors relacionados as particularidades dos CodeSystems e ValueSets da RNDS
+Esta propriedade tem apenas um código ('healthcare') e não um URI, pelo que não tem um significado claramente definido no ecossistema terminológico
+Esta propriedade tem apenas um código ('regulated') e não um URI, pelo que não tem um significado claramente definido no ecossistema terminológico
+%http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet%
+The value set expansion is too large, and only a subset has been displayed
+%Referência ao projeto CodeSystem%
+Binding http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial is not a subset of binding http://hl7.org/fhir/ValueSet/appointmentstatus|4.0.1 because The codes 'excluded,returned-to-requester' are not in the base valueset
+
+# Erros de validação de exemplos
+Não foi possível resolver a referência de perfil 'http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0'
+
+# Errors relacionados as especificações da RNDS
+The slice definition for Composition.event has a maximum of 1 but the slices add up to a maximum of 7. Check that this is what is intended
+%http://hl7.org/fhir/StructureDefinition/regex%
+
+# Outros erros
 The Implementation Guide contains no examples for this profile
 The Implementation Guide contains no examples for this extension
 The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
-An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
 An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
 The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
-
-# Errors related to the Patient, Practitioner and Organization Resources
-%StructureDefinition/BRIndividuo-1.0%
-%StructureDefinition/BRProfissional-1.0%
-%StructureDefinition/BREstabelecimentoSaude-1.0%
-%StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0%
-%StructureDefinition/BRLotacaoProfissional-1.0%
-
-# Errors related to the RNDS CodeSystem specifications
-%Reference to draft CodeSystem%
-This property has only a code ('healthcare') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
-This property has only a code ('regulated') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
-Binding http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial could not be expanded
-The value set expansion is too large, and only a subset has been displayed
-Error from http://tx.fhir.org/r4: Unable to provide support for code system http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBHPMTUSS version *
-Error from http://tx.fhir.org/r4: Unable to provide support for code system http://hl7.org/fhir/appointmentstatus version * (known versions = 4.0.1)
-The code '04' is not valid in the system http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial version * (04)
-A definition for CodeSystem 'http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial' version '*' could not be found, so the code cannot be validated. Valid versions: []
-The code '09' is not valid in the system http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial version * (09)
-Esta propriedade tem apenas um código ('healthcare') e não um URI, pelo que não tem um significado claramente definido no ecossistema terminológico
-Esta propriedade tem apenas um código ('regulated') e não um URI, pelo que não tem um significado claramente definido no ecossistema terminológico
-%http://terminology.hl7.org/CodeSystem/designation-usage%
-%http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet%
-%http://hl7.org/fhir/ValueSet/appointmentstatus%
-O código '04' não é válido no sistema http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial versão * (04)
-O código '09' não é válido no sistema http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial versão * (09)
-%could not be expanded%
-The concepts in the value set include have not been validated because the code system is not known, and no terminology service supports it
-%Unable to provide support for code system%
-%Nenhuma das codificações fornecidas faz parte do conjunto de valores%
-
-# Errors related to the RNDS specifications
-%Os UUIDs devem ser válidos e em minúsculas%
-%Não foi possível encontrar uma definição para o valor URL%
-Details for urn:uuid:transient-1 matching against profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial|1.0.0
-Unable to find a profile match for urn:uuid:transient-1 among choices: http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial
-The slice definition for Composition.event has a maximum of 1 but the slices add up to a maximum of 7. Check that this is what is intended
-%http://hl7.org/fhir/StructureDefinition/regex%
-%O valor da cadeia de caracteres contém texto que se assemelha a etiquetas HTML incorporadas%

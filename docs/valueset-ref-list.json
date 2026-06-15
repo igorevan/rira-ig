@@ -1,229 +1,213 @@
 {
-  "codeSystems" : [
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCID10-1.0",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BRCID10",
-      "title" : "Classificação Internacional de Doenças - Décima Revisão - CID-10",
-      "description" : "Classificação Internacional de Doenças - Décima Revisão - CID-10",
-      "systems" : ["http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10"],
-      "uses" : {
-      },
-      "StructureDefinition-BRCID10Avaliado-1.0.html" : "CID10 Avaliado"
+  "codeSystems" : [{
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCID10-1.0",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRCID10",
+    "title" : "Classificação Internacional de Doenças - Décima Revisão - CID-10",
+    "description" : "Classificação Internacional de Doenças - Décima Revisão - CID-10",
+    "systems" : ["http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10"],
+    "uses" : {
     },
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCaraterAtendimentoMIRA",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BRCaraterAtendimentoMIRA",
-      "title" : "Caráter de Atendimento no MIRA",
-      "description" : "Caráter da solicitação do procedimento.",
-      "systems" : ["http://hl7.org/fhir/request-priority"],
-      "uses" : {
-      },
-      "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial",
-      "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial"
+    "StructureDefinition-BRCID10Avaliado-1.0.html" : "CID10 Avaliado"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCaraterAtendimentoMIRA",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRCaraterAtendimentoMIRA",
+    "title" : "Caráter de Atendimento no MIRA",
+    "description" : "Caráter da solicitação do procedimento.",
+    "systems" : ["http://hl7.org/fhir/request-priority"],
+    "uses" : {
     },
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCategoriaDiagnostico",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BRCategoriaDiagnostico",
-      "title" : "Categoria do Diagnóstico",
-      "description" : "ValueSet utilizado para definir o tipo de categoria do diagnóstico realizado.",
-      "systems" : [
-        "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCategoriaDiagnostico"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-BRCID10Avaliado-1.0.html" : "CID10 Avaliado"
+    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
+    "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCategoriaDiagnostico",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRCategoriaDiagnostico",
+    "title" : "Categoria do Diagnóstico (ValueSet)",
+    "description" : "ValueSet utilizado para definir o tipo de categoria do diagnóstico realizado.",
+    "systems" : ["http://www.saude.gov.br/fhir/r4/CodeSystem/BRCategoriaDiagnostico"],
+    "uses" : {
     },
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoDocumento-1.0",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BREstadoDocumento",
-      "title" : "Estado do Documento",
-      "description" : "Classifica o estado do documento que está sendo trafegado.",
-      "systems" : ["http://hl7.org/fhir/composition-status"],
-      "uses" : {
-      },
-      "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial (RIRA)"
+    "StructureDefinition-BRCID10Avaliado-1.0.html" : "CID10 Avaliado"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoDocumento-1.0",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BREstadoDocumento",
+    "title" : "Estado do Documento",
+    "description" : "Classifica o estado do documento que está sendo trafegado.",
+    "systems" : ["http://hl7.org/fhir/composition-status"],
+    "uses" : {
     },
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoResolucaoDiagnosticoProblema-1.0",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BREstadoResolucaoDiagnosticoProblema",
-      "title" : "Estado da Resolução de Diagnóstico ou Problema",
-      "description" : "Estado da resolução de um diagnóstico ou problema.",
-      "systems" : ["http://terminology.hl7.org/CodeSystem/condition-clinical"],
-      "uses" : {
-      },
-      "StructureDefinition-BRCID10Avaliado-1.0.html" : "CID10 Avaliado"
+    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial (RIRA)"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoResolucaoDiagnosticoProblema-1.0",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BREstadoResolucaoDiagnosticoProblema",
+    "title" : "Estado da Resolução de Diagnóstico ou Problema",
+    "description" : "Estado da resolução de um diagnóstico ou problema.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/condition-clinical"],
+    "uses" : {
     },
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRIntencaoRegulacao",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BRIntencaoRegulacao",
-      "title" : "Intenção de requisição de regulação assistencial",
-      "description" : "Intenção de requisição de regulação assistencial.",
-      "systems" : ["http://hl7.org/fhir/request-intent"],
-      "uses" : {
-      },
-      "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial"
+    "StructureDefinition-BRCID10Avaliado-1.0.html" : "CID10 Avaliado"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRIntencaoRegulacao",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRIntencaoRegulacao",
+    "title" : "Intenção de requisição de regulação assistencial",
+    "description" : "Intenção de requisição de regulação assistencial.",
+    "systems" : ["http://hl7.org/fhir/request-intent"],
+    "uses" : {
     },
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRJustificativaIndividuoNaoIdentificado-1.0",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BRJustificativaIndividuoNaoIdentificado",
-      "title" : "Justificativa da Impossibilidade de Identificação do Indivíduo",
-      "description" : "Classifica as razões pelo qual não foi possível obter os dados de identificação do indivíduo em um contato assistencial. (Port. nº 84/SAS/MS/1997 e Port. nº02/SAS/SGEP/MS/2012)",
-      "systems" : [
-        "http://www.saude.gov.br/fhir/r4/CodeSystem/BRJustificativaIndividuoNaoIdentificado"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-BRIndividuoNaoIdentificado-1.0.html" : "Informações Complementares de Indivíduos Não Identificados"
+    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRJustificativaIndividuoNaoIdentificado-1.0",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRJustificativaIndividuoNaoIdentificado",
+    "title" : "Justificativa da Impossibilidade de Identificação do Indivíduo (ValueSet)",
+    "description" : "Classifica as razões pelo qual não foi possível obter os dados de identificação do indivíduo em um contato assistencial. (Port. nº 84/SAS/MS/1997 e Port. nº02/SAS/SGEP/MS/2012)",
+    "systems" : ["http://www.saude.gov.br/fhir/r4/CodeSystem/BRJustificativaIndividuoNaoIdentificado"],
+    "uses" : {
     },
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRModalidadeAssistencialMIRA",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BRModalidadeAssistencialMIRA",
-      "title" : "Modalidade Assistencial MIRA",
-      "description" : "Modalidade assistencial que gerou a solicitação do procedimento.",
-      "systems" : [
-        "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial",
-      "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
-      "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial (RIRA)"
+    "StructureDefinition-BRIndividuoNaoIdentificado-1.0.html" : "Informações Complementares de Indivíduos Não Identificados"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRModalidadeAssistencialMIRA",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRModalidadeAssistencialMIRA",
+    "title" : "Modalidade Assistencial MIRA",
+    "description" : "Modalidade assistencial que gerou a solicitação do procedimento.",
+    "systems" : ["http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial"],
+    "uses" : {
     },
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BROcupacao-1.0",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BROcupacao",
-      "title" : "Classificação Brasileira de Ocupações - CBO",
-      "description" : "Classifica as profissões do mercado de trabalho brasileiro.",
-      "systems" : ["http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO"],
-      "uses" : {
-      },
-      "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial",
-      "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial"
+    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
+    "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial",
+    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial (RIRA)"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BROcupacao-1.0",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BROcupacao",
+    "title" : "Classificação Brasileira de Ocupações - CBO",
+    "description" : "Classifica as profissões do mercado de trabalho brasileiro.",
+    "systems" : ["http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO"],
+    "uses" : {
     },
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRProcedimentosNacionais-1.0",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BRProcedimentosNacionais",
-      "title" : "Procedimento realizado",
-      "description" : "ValueSet das classificações brasileiras para procedimentos adotadas em contexto nacional, os CodeSystems apresentam os códigos da competência atual, para o envio de competência anterior os códigos devem ser consultados na RTS.",
-      "systems" : [
-        "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS",
-        "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBHPMTUSS"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial",
-      "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial"
+    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
+    "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRProcedimentosNacionais-1.0",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRProcedimentosNacionais",
+    "title" : "Procedimento realizado",
+    "description" : "ValueSet das classificações brasileiras para procedimentos adotadas em contexto nacional, os CodeSystems apresentam os códigos da competência atual, para o envio de competência anterior os códigos devem ser consultados na RTS.",
+    "systems" : ["http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS",
+    "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBHPMTUSS"],
+    "uses" : {
     },
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRSexo-1.0",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BRSexo",
-      "title" : "Sexo",
-      "description" : "Sexo de um indivíduo.",
-      "systems" : ["http://hl7.org/fhir/administrative-gender"],
-      "uses" : {
-      },
-      "StructureDefinition-BRIndividuoNaoIdentificado-1.0.html" : "Informações Complementares de Indivíduos Não Identificados"
+    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
+    "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRSexo-1.0",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRSexo",
+    "title" : "Sexo",
+    "description" : "Sexo de um indivíduo.",
+    "systems" : ["http://hl7.org/fhir/administrative-gender"],
+    "uses" : {
     },
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BRStatusAgendamentoRegulacaoAssistencial",
-      "title" : "Status de agendamento de regulação assistencial",
-      "description" : "Status de agendamento de regulação assistencial.",
-      "systems" : [
-        "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusAgendamentoRegulacaoAssistencial",
-        "http://hl7.org/fhir/appointmentstatus"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial"
+    "StructureDefinition-BRIndividuoNaoIdentificado-1.0.html" : "Informações Complementares de Indivíduos Não Identificados"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRStatusAgendamentoRegulacaoAssistencial",
+    "title" : "Status de agendamento de regulação assistencial (ValueSet)",
+    "description" : "Status de agendamento de regulação assistencial.",
+    "systems" : ["http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusAgendamentoRegulacaoAssistencial",
+    "http://hl7.org/fhir/appointmentstatus"],
+    "uses" : {
     },
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusParticipante",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BRStatusParticipante",
-      "title" : "Status do Participante do agendamento",
-      "description" : "Status do Participante do agendamento.",
-      "systems" : ["http://hl7.org/fhir/participationstatus"],
-      "uses" : {
-      },
-      "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial"
+    "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusParticipante",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRStatusParticipante",
+    "title" : "Status do Participante do agendamento",
+    "description" : "Status do Participante do agendamento.",
+    "systems" : ["http://hl7.org/fhir/participationstatus"],
+    "uses" : {
     },
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BRStatusRegulacaoAssistencial",
-      "title" : "Status de regulação assistencial",
-      "description" : "Status de agendamento de regulação assistencial.",
-      "systems" : [
-        "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial (RIRA)"
+    "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRStatusRegulacaoAssistencial",
+    "title" : "Status de regulação assistencial",
+    "description" : "Status de agendamento de regulação assistencial.",
+    "systems" : ["http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial"],
+    "uses" : {
     },
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRequisicaoRegulacaoAssistencial",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BRStatusRequisicaoRegulacaoAssistencial",
-      "title" : "Status de requisição de regulação assistencial",
-      "description" : "Status de requisição de regulação assistencial.",
-      "systems" : ["http://hl7.org/fhir/request-status"],
-      "uses" : {
-      },
-      "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial"
+    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial (RIRA)"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRequisicaoRegulacaoAssistencial",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRStatusRequisicaoRegulacaoAssistencial",
+    "title" : "Status de requisição de regulação assistencial",
+    "description" : "Status de requisição de regulação assistencial.",
+    "systems" : ["http://hl7.org/fhir/request-status"],
+    "uses" : {
     },
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoDocumento-1.0",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BRTipoDocumento",
-      "title" : "Tipo de Documento",
-      "description" : "Classifica o tipo de documento que está sendo trafegado.",
-      "systems" : ["http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento"],
-      "uses" : {
-      },
-      "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial (RIRA)"
+    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoDocumento-1.0",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRTipoDocumento",
+    "title" : "Tipo de Documento (ValueSet)",
+    "description" : "Classifica o tipo de documento que está sendo trafegado.",
+    "systems" : ["http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento"],
+    "uses" : {
     },
-    {
-      "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoParticipante",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "BRTipoParticipante",
-      "title" : "Tipo Participante",
-      "description" : "Identificação do tipo do participante envolvido na solicitação.",
-      "systems" : [
-        "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial"
-    }
-  ]
+    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial (RIRA)"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoParticipante",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRTipoParticipante",
+    "title" : "Tipo Participante",
+    "description" : "Identificação do tipo do participante envolvido na solicitação.",
+    "systems" : ["http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante"],
+    "uses" : {
+    },
+    "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial"
+  }]
 }

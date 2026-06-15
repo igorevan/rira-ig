@@ -6,22 +6,28 @@
   <text>
     <status value="generated"/><div xml:lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR"><p class="res-header-id"><b>Narrativa gerada: CodeSystem BRTipoParticipante</b></p><a name="BRTipoParticipante"> </a><a name="hcBRTipoParticipante"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Língua: pt-BR</p></div><p>Este case-sensitive sistema de código <code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante</code> define o seguinte códigos:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Código</b></td><td><b>Ecrã</b></td></tr><tr><td style="white-space:nowrap">PCT<a name="BRTipoParticipante-PCT"> </a></td><td>Paciente</td></tr><tr><td style="white-space:nowrap">ESS<a name="BRTipoParticipante-ESS"> </a></td><td>Estabelecimento de saúde solicitante</td></tr><tr><td style="white-space:nowrap">ESE<a name="BRTipoParticipante-ESE"> </a></td><td>Estabelecimento de saúde executante</td></tr><tr><td style="white-space:nowrap">ESR<a name="BRTipoParticipante-ESR"> </a></td><td>Estabelecimento de saúde regulador</td></tr></table></div>
   </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="ehr"/>
+  </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
-        <valueCanonical value="http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"/>
+        <valueCanonical value="https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir"/>
       </extension>
     </valueInteger>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-    <valueCode value="informative">
+    <valueCode value="normative">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
-        <valueCanonical value="http://www.saude.gov.br/fhir/r4/ImplementationGuide/br.gov.saude.rira.fhir"/>
+        <valueCanonical value="https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir"/>
       </extension>
     </valueCode>
   </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+    <valueCode value="4.0.1"/>
+  </extension>
   <url value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante"/>
-  <version value="1.0.0"/>
+  <version value="1.0.0-release"/>
   <name value="BRTipoParticipante"/>
   <title value="Tipo do Participante"/>
   <status value="active"/>
@@ -33,6 +39,10 @@
     <telecom>
       <system value="url"/>
       <value value="http://www.saude.gov.br"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="cgiis.datasus@saude.gov.br"/>
     </telecom>
   </contact>
   <description value="Identificação do tipo do participante envolvido na solicitação."/>

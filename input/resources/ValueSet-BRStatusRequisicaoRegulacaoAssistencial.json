@@ -16,7 +16,6 @@
     "include": [
       {
         "system": "http://hl7.org/fhir/request-status",
-        "version": "*",
         "concept": [
           {
             "code": "draft",

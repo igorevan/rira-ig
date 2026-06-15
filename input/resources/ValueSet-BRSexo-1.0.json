@@ -1,9 +1,6 @@
 {
   "resourceType": "ValueSet",
   "id": "BRSexo-1.0",
-  "meta": {
-    "lastUpdated": "2021-12-24T12:00:59.742+00:00"
-  },
   "language": "en",
   "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRSexo-1.0",
   "version": "01.01",
@@ -19,15 +16,14 @@
     "include": [
       {
         "system": "http://hl7.org/fhir/administrative-gender",
-        "version": "*",
         "concept": [
           {
             "code": "male",
-            "display": "Masculino",
+            "display": "Male",
             "designation": [
               {
-                "language": "en",
-                "value": "Male"
+                "language": "pt-BR",
+                "value": "Masculino"
               },
               {
                 "language": "es",
@@ -37,11 +33,11 @@
           },
           {
             "code": "female",
-            "display": "Feminino",
+            "display": "Female",
             "designation": [
               {
-                "language": "en",
-                "value": "Female"
+                "language": "pt-BR",
+                "value": "Feminino"
               },
               {
                 "language": "es",
@@ -51,11 +47,11 @@
           },
           {
             "code": "unknown",
-            "display": "Ignorado",
+            "display": "Unknown",
             "designation": [
               {
-                "language": "en",
-                "value": "Unknow"
+                "language": "pt-BR",
+                "value": "Ignorado"
               },
               {
                 "language": "es",

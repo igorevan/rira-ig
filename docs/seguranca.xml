@@ -1,0 +1,40 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R4/fhir-single.xsd">
+  <a name="seguranca"></a>
+  <h3>Segurança</h3>
+  <p> Somente com uma solicitação de acesso aprovada será possível realizar o consumo dos serviços (<i>web
+      services</i>) do <i>EHR Services</i>. </p>
+  <p> Após a aprovação, o primeiro passo para realizar o consumo dos serviços é realizar a
+    autenticação utilizando o serviço <code>POST@/token</code> no componente <i>EHR Auth</i>.
+    Durante o processo de autenticação é verificado se o certificado digital está dentro do período
+    de vigência e se ele, ou um de seus superiores na cadeia, foi revogado. </p>
+  <p> Caso não ocorra nenhum destes problemas, a operação de autenticação será realizada com sucesso
+    e será retornado um <i>token</i> (<code>access_token</code>) com tempo de vida de 30 minutos.
+    Este <i>token</i> deverá ser utilizado como token de autenticação nas chamadas dos serviços (<i>web
+      services</i>) do <i>EHR Services</i>. A estrutura do <i>token</i> retornado é a seguinte: </p>
+
+  <pre><code>{
+      "access_token": "eyJraWQiOiJybmRzIGF...",
+      "scope": "read write",
+      "token_type": "jwt",
+      "expires_in": 1800000
+}</code>
+</pre>
+
+  <p>A autenticação com certificado digital da RNDS utiliza a técnica chamada “<i>Two-way SSL</i>”.
+    No “<i>Two-way SSL</i>”, além do certificado do servidor, o cliente também deve utilizar um
+    certificado válido e que será conferido. Por outro lado, na autenticação SSL (ou “<i>One-way SSL</i>”)
+    somente o certificado digital do servidor deve ser válido e será conferido. </p>
+  <p> Vale ressaltar que o certificado digital deve ser usado somente para realizar a autenticação e
+    obter o <i>token</i>. </p>
+  <p>A partir desse momento, o token é seu "<i>ticket</i>" de passe e todas as chamadas devem ser
+    usadas utilizando somente este, não gerando a degradação de performance relacionada ao uso do
+    certificado digital. Por isso, recomenda-se reutilizar o "<i>ticket</i>" ao máximo durante seu
+    tempo de vida e só então obter um novo token repetindo a operação de autenticação com “<i>Two-way
+      SSL</i>”.</p>
+  <p>Na página da RNDS no <a href="https://servicos-datasus.saude.gov.br/">Portal de Serviços do
+      DATASUS</a> há um projeto de exemplo para obtenção do <i>token</i> utilizando a linguagem <a
+      href="https://www.java.com/">
+      <i>Java</i>
+    </a>. </p>
+</div>

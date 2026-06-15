@@ -16,7 +16,6 @@
     "include": [
       {
         "system": "http://hl7.org/fhir/participationstatus",
-        "version": "*",
         "concept": [
           {
             "code": "accepted",
