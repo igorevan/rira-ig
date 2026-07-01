@@ -14,4 +14,4 @@ Generic: line 0, col 0, Error - The link 'link do formulário' for "aqui" cannot
 /home/igor/rira-ig/input/resources/StructureDefinition-BRAgendamentoRegulacaoAssistencial.json: line 0, col 0, Error - Binding http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial is not a subset of binding http://hl7.org/fhir/ValueSet/appointmentstatus|4.0.1 because The codes 'excluded,returned-to-requester' are not in the base valueset (BUSINESSRULE)
 
 err = 4, warn = 0, info = 0
-IG Publisher Version: 2.2.9
+IG Publisher Version: 2.2.10

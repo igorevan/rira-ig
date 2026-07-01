@@ -227,7 +227,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </table>
 
   
-  <div xmlns="http://www.w3.org/1999/xhtml"><div class="markdown-toc" data-fhir="generated"><p>Contents:</p><ul><li><a href="#integracao">Integração com a RNDS</a></li><li><a href="#auxiliares">Serviços Auxiliares</a></li><li><a href="#principais">Serviços Principais</a></li><li><a href="#seguranca">Segurança</a></li><li><a href="#exclusao">Exclusão de Registros na RNDS</a></li><li><a href="#identificadores">Identificadores do Registro Enviado a RNDS</a></li><li><a href="#ambientes">Ambientes de Integração</a></li><li><a href="#producao">Ambiente de Produção</a></li></ul></div>
+  <div xmlns="http://www.w3.org/1999/xhtml"><div class="markdown-toc" data-fhir="generated"><p>Contents:</p><ul><li><a href="#integracao">Integração com a RNDS</a></li><li><a href="#auxiliares">Serviços Auxiliares</a></li><li><a href="#principais">Serviços Principais</a></li><li><a href="#seguranca">Segurança</a></li><li><a href="#exclusao">Exclusão de Registros na RNDS</a></li><li><a href="#identificadores">Identificadores do Registro Enviado a RNDS</a></li><li><a href="#ambientes">Ambientes de Integração</a></li><li><a href="#producao">Ambiente de Produção</a></li><li><a href="#erros">Mensagens e Erros da RNDS</a></li></ul></div>
   <a name="integracao"> </a>
   <h3>Integração com a RNDS</h3>
   <p> Para garantir a interoperabilidade entre as aplicações de Saúde Digital, em especial
@@ -714,6 +714,28 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tbody>
   </table>
 
+  <a name="erros"> </a>
+  <h3>Mensagens e Erros da RNDS</h3>
+  <p>
+    Ao enviar registros para as APIs da RNDS, a plataforma pode retornar diferentes respostas com alguns códigos. O
+    documento abaixo tem como objetivo listar e descrever os erros <b>(ERRXXX)</b> e as mensagens <b>(MSG)</b> da RNDS,
+    ajudando a identificar e corrigir
+    inconsistências.
+  </p>
+
+  <a href="https://mobileapps.saude.gov.br/portal-servicos/files/f3bd659c8c8ae3ee966e575fde27eb58/fcb00110e9ddb2819d3f331296ee7417_yohh3azid.pdf">Link
+    para o documento da lista de erros</a>
+
+  <p>
+    Sendo:
+  </p>
+  <ul>
+    <li>A <b>mensagem sistêmica</b> é o texto cadastrado no sistema para que seja exposto aos
+      integradores no momento de envio do documento na RNDS.</li>
+    <li>A <b>descrição do erro</b> é uma explicação mais detalhada sobre a mensagem sistêmica
+      apresentada pela RNDS.</li>
+  </ul>
+
 </div>
 </div>
         </div>  <!-- /inner-wrapper -->
@@ -762,8 +784,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.saude.gov.br">Ministério da Saúde do Brasil</a>.  
           Package br.gov.saude.rira.fhir#1.0.0-release based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-15 17:23:00 -0300">
-    2026-06-15
+  <span title="2026-07-01 08:33:00 -0300">
+    2026-07-01
   </span>
 
           <br/>

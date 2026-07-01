@@ -135,3 +135,13 @@ O ambiente de produção é o ambiente estável e real que provê os serviços (
 | Sergipe | `https://se-ehr-services.saude.gov.br/api/` |
 | Tocantins | `https://to-ehr-services.saude.gov.br/api/` |
 
+### Mensagens e Erros da RNDS
+
+ Ao enviar registros para as APIs da RNDS, a plataforma pode retornar diferentes respostas com alguns códigos. O documento abaixo tem como objetivo listar e descrever os erros **(ERRXXX)** e as mensagens **(MSG)** da RNDS, ajudando a identificar e corrigir inconsistências. 
+
+[Link para o documento da lista de erros](https://mobileapps.saude.gov.br/portal-servicos/files/f3bd659c8c8ae3ee966e575fde27eb58/fcb00110e9ddb2819d3f331296ee7417_yohh3azid.pdf)
+ Sendo: 
+
+* A **mensagem sistêmica** é o texto cadastrado no sistema para que seja exposto aos integradores no momento de envio do documento na RNDS.
+* A **descrição do erro** é uma explicação mais detalhada sobre a mensagem sistêmica apresentada pela RNDS.
+

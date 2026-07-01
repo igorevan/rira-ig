@@ -3,7 +3,6 @@
 # Errors relacionados aos recursos Patient, Practitioner and Organization
 %StructureDefinition/BRIndividuo-1.0%
 %StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0%
-%StructureDefinition/BREstabelecimentoSaude-1.0%
 
 # Errors relacionados as particularidades dos CodeSystems e ValueSets da RNDS
 Esta propriedade tem apenas um código ('healthcare') e não um URI, pelo que não tem um significado claramente definido no ecossistema terminológico
@@ -14,11 +13,12 @@ The value set expansion is too large, and only a subset has been displayed
 Binding http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial is not a subset of binding http://hl7.org/fhir/ValueSet/appointmentstatus|4.0.1 because The codes 'excluded,returned-to-requester' are not in the base valueset
 
 # Erros de validação de exemplos
-Não foi possível resolver a referência de perfil 'http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0'
+%StructureDefinition/BREstabelecimentoSaude-1.0%
 
 # Errors relacionados as especificações da RNDS
 The slice definition for Composition.event has a maximum of 1 but the slices add up to a maximum of 7. Check that this is what is intended
 %http://hl7.org/fhir/StructureDefinition/regex%
+%have an OID assigned%
 
 # Outros erros
 The Implementation Guide contains no examples for this profile

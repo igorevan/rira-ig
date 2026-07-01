@@ -1,6 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -8,157 +7,185 @@
 
 <https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ValueSet/BRStatusAgendamentoRegulacaoAssistencial> a fhir:ValueSet ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "BRStatusAgendamentoRegulacaoAssistencial"] ; # 
-  fhir:language [ fhir:v "en"] ; # 
-  fhir:text [
-     fhir:status [ fhir:v "extensions" ] ;
-     fhir:div [ fhir:v "<div xml:lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"><p class=\"res-header-id\"><b>Narrativa gerada: ValueSet BRStatusAgendamentoRegulacaoAssistencial</b></p><a name=\"BRStatusAgendamentoRegulacaoAssistencial\"> </a><a name=\"hcBRStatusAgendamentoRegulacaoAssistencial\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Língua: en</p></div><p>Este conjunto de valores inclui códigos baseados nas seguintes regras:</p><ul><li>Incluir estes códigos, tal como definidos em <a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html\"><code>http://hl7.org/fhir/appointmentstatus</code></a><span title=\"Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references\"> versão ?4.0.1</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Código</b></td><td><b>Ecrã</b></td><td><b>Definição</b></td><td><b>Portuguese (Brazil) (pt)</b></td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-proposed\">proposed</a></td><td>Proposed</td><td>None of the participant(s) have finalized their acceptance of the appointment request, and the start/end time might not be set yet.</td><td>Solicitado</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-pending\">pending</a></td><td>Pending</td><td>Some or all of the participant(s) have not finalized their acceptance of the appointment request.</td><td>Pendente</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-booked\">booked</a></td><td>Booked</td><td>All participant(s) have been considered and the appointment is confirmed to go ahead at the date/times specified.</td><td>Agendado</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-arrived\">arrived</a></td><td>Arrived</td><td>The patient/patients has/have arrived and is/are waiting to be seen.</td><td>Recebido</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-fulfilled\">fulfilled</a></td><td>Fulfilled</td><td>The planning stages of the appointment are now complete, the encounter resource will exist and will track further status changes. Note that an encounter may exist before the appointment status is fulfilled for many reasons.</td><td>Atendido/Internado</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-cancelled\">cancelled</a></td><td>Cancelled</td><td>The appointment has been cancelled.</td><td>Negado/Cancelado</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-noshow\">noshow</a></td><td>No Show</td><td>Some or all of the participant(s) have not/did not appear for the appointment (usually the patient).</td><td>Falta</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-entered-in-error\">entered-in-error</a></td><td>Entered in error</td><td>This instance should not have been part of this patient's medical record.</td><td>Em estado de erro</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-checked-in\">checked-in</a></td><td>Checked in</td><td>When checked in, all pre-encounter administrative work is complete, and the encounter may begin. (where multiple patients are involved, they are all present).</td><td>Confirmado</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-waitlist\">waitlist</a></td><td>Waitlisted</td><td>The appointment has been placed on a waitlist, to be scheduled/confirmed in the future when a slot/service is available.<br/>A specific time might or might not be pre-allocated.</td><td>Em espera</td></tr></table></li><li>Incluir todos os códigos definidos em <a href=\"CodeSystem-BRStatusAgendamentoRegulacaoAssistencial.html\"><code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusAgendamentoRegulacaoAssistencial</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> versão ?1.0.0-release</span></li></ul></div>"^^rdf:XMLLiteral ]
-  ] ; # 
-  fhir:extension ( [
-     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
-     fhir:value [
-       a fhir:code ;
-       fhir:v "ehr"
-     ]
-  ] [
-     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
-     fhir:value [
-       a fhir:integer ;
-       fhir:v 1 ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:canonical ;
-           fhir:v "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir"^^xsd:anyURI ;
+  fhir:Resource.id [ fhir:value "BRStatusAgendamentoRegulacaoAssistencial"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xml:lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"><p class=\"res-header-id\"><b>Narrativa gerada: ValueSet BRStatusAgendamentoRegulacaoAssistencial</b></p><a name=\"BRStatusAgendamentoRegulacaoAssistencial\"> </a><a name=\"hcBRStatusAgendamentoRegulacaoAssistencial\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Língua: en</p></div><p>Este conjunto de valores inclui códigos baseados nas seguintes regras:</p><ul><li>Incluir estes códigos, tal como definidos em <a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html\"><code>http://hl7.org/fhir/appointmentstatus</code></a><span title=\"Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references\"> versão ?4.0.1</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Código</b></td><td><b>Ecrã</b></td><td><b>Definição</b></td><td><b>Portuguese (Brazil) (pt)</b></td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-proposed\">proposed</a></td><td>Proposed</td><td>None of the participant(s) have finalized their acceptance of the appointment request, and the start/end time might not be set yet.</td><td>Solicitado</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-pending\">pending</a></td><td>Pending</td><td>Some or all of the participant(s) have not finalized their acceptance of the appointment request.</td><td>Pendente</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-booked\">booked</a></td><td>Booked</td><td>All participant(s) have been considered and the appointment is confirmed to go ahead at the date/times specified.</td><td>Agendado</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-arrived\">arrived</a></td><td>Arrived</td><td>The patient/patients has/have arrived and is/are waiting to be seen.</td><td>Recebido</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-fulfilled\">fulfilled</a></td><td>Fulfilled</td><td>The planning stages of the appointment are now complete, the encounter resource will exist and will track further status changes. Note that an encounter may exist before the appointment status is fulfilled for many reasons.</td><td>Atendido/Internado</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-cancelled\">cancelled</a></td><td>Cancelled</td><td>The appointment has been cancelled.</td><td>Negado/Cancelado</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-noshow\">noshow</a></td><td>No Show</td><td>Some or all of the participant(s) have not/did not appear for the appointment (usually the patient).</td><td>Falta</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-entered-in-error\">entered-in-error</a></td><td>Entered in error</td><td>This instance should not have been part of this patient's medical record.</td><td>Em estado de erro</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-checked-in\">checked-in</a></td><td>Checked in</td><td>When checked in, all pre-encounter administrative work is complete, and the encounter may begin. (where multiple patients are involved, they are all present).</td><td>Confirmado</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-waitlist\">waitlist</a></td><td>Waitlisted</td><td>The appointment has been placed on a waitlist, to be scheduled/confirmed in the future when a slot/service is available.<br/>A specific time might or might not be pre-allocated.</td><td>Em espera</td></tr></table></li><li>Incluir todos os códigos definidos em <a href=\"CodeSystem-BRStatusAgendamentoRegulacaoAssistencial.html\"><code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusAgendamentoRegulacaoAssistencial</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> versão ?1.0.0-release</span></li></ul></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg" ] ;
+     fhir:Extension.valueCode [ fhir:value "ehr" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm" ] ;
+     fhir:Extension.valueInteger [
+       fhir:value "1"^^xsd:integer ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom" ] ;
+         fhir:Extension.valueCanonical [
+           fhir:value "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir" ;
            fhir:link <https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir>
          ]
-       ] )
+       ]
      ]
-  ] [
-     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-     fhir:value [
-       a fhir:code ;
-       fhir:v "normative" ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:canonical ;
-           fhir:v "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir"^^xsd:anyURI ;
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
+     fhir:Extension.valueCode [
+       fhir:value "normative" ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom" ] ;
+         fhir:Extension.valueCanonical [
+           fhir:value "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir" ;
            fhir:link <https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir>
          ]
-       ] )
+       ]
      ]
-  ] [
-     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
-     fhir:value [
-       a fhir:code ;
-       fhir:v "4.0.1"
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
+     fhir:Extension.valueCode [ fhir:value "4.0.1" ]
+  ] ;
+  fhir:ValueSet.url [ fhir:value "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial"] ;
+  fhir:ValueSet.version [ fhir:value "1.0.0-release"] ;
+  fhir:ValueSet.name [ fhir:value "BRStatusAgendamentoRegulacaoAssistencial"] ;
+  fhir:ValueSet.title [ fhir:value "Status de agendamento de regulação assistencial (ValueSet)"] ;
+  fhir:ValueSet.status [ fhir:value "active"] ;
+  fhir:ValueSet.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2023-04-13T13:17:18.5012669+00:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "Ministério da Saúde do Brasil"] ;
+  fhir:ValueSet.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "Ministério da Saúde do Brasil" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "http://www.saude.gov.br" ]
+     ], [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "email" ] ;
+       fhir:ContactPoint.value [ fhir:value "cgiis.datasus@saude.gov.br" ]
      ]
-  ] ) ; # 
-  fhir:url [ fhir:v "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial"^^xsd:anyURI] ; # 
-  fhir:version [ fhir:v "1.0.0-release"] ; # 
-  fhir:name [ fhir:v "BRStatusAgendamentoRegulacaoAssistencial"] ; # 
-  fhir:title [ fhir:v "Status de agendamento de regulação assistencial (ValueSet)"] ; # 
-  fhir:status [ fhir:v "active"] ; # 
-  fhir:experimental [ fhir:v false] ; # 
-  fhir:date [ fhir:v "2023-04-13T13:17:18.5012669+00:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "Ministério da Saúde do Brasil"] ; # 
-  fhir:contact ( [
-     fhir:name [ fhir:v "Ministério da Saúde do Brasil" ] ;
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://www.saude.gov.br" ]
-     ] [
-       fhir:system [ fhir:v "email" ] ;
-       fhir:value [ fhir:v "cgiis.datasus@saude.gov.br" ]
-     ] )
-  ] ) ; # 
-  fhir:description [ fhir:v "Status de agendamento de regulação assistencial."] ; # 
-  fhir:jurisdiction ( [
-     fhir:coding ( [
-       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "BR" ]
-     ] )
-  ] ) ; # 
-  fhir:immutable [ fhir:v false] ; # 
-  fhir:compose [
-     fhir:include ( [
-       fhir:system [ fhir:v "http://hl7.org/fhir/appointmentstatus"^^xsd:anyURI ] ;
-       fhir:concept ( [
-         fhir:code [ fhir:v "proposed" ] ;
-         fhir:display [ fhir:v "Proposed" ] ;
-         fhir:designation ( [
-           fhir:language [ fhir:v "pt-BR" ] ;
-           fhir:value [ fhir:v "Solicitado" ]
-         ] )
-       ] [
-         fhir:code [ fhir:v "pending" ] ;
-         fhir:display [ fhir:v "Pending" ] ;
-         fhir:designation ( [
-           fhir:language [ fhir:v "pt-BR" ] ;
-           fhir:value [ fhir:v "Pendente" ]
-         ] )
-       ] [
-         fhir:code [ fhir:v "booked" ] ;
-         fhir:display [ fhir:v "Booked" ] ;
-         fhir:designation ( [
-           fhir:language [ fhir:v "pt-BR" ] ;
-           fhir:value [ fhir:v "Agendado" ]
-         ] )
-       ] [
-         fhir:code [ fhir:v "arrived" ] ;
-         fhir:display [ fhir:v "Arrived" ] ;
-         fhir:designation ( [
-           fhir:language [ fhir:v "pt-BR" ] ;
-           fhir:value [ fhir:v "Recebido" ]
-         ] )
-       ] [
-         fhir:code [ fhir:v "fulfilled" ] ;
-         fhir:display [ fhir:v "Fulfilled" ] ;
-         fhir:designation ( [
-           fhir:language [ fhir:v "pt-BR" ] ;
-           fhir:value [ fhir:v "Atendido/Internado" ]
-         ] )
-       ] [
-         fhir:code [ fhir:v "cancelled" ] ;
-         fhir:display [ fhir:v "Cancelled" ] ;
-         fhir:designation ( [
-           fhir:language [ fhir:v "pt-BR" ] ;
-           fhir:value [ fhir:v "Negado/Cancelado" ]
-         ] )
-       ] [
-         fhir:code [ fhir:v "noshow" ] ;
-         fhir:display [ fhir:v "No Show" ] ;
-         fhir:designation ( [
-           fhir:language [ fhir:v "pt-BR" ] ;
-           fhir:value [ fhir:v "Falta" ]
-         ] )
-       ] [
-         fhir:code [ fhir:v "entered-in-error" ] ;
-         fhir:display [ fhir:v "Entered in error" ] ;
-         fhir:designation ( [
-           fhir:language [ fhir:v "pt-BR" ] ;
-           fhir:value [ fhir:v "Em estado de erro" ]
-         ] )
-       ] [
-         fhir:code [ fhir:v "checked-in" ] ;
-         fhir:display [ fhir:v "Checked in" ] ;
-         fhir:designation ( [
-           fhir:language [ fhir:v "pt-BR" ] ;
-           fhir:value [ fhir:v "Confirmado" ]
-         ] )
-       ] [
-         fhir:code [ fhir:v "waitlist" ] ;
-         fhir:display [ fhir:v "Waitlisted" ] ;
-         fhir:designation ( [
-           fhir:language [ fhir:v "pt-BR" ] ;
-           fhir:value [ fhir:v "Em espera" ]
-         ] )
-       ] )
-     ] [
-       fhir:system [ fhir:v "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusAgendamentoRegulacaoAssistencial"^^xsd:anyURI ]
-     ] )
-  ] . # 
+  ] ;
+  fhir:ValueSet.description [ fhir:value "Status de agendamento de regulação assistencial."] ;
+  fhir:ValueSet.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "BR" ]
+     ]
+  ] ;
+  fhir:ValueSet.immutable [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index -1 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/appointmentstatus" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "proposed" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Proposed" ] ;
+         fhir:ValueSet.compose.include.concept.designation [
+           fhir:index -1 ;
+           fhir:ValueSet.compose.include.concept.designation.language [ fhir:value "pt-BR" ] ;
+           fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "Solicitado" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "pending" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pending" ] ;
+         fhir:ValueSet.compose.include.concept.designation [
+           fhir:index -1 ;
+           fhir:ValueSet.compose.include.concept.designation.language [ fhir:value "pt-BR" ] ;
+           fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "Pendente" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "booked" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Booked" ] ;
+         fhir:ValueSet.compose.include.concept.designation [
+           fhir:index -1 ;
+           fhir:ValueSet.compose.include.concept.designation.language [ fhir:value "pt-BR" ] ;
+           fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "Agendado" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "arrived" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Arrived" ] ;
+         fhir:ValueSet.compose.include.concept.designation [
+           fhir:index -1 ;
+           fhir:ValueSet.compose.include.concept.designation.language [ fhir:value "pt-BR" ] ;
+           fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "Recebido" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "fulfilled" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fulfilled" ] ;
+         fhir:ValueSet.compose.include.concept.designation [
+           fhir:index -1 ;
+           fhir:ValueSet.compose.include.concept.designation.language [ fhir:value "pt-BR" ] ;
+           fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "Atendido/Internado" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "cancelled" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cancelled" ] ;
+         fhir:ValueSet.compose.include.concept.designation [
+           fhir:index -1 ;
+           fhir:ValueSet.compose.include.concept.designation.language [ fhir:value "pt-BR" ] ;
+           fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "Negado/Cancelado" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "noshow" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "No Show" ] ;
+         fhir:ValueSet.compose.include.concept.designation [
+           fhir:index -1 ;
+           fhir:ValueSet.compose.include.concept.designation.language [ fhir:value "pt-BR" ] ;
+           fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "Falta" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "entered-in-error" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Entered in error" ] ;
+         fhir:ValueSet.compose.include.concept.designation [
+           fhir:index -1 ;
+           fhir:ValueSet.compose.include.concept.designation.language [ fhir:value "pt-BR" ] ;
+           fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "Em estado de erro" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "checked-in" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Checked in" ] ;
+         fhir:ValueSet.compose.include.concept.designation [
+           fhir:index -1 ;
+           fhir:ValueSet.compose.include.concept.designation.language [ fhir:value "pt-BR" ] ;
+           fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "Confirmado" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "waitlist" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Waitlisted" ] ;
+         fhir:ValueSet.compose.include.concept.designation [
+           fhir:index -1 ;
+           fhir:ValueSet.compose.include.concept.designation.language [ fhir:value "pt-BR" ] ;
+           fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "Em espera" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusAgendamentoRegulacaoAssistencial" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ValueSet/BRStatusAgendamentoRegulacaoAssistencial.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 
