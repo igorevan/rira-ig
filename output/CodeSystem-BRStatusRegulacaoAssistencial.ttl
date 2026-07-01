@@ -1,0 +1,156 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/CodeSystem/BRStatusRegulacaoAssistencial> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "BRStatusRegulacaoAssistencial"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"><p class=\"res-header-id\"><b>Narrativa gerada: CodeSystem BRStatusRegulacaoAssistencial</b></p><a name=\"BRStatusRegulacaoAssistencial\"> </a><a name=\"hcBRStatusRegulacaoAssistencial\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Língua: en</p></div><p>Este case-sensitive sistema de código <code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial</code> define o seguinte códigos:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Código</b></td><td><b>Ecrã</b></td><td><b>Portuguese (Brazil) (pt)</b></td></tr><tr><td style=\"white-space:nowrap\">pending<a name=\"BRStatusRegulacaoAssistencial-pending\"> </a></td><td>Pending</td><td>Pendente</td></tr><tr><td style=\"white-space:nowrap\">booked<a name=\"BRStatusRegulacaoAssistencial-booked\"> </a></td><td>Booked</td><td>Agendado</td></tr><tr><td style=\"white-space:nowrap\">attended<a name=\"BRStatusRegulacaoAssistencial-attended\"> </a></td><td>Attended/Hospitalized</td><td>Atendido/Internado</td></tr><tr><td style=\"white-space:nowrap\">cancelled<a name=\"BRStatusRegulacaoAssistencial-cancelled\"> </a></td><td>Cancelled</td><td>Negado/Cancelado</td></tr><tr><td style=\"white-space:nowrap\">absence<a name=\"BRStatusRegulacaoAssistencial-absence\"> </a></td><td>Absence</td><td>Falta</td></tr><tr><td style=\"white-space:nowrap\">excluded<a name=\"BRStatusRegulacaoAssistencial-excluded\"> </a></td><td>Excluded</td><td>Excluído</td></tr><tr><td style=\"white-space:nowrap\">returned-to-requester<a name=\"BRStatusRegulacaoAssistencial-returned-to-requester\"> </a></td><td>Returned to requester.</td><td>Devolvido para o solicitante.</td></tr></table></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg" ] ;
+     fhir:Extension.valueCode [ fhir:value "ehr" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm" ] ;
+     fhir:Extension.valueInteger [
+       fhir:value "1"^^xsd:integer ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom" ] ;
+         fhir:Extension.valueCanonical [
+           fhir:value "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir" ;
+           fhir:link <https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir>
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 2 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
+     fhir:Extension.valueCode [
+       fhir:value "normative" ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom" ] ;
+         fhir:Extension.valueCanonical [
+           fhir:value "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir" ;
+           fhir:link <https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir>
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 3 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
+     fhir:Extension.valueCode [ fhir:value "4.0.1" ]
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial"] ;
+  fhir:CodeSystem.version [ fhir:value "1.0.0-release"] ;
+  fhir:CodeSystem.name [ fhir:value "BRStatusRegulacaoAssistencial"] ;
+  fhir:CodeSystem.title [ fhir:value "Status da regulação assistencial"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2020-03-26T13:19:46.9743559+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "Ministério da Saúde do Brasil"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Ministério da Saúde do Brasil" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "http://www.saude.gov.br" ]
+     ], [
+       fhir:index 1 ;
+       fhir:ContactPoint.system [ fhir:value "email" ] ;
+       fhir:ContactPoint.value [ fhir:value "cgiis.datasus@saude.gov.br" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "Status da regulação assistencial."] ;
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "BR" ]
+     ]
+  ] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "pending" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Pending" ] ;
+     fhir:CodeSystem.concept.designation [
+       fhir:index 0 ;
+       fhir:CodeSystem.concept.designation.language [ fhir:value "pt-BR" ] ;
+       fhir:CodeSystem.concept.designation.value [ fhir:value "Pendente" ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "booked" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Booked" ] ;
+     fhir:CodeSystem.concept.designation [
+       fhir:index 0 ;
+       fhir:CodeSystem.concept.designation.language [ fhir:value "pt-BR" ] ;
+       fhir:CodeSystem.concept.designation.value [ fhir:value "Agendado" ]
+     ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "attended" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Attended/Hospitalized" ] ;
+     fhir:CodeSystem.concept.designation [
+       fhir:index 0 ;
+       fhir:CodeSystem.concept.designation.language [ fhir:value "pt-BR" ] ;
+       fhir:CodeSystem.concept.designation.value [ fhir:value "Atendido/Internado" ]
+     ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "cancelled" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Cancelled" ] ;
+     fhir:CodeSystem.concept.designation [
+       fhir:index 0 ;
+       fhir:CodeSystem.concept.designation.language [ fhir:value "pt-BR" ] ;
+       fhir:CodeSystem.concept.designation.value [ fhir:value "Negado/Cancelado" ]
+     ]
+  ], [
+     fhir:index 4 ;
+     fhir:CodeSystem.concept.code [ fhir:value "absence" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Absence" ] ;
+     fhir:CodeSystem.concept.designation [
+       fhir:index 0 ;
+       fhir:CodeSystem.concept.designation.language [ fhir:value "pt-BR" ] ;
+       fhir:CodeSystem.concept.designation.value [ fhir:value "Falta" ]
+     ]
+  ], [
+     fhir:index 5 ;
+     fhir:CodeSystem.concept.code [ fhir:value "excluded" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Excluded" ] ;
+     fhir:CodeSystem.concept.designation [
+       fhir:index 0 ;
+       fhir:CodeSystem.concept.designation.language [ fhir:value "pt-BR" ] ;
+       fhir:CodeSystem.concept.designation.value [ fhir:value "Excluído" ]
+     ]
+  ], [
+     fhir:index 6 ;
+     fhir:CodeSystem.concept.code [ fhir:value "returned-to-requester" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Returned to requester." ] ;
+     fhir:CodeSystem.concept.designation [
+       fhir:index 0 ;
+       fhir:CodeSystem.concept.designation.language [ fhir:value "pt-BR" ] ;
+       fhir:CodeSystem.concept.designation.value [ fhir:value "Devolvido para o solicitante." ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/CodeSystem/BRStatusRegulacaoAssistencial.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

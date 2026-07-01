@@ -1,0 +1,17 @@
+RIRARNDSIG
+=========================================
+
+Generic: line 0, col 0, Error - The link '/en/definitions.xml.zip' for "XML" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '/en/definitions.json.zip' for "JSON" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '/en/definitions.ttl.zip' for "Turtle" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '/en/examples.xml.zip' for "XML" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '/en/examples.json.zip' for "JSON" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '/en/examples.ttl.zip' for "Turtle" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'link do formulário' for "aqui" cannot be resolved (NOTFOUND)
+/home/igor/rira-ig/input/examples/exemplo_RIRA_attended.json: line 82, col 16, Error - Não foi possível resolver a referência de perfil 'http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0' (STRUCTURE)
+/home/igor/rira-ig/input/examples/exemplo_RIRA_booked.json: line 82, col 16, Error - Não foi possível resolver a referência de perfil 'http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0' (STRUCTURE)
+/home/igor/rira-ig/input/examples/exemplo_RIRA_pending.json: line 78, col 16, Error - Não foi possível resolver a referência de perfil 'http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0' (STRUCTURE)
+/home/igor/rira-ig/input/resources/StructureDefinition-BRAgendamentoRegulacaoAssistencial.json: line 0, col 0, Error - Binding http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial is not a subset of binding http://hl7.org/fhir/ValueSet/appointmentstatus|4.0.1 because The codes 'excluded,returned-to-requester' are not in the base valueset (BUSINESSRULE)
+
+err = 4, warn = 0, info = 0
+IG Publisher Version: 2.2.10

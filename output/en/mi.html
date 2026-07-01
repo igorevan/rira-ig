@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Modelo de Informação - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0-release</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"6"}
+    h3,h4,h5,h6{--heading-prefix:"6"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Guia de Implementação da Regulação Assistencial (RIRA) da RNDS</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-release - STU1
+
+
+
+  <img alt="Brazil flag" src="../assets/images/bra.svg" height="16" title="Brazil"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Principal</a>
+  </li>
+  <li>
+    <a href="abstract.html">Abstract</a>
+  </li>
+  <li>
+    <a href="lives.html">Lives</a>
+  </li>
+  <li>
+    <a href="credenciamento.html">Credenciamento</a>
+  </li>
+  <li>
+    <a href="integracao.html">Integração</a>
+  </li>
+
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="mi.html" class="dropdown-toggle"> RIRA <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="mi.html">Modelo de Informação</a>
+      </li>
+      <li>
+        <a href="mc.html">Modelo Computacional</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="artifacts.html" class="dropdown-toggle"> Especificação <b
+        class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artefatos</a>
+      </li>
+      <li>
+        <a href="exemplos.html">Exemplos</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="toc.html" class="dropdown-toggle"> Ajuda <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="toc.html">Índice</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/R4/index.html"> Especificações do FHIR R4 <img
+            src="external.png"
+            style="text-align: baseline" />
+        </a>
+      </li>
+      <li>
+        <a href="changes.html">Histórico de mudanças</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="forms.html">Feedback</a>
+      </li>
+      <li>
+        <a href="suporte.html">Suporte da RNDS</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Índice</b></a></li><li><b>Modelo de Informação</b></li>
+
+          <span style="float: var(--ig-right);">
+
+            <a href="integracao.html">&lt; prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="mc.html">next &gt;</a>
+
+          </span>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Guia de Implementação da Regulação Assistencial (RIRA) da RNDS - Compilação de desenvolvimento local (v1.0.0-release) construída pelas ferramentas de compilação FHIR (HL7&reg; FHIR&reg; Standard). Veja o <a href='https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/history.html'>Diretório de versões publicadas</a></p><!--EndReleaseHeader-->
+  <h2>Modelo de Informação</h2>
+  
+  
+  
+  <table class="colsi" data-fhir="generated">
+    <tr>
+  
+      <td>
+        <i>Page standards status:</i> <a href="http://hl7.org/fhir/R4/versions.html#std-process" title="Standards Status">Informative</a>
+        
+      </td>
+  
+  
+      <td id="toggle-change-display" style="text-align: right;border-left-style: hidden" title="Enable this to see changes since the last official release">
+        <label style="margin:0;font-weight:normal" for="showChanges">Highlight text changes?</label>
+  
+        <input style="margin:0" type="checkbox" id="showChanges" onchange="toggleChanges()"/>
+  
+      </td>
+    </tr>
+  </table>
+
+  
+  <div xmlns="http://www.w3.org/1999/xhtml"><div class="markdown-toc" data-fhir="generated"><p>Contents:</p><ul><li><a href="#contexto">Contexto</a></li><li><a href="#objetivo">Objetivo</a></li><li><a href="#marcos">Marcos Legais</a></li><li><a href="#mi">Modelo de Informação</a></li><li><a href="#blocos">Blocos do Modelo de Informação</a></li></ul></div>
+  <!-- The spaces between the open and close "a" tag are mandatory.  (Cuz HTML renderers are dumb...) -->
+
+  <a name="contexto">  </a>
+  <h3>Contexto</h3>
+  <p>A Regulação Assistencial desempenha um papel fundamental na organização e gestão dos serviços de saúde no âmbito do
+    Sistema Único de Saúde (SUS). Tem como principal objetivo promover o acesso do usuário às ações e serviços de saúde,
+    em tempo oportuno e de forma resolutiva, por meio da organização, controle, gerenciamento e priorização do acesso e
+    dos fluxos assistenciais no âmbito do SUS.</p>
+  <p>Para alcançar seus objetivos, a Regulação Assistencial utiliza uma variedade de mecanismos. Um exemplo são as
+    Centrais de Regulação, responsáveis por organizar o fluxo de atendimento dos pacientes e gerenciar a oferta de
+    serviços de saúde em uma determinada região. Essas centrais desempenham um papel crucial na distribuição equitativa
+    dos recursos disponíveis, direcionando os usuários para os serviços adequados com base em suas necessidades.</p>
+  <p>A implementação efetiva da Regulação Assistencial é crucial para garantir a eficiência e a efetividade dos serviços
+    de saúde. Ela evita a sobrecarga de alguns serviços, distribuindo equitativamente a demanda, ao mesmo tempo em que
+    garante que nenhum usuário fique sem atendimento adequado. Além disso, contribui para uma melhor utilização dos
+    recursos financeiros e humanos disponíveis, garantindo a sustentabilidade do sistema de saúde como um todo.</p>
+  <p>O Registro de Informações de Regulação Assistencial (RIRA) é um marco na padronização e compartilhamento de
+    informações no âmbito da regulação assistencial no Sistema Único de Saúde (SUS). Este modelo visa garantir a troca
+    de informações dos processos regulatórios entre os diversos pontos de gestão e atenção à saúde, promovendo a
+    continuidade do cuidado durante toda a vida do cidadão.</p>
+  <p>Considera a necessidade de garantir a troca da informação entre os diversos pontos de atenção e gestão do acesso à
+    saúde, buscando promover a continuidade e a integralidade do cuidado, apoiar os profissionais de saúde para uma
+    assistência mais resolutiva e segura, disponibilizar ao paciente informações sobre seu estado de saúde enquanto
+    protagonista do seu cuidado, e garantir informações de qualidade para a tomada de decisão em saúde por meio da RNDS.
+  </p>
+  <p>A criação do Registro de Informações de Regulação Assistencial (RIRA), instituído pela Portaria Conjunta
+    SAES/SEIDIGI nº 3, de 18 de abril de 2023, marca um passo significativo na evolução da Rede Nacional de Dados Saúde
+    (RNDS). Este modelo estabelece um arcabouço robusto para a coleta, organização e compartilhamento de informações no
+    âmbito da regulação assistencial no Sistema Único de Saúde (SUS), promovendo a interoperabilidade entre os sistemas
+    de informação.</p>
+  <p>O Web Service da RNDS foi desenvolvido para permitir que estabelecimentos de saúde públicos ou privados
+    compartilhem os registros da regulação assistencial no SUS, disponibilizando informações confiáveis para quem
+    precisa no momento que precisa.</p>
+
+  <a name="objetivo">  </a>
+  <h3>Objetivo</h3>
+  <p>Estabelecer a estrutura do Registro de Informações de Regulação Assistencial (RIRA) com o objetivo de promover o
+    cuidado adequado, em tempo oportuno, aos usuários do SUS, tendo como base os princípios que norteiam o SUS, quais
+    sejam, a universalidade, a equidade e a integralidade.</p>
+
+  <ul>
+    <li>Proporcionar a continuidade do cuidado;</li>
+    <li>Qualificar a atenção em saúde e a segurança do indivíduo;</li>
+    <li>Fortalecer a coordenação do cuidado;</li>
+    <li>Otimizar o uso de recursos públicos;</li>
+    <li>Fortalecer a Rede Nacional de Dados em Saúde (RNDS) e a qualidade das informações prestadas;</li>
+    <li>Facilitar a coleta, agregação, tratamento e análise de dados para tomada de decisão e produção de conhecimento.
+    </li>
+  </ul>
+
+  <a name="marcos">  </a>
+  <h3>Marcos Legais</h3>
+  <ul>
+    <li>
+      <a href="https://www.in.gov.br/en/web/dou/-/portaria-conjunta-saes/seidigi-n-3-de-18-de-abril-de-2023-478301026">PORTARIA
+        CONJUNTA SAES/SEIDIGI Nº 3, DE 18 DE ABRIL DE 2023</a>
+    </li>
+  </ul>
+
+  <a name="mi">  </a>
+  <h3>Modelo de Informação</h3>
+  <p>
+    O modelo de informação é uma representação conceitual e canônica, onde os elementos referentes a
+    um documento específico são modelados em seções e blocos de dados, com seus respectivos tipos
+    de dados a serem informados. Também são apresentadas as referências para o uso de recursos
+    terminológicos, da seguinte maneira:
+  </p>
+  <ul>
+    <li>
+      <b>Coluna 1</b> - Nível: apresenta o nível do elemento no modelo de informação;
+    </li>
+    <li>
+      <p><b>Coluna 2</b> - Ocorrência: descreve o número de vezes (cardinalidade) que o elemento
+        deve/pode aparecer:</p>
+
+      <pre><code>
+          [0..1] - O elemento é opcional e, se ocorrer, aparece uma vez
+          [1..1] - O elemento é obrigatório e deve estar presente uma única vez
+          [0..N] - O elemento é opcional e pode ocorrer várias vezes
+          [1..N] - O elemento é obrigatório e pode ocorrer várias vezes</code>
+        </pre>
+
+    </li>
+    <li>
+      <b>Coluna 3</b> - Seção/Item: nome do bloco ou da informação a ser enviada;
+    </li>
+    <li>
+      <b>Coluna 4</b> - Tipo de dado: descreve o tipo de dado a ser preenchido;
+    </li>
+    <li>
+      <b>Coluna 5</b> - Conceito: apresenta as definições do elemento;
+    </li>
+    <li>
+      <b>Coluna 6</b> - Definição de uso do elemento: Observações e regras de negócio relacionadas
+      ao elemento;
+    </li>
+    <li>
+      <b>Coluna 7</b> - Conteúdo: apresenta, quando necessário, o grupo de códigos (<i>ValueSet</i>)
+      a ser utilizado para preenchimento do elemento;
+    </li>
+    <li>
+      <b>Coluna 8</b> - Recurso FHIR: relaciona o atributo do Modelo Informacional com o perfil do
+      Modelo Computacional em FHIR.
+    </li>
+  </ul>
+
+  <a name="blocos">  </a>
+  <h3>Blocos do Modelo de Informação</h3>
+
+  <p>
+    Segue abaixo o modelo de informação para o RIRA:
+  </p>
+
+  <a name="regulacao">  </a>
+  <h4>Caracterização da Regulação</h4>
+
+
+  <table class="grid">
+    <thead>
+      <tr style="background-color: #538ce9">
+        <th>Nível</th>
+        <th>Ocorrência</th>
+        <th>Seção/Item</th>
+        <th>Tipo de Dado</th>
+        <th>Conceito</th>
+        <th>Definição de uso do elemento</th>
+        <th>Conteúdo (ValueSet/CodeSystem)</th>
+        <th>Recurso FHIR</th>
+      </tr>
+    </thead>
+    <thead>
+      <tr style="background-color: #4dbf4d">
+        <td>1</td>
+        <td>1..1</td>
+        <td>Caracterização da regulação</td>
+        <td>Seção</td>
+        <td/>
+        <td/>
+        <td/>
+        <td/>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2</td>
+        <td>1..1</td>
+        <td>Identificador do registro</td>
+        <td>Identificador</td>
+        <td>Identificador do registro no sistema de origem.<br/>
+          <p style="color: red;"><b>Regra Negocial 01</b>: Deverá ser utilizado o identificador
+            do registro no sistema de origem para registro da solicitação. Neste campo deverá constar o identificador
+            único do registro no sistema de origem.</p>
+          <p style="color: red;">
+            <b>Regra Negocial 02</b>: Para as operações de consulta, alteração e
+            exclusão, deverá ser considerado como identificador único do evento de regulação, o identificador do
+            documento
+            na Rede Nacional de Dados em Saúde (RNDS).
+          </p>
+        </td>
+        <td>O identificador único do registro de regulação no sistema de origem</td>
+        <td/>
+        <td><i>Bundle</i> de envio</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>1..1</td>
+        <td>Status da solicitação</td>
+        <td>Texto codificado:<br/>- Pendente<br/>- Agendado<br/>- Atendido/Internado<br/>- Falta<br/>-
+          Negado/Cancelado<br/>-
+          Excluído<br/>- Devolvido para o solicitante</td>
+        <td>Status da solicitação do procedimento.</td>
+        <td>O código que identifica unicamente o status da solicitação, conforme tabela de status de solicitação.</td>
+        <td><a href="ValueSet-BRStatusRegulacaoAssistencial.html">Status de Regulação Assistencial</a></td>
+        <td><a href="StructureDefinition-BRRegulacaoAssistencial.html">Regulação Assistencial</a> <i>(Composition)</i>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>0..1</td>
+        <td>Data de alteração de status</td>
+        <td>Data</td>
+        <td>Data e hora da alteração de status da solicitação do procedimento no padrão ISO8601.</td>
+        <td>A data e hora de alteração de status da solicitação de procedimento regulado.</td>
+        <td/>
+        <td><a href="StructureDefinition-BRRegulacaoAssistencial.html">Regulação Assistencial</a> <i>(Composition)</i>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>1..1</td>
+        <td>Código do procedimento</td>
+        <td>Texto codificado</td>
+        <td>Identificador único do procedimento. Texto codificado: SIGTAP.</td>
+        <td>O código que identifica unicamente o procedimento conforme tabela SUS.</td>
+        <td><a href="ValueSet-BRProcedimentosNacionais-1.0.html">Procedimento Realizado</a></td>
+        <td><a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">Requisição de Regulação
+            Assistencial</a> <i>(ServiceRequest)</i>
+          <br/> <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">Agendamento de Regulação
+            Assistencial</a> <i>(Appointment)</i>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>1..1</td>
+        <td>Data da solicitação</td>
+        <td>Data</td>
+        <td>Data e hora da solicitação do procedimento no padrão ISO8601.</td>
+        <td>A data e hora de criação da solicitação inicial do procedimento regulado.</td>
+        <td/>
+        <td><a href="StructureDefinition-BRRegulacaoAssistencial.html">Regulação Assistencial</a> <i>(Composition)</i>
+          <br/> <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">Requisição de Regulação
+            Assistencial</a> <i>(ServiceRequest)</i>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>0..1</td>
+        <td>Data de autorização</td>
+        <td>Data</td>
+        <td>Data e hora da autorização do procedimento no padrão ISO8601.</td>
+        <td>A data e hora em que a solicitação de procedimento regulado foi autorizada.</td>
+        <td/>
+        <td><a href="StructureDefinition-BRRegulacaoAssistencial.html">Regulação Assistencial</a> <i>(Composition)</i>
+          <br/> <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">Agendamento de Regulação
+            Assistencial</a> <i>(Appointment)</i>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>0..1</td>
+        <td>Data de agendamento</td>
+        <td>Data</td>
+        <td>Data e hora da autorização do procedimento no padrão ISO8601.</td>
+        <td>A data e hora do agendamento da solicitação de procedimento regulado.</td>
+        <td/>
+        <td><a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">Agendamento de Regulação
+            Assistencial</a> <i>(Appointment)</i></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>0..1</td>
+        <td>Data da execução</td>
+        <td>Data</td>
+        <td>Data e hora da execução do procedimento no padrão ISO8601.</td>
+        <td>A data e hora em que o procedimento regulado foi executado.</td>
+        <td/>
+        <td><a href="StructureDefinition-BRRegulacaoAssistencial.html">Regulação Assistencial</a> <i>(Composition)</i>
+          <br/> <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">Requisição de Regulação
+            Assistencial</a> <i>(ServiceRequest)</i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <a name="participantes">  </a>
+  <h4>Caracterização dos Participantes</h4>
+
+  <table class="grid">
+    <thead>
+      <tr style="background-color: #538ce9">
+        <th>Nível</th>
+        <th>Ocorrência</th>
+        <th>Seção/Item</th>
+        <th>Tipo de Dado</th>
+        <th>Conceito</th>
+        <th>Definição de uso do elemento</th>
+        <th>Conteúdo (ValueSet/CodeSystem)</th>
+        <th>Recurso FHIR</th>
+      </tr>
+    </thead>
+    <thead>
+      <tr style="background-color: #4dbf4d">
+        <td>1</td>
+        <td>1..1</td>
+        <td>Caracterização dos participantes</td>
+        <td>Seção</td>
+        <td/>
+        <td/>
+        <td/>
+        <td/>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2</td>
+        <td>1..1</td>
+        <td>Identificador de paciente</td>
+        <td>Identificador</td>
+        <td>Identificação única do participante, por meio de CPF ou CNS.</td>
+        <td>O identificador nacional do participante que poderá ser CPF ou CNS</td>
+        <td/>
+        <td><a href="StructureDefinition-BRRegulacaoAssistencial.html">Regulação Assistencial</a> <i>(Composition)</i>
+          <br/> <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">Requisição de Regulação
+            Assistencial</a> <i>(ServiceRequest)</i>
+          <br/> <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">Agendamento de Regulação
+            Assistencial</a> <i>(Appointment)</i>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>1..1</td>
+        <td>Identificador do estabelecimento de saúde solicitante</td>
+        <td>Identificador</td>
+        <td>Identificação única do estabelecimento solicitante, por meio do CNES.</td>
+        <td>O identificador nacional do estabelecimento no Cadastro Nacional de Estabelecimento de Saúde</td>
+        <td/>
+        <td><a href="StructureDefinition-BRRegulacaoAssistencial.html">Regulação Assistencial</a> <i>(Composition)</i>
+          <br/> <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">Requisição de Regulação
+            Assistencial</a> <i>(ServiceRequest)</i>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>0..1</td>
+        <td>Identificador do estabelecimento de saúde regulador</td>
+        <td>Identificador</td>
+        <td>Identificação única do estabelecimento regulador , por meio do CNES.</td>
+        <td>O identificador nacional do estabelecimento no Cadastro Nacional de Estabelecimento de Saúde</td>
+        <td/>
+        <td><a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">Agendamento de Regulação
+            Assistencial</a> <i>(Appointment)</i></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>0..1</td>
+        <td>Identificador do estabelecimento de saúde executante</td>
+        <td>Identificador</td>
+        <td>Identificação única do estabelecimento executante, por meio do CNES.</td>
+        <td>O identificador nacional do estabelecimento no Cadastro Nacional de Estabelecimento de Saúde</td>
+        <td/>
+        <td><a href="StructureDefinition-BRRegulacaoAssistencial.html">Regulação Assistencial</a> <i>(Composition)</i>
+          <br/> <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">Requisição de Regulação
+            Assistencial</a> <i>(ServiceRequest)</i>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>0..1</td>
+        <td>Especialidade médica do executante</td>
+        <td>Texto codificado</td>
+        <td>Identificação da especialidade médica do profissional executante do procedimento. Texto codificado: CBO.
+          <br/>
+          <p style="color: red;"><b>Regra Negocial 03</b>: Caso o procedimento informado pertença aos grupos 03 ou 04 da
+            tabela SUS, o código CBO será obrigatório.</p>
+        </td>
+        <td>O código que identifica unicamente a especialidade do executante conforme tabela de CBO. O código CBO da
+          especialidade está diretamente vinculado ao procedimento solicitado. Assim, para determinados procedimentos
+          esse ponto será obrigatório.</td>
+        <td><a href="ValueSet-BROcupacao-1.0.html">Classificação Brasileira de Ocupações (CBO)</a></td>
+        <td><a href="StructureDefinition-BRRegulacaoAssistencial.html">Regulação Assistencial</a> <i>(Composition)</i>
+          <br/> <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">Requisição de Regulação
+            Assistencial</a> <i>(ServiceRequest)</i>
+          <br/> <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">Agendamento de Regulação
+            Assistencial</a> <i>(Appointment)</i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <a name="solicitacao">  </a>
+  <h4>Caracterização da Solicitação</h4>
+
+  <table class="grid">
+    <thead>
+      <tr style="background-color: #538ce9">
+        <th>Nível</th>
+        <th>Ocorrência</th>
+        <th>Seção/Item</th>
+        <th>Tipo de Dado</th>
+        <th>Conceito</th>
+        <th>Definição de uso do elemento</th>
+        <th>Conteúdo (ValueSet/CodeSystem)</th>
+        <th>Recurso FHIR</th>
+      </tr>
+    </thead>
+    <thead>
+      <tr style="background-color: #4dbf4d">
+        <td>1</td>
+        <td>1..1</td>
+        <td>Caracterização da solicitação</td>
+        <td>Seção</td>
+        <td/>
+        <td/>
+        <td/>
+        <td/>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2</td>
+        <td>1..1</td>
+        <td>Modalidade assistencial</td>
+        <td>Texto codificado:<br/>- Ambulatorial<br/>- Hospitalar</td>
+        <td>Modalidade assistencial que gerou a solicitação do procedimento.</td>
+        <td>O código que identifica unicamente a modalidade, conforme tabela de modalidades.</td>
+        <td><a href="ValueSet-BRModalidadeAssistencialMIRA.html">Modalidade Assistencial (RIRA)</a></td>
+        <td><a href="StructureDefinition-BRRegulacaoAssistencial.html">Regulação Assistencial</a> <i>(Composition)</i>
+          <br/> <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">Requisição de Regulação
+            Assistencial</a> <i>(ServiceRequest)</i>
+          <br/> <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">Agendamento de Regulação
+            Assistencial</a> <i>(Appointment)</i>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>1..1</td>
+        <td>Caráter da solicitação</td>
+        <td>Texto codificado:<br/>- Eletivo<br/>- Urgência</td>
+        <td>Caráter da solicitação do procedimento.</td>
+        <td>O código que identifica unicamente o grau de prioridade da solicitação no modelo de informação assistencial,
+          conforme tabela de caráter da solicitação.</td>
+        <td><a href="ValueSet-BRCaraterAtendimentoMIRA.html">Caráter de Atendimento no MIRA</a></td>
+        <td><a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">Requisição de Regulação
+            Assistencial</a> <i>(ServiceRequest)</i>
+          <br/> <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">Agendamento de Regulação
+            Assistencial</a> <i>(Appointment)</i>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>1..1</td>
+        <td>Motivo da solicitação</td>
+        <td>Texto codificado</td>
+        <td>Identificação do motivo da solicitação do procedimento. Texto codificado por terminologia externa CID-10.
+        </td>
+        <td>O código que identifica unicamente a condição clínica conforme tabela de Classificação Internacional de
+          Doenças na versão 10 (CID10).</td>
+        <td><a href="ValueSet-BRCID10-1.0.html">Classificação Internacional de Doenças - Décima Revisão (CID-10)</a>
+        </td>
+        <td><a href="StructureDefinition-BRCID10Avaliado-1.0.html">CID10 Avaliado</a> <i>(Condition)</i></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:var(--ig-left);">&#xA0;
+
+                <a href="integracao.html">&lt; prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:var(--ig-right);">&#xA0;
+
+                <a href="mc.html">next ></a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.saude.gov.br">Ministério da Saúde do Brasil</a>.  
+          Package br.gov.saude.rira.fhir#1.0.0-release based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-07-01 08:33:00 -0300">
+    2026-07-01
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

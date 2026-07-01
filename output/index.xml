@@ -1,0 +1,96 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R4/fhir-single.xsd">
+  <!-- The spaces between the open and close "a" tag are mandatory.  (Cuz HTML renderers are dumb...) -->
+  <a name="intro"> </a>
+  <h3>Introdução</h3>
+  <p> Este Guia de Implementação (IG) tem o objetivo de orientar Estados, Municípios, Distrito
+    Federal, Estabelecimentos de Saúde ou Empresas Privadas que fornecem soluções/software na área
+    de saúde a utilizarem os serviços <i>(web services)</i> que foram desenvolvidos para a <a
+      href="https://www.gov.br/saude/pt-br/composicao/seidigi/rnds">Rede Nacional de
+      Dados em Saúde (RNDS)</a>, fornecendo as orientações técnicas necessárias para a integração
+    dos sistemas/soluções locais com a rede, para o envio do <a
+      href="https://rnds-guia.saude.gov.br/docs/rira/mi-rira/">Regulação Assistencial (RIRA)</a>
+    seguindo as especificações do padrão <a href="https://hl7.org/fhir/R4/">HL7
+      FHIR versão R4</a>. </p>
+  <a name="contextualizacao"> </a>
+  <h3>Contextualização</h3>
+  <p> A RNDS é uma plataforma nacional de integração de dados em saúde que faz parte do <a
+      href="https://www.gov.br/saude/pt-br/composicao/seidigi/meu-sus-digital">Meu SUS Digital</a>,
+    um programa do Governo Federal que tem como principal missão materializar a <a
+      href="https://www.gov.br/saude/pt-br/composicao/seidigi/saude-digital">Estratégia de Saúde
+      Digital do Brasil</a>. </p>
+  <p>
+    A RNDS utiliza computação em nuvem e tecnologias emergentes para criar um repositório de
+    documentos responsável por armazenar informações de saúde dos cidadãos, mantendo a
+    privacidade, integridade e auditabilidade dos dados de maneira acessível e interoperável. Com
+    isso, fornece aos profissionais de saúde acesso à história clínica do paciente, permitindo a
+    transição e a continuidade do cuidado, além de possibilitar aos indivíduos acesso aos seus dados
+    de saúde.
+  </p>
+  <p> Dessa forma, os serviços (<i>web services</i>) permitirão que as entidades da área da saúde
+    compartilhem as informações de Regulação Assistencial (RIRA) com a RNDS de forma oportuna e
+    confiável a quem precisa desta informação. </p>
+  <a name="interoperabilidade"> </a>
+  <h3>Interoperabilidade</h3>
+  <p> Para garantir a interoperabilidade entre as aplicações de Saúde Digital, em especial
+    Prontuário(s) Eletrônico(s) do Paciente, portais e aplicações (<i>web e mobile</i>), a troca de
+    informações ocorre por meio de serviços (<i>web services</i>) <a
+      href="https://pt.wikipedia.org/wiki/REST">RESTful</a>, desenvolvidos de acordo com o padrão <a
+      href="https://hl7.org/FHIR/">FHIR R4</a>. </p>
+
+  <a name="flow"> </a>
+  <h3>Fluxo para Integração com a RNDS</h3>
+  <p>Abaixo você encontra um material com o fluxo oficial para integração com a RNDS.</p>
+
+  <iframe
+    src="https://mobileapps.saude.gov.br/portal-servicos/files/f3bd659c8c8ae3ee966e575fde27eb58/0e3affbe4f1b86b50ae78ab652b2ebaa_pgst0fpqe.pdf"
+    width="100%" height="600px"> Seu navegador não suporta visualização de PDF. <a
+      href="https://mobileapps.saude.gov.br/portal-servicos/files/f3bd659c8c8ae3ee966e575fde27eb58/0e3affbe4f1b86b50ae78ab652b2ebaa_pgst0fpqe.pdf">Clique
+      aqui para abrir</a>. </iframe>
+
+
+  <a name="walkthrough"> </a>
+  <h3>Roteiro</h3>
+  <ul>
+    <li>
+      <a href="abstract.html">
+        <i>Abstract</i>
+      </a>: Introdução e resumo deste guia, em inglês. <i>Introduction and
+        summary of this guide, in English.</i>
+    </li>
+    <li>
+      <a href="lives.html">Lives</a>: Lives com orientações técnicas e negociais sobre o RIRA.
+    </li>
+    <li>
+      <a href="credenciamento.html">Credenciamento</a>: Saiba qual é o processo e requisitos a serem
+      seguidos por um estabelecimento de saúde para a integração com a RNDS.
+    </li>
+    <li>
+      <a href="integracao.html">Integração</a>: Define as operações a serem atendidas para
+      integração com a RNDS.
+    </li>
+    <li>
+      <a href="mi.html">Modelo de Informação</a>: Define o Modelo de Informação (MI) do RIRA.
+    </li>
+    <li>
+      <a href="mc.html">Modelo Computacional</a>: Define o Modelo Computacional (MC) do RIRA.
+    </li>
+    <li>
+      <a href="artifacts.html">Artefatos</a>: Reúne todos os recursos <i>(Resources)</i> do FHIR
+      para elaboração do Modelo Computacional do RIRA.
+    </li>
+    <li>
+      <a href="exemplos.html">Exemplos</a>: Instâncias de exemplos.
+    </li>
+    <li>
+      <a href="downloads.html">Downloads</a>: Artefatos empregados pelos integradores.
+    </li>
+    <li>
+      <a href="forms.html">Feedback</a>: Espaço para feedbacks, sugestões e melhorias.
+    </li>
+    <li>
+      <a href="suporte.html">Suporte da RNDS</a>: Canal de suporte relacionados a RNDS.
+    </li>
+  </ul>
+
+</div>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="BRTipoParticipante"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="ehr"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="normative">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+    <valueCode value="4.0.1"/>
+  </extension>
+  <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoParticipante"/>
+  <version value="1.0.0-release"/>
+  <name value="BRTipoParticipante"/>
+  <title value="Tipo Participante"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2023-04-13T13:17:18.5012669+00:00"/>
+  <publisher value="Ministério da Saúde do Brasil"/>
+  <contact>
+    <name value="Ministério da Saúde do Brasil"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.saude.gov.br"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="cgiis.datasus@saude.gov.br"/>
+    </telecom>
+  </contact>
+  <description value="Identificação do tipo do participante envolvido na solicitação."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="BR"/>
+    </coding>
+  </jurisdiction>
+  <immutable value="false"/>
+  <compose>
+    <include>
+      <system value="http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante"/>
+    </include>
+  </compose>
+</ValueSet>

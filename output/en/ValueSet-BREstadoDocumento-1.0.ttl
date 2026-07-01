@@ -1,0 +1,134 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ValueSet/BREstadoDocumento-1.0> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "BREstadoDocumento-1.0"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xml:lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"><p class=\"res-header-id\"><b>Narrativa gerada: ValueSet BREstadoDocumento-1.0</b></p><a name=\"BREstadoDocumento-1.0\"> </a><a name=\"hcBREstadoDocumento-1.0\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Língua: en</p></div><ul><li>Include estes códigos, tal como definidos em <a href=\"http://hl7.org/fhir/R4/codesystem-composition-status.html\"><code>http://hl7.org/fhir/composition-status</code></a><span title=\"Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references\"> versão ?4.0.1</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Código</b></td><td><b>Ecrã</b></td><td><b>Definição</b></td><td><b>Portuguese (Brazil) (pt)</b></td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-preliminary\">preliminary</a></td><td>Preliminary</td><td>This is a preliminary composition or document (also known as initial or interim). The content may be incomplete or unverified.</td><td>Preliminar</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-final\">final</a></td><td>Final</td><td>This version of the composition is complete and verified by an appropriate person and no further work is planned. Any subsequent updates would be on a new version of the composition.</td><td>Finalizado</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-amended\">amended</a></td><td>Amended</td><td>The composition content or the referenced resources have been modified (edited or added to) subsequent to being released as \"final\" and the composition is complete and verified by an authorized person.</td><td>Atualizado</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-entered-in-error\">entered-in-error</a></td><td>Entered in error</td><td>The composition or document was originally created/issued in error, and this is an amendment that marks that the entire series should not be considered as valid.</td><td>Em estado de erro</td></tr></table></li></ul></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg" ] ;
+     fhir:Extension.valueCode [ fhir:value "ehr" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm" ] ;
+     fhir:Extension.valueInteger [
+       fhir:value "1"^^xsd:integer ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom" ] ;
+         fhir:Extension.valueCanonical [
+           fhir:value "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir" ;
+           fhir:link <https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir>
+         ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
+     fhir:Extension.valueCode [
+       fhir:value "normative" ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom" ] ;
+         fhir:Extension.valueCanonical [
+           fhir:value "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir" ;
+           fhir:link <https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir>
+         ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
+     fhir:Extension.valueCode [ fhir:value "4.0.1" ]
+  ] ;
+  fhir:ValueSet.url [ fhir:value "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoDocumento-1.0"] ;
+  fhir:ValueSet.version [ fhir:value "1.0.0-release"] ;
+  fhir:ValueSet.name [ fhir:value "BREstadoDocumento"] ;
+  fhir:ValueSet.title [ fhir:value "Estado do Documento"] ;
+  fhir:ValueSet.status [ fhir:value "active"] ;
+  fhir:ValueSet.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2020-03-12T13:26:58.6069366+00:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "Ministério da Saúde do Brasil"] ;
+  fhir:ValueSet.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "Ministério da Saúde do Brasil" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "http://www.saude.gov.br" ]
+     ], [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "email" ] ;
+       fhir:ContactPoint.value [ fhir:value "cgiis.datasus@saude.gov.br" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "Classifica o estado do documento que está sendo trafegado."] ;
+  fhir:ValueSet.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "BR" ]
+     ]
+  ] ;
+  fhir:ValueSet.immutable [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index -1 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/composition-status" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "preliminary" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Preliminary" ] ;
+         fhir:ValueSet.compose.include.concept.designation [
+           fhir:index -1 ;
+           fhir:ValueSet.compose.include.concept.designation.language [ fhir:value "pt-BR" ] ;
+           fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "Preliminar" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "final" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Final" ] ;
+         fhir:ValueSet.compose.include.concept.designation [
+           fhir:index -1 ;
+           fhir:ValueSet.compose.include.concept.designation.language [ fhir:value "pt-BR" ] ;
+           fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "Finalizado" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "amended" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Amended" ] ;
+         fhir:ValueSet.compose.include.concept.designation [
+           fhir:index -1 ;
+           fhir:ValueSet.compose.include.concept.designation.language [ fhir:value "pt-BR" ] ;
+           fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "Atualizado" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "entered-in-error" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Entered in error" ] ;
+         fhir:ValueSet.compose.include.concept.designation [
+           fhir:index -1 ;
+           fhir:ValueSet.compose.include.concept.designation.language [ fhir:value "pt-BR" ] ;
+           fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "Em estado de erro" ]
+         ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ValueSet/BREstadoDocumento-1.0.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

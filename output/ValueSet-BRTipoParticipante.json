@@ -1,0 +1,69 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "BRTipoParticipante",
+  "language" : "pt-BR",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"pt-BR\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"pt-BR\"><p class=\"res-header-id\"><b>Narrativa gerada: ValueSet BRTipoParticipante</b></p><a name=\"BRTipoParticipante\"> </a><a name=\"hcBRTipoParticipante\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Língua: pt-BR</p></div><ul><li>Include todos os códigos definidos em <a href=\"CodeSystem-BRTipoParticipante.html\"><code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> versão &#x1F4E6;1.0.0-release</span></li></ul></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "ehr"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "normative",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+    "valueCode" : "4.0.1"
+  }],
+  "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoParticipante",
+  "version" : "1.0.0-release",
+  "name" : "BRTipoParticipante",
+  "title" : "Tipo Participante",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-04-13T13:17:18.5012669+00:00",
+  "publisher" : "Ministério da Saúde do Brasil",
+  "contact" : [{
+    "name" : "Ministério da Saúde do Brasil",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.saude.gov.br"
+    },
+    {
+      "system" : "email",
+      "value" : "cgiis.datasus@saude.gov.br"
+    }]
+  }],
+  "description" : "Identificação do tipo do participante envolvido na solicitação.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "BR"
+    }]
+  }],
+  "immutable" : false,
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante"
+    }]
+  }
+}

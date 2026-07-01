@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="BRSexo-1.0"/>
+  <language value="en"/>
+  <text>
+    <status value="extensions"/><div xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><p class="res-header-id"><b>Narrativa gerada: ValueSet BRSexo-1.0</b></p><a name="BRSexo-1.0"> </a><a name="hcBRSexo-1.0"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Língua: en</p></div><ul><li>Include estes códigos, tal como definidos em <a href="http://hl7.org/fhir/R4/codesystem-administrative-gender.html"><code>http://hl7.org/fhir/administrative-gender</code></a><span title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references"> versão &#x1F4E6;4.0.1</span><table class="none"><tr><td style="white-space:nowrap"><b>Código</b></td><td><b>Ecrã</b></td><td><b>Definição</b></td><td><b>Portuguese (Brazil) (pt)</b></td><td><b>Spanish (es)</b></td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-administrative-gender.html#administrative-gender-male">male</a></td><td>Male</td><td>Male.</td><td>Masculino</td><td>Masculino</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-administrative-gender.html#administrative-gender-female">female</a></td><td>Female</td><td>Female.</td><td>Feminino</td><td>Femenino</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-administrative-gender.html#administrative-gender-unknown">unknown</a></td><td>Unknown</td><td>Unknown.</td><td>Ignorado</td><td>Desconocido</td></tr></table></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="ehr"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="normative">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+    <valueCode value="4.0.1"/>
+  </extension>
+  <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BRSexo-1.0"/>
+  <version value="1.0.0-release"/>
+  <name value="BRSexo"/>
+  <title value="Sexo"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2020-04-07T21:07:00.8812267+00:00"/>
+  <publisher value="Ministério da Saúde do Brasil"/>
+  <contact>
+    <name value="Ministério da Saúde do Brasil"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.saude.gov.br"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="cgiis.datasus@saude.gov.br"/>
+    </telecom>
+  </contact>
+  <description value="Sexo de um indivíduo."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="BR"/>
+    </coding>
+  </jurisdiction>
+  <immutable value="false"/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/administrative-gender"/>
+      <concept>
+        <code value="male"/>
+        <display value="Male"/>
+        <designation>
+          <language value="pt-BR"/>
+          <value value="Masculino"/>
+        </designation>
+        <designation>
+          <language value="es"/>
+          <value value="Masculino"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="female"/>
+        <display value="Female"/>
+        <designation>
+          <language value="pt-BR"/>
+          <value value="Feminino"/>
+        </designation>
+        <designation>
+          <language value="es"/>
+          <value value="Femenino"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="unknown"/>
+        <display value="Unknown"/>
+        <designation>
+          <language value="pt-BR"/>
+          <value value="Ignorado"/>
+        </designation>
+        <designation>
+          <language value="es"/>
+          <value value="Desconocido"/>
+        </designation>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

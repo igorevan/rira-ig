@@ -1,0 +1,72 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "BROcupacao-1.0",
+  "meta" : {
+    "lastUpdated" : "2020-03-12T13:22:07.223+00:00"
+  },
+  "language" : "pt-BR",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"pt-BR\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"pt-BR\"><p class=\"res-header-id\"><b>Narrativa gerada: ValueSet BROcupacao-1.0</b></p><a name=\"BROcupacao-1.0\"> </a><a name=\"hcBROcupacao-1.0\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Última atualização: 2020-03-12 13:22:07+0000; Língua: pt-BR</p></div><ul><li>Include todos os códigos definidos em <a href=\"CodeSystem-BRCBO.html\"><code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> versão &#x1F4E6;1.0.0-release</span></li></ul></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "ehr"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "normative",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+    "valueCode" : "4.0.1"
+  }],
+  "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BROcupacao-1.0",
+  "version" : "1.0.0-release",
+  "name" : "BROcupacao",
+  "title" : "Classificação Brasileira de Ocupações - CBO",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2020-03-12T13:22:05.8261152+00:00",
+  "publisher" : "Ministério da Saúde do Brasil",
+  "contact" : [{
+    "name" : "Ministério da Saúde do Brasil",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.saude.gov.br"
+    },
+    {
+      "system" : "email",
+      "value" : "cgiis.datasus@saude.gov.br"
+    }]
+  }],
+  "description" : "Classifica as profissões do mercado de trabalho brasileiro.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "BR"
+    }]
+  }],
+  "immutable" : false,
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO"
+    }]
+  }
+}

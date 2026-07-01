@@ -1,0 +1,14 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <p>
+    Lista de mudanças na especificação do IG desde a sua versão inicial:
+  </p>
+
+  <a name="1.0.0-release"> </a>
+  <p>
+    <b>2026-06-10: RIRA IG v1.0.0-release</b> baseado no FHIR versão R4.
+  </p>
+  <ul>
+    <li>Versão inicial</li>
+  </ul>
+</div>

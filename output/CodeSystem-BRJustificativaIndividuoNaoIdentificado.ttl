@@ -1,0 +1,117 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/CodeSystem/BRJustificativaIndividuoNaoIdentificado> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "BRJustificativaIndividuoNaoIdentificado"] ;
+  fhir:Resource.language [ fhir:value "pt-BR"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"pt-BR\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"pt-BR\"><p class=\"res-header-id\"><b>Narrativa gerada: CodeSystem BRJustificativaIndividuoNaoIdentificado</b></p><a name=\"BRJustificativaIndividuoNaoIdentificado\"> </a><a name=\"hcBRJustificativaIndividuoNaoIdentificado\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Língua: pt-BR</p></div><p>Este case-sensitive sistema de código <code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRJustificativaIndividuoNaoIdentificado</code> define o seguinte códigos:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Código</b></td><td><b>Ecrã</b></td></tr><tr><td style=\"white-space:nowrap\">01<a name=\"BRJustificativaIndividuoNaoIdentificado-01\"> </a></td><td>Indivíduo acidentado grave</td></tr><tr><td style=\"white-space:nowrap\">02<a name=\"BRJustificativaIndividuoNaoIdentificado-02\"> </a></td><td>Indivíduo em sofrimento mental encontrado em via pública</td></tr><tr><td style=\"white-space:nowrap\">03<a name=\"BRJustificativaIndividuoNaoIdentificado-03\"> </a></td><td>Indivíduo com problema neurológico grave ou comatoso</td></tr><tr><td style=\"white-space:nowrap\">04<a name=\"BRJustificativaIndividuoNaoIdentificado-04\"> </a></td><td>Indivíduo incapacitado por motivos sociais e/ou culturais</td></tr><tr><td style=\"white-space:nowrap\">05<a name=\"BRJustificativaIndividuoNaoIdentificado-05\"> </a></td><td>Indivíduo doador de órgãos falecido</td></tr><tr><td style=\"white-space:nowrap\">99<a name=\"BRJustificativaIndividuoNaoIdentificado-99\"> </a></td><td>Sem registro no modelo de informação de origem</td></tr></table></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg" ] ;
+     fhir:Extension.valueCode [ fhir:value "ehr" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm" ] ;
+     fhir:Extension.valueInteger [
+       fhir:value "1"^^xsd:integer ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom" ] ;
+         fhir:Extension.valueCanonical [
+           fhir:value "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir" ;
+           fhir:link <https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir>
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 2 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
+     fhir:Extension.valueCode [
+       fhir:value "normative" ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom" ] ;
+         fhir:Extension.valueCanonical [
+           fhir:value "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir" ;
+           fhir:link <https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir>
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 3 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
+     fhir:Extension.valueCode [ fhir:value "4.0.1" ]
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "http://www.saude.gov.br/fhir/r4/CodeSystem/BRJustificativaIndividuoNaoIdentificado"] ;
+  fhir:CodeSystem.version [ fhir:value "1.0.0-release"] ;
+  fhir:CodeSystem.name [ fhir:value "BRJustificativaIndividuoNaoIdentificado"] ;
+  fhir:CodeSystem.title [ fhir:value "Justificativa da Impossibilidade de Identificação do Indivíduo (CodeSystem)"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2020-03-11T18:15:25.4061393+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "Ministério da Saúde do Brasil"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Ministério da Saúde do Brasil" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "http://www.saude.gov.br" ]
+     ], [
+       fhir:index 1 ;
+       fhir:ContactPoint.system [ fhir:value "email" ] ;
+       fhir:ContactPoint.value [ fhir:value "cgiis.datasus@saude.gov.br" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "Classifica as razões pelo qual não foi possível obter os dados de identificação do indivíduo em um contato assistencial. (Port. nº 84/SAS/MS/1997 e Port. nº02/SAS/SGEP/MS/2012)"] ;
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "BR" ]
+     ]
+  ] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "01" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Indivíduo acidentado grave" ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "02" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Indivíduo em sofrimento mental encontrado em via pública" ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "03" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Indivíduo com problema neurológico grave ou comatoso" ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "04" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Indivíduo incapacitado por motivos sociais e/ou culturais" ]
+  ], [
+     fhir:index 4 ;
+     fhir:CodeSystem.concept.code [ fhir:value "05" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Indivíduo doador de órgãos falecido" ]
+  ], [
+     fhir:index 5 ;
+     fhir:CodeSystem.concept.code [ fhir:value "99" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sem registro no modelo de informação de origem" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/CodeSystem/BRJustificativaIndividuoNaoIdentificado.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

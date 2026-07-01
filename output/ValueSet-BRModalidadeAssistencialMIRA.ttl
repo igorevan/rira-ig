@@ -1,0 +1,104 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ValueSet/BRModalidadeAssistencialMIRA> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "BRModalidadeAssistencialMIRA"] ;
+  fhir:Resource.language [ fhir:value "pt-BR"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"pt-BR\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"pt-BR\"><p class=\"res-header-id\"><b>Narrativa gerada: ValueSet BRModalidadeAssistencialMIRA</b></p><a name=\"BRModalidadeAssistencialMIRA\"> </a><a name=\"hcBRModalidadeAssistencialMIRA\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Língua: pt-BR</p></div><ul><li>Include estes códigos, tal como definidos em <a href=\"CodeSystem-BRModalidadeAssistencial.html\"><code>http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> versão ?1.0.0-release</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Código</b></td><td><b>Ecrã</b></td></tr><tr><td><a href=\"CodeSystem-BRModalidadeAssistencial.html#BRModalidadeAssistencial-04\">04</a></td><td style=\"color: #cccccc\">Atenção Hospitalar</td></tr><tr><td><a href=\"CodeSystem-BRModalidadeAssistencial.html#BRModalidadeAssistencial-09\">09</a></td><td style=\"color: #cccccc\">Assistência Ambulatorial</td></tr></table></li></ul></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg" ] ;
+     fhir:Extension.valueCode [ fhir:value "ehr" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm" ] ;
+     fhir:Extension.valueInteger [
+       fhir:value "1"^^xsd:integer ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom" ] ;
+         fhir:Extension.valueCanonical [
+           fhir:value "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir" ;
+           fhir:link <https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir>
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 2 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
+     fhir:Extension.valueCode [
+       fhir:value "normative" ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom" ] ;
+         fhir:Extension.valueCanonical [
+           fhir:value "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir" ;
+           fhir:link <https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir>
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 3 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
+     fhir:Extension.valueCode [ fhir:value "4.0.1" ]
+  ] ;
+  fhir:ValueSet.url [ fhir:value "http://www.saude.gov.br/fhir/r4/ValueSet/BRModalidadeAssistencialMIRA"] ;
+  fhir:ValueSet.version [ fhir:value "1.0.0-release"] ;
+  fhir:ValueSet.name [ fhir:value "BRModalidadeAssistencialMIRA"] ;
+  fhir:ValueSet.title [ fhir:value "Modalidade Assistencial MIRA"] ;
+  fhir:ValueSet.status [ fhir:value "active"] ;
+  fhir:ValueSet.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2023-04-13T13:17:18.5012669+00:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "Ministério da Saúde do Brasil"] ;
+  fhir:ValueSet.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Ministério da Saúde do Brasil" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "http://www.saude.gov.br" ]
+     ], [
+       fhir:index 1 ;
+       fhir:ContactPoint.system [ fhir:value "email" ] ;
+       fhir:ContactPoint.value [ fhir:value "cgiis.datasus@saude.gov.br" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "Modalidade assistencial que gerou a solicitação do procedimento."] ;
+  fhir:ValueSet.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "BR" ]
+     ]
+  ] ;
+  fhir:ValueSet.immutable [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "04" ]
+       ], [
+         fhir:index 1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "09" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ValueSet/BRModalidadeAssistencialMIRA.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,279 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/Bundle/Example-RIRA-Booked> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "Example-RIRA-Booked"] ;
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2024-02-27T17:11:44-03:00"^^xsd:dateTime ]
+  ] ;
+  fhir:Bundle.identifier [
+     fhir:Identifier.system [ fhir:value "http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-1964" ] ;
+     fhir:Identifier.value [ fhir:value "AMB_271831370_0701172" ]
+  ] ;
+  fhir:Bundle.type [ fhir:value "document"] ;
+  fhir:Bundle.timestamp [ fhir:value "2024-02-27T17:11:44-03:00"^^xsd:dateTime] ;
+  fhir:Bundle.entry [
+     fhir:index 0 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:transient-0" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:transient-0>
+  ], [
+     fhir:index 1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:transient-1" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:transient-1>
+  ], [
+     fhir:index 2 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:transient-2" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:transient-2>
+  ], [
+     fhir:index 3 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:transient-3" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:transient-3>
+  ] .
+
+<urn:uuid:transient-0> a fhir:Composition ;
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2024-02-27T17:11:44-03:00"^^xsd:dateTime ] ;
+     fhir:Meta.profile [
+       fhir:value "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial" ;
+       fhir:index 0 ;
+       fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Composition_null\"> </a><p class=\"res-header-id\"><b>Narrativa gerada: Composition </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Última atualização: 2024-02-27 17:11:44-0300</p><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-BRRegulacaoAssistencial.html\">Regulação Assistencial (RIRA)</a></p></div><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Códigos:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento RA}\">Regulação Assistencial</span></p><p><b>category</b>: <span title=\"Códigos:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial 09}\">Assistência Ambulatorial</span></p><p><b>date</b>: 2024-02-27 17:11:44-0300</p><p><b>author</b>: Identifier: <code>http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0</code>/5604613</p><p><b>title</b>: Registro de Informações da Regulação Assistencial</p><blockquote><p><b>event</b></p><p><b>code</b>: <span title=\"Códigos:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial booked}\">Booked</span></p><p><b>period</b>: 2019-03-07 12:00:00-0300 --&gt; 2019-03-07 12:00:00-0300</p><p><b>detail</b>: </p><ul><li>Identifier: <code>http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0</code>/5604613</li><li><a href=\"Bundle-Example-RIRA-Attended.html#urn-uuid-transient-1\">Appointment: status = fulfilled; serviceCategory = Assistência Ambulatorial; serviceType = CONSULTA MEDICA EM ATENÇÃO ESPECIALIZADA; specialty = MEDICO PNEUMOLOGISTA; appointmentType = Routine; start = 2019-03-17 21:00:00-0300; end = 2019-03-17 21:00:00-0300; created = 2019-01-16 22:00:00-0200</a></li></ul></blockquote></div>"
+  ] ;
+  fhir:Composition.status [ fhir:value "final"] ;
+  fhir:Composition.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento" ] ;
+       fhir:Coding.code [ fhir:value "RA" ]
+     ]
+  ] ;
+  fhir:Composition.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial" ] ;
+       fhir:Coding.code [ fhir:value "09" ]
+     ]
+  ] ;
+  fhir:Composition.subject [
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0" ] ;
+       fhir:Identifier.value [ fhir:value "706004324048847" ]
+     ]
+  ] ;
+  fhir:Composition.date [ fhir:value "2024-02-27T17:11:44-03:00"^^xsd:dateTime] ;
+  fhir:Composition.author [
+     fhir:index 0 ;
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0" ] ;
+       fhir:Identifier.value [ fhir:value "5604613" ]
+     ]
+  ] ;
+  fhir:Composition.title [ fhir:value "Registro de Informações da Regulação Assistencial"] ;
+  fhir:Composition.event [
+     fhir:index 0 ;
+     fhir:Composition.event.code [
+       fhir:index 0 ;
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial" ] ;
+         fhir:Coding.code [ fhir:value "booked" ]
+       ]
+     ] ;
+     fhir:Composition.event.period [
+       fhir:Period.start [ fhir:value "2019-03-07T12:00:00-03:00"^^xsd:dateTime ] ;
+       fhir:Period.end [ fhir:value "2019-03-07T12:00:00-03:00"^^xsd:dateTime ]
+     ] ;
+     fhir:Composition.event.detail [
+       fhir:index 0 ;
+       fhir:Reference.identifier [
+         fhir:Identifier.system [ fhir:value "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0" ] ;
+         fhir:Identifier.value [ fhir:value "5604613" ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:Reference.reference [ fhir:value "urn:uuid:transient-1" ]
+     ]
+  ] ;
+  fhir:Composition.section [
+     fhir:index 0 ;
+     fhir:Composition.section.entry [
+       fhir:index 0 ;
+       fhir:Reference.reference [ fhir:value "urn:uuid:transient-1" ]
+     ]
+  ] .
+
+<urn:uuid:transient-1> a fhir:Appointment ;
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2024-02-27T17:11:44-03:00"^^xsd:dateTime ] ;
+     fhir:Meta.profile [
+       fhir:value "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial" ;
+       fhir:index 0 ;
+       fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Appointment_null\"> </a><p class=\"res-header-id\"><b>Narrativa gerada: Appointment </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Última atualização: 2024-02-27 17:11:44-0300</p><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-BRAgendamentoRegulacaoAssistencial.html\">Agendamento de Regulação Assistencial</a></p></div><p><b>status</b>: Booked</p><p><b>serviceCategory</b>: <span title=\"Códigos:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial 09}\">Assistência Ambulatorial</span></p><p><b>serviceType</b>: <span title=\"Códigos:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS 0301010072}\">CONSULTA MEDICA EM ATENÇÃO ESPECIALIZADA</span></p><p><b>specialty</b>: <span title=\"Códigos:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO 225127}\">MEDICO PNEUMOLOGISTA</span></p><p><b>appointmentType</b>: <span title=\"Códigos:{http://hl7.org/fhir/request-priority routine}\">Routine</span></p><p><b>reasonReference</b>: <a href=\"Bundle-Example-RIRA-Attended.html#urn-uuid-transient-3\">Condition Anormalidades da respiração</a></p><p><b>start</b>: 2019-03-17 21:00:00-0300</p><p><b>end</b>: 2019-03-17 21:00:00-0300</p><p><b>created</b>: 2019-01-16 22:00:00-0200</p><p><b>basedOn</b>: <a href=\"Bundle-Example-RIRA-Attended.html#urn-uuid-transient-2\">ServiceRequest CONSULTA MEDICA EM ATENÇÃO ESPECIALIZADA</a></p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Actor</b></td><td><b>Status</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Códigos:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante PCT}\">Paciente</span></td><td>Identifier: <code>http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0</code>/706004324048847</td><td>Accepted</td></tr></table></div>"
+  ] ;
+  fhir:Appointment.status [ fhir:value "booked"] ;
+  fhir:Appointment.serviceCategory [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial" ] ;
+       fhir:Coding.code [ fhir:value "09" ]
+     ]
+  ] ;
+  fhir:Appointment.serviceType [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS" ] ;
+       fhir:Coding.code [ fhir:value "0301010072" ]
+     ]
+  ] ;
+  fhir:Appointment.specialty [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO" ] ;
+       fhir:Coding.code [ fhir:value "225127" ]
+     ]
+  ] ;
+  fhir:Appointment.appointmentType [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/request-priority" ] ;
+       fhir:Coding.code [ fhir:value "routine" ]
+     ]
+  ] ;
+  fhir:Appointment.reasonReference [
+     fhir:index 0 ;
+     fhir:Reference.reference [ fhir:value "urn:uuid:transient-3" ]
+  ] ;
+  fhir:Appointment.start [ fhir:value "2019-03-17T21:00:00.000-03:00"^^xsd:dateTime] ;
+  fhir:Appointment.end [ fhir:value "2019-03-17T21:00:00.000-03:00"^^xsd:dateTime] ;
+  fhir:Appointment.created [ fhir:value "2019-01-16T22:00:00.000-02:00"^^xsd:dateTime] ;
+  fhir:Appointment.basedOn [
+     fhir:index 0 ;
+     fhir:Reference.reference [ fhir:value "urn:uuid:transient-2" ]
+  ] ;
+  fhir:Appointment.participant [
+     fhir:index 0 ;
+     fhir:Appointment.participant.type [
+       fhir:index 0 ;
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante" ] ;
+         fhir:Coding.code [ fhir:value "PCT" ]
+       ]
+     ] ;
+     fhir:Appointment.participant.actor [
+       fhir:Reference.identifier [
+         fhir:Identifier.system [ fhir:value "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0" ] ;
+         fhir:Identifier.value [ fhir:value "706004324048847" ]
+       ]
+     ] ;
+     fhir:Appointment.participant.status [ fhir:value "accepted" ]
+  ] .
+
+<urn:uuid:transient-2> a fhir:ServiceRequest ;
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2024-02-27T17:11:44-03:00"^^xsd:dateTime ] ;
+     fhir:Meta.profile [
+       fhir:value "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial" ;
+       fhir:index 0 ;
+       fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ServiceRequest_null\"> </a><p class=\"res-header-id\"><b>Narrativa gerada: ServiceRequest </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Última atualização: 2024-02-27 17:11:44-0300</p><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-BRRequisicaoRegulacaoAssistencial.html\">Requisição de Regulação Assistencial</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Códigos:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial 09}\">Assistência Ambulatorial</span></p><p><b>priority</b>: Urgent</p><p><b>code</b>: <span title=\"Códigos:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS 0301010072}\">CONSULTA MEDICA EM ATENÇÃO ESPECIALIZADA</span></p><p><b>subject</b>: Identifier: <code>http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0</code>/706004324048847</p><p><b>authoredOn</b>: 2019-01-16 22:00:00-0200</p><p><b>requester</b>: Identifier: <code>http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0</code>/6689477</p><p><b>performerType</b>: <span title=\"Códigos:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO 225127}\">MEDICO PNEUMOLOGISTA</span></p><p><b>reasonReference</b>: <a href=\"Bundle-Example-RIRA-Attended.html#urn-uuid-transient-3\">Condition Anormalidades da respiração</a></p></div>"
+  ] ;
+  fhir:ServiceRequest.status [ fhir:value "active"] ;
+  fhir:ServiceRequest.intent [ fhir:value "order"] ;
+  fhir:ServiceRequest.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial" ] ;
+       fhir:Coding.code [ fhir:value "09" ]
+     ]
+  ] ;
+  fhir:ServiceRequest.priority [ fhir:value "urgent"] ;
+  fhir:ServiceRequest.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS" ] ;
+       fhir:Coding.code [ fhir:value "0301010072" ]
+     ]
+  ] ;
+  fhir:ServiceRequest.subject [
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0" ] ;
+       fhir:Identifier.value [ fhir:value "706004324048847" ]
+     ]
+  ] ;
+  fhir:ServiceRequest.authoredOn [ fhir:value "2019-01-16T22:00:00.000-02:00"^^xsd:dateTime] ;
+  fhir:ServiceRequest.requester [
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0" ] ;
+       fhir:Identifier.value [ fhir:value "6689477" ]
+     ]
+  ] ;
+  fhir:ServiceRequest.performerType [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO" ] ;
+       fhir:Coding.code [ fhir:value "225127" ]
+     ]
+  ] ;
+  fhir:ServiceRequest.reasonReference [
+     fhir:index 0 ;
+     fhir:Reference.reference [ fhir:value "urn:uuid:transient-3" ]
+  ] .
+
+<urn:uuid:transient-3> a fhir:Condition ;
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2024-02-27T17:11:44-03:00"^^xsd:dateTime ] ;
+     fhir:Meta.profile [
+       fhir:value "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0" ;
+       fhir:index 0 ;
+       fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_null\"> </a><p class=\"res-header-id\"><b>Narrativa gerada: Condition </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Última atualização: 2024-02-27 17:11:44-0300</p><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-BRCID10Avaliado-1.0.html\">CID10 Avaliado</a></p></div><p><b>code</b>: <span title=\"Códigos:{http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10 R06}\">Anormalidades da respiração</span></p><p><b>subject</b>: Identifier: <code>http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0</code>/706004324048847</p></div>"
+  ] ;
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10" ] ;
+       fhir:Coding.code [ fhir:value "R06" ]
+     ]
+  ] ;
+  fhir:Condition.subject [
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0" ] ;
+       fhir:Identifier.value [ fhir:value "706004324048847" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/Bundle/Example-RIRA-Booked.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
