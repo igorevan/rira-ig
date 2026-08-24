@@ -2,8 +2,8 @@ RIRARNDSIG : Validation Results
 =========================================
 
 err = 4, warn = 0, info = 0
-IG Publisher Version: 2.2.10
-Generated Wed Jul 01 08:50:37 BRT 2026. FHIR version 4.0.1 for br.gov.saude.rira.fhir#1.0.0-release (canonical = https://fhir.saude.gov.br/fhir/r4/rira/1.0.0)
+IG Publisher Version: 2.3.2
+Generated Mon Aug 24 11:32:51 BRT 2026. FHIR version 4.0.1 for br.gov.saude.rira.fhir#1.0.0-release (canonical = https://fhir.saude.gov.br/fhir/r4/rira/1.0.0)
  Build Errors : 7 / 0 / 0
  /home/igor/rira-ig/input/examples/exemplo_RIRA_attended : 1 / 3 / 2
  /home/igor/rira-ig/input/examples/exemplo_RIRA_booked : 1 / 3 / 2

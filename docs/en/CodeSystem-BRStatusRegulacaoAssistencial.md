@@ -7,7 +7,7 @@ Status da regulação assistencial.
 
 This Code system is referenced in the definition of the following value sets:
 
-* [BRStatusRegulacaoAssistencial](ValueSet-BRStatusRegulacaoAssistencial.md)
+* [Status de regulação assistencial](ValueSet-BRStatusRegulacaoAssistencial.md)
 
 -------
 

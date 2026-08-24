@@ -7,7 +7,7 @@ Classifica as razões pelo qual não foi possível obter os dados de identifica�
 
 This Code system is referenced in the definition of the following value sets:
 
-* [BRJustificativaIndividuoNaoIdentificado](ValueSet-BRJustificativaIndividuoNaoIdentificado-1.0.md)
+* [Justificativa da Impossibilidade de Identificação do Indivíduo (ValueSet)](ValueSet-BRJustificativaIndividuoNaoIdentificado-1.0.md)
 
 -------
 

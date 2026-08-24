@@ -7,7 +7,7 @@ Classificação dos tipos de documentos compartilhados no Brasil.
 
 This Code system is referenced in the definition of the following value sets:
 
-* [BRTipoDocumento](ValueSet-BRTipoDocumento-1.0.md)
+* [Tipo de Documento (ValueSet)](ValueSet-BRTipoDocumento-1.0.md)
 
 -------
 

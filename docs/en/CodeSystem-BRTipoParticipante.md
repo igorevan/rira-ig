@@ -7,7 +7,7 @@ Identificação do tipo do participante envolvido na solicitação.
 
 This Code system is referenced in the definition of the following value sets:
 
-* [BRTipoParticipante](ValueSet-BRTipoParticipante.md)
+* [Tipo Participante](ValueSet-BRTipoParticipante.md)
 
 -------
 

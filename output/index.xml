@@ -43,9 +43,9 @@
   <p>Abaixo você encontra um material com o fluxo oficial para integração com a RNDS.</p>
 
   <iframe
-    src="https://mobileapps.saude.gov.br/portal-servicos/files/f3bd659c8c8ae3ee966e575fde27eb58/0e3affbe4f1b86b50ae78ab652b2ebaa_pgst0fpqe.pdf"
+    src="https://mobileapps-prd.saude.gov.br/portal-servicos/files/f3bd659c8c8ae3ee966e575fde27eb58/0e3affbe4f1b86b50ae78ab652b2ebaa_pgst0fpqe.pdf"
     width="100%" height="600px"> Seu navegador não suporta visualização de PDF. <a
-      href="https://mobileapps.saude.gov.br/portal-servicos/files/f3bd659c8c8ae3ee966e575fde27eb58/0e3affbe4f1b86b50ae78ab652b2ebaa_pgst0fpqe.pdf">Clique
+      href="https://mobileapps-prd.saude.gov.br/portal-servicos/files/f3bd659c8c8ae3ee966e575fde27eb58/0e3affbe4f1b86b50ae78ab652b2ebaa_pgst0fpqe.pdf">Clique
       aqui para abrir</a>. </iframe>
 
 
@@ -58,9 +58,9 @@
       </a>: Introdução e resumo deste guia, em inglês. <i>Introduction and
         summary of this guide, in English.</i>
     </li>
-    <li>
+    <!-- <li>
       <a href="lives.html">Lives</a>: Lives com orientações técnicas e negociais sobre o RIRA.
-    </li>
+    </li> -->
     <li>
       <a href="credenciamento.html">Credenciamento</a>: Saiba qual é o processo e requisitos a serem
       seguidos por um estabelecimento de saúde para a integração com a RNDS.

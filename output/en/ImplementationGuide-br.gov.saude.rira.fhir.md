@@ -31,7 +31,7 @@
   "title" : "Guia de Implementação da Regulação Assistencial (RIRA) da RNDS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-07-01T08:33:26-03:00",
+  "date" : "2026-08-24T11:14:03-03:00",
   "publisher" : "Ministério da Saúde do Brasil",
   "contact" : [{
     "name" : "Ministério da Saúde do Brasil",
@@ -62,7 +62,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.2.0"
+    "version" : "7.3.0"
   },
   {
     "id" : "hl7ext",
@@ -133,7 +133,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-liquid"
+        "valueString" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -144,7 +144,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-liquid"
+        "valueString" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -445,7 +445,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueCode" : "path-liquid"
+        "valueCode" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -456,7 +456,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueCode" : "path-liquid"
+        "valueCode" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -699,6 +699,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-Example-RIRA-Attended.html"
       }],
       "reference" : {
         "reference" : "Bundle/Example-RIRA-Attended"
@@ -711,6 +715,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-Example-RIRA-Booked.html"
       }],
       "reference" : {
         "reference" : "Bundle/Example-RIRA-Booked"
@@ -723,6 +731,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-Example-RIRA-Cancelled.html"
       }],
       "reference" : {
         "reference" : "Bundle/Example-RIRA-Cancelled"
@@ -735,6 +747,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-Example-RIRA-Pending.html"
       }],
       "reference" : {
         "reference" : "Bundle/Example-RIRA-Pending"
@@ -747,6 +763,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-BRCBHPMTUSS.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/BRCBHPMTUSS"
@@ -758,6 +778,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-BRCBO.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/BRCBO"
@@ -769,6 +793,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-BRCID10.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/BRCID10"
@@ -780,6 +808,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-BRCategoriaDiagnostico.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/BRCategoriaDiagnostico"
@@ -791,6 +823,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-BRJustificativaIndividuoNaoIdentificado.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/BRJustificativaIndividuoNaoIdentificado"
@@ -802,6 +838,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-BRModalidadeAssistencial.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/BRModalidadeAssistencial"
@@ -813,6 +853,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-BRStatusAgendamentoRegulacaoAssistencial.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/BRStatusAgendamentoRegulacaoAssistencial"
@@ -824,6 +868,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-BRStatusRegulacaoAssistencial.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/BRStatusRegulacaoAssistencial"
@@ -835,6 +883,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-BRTabelaSUS.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/BRTabelaSUS"
@@ -846,6 +898,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-BRTipoDocumento.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/BRTipoDocumento"
@@ -857,6 +913,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-BRTipoParticipante.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/BRTipoParticipante"
@@ -868,6 +928,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/BRAgendamentoRegulacaoAssistencial"
@@ -879,6 +943,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-BRCID10Avaliado-1.0.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/BRCID10Avaliado-1.0"
@@ -890,6 +958,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-BRIndividuoNaoIdentificado-1.0.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/BRIndividuoNaoIdentificado-1.0"
@@ -901,6 +973,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-BRRegulacaoAssistencial.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/BRRegulacaoAssistencial"
@@ -912,6 +988,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/BRRequisicaoRegulacaoAssistencial"
@@ -923,6 +1003,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-BRCID10-1.0.html"
       }],
       "reference" : {
         "reference" : "ValueSet/BRCID10-1.0"
@@ -934,6 +1018,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-BRCaraterAtendimentoMIRA.html"
       }],
       "reference" : {
         "reference" : "ValueSet/BRCaraterAtendimentoMIRA"
@@ -945,6 +1033,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-BRCategoriaDiagnostico.html"
       }],
       "reference" : {
         "reference" : "ValueSet/BRCategoriaDiagnostico"
@@ -956,6 +1048,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-BREstadoDocumento-1.0.html"
       }],
       "reference" : {
         "reference" : "ValueSet/BREstadoDocumento-1.0"
@@ -967,6 +1063,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-BREstadoResolucaoDiagnosticoProblema-1.0.html"
       }],
       "reference" : {
         "reference" : "ValueSet/BREstadoResolucaoDiagnosticoProblema-1.0"
@@ -978,6 +1078,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-BRIntencaoRegulacao.html"
       }],
       "reference" : {
         "reference" : "ValueSet/BRIntencaoRegulacao"
@@ -989,6 +1093,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-BRJustificativaIndividuoNaoIdentificado-1.0.html"
       }],
       "reference" : {
         "reference" : "ValueSet/BRJustificativaIndividuoNaoIdentificado-1.0"
@@ -1000,6 +1108,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-BRModalidadeAssistencialMIRA.html"
       }],
       "reference" : {
         "reference" : "ValueSet/BRModalidadeAssistencialMIRA"
@@ -1011,6 +1123,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-BROcupacao-1.0.html"
       }],
       "reference" : {
         "reference" : "ValueSet/BROcupacao-1.0"
@@ -1022,6 +1138,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-BRProcedimentosNacionais-1.0.html"
       }],
       "reference" : {
         "reference" : "ValueSet/BRProcedimentosNacionais-1.0"
@@ -1033,6 +1153,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-BRSexo-1.0.html"
       }],
       "reference" : {
         "reference" : "ValueSet/BRSexo-1.0"
@@ -1044,6 +1168,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-BRStatusAgendamentoRegulacaoAssistencial.html"
       }],
       "reference" : {
         "reference" : "ValueSet/BRStatusAgendamentoRegulacaoAssistencial"
@@ -1055,6 +1183,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-BRStatusParticipante.html"
       }],
       "reference" : {
         "reference" : "ValueSet/BRStatusParticipante"
@@ -1066,6 +1198,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-BRStatusRegulacaoAssistencial.html"
       }],
       "reference" : {
         "reference" : "ValueSet/BRStatusRegulacaoAssistencial"
@@ -1077,6 +1213,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-BRStatusRequisicaoRegulacaoAssistencial.html"
       }],
       "reference" : {
         "reference" : "ValueSet/BRStatusRequisicaoRegulacaoAssistencial"
@@ -1088,6 +1228,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-BRTipoDocumento-1.0.html"
       }],
       "reference" : {
         "reference" : "ValueSet/BRTipoDocumento-1.0"
@@ -1099,6 +1243,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-BRTipoParticipante.html"
       }],
       "reference" : {
         "reference" : "ValueSet/BRTipoParticipante"
@@ -1142,19 +1290,6 @@
         }],
         "nameUrl" : "abstract.html",
         "title" : "Abstract",
-        "generation" : "html"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-          "valueCode" : "informative"
-        },
-        {
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "lives.html"
-        }],
-        "nameUrl" : "lives.html",
-        "title" : "Lives",
         "generation" : "html"
       },
       {

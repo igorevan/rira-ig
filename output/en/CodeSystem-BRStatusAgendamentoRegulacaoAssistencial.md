@@ -7,7 +7,7 @@ Status de agendamento de regulação assistencial.
 
 This Code system is referenced in the definition of the following value sets:
 
-* [BRStatusAgendamentoRegulacaoAssistencial](ValueSet-BRStatusAgendamentoRegulacaoAssistencial.md)
+* [Status de agendamento de regulação assistencial (ValueSet)](ValueSet-BRStatusAgendamentoRegulacaoAssistencial.md)
 
 -------
 

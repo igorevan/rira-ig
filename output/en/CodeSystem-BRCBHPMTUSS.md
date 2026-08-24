@@ -7,7 +7,7 @@ Classificações de procedimentos utilizadas no Brasil, no contexto da assistên
 
 This Code system is referenced in the definition of the following value sets:
 
-* [BRProcedimentosNacionais](ValueSet-BRProcedimentosNacionais-1.0.md)
+* [Procedimento realizado](ValueSet-BRProcedimentosNacionais-1.0.md)
 
 -------
 

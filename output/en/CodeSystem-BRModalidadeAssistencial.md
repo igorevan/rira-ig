@@ -7,7 +7,7 @@ Classifica os contatos assistenciais de acordo com as especificidades do modo, l
 
 This Code system is referenced in the definition of the following value sets:
 
-* [BRModalidadeAssistencialMIRA](ValueSet-BRModalidadeAssistencialMIRA.md)
+* [Modalidade Assistencial MIRA](ValueSet-BRModalidadeAssistencialMIRA.md)
 
 -------
 

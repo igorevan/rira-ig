@@ -7,7 +7,7 @@ Padroniza os códigos e as nomenclaturas dos procedimentos, medicamentos e OPM p
 
 This Code system is referenced in the definition of the following value sets:
 
-* [BRProcedimentosNacionais](ValueSet-BRProcedimentosNacionais-1.0.md)
+* [Procedimento realizado](ValueSet-BRProcedimentosNacionais-1.0.md)
 
 -------
 

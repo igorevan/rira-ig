@@ -7,7 +7,7 @@ Códigos para representação do tipo de categoria do diagnóstico realizado.
 
 This Code system is referenced in the definition of the following value sets:
 
-* [BRCategoriaDiagnostico](ValueSet-BRCategoriaDiagnostico.md)
+* [Categoria do Diagnóstico (ValueSet)](ValueSet-BRCategoriaDiagnostico.md)
 
 -------
 

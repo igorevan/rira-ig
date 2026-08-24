@@ -7,7 +7,7 @@ Classifica as profissões do mercado de trabalho brasileiro.
 
 This Code system is referenced in the definition of the following value sets:
 
-* [BROcupacao](ValueSet-BROcupacao-1.0.md)
+* [Classificação Brasileira de Ocupações - CBO](ValueSet-BROcupacao-1.0.md)
 
 -------
 

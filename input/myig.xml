@@ -119,11 +119,11 @@
         <title value="Abstract" />
         <generation value="html" />
       </page>
-      <page>
+      <!-- <page>
         <nameUrl value="lives.html" />
         <title value="Lives" />
         <generation value="html" />
-      </page>
+      </page> -->
       <page>
         <nameUrl value="credenciamento.html" />
         <title value="Credenciamento" />

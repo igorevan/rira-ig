@@ -9,7 +9,6 @@
 * [Suporte da RNDS](en/suporte.md)
 * [Feedback](en/forms.md)
 * [Abstract](en/abstract.md)
-* [Lives](en/lives.md)
 * [Integração](en/integracao.md)
 * [Artifacts Summary](en/artifacts.md)
 * [Histórico de mudanças](en/changes.md)
