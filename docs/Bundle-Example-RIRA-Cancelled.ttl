@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/Bundle/Example-RIRA-Cancelled> a fhir:Bundle ;
+<http://fhir.saude.gov.br/rira/Bundle/Example-RIRA-Cancelled> a fhir:Bundle ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:Resource.id [ fhir:value "Example-RIRA-Cancelled"] ;
   fhir:Resource.meta [
@@ -269,7 +269,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/Bundle/Example-RIRA-Cancelled.ttl> a owl:Ontology ;
+<http://fhir.saude.gov.br/rira/Bundle/Example-RIRA-Cancelled.ttl> a owl:Ontology ;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/StructureDefinition/BRCID10Avaliado-1.0> a fhir:StructureDefinition ;
+<http://fhir.saude.gov.br/rira/StructureDefinition/BRCID10Avaliado-1.0> a fhir:StructureDefinition ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:Resource.id [ fhir:value "BRCID10Avaliado-1.0"] ;
   fhir:Resource.meta [
@@ -28,8 +28,8 @@
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom" ] ;
          fhir:Extension.valueCanonical [
-           fhir:value "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir" ;
-           fhir:link <https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir>
+           fhir:value "http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir" ;
+           fhir:link <http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir>
          ]
        ]
      ]
@@ -42,8 +42,8 @@
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom" ] ;
          fhir:Extension.valueCanonical [
-           fhir:value "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir" ;
-           fhir:link <https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir>
+           fhir:value "http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir" ;
+           fhir:link <http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir>
          ]
        ]
      ]
@@ -5840,7 +5840,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/StructureDefinition/BRCID10Avaliado-1.0.ttl> a owl:Ontology ;
+<http://fhir.saude.gov.br/rira/StructureDefinition/BRCID10Avaliado-1.0.ttl> a owl:Ontology ;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

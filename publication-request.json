@@ -1,7 +1,7 @@
 {
   "package-id": "br.gov.saude.rira.fhir",
   "version": "1.0.0-release",
-  "path": "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0",
+  "path": "https://fhir.saude.gov.br/rira/",
   "mode": "working",
   "status": "release",
   "sequence": "Releases",

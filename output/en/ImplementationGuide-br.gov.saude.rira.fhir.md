@@ -25,13 +25,13 @@
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
     "valueCode" : "4.0.1"
   }],
-  "url" : "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir",
+  "url" : "http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir",
   "version" : "1.0.0-release",
   "name" : "RIRARNDSIG",
   "title" : "Guia de Implementação da Regulação Assistencial (RIRA) da RNDS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-24T11:14:03-03:00",
+  "date" : "2026-09-15T12:28:51-03:00",
   "publisher" : "Ministério da Saúde do Brasil",
   "contact" : [{
     "name" : "Ministério da Saúde do Brasil",
@@ -203,7 +203,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/history.html"
+        "valueString" : "http://fhir.saude.gov.br/rira/history.html"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -515,7 +515,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/history.html"
+        "valueString" : "http://fhir.saude.gov.br/rira/history.html"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },

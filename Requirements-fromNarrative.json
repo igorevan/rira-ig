@@ -1,7 +1,7 @@
 {
   "resourceType" : "Requirements",
   "id" : "fromNarrative",
-  "url" : "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/Requirements/fromNarrative",
+  "url" : "http://fhir.saude.gov.br/rira/Requirements/fromNarrative",
   "name" : "FromNarrative",
   "title" : "Narrative Conformance Statements",
   "status" : "active",

@@ -3,8 +3,8 @@ RIRARNDSIG : Validation Results
 
 err = 4, warn = 0, info = 0
 $--
-Generated $--. FHIR version $-- for br.gov.saude.rira.fhir#$-- (canonical = https://fhir.saude.gov.br/fhir/r4/rira/1.0.0)
- Build Errors : 7 / 0 / 0
+Generated $--. FHIR version $-- for br.gov.saude.rira.fhir#$-- (canonical = http://fhir.saude.gov.br/rira)
+ Build Errors : 0 / 0 / 0
  /home/igor/rira-ig/input/examples/exemplo_RIRA_attended : 1 / 3 / 2
  /home/igor/rira-ig/input/examples/exemplo_RIRA_booked : 1 / 3 / 2
  /home/igor/rira-ig/input/examples/exemplo_RIRA_cancelled : 0 / 3 / 2
@@ -45,13 +45,6 @@ Generated $--. FHIR version $-- for br.gov.saude.rira.fhir#$-- (canonical = http
  /home/igor/rira-ig/input/resources/ValueSet-BRTipoParticipante : 0 / 1 / 1
 </table>
 == n/a ==
-ERROR: en/downloads.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 237, column 7: The link '/en/definitions.xml.zip' for "XML" cannot be resolved
-ERROR: en/downloads.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 239, column 7: The link '/en/definitions.json.zip' for "JSON" cannot be resolved
-ERROR: en/downloads.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 241, column 7: The link '/en/definitions.ttl.zip' for "Turtle" cannot be resolved
-ERROR: en/downloads.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 246, column 7: The link '/en/examples.xml.zip' for "XML" cannot be resolved
-ERROR: en/downloads.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 248, column 7: The link '/en/examples.json.zip' for "JSON" cannot be resolved
-ERROR: en/downloads.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 250, column 7: The link '/en/examples.ttl.zip' for "Turtle" cannot be resolved
-ERROR: en/forms.html#/html/body/div/div/div/div/div/div/p/a at Line 235, column 88: The link 'link do formulário' for "aqui" cannot be resolved
 == input/examples/exemplo_RIRA_attended.json ==
 ERROR: Bundle/Example-RIRA-Attended: Bundle.entry[0].resource.event[0].detail[1]: Não foi possível resolver a referência de perfil 'http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0'
 == input/examples/exemplo_RIRA_booked.json ==

@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ValueSet/BRCategoriaDiagnostico> a fhir:ValueSet ;
+<http://fhir.saude.gov.br/rira/ValueSet/BRCategoriaDiagnostico> a fhir:ValueSet ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:Resource.id [ fhir:value "BRCategoriaDiagnostico"] ;
   fhir:Resource.meta [
@@ -29,8 +29,8 @@
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom" ] ;
          fhir:Extension.valueCanonical [
-           fhir:value "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir" ;
-           fhir:link <https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir>
+           fhir:value "http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir" ;
+           fhir:link <http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir>
          ]
        ]
      ]
@@ -43,8 +43,8 @@
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom" ] ;
          fhir:Extension.valueCanonical [
-           fhir:value "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir" ;
-           fhir:link <https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir>
+           fhir:value "http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir" ;
+           fhir:link <http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir>
          ]
        ]
      ]
@@ -93,7 +93,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ValueSet/BRCategoriaDiagnostico.ttl> a owl:Ontology ;
+<http://fhir.saude.gov.br/rira/ValueSet/BRCategoriaDiagnostico.ttl> a owl:Ontology ;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

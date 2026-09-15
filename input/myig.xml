@@ -15,7 +15,7 @@
     <valueCode value="4.0.1" />
   </extension>
   <url
-    value="https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir" />
+    value="http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir" />
   <version value="1.0.0-release" />
   <name value="RIRARNDSIG" />
   <title value="Guia de Implementação da Regulação Assistencial (RIRA) da RNDS" />

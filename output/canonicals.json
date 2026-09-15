@@ -1,4 +1,11 @@
 [{
+  "id" : "br.gov.saude.rira.fhir",
+  "type" : "ImplementationGuide",
+  "url" : "http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir",
+  "version" : "1.0.0-release",
+  "name" : "RIRARNDSIG"
+},
+{
   "id" : "BRCBHPMTUSS",
   "type" : "CodeSystem",
   "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBHPMTUSS",
@@ -228,11 +235,4 @@
   "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoParticipante",
   "version" : "1.0.0-release",
   "name" : "BRTipoParticipante"
-},
-{
-  "id" : "br.gov.saude.rira.fhir",
-  "type" : "ImplementationGuide",
-  "url" : "https://fhir.saude.gov.br/fhir/r4/rira/1.0.0/ImplementationGuide/br.gov.saude.rira.fhir",
-  "version" : "1.0.0-release",
-  "name" : "RIRARNDSIG"
 }]
