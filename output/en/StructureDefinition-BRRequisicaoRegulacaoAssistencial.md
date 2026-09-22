@@ -1,4 +1,4 @@
-# Requisição de Regulação Assistencial - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Requisição de Regulação Assistencial - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
 
 ## Resource Profile: Requisição de Regulação Assistencial 
 
@@ -7,7 +7,7 @@ Requisição de Regulação Assistencial
 
 **Usos:**
 
-* Refere a este Perfil: [Agendamento de Regulação Assistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md) and [Regulação Assistencial (RIRA)](StructureDefinition-BRRegulacaoAssistencial.md)
+* Refere a este Perfil: [Agendamento de Regulação Assistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md) and [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/br.gov.saude.rira.fhir|current/StructureDefinition/StructureDefinition-BRRequisicaoRegulacaoAssistencial.json)
 
@@ -61,7 +61,6 @@ Other representations of profile: [CSV](../StructureDefinition-BRRequisicaoRegul
   "name" : "BRRequisicaoRegulacaoAssistencial",
   "title" : "Requisição de Regulação Assistencial",
   "status" : "active",
-  "experimental" : false,
   "date" : "2023-04-04",
   "publisher" : "Ministério da Saúde do Brasil",
   "contact" : [{
@@ -116,12 +115,18 @@ Other representations of profile: [CSV](../StructureDefinition-BRRequisicaoRegul
   "differential" : {
     "element" : [{
       "id" : "ServiceRequest",
-      "path" : "ServiceRequest"
+      "path" : "ServiceRequest",
+      "constraint" : [{
+        "key" : "mira-1",
+        "severity" : "error",
+        "human" : "O Motivo da Solicitação (Condition.code) deve ser preenchido caso a Data da Solicitação (ServiceRequest.authoredOn) seja posterior a 01/01/2025.",
+        "expression" : "(authoredOn > @2025-01-01T01:00:00) implies reasonReference.resolve().code.exists()"
+      }]
     },
     {
       "id" : "ServiceRequest.id",
       "path" : "ServiceRequest.id",
-      "max" : "1"
+      "max" : "0"
     },
     {
       "id" : "ServiceRequest.implicitRules",
@@ -136,7 +141,7 @@ Other representations of profile: [CSV](../StructureDefinition-BRRequisicaoRegul
     {
       "id" : "ServiceRequest.text",
       "path" : "ServiceRequest.text",
-      "max" : "1"
+      "max" : "0"
     },
     {
       "id" : "ServiceRequest.contained",
@@ -176,6 +181,13 @@ Other representations of profile: [CSV](../StructureDefinition-BRRequisicaoRegul
     {
       "id" : "ServiceRequest.status",
       "path" : "ServiceRequest.status",
+      "condition" : ["mira-13",
+      "mira-14",
+      "mira-15",
+      "mira-16",
+      "mira-17",
+      "mira-18",
+      "mira-19"],
       "binding" : {
         "strength" : "required",
         "valueSet" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRequisicaoRegulacaoAssistencial"
@@ -184,6 +196,8 @@ Other representations of profile: [CSV](../StructureDefinition-BRRequisicaoRegul
     {
       "id" : "ServiceRequest.intent",
       "path" : "ServiceRequest.intent",
+      "short" : "proposal | plan |  directive | order | original-order | reflex-order | filler-order | instance-order | option",
+      "fixedCode" : "proposal",
       "binding" : {
         "strength" : "required",
         "valueSet" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRIntencaoRegulacao"
@@ -192,7 +206,8 @@ Other representations of profile: [CSV](../StructureDefinition-BRRequisicaoRegul
     {
       "id" : "ServiceRequest.category",
       "path" : "ServiceRequest.category",
-      "short" : "Modalidade assistencial.",
+      "short" : "Modalidade assistencial",
+      "definition" : "Modalidade assistencial que gerou a solicitação do procedimento.",
       "min" : 1,
       "max" : "1",
       "binding" : {
@@ -240,7 +255,8 @@ Other representations of profile: [CSV](../StructureDefinition-BRRequisicaoRegul
     {
       "id" : "ServiceRequest.priority",
       "path" : "ServiceRequest.priority",
-      "short" : "Caráter do atendimento.",
+      "short" : "Caráter da solicitação",
+      "definition" : "Modalidade assistencial que gerou a solicitação do procedimento.",
       "min" : 1,
       "binding" : {
         "strength" : "required",
@@ -256,7 +272,8 @@ Other representations of profile: [CSV](../StructureDefinition-BRRequisicaoRegul
     {
       "id" : "ServiceRequest.code",
       "path" : "ServiceRequest.code",
-      "short" : "Código do procedimento.",
+      "short" : "Código do procedimento",
+      "definition" : "O código que identifica unicamente o procedimento conforme tabela SUS.",
       "min" : 1,
       "binding" : {
         "strength" : "required",
@@ -313,7 +330,8 @@ Other representations of profile: [CSV](../StructureDefinition-BRRequisicaoRegul
     {
       "id" : "ServiceRequest.subject",
       "path" : "ServiceRequest.subject",
-      "short" : "Paciente",
+      "short" : "Identificador do paciente",
+      "definition" : "Identificação única do paciente, por meio de CPF ou CNS.",
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"]
@@ -337,7 +355,13 @@ Other representations of profile: [CSV](../StructureDefinition-BRRequisicaoRegul
     {
       "id" : "ServiceRequest.subject.identifier",
       "path" : "ServiceRequest.subject.identifier",
-      "min" : 1
+      "min" : 1,
+      "constraint" : [{
+        "key" : "ident-1",
+        "severity" : "error",
+        "human" : "O número de CPF ou CNS informado é inválido (subject.identifier.value).",
+        "expression" : "value.matches('^(?!(\\\\d)\\\\1{10})\\\\d{11}$') or value.matches('^(?!(\\\\d)\\\\1{14})[125789]\\\\d{14}$')"
+      }]
     },
     {
       "id" : "ServiceRequest.subject.identifier.id",
@@ -387,11 +411,12 @@ Other representations of profile: [CSV](../StructureDefinition-BRRequisicaoRegul
     {
       "id" : "ServiceRequest.occurrence[x]",
       "path" : "ServiceRequest.occurrence[x]",
-      "short" : "Data de execução",
-      "definition" : "Data e hora da execução do procedimento no padrão ISO8601.",
+      "short" : "Data da execução",
+      "definition" : "A data e hora em que o procedimento regulado foi executado no padrão ISO 8601.",
       "type" : [{
         "code" : "dateTime"
-      }]
+      }],
+      "condition" : ["mira-3", "mira-9", "mira-12"]
     },
     {
       "id" : "ServiceRequest.occurrence[x].id",
@@ -406,18 +431,16 @@ Other representations of profile: [CSV](../StructureDefinition-BRRequisicaoRegul
     {
       "id" : "ServiceRequest.authoredOn",
       "path" : "ServiceRequest.authoredOn",
-      "short" : "Data e hora em que o procediento foi solicitado.",
-      "definition" : "Data e hora da solicitação do procedimento no padrão ISO8601.",
+      "short" : "Data da solicitação",
+      "definition" : "A data e hora da solicitação do procedimento regulado no padrão ISO 8601.",
       "min" : 1,
-      "mapping" : [{
-        "identity" : "rnds",
-        "map" : "MI-RIRA - Data da Solicitação"
-      }]
+      "condition" : ["mira-1"]
     },
     {
       "id" : "ServiceRequest.requester",
       "path" : "ServiceRequest.requester",
       "short" : "Estabelecimento de saúde solicitante",
+      "definition" : "Identificação única do estabelecimento solicitante, por meio do CNES.",
       "min" : 1,
       "type" : [{
         "code" : "Reference",
@@ -442,7 +465,13 @@ Other representations of profile: [CSV](../StructureDefinition-BRRequisicaoRegul
     {
       "id" : "ServiceRequest.requester.identifier",
       "path" : "ServiceRequest.requester.identifier",
-      "min" : 1
+      "min" : 1,
+      "constraint" : [{
+        "key" : "estab-2",
+        "severity" : "error",
+        "human" : "O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números.",
+        "expression" : "value.matches('^(?!(\\\\d)\\\\1{6})\\\\d{7}$')"
+      }]
     },
     {
       "id" : "ServiceRequest.requester.identifier.id",
@@ -487,7 +516,8 @@ Other representations of profile: [CSV](../StructureDefinition-BRRequisicaoRegul
     {
       "id" : "ServiceRequest.performerType",
       "path" : "ServiceRequest.performerType",
-      "short" : "Identificador da especialidade médica do executante.",
+      "short" : "Especialidade médica do executante",
+      "definition" : "Identificação da especialidade médica do profissional executante do procedimento, conforme tabela de CBO. \r\nCaso o procedimento informado pertença à forma de organização 03.01.01 da tabela SUS, o código CBO será obrigatório.",
       "binding" : {
         "strength" : "required",
         "description" : "Classificação Brasileira de Ocupações.",
@@ -533,12 +563,14 @@ Other representations of profile: [CSV](../StructureDefinition-BRRequisicaoRegul
     {
       "id" : "ServiceRequest.performer",
       "path" : "ServiceRequest.performer",
-      "short" : "Estabelecimento de sáude executante",
+      "short" : "Estabelecimento de saúde executante",
+      "definition" : "Identificação única do estabelecimento executante, por meio do CNES.",
       "max" : "1",
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"]
-      }]
+      }],
+      "condition" : ["mira-4", "mira-6", "mira-8", "mira-11"]
     },
     {
       "id" : "ServiceRequest.performer.id",
@@ -558,7 +590,13 @@ Other representations of profile: [CSV](../StructureDefinition-BRRequisicaoRegul
     {
       "id" : "ServiceRequest.performer.identifier",
       "path" : "ServiceRequest.performer.identifier",
-      "min" : 1
+      "min" : 1,
+      "constraint" : [{
+        "key" : "estab-2",
+        "severity" : "error",
+        "human" : "O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números.",
+        "expression" : "value.matches('^(?!(\\\\d)\\\\1{6})\\\\d{7}$')"
+      }]
     },
     {
       "id" : "ServiceRequest.performer.identifier.id",
@@ -619,11 +657,11 @@ Other representations of profile: [CSV](../StructureDefinition-BRRequisicaoRegul
       "id" : "ServiceRequest.reasonReference",
       "path" : "ServiceRequest.reasonReference",
       "short" : "Motivo da solicitação",
-      "min" : 1,
+      "definition" : "Identificação do motivo da solicitação do procedimento, conforme Classificação Internacional de Doenças - CID ou Classificação Internacional de Atenção Primária - CIAP.",
       "max" : "1",
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0"]
+        "targetProfile" : ["http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProblemaDiagnostico"]
       }]
     },
     {

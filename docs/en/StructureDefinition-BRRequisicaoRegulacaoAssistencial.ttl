@@ -54,7 +54,6 @@
   fhir:StructureDefinition.name [ fhir:value "BRRequisicaoRegulacaoAssistencial"] ;
   fhir:StructureDefinition.title [ fhir:value "Requisição de Regulação Assistencial"] ;
   fhir:StructureDefinition.status [ fhir:value "active"] ;
-  fhir:StructureDefinition.experimental [ fhir:value "false"^^xsd:boolean] ;
   fhir:StructureDefinition.date [ fhir:value "2023-04-04"^^xsd:date] ;
   fhir:StructureDefinition.publisher [ fhir:value "Ministério da Saúde do Brasil"] ;
   fhir:StructureDefinition.contact [
@@ -221,6 +220,12 @@
            fhir:value "http://hl7.org/fhir/StructureDefinition/ServiceRequest" ;
            fhir:link <http://hl7.org/fhir/StructureDefinition/ServiceRequest>
          ]
+       ], [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "mira-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "O Motivo da Solicitação (Condition.code) deve ser preenchido caso a Data da Solicitação (ServiceRequest.authoredOn) seja posterior a 01/01/2025." ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "(authoredOn > @2025-01-01T01:00:00) implies reasonReference.resolve().code.exists()" ]
        ] ;
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ] ;
@@ -249,7 +254,7 @@
        fhir:ElementDefinition.definition [ fhir:value "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." ] ;
        fhir:ElementDefinition.comment [ fhir:value "The only time that a resource does not have an id is when it is being submitted to the server using a create operation." ] ;
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
-       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.max [ fhir:value "0" ] ;
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Resource.id" ] ;
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
@@ -403,7 +408,7 @@
          fhir:index -1
        ] ;
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
-       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.max [ fhir:value "0" ] ;
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "DomainResource.text" ] ;
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
@@ -922,6 +927,28 @@
          fhir:index -1 ;
          fhir:ElementDefinition.type.code [ fhir:value "code" ]
        ] ;
+       fhir:ElementDefinition.condition [
+         fhir:value "mira-13" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-14" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-15" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-16" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-17" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-18" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-19" ;
+         fhir:index -1
+       ] ;
        fhir:ElementDefinition.constraint [
          fhir:index -1 ;
          fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
@@ -969,7 +996,7 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.intent" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.intent" ] ;
-       fhir:ElementDefinition.short [ fhir:value "proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option" ] ;
+       fhir:ElementDefinition.short [ fhir:value "proposal | plan |  directive | order | original-order | reflex-order | filler-order | instance-order | option" ] ;
        fhir:ElementDefinition.definition [ fhir:value "Whether the request is a proposal, plan, an original order or a reflex order." ] ;
        fhir:ElementDefinition.comment [ fhir:value "This element is labeled as a modifier because the intent alters when and how the resource is actually applicable." ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
@@ -983,6 +1010,7 @@
          fhir:index -1 ;
          fhir:ElementDefinition.type.code [ fhir:value "code" ]
        ] ;
+       fhir:ElementDefinition.fixedCode [ fhir:value "proposal" ] ;
        fhir:ElementDefinition.constraint [
          fhir:index -1 ;
          fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
@@ -1026,8 +1054,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.category" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.category" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Modalidade assistencial." ] ;
-       fhir:ElementDefinition.definition [ fhir:value "A code that classifies the service for searching, sorting and display purposes (e.g. \"Surgical Procedure\")." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Modalidade assistencial" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Modalidade assistencial que gerou a solicitação do procedimento." ] ;
        fhir:ElementDefinition.comment [ fhir:value "There may be multiple axis of categorization depending on the context or use case for retrieving or displaying the resource.  The level of granularity is defined by the category concepts in the value set." ] ;
        fhir:ElementDefinition.requirements [ fhir:value "Used for filtering what service request are retrieved and displayed." ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
@@ -1603,8 +1631,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.priority" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.priority" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Caráter do atendimento." ] ;
-       fhir:ElementDefinition.definition [ fhir:value "Indicates how quickly the ServiceRequest should be addressed with respect to other requests." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Caráter da solicitação" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Modalidade assistencial que gerou a solicitação do procedimento." ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.base [
@@ -1704,8 +1732,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.code" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.code" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Código do procedimento." ] ;
-       fhir:ElementDefinition.definition [ fhir:value "A code that identifies a particular service (i.e., procedure, diagnostic investigation, or panel of investigations) that have been requested." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Código do procedimento" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "O código que identifica unicamente o procedimento conforme tabela SUS." ] ;
        fhir:ElementDefinition.comment [ fhir:value "Many laboratory and radiology procedure codes embed the specimen/organ system in the test order name, for example,  serum or serum/plasma glucose, or a chest x-ray. The specimen might not be recorded separately from the test code." ] ;
        fhir:ElementDefinition.alias [
          fhir:value "service requested" ;
@@ -2405,8 +2433,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.subject" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.subject" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Paciente" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "On whom or what the service is to be performed. This is usually a human patient, but can also be requested on animals, groups of humans or animals, devices such as dialysis machines, or even locations (typically for environmental scans)." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Identificador do paciente" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Identificação única do paciente, por meio de CPF ou CNS." ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.base [
@@ -2679,6 +2707,12 @@
            fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
+       ], [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ident-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "O número de CPF ou CNS informado é inválido (subject.identifier.value)." ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "value.matches('^(?!(\\\\d)\\\\1{10})\\\\d{11}$') or value.matches('^(?!(\\\\d)\\\\1{14})[125789]\\\\d{14}$')" ]
        ] ;
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
@@ -3197,8 +3231,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.occurrence[x]" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.occurrence[x]" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Data de execução" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "Data e hora da execução do procedimento no padrão ISO8601." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Data da execução" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "A data e hora em que o procedimento regulado foi executado no padrão ISO 8601." ] ;
        fhir:ElementDefinition.alias [
          fhir:value "schedule" ;
          fhir:index -1
@@ -3213,6 +3247,16 @@
        fhir:ElementDefinition.type [
          fhir:index -1 ;
          fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ] ;
+       fhir:ElementDefinition.condition [
+         fhir:value "mira-3" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-9" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-12" ;
+         fhir:index -1
        ] ;
        fhir:ElementDefinition.constraint [
          fhir:index -1 ;
@@ -3419,8 +3463,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.authoredOn" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.authoredOn" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Data e hora em que o procediento foi solicitado." ] ;
-       fhir:ElementDefinition.definition [ fhir:value "Data e hora da solicitação do procedimento no padrão ISO8601." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Data da solicitação" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "A data e hora da solicitação do procedimento regulado no padrão ISO 8601." ] ;
        fhir:ElementDefinition.alias [
          fhir:value "orderedOn" ;
          fhir:index -1
@@ -3435,6 +3479,10 @@
        fhir:ElementDefinition.type [
          fhir:index -1 ;
          fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ] ;
+       fhir:ElementDefinition.condition [
+         fhir:value "mira-1" ;
+         fhir:index -1
        ] ;
        fhir:ElementDefinition.constraint [
          fhir:index -1 ;
@@ -3451,10 +3499,6 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
-         fhir:index -1 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rnds" ] ;
-         fhir:ElementDefinition.mapping.map [ fhir:value "MI-RIRA - Data da Solicitação" ]
-       ], [
          fhir:index -1 ;
          fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "Request.authoredOn" ]
@@ -3480,7 +3524,7 @@
        fhir:Element.id [ fhir:value "ServiceRequest.requester" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.requester" ] ;
        fhir:ElementDefinition.short [ fhir:value "Estabelecimento de saúde solicitante" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "The individual who initiated the request and has responsibility for its activation." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Identificação única do estabelecimento solicitante, por meio do CNES." ] ;
        fhir:ElementDefinition.comment [ fhir:value "This not the dispatcher, but rather who is the authorizer.  This element is not intended to handle delegation which would generally be managed through the Provenance resource." ] ;
        fhir:ElementDefinition.alias [
          fhir:value "author" ;
@@ -3757,6 +3801,12 @@
            fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
+       ], [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "estab-2" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números." ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "value.matches('^(?!(\\\\d)\\\\1{6})\\\\d{7}$')" ]
        ] ;
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
@@ -4214,8 +4264,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.performerType" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.performerType" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Identificador da especialidade médica do executante." ] ;
-       fhir:ElementDefinition.definition [ fhir:value "Desired type of performer for doing the requested service." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Especialidade médica do executante" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Identificação da especialidade médica do profissional executante do procedimento, conforme tabela de CBO. \r\nCaso o procedimento informado pertença à forma de organização 03.01.01 da tabela SUS, o código CBO será obrigatório." ] ;
        fhir:ElementDefinition.comment [ fhir:value "This is a  role, not  a participation type.  In other words, does not describe the task but describes the capacity.  For example, “compounding pharmacy”, “psychiatrist” or “internal referral”." ] ;
        fhir:ElementDefinition.alias [
          fhir:value "specialty" ;
@@ -4798,8 +4848,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.performer" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.performer" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Estabelecimento de sáude executante" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "The desired performer for doing the requested service.  For example, the surgeon, dermatopathologist, endoscopist, etc." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Estabelecimento de saúde executante" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Identificação única do estabelecimento executante, por meio do CNES." ] ;
        fhir:ElementDefinition.comment [ fhir:value "If multiple performers are present, it is interpreted as a list of *alternative* performers without any preference regardless of order.  If order of preference is needed use the [request-performerOrder extension](http://hl7.org/fhir/R4/extension-request-performerorder.html).  Use CareTeam to represent a group of performers (for example, Practitioner A *and* Practitioner B)." ] ;
        fhir:ElementDefinition.alias [
          fhir:value "request recipient" ;
@@ -4820,6 +4870,19 @@
            fhir:index -1 ;
            fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0>
          ]
+       ] ;
+       fhir:ElementDefinition.condition [
+         fhir:value "mira-4" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-6" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-8" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-11" ;
+         fhir:index -1
        ] ;
        fhir:ElementDefinition.constraint [
          fhir:index -1 ;
@@ -5069,6 +5132,12 @@
            fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
+       ], [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "estab-2" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números." ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "value.matches('^(?!(\\\\d)\\\\1{6})\\\\d{7}$')" ]
        ] ;
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
@@ -5687,9 +5756,9 @@
        fhir:Element.id [ fhir:value "ServiceRequest.reasonReference" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.reasonReference" ] ;
        fhir:ElementDefinition.short [ fhir:value "Motivo da solicitação" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "Indicates another resource that provides a justification for why this service is being requested.   May relate to the resources referred to in `supportingInfo`." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Identificação do motivo da solicitação do procedimento, conforme Classificação Internacional de Doenças - CID ou Classificação Internacional de Atenção Primária - CIAP." ] ;
        fhir:ElementDefinition.comment [ fhir:value "This element represents why the referral is being made and may be used to decide how the service will be performed, or even if it will be performed at all.    To be as specific as possible,  a reference to  *Observation* or *Condition* should be used if available.  Otherwise when referencing  *DiagnosticReport*  it should contain a finding  in `DiagnosticReport.conclusion` and/or `DiagnosticReport.conclusionCode`.   When using a reference to *DocumentReference*, the target document should contain clear findings language providing the relevant reason for this service request.  Use  the CodeableConcept text element in `ServiceRequest.reasonCode` if the data is free (uncoded) text as shown in the [CT Scan example](http://hl7.org/fhir/R4/servicerequest-example-di.html)." ] ;
-       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "ServiceRequest.reasonReference" ] ;
@@ -5700,9 +5769,9 @@
          fhir:index -1 ;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ] ;
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0" ;
+           fhir:value "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProblemaDiagnostico" ;
            fhir:index -1 ;
-           fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0>
+           fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProblemaDiagnostico>
          ]
        ] ;
        fhir:ElementDefinition.constraint [
@@ -6366,12 +6435,19 @@
      fhir:StructureDefinition.differential.element [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest" ] ;
-       fhir:ElementDefinition.path [ fhir:value "ServiceRequest" ]
+       fhir:ElementDefinition.path [ fhir:value "ServiceRequest" ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "mira-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "O Motivo da Solicitação (Condition.code) deve ser preenchido caso a Data da Solicitação (ServiceRequest.authoredOn) seja posterior a 01/01/2025." ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "(authoredOn > @2025-01-01T01:00:00) implies reasonReference.resolve().code.exists()" ]
+       ]
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.id" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.id" ] ;
-       fhir:ElementDefinition.max [ fhir:value "1" ]
+       fhir:ElementDefinition.max [ fhir:value "0" ]
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.implicitRules" ] ;
@@ -6386,7 +6462,7 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.text" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.text" ] ;
-       fhir:ElementDefinition.max [ fhir:value "1" ]
+       fhir:ElementDefinition.max [ fhir:value "0" ]
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.contained" ] ;
@@ -6426,6 +6502,28 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.status" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.status" ] ;
+       fhir:ElementDefinition.condition [
+         fhir:value "mira-13" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-14" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-15" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-16" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-17" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-18" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-19" ;
+         fhir:index -1
+       ] ;
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ] ;
          fhir:ElementDefinition.binding.valueSet [
@@ -6437,6 +6535,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.intent" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.intent" ] ;
+       fhir:ElementDefinition.short [ fhir:value "proposal | plan |  directive | order | original-order | reflex-order | filler-order | instance-order | option" ] ;
+       fhir:ElementDefinition.fixedCode [ fhir:value "proposal" ] ;
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ] ;
          fhir:ElementDefinition.binding.valueSet [
@@ -6448,7 +6548,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.category" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.category" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Modalidade assistencial." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Modalidade assistencial" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Modalidade assistencial que gerou a solicitação do procedimento." ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.binding [
@@ -6499,7 +6600,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.priority" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.priority" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Caráter do atendimento." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Caráter da solicitação" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Modalidade assistencial que gerou a solicitação do procedimento." ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ] ;
@@ -6518,7 +6620,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.code" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.code" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Código do procedimento." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Código do procedimento" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "O código que identifica unicamente o procedimento conforme tabela SUS." ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ] ;
@@ -6578,7 +6681,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.subject" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.subject" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Paciente" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Identificador do paciente" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Identificação única do paciente, por meio de CPF ou CNS." ] ;
        fhir:ElementDefinition.type [
          fhir:index -1 ;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ] ;
@@ -6607,7 +6711,14 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.subject.identifier" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.subject.identifier" ] ;
-       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ]
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ident-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "O número de CPF ou CNS informado é inválido (subject.identifier.value)." ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "value.matches('^(?!(\\\\d)\\\\1{10})\\\\d{11}$') or value.matches('^(?!(\\\\d)\\\\1{14})[125789]\\\\d{14}$')" ]
+       ]
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.subject.identifier.id" ] ;
@@ -6657,11 +6768,21 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.occurrence[x]" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.occurrence[x]" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Data de execução" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "Data e hora da execução do procedimento no padrão ISO8601." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Data da execução" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "A data e hora em que o procedimento regulado foi executado no padrão ISO 8601." ] ;
        fhir:ElementDefinition.type [
          fhir:index -1 ;
          fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ] ;
+       fhir:ElementDefinition.condition [
+         fhir:value "mira-3" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-9" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-12" ;
+         fhir:index -1
        ]
      ], [
        fhir:index -1 ;
@@ -6677,19 +6798,19 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.authoredOn" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.authoredOn" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Data e hora em que o procediento foi solicitado." ] ;
-       fhir:ElementDefinition.definition [ fhir:value "Data e hora da solicitação do procedimento no padrão ISO8601." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Data da solicitação" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "A data e hora da solicitação do procedimento regulado no padrão ISO 8601." ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
-       fhir:ElementDefinition.mapping [
-         fhir:index -1 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rnds" ] ;
-         fhir:ElementDefinition.mapping.map [ fhir:value "MI-RIRA - Data da Solicitação" ]
+       fhir:ElementDefinition.condition [
+         fhir:value "mira-1" ;
+         fhir:index -1
        ]
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.requester" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.requester" ] ;
        fhir:ElementDefinition.short [ fhir:value "Estabelecimento de saúde solicitante" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Identificação única do estabelecimento solicitante, por meio do CNES." ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.type [
          fhir:index -1 ;
@@ -6719,7 +6840,14 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.requester.identifier" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.requester.identifier" ] ;
-       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ]
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "estab-2" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números." ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "value.matches('^(?!(\\\\d)\\\\1{6})\\\\d{7}$')" ]
+       ]
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.requester.identifier.id" ] ;
@@ -6764,7 +6892,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.performerType" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.performerType" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Identificador da especialidade médica do executante." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Especialidade médica do executante" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Identificação da especialidade médica do profissional executante do procedimento, conforme tabela de CBO. \r\nCaso o procedimento informado pertença à forma de organização 03.01.01 da tabela SUS, o código CBO será obrigatório." ] ;
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ] ;
          fhir:ElementDefinition.binding.description [ fhir:value "Classificação Brasileira de Ocupações." ] ;
@@ -6813,7 +6942,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.performer" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.performer" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Estabelecimento de sáude executante" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Estabelecimento de saúde executante" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Identificação única do estabelecimento executante, por meio do CNES." ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.type [
          fhir:index -1 ;
@@ -6823,6 +6953,19 @@
            fhir:index -1 ;
            fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0>
          ]
+       ] ;
+       fhir:ElementDefinition.condition [
+         fhir:value "mira-4" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-6" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-8" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-11" ;
+         fhir:index -1
        ]
      ], [
        fhir:index -1 ;
@@ -6843,7 +6986,14 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.performer.identifier" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.performer.identifier" ] ;
-       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ]
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "estab-2" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números." ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "value.matches('^(?!(\\\\d)\\\\1{6})\\\\d{7}$')" ]
+       ]
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "ServiceRequest.performer.identifier.id" ] ;
@@ -6904,15 +7054,15 @@
        fhir:Element.id [ fhir:value "ServiceRequest.reasonReference" ] ;
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.reasonReference" ] ;
        fhir:ElementDefinition.short [ fhir:value "Motivo da solicitação" ] ;
-       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Identificação do motivo da solicitação do procedimento, conforme Classificação Internacional de Doenças - CID ou Classificação Internacional de Atenção Primária - CIAP." ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.type [
          fhir:index -1 ;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ] ;
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0" ;
+           fhir:value "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProblemaDiagnostico" ;
            fhir:index -1 ;
-           fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0>
+           fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProblemaDiagnostico>
          ]
        ]
      ], [

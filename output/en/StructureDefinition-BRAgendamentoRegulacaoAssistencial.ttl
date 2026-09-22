@@ -8,6 +8,9 @@
 <http://fhir.saude.gov.br/rira/StructureDefinition/BRAgendamentoRegulacaoAssistencial> a fhir:StructureDefinition ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:Resource.id [ fhir:value "BRAgendamentoRegulacaoAssistencial"] ;
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2026-09-15T14:00:00-03:00"^^xsd:dateTime ]
+  ] ;
   fhir:Resource.language [ fhir:value "en"] ;
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "extensions" ]
@@ -54,7 +57,6 @@
   fhir:StructureDefinition.name [ fhir:value "BRAgendamentoRegulacaoAssistencial"] ;
   fhir:StructureDefinition.title [ fhir:value "Agendamento de Regulação Assistencial"] ;
   fhir:StructureDefinition.status [ fhir:value "active"] ;
-  fhir:StructureDefinition.experimental [ fhir:value "false"^^xsd:boolean] ;
   fhir:StructureDefinition.date [ fhir:value "2023-04-04"^^xsd:date] ;
   fhir:StructureDefinition.publisher [ fhir:value "Ministério da Saúde do Brasil"] ;
   fhir:StructureDefinition.contact [
@@ -258,7 +260,7 @@
        fhir:ElementDefinition.definition [ fhir:value "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." ] ;
        fhir:ElementDefinition.comment [ fhir:value "The only time that a resource does not have an id is when it is being submitted to the server using a create operation." ] ;
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
-       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.max [ fhir:value "0" ] ;
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Resource.id" ] ;
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
@@ -412,7 +414,7 @@
          fhir:index -1
        ] ;
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
-       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.max [ fhir:value "0" ] ;
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "DomainResource.text" ] ;
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
@@ -644,8 +646,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.status" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.status" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Status da solicitação." ] ;
-       fhir:ElementDefinition.definition [ fhir:value "O código que identifica unicamente o status da solicitação, conforme tabela de status de solicitação." ] ;
+       fhir:ElementDefinition.short [ fhir:value "proposed | pending | booked | arrived | fulfilled | cancelled | noshow | entered-in-error | checked-in | waitlist" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "The overall status of the Appointment. Each of the participants has their own participation status which indicates their involvement in the process, however this status indicates the shared status." ] ;
        fhir:ElementDefinition.comment [ fhir:value "If the Appointment's status is \"cancelled\" then all participants are expected to have their calendars released for the appointment period, and as such any Slots that were marked as BUSY can be re-set to FREE.\n\nThis element is labeled as a modifier because the status contains the code entered-in-error that mark the Appointment as not currently valid." ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
@@ -657,6 +659,28 @@
        fhir:ElementDefinition.type [
          fhir:index -1 ;
          fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ] ;
+       fhir:ElementDefinition.condition [
+         fhir:value "mira-13" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-14" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-15" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-16" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-17" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-18" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-19" ;
+         fhir:index -1
        ] ;
        fhir:ElementDefinition.constraint [
          fhir:index -1 ;
@@ -675,7 +699,6 @@
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ] ;
-         fhir:ElementDefinition.binding.description [ fhir:value "Status do agendamento" ] ;
          fhir:ElementDefinition.binding.valueSet [
            fhir:value "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial" ;
            fhir:link <http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial>
@@ -754,8 +777,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.serviceCategory" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.serviceCategory" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Modalidade assistencial." ] ;
-       fhir:ElementDefinition.definition [ fhir:value "O código que identifica unicamente a modalidade, conforme tabela de modalidades." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Modalidade assistencial" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Modalidade assistencial que gerou a solicitação do procedimento." ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.base [
@@ -1325,7 +1348,7 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.serviceType" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.serviceType" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Código do procedimento." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Código do procedimento" ] ;
        fhir:ElementDefinition.definition [ fhir:value "O código que identifica unicamente o procedimento conforme tabela SUS." ] ;
        fhir:ElementDefinition.comment [ fhir:value "For a provider to provider appointment the code \"FOLLOWUP\" may be appropriate, as this is expected to be discussing some patient that was seen in the past." ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
@@ -1897,8 +1920,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.specialty" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.specialty" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Identificador da especialidade médica do executante." ] ;
-       fhir:ElementDefinition.definition [ fhir:value "O código que identifica unicamente a especialidade do executante conforme tabela de CBO." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Especialidade médica do executante" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Identificação da especialidade médica do profissional executante do procedimento, conforme tabela de CBO. \r\nCaso o procedimento informado pertença à forma de organização 03.01.01 da tabela SUS, o código CBO será obrigatório." ] ;
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.base [
@@ -2468,8 +2491,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.appointmentType" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.appointmentType" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Caráter da solicitação." ] ;
-       fhir:ElementDefinition.definition [ fhir:value "O código que identifica unicamente o caráter da solicitação, conforme tabela de caráter da solicitação." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Caráter da solicitação" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "O código que identifica unicamente o caráter da solicitação do procedimento, conforme tabela de caráter da solicitação." ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.base [
@@ -2496,7 +2519,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
        fhir:ElementDefinition.binding [
-         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ] ;
          fhir:ElementDefinition.binding.description [ fhir:value "Caráter de atendimento." ] ;
          fhir:ElementDefinition.binding.valueSet [
            fhir:value "http://www.saude.gov.br/fhir/r4/ValueSet/BRCaraterAtendimentoMIRA" ;
@@ -3101,8 +3124,8 @@
        fhir:Element.id [ fhir:value "Appointment.reasonReference" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.reasonReference" ] ;
        fhir:ElementDefinition.short [ fhir:value "Motivo da solicitação" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "Reason the appointment has been scheduled to take place, as specified using information from another resource. When the patient arrives and the encounter begins it may be used as the admission diagnosis. The indication will typically be a Condition (with other resources referenced in the evidence.detail), or a Procedure." ] ;
-       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Identificação do motivo da solicitação do procedimento, conforme Classificação Internacional de Doenças - CID ou Classificação Internacional de Atenção Primária - CIAP." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Appointment.reasonReference" ] ;
@@ -3113,9 +3136,9 @@
          fhir:index -1 ;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ] ;
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0" ;
+           fhir:value "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProblemaDiagnostico" ;
            fhir:index -1 ;
-           fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0>
+           fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProblemaDiagnostico>
          ]
        ] ;
        fhir:ElementDefinition.constraint [
@@ -4241,8 +4264,8 @@
        fhir:Element.id [ fhir:value "Appointment.supportingInformation:regulatoryOrganization" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.supportingInformation" ] ;
        fhir:ElementDefinition.sliceName [ fhir:value "regulatoryOrganization" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Estabelecimento de Saúde Regulador" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "Additional information to support the appointment provided when making the appointment." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Estabelecimento de saúde regulador" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Identificação única do estabelecimento regulador, por meio do CNES." ] ;
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.base [
@@ -4485,7 +4508,7 @@
        fhir:ElementDefinition.short [ fhir:value "Logical reference, when literal reference is not known" ] ;
        fhir:ElementDefinition.definition [ fhir:value "An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference." ] ;
        fhir:ElementDefinition.comment [ fhir:value "When an identifier is provided in place of a reference, any system processing the reference will only be able to resolve the identifier to a reference if it understands the business context in which the identifier is used. Sometimes this is global (e.g. a national identifier) but often it is not. For this reason, none of the useful mechanisms described for working with references (e.g. chaining, includes) are possible, nor should servers be expected to be able resolve the reference. Servers may accept an identifier based reference untouched, resolve it, and/or reject it - see CapabilityStatement.rest.resource.referencePolicy. \n\nWhen both an identifier and a literal reference are provided, the literal reference is preferred. Applications processing the resource are allowed - but not required - to check that the identifier matches the literal reference\n\nApplications converting a logical reference to a literal reference may choose to leave the logical reference present, or remove it.\n\nReference is intended to point to a structure that can potentially be expressed as a FHIR resource, though there is no need for it to exist as an actual FHIR resource instance - except in as much as an application wishes to actual find the target of the reference. The content referred to be the identifier must meet the logical constraints implied by any limitations on what resource types are permitted for the reference.  For example, it would not be legitimate to send the identifier for a drug prescription if the type were Reference(Observation|DiagnosticReport).  One of the use-cases for Reference.identifier is the situation where no FHIR representation exists (where the type is Reference (Any)." ] ;
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Reference.identifier" ] ;
@@ -4507,6 +4530,12 @@
            fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
+       ], [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "estab-2" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números." ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "value.matches('^(?!(\\\\d)\\\\1{6})\\\\d{7}$')" ]
        ] ;
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
@@ -4731,7 +4760,7 @@
        fhir:ElementDefinition.definition [ fhir:value "Establishes the namespace for the value - that is, a URL that describes a set values that are unique." ] ;
        fhir:ElementDefinition.comment [ fhir:value "Identifier.system is always case sensitive." ] ;
        fhir:ElementDefinition.requirements [ fhir:value "There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers." ] ;
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Identifier.system" ] ;
@@ -4782,7 +4811,7 @@
        fhir:ElementDefinition.short [ fhir:value "The value that is unique" ] ;
        fhir:ElementDefinition.definition [ fhir:value "The portion of the identifier typically relevant to the user and which is unique within the context of the system." ] ;
        fhir:ElementDefinition.comment [ fhir:value "If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](http://hl7.org/fhir/R4/extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe." ] ;
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Identifier.value" ] ;
@@ -4965,8 +4994,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.start" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.start" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Data Inicial de Agendamento" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "A data e hora inicial em que o procedimento regulado foi agendado no padrão ISO 8601." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Data de agendamento - início" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "A data e hora agendada para a realização do procedimento regulado no padrão ISO 8601." ] ;
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.base [
@@ -4977,6 +5006,19 @@
        fhir:ElementDefinition.type [
          fhir:index -1 ;
          fhir:ElementDefinition.type.code [ fhir:value "instant" ]
+       ] ;
+       fhir:ElementDefinition.condition [
+         fhir:value "mira-2" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-5" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-7" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-10" ;
+         fhir:index -1
        ] ;
        fhir:ElementDefinition.constraint [
          fhir:index -1 ;
@@ -5017,8 +5059,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.end" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.end" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Data Final de Agendamento" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "A data e hora final em que o procedimento regulado foi agendado no padrão ISO 8601." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Data de agendamento - fim" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "A data e hora agendada para a realização do procedimento regulado no padrão ISO 8601." ] ;
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.base [
@@ -5029,6 +5071,19 @@
        fhir:ElementDefinition.type [
          fhir:index -1 ;
          fhir:ElementDefinition.type.code [ fhir:value "instant" ]
+       ] ;
+       fhir:ElementDefinition.condition [
+         fhir:value "mira-2" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-5" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-7" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-10" ;
+         fhir:index -1
        ] ;
        fhir:ElementDefinition.constraint [
          fhir:index -1 ;
@@ -5154,8 +5209,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.created" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.created" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Data da Autorização" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "A data e hora da autoriação do procedimento regulado no padrão ISO 8601." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Data de autorização" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "A data e hora em que a solicitação de procedimento regulado foi autorizada no padrão ISO 8601." ] ;
        fhir:ElementDefinition.comment [ fhir:value "This property is required for many use cases where the age of an appointment is considered in processing workflows for scheduling and billing of appointments." ] ;
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
@@ -5183,11 +5238,6 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
-         fhir:index -1 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rnds" ] ;
-         fhir:ElementDefinition.mapping.map [ fhir:value "Data de autorização" ] ;
-         fhir:ElementDefinition.mapping.comment [ fhir:value "Portaria conjunta SAES/SEIDIGI nº 3, de 18 de abril de 2023" ]
-       ], [
          fhir:index -1 ;
          fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "Request.authoredOn" ]
@@ -5613,8 +5663,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.participant" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.participant" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Paciente" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "List of participants involved in the appointment." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Identificador do paciente" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Identificação única do paciente, por meio de CPF ou CNS." ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.base [
@@ -6397,8 +6447,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.participant.actor" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.participant.actor" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Person, Location/HealthcareService or Device" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "A Person, Location/HealthcareService or Device that is participating in the appointment." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Identificador do paciente" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Identificação única do paciente, por meio de CPF ou CNS." ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.base [
@@ -6663,6 +6713,12 @@
            fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
+       ], [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ident-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "O número de CPF ou CNS informado é inválido (identifier.value)." ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "value.matches('^(?!(\\\\d)\\\\1{10})\\\\d{11}$') or value.matches('^(?!(\\\\d)\\\\1{14})[125789]\\\\d{14}$')" ]
        ] ;
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
@@ -7173,7 +7229,7 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.participant.status" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.participant.status" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Status da participação no agendamento." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Status da participação no agendamento" ] ;
        fhir:ElementDefinition.definition [ fhir:value "Participation status of the actor." ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
@@ -7313,7 +7369,7 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.id" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.id" ] ;
-       fhir:ElementDefinition.max [ fhir:value "1" ]
+       fhir:ElementDefinition.max [ fhir:value "0" ]
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.implicitRules" ] ;
@@ -7328,7 +7384,7 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.text" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.text" ] ;
-       fhir:ElementDefinition.max [ fhir:value "1" ]
+       fhir:ElementDefinition.max [ fhir:value "0" ]
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.contained" ] ;
@@ -7343,11 +7399,30 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.status" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.status" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Status da solicitação." ] ;
-       fhir:ElementDefinition.definition [ fhir:value "O código que identifica unicamente o status da solicitação, conforme tabela de status de solicitação." ] ;
+       fhir:ElementDefinition.condition [
+         fhir:value "mira-13" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-14" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-15" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-16" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-17" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-18" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-19" ;
+         fhir:index -1
+       ] ;
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ] ;
-         fhir:ElementDefinition.binding.description [ fhir:value "Status do agendamento" ] ;
          fhir:ElementDefinition.binding.valueSet [
            fhir:value "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial" ;
            fhir:link <http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial>
@@ -7362,8 +7437,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.serviceCategory" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.serviceCategory" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Modalidade assistencial." ] ;
-       fhir:ElementDefinition.definition [ fhir:value "O código que identifica unicamente a modalidade, conforme tabela de modalidades." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Modalidade assistencial" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Modalidade assistencial que gerou a solicitação do procedimento." ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.binding [
@@ -7399,7 +7474,7 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.serviceType" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.serviceType" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Código do procedimento." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Código do procedimento" ] ;
        fhir:ElementDefinition.definition [ fhir:value "O código que identifica unicamente o procedimento conforme tabela SUS." ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
@@ -7436,8 +7511,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.specialty" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.specialty" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Identificador da especialidade médica do executante." ] ;
-       fhir:ElementDefinition.definition [ fhir:value "O código que identifica unicamente a especialidade do executante conforme tabela de CBO." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Especialidade médica do executante" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Identificação da especialidade médica do profissional executante do procedimento, conforme tabela de CBO. \r\nCaso o procedimento informado pertença à forma de organização 03.01.01 da tabela SUS, o código CBO será obrigatório." ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ] ;
@@ -7472,11 +7547,11 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.appointmentType" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.appointmentType" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Caráter da solicitação." ] ;
-       fhir:ElementDefinition.definition [ fhir:value "O código que identifica unicamente o caráter da solicitação, conforme tabela de caráter da solicitação." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Caráter da solicitação" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "O código que identifica unicamente o caráter da solicitação do procedimento, conforme tabela de caráter da solicitação." ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.binding [
-         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ] ;
          fhir:ElementDefinition.binding.description [ fhir:value "Caráter de atendimento." ] ;
          fhir:ElementDefinition.binding.valueSet [
            fhir:value "http://www.saude.gov.br/fhir/r4/ValueSet/BRCaraterAtendimentoMIRA" ;
@@ -7514,15 +7589,15 @@
        fhir:Element.id [ fhir:value "Appointment.reasonReference" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.reasonReference" ] ;
        fhir:ElementDefinition.short [ fhir:value "Motivo da solicitação" ] ;
-       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Identificação do motivo da solicitação do procedimento, conforme Classificação Internacional de Doenças - CID ou Classificação Internacional de Atenção Primária - CIAP." ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.type [
          fhir:index -1 ;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ] ;
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0" ;
+           fhir:value "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProblemaDiagnostico" ;
            fhir:index -1 ;
-           fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0>
+           fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProblemaDiagnostico>
          ]
        ]
      ], [
@@ -7627,7 +7702,8 @@
        fhir:Element.id [ fhir:value "Appointment.supportingInformation:regulatoryOrganization" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.supportingInformation" ] ;
        fhir:ElementDefinition.sliceName [ fhir:value "regulatoryOrganization" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Estabelecimento de Saúde Regulador" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Estabelecimento de saúde regulador" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Identificação única do estabelecimento regulador, por meio do CNES." ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.type [
          fhir:index -1 ;
@@ -7650,6 +7726,18 @@
        fhir:ElementDefinition.max [ fhir:value "0" ]
      ], [
        fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Appointment.supportingInformation:regulatoryOrganization.identifier" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Appointment.supportingInformation.identifier" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "estab-2" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números." ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "value.matches('^(?!(\\\\d)\\\\1{6})\\\\d{7}$')" ]
+       ]
+     ], [
+       fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.supportingInformation:regulatoryOrganization.identifier.id" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.supportingInformation.identifier.id" ] ;
        fhir:ElementDefinition.max [ fhir:value "0" ]
@@ -7667,7 +7755,13 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.supportingInformation:regulatoryOrganization.identifier.system" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.supportingInformation.identifier.system" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.fixedUri [ fhir:value "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0" ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Appointment.supportingInformation:regulatoryOrganization.identifier.value" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Appointment.supportingInformation.identifier.value" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ]
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.supportingInformation:regulatoryOrganization.identifier.period" ] ;
@@ -7687,14 +7781,40 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.start" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.start" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Data Inicial de Agendamento" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "A data e hora inicial em que o procedimento regulado foi agendado no padrão ISO 8601." ]
+       fhir:ElementDefinition.short [ fhir:value "Data de agendamento - início" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "A data e hora agendada para a realização do procedimento regulado no padrão ISO 8601." ] ;
+       fhir:ElementDefinition.condition [
+         fhir:value "mira-2" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-5" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-7" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-10" ;
+         fhir:index -1
+       ]
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.end" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.end" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Data Final de Agendamento" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "A data e hora final em que o procedimento regulado foi agendado no padrão ISO 8601." ]
+       fhir:ElementDefinition.short [ fhir:value "Data de agendamento - fim" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "A data e hora agendada para a realização do procedimento regulado no padrão ISO 8601." ] ;
+       fhir:ElementDefinition.condition [
+         fhir:value "mira-2" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-5" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-7" ;
+         fhir:index -1
+       ], [
+         fhir:value "mira-10" ;
+         fhir:index -1
+       ]
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.minutesDuration" ] ;
@@ -7709,14 +7829,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.created" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.created" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Data da Autorização" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "A data e hora da autoriação do procedimento regulado no padrão ISO 8601." ] ;
-       fhir:ElementDefinition.mapping [
-         fhir:index -1 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rnds" ] ;
-         fhir:ElementDefinition.mapping.map [ fhir:value "Data de autorização" ] ;
-         fhir:ElementDefinition.mapping.comment [ fhir:value "Portaria conjunta SAES/SEIDIGI nº 3, de 18 de abril de 2023" ]
-       ]
+       fhir:ElementDefinition.short [ fhir:value "Data de autorização" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "A data e hora em que a solicitação de procedimento regulado foi autorizada no padrão ISO 8601." ]
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.comment" ] ;
@@ -7771,7 +7885,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.participant" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.participant" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Paciente" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Identificador do paciente" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Identificação única do paciente, por meio de CPF ou CNS." ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ]
      ], [
        fhir:index -1 ;
@@ -7834,6 +7949,8 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.participant.actor" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.participant.actor" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Identificador do paciente" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Identificação única do paciente, por meio de CPF ou CNS." ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.type [
          fhir:index -1 ;
@@ -7863,7 +7980,14 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.participant.actor.identifier" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.participant.actor.identifier" ] ;
-       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ]
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ident-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "O número de CPF ou CNS informado é inválido (identifier.value)." ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "value.matches('^(?!(\\\\d)\\\\1{10})\\\\d{11}$') or value.matches('^(?!(\\\\d)\\\\1{14})[125789]\\\\d{14}$')" ]
+       ]
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.participant.actor.identifier.id" ] ;
@@ -7913,7 +8037,7 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Appointment.participant.status" ] ;
        fhir:ElementDefinition.path [ fhir:value "Appointment.participant.status" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Status da participação no agendamento." ] ;
+       fhir:ElementDefinition.short [ fhir:value "Status da participação no agendamento" ] ;
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ] ;
          fhir:ElementDefinition.binding.description [ fhir:value "Status da participação no agendamento." ] ;

@@ -1,17 +1,21 @@
 RIRARNDSIG : Validation Results
 =========================================
 
-err = 4, warn = 0, info = 0
+err = 25, warn = 0, info = 0
 $--
 Generated $--. FHIR version $-- for br.gov.saude.rira.fhir#$-- (canonical = http://fhir.saude.gov.br/rira)
  Build Errors : 0 / 0 / 0
- /home/igor/rira-ig/input/examples/exemplo_RIRA_attended : 1 / 3 / 2
- /home/igor/rira-ig/input/examples/exemplo_RIRA_booked : 1 / 3 / 2
- /home/igor/rira-ig/input/examples/exemplo_RIRA_cancelled : 0 / 3 / 2
- /home/igor/rira-ig/input/examples/exemplo_RIRA_pending : 1 / 3 / 2
+ /home/igor/rira-ig/input/examples/exemplo_RIRA_anterior_2025_com_ciap_sucesso : 3 / 3 / 4
+ /home/igor/rira-ig/input/examples/exemplo_RIRA_anterior_2025_com_cid_sucesso : 3 / 3 / 4
+ /home/igor/rira-ig/input/examples/exemplo_RIRA_anterior_2025_sem_cid : 5 / 3 / 4
+ /home/igor/rira-ig/input/examples/exemplo_RIRA_anterior_2025_sem_cid_ciap_sucesso : 3 / 3 / 4
+ /home/igor/rira-ig/input/examples/exemplo_RIRA_pendente_com_ciap_sucesso : 3 / 3 / 4
+ /home/igor/rira-ig/input/examples/exemplo_RIRA_posterior_2025_com_ciap_sucesso : 3 / 3 / 4
+ /home/igor/rira-ig/input/examples/exemplo_RIRA_posterior_2025_com_cid_sucesso : 3 / 3 / 4
  /home/igor/rira-ig/input/myig : 0 / 0 / 2
  /home/igor/rira-ig/input/resources/CodeSystem-BRCBHPMTUSS : 0 / 1 / 1
  /home/igor/rira-ig/input/resources/CodeSystem-BRCBO : 0 / 1 / 3
+ /home/igor/rira-ig/input/resources/CodeSystem-BRCIAP2 : 0 / 1 / 1
  /home/igor/rira-ig/input/resources/CodeSystem-BRCID10 : 0 / 1 / 1
  /home/igor/rira-ig/input/resources/CodeSystem-BRCategoriaDiagnostico : 0 / 1 / 1
  /home/igor/rira-ig/input/resources/CodeSystem-BRJustificativaIndividuoNaoIdentificado : 0 / 1 / 1
@@ -22,19 +26,20 @@ Generated $--. FHIR version $-- for br.gov.saude.rira.fhir#$-- (canonical = http
  /home/igor/rira-ig/input/resources/CodeSystem-BRTipoDocumento : 0 / 1 / 1
  /home/igor/rira-ig/input/resources/CodeSystem-BRTipoParticipante : 0 / 1 / 1
  /home/igor/rira-ig/input/resources/StructureDefinition-BRAgendamentoRegulacaoAssistencial : 1 / 16 / 3
- /home/igor/rira-ig/input/resources/StructureDefinition-BRCID10Avaliado-1.0 : 0 / 6 / 2
  /home/igor/rira-ig/input/resources/StructureDefinition-BRIndividuoNaoIdentificado-1.0 : 0 / 1 / 2
- /home/igor/rira-ig/input/resources/StructureDefinition-BRRegulacaoAssistencial : 0 / 45 / 3
+ /home/igor/rira-ig/input/resources/StructureDefinition-BRProblemaDiagnostico : 0 / 6 / 2
+ /home/igor/rira-ig/input/resources/StructureDefinition-BRRegulacaoAssistencial : 1 / 55 / 3
  /home/igor/rira-ig/input/resources/StructureDefinition-BRRequisicaoRegulacaoAssistencial : 0 / 16 / 3
  /home/igor/rira-ig/input/resources/ValueSet-BRCID10-1.0 : 0 / 1 / 3
  /home/igor/rira-ig/input/resources/ValueSet-BRCaraterAtendimentoMIRA : 0 / 1 / 3
- /home/igor/rira-ig/input/resources/ValueSet-BRCategoriaDiagnostico : 0 / 1 / 1
+ /home/igor/rira-ig/input/resources/ValueSet-BRCategoriaCondicao : 0 / 1 / 1
  /home/igor/rira-ig/input/resources/ValueSet-BREstadoDocumento-1.0 : 0 / 1 / 5
  /home/igor/rira-ig/input/resources/ValueSet-BREstadoResolucaoDiagnosticoProblema-1.0 : 0 / 1 / 1
  /home/igor/rira-ig/input/resources/ValueSet-BRIntencaoRegulacao : 0 / 1 / 10
  /home/igor/rira-ig/input/resources/ValueSet-BRJustificativaIndividuoNaoIdentificado-1.0 : 0 / 1 / 1
  /home/igor/rira-ig/input/resources/ValueSet-BRModalidadeAssistencialMIRA : 0 / 1 / 1
  /home/igor/rira-ig/input/resources/ValueSet-BROcupacao-1.0 : 0 / 1 / 3
+ /home/igor/rira-ig/input/resources/ValueSet-BRProblemaDiagnostico : 0 / 1 / 3
  /home/igor/rira-ig/input/resources/ValueSet-BRProcedimentosNacionais-1.0 : 0 / 1 / 3
  /home/igor/rira-ig/input/resources/ValueSet-BRSexo-1.0 : 0 / 1 / 1
  /home/igor/rira-ig/input/resources/ValueSet-BRStatusAgendamentoRegulacaoAssistencial : 0 / 1 / 11
@@ -45,16 +50,40 @@ Generated $--. FHIR version $-- for br.gov.saude.rira.fhir#$-- (canonical = http
  /home/igor/rira-ig/input/resources/ValueSet-BRTipoParticipante : 0 / 1 / 1
 </table>
 == n/a ==
-== input/examples/exemplo_RIRA_attended.json ==
-ERROR: Bundle/Example-RIRA-Attended: Bundle.entry[0].resource.event[0].detail[1]: Não foi possível resolver a referência de perfil 'http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0'
-== input/examples/exemplo_RIRA_booked.json ==
-ERROR: Bundle/Example-RIRA-Booked: Bundle.entry[0].resource.event[0].detail[1]: Não foi possível resolver a referência de perfil 'http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0'
-== input/examples/exemplo_RIRA_cancelled.json ==
-== input/examples/exemplo_RIRA_pending.json ==
-ERROR: Bundle/Example-RIRA-Pending: Bundle.entry[0].resource.event[0].detail[1]: Não foi possível resolver a referência de perfil 'http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0'
+== input/examples/exemplo_RIRA_anterior_2025_com_ciap_sucesso.json ==
+ERROR: Bundle/example-rira-anterior-2025-com-ciap: Bundle.entry[0].resource.event[0].detail[1]: Não foi possível resolver a referência de perfil 'http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0'
+ERROR: Bundle/example-rira-anterior-2025-com-ciap: Bundle.entry[0].resource.event[0].detail[1]: Não foi possível encontrar uma correspondência de perfil para urn:uuid:transient-2 entre as opções: http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0, http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial
+ERROR: Bundle/example-rira-anterior-2025-com-ciap: Bundle.entry[0].resource.section[0].entry[0]: Não foi possível encontrar uma correspondência de perfil para urn:uuid:transient-1 entre as opções: http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial
+== input/examples/exemplo_RIRA_anterior_2025_com_cid_sucesso.json ==
+ERROR: Bundle/example-rira-anterior-2025-com-cid: Bundle.entry[0].resource.event[0].detail[1]: Não foi possível resolver a referência de perfil 'http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0'
+ERROR: Bundle/example-rira-anterior-2025-com-cid: Bundle.entry[0].resource.event[0].detail[1]: Não foi possível encontrar uma correspondência de perfil para urn:uuid:transient-2 entre as opções: http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0, http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial
+ERROR: Bundle/example-rira-anterior-2025-com-cid: Bundle.entry[0].resource.section[0].entry[0]: Não foi possível encontrar uma correspondência de perfil para urn:uuid:transient-1 entre as opções: http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial
+== input/examples/exemplo_RIRA_anterior_2025_sem_cid.json ==
+ERROR: Bundle/example-rira-anterior-2025-sem-cid: Bundle.entry[0].resource.date: A restrição falhou: date-1
+ERROR: Bundle/example-rira-anterior-2025-sem-cid: Bundle.entry[0].resource.event[0].detail[1]: Não foi possível resolver a referência de perfil 'http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0'
+ERROR: Bundle/example-rira-anterior-2025-sem-cid: Bundle.entry[0].resource.event[0].detail[1]: Não foi possível encontrar uma correspondência de perfil para urn:uuid:transient-1 entre as opções: http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial, http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0
+ERROR: Bundle/example-rira-anterior-2025-sem-cid: Bundle.entry[0].resource.section[0].entry[0]: Não foi possível encontrar uma correspondência de perfil para urn:uuid:transient-1 entre as opções: http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial
+ERROR: Bundle/example-rira-anterior-2025-sem-cid: Bundle.entry[0].resource: A restrição falhou: ident-4
+== input/examples/exemplo_RIRA_anterior_2025_sem_cid_ciap_sucesso.json ==
+ERROR: Bundle/example-rira-anterior-2025-sem-cid-ciap: Bundle.entry[0].resource.event[0].detail[1]: Não foi possível resolver a referência de perfil 'http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0'
+ERROR: Bundle/example-rira-anterior-2025-sem-cid-ciap: Bundle.entry[0].resource.event[0].detail[1]: Não foi possível encontrar uma correspondência de perfil para urn:uuid:transient-2 entre as opções: http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0, http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial
+ERROR: Bundle/example-rira-anterior-2025-sem-cid-ciap: Bundle.entry[0].resource.section[0].entry[0]: Não foi possível encontrar uma correspondência de perfil para urn:uuid:transient-1 entre as opções: http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial
+== input/examples/exemplo_RIRA_pendente_com_ciap_sucesso.json ==
+ERROR: Bundle/example-rira-pendente-com-ciap: Bundle.entry[0].resource.event[0].detail[1]: Não foi possível resolver a referência de perfil 'http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0'
+ERROR: Bundle/example-rira-pendente-com-ciap: Bundle.entry[0].resource.event[0].detail[1]: Não foi possível encontrar uma correspondência de perfil para urn:uuid:transient-2 entre as opções: http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0, http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial
+ERROR: Bundle/example-rira-pendente-com-ciap: Bundle.entry[0].resource.section[0].entry[0]: Não foi possível encontrar uma correspondência de perfil para urn:uuid:transient-1 entre as opções: http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial
+== input/examples/exemplo_RIRA_posterior_2025_com_ciap_sucesso.json ==
+ERROR: Bundle/example-rira-posterior-2025-com-ciap: Bundle.entry[0].resource.event[0].detail[1]: Não foi possível resolver a referência de perfil 'http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0'
+ERROR: Bundle/example-rira-posterior-2025-com-ciap: Bundle.entry[0].resource.event[0].detail[1]: Não foi possível encontrar uma correspondência de perfil para urn:uuid:transient-2 entre as opções: http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0, http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial
+ERROR: Bundle/example-rira-posterior-2025-com-ciap: Bundle.entry[0].resource.section[0].entry[0]: Não foi possível encontrar uma correspondência de perfil para urn:uuid:transient-1 entre as opções: http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial
+== input/examples/exemplo_RIRA_posterior_2025_com_cid_sucesso.json ==
+ERROR: Bundle/example-rira-posterior-2025-com-cid: Bundle.entry[0].resource.event[0].detail[1]: Não foi possível resolver a referência de perfil 'http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0'
+ERROR: Bundle/example-rira-posterior-2025-com-cid: Bundle.entry[0].resource.event[0].detail[1]: Não foi possível encontrar uma correspondência de perfil para urn:uuid:transient-2 entre as opções: http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0, http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial
+ERROR: Bundle/example-rira-posterior-2025-com-cid: Bundle.entry[0].resource.section[0].entry[0]: Não foi possível encontrar uma correspondência de perfil para urn:uuid:transient-1 entre as opções: http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial
 == input/myig.xml ==
 == input/resources/CodeSystem-BRCBHPMTUSS.xml ==
 == input/resources/CodeSystem-BRCBO.xml ==
+== input/resources/CodeSystem-BRCIAP2.json ==
 == input/resources/CodeSystem-BRCID10.xml ==
 == input/resources/CodeSystem-BRCategoriaDiagnostico.xml ==
 == input/resources/CodeSystem-BRJustificativaIndividuoNaoIdentificado.xml ==
@@ -64,21 +93,23 @@ ERROR: Bundle/Example-RIRA-Pending: Bundle.entry[0].resource.event[0].detail[1]:
 == input/resources/CodeSystem-BRTabelaSUS.xml ==
 == input/resources/CodeSystem-BRTipoDocumento.xml ==
 == input/resources/CodeSystem-BRTipoParticipante.xml ==
-== input/resources/StructureDefinition-BRAgendamentoRegulacaoAssistencial.json ==
+== input/resources/StructureDefinition-BRAgendamentoRegulacaoAssistencial.xml ==
 ERROR: Agendamento de Regulação Assistencial.Appointment.status: Binding http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial is not a subset of binding http://hl7.org/fhir/ValueSet/appointmentstatus|4.0.1 because The codes 'excluded,returned-to-requester' are not in the base valueset
-== input/resources/StructureDefinition-BRCID10Avaliado-1.0.json ==
 == input/resources/StructureDefinition-BRIndividuoNaoIdentificado-1.0.json ==
-== input/resources/StructureDefinition-BRRegulacaoAssistencial.json ==
-== input/resources/StructureDefinition-BRRequisicaoRegulacaoAssistencial.json ==
+== input/resources/StructureDefinition-BRProblemaDiagnostico.json ==
+== input/resources/StructureDefinition-BRRegulacaoAssistencial.xml ==
+ERROR: StructureDefinition/BRRegulacaoAssistencial: StructureDefinition.snapshot.element[71].constraint[1]: Erro na restrição 'date-1' com a expressão 'value.matches('^(200[1-9]|20[1-9]\\d|[2-9]\\d{3})-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$')': Erro ao avaliar a expressão FHIRPath: A função matches só pode ser usada em string, uri, url, code, id mas encontrou [http://hl7.org/fhir/StructureDefinition/dateTime] (@char 7)
+== input/resources/StructureDefinition-BRRequisicaoRegulacaoAssistencial.xml ==
 == input/resources/ValueSet-BRCID10-1.0.json ==
 == input/resources/ValueSet-BRCaraterAtendimentoMIRA.json ==
-== input/resources/ValueSet-BRCategoriaDiagnostico.json ==
+== input/resources/ValueSet-BRCategoriaCondicao.json ==
 == input/resources/ValueSet-BREstadoDocumento-1.0.json ==
 == input/resources/ValueSet-BREstadoResolucaoDiagnosticoProblema-1.0.json ==
 == input/resources/ValueSet-BRIntencaoRegulacao.json ==
 == input/resources/ValueSet-BRJustificativaIndividuoNaoIdentificado-1.0.json ==
 == input/resources/ValueSet-BRModalidadeAssistencialMIRA.json ==
 == input/resources/ValueSet-BROcupacao-1.0.json ==
+== input/resources/ValueSet-BRProblemaDiagnostico.json ==
 == input/resources/ValueSet-BRProcedimentosNacionais-1.0.json ==
 == input/resources/ValueSet-BRSexo-1.0.json ==
 == input/resources/ValueSet-BRStatusAgendamentoRegulacaoAssistencial.json ==

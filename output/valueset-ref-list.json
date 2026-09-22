@@ -6,10 +6,7 @@
     "name" : "BRCID10",
     "title" : "Classificação Internacional de Doenças - Décima Revisão - CID-10",
     "description" : "Classificação Internacional de Doenças - Décima Revisão - CID-10",
-    "systems" : ["http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10"],
-    "uses" : {
-    },
-    "StructureDefinition-BRCID10Avaliado-1.0.html" : "CID10 Avaliado"
+    "systems" : ["http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10"]
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCaraterAtendimentoMIRA",
@@ -25,16 +22,16 @@
     "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial"
   },
   {
-    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCategoriaDiagnostico",
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCategoriaCondicao",
     "version" : "1.0.0-release",
     "status" : "active",
-    "name" : "BRCategoriaDiagnostico",
-    "title" : "Categoria do Diagnóstico (ValueSet)",
-    "description" : "ValueSet utilizado para definir o tipo de categoria do diagnóstico realizado.",
-    "systems" : ["http://www.saude.gov.br/fhir/r4/CodeSystem/BRCategoriaDiagnostico"],
+    "name" : "BRCategoriaCondicao",
+    "title" : "Classificação de uma condição",
+    "description" : "Tradução para o português do brasil da classificação de uma condição",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/condition-category"],
     "uses" : {
     },
-    "StructureDefinition-BRCID10Avaliado-1.0.html" : "CID10 Avaliado"
+    "StructureDefinition-BRProblemaDiagnostico.html" : "Problema/Diagnóstico"
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoDocumento-1.0",
@@ -46,7 +43,7 @@
     "systems" : ["http://hl7.org/fhir/composition-status"],
     "uses" : {
     },
-    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial (RIRA)"
+    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial"
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoResolucaoDiagnosticoProblema-1.0",
@@ -58,7 +55,7 @@
     "systems" : ["http://terminology.hl7.org/CodeSystem/condition-clinical"],
     "uses" : {
     },
-    "StructureDefinition-BRCID10Avaliado-1.0.html" : "CID10 Avaliado"
+    "StructureDefinition-BRProblemaDiagnostico.html" : "Problema/Diagnóstico"
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRIntencaoRegulacao",
@@ -95,8 +92,8 @@
     "uses" : {
     },
     "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
-    "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial",
-    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial (RIRA)"
+    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial",
+    "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial"
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BROcupacao-1.0",
@@ -110,6 +107,19 @@
     },
     "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
     "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial"
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRProblemaDiagnostico",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRProblemaDiagnostico",
+    "title" : "Classificação Internacional de Doenças e Atenção Primária",
+    "description" : "Código Internacional de Atenção Primária (CIAP2) e Classificação Internacional de Doenças (CID10)",
+    "systems" : ["http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+    "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCIAP2"],
+    "uses" : {
+    },
+    "StructureDefinition-BRProblemaDiagnostico.html" : "Problema/Diagnóstico"
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRProcedimentosNacionais-1.0",
@@ -172,7 +182,7 @@
     "systems" : ["http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial"],
     "uses" : {
     },
-    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial (RIRA)"
+    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial"
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRequisicaoRegulacaoAssistencial",
@@ -196,7 +206,7 @@
     "systems" : ["http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento"],
     "uses" : {
     },
-    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial (RIRA)"
+    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial"
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoParticipante",

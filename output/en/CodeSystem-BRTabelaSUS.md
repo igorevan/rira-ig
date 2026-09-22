@@ -1,4 +1,4 @@
-# Tabela de procedimentos, medicamentos e OPM do SUS - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Tabela de procedimentos, medicamentos e OPM do SUS - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
 
 ## CodeSystem: Tabela de procedimentos, medicamentos e OPM do SUS 
 

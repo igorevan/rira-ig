@@ -2,7 +2,6 @@
 
 # Errors relacionados aos recursos Patient, Practitioner and Organization
 %StructureDefinition/BRIndividuo-1.0%
-%StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0%
 
 # Errors relacionados as particularidades dos CodeSystems e ValueSets da RNDS
 Esta propriedade tem apenas um código ('healthcare') e não um URI, pelo que não tem um significado claramente definido no ecossistema terminológico
@@ -19,6 +18,8 @@ Binding http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAss
 The slice definition for Composition.event has a maximum of 1 but the slices add up to a maximum of 7. Check that this is what is intended
 %http://hl7.org/fhir/StructureDefinition/regex%
 %have an OID assigned%
+%correspondem ao perfil%
+%Não foi possível encontrar uma correspondência de perfil%
 
 # Outros erros
 The Implementation Guide contains no examples for this profile
@@ -26,4 +27,8 @@ The Implementation Guide contains no examples for this extension
 The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
-The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+
+# Erros relacionados a versão do validador da RNDS
+%pode falhar ou devolver%
+%Erro na restrição%
+%restrição falhou%

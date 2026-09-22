@@ -1,4 +1,4 @@
-# Modelo Computacional - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Modelo Computacional - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
 
 ## Modelo Computacional
 
@@ -7,12 +7,6 @@
  Para a modelagem do modelo computacionais do Registro de Informação de Regulação Assistencial (RIRA), foram mapeados os campos do Modelo de Informação (MI) aos recursos do [FHIR R4](https://hl7.org/fhir/R4/). Assim, foi realizada a modelagem fechada dos perfis de modo a atender o contexto nacional. 
 
 Foi criado um [Projeto Rede Nacional de Dados em Saúde](https://simplifier.net/redenacionaldedadosemsaude/), na plataforma [SIMPLIFIER.NET](https://simplifier.net/), para a publicação e distribuição dos perfis relacionados aos documentos computacionais em produção na rede.
-
-### Bundle de Envio do RIRA
-
- O diagrama abaixo apresenta o pacote *Bundle* no qual é condensado o RIRA, referenciando todos os dados relevantes para caracterizar uma regulação assistencial. 
-
- **Figura 1 - Diagrama do *Bundle* do RIRA** 
 
 ### Recursos FHIR
 
@@ -23,7 +17,7 @@ Foi criado um [Projeto Rede Nacional de Dados em Saúde](https://simplifier.net/
 | *Composition* | ` [BRRegulacaoAssistencial](StructureDefinition-BRRegulacaoAssistencial.md) ` |
 | *Appointment* | ` [BRAgendamentoRegulacaoAssistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md) ` |
 | *ServiceRequest* | ` [BRRequisicaoRegulacaoAssistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md) ` |
-| *Condition* | ` [BRCID10Avaliado-1.0](StructureDefinition-BRCID10Avaliado-1.0.md) ` |
+| *Condition* | ` [BRProblemaDiagnostico](StructureDefinition-BRProblemaDiagnostico.md) ` |
 
 Perfis dos tipos *ValueSet* e *CodeSystem* estão associados a recursos terminológicos. No contexto de regulação assistencial e os domínios utilizados, foram criados *CodeSystems* específicos definidos pelo [Comitê Gestor de Saúde Digital (CGSD)](https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/cgsd).
 
@@ -53,9 +47,10 @@ Note que na estrutura dos perfis há elementos com bindings para *ValueSets* que
 | code | [BRProcedimentosNacionais-1.0](ValueSet-BRProcedimentosNacionais-1.0.md) | [BRTabelaSUS](CodeSystem-BRTabelaSUS.md) | |
 | [BRCBHPMTUSS](CodeSystem-BRCBHPMTUSS.md) | | | |
 | performerType | [BROcupacao-1.0](ValueSet-BROcupacao-1.0.md) | [BRCBO](CodeSystem-BRCBO.md) | |
-| ` [BRCID10Avaliado-1.0](StructureDefinition-BRCID10Avaliado-1.0.md) ` | clinicalStatus | [BREstadoResolucaoDiagnosticoProblema-1.0](ValueSet-BREstadoResolucaoDiagnosticoProblema-1.0.md) | [condition-clinical](http://terminology.hl7.org/CodeSystem/condition-clinical) |
-| category | [BRCategoriaDiagnostico](ValueSet-BRCategoriaDiagnostico.md) | [BRCategoriaDiagnostico](CodeSystem-BRCategoriaDiagnostico.md) | |
-| code | [BRCID10-1.0](ValueSet-BRCID10-1.0.md) | [BRCID10](CodeSystem-BRCID10.md) | |
+| ` [BRProblemaDiagnostico](StructureDefinition-BRProblemaDiagnostico.md) ` | clinicalStatus | [BREstadoResolucaoDiagnosticoProblema-1.0](ValueSet-BREstadoResolucaoDiagnosticoProblema-1.0.md) | [condition-clinical](http://terminology.hl7.org/CodeSystem/condition-clinical) |
+| category | [BRCategoriaCondicao](ValueSet-BRCategoriaCondicao.md) | [condition-category](http://terminology.hl7.org/CodeSystem/condition-category) | |
+| code | [BRProblemaDiagnostico](ValueSet-BRProblemaDiagnostico.md) | [BRCID10](CodeSystem-BRCID10.md) | |
+| [BRCIAP2](CodeSystem-BRCIAP2.md) | | | |
 
 ### Relação de Status
 

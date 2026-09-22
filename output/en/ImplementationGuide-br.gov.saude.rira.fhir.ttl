@@ -33,10 +33,10 @@
   fhir:ImplementationGuide.url [ fhir:value "http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir"] ;
   fhir:ImplementationGuide.version [ fhir:value "1.0.0-release"] ;
   fhir:ImplementationGuide.name [ fhir:value "RIRARNDSIG"] ;
-  fhir:ImplementationGuide.title [ fhir:value "Guia de Implementação da Regulação Assistencial (RIRA) da RNDS"] ;
+  fhir:ImplementationGuide.title [ fhir:value "Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS"] ;
   fhir:ImplementationGuide.status [ fhir:value "active"] ;
   fhir:ImplementationGuide.experimental [ fhir:value "false"^^xsd:boolean] ;
-  fhir:ImplementationGuide.date [ fhir:value "2026-09-15T12:28:51-03:00"^^xsd:dateTime] ;
+  fhir:ImplementationGuide.date [ fhir:value "2026-09-22T13:36:15-03:00"^^xsd:dateTime] ;
   fhir:ImplementationGuide.publisher [ fhir:value "Ministério da Saúde do Brasil"] ;
   fhir:ImplementationGuide.contact [
      fhir:index -1 ;
@@ -79,7 +79,7 @@
        fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
      ] ;
      fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.terminology.r4" ] ;
-     fhir:ImplementationGuide.dependsOn.version [ fhir:value "7.3.0" ]
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "7.4.0" ]
   ], [
      fhir:index -1 ;
      fhir:Element.id [ fhir:value "hl7ext" ] ;
@@ -781,11 +781,11 @@
          fhir:Extension.valueString [ fhir:value "Bundle" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://fhir.saude.gov.br/rira/Bundle/Example-RIRA-Attended> ;
-         fhir:Reference.reference [ fhir:value "Bundle/Example-RIRA-Attended" ]
+         fhir:link <http://fhir.saude.gov.br/rira/Bundle/example-rira-anterior-2025-com-ciap> ;
+         fhir:Reference.reference [ fhir:value "Bundle/example-rira-anterior-2025-com-ciap" ]
        ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Bundle de exemplo do RIRA (Atendido/Internado)" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Atendido/Internado     (Attended)" ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Bundle de exemplo do RIRA (Anterior à 2025 com CIAP-2)" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Bundle de exemplo do RIRA anterior à 2025 e com CIAP-2 no Motivo da Solicitação" ] ;
        fhir:ImplementationGuide.definition.resource.exampleCanonical [
          fhir:value "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial" ;
          fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial>
@@ -798,11 +798,11 @@
          fhir:Extension.valueString [ fhir:value "Bundle" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://fhir.saude.gov.br/rira/Bundle/Example-RIRA-Booked> ;
-         fhir:Reference.reference [ fhir:value "Bundle/Example-RIRA-Booked" ]
+         fhir:link <http://fhir.saude.gov.br/rira/Bundle/example-rira-anterior-2025-com-cid> ;
+         fhir:Reference.reference [ fhir:value "Bundle/example-rira-anterior-2025-com-cid" ]
        ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Bundle de exemplo do RIRA (Agendado)" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Agendado (Booked)" ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Bundle de exemplo do RIRA (Anterior à 2025 com CID-10)" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Bundle de exemplo do RIRA anterior à 2025 e com CID-10 no Motivo da Solicitação" ] ;
        fhir:ImplementationGuide.definition.resource.exampleCanonical [
          fhir:value "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial" ;
          fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial>
@@ -815,11 +815,11 @@
          fhir:Extension.valueString [ fhir:value "Bundle" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://fhir.saude.gov.br/rira/Bundle/Example-RIRA-Cancelled> ;
-         fhir:Reference.reference [ fhir:value "Bundle/Example-RIRA-Cancelled" ]
+         fhir:link <http://fhir.saude.gov.br/rira/Bundle/example-rira-anterior-2025-sem-cid-ciap> ;
+         fhir:Reference.reference [ fhir:value "Bundle/example-rira-anterior-2025-sem-cid-ciap" ]
        ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Bundle de exemplo do RIRA (Negado/Cancelado)" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Negado/Cancelado (Cancelled)" ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Bundle de exemplo do RIRA (Anterior à 2025 sem CID-10 nem CIAP-2)" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Bundle de exemplo do RIRA anterior à 2025 e sem CID-10 nem CIAP-2 no Motivo da Solicitação" ] ;
        fhir:ImplementationGuide.definition.resource.exampleCanonical [
          fhir:value "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial" ;
          fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial>
@@ -832,11 +832,62 @@
          fhir:Extension.valueString [ fhir:value "Bundle" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://fhir.saude.gov.br/rira/Bundle/Example-RIRA-Pending> ;
-         fhir:Reference.reference [ fhir:value "Bundle/Example-RIRA-Pending" ]
+         fhir:link <http://fhir.saude.gov.br/rira/Bundle/example-rira-anterior-2025-sem-cid> ;
+         fhir:Reference.reference [ fhir:value "Bundle/example-rira-anterior-2025-sem-cid" ]
        ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Bundle de exemplo do RIRA (Pendente)" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Pendente (Pending)" ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Bundle de exemplo do RIRA (Anterior à 2025 sem CID-10)" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Bundle de exemplo do RIRA anterior à 2025 e sem CID-10 no Motivo da Solicitação" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial" ;
+         fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial>
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.saude.gov.br/rira/Bundle/example-rira-pendente-com-ciap> ;
+         fhir:Reference.reference [ fhir:value "Bundle/example-rira-pendente-com-ciap" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Bundle de exemplo do RIRA (Pendente com CIAP-2)" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Bundle de exemplo do RIRA com CIAP-2 e Pendente (pending)" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial" ;
+         fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial>
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.saude.gov.br/rira/Bundle/example-rira-posterior-2025-com-ciap> ;
+         fhir:Reference.reference [ fhir:value "Bundle/example-rira-posterior-2025-com-ciap" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Bundle de exemplo do RIRA (Posterior a 2025 com CIAP-2)" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Bundle de exemplo do RIRA posterior a 2025 e com CIAP-2" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial" ;
+         fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial>
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.saude.gov.br/rira/Bundle/example-rira-posterior-2025-com-cid> ;
+         fhir:Reference.reference [ fhir:value "Bundle/example-rira-posterior-2025-com-cid" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Bundle de exemplo do RIRA (Posterior a 2025 com CID-10)" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Bundle de exemplo do RIRA posterior a 2025 e com CID-10" ] ;
        fhir:ImplementationGuide.definition.resource.exampleCanonical [
          fhir:value "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial" ;
          fhir:link <http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial>
@@ -867,6 +918,19 @@
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Classificação Brasileira de Ocupações (CBO)" ] ;
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Classifica as profissões do mercado de trabalho brasileiro." ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.saude.gov.br/rira/CodeSystem/BRCIAP2> ;
+         fhir:Reference.reference [ fhir:value "CodeSystem/BRCIAP2" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Classificação Internacional de Atenção Primária - Segunda Edição - CIAP2" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Classifica os problemas identificados no contato assistencial pelos profissionais de saúde, os motivos da contato assistencial e as respostas propostas pela equipe seguindo a sistematização SOAP." ]
      ], [
        fhir:index -1 ;
        fhir:Element.extension [
@@ -1002,19 +1066,6 @@
        fhir:Element.extension [
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://fhir.saude.gov.br/rira/StructureDefinition/BRCID10Avaliado-1.0> ;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/BRCID10Avaliado-1.0" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CID10 Avaliado" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Diagnóstico atribuído pelo profissional de saúde ao indivíduo no contato assistencial." ]
-     ], [
-       fhir:index -1 ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
          fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.reference [
@@ -1031,11 +1082,24 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.saude.gov.br/rira/StructureDefinition/BRProblemaDiagnostico> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/BRProblemaDiagnostico" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Problema/Diagnóstico" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Problema e/ou diagnóstico atribuído pelo profissional de saúde ao indivíduo no contato assistencial." ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
          fhir:link <http://fhir.saude.gov.br/rira/StructureDefinition/BRRegulacaoAssistencial> ;
          fhir:Reference.reference [ fhir:value "StructureDefinition/BRRegulacaoAssistencial" ]
        ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Regulação Assistencial (RIRA)" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Documento público que coleta os dados da regulação assistencial" ]
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Regulação Assistencial" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Documento público que coleta os dados das solicitações de regulação assistencial" ]
      ], [
        fhir:index -1 ;
        fhir:Element.extension [
@@ -1083,11 +1147,11 @@
          fhir:Extension.valueString [ fhir:value "ValueSet" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://fhir.saude.gov.br/rira/ValueSet/BRCategoriaDiagnostico> ;
-         fhir:Reference.reference [ fhir:value "ValueSet/BRCategoriaDiagnostico" ]
+         fhir:link <http://fhir.saude.gov.br/rira/ValueSet/BRCategoriaCondicao> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/BRCategoriaCondicao" ]
        ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Categoria do Diagnóstico (ValueSet)" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "ValueSet utilizado para definir o tipo de categoria do diagnóstico realizado." ]
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Classificação de uma condição" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Tradução para o português do brasil da classificação de uma condição" ]
      ], [
        fhir:index -1 ;
        fhir:Element.extension [
@@ -1166,6 +1230,19 @@
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Classificação Brasileira de Ocupações - CBO" ] ;
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Classifica as profissões do mercado de trabalho brasileiro." ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.saude.gov.br/rira/ValueSet/BRProblemaDiagnostico> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/BRProblemaDiagnostico" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Classificação Internacional de Doenças e Atenção Primária" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Código Internacional de Atenção Primária (CIAP2) e Classificação Internacional de Doenças (CID10)" ]
      ], [
        fhir:index -1 ;
        fhir:Element.extension [

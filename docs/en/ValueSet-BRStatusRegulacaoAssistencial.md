@@ -1,4 +1,4 @@
-# Status de regulação assistencial - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Status de regulação assistencial - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
 
 ## ValueSet: Status de regulação assistencial 
 
@@ -7,7 +7,7 @@ Status de agendamento de regulação assistencial.
 
  **References** 
 
-* [Regulação Assistencial (RIRA)](StructureDefinition-BRRegulacaoAssistencial.md)
+* [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)
 
 ### Logical Definition (CLD)
 

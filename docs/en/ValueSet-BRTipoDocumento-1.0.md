@@ -1,4 +1,4 @@
-# Tipo de Documento (ValueSet) - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Tipo de Documento (ValueSet) - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
 
 ## ValueSet: Tipo de Documento (ValueSet) 
 
@@ -7,7 +7,7 @@ Classifica o tipo de documento que está sendo trafegado.
 
  **References** 
 
-* [Regulação Assistencial (RIRA)](StructureDefinition-BRRegulacaoAssistencial.md)
+* [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)
 
 ### Logical Definition (CLD)
 

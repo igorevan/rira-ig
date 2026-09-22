@@ -84,6 +84,18 @@
     "ValueSet-BRStatusRequisicaoRegulacaoAssistencial.html" : "Status de requisição de regulação assistencial"
   },
   {
+    "url" : "http://terminology.hl7.org/CodeSystem/condition-category",
+    "version" : "2.0.0",
+    "status" : "active",
+    "name" : "ConditionCategoryCodes",
+    "title" : "Condition Category Codes",
+    "description" : "Preferred value set for Condition Categories.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1073"],
+    "uses" : {
+    },
+    "ValueSet-BRCategoriaCondicao.html" : "Classificação de uma condição"
+  },
+  {
     "url" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
     "version" : "3.0.0",
     "status" : "active",
@@ -118,6 +130,17 @@
     "ValueSet-BROcupacao-1.0.html" : "Classificação Brasileira de Ocupações - CBO"
   },
   {
+    "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCIAP2",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRCIAP2",
+    "title" : "Classificação Internacional de Atenção Primária - Segunda Edição - CIAP2",
+    "description" : "Classifica os problemas identificados no contato assistencial pelos profissionais de saúde, os motivos da contato assistencial e as respostas propostas pela equipe seguindo a sistematização SOAP.",
+    "uses" : {
+    },
+    "ValueSet-BRProblemaDiagnostico.html" : "Classificação Internacional de Doenças e Atenção Primária"
+  },
+  {
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
     "version" : "1.0.0-release",
     "status" : "active",
@@ -126,18 +149,8 @@
     "description" : "Classifica as doenças e outros problemas em saúde registrados em diversos tipos de documentos clínicos.",
     "uses" : {
     },
-    "ValueSet-BRCID10-1.0.html" : "Classificação Internacional de Doenças - Décima Revisão - CID-10"
-  },
-  {
-    "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCategoriaDiagnostico",
-    "version" : "1.0.0-release",
-    "status" : "active",
-    "name" : "BRCategoriaDiagnostico",
-    "title" : "Categoria do Diagnóstico (CodeSystem)",
-    "description" : "Códigos para representação do tipo de categoria do diagnóstico realizado.",
-    "uses" : {
-    },
-    "ValueSet-BRCategoriaDiagnostico.html" : "Categoria do Diagnóstico (ValueSet)"
+    "ValueSet-BRCID10-1.0.html" : "Classificação Internacional de Doenças - Décima Revisão - CID-10",
+    "ValueSet-BRProblemaDiagnostico.html" : "Classificação Internacional de Doenças e Atenção Primária"
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRJustificativaIndividuoNaoIdentificado",

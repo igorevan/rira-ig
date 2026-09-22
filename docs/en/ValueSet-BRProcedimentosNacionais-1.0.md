@@ -1,4 +1,4 @@
-# Procedimento realizado - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Procedimento realizado - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
 
 ## ValueSet: Procedimento realizado 
 

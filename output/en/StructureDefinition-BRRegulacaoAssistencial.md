@@ -1,13 +1,13 @@
-# Regulação Assistencial (RIRA) - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Regulação Assistencial - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
 
-## Resource Profile: Regulação Assistencial (RIRA) 
+## Resource Profile: Regulação Assistencial 
 
  
-Documento público que coleta os dados da regulação assistencial 
+Documento público que coleta os dados das solicitações de regulação assistencial 
 
 **Usos:**
 
-* Este Perfil não é utilizado por nenhum perfil neste guia de implementação
+* Refere a este Perfil: [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/br.gov.saude.rira.fhir|current/StructureDefinition/StructureDefinition-BRRegulacaoAssistencial.json)
 
@@ -29,7 +29,7 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
   "id" : "BRRegulacaoAssistencial",
   "meta" : {
     "versionId" : "1",
-    "lastUpdated" : "2025-03-31T16:10:52.7278664+00:00"
+    "lastUpdated" : "2026-09-15T11:47:26-03:00"
   },
   "language" : "pt-BR",
   "extension" : [{
@@ -63,7 +63,7 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
   "url" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial",
   "version" : "1.0.0-release",
   "name" : "BRRegulacaoAssistencial",
-  "title" : "Regulação Assistencial (RIRA)",
+  "title" : "Regulação Assistencial",
   "status" : "active",
   "date" : "2023-04-04",
   "publisher" : "Ministério da Saúde do Brasil",
@@ -78,7 +78,7 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "value" : "cgiis.datasus@saude.gov.br"
     }]
   }],
-  "description" : "Documento público que coleta os dados da regulação assistencial",
+  "description" : "Documento público que coleta os dados das solicitações de regulação assistencial",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -121,8 +121,13 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "id" : "Composition",
       "path" : "Composition",
       "short" : "Regulação Assistencial",
-      "definition" : "Documento que representa o documento de regulação assistencial.",
-      "mustSupport" : true
+      "definition" : "Documento que representa o registro de uma solicitação de regulação assistencial.",
+      "constraint" : [{
+        "key" : "ident-4",
+        "severity" : "error",
+        "human" : "O número de CPF ou CNS do indivíduo deve ser igual em seus respecitivos elementos dos recursos (subject.identifier.value ou participant.actor.identifier.value).",
+        "expression" : "(subject.identifier.value = section.entry.resolve().ofType(Appointment).participant.actor.identifier.value) and (subject.identifier.value = section.entry.resolve().ofType(Appointment).basedOn.resolve().ofType(ServiceRequest).subject.identifier.value) and (section.entry.resolve().ofType(Appointment).reasonReference.exists().not() or (subject.identifier.value = section.entry.resolve().ofType(Appointment).reasonReference.resolve().ofType(Condition).subject.identifier.value))"
+      }]
     },
     {
       "id" : "Composition.identifier",
@@ -160,6 +165,7 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
     {
       "id" : "Composition.type.coding",
       "path" : "Composition.type.coding",
+      "short" : "Código definido por uma terminologia",
       "min" : 1,
       "max" : "1",
       "mustSupport" : true
@@ -172,11 +178,13 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
     {
       "id" : "Composition.type.coding.system",
       "path" : "Composition.type.coding.system",
+      "short" : "Identificador do sistema de terminologia",
       "min" : 1
     },
     {
       "id" : "Composition.type.coding.code",
       "path" : "Composition.type.coding.code",
+      "short" : "Código conforme terminologia",
       "min" : 1,
       "fixedCode" : "RA"
     },
@@ -198,8 +206,8 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
     {
       "id" : "Composition.category",
       "path" : "Composition.category",
-      "short" : "Modalidade Assistencial",
-      "definition" : "Classifica os contatos assistenciais de acordo com as especificidades do modo, local e duração do atendimento.\r\nReferência: https://rts.saude.gov.br/#/modalidade-assistencial",
+      "short" : "Modalidade assistencial",
+      "definition" : "Modalidade assistencial que gerou a solicitação do procedimento.",
       "min" : 1,
       "max" : "1",
       "mustSupport" : true,
@@ -244,8 +252,8 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
     {
       "id" : "Composition.subject",
       "path" : "Composition.subject",
-      "short" : "Sujeito da Composição",
-      "definition" : "Quem ou o quê a composição se refere. Pode ser um indivíduo, dispositivo, grupos (de indivíduos, dispositivos etc.).",
+      "short" : "Identificador do indivíduo da solicitação de regulação assistencial",
+      "definition" : "Identificação única do paciente, por meio de CPF ou CNS.",
       "comment" : "Nesta versão, a RNDS suportará somente indivíduos.",
       "min" : 1,
       "type" : [{
@@ -264,6 +272,11 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
         "profile" : ["http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuoNaoIdentificado-1.0"]
       }],
       "mustSupport" : true
+    },
+    {
+      "id" : "Composition.subject.extension:unidentifiedPatient.extension",
+      "path" : "Composition.subject.extension.extension",
+      "min" : 3
     },
     {
       "id" : "Composition.subject.extension:unidentifiedPatient.extension:gender",
@@ -293,6 +306,17 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "path" : "Composition.subject.type",
       "max" : "0",
       "fixedUri" : "Patient"
+    },
+    {
+      "id" : "Composition.subject.identifier",
+      "path" : "Composition.subject.identifier",
+      "short" : "Referência lógica, quando a referência literal não é conhecida",
+      "constraint" : [{
+        "key" : "ident-1",
+        "severity" : "error",
+        "human" : "O número de CPF ou CNS informado é inválido (subject.identifier.value).",
+        "expression" : "value.matches('^(?!(\\\\d)\\\\1{10})\\\\d{11}$') or value.matches('^(?!(\\\\d)\\\\1{14})[125789]\\\\d{14}$')"
+      }]
     },
     {
       "id" : "Composition.subject.identifier.use",
@@ -339,18 +363,23 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "path" : "Composition.date",
       "short" : "Data/hora de Geração do Documento",
       "definition" : "Data e hora em que o documento foi gerado.",
+      "constraint" : [{
+        "key" : "date-1",
+        "severity" : "error",
+        "human" : "A data do documento (Composition.date) deve ser no formato 'Ano-Mês-Dia'. Exemplo: 2026-01-01.",
+        "expression" : "value.matches('^(200[1-9]|20[1-9]\\\\d|[2-9]\\\\d{3})-(0[1-9]|1[0-2])-(0[1-9]|[12]\\\\d|3[01])$')"
+      }],
       "mustSupport" : true
     },
     {
       "id" : "Composition.author",
       "path" : "Composition.author",
-      "short" : "Reponsável pelo Contato Assistencial",
-      "definition" : "Identifica a Pessoa Jurídica ou Pessoa Física (profissional liberal) responsável por gerar o documento.",
+      "short" : "Autor do documento",
+      "definition" : "Identifica o Estabelecimento de Saúde responsável por gerar o documento.",
       "comment" : "Nesta versão da RNDS somente serão suportadas edições provenientes de Estabelecimentos de Saúde.",
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0",
-        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0"]
+        "targetProfile" : ["http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"]
       }],
       "mustSupport" : true
     },
@@ -367,7 +396,14 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
     {
       "id" : "Composition.author.identifier",
       "path" : "Composition.author.identifier",
-      "min" : 1
+      "short" : "Referência lógica, quando a referência literal não é conhecida",
+      "min" : 1,
+      "constraint" : [{
+        "key" : "estab-2",
+        "severity" : "error",
+        "human" : "O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números.",
+        "expression" : "value.matches('^(?!(\\\\d)\\\\1{6})\\\\d{7}$')"
+      }]
     },
     {
       "id" : "Composition.author.identifier.use",
@@ -449,7 +485,8 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "definition" : "Referência ao documento anterior que este documento está substituindo.",
       "requirements" : "O valor é fixado em replaces, pois a substituição de documentos é a única operação permitida na RNDS.",
       "type" : [{
-        "code" : "Reference"
+        "code" : "Reference",
+        "targetProfile" : ["http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial"]
       }]
     },
     {
@@ -487,8 +524,8 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
         }],
         "rules" : "open"
       },
-      "short" : "Evento de regulação",
-      "definition" : "Definição dos eventos de um processo de regulação",
+      "short" : "Status da Solicitação",
+      "definition" : "Definição dos eventos de um processo de regulação. Neste elemento será preenchido o código que identifica unicamente o status da solicitação, conforme tabela de status de solicitação.",
       "min" : 1,
       "max" : "1"
     },
@@ -498,7 +535,31 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "sliceName" : "pending",
       "short" : "Evento de solicitação de procedimento regulado",
       "definition" : "Evento destinado a modelar a solicitação de um serviço, bem como o estabelecimento solicitante.",
-      "max" : "1"
+      "max" : "1",
+      "constraint" : [{
+        "key" : "mira-2",
+        "severity" : "error",
+        "human" : "A Data de Agendamento (Appointment.start e Appointment.end) não pode estar preenchida caso o status da solicitação seja Pendente (pending).",
+        "expression" : "code.coding.exists(code = 'pending') implies %resource.section.entry.resolve().start.empty() and %resource.section.entry.resolve().end.empty()"
+      },
+      {
+        "key" : "mira-3",
+        "severity" : "error",
+        "human" : "A Data de Execução (ServiceRequest.ocurrenceDateTime) não pode estar preenchida caso o status da solicitação seja Pendente (pending).",
+        "expression" : "code.coding.exists(code = 'pending') implies %resource.section.entry.resolve().basedOn.resolve().occurrenceDateTime.empty()"
+      },
+      {
+        "key" : "mira-4",
+        "severity" : "error",
+        "human" : "O identificador do Estabelecimento de Saúde executante (ServiceRequest.performer) não pode estar preenchido caso o status da solicitação seja Pendente (pending).",
+        "expression" : "code.coding.exists(code = 'pending') implies %resource.section.entry.resolve().basedOn.resolve().performer.empty()"
+      },
+      {
+        "key" : "mira-13",
+        "severity" : "error",
+        "human" : "Caso o status da solicitação seja Pendente (pending) o status do recurso Appointment deve ser proposed e o status do recurso ServiceRequest deve ser active.",
+        "expression" : "code.coding.exists(code = 'pending') implies %resource.section.entry.resolve().status = 'proposed' and %resource.section.entry.resolve().basedOn.resolve().status = 'active'"
+      }]
     },
     {
       "id" : "Composition.event:pending.id",
@@ -512,7 +573,7 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "max" : "1",
       "binding" : {
         "strength" : "required",
-        "description" : "Lista de códigos descritores de um evento de regulação.",
+        "description" : "O código que identifica unicamente o status da solicitação.",
         "valueSet" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"
       }
     },
@@ -536,7 +597,8 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "id" : "Composition.event:pending.code.coding.code",
       "path" : "Composition.event.code.coding.code",
       "min" : 1,
-      "fixedCode" : "pending"
+      "fixedCode" : "pending",
+      "condition" : ["mira-2", "mira-3", "mira-4", "mira-13"]
     },
     {
       "id" : "Composition.event:pending.code.coding.userSelected",
@@ -551,7 +613,8 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
     {
       "id" : "Composition.event:pending.period",
       "path" : "Composition.event.period",
-      "short" : "Data da solicitação",
+      "short" : "Data e hora de alteração do status",
+      "definition" : "Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados.",
       "min" : 1
     },
     {
@@ -567,7 +630,7 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
     {
       "id" : "Composition.event:pending.detail",
       "path" : "Composition.event.detail",
-      "min" : 1,
+      "short" : "Detalhes sobre o status da solicitação do procedimento regulado",
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0",
@@ -583,6 +646,18 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "id" : "Composition.event:pending.detail.type",
       "path" : "Composition.event.detail.type",
       "max" : "0"
+    },
+    {
+      "id" : "Composition.event:pending.detail.identifier",
+      "path" : "Composition.event.detail.identifier",
+      "short" : "Estabelecimento de saúde que realizou a alteração do status",
+      "definition" : "Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES.",
+      "constraint" : [{
+        "key" : "estab-2",
+        "severity" : "error",
+        "human" : "O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números.",
+        "expression" : "value.matches('^(?!(\\\\d)\\\\1{6})\\\\d{7}$')"
+      }]
     },
     {
       "id" : "Composition.event:pending.detail.identifier.id",
@@ -666,7 +741,13 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "sliceName" : "returned-to-requester",
       "short" : "Evento de devolução ao solicitante",
       "definition" : "Evento destinado a modelar a devolução (feita por um estabelecimento regulador) de um serviço ao estabelecimento solicitante.",
-      "max" : "1"
+      "max" : "1",
+      "constraint" : [{
+        "key" : "mira-14",
+        "severity" : "error",
+        "human" : "Caso o status da solicitação seja Devolvido para o solicitante (returned-to-requester) o status do recurso Appointment deve ser waitlist e o status do recurso ServiceRequest deve ser on-hold.",
+        "expression" : "code.coding.exists(code = 'returned-to-requester') implies %resource.section.entry.resolve().status = 'waitlist' and %resource.section.entry.resolve().basedOn.resolve().status = 'on-hold'"
+      }]
     },
     {
       "id" : "Composition.event:returned-to-requester.id",
@@ -680,7 +761,7 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "max" : "1",
       "binding" : {
         "strength" : "required",
-        "description" : "Lista de códigos descritores de um evento de regulação.",
+        "description" : "O código que identifica unicamente o status da solicitação.",
         "valueSet" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"
       }
     },
@@ -709,7 +790,8 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "id" : "Composition.event:returned-to-requester.code.coding.code",
       "path" : "Composition.event.code.coding.code",
       "min" : 1,
-      "fixedCode" : "returned-to-requester"
+      "fixedCode" : "returned-to-requester",
+      "condition" : ["mira-14"]
     },
     {
       "id" : "Composition.event:returned-to-requester.code.coding.userSelected",
@@ -720,6 +802,13 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "id" : "Composition.event:returned-to-requester.code.text",
       "path" : "Composition.event.code.text",
       "max" : "0"
+    },
+    {
+      "id" : "Composition.event:returned-to-requester.period",
+      "path" : "Composition.event.period",
+      "short" : "Data e hora de alteração do status",
+      "definition" : "Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados.",
+      "min" : 1
     },
     {
       "id" : "Composition.event:returned-to-requester.period.id",
@@ -734,8 +823,7 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
     {
       "id" : "Composition.event:returned-to-requester.detail",
       "path" : "Composition.event.detail",
-      "min" : 1,
-      "max" : "1",
+      "short" : "Detalhes sobre o status da solicitação do procedimento regulado",
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"]
@@ -759,7 +847,14 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
     {
       "id" : "Composition.event:returned-to-requester.detail.identifier",
       "path" : "Composition.event.detail.identifier",
-      "min" : 1
+      "short" : "Estabelecimento de saúde que realizou a alteração do status",
+      "definition" : "Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES.",
+      "constraint" : [{
+        "key" : "estab-2",
+        "severity" : "error",
+        "human" : "O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números.",
+        "expression" : "value.matches('^(?!(\\\\d)\\\\1{6})\\\\d{7}$')"
+      }]
     },
     {
       "id" : "Composition.event:returned-to-requester.detail.identifier.id",
@@ -807,7 +902,25 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "sliceName" : "booked",
       "short" : "Evento de agendamento de procedimento regulado",
       "definition" : "Evento destinado a modelar o agendamento de um serviço, bem como o estabelecimento executante.",
-      "max" : "1"
+      "max" : "1",
+      "constraint" : [{
+        "key" : "mira-5",
+        "severity" : "error",
+        "human" : "A Data de Agendamento (Appointment.start e Appointment.end) deve ser preenchida caso o status da solicitação seja Agendado (booked).",
+        "expression" : "code.coding.exists(code = 'booked') implies %resource.section.entry.resolve().start.exists() and %resource.section.entry.resolve().end.exists()"
+      },
+      {
+        "key" : "mira-6",
+        "severity" : "error",
+        "human" : "O identificador do Estabelecimento de Saúde executante (ServiceRequest.performer) deve ser preenchido caso o status da solicitação seja Agendado (booked).",
+        "expression" : "code.coding.exists(code = 'booked') implies %resource.section.entry.resolve().basedOn.resolve().performer.exists()"
+      },
+      {
+        "key" : "mira-15",
+        "severity" : "error",
+        "human" : "Caso o status da solicitação seja Agendado (booked) o status do recurso Appointment deve ser booked e o status do recurso ServiceRequest deve ser active.",
+        "expression" : "code.coding.exists(code = 'booked') implies %resource.section.entry.resolve().status = 'booked' and %resource.section.entry.resolve().basedOn.resolve().status = 'active'"
+      }]
     },
     {
       "id" : "Composition.event:booked.id",
@@ -821,7 +934,7 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "max" : "1",
       "binding" : {
         "strength" : "required",
-        "description" : "Lista de códigos descritores de um evento de regulação.",
+        "description" : "O código que identifica unicamente o status da solicitação.",
         "valueSet" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"
       }
     },
@@ -850,7 +963,8 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "id" : "Composition.event:booked.code.coding.code",
       "path" : "Composition.event.code.coding.code",
       "min" : 1,
-      "fixedCode" : "booked"
+      "fixedCode" : "booked",
+      "condition" : ["mira-5", "mira-6", "mira-15"]
     },
     {
       "id" : "Composition.event:booked.code.coding.userSelected",
@@ -861,6 +975,13 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "id" : "Composition.event:booked.code.text",
       "path" : "Composition.event.code.text",
       "max" : "0"
+    },
+    {
+      "id" : "Composition.event:booked.period",
+      "path" : "Composition.event.period",
+      "short" : "Data e hora de alteração do status",
+      "definition" : "Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados.",
+      "min" : 1
     },
     {
       "id" : "Composition.event:booked.period.id",
@@ -875,7 +996,7 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
     {
       "id" : "Composition.event:booked.detail",
       "path" : "Composition.event.detail",
-      "min" : 1,
+      "short" : "Detalhes sobre o status da solicitação do procedimento regulado",
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0",
@@ -891,6 +1012,18 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "id" : "Composition.event:booked.detail.type",
       "path" : "Composition.event.detail.type",
       "max" : "0"
+    },
+    {
+      "id" : "Composition.event:booked.detail.identifier",
+      "path" : "Composition.event.detail.identifier",
+      "short" : "Estabelecimento de saúde que realizou a alteração do status",
+      "definition" : "Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES.",
+      "constraint" : [{
+        "key" : "estab-2",
+        "severity" : "error",
+        "human" : "O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números.",
+        "expression" : "value.matches('^(?!(\\\\d)\\\\1{6})\\\\d{7}$')"
+      }]
     },
     {
       "id" : "Composition.event:booked.detail.identifier.id",
@@ -938,7 +1071,31 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "sliceName" : "attended",
       "short" : "Evento de atendimento de procedimento regulado",
       "definition" : "Evento destinado a modelar o atendimento de um serviço, bem como o estabelecimento executante.",
-      "max" : "1"
+      "max" : "1",
+      "constraint" : [{
+        "key" : "mira-7",
+        "severity" : "error",
+        "human" : "A Data de Agendamento (Appointment.start e Appointment.end) deve ser preenchida caso o status da solicitação seja Atendido/Internado (attended).",
+        "expression" : "code.coding.exists(code = 'attended') implies %resource.section.entry.resolve().start.exists() and %resource.section.entry.resolve().end.exists()"
+      },
+      {
+        "key" : "mira-8",
+        "severity" : "error",
+        "human" : "O identificador do Estabelecimento de Saúde executante (ServiceRequest.performer) deve ser preenchido caso o status da solicitação seja Atendido/Internado (attended).",
+        "expression" : "code.coding.exists(code = 'attended') implies %resource.section.entry.resolve().basedOn.resolve().performer.exists()"
+      },
+      {
+        "key" : "mira-9",
+        "severity" : "error",
+        "human" : "A Data de Execução (ServiceRequest.ocurrenceDateTime) deve ser preenchida caso o status da solicitação seja Atendido/Internado (attended).",
+        "expression" : "code.coding.exists(code = 'attended') implies %resource.section.entry.resolve().basedOn.resolve().occurrenceDateTime.exists()"
+      },
+      {
+        "key" : "mira-16",
+        "severity" : "error",
+        "human" : "Caso o status da solicitação seja Atendido/Internado (attended) o status do recurso Appointment deve ser fulfilled e o status do recurso ServiceRequest deve ser completed.",
+        "expression" : "code.coding.exists(code = 'attended') implies %resource.section.entry.resolve().status = 'fulfilled' and %resource.section.entry.resolve().basedOn.resolve().status = 'completed'"
+      }]
     },
     {
       "id" : "Composition.event:attended.id",
@@ -952,7 +1109,7 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "max" : "1",
       "binding" : {
         "strength" : "required",
-        "description" : "Lista de códigos descritores de um evento de regulação.",
+        "description" : "O código que identifica unicamente o status da solicitação.",
         "valueSet" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"
       }
     },
@@ -981,7 +1138,8 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "id" : "Composition.event:attended.code.coding.code",
       "path" : "Composition.event.code.coding.code",
       "min" : 1,
-      "fixedCode" : "attended"
+      "fixedCode" : "attended",
+      "condition" : ["mira-7", "mira-8", "mira-9", "mira-16"]
     },
     {
       "id" : "Composition.event:attended.code.coding.userSelected",
@@ -992,6 +1150,13 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "id" : "Composition.event:attended.code.text",
       "path" : "Composition.event.code.text",
       "max" : "0"
+    },
+    {
+      "id" : "Composition.event:attended.period",
+      "path" : "Composition.event.period",
+      "short" : "Data e hora de alteração do status",
+      "definition" : "Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados.",
+      "min" : 1
     },
     {
       "id" : "Composition.event:attended.period.id",
@@ -1006,7 +1171,7 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
     {
       "id" : "Composition.event:attended.detail",
       "path" : "Composition.event.detail",
-      "min" : 1,
+      "short" : "Detalhes sobre o status da solicitação do procedimento regulado",
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0",
@@ -1022,6 +1187,18 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "id" : "Composition.event:attended.detail.type",
       "path" : "Composition.event.detail.type",
       "max" : "0"
+    },
+    {
+      "id" : "Composition.event:attended.detail.identifier",
+      "path" : "Composition.event.detail.identifier",
+      "short" : "Estabelecimento de saúde que realizou a alteração do status",
+      "definition" : "Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES.",
+      "constraint" : [{
+        "key" : "estab-2",
+        "severity" : "error",
+        "human" : "O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números.",
+        "expression" : "value.matches('^(?!(\\\\d)\\\\1{6})\\\\d{7}$')"
+      }]
     },
     {
       "id" : "Composition.event:attended.detail.identifier.id",
@@ -1067,7 +1244,13 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "id" : "Composition.event:cancelled",
       "path" : "Composition.event",
       "sliceName" : "cancelled",
-      "max" : "1"
+      "max" : "1",
+      "constraint" : [{
+        "key" : "mira-17",
+        "severity" : "error",
+        "human" : "Caso o status da solicitação seja Negado/Cancelado (cancelled) o status do recurso Appointment deve ser cancelled e o status do recurso ServiceRequest deve ser revoked.",
+        "expression" : "code.coding.exists(code = 'cancelled') implies %resource.section.entry.resolve().status = 'cancelled' and %resource.section.entry.resolve().basedOn.resolve().status = 'revoked'"
+      }]
     },
     {
       "id" : "Composition.event:cancelled.id",
@@ -1081,7 +1264,7 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "max" : "1",
       "binding" : {
         "strength" : "required",
-        "description" : "Lista de códigos descritores de um evento de regulação.",
+        "description" : "O código que identifica unicamente o status da solicitação.",
         "valueSet" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"
       }
     },
@@ -1110,7 +1293,8 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "id" : "Composition.event:cancelled.code.coding.code",
       "path" : "Composition.event.code.coding.code",
       "min" : 1,
-      "fixedCode" : "cancelled"
+      "fixedCode" : "cancelled",
+      "condition" : ["mira-17"]
     },
     {
       "id" : "Composition.event:cancelled.code.coding.userSelected",
@@ -1121,6 +1305,13 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "id" : "Composition.event:cancelled.code.text",
       "path" : "Composition.event.code.text",
       "max" : "0"
+    },
+    {
+      "id" : "Composition.event:cancelled.period",
+      "path" : "Composition.event.period",
+      "short" : "Data e hora de alteração do status",
+      "definition" : "Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados.",
+      "min" : 1
     },
     {
       "id" : "Composition.event:cancelled.period.id",
@@ -1135,6 +1326,7 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
     {
       "id" : "Composition.event:cancelled.detail",
       "path" : "Composition.event.detail",
+      "short" : "Detalhes sobre o status da solicitação do procedimento regulado",
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"]
@@ -1149,6 +1341,18 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "id" : "Composition.event:cancelled.detail.type",
       "path" : "Composition.event.detail.type",
       "max" : "0"
+    },
+    {
+      "id" : "Composition.event:cancelled.detail.identifier",
+      "path" : "Composition.event.detail.identifier",
+      "short" : "Estabelecimento de saúde que realizou a alteração do status",
+      "definition" : "Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES.",
+      "constraint" : [{
+        "key" : "estab-2",
+        "severity" : "error",
+        "human" : "O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números.",
+        "expression" : "value.matches('^(?!(\\\\d)\\\\1{6})\\\\d{7}$')"
+      }]
     },
     {
       "id" : "Composition.event:cancelled.detail.identifier.id",
@@ -1194,7 +1398,31 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "id" : "Composition.event:absence",
       "path" : "Composition.event",
       "sliceName" : "absence",
-      "max" : "1"
+      "max" : "1",
+      "constraint" : [{
+        "key" : "mira-10",
+        "severity" : "error",
+        "human" : "A Data de Agendamento (Appointment.start e Appointment.end) deve ser preenchida caso o status da solicitação seja Falta (absence).",
+        "expression" : "code.coding.exists(code = 'absence') implies %resource.section.entry.resolve().start.exists() and %resource.section.entry.resolve().end.exists()"
+      },
+      {
+        "key" : "mira-11",
+        "severity" : "error",
+        "human" : "O identificador do Estabelecimento de Saúde executante (ServiceRequest.performer) deve ser preenchido caso o status da solicitação seja Falta (absence).",
+        "expression" : "code.coding.exists(code = 'absence') implies %resource.section.entry.resolve().basedOn.resolve().performer.exists()"
+      },
+      {
+        "key" : "mira-12",
+        "severity" : "error",
+        "human" : "A Data de Execução (ServiceRequest.ocurrenceDateTime) deve ser preenchida caso o status da solicitação seja Falta (absence).",
+        "expression" : "code.coding.exists(code = 'absence') implies %resource.section.entry.resolve().basedOn.resolve().occurrenceDateTime.exists()"
+      },
+      {
+        "key" : "mira-18",
+        "severity" : "error",
+        "human" : "Caso o status da solicitação seja Falta (absence) o status do recurso Appointment deve ser noshow e o status do recurso ServiceRequest deve ser completed.",
+        "expression" : "code.coding.exists(code = 'absence') implies %resource.section.entry.resolve().status = 'noshow' and %resource.section.entry.resolve().basedOn.resolve().status = 'completed'"
+      }]
     },
     {
       "id" : "Composition.event:absence.id",
@@ -1208,7 +1436,7 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "max" : "1",
       "binding" : {
         "strength" : "required",
-        "description" : "Lista de códigos descritores de um evento de regulação.",
+        "description" : "O código que identifica unicamente o status da solicitação.",
         "valueSet" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"
       }
     },
@@ -1236,7 +1464,8 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
     {
       "id" : "Composition.event:absence.code.coding.code",
       "path" : "Composition.event.code.coding.code",
-      "fixedCode" : "absence"
+      "fixedCode" : "absence",
+      "condition" : ["mira-10", "mira-11", "mira-12", "mira-18"]
     },
     {
       "id" : "Composition.event:absence.code.coding.userSelected",
@@ -1247,6 +1476,13 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "id" : "Composition.event:absence.code.text",
       "path" : "Composition.event.code.text",
       "max" : "0"
+    },
+    {
+      "id" : "Composition.event:absence.period",
+      "path" : "Composition.event.period",
+      "short" : "Data e hora de alteração do status",
+      "definition" : "Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados.",
+      "min" : 1
     },
     {
       "id" : "Composition.event:absence.period.id",
@@ -1261,7 +1497,7 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
     {
       "id" : "Composition.event:absence.detail",
       "path" : "Composition.event.detail",
-      "min" : 1,
+      "short" : "Detalhes sobre o status da solicitação do procedimento regulado",
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0",
@@ -1277,6 +1513,18 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "id" : "Composition.event:absence.detail.type",
       "path" : "Composition.event.detail.type",
       "max" : "0"
+    },
+    {
+      "id" : "Composition.event:absence.detail.identifier",
+      "path" : "Composition.event.detail.identifier",
+      "short" : "Estabelecimento de saúde que realizou a alteração do status",
+      "definition" : "Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES.",
+      "constraint" : [{
+        "key" : "estab-2",
+        "severity" : "error",
+        "human" : "O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números.",
+        "expression" : "value.matches('^(?!(\\\\d)\\\\1{6})\\\\d{7}$')"
+      }]
     },
     {
       "id" : "Composition.event:absence.detail.identifier.id",
@@ -1322,7 +1570,13 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "id" : "Composition.event:excluded",
       "path" : "Composition.event",
       "sliceName" : "excluded",
-      "max" : "1"
+      "max" : "1",
+      "constraint" : [{
+        "key" : "mira-19",
+        "severity" : "error",
+        "human" : "Caso o status da solicitação seja Excluído (excluded) o status do recurso Appointment deve ser cancelled e o status do recurso ServiceRequest deve ser revoked.",
+        "expression" : "code.coding.exists(code = 'excluded') implies %resource.section.entry.resolve().status = 'cancelled' and %resource.section.entry.resolve().basedOn.resolve().status = 'revoked'"
+      }]
     },
     {
       "id" : "Composition.event:excluded.id",
@@ -1336,7 +1590,7 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "max" : "1",
       "binding" : {
         "strength" : "required",
-        "description" : "Lista de códigos descritores de um evento de regulação.",
+        "description" : "O código que identifica unicamente o status da solicitação.",
         "valueSet" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"
       }
     },
@@ -1365,7 +1619,8 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "id" : "Composition.event:excluded.code.coding.code",
       "path" : "Composition.event.code.coding.code",
       "min" : 1,
-      "fixedCode" : "excluded"
+      "fixedCode" : "excluded",
+      "condition" : ["mira-19"]
     },
     {
       "id" : "Composition.event:excluded.code.coding.userSelected",
@@ -1378,6 +1633,13 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "max" : "0"
     },
     {
+      "id" : "Composition.event:excluded.period",
+      "path" : "Composition.event.period",
+      "short" : "Data e hora de alteração do status",
+      "definition" : "Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados.",
+      "min" : 1
+    },
+    {
       "id" : "Composition.event:excluded.period.id",
       "path" : "Composition.event.period.id",
       "max" : "0"
@@ -1388,6 +1650,11 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "min" : 1
     },
     {
+      "id" : "Composition.event:excluded.detail",
+      "path" : "Composition.event.detail",
+      "short" : "Detalhes sobre o status da solicitação do procedimento regulado"
+    },
+    {
       "id" : "Composition.event:excluded.detail.id",
       "path" : "Composition.event.detail.id",
       "max" : "0"
@@ -1396,6 +1663,18 @@ Other representations of profile: [CSV](../StructureDefinition-BRRegulacaoAssist
       "id" : "Composition.event:excluded.detail.type",
       "path" : "Composition.event.detail.type",
       "max" : "0"
+    },
+    {
+      "id" : "Composition.event:excluded.detail.identifier",
+      "path" : "Composition.event.detail.identifier",
+      "short" : "Estabelecimento de saúde que realizou a alteração do status",
+      "definition" : "Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES.",
+      "constraint" : [{
+        "key" : "estab-2",
+        "severity" : "error",
+        "human" : "O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números.",
+        "expression" : "value.matches('^(?!(\\\\d)\\\\1{6})\\\\d{7}$')"
+      }]
     },
     {
       "id" : "Composition.event:excluded.detail.identifier.id",

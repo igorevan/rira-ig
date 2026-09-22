@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Modelo de Informação - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0-release</title>
+    <title>Modelo de Informação - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -56,7 +56,7 @@
 
 
         <div id="ig-status" data-fhir="generated">
-          <p><span style="font-size:12pt;font-weight:bold">Guia de Implementação da Regulação Assistencial (RIRA) da RNDS</span>
+          <p><span style="font-size:12pt;font-weight:bold">Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS</span>
             <br/>
             <span style="display:inline-block;">1.0.0-release - STU1
 
@@ -203,7 +203,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Guia de Implementação da Regulação Assistencial (RIRA) da RNDS - Compilação de desenvolvimento local (v1.0.0-release) construída pelas ferramentas de compilação FHIR (HL7&reg; FHIR&reg; Standard). Veja o <a href='http://fhir.saude.gov.br/rira/history.html'>Diretório de versões publicadas</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS - Compilação de desenvolvimento local (v1.0.0-release) construída pelas ferramentas de compilação FHIR (HL7&reg; FHIR&reg; Standard). Veja o <a href='http://fhir.saude.gov.br/rira/history.html'>Diretório de versões publicadas</a></p><!--EndReleaseHeader-->
   <h2>Modelo de Informação</h2>
   
   
@@ -395,9 +395,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         <td>2</td>
         <td>1..1</td>
         <td>Status da solicitação</td>
-        <td>Texto codificado:<br/>- Pendente<br/>- Agendado<br/>- Atendido/Internado<br/>- Falta<br/>-
-          Negado/Cancelado<br/>-
-          Excluído<br/>- Devolvido para o solicitante</td>
+        <td>Texto codificado:
+          <ul>
+            <li>Pendente</li>
+            <li>Agendado</li>
+            <li>Atendido/Internado</li>
+            <li>Falta</li>
+            <li>Negado/Cancelado</li>
+            <li>Excluído</li>
+            <li>Devolvido para o solicitante</li>
+          </ul>
+        </td>
         <td>Status da solicitação do procedimento.</td>
         <td>O código que identifica unicamente o status da solicitação, conforme tabela de status de solicitação.</td>
         <td><a href="ValueSet-BRStatusRegulacaoAssistencial.html">Status de Regulação Assistencial</a></td>
@@ -651,13 +659,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         <td>1..1</td>
         <td>Motivo da solicitação</td>
         <td>Texto codificado</td>
-        <td>Identificação do motivo da solicitação do procedimento. Texto codificado por terminologia externa CID-10.
+        <td>Identificação do motivo da solicitação do procedimento. Texto codificado por terminologia externa CID-10 ou
+          CIAP-2.
         </td>
         <td>O código que identifica unicamente a condição clínica conforme tabela de Classificação Internacional de
-          Doenças na versão 10 (CID10).</td>
-        <td><a href="ValueSet-BRCID10-1.0.html">Classificação Internacional de Doenças - Décima Revisão (CID-10)</a>
+          Doenças na versão 10 (CID10) ou da Classificação Internacional de Atenção Primária (CIAP-2).</td>
+        <td>
+          <a href="CodeSystem-BRCID10.html">Classificação Internacional de Doenças (CID-10)</a><br/>
+          <a href="CodeSystem-BRCIAP2.html">Classificação Internacional de Atenção Primária (CIAP-2)</a>
         </td>
-        <td><a href="StructureDefinition-BRCID10Avaliado-1.0.html">CID10 Avaliado</a> <i>(Condition)</i></td>
+        <td>
+          <a href="StructureDefinition-BRProblemaDiagnostico.html">Problema/Diagnóstico</a> <i>(Condition)</i>
+        </td>
       </tr>
     </tbody>
   </table>
@@ -710,8 +723,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.saude.gov.br">Ministério da Saúde do Brasil</a>.  
           Package br.gov.saude.rira.fhir#1.0.0-release based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-15 12:28:00 -0300">
-    2026-09-15
+  <span title="2026-09-22 13:36:00 -0300">
+    2026-09-22
   </span>
 
           <br/>

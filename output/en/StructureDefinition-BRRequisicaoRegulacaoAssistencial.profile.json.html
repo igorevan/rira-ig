@@ -12,7 +12,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Requisição de Regulação Assistencial - JSON Representation - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0-release</title>
+    <title>Requisição de Regulação Assistencial - JSON Representation - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -62,7 +62,7 @@
 
 
         <div id="ig-status" data-fhir="generated">
-          <p><span style="font-size:12pt;font-weight:bold">Guia de Implementação da Regulação Assistencial (RIRA) da RNDS</span>
+          <p><span style="font-size:12pt;font-weight:bold">Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS</span>
             <br/>
             <span style="display:inline-block;">1.0.0-release - STU1
 
@@ -202,7 +202,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 8" class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Guia de Implementação da Regulação Assistencial (RIRA) da RNDS - Compilação de desenvolvimento local (v1.0.0-release) construída pelas ferramentas de compilação FHIR (HL7&reg; FHIR&reg; Standard). Veja o <a href='http://fhir.saude.gov.br/rira/history.html'>Diretório de versões publicadas</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS - Compilação de desenvolvimento local (v1.0.0-release) construída pelas ferramentas de compilação FHIR (HL7&reg; FHIR&reg; Standard). Veja o <a href='http://fhir.saude.gov.br/rira/history.html'>Diretório de versões publicadas</a></p><!--EndReleaseHeader-->
   
 
 
@@ -350,7 +350,6 @@ JSON Profile
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.name">name</a>" : "BRRequisicaoRegulacaoAssistencial",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.title">title</a>" : "Requisição de Regulação Assistencial",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.status">status</a>" : "active",
-  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.experimental">experimental</a>" : false,
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.date">date</a>" : "2023-04-04",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.publisher">publisher</a>" : "Ministério da Saúde do Brasil",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.contact">contact</a>" : [
@@ -496,6 +495,12 @@ JSON Profile
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "orderDetail.empty() or code.exists()",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "exists(f:code) or not(exists(f:orderDetail))",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "mira-1",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "O Motivo da Solicitação (Condition.code) deve ser preenchido caso a Data da Solicitação (ServiceRequest.authoredOn) seja posterior a 01/01/2025.",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "(authoredOn &gt; @2025-01-01T01:00:00) implies reasonReference.resolve().code.exists()"
           }
         ],
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
@@ -526,7 +531,7 @@ JSON Profile
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "0",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Resource.id",
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
@@ -667,7 +672,7 @@ JSON Profile
           "display"
         ],
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "0",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DomainResource.text",
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
@@ -1148,6 +1153,15 @@ JSON Profile
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "code"
           }
         ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
+          "mira-13",
+          "mira-14",
+          "mira-15",
+          "mira-16",
+          "mira-17",
+          "mira-18",
+          "mira-19"
+        ],
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
@@ -1191,7 +1205,7 @@ JSON Profile
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.intent",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.intent",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "proposal | plan |  directive | order | original-order | reflex-order | filler-order | instance-order | option",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Whether the request is a proposal, plan, an original order or a reflex order.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "This element is labeled as a modifier because the intent alters when and how the resource is actually applicable.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
@@ -1206,6 +1220,7 @@ JSON Profile
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "code"
           }
         ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.fixed_x_">fixedCode</a>" : "proposal",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
@@ -1245,8 +1260,8 @@ JSON Profile
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.category",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.category",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Modalidade assistencial.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A code that classifies the service for searching, sorting and display purposes (e.g. \&quot;Surgical Procedure\&quot;).",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Modalidade assistencial",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Modalidade assistencial que gerou a solicitação do procedimento.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "There may be multiple axis of categorization depending on the context or use case for retrieving or displaying the resource.  The level of granularity is defined by the category concepts in the value set.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Used for filtering what service request are retrieved and displayed.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
@@ -1815,8 +1830,8 @@ JSON Profile
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.priority",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.priority",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Caráter do atendimento.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Indicates how quickly the ServiceRequest should be addressed with respect to other requests.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Caráter da solicitação",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Modalidade assistencial que gerou a solicitação do procedimento.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
@@ -1913,8 +1928,8 @@ JSON Profile
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.code",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.code",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Código do procedimento.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A code that identifies a particular service (i.e., procedure, diagnostic investigation, or panel of investigations) that have been requested.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Código do procedimento",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "O código que identifica unicamente o procedimento conforme tabela SUS.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "Many laboratory and radiology procedure codes embed the specimen/organ system in the test order name, for example,  serum or serum/plasma glucose, or a chest x-ray. The specimen might not be recorded separately from the test code.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
           "service requested"
@@ -2602,8 +2617,8 @@ JSON Profile
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.subject",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.subject",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Paciente",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "On whom or what the service is to be performed. This is usually a human patient, but can also be requested on animals, groups of humans or animals, devices such as dialysis machines, or even locations (typically for environmental scans).",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Identificador do paciente",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Identificação única do paciente, por meio de CPF ou CNS.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
@@ -2866,6 +2881,12 @@ JSON Profile
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() or (children().count() &gt; id.count())",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ident-1",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "O número de CPF ou CNS informado é inválido (subject.identifier.value).",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "value.matches('^(?!(\\\\d)\\\\1{10})\\\\d{11}$') or value.matches('^(?!(\\\\d)\\\\1{14})[125789]\\\\d{14}$')"
           }
         ],
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
@@ -3377,8 +3398,8 @@ JSON Profile
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.occurrence[x]",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.occurrence[x]",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Data de execução",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Data e hora da execução do procedimento no padrão ISO8601.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Data da execução",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A data e hora em que o procedimento regulado foi executado no padrão ISO 8601.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
           "schedule"
         ],
@@ -3393,6 +3414,11 @@ JSON Profile
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "dateTime"
           }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
+          "mira-3",
+          "mira-9",
+          "mira-12"
         ],
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
           {
@@ -3591,8 +3617,8 @@ JSON Profile
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.authoredOn",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.authoredOn",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Data e hora em que o procediento foi solicitado.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Data e hora da solicitação do procedimento no padrão ISO8601.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Data da solicitação",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A data e hora da solicitação do procedimento regulado no padrão ISO 8601.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
           "orderedOn"
         ],
@@ -3608,6 +3634,9 @@ JSON Profile
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "dateTime"
           }
         ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
+          "mira-1"
+        ],
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
@@ -3621,10 +3650,6 @@ JSON Profile
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rnds",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "MI-RIRA - Data da Solicitação"
-          },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "workflow",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Request.authoredOn"
@@ -3651,7 +3676,7 @@ JSON Profile
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.requester",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.requester",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Estabelecimento de saúde solicitante",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The individual who initiated the request and has responsibility for its activation.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Identificação única do estabelecimento solicitante, por meio do CNES.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "This not the dispatcher, but rather who is the authorizer.  This element is not intended to handle delegation which would generally be managed through the Provenance resource.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
           "author",
@@ -3915,6 +3940,12 @@ JSON Profile
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() or (children().count() &gt; id.count())",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "estab-2",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números.",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "value.matches('^(?!(\\\\d)\\\\1{6})\\\\d{7}$')"
           }
         ],
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
@@ -4368,8 +4399,8 @@ JSON Profile
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.performerType",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.performerType",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Identificador da especialidade médica do executante.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Desired type of performer for doing the requested service.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Especialidade médica do executante",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Identificação da especialidade médica do profissional executante do procedimento, conforme tabela de CBO. \r\nCaso o procedimento informado pertença à forma de organização 03.01.01 da tabela SUS, o código CBO será obrigatório.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "This is a  role, not  a participation type.  In other words, does not describe the task but describes the capacity.  For example, “compounding pharmacy”, “psychiatrist” or “internal referral”.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
           "specialty"
@@ -4944,8 +4975,8 @@ JSON Profile
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.performer",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.performer",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Estabelecimento de sáude executante",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The desired performer for doing the requested service.  For example, the surgeon, dermatopathologist, endoscopist, etc.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Estabelecimento de saúde executante",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Identificação única do estabelecimento executante, por meio do CNES.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "If multiple performers are present, it is interpreted as a list of *alternative* performers without any preference regardless of order.  If order of preference is needed use the [request-performerOrder extension](http://hl7.org/fhir/R4/extension-request-performerorder.html).  Use CareTeam to represent a group of performers (for example, Practitioner A *and* Practitioner B).",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
           "request recipient"
@@ -4964,6 +4995,12 @@ JSON Profile
               "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"
             ]
           }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
+          "mira-4",
+          "mira-6",
+          "mira-8",
+          "mira-11"
         ],
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
           {
@@ -5204,6 +5241,12 @@ JSON Profile
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() or (children().count() &gt; id.count())",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "estab-2",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números.",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "value.matches('^(?!(\\\\d)\\\\1{6})\\\\d{7}$')"
           }
         ],
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
@@ -5812,9 +5855,9 @@ JSON Profile
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.reasonReference",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.reasonReference",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Motivo da solicitação",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Indicates another resource that provides a justification for why this service is being requested.   May relate to the resources referred to in `supportingInfo`.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Identificação do motivo da solicitação do procedimento, conforme Classificação Internacional de Doenças - CID ou Classificação Internacional de Atenção Primária - CIAP.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "This element represents why the referral is being made and may be used to decide how the service will be performed, or even if it will be performed at all.    To be as specific as possible,  a reference to  *Observation* or *Condition* should be used if available.  Otherwise when referencing  *DiagnosticReport*  it should contain a finding  in `DiagnosticReport.conclusion` and/or `DiagnosticReport.conclusionCode`.   When using a reference to *DocumentReference*, the target document should contain clear findings language providing the relevant reason for this service request.  Use  the CodeableConcept text element in `ServiceRequest.reasonCode` if the data is free (uncoded) text as shown in the [CT Scan example](http://hl7.org/fhir/R4/servicerequest-example-di.html).",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "ServiceRequest.reasonReference",
@@ -5825,7 +5868,7 @@ JSON Profile
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>" : [
-              <a href="StructureDefinition-BRCID10Avaliado-1.0.html" style="color: Maroon">&#x1F517;</a> "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0"
+              <a href="StructureDefinition-BRProblemaDiagnostico.html" style="color: Maroon">&#x1F517;</a> "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProblemaDiagnostico"
             ]
           }
         ],
@@ -6468,12 +6511,20 @@ JSON Profile
     "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a>" : [
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest"
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "mira-1",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "O Motivo da Solicitação (Condition.code) deve ser preenchido caso a Data da Solicitação (ServiceRequest.authoredOn) seja posterior a 01/01/2025.",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "(authoredOn &gt; @2025-01-01T01:00:00) implies reasonReference.resolve().code.exists()"
+          }
+        ]
       },
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.id",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.id",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1"
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "0"
       },
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.implicitRules",
@@ -6488,7 +6539,7 @@ JSON Profile
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.text",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.text",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1"
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "0"
       },
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.contained",
@@ -6528,6 +6579,15 @@ JSON Profile
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.status",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.status",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
+          "mira-13",
+          "mira-14",
+          "mira-15",
+          "mira-16",
+          "mira-17",
+          "mira-18",
+          "mira-19"
+        ],
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "required",
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet">valueSet</a>" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRequisicaoRegulacaoAssistencial"
@@ -6536,6 +6596,8 @@ JSON Profile
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.intent",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.intent",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "proposal | plan |  directive | order | original-order | reflex-order | filler-order | instance-order | option",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.fixed_x_">fixedCode</a>" : "proposal",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "required",
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet">valueSet</a>" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRIntencaoRegulacao"
@@ -6544,7 +6606,8 @@ JSON Profile
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.category",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.category",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Modalidade assistencial.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Modalidade assistencial",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Modalidade assistencial que gerou a solicitação do procedimento.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
@@ -6592,7 +6655,8 @@ JSON Profile
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.priority",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.priority",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Caráter do atendimento.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Caráter da solicitação",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Modalidade assistencial que gerou a solicitação do procedimento.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "required",
@@ -6608,7 +6672,8 @@ JSON Profile
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.code",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.code",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Código do procedimento.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Código do procedimento",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "O código que identifica unicamente o procedimento conforme tabela SUS.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "required",
@@ -6665,7 +6730,8 @@ JSON Profile
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.subject",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.subject",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Paciente",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Identificador do paciente",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Identificação única do paciente, por meio de CPF ou CNS.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
@@ -6693,7 +6759,15 @@ JSON Profile
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.subject.identifier",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.subject.identifier",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ident-1",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "O número de CPF ou CNS informado é inválido (subject.identifier.value).",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "value.matches('^(?!(\\\\d)\\\\1{10})\\\\d{11}$') or value.matches('^(?!(\\\\d)\\\\1{14})[125789]\\\\d{14}$')"
+          }
+        ]
       },
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.subject.identifier.id",
@@ -6743,12 +6817,17 @@ JSON Profile
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.occurrence[x]",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.occurrence[x]",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Data de execução",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Data e hora da execução do procedimento no padrão ISO8601.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Data da execução",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A data e hora em que o procedimento regulado foi executado no padrão ISO 8601.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "dateTime"
           }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
+          "mira-3",
+          "mira-9",
+          "mira-12"
         ]
       },
       {
@@ -6764,20 +6843,18 @@ JSON Profile
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.authoredOn",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.authoredOn",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Data e hora em que o procediento foi solicitado.",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Data e hora da solicitação do procedimento no padrão ISO8601.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Data da solicitação",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A data e hora da solicitação do procedimento regulado no padrão ISO 8601.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rnds",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "MI-RIRA - Data da Solicitação"
-          }
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
+          "mira-1"
         ]
       },
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.requester",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.requester",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Estabelecimento de saúde solicitante",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Identificação única do estabelecimento solicitante, por meio do CNES.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
@@ -6806,7 +6883,15 @@ JSON Profile
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.requester.identifier",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.requester.identifier",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "estab-2",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números.",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "value.matches('^(?!(\\\\d)\\\\1{6})\\\\d{7}$')"
+          }
+        ]
       },
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.requester.identifier.id",
@@ -6851,7 +6936,8 @@ JSON Profile
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.performerType",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.performerType",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Identificador da especialidade médica do executante.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Especialidade médica do executante",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Identificação da especialidade médica do profissional executante do procedimento, conforme tabela de CBO. \r\nCaso o procedimento informado pertença à forma de organização 03.01.01 da tabela SUS, o código CBO será obrigatório.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "required",
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "Classificação Brasileira de Ocupações.",
@@ -6897,7 +6983,8 @@ JSON Profile
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.performer",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.performer",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Estabelecimento de sáude executante",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Estabelecimento de saúde executante",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Identificação única do estabelecimento executante, por meio do CNES.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
@@ -6906,6 +6993,12 @@ JSON Profile
               "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"
             ]
           }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
+          "mira-4",
+          "mira-6",
+          "mira-8",
+          "mira-11"
         ]
       },
       {
@@ -6926,7 +7019,15 @@ JSON Profile
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.performer.identifier",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.performer.identifier",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "estab-2",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números.",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "value.matches('^(?!(\\\\d)\\\\1{6})\\\\d{7}$')"
+          }
+        ]
       },
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.performer.identifier.id",
@@ -6987,13 +7088,13 @@ JSON Profile
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "ServiceRequest.reasonReference",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "ServiceRequest.reasonReference",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Motivo da solicitação",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Identificação do motivo da solicitação do procedimento, conforme Classificação Internacional de Doenças - CID ou Classificação Internacional de Atenção Primária - CIAP.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>" : [
-              <a href="StructureDefinition-BRCID10Avaliado-1.0.html" style="color: Maroon">&#x1F517;</a> "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0"
+              <a href="StructureDefinition-BRProblemaDiagnostico.html" style="color: Maroon">&#x1F517;</a> "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProblemaDiagnostico"
             ]
           }
         ]
@@ -7118,8 +7219,8 @@ JSON Profile
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.saude.gov.br">Ministério da Saúde do Brasil</a>.  
           Package br.gov.saude.rira.fhir#1.0.0-release based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-15 12:28:00 -0300">
-    2026-09-15
+  <span title="2026-09-22 13:36:00 -0300">
+    2026-09-22
   </span>
 
           <br/>

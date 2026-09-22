@@ -1,4 +1,4 @@
-# br.gov.saude.rira.fhir#1.0.0-release: Guia de Implementação da Regulação Assistencial (RIRA) da RNDS(en)
+# br.gov.saude.rira.fhir#1.0.0-release: Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS(en)
 
 ## Pages
 
@@ -21,6 +21,7 @@
 
 * [Classificação Brasileira Hierarquizada de Procedimentos Médicos (CBHPM) e da Terminologia Unificada da Saúde Suplementar (TUSS)](CodeSystem-BRCBHPMTUSS.md)
 * [Classificação Brasileira de Ocupações (CBO)](CodeSystem-BRCBO.md)
+* [Classificação Internacional de Atenção Primária - Segunda Edição - CIAP2](CodeSystem-BRCIAP2.md)
 * [Classificação Internacional de Doenças - Décima Revisão (CID-10)](CodeSystem-BRCID10.md)
 * [Categoria do Diagnóstico (CodeSystem)](CodeSystem-BRCategoriaDiagnostico.md)
 * [Justificativa da Impossibilidade de Identificação do Indivíduo (CodeSystem)](CodeSystem-BRJustificativaIndividuoNaoIdentificado.md)
@@ -35,13 +36,14 @@
 
 * [Classificação Internacional de Doenças - Décima Revisão - CID-10](ValueSet-BRCID10-1.0.md)
 * [Caráter de Atendimento no MIRA](ValueSet-BRCaraterAtendimentoMIRA.md)
-* [Categoria do Diagnóstico (ValueSet)](ValueSet-BRCategoriaDiagnostico.md)
+* [Classificação de uma condição](ValueSet-BRCategoriaCondicao.md)
 * [Estado do Documento](ValueSet-BREstadoDocumento-1.0.md)
 * [Estado da Resolução de Diagnóstico ou Problema](ValueSet-BREstadoResolucaoDiagnosticoProblema-1.0.md)
 * [Intenção de requisição de regulação assistencial](ValueSet-BRIntencaoRegulacao.md)
 * [Justificativa da Impossibilidade de Identificação do Indivíduo (ValueSet)](ValueSet-BRJustificativaIndividuoNaoIdentificado-1.0.md)
 * [Modalidade Assistencial MIRA](ValueSet-BRModalidadeAssistencialMIRA.md)
 * [Classificação Brasileira de Ocupações - CBO](ValueSet-BROcupacao-1.0.md)
+* [Classificação Internacional de Doenças e Atenção Primária](ValueSet-BRProblemaDiagnostico.md)
 * [Procedimento realizado](ValueSet-BRProcedimentosNacionais-1.0.md)
 * [Sexo](ValueSet-BRSexo-1.0.md)
 * [Status de agendamento de regulação assistencial (ValueSet)](ValueSet-BRStatusAgendamentoRegulacaoAssistencial.md)
@@ -54,8 +56,8 @@
 ### Resource Profiles
 
 * [Agendamento de Regulação Assistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md)
-* [CID10 Avaliado](StructureDefinition-BRCID10Avaliado-1.0.md)
-* [Regulação Assistencial (RIRA)](StructureDefinition-BRRegulacaoAssistencial.md)
+* [Problema/Diagnóstico](StructureDefinition-BRProblemaDiagnostico.md)
+* [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)
 * [Requisição de Regulação Assistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md)
 
 ### Extensions
@@ -64,11 +66,14 @@
 
 ### ImplementationGuides
 
-* [Guia de Implementação da Regulação Assistencial (RIRA) da RNDS](ImplementationGuide-br.gov.saude.rira.fhir.md)
+* [Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS](ImplementationGuide-br.gov.saude.rira.fhir.md)
 
 ### Examples
 
-* [Example-RIRA-Attended (Bundle)](Bundle-Example-RIRA-Attended.md)
-* [Example-RIRA-Booked (Bundle)](Bundle-Example-RIRA-Booked.md)
-* [Example-RIRA-Cancelled (Bundle)](Bundle-Example-RIRA-Cancelled.md)
-* [Example-RIRA-Pending (Bundle)](Bundle-Example-RIRA-Pending.md)
+* [example-rira-anterior-2025-com-ciap (Bundle)](Bundle-example-rira-anterior-2025-com-ciap.md)
+* [example-rira-anterior-2025-com-cid (Bundle)](Bundle-example-rira-anterior-2025-com-cid.md)
+* [example-rira-anterior-2025-sem-cid-ciap (Bundle)](Bundle-example-rira-anterior-2025-sem-cid-ciap.md)
+* [example-rira-anterior-2025-sem-cid (Bundle)](Bundle-example-rira-anterior-2025-sem-cid.md)
+* [example-rira-pendente-com-ciap (Bundle)](Bundle-example-rira-pendente-com-ciap.md)
+* [example-rira-posterior-2025-com-ciap (Bundle)](Bundle-example-rira-posterior-2025-com-ciap.md)
+* [example-rira-posterior-2025-com-cid (Bundle)](Bundle-example-rira-posterior-2025-com-cid.md)

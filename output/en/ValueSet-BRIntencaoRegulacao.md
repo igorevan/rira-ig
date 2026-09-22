@@ -1,4 +1,4 @@
-# Intenção de requisição de regulação assistencial - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Intenção de requisição de regulação assistencial - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
 
 ## ValueSet: Intenção de requisição de regulação assistencial 
 

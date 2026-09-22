@@ -1,4 +1,4 @@
-# Informações Complementares de Indivíduos Não Identificados - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Informações Complementares de Indivíduos Não Identificados - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
 
 ## Extension: Informações Complementares de Indivíduos Não Identificados 
 
@@ -10,7 +10,7 @@ Informações complementares necessárias ao Contato Assistencial na hipótese d
 
 **Usos:**
 
-* Usa este Extensão: [CID10 Avaliado](StructureDefinition-BRCID10Avaliado-1.0.md) and [Regulação Assistencial (RIRA)](StructureDefinition-BRRegulacaoAssistencial.md)
+* Usa este Extensão: [Problema/Diagnóstico](StructureDefinition-BRProblemaDiagnostico.md) and [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/br.gov.saude.rira.fhir|current/StructureDefinition/StructureDefinition-BRIndividuoNaoIdentificado-1.0.json)
 

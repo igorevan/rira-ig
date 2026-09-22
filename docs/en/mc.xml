@@ -12,7 +12,7 @@
       Nacional de Dados em Saúde</a>, na plataforma <a href="https://simplifier.net/">SIMPLIFIER.NET</a>,
     para a publicação e distribuição dos perfis relacionados aos documentos computacionais em produção na rede.</p>
 
-  <a name="bundle-rira"> </a>
+  <!-- <a name="bundle-rira"> </a>
   <h3>Bundle de Envio do RIRA</h3>
   <p> O diagrama abaixo apresenta o pacote <i>Bundle</i> no qual é condensado o RIRA, referenciando todos os dados
     relevantes para caracterizar uma regulação assistencial. </p>
@@ -23,7 +23,7 @@
 
     <img height="500" src="riraMC.png" alt="Diagrama do Bundle do RIRA" />
 
-  </div>
+  </div> -->
 
   <a name="recursos"> </a>
   <h3>Recursos FHIR</h3>
@@ -67,7 +67,7 @@
         <td><i>Condition</i></td>
         <td>
           <code>
-                <a href="StructureDefinition-BRCID10Avaliado-1.0.html">BRCID10Avaliado-1.0</a>
+                <a href="StructureDefinition-BRProblemaDiagnostico.html">BRProblemaDiagnostico</a>
           </code>
         </td>
       </tr>
@@ -216,9 +216,9 @@
         <td><a href="CodeSystem-BRCBO.html">BRCBO</a></td>
       </tr>
       <tr>
-        <td rowspan="3">
+        <td rowspan="4">
           <code>
-          <a href="StructureDefinition-BRCID10Avaliado-1.0.html">BRCID10Avaliado-1.0</a>
+          <a href="StructureDefinition-BRProblemaDiagnostico.html">BRProblemaDiagnostico</a>
           </code>
         </td>
         <td>clinicalStatus</td>
@@ -229,13 +229,16 @@
       </tr>
       <tr>
         <td>category</td>
-        <td><a href="ValueSet-BRCategoriaDiagnostico.html">BRCategoriaDiagnostico</a></td>
-        <td><a href="CodeSystem-BRCategoriaDiagnostico.html">BRCategoriaDiagnostico</a></td>
+        <td><a href="ValueSet-BRCategoriaCondicao.html">BRCategoriaCondicao</a></td>
+        <td><a href="http://terminology.hl7.org/CodeSystem/condition-category">condition-category</a></td>
       </tr>
       <tr>
-        <td>code</td>
-        <td><a href="ValueSet-BRCID10-1.0.html">BRCID10-1.0</a></td>
+        <td rowspan="2">code</td>
+        <td rowspan="2"><a href="ValueSet-BRProblemaDiagnostico.html">BRProblemaDiagnostico</a></td>
         <td><a href="CodeSystem-BRCID10.html">BRCID10</a></td>
+      </tr>
+      <tr>
+        <td><a href="CodeSystem-BRCIAP2.html">BRCIAP2</a></td>
       </tr>
     </tbody>
   </table>

@@ -1,4 +1,4 @@
-# Classificação Internacional de Doenças - Décima Revisão (CID-10) - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Classificação Internacional de Doenças - Décima Revisão (CID-10) - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
 
 ## CodeSystem: Classificação Internacional de Doenças - Décima Revisão (CID-10) 
 
@@ -8,6 +8,7 @@ Classifica as doenças e outros problemas em saúde registrados em diversos tipo
 This Code system is referenced in the definition of the following value sets:
 
 * [Classificação Internacional de Doenças - Décima Revisão - CID-10](ValueSet-BRCID10-1.0.md)
+* [Classificação Internacional de Doenças e Atenção Primária](ValueSet-BRProblemaDiagnostico.md)
 
 -------
 

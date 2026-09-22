@@ -1,4 +1,4 @@
-# Tipo de Documento (CodeSystem) - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Tipo de Documento (CodeSystem) - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
 
 ## CodeSystem: Tipo de Documento (CodeSystem) 
 

@@ -12,8 +12,10 @@
   <sch:pattern>
     <sch:title>f:ServiceRequest</sch:title>
     <sch:rule context="f:ServiceRequest">
+      <sch:assert test="count(f:id) &lt;= 0">id: maximum cardinality of 'id' is 0</sch:assert>
       <sch:assert test="count(f:implicitRules) &lt;= 0">implicitRules: maximum cardinality of 'implicitRules' is 0</sch:assert>
       <sch:assert test="count(f:language) &lt;= 0">language: maximum cardinality of 'language' is 0</sch:assert>
+      <sch:assert test="count(f:text) &lt;= 0">text: maximum cardinality of 'text' is 0</sch:assert>
       <sch:assert test="count(f:contained) &lt;= 0">contained: maximum cardinality of 'contained' is 0</sch:assert>
       <sch:assert test="count(f:identifier) &lt;= 0">identifier: maximum cardinality of 'identifier' is 0</sch:assert>
       <sch:assert test="count(f:instantiatesCanonical) &lt;= 0">instantiatesCanonical: maximum cardinality of 'instantiatesCanonical' is 0</sch:assert>
@@ -36,7 +38,6 @@
       <sch:assert test="count(f:locationCode) &lt;= 0">locationCode: maximum cardinality of 'locationCode' is 0</sch:assert>
       <sch:assert test="count(f:locationReference) &lt;= 0">locationReference: maximum cardinality of 'locationReference' is 0</sch:assert>
       <sch:assert test="count(f:reasonCode) &lt;= 0">reasonCode: maximum cardinality of 'reasonCode' is 0</sch:assert>
-      <sch:assert test="count(f:reasonReference) &gt;= 1">reasonReference: minimum cardinality of 'reasonReference' is 1</sch:assert>
       <sch:assert test="count(f:reasonReference) &lt;= 1">reasonReference: maximum cardinality of 'reasonReference' is 1</sch:assert>
       <sch:assert test="count(f:insurance) &lt;= 0">insurance: maximum cardinality of 'insurance' is 0</sch:assert>
       <sch:assert test="count(f:supportingInfo) &lt;= 0">supportingInfo: maximum cardinality of 'supportingInfo' is 0</sch:assert>

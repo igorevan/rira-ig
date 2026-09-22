@@ -1,4 +1,4 @@
-# Agendamento de Regulação Assistencial - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Agendamento de Regulação Assistencial - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
 
 ## Resource Profile: Agendamento de Regulação Assistencial 
 
@@ -7,7 +7,7 @@ Agendamento de Regulação Assistencial
 
 **Usos:**
 
-* Refere a este Perfil: [Regulação Assistencial (RIRA)](StructureDefinition-BRRegulacaoAssistencial.md)
+* Refere a este Perfil: [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/br.gov.saude.rira.fhir|current/StructureDefinition/StructureDefinition-BRAgendamentoRegulacaoAssistencial.json)
 
@@ -27,6 +27,9 @@ Other representations of profile: [CSV](../StructureDefinition-BRAgendamentoRegu
 {
   "resourceType" : "StructureDefinition",
   "id" : "BRAgendamentoRegulacaoAssistencial",
+  "meta" : {
+    "lastUpdated" : "2026-09-15T14:00:00-03:00"
+  },
   "language" : "pt-BR",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
@@ -61,7 +64,6 @@ Other representations of profile: [CSV](../StructureDefinition-BRAgendamentoRegu
   "name" : "BRAgendamentoRegulacaoAssistencial",
   "title" : "Agendamento de Regulação Assistencial",
   "status" : "active",
-  "experimental" : false,
   "date" : "2023-04-04",
   "publisher" : "Ministério da Saúde do Brasil",
   "contact" : [{
@@ -121,7 +123,7 @@ Other representations of profile: [CSV](../StructureDefinition-BRAgendamentoRegu
     {
       "id" : "Appointment.id",
       "path" : "Appointment.id",
-      "max" : "1"
+      "max" : "0"
     },
     {
       "id" : "Appointment.implicitRules",
@@ -136,7 +138,7 @@ Other representations of profile: [CSV](../StructureDefinition-BRAgendamentoRegu
     {
       "id" : "Appointment.text",
       "path" : "Appointment.text",
-      "max" : "1"
+      "max" : "0"
     },
     {
       "id" : "Appointment.contained",
@@ -151,11 +153,15 @@ Other representations of profile: [CSV](../StructureDefinition-BRAgendamentoRegu
     {
       "id" : "Appointment.status",
       "path" : "Appointment.status",
-      "short" : "Status da solicitação.",
-      "definition" : "O código que identifica unicamente o status da solicitação, conforme tabela de status de solicitação.",
+      "condition" : ["mira-13",
+      "mira-14",
+      "mira-15",
+      "mira-16",
+      "mira-17",
+      "mira-18",
+      "mira-19"],
       "binding" : {
         "strength" : "required",
-        "description" : "Status do agendamento",
         "valueSet" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial"
       }
     },
@@ -167,8 +173,8 @@ Other representations of profile: [CSV](../StructureDefinition-BRAgendamentoRegu
     {
       "id" : "Appointment.serviceCategory",
       "path" : "Appointment.serviceCategory",
-      "short" : "Modalidade assistencial.",
-      "definition" : "O código que identifica unicamente a modalidade, conforme tabela de modalidades.",
+      "short" : "Modalidade assistencial",
+      "definition" : "Modalidade assistencial que gerou a solicitação do procedimento.",
       "min" : 1,
       "max" : "1",
       "binding" : {
@@ -201,7 +207,7 @@ Other representations of profile: [CSV](../StructureDefinition-BRAgendamentoRegu
     {
       "id" : "Appointment.serviceType",
       "path" : "Appointment.serviceType",
-      "short" : "Código do procedimento.",
+      "short" : "Código do procedimento",
       "definition" : "O código que identifica unicamente o procedimento conforme tabela SUS.",
       "min" : 1,
       "max" : "1",
@@ -235,8 +241,8 @@ Other representations of profile: [CSV](../StructureDefinition-BRAgendamentoRegu
     {
       "id" : "Appointment.specialty",
       "path" : "Appointment.specialty",
-      "short" : "Identificador da especialidade médica do executante.",
-      "definition" : "O código que identifica unicamente a especialidade do executante conforme tabela de CBO.",
+      "short" : "Especialidade médica do executante",
+      "definition" : "Identificação da especialidade médica do profissional executante do procedimento, conforme tabela de CBO. \r\nCaso o procedimento informado pertença à forma de organização 03.01.01 da tabela SUS, o código CBO será obrigatório.",
       "max" : "1",
       "binding" : {
         "strength" : "required",
@@ -268,11 +274,11 @@ Other representations of profile: [CSV](../StructureDefinition-BRAgendamentoRegu
     {
       "id" : "Appointment.appointmentType",
       "path" : "Appointment.appointmentType",
-      "short" : "Caráter da solicitação.",
-      "definition" : "O código que identifica unicamente o caráter da solicitação, conforme tabela de caráter da solicitação.",
+      "short" : "Caráter da solicitação",
+      "definition" : "O código que identifica unicamente o caráter da solicitação do procedimento, conforme tabela de caráter da solicitação.",
       "min" : 1,
       "binding" : {
-        "strength" : "preferred",
+        "strength" : "required",
         "description" : "Caráter de atendimento.",
         "valueSet" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCaraterAtendimentoMIRA"
       }
@@ -307,11 +313,11 @@ Other representations of profile: [CSV](../StructureDefinition-BRAgendamentoRegu
       "id" : "Appointment.reasonReference",
       "path" : "Appointment.reasonReference",
       "short" : "Motivo da solicitação",
-      "min" : 1,
+      "definition" : "Identificação do motivo da solicitação do procedimento, conforme Classificação Internacional de Doenças - CID ou Classificação Internacional de Atenção Primária - CIAP.",
       "max" : "1",
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0"]
+        "targetProfile" : ["http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProblemaDiagnostico"]
       }]
     },
     {
@@ -409,7 +415,8 @@ Other representations of profile: [CSV](../StructureDefinition-BRAgendamentoRegu
       "id" : "Appointment.supportingInformation:regulatoryOrganization",
       "path" : "Appointment.supportingInformation",
       "sliceName" : "regulatoryOrganization",
-      "short" : "Estabelecimento de Saúde Regulador",
+      "short" : "Estabelecimento de saúde regulador",
+      "definition" : "Identificação única do estabelecimento regulador, por meio do CNES.",
       "max" : "1",
       "type" : [{
         "code" : "Reference",
@@ -425,6 +432,17 @@ Other representations of profile: [CSV](../StructureDefinition-BRAgendamentoRegu
       "id" : "Appointment.supportingInformation:regulatoryOrganization.type",
       "path" : "Appointment.supportingInformation.type",
       "max" : "0"
+    },
+    {
+      "id" : "Appointment.supportingInformation:regulatoryOrganization.identifier",
+      "path" : "Appointment.supportingInformation.identifier",
+      "min" : 1,
+      "constraint" : [{
+        "key" : "estab-2",
+        "severity" : "error",
+        "human" : "O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números.",
+        "expression" : "value.matches('^(?!(\\\\d)\\\\1{6})\\\\d{7}$')"
+      }]
     },
     {
       "id" : "Appointment.supportingInformation:regulatoryOrganization.identifier.id",
@@ -444,7 +462,13 @@ Other representations of profile: [CSV](../StructureDefinition-BRAgendamentoRegu
     {
       "id" : "Appointment.supportingInformation:regulatoryOrganization.identifier.system",
       "path" : "Appointment.supportingInformation.identifier.system",
+      "min" : 1,
       "fixedUri" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"
+    },
+    {
+      "id" : "Appointment.supportingInformation:regulatoryOrganization.identifier.value",
+      "path" : "Appointment.supportingInformation.identifier.value",
+      "min" : 1
     },
     {
       "id" : "Appointment.supportingInformation:regulatoryOrganization.identifier.period",
@@ -464,14 +488,16 @@ Other representations of profile: [CSV](../StructureDefinition-BRAgendamentoRegu
     {
       "id" : "Appointment.start",
       "path" : "Appointment.start",
-      "short" : "Data Inicial de Agendamento",
-      "definition" : "A data e hora inicial em que o procedimento regulado foi agendado no padrão ISO 8601."
+      "short" : "Data de agendamento - início",
+      "definition" : "A data e hora agendada para a realização do procedimento regulado no padrão ISO 8601.",
+      "condition" : ["mira-2", "mira-5", "mira-7", "mira-10"]
     },
     {
       "id" : "Appointment.end",
       "path" : "Appointment.end",
-      "short" : "Data Final de Agendamento",
-      "definition" : "A data e hora final em que o procedimento regulado foi agendado no padrão ISO 8601."
+      "short" : "Data de agendamento - fim",
+      "definition" : "A data e hora agendada para a realização do procedimento regulado no padrão ISO 8601.",
+      "condition" : ["mira-2", "mira-5", "mira-7", "mira-10"]
     },
     {
       "id" : "Appointment.minutesDuration",
@@ -486,13 +512,8 @@ Other representations of profile: [CSV](../StructureDefinition-BRAgendamentoRegu
     {
       "id" : "Appointment.created",
       "path" : "Appointment.created",
-      "short" : "Data da Autorização",
-      "definition" : "A data e hora da autoriação do procedimento regulado no padrão ISO 8601.",
-      "mapping" : [{
-        "identity" : "rnds",
-        "map" : "Data de autorização",
-        "comment" : "Portaria conjunta SAES/SEIDIGI nº 3, de 18 de abril de 2023"
-      }]
+      "short" : "Data de autorização",
+      "definition" : "A data e hora em que a solicitação de procedimento regulado foi autorizada no padrão ISO 8601."
     },
     {
       "id" : "Appointment.comment",
@@ -542,7 +563,8 @@ Other representations of profile: [CSV](../StructureDefinition-BRAgendamentoRegu
     {
       "id" : "Appointment.participant",
       "path" : "Appointment.participant",
-      "short" : "Paciente",
+      "short" : "Identificador do paciente",
+      "definition" : "Identificação única do paciente, por meio de CPF ou CNS.",
       "max" : "1"
     },
     {
@@ -602,6 +624,8 @@ Other representations of profile: [CSV](../StructureDefinition-BRAgendamentoRegu
     {
       "id" : "Appointment.participant.actor",
       "path" : "Appointment.participant.actor",
+      "short" : "Identificador do paciente",
+      "definition" : "Identificação única do paciente, por meio de CPF ou CNS.",
       "min" : 1,
       "type" : [{
         "code" : "Reference",
@@ -626,7 +650,13 @@ Other representations of profile: [CSV](../StructureDefinition-BRAgendamentoRegu
     {
       "id" : "Appointment.participant.actor.identifier",
       "path" : "Appointment.participant.actor.identifier",
-      "min" : 1
+      "min" : 1,
+      "constraint" : [{
+        "key" : "ident-1",
+        "severity" : "error",
+        "human" : "O número de CPF ou CNS informado é inválido (identifier.value).",
+        "expression" : "value.matches('^(?!(\\\\d)\\\\1{10})\\\\d{11}$') or value.matches('^(?!(\\\\d)\\\\1{14})[125789]\\\\d{14}$')"
+      }]
     },
     {
       "id" : "Appointment.participant.actor.identifier.id",
@@ -676,7 +706,7 @@ Other representations of profile: [CSV](../StructureDefinition-BRAgendamentoRegu
     {
       "id" : "Appointment.participant.status",
       "path" : "Appointment.participant.status",
-      "short" : "Status da participação no agendamento.",
+      "short" : "Status da participação no agendamento",
       "binding" : {
         "strength" : "required",
         "description" : "Status da participação no agendamento.",

@@ -1,0 +1,3197 @@
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Classificação Internacional de Atenção Primária - Segunda Edição - CIAP2 - JSON Representation - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"12.26"}
+    h3,h4,h5,h6{--heading-prefix:"12.26"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-release - STU1
+
+
+
+  <img alt="Brazil flag" src="../assets/images/bra.svg" height="16" title="Brazil"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Principal</a>
+  </li>
+  <li>
+    <a href="abstract.html">Abstract</a>
+  </li>
+  <!-- <li>
+    <a href="lives.html">Lives</a>
+  </li> -->
+  <li>
+    <a href="credenciamento.html">Credenciamento</a>
+  </li>
+  <li>
+    <a href="integracao.html">Integração</a>
+  </li>
+
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="mi.html" class="dropdown-toggle"> RIRA <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="mi.html">Modelo de Informação</a>
+      </li>
+      <li>
+        <a href="mc.html">Modelo Computacional</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="artifacts.html" class="dropdown-toggle"> Especificação <b
+        class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artefatos</a>
+      </li>
+      <li>
+        <a href="exemplos.html">Exemplos</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="toc.html" class="dropdown-toggle"> Ajuda <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="toc.html">Índice</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/R4/index.html"> Especificações do FHIR R4 <img
+            src="external.png"
+            style="text-align: baseline" />
+        </a>
+      </li>
+      <li>
+        <a href="changes.html">Histórico de mudanças</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="forms.html">Feedback</a>
+      </li>
+      <li>
+        <a href="suporte.html">Suporte da RNDS</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Índice</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Classificação Internacional de Atenção Primária - Segunda Edição - CIAP2</b></li>
+
+          <span style="float: var(--ig-right);">
+
+            <a href="CodeSystem-BRCIAP2.xml.html">&lt; prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="CodeSystem-BRCIAP2.ttl.html">next &gt;</a>
+
+          </span>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<!-- layouts\layout-instance-format -->
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS - Compilação de desenvolvimento local (v1.0.0-release) construída pelas ferramentas de compilação FHIR (HL7&reg; FHIR&reg; Standard). Veja o <a href='http://fhir.saude.gov.br/rira/history.html'>Diretório de versões publicadas</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="CodeSystem-BRCIAP2.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="CodeSystem-BRCIAP2.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="CodeSystem-BRCIAP2.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+
+<h2 id="root">: Classificação Internacional de Atenção Primária - Segunda Edição - CIAP2</h2>
+
+  <table class="colsn" data-fhir="generated">
+    <tr>
+
+      <td colspan="1">
+        
+          <i>Page standards status:</i> <a href="http://hl7.org/fhir/R4/versions.html#std-process" title="Standards Status">Normative</a>
+          
+        
+      </td>
+
+      <td>
+        <a href="http://hl7.org/fhir/versions.html#maturity">Maturity Level</a>: 1
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="CodeSystem-BRCIAP2.json" no-download="true">Raw json</a> | <a href="CodeSystem-BRCIAP2.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code style="white-space: pre; text-wrap: nowrap;">{
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem">resourceType</a>" : "CodeSystem",
+  "<a href="http://hl7.org/fhir/R4/resource.html#CodeSystem.id">id</a>" : "BRCIAP2",
+  "<a href="http://hl7.org/fhir/R4/resource.html#CodeSystem.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a>" : "2020-03-11T19:10:04.975+00:00"
+  },
+  "<a href="http://hl7.org/fhir/R4/resource.html#CodeSystem.language">language</a>" : "en",
+  "<a href="http://hl7.org/fhir/R4/domainresource.html#CodeSystem.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated"
+  },
+  "<a href="http://hl7.org/fhir/R4/domainresource.html#CodeSystem.extension">extension</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "ehr"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueInteger</a>" : 1,
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">_valueInteger</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#integer.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "normative",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">_valueCode</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#code.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "4.0.1"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.url">url</a>" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCIAP2",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.version">version</a>" : "1.0.0-release",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.name">name</a>" : "BRCIAP2",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.title">title</a>" : "Classificação Internacional de Atenção Primária - Segunda Edição - CIAP2",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.experimental">experimental</a>" : false,
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.date">date</a>" : "2020-03-11T19:10:21.0842411+00:00",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.publisher">publisher</a>" : "Ministério da Saúde do Brasil",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "Ministério da Saúde do Brasil",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "http://www.saude.gov.br"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "email",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "cgiis.datasus@saude.gov.br"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.description">description</a>" : "Classifica os problemas identificados no contato assistencial pelos profissionais de saúde, os motivos da contato assistencial e as respostas propostas pela equipe seguindo a sistematização SOAP.",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.jurisdiction">jurisdiction</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "urn:iso:std:iso:3166",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "BR"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a>" : true,
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.content">content</a>" : "complete",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A01",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dor generalizada /múltipla"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A02",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Arrepios/ calafrios"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A03",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Febre"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A04",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Debilidade/cansaço geral/fadiga"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A05",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sentir-se doente"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A06",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Desmaio/síncope"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A07",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Coma"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A08",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Inchaço"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A09",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Problemas de sudorese"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A10",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sangramento/Hemorragia NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A11",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dores torácicas NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A13",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Receio/Medo do tratamento"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A16",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Criança irritável"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A18",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Preocupação com aparência"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A20",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Pedido/discussão eutanásia"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A21",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Fator de risco de malignidade"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A23",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Fator de risco NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A25",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de morrer/medo da morte"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A26",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de câncer NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A27",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de outra doença NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A28",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Limitação funcional/incapacidade NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A29",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outros sinais/sintomas gerais"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A70",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Tuberculose"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A71",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sarampo"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A72",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Varicela"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A73",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Malária"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A74",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Rubéola"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A75",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Mononucleose infecciosa"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A76",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outro exantema viral"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A77",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dengue e outras doenças virais NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A78",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hanseníase e outras doenças infecciosas NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A79",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Carcinomatose (localização primária desconhecida)"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A80",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Lesão traumática/acidente NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A81",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Politraumatismos/ferimentos múltiplos"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A82",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Efeito secundário de lesão traumática"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A84",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Intoxicação por medicamento"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A85",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Efeito adverso de fármaco dose correta"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A86",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Efeito tóxico de substância não medicinal"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A87",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Complicações de tratamento médico"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A88",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Efeito adverso de fator físico"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A89",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Efeito da prótese"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A90",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Malformação congênita NE/múltiplas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A91",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Investigação com resultado anormal NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A92",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Alergia/reação alérgica NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A93",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Recém nascido prematuro"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A94",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Morbidade perinatal, outra"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A95",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Mortalidade perinatal"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A96",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Morte"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A97",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sem doença"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A98",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medicina preventiva/manutenção da saúde"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "A99",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outras doenças gerais NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "B02",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Gânglio linfático aumentado/doloroso"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "B04",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas sangue"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "B25",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de VIH/ HIV/SIDA/ AIDS"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "B26",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de câncer no sangue/linfático"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "B27",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de outras doenças do sangue /vasos linfáticos"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "B28",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Limitação funcional/incapacidade"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "B29",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outros sinais/ sintomas do sangue/ sistema linfático/ baço NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "B70",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Linfadenite aguda"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "B71",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Linfadenite crónica NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "B72",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Doença de Hodgkin/linfomas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "B73",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Leucemia"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "B74",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outra neoplasia maligna no sangue"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "B75",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia benigna NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "B76",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Rotura traumática do baço"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "B77",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outras lesões traumáticas do sangue/linfa/baço"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "B78",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Anemia hemolítica hereditária"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "B79",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outra malformação congênita do sangue/linfática"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "B80",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Anemia por deficiência de ferro"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "B81",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Anemia perniciosa/deficiência de folatos"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "B82",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outras anemias NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "B83",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Púrpura/defeitos de coagulação"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "B84",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Glóbulos brancos anormais"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "B87",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Esplenomegalia"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "B90",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Infecção por VIH/ HIV/SIDA/ AIDS"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "B99",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outra doença do sangue/linfáticos/baço"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D01",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dor abdominal generalizada/cólicas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D02",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dores abdominais, epigástricas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D03",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Azia/ Queimação"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D04",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dor anal/retal"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D05",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Irritação perianal"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D06",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outras dores abdominais localizadas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D07",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dispepsia/indigestão"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D08",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Flatulência /gases/eructações"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D09",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Náusea"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D10",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Vomito"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D11",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Diarreia"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D12",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Obstipação"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D13",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Icterícia"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D14",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hematêmese/vómito sangue"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D15",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Melena"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D16",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hemorragia retal"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D17",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Incontinência fecal"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D18",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Alterações nas fezes/mov. intestinais"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D19",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas dos dentes/gengivas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D20",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas da boca/língua/lábios"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D21",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Problemas de deglutição"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D23",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hepatomegalia"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D24",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Massa abdominal NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D25",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Distensão abdominal"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D26",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de câncer no aparelho digestivo"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D27",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de outras doenças aparelho digestivo"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D28",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Limitação funcional/incapacidade"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D29",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outros sinais/sintomas digestivos"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D70",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Infecção gastrointestinal"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D71",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Caxumba/parotidite epidêmica"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D72",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hepatite viral"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D73",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Gastroenterite, presumível infecção"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D74",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia maligna do estômago"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D75",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia maligna do cólon/reto"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D76",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia maligna do pâncreas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D77",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia maligna do aparelho digestivo NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D78",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia benigna do aparelho digestivo/incerta"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D79",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Corpo estranho no aparelho digestivo"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D80",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outras lesões traumáticas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D81",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Malformações congênitas do aparelho digestivo"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D82",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Doença dos dentes/gengivas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D83",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Doença da boca/língua/lábios"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D84",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Doença do esôfago"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D85",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Úlcera do duodeno"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D86",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Úlcera péptica, outra"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D87",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Alterações funcionais estômago"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D88",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Apendicite"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D89",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hérnia inguinal"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D90",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hérnia de hiato /diafragmática"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D91",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hérnia abdominal, outras"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D92",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Doença diverticular intestinal"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D93",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Síndrome do cólon irritável"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D94",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Enterite crónica/colite ulcerosa"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D95",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Fissura anal / abcesso perianal"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D96",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Lombrigas /outros parasitas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D97",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Doenças do fígado /NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D98",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Colecistite, colelitiase"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "D99",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outra doença do aparelho digestivo"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F01",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dor no olho"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F02",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Olho vermelho"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F03",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Secreção ocular"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F04",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Moscas volantes/pontos luminosos/escotomas/ manchas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F05",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outras perturbações visuais"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F13",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sensações oculares anormais"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F14",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Movimentos oculares anormais"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F15",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Aparência anormal nos olhos"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F16",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas das pálpebras"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F17",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas relacionados a óculos"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F18",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas relacionados a lentes de contato"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F27",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de doença ocular"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F28",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Limitação funcional/incapacidade"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F29",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outros sinais/sintomas oculares"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F70",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Conjuntivite infecciosa"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F71",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Conjuntivite alérgica"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F72",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Blefarite/hordéolo/calázio"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F73",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outras infecções/inflamações oculares"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F74",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia do olho/anexos"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F75",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Contusão/hemorragia ocular"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F76",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Corpo estranho ocular"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F79",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outras lesões traumáticas oculares"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F80",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Obstrução canal lacrimal da criança"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F81",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outras malformações congênitas do olho"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F82",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Descolamento da retina"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F83",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Retinopatia"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F84",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Degeneração macular"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F85",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Ulcera da córnea"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F86",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Tracoma"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F91",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Erro de refração"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F92",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Catarata"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F93",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Glaucoma"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F94",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Cegueira"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F95",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Estrabismo"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "F99",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outra doenças oculares/anexos"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H01",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dor de ouvidos"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H02",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Problemas de audição"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H03",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Acufeno, zumbidos, ruído, assobios"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H04",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Secreção no ouvido"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H05",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hemorragia no ouvido"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H13",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sensação de ouvido tapado"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H15",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Preocupação com a aparência das orelhas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H27",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de doença do ouvido"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H28",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Limitação funcional/incapacidade"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H29",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outros sinais/sintomas ouvido"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H70",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Otite externa"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H71",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Otite media aguda/miringite"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H72",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Otite média serosa"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H73",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Infecção da Trompa de Eustáquio"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H74",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Otite media crónica"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H75",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia do ouvido"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H76",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Corpo estranho do ouvido"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H77",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Perfuração do tímpano"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H78",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Traumatismo superficial do ouvido"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H79",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outros traumatismos do ouvido"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H80",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Malformações congênitas do ouvido"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H81",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Cerúmen no ouvido em excesso"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H82",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Síndrome vertiginosa"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H83",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Otoesclerose"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H84",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Presbiacusia"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H85",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Lesão acústica"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H86",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Surdez"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "H99",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outra doença do ouvido/mastóide"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K01",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dor atribuída ao coração"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K02",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sensação de pressão/aperto atribuída ao coração"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K03",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dores atribuídas ao aparelho circulatório NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K04",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Palpitações/percepção dos batimentos cardíacos"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K05",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outras irregularidades dos batimentos cardíacos"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K06",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Veias proeminentes"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K07",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Tornozelos inchados/edema"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K22",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Fator de risco para doença cardiovascular"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K24",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de doença cardíaca"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K25",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de hipertensão"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K27",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de outra doença cardiovascular"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K28",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Limitação funcional/incapacidade"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K29",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outros sinais/sintomas cardiovasculares"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K70",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Doença infecciosa do aparelho circulatório"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K71",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Febre reumática/cardiopatia"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K72",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia do aparelho circulatório"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K73",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Malformações congênitas do aparelho circulatório"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K74",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Doença cardíaca isquémica com angina"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K75",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Infarto ou Enfarte agudo miocárdio"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K76",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Doença cardíaca isquémica sem angina"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K77",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Insuficiência cardíaca"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K78",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Fibrilação/flutter auricular/ atrial"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K79",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Taquicardia Paroxística"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K80",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Arritmia cardíaca NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K81",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sopro cardíaco/arterial NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K82",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Doença cardiopulmonar"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K83",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Doença valvular cardíaca NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K84",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outras doenças cardíacas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K85",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Pressão arterial elevada"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K86",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hipertensão sem complicações"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K87",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hipertensão com complicações"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K88",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hipotensão postural"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K89",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Isquêmia/ acidente cerebral transitória(o)"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K90",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Trombose/acidente vascular cerebral"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K91",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Doença vascular cerebral"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K92",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Aterosclerose/doença vascular periférica"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K93",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Embolia pulmonar"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K94",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Flebite/tromboflebite"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K95",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Veias varicosas da perna"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K96",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hemorróidas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "K99",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outras doenças do aparelho circulatório"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L01",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas do pescoço"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L02",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas da região dorsal"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L03",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas da região lombar"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L04",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas do tórax"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L05",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas da axila"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L07",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas da mandíbula"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L08",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas dos ombros"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L09",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas dos braços"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L10",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas dos cotovelos"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L11",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas dos punhos"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L12",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas das mãos e dedos"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L13",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas do quadril"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L14",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas da coxa/perna"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L15",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas do joelho"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L16",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas do tornozelo"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L17",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas do pé/dedos pé"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L18",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dores musculares"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L19",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas musculares NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L20",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas das articulações NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L26",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de câncer no aparelho músculo-esquelético"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L27",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de doença no aparelho músculo-esquelético, outro"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L28",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Limitação funcional/incapacidade"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L29",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outros sinais/sintomas do aparelho músculo-esquelético"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L70",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Infecções do aparelho músculo-esquelético"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L71",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia maligna do aparelho músculo-esquelético"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L72",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Fratura: rádio/cúbito"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L73",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Fratura: tíbia/perônio/ fíbula"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L74",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Fratura: osso da mão/pé"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L75",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Fratura: fémur"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L76",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outras fraturas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L77",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Entorses e distensões do tornozelo"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L78",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Entorses e distensões do joelho"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L79",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Entorses e distensões das articulações NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L80",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Luxação/subluxação"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L81",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Traumatismos do aparelho musculoesquelético NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L82",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Malformações congênitas do aparelho músculo-esquelético"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L83",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Doenças ou síndromes da coluna cervical"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L84",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Doenças ou síndromes da coluna sem irradiação de dor"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L85",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Deformação adquirida da coluna"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L86",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Síndrome vertebral com irradiação dor"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L87",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Bursite/tendinite/sinovite NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L88",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Artrite reumatóide/seropositiva"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L89",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Osteoartrose do quadril"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L90",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Osteoartrose do joelho"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L91",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outras osteoartroses"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L92",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Síndrome do ombro doloroso"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L93",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Cotovelo de tenista"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L94",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Osteocondrose"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L95",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Osteoporose"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L96",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Lesão interna aguda do joelho"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L97",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia benigna/incertas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L98",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Malformação adquirida de um membro"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "L99",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outra doença do aparelho músculo-esquelético"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N01",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Cefaléia"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N03",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dores da face"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N04",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Síndrome das pernas inquietas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N05",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Formigamento/ parestesia nos dedos das mãos/pés"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N06",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outras alterações da sensibilidade"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N07",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Convulsões/ataques"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N08",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Movimentos involuntários anormais"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N16",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Alterações do olfato/gosto"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N17",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Vertigens/tonturas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N18",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Paralisia/fraqueza"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N19",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Perturbações da fala"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N26",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de câncer do sistema neurológico"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N27",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de outras doenças neurológicas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N28",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Limitação funcional/incapacidade"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N29",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas do sistema neurológico, outros"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N70",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Poliomielite"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N71",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Meningite/encefalite"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N72",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Tétano"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N73",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outra infecção neurológica"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N74",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia maligna do sistema neurológico"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N75",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia benigna do sistema neurológico"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N76",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia do sistema neurológico de natureza incerta"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N79",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Concussão"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N80",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outras lesões cranianas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N81",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outra lesão do sistema neurológico"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N85",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Malformações congênitas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N86",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Esclerose múltipla"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N87",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Parkinsonismo"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N88",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Epilepsia"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N89",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Enxaqueca"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N90",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Cefaléia de cluster"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N91",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Paralisia facial/paralisia de Bell"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N92",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Nevralgia do trigémio"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N93",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Síndrome do túnel do carpo/ Síndrome do canal cárpico"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N94",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neurite/ Nevrite/neuropatia periférica"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N95",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Cefaléia tensional"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "N99",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outras doenças do sistema neurológico"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P01",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sensação de ansiedade/nervosismo/tensão"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P02",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Reação aguda ao estresse"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P03",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Tristeza/ Sensação de depressão"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P04",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sentir/comportar-se de forma irritável/zangada"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P05",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sensação/comportamento senil"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P06",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Perturbação do sono"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P07",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Diminuição do desejo sexual"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P08",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Diminuição da satisfação sexual"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P09",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Preocupação com a preferência sexual"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P10",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Gaguejar/balbuciar/tiques"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P11",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Problemas de alimentação da criança"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P12",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Molhar a cama/enurese"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P13",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Encoprese/outros problemas de incontinência fecal"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P15",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Abuso crônico de álcool"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P16",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Abuso agudo de álcool"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P17",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Abuso do tabaco"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P18",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Abuso de medicação"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P19",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Abuso de drogas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P20",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Alterações da memória"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P22",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas relacionados ao comportamento da criança"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P23",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas relacionados ao comportamento do adolescente"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P24",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dificuldades especificas de aprendizagem"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P25",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Problemas da fase de vida de adulto"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P27",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de perturbações mentais"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P28",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Limitação funcional/incapacidade"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P29",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas psicológicos, outros"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P70",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Demência"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P71",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outras psicoses orgânicas NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P72",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Esquizofrenia"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P73",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Psicose afetiva"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P74",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Distúrbio ansioso/estado de ansiedade"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P75",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Somatização"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P76",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Perturbações depressivas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P77",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Suicídio/tentativa de suicídio"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P78",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neurastenia"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P79",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Fobia/perturbação compulsiva"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P80",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Perturbações de personalidade"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P81",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Perturbação hipercinética"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P82",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Estresse pós traumático"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P85",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Retardo/ Atraso mental"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P86",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Anorexia nervosa, bulimia"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P98",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outras psicoses NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "P99",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outras perturbações psicológicas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R01",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dor atribuída ao aparelho respiratório"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R02",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dificuldade respiratória, dispneia"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R03",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Respiração ruidosa"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R04",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outros problemas respiratórios"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R05",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Tosse"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R06",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hemorragia nasal/epistaxe"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R07",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Espirro/congestão nasal"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R08",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outros sinais/sintomas nasais"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R09",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas dos seios paranasais"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R21",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas da garganta"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R23",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas da voz"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R24",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hemoptise"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R25",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Expectoração/mucosidade anormal"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R26",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de câncer do aparelho respiratório"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R27",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de outras doenças respiratórias"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R28",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Limitação funcional/incapacidade"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R29",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas do aparelho respiratório, outros"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R71",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Tosse convulsa/ pertussis"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R72",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Infecção estreptocócica da orofaringe"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R73",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Abcesso/furúnculo no nariz"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R74",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Infecção aguda do aparelho respiratório superior (IVAS)"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R75",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinusite crónica/aguda"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R76",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Amigdalite aguda"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R77",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Laringite/traqueíte aguda"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R78",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Bronquite/bronquiolite aguda"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R79",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Bronquite crônica"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R80",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Gripe"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R81",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Pneumonia"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R82",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Pleurite/derrame pleural"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R83",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outra infecção respiratória"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R84",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia maligna dos brônquios/pulmão"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R85",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outra neoplasia respiratória maligna"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R86",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia benigna respiratória"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R87",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Corpo estranho nariz/laringe/brônquios"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R88",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outra lesão respiratória"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R89",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Malformação congénita do aparelho respiratório"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R90",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hipertrofia das amígdalas/adenóides"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R92",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia respiratória NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R95",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Doença pulmonar obstrutiva crónica"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R96",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Asma"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R97",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Rinite alérgica"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R98",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Síndrome de hiperventilação"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "R99",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outras doenças respiratórias"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S01",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dor/sensibilidade dolorosa da pele"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S02",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Prurido"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S03",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Verrugas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S04",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Tumor/inchaço localizado"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S05",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Tumores/inchaços generalizados"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S06",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Erupção cutânea localizada"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S07",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Erupção cutânea generalizada"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S08",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Alterações da cor da pele"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S09",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Infecção dos dedos das mãos/pés"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S10",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Furúnculo/carbúnculo"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S11",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Infecção pós-traumática da pele"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S12",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Picada ou mordedura de inseto"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S13",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Mordedura animal/humana"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S14",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Queimadura/escaldão"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S15",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Corpo estranho na pele"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S16",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Traumatismo/contusão"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S17",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Abrasão/arranhão/bolhas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S18",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Laceração/corte"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S19",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outra lesão cutânea"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S20",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Calos/calosidades"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S21",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas da textura da pele"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S22",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas das unhas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S23",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Queda de cabelo/calvície"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S24",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas do cabelo/couro cabeludo"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S26",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de câncer de pele"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S27",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de outra doença da pele"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S28",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Limitação funcional/incapacidade"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S29",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas da pele, outros"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S70",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Herpes zoster"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S71",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Herpes simples"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S72",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Escabiose/outras acaríases"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S73",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Pediculose/outras infecções da pele"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S74",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dermatofitose"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S75",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Monilíase oral/candidíase na pele"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S76",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outras infecções da pele"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S77",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasias malignas da pele"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S78",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Lipoma"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S79",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia cutânea benigna/incerta"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S80",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Ceratose/ Queratose solar/queimadura solar"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S81",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hemangioma/linfangioma"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S82",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Nevos/sinais da pele"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S83",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Lesões da pele congênitas, outras"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S84",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Impetigo"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S85",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Cisto pilonidal/fistula"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S86",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dermatite seborreica"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S87",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dermatite/eczema atópico"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S88",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dermatite de contato/alérgica"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S89",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dermatite das fraldas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S90",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Pitiríase rosada"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S91",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Psoríase"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S92",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Doença das glândulas sudoríparas"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S93",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Cisto sebáceo"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S94",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Unha encravada"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S95",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Molusco contagioso"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S96",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Acne"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S97",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Úlcera crónica da pele"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S98",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Urticária"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "S99",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outras doenças da pele"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T01",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sede excessiva"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T02",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Apetite excessivo"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T03",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Perda de apetite"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T04",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Problemas alimentares de lactente/criança"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T05",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Problemas alimentares do adulto"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T07",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Aumento de peso"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T08",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Perda de peso"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T10",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Atraso do crescimento"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T11",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Desidratação"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T26",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de câncer do sistema endócrino"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T27",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de outra doença endócrina/metabólica"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T28",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Limitação funcional/incapacidade"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T29",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas endocrinológicos/metabolicos/nutricionais, outros"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T70",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Infecção endócrina"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T71",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia maligna da tiróide"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T72",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia benigna da tiróide"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T73",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outra neoplasia endócrina NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T78",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Cisto do canal tiroglosso"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T80",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Malformação congénita endócrina/metabólica"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T81",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Bócio"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T82",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Obesidade"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T83",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Excesso de peso"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T85",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hipertiroidismo/tireotoxicose"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T86",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hipotiroidismo/mixedema"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T87",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hipoglicemia"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T89",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Diabetes insulino-dependente"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T90",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Diabetes não insulino-dependente"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T91",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Deficiência vitamínica/nutricional"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T92",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Gota"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T93",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Alteração no metabolismo dos lípidos"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "T99",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outras doenças endocrinológica/metabólica/nutricionais"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U01",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Disúria/micção dolorosa"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U02",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Micção frequente/urgência urinária/ polaciúria"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U04",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Incontinência urinária"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U05",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outros problemas com a micção"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U06",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hematúria"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U07",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outros sinais/sintomas urinários"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U08",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Retenção urinária"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U13",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas da bexiga, outros"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U14",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas dos rins"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U26",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de câncer no aparelho urinário"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U27",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de outra doença urinária"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U28",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Limitação funcional/incapacidade"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U29",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas aparelho urinário, outros"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U70",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Pielonefrite"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U71",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Cistite/outra infecção urinária"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U72",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Uretrite"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U75",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia maligna do rim"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U76",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia benigna do rim"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U77",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia maligna do aparelho urinário, outra"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U78",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia benigna do aparelho urinário"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U79",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia do aparelho urinário NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U80",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Lesões traumáticas do aparelho urinário"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U85",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Malformação congénita do aparelho urinário"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U88",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Glomerulonefrite/ sindrome nefrótica"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U90",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Albuminúria/proteinúria ortostática"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U95",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Cálculo urinário"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U98",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Análise de urina anormal NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U99",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outras doenças urinárias"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W01",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Questão sobre gravidez"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W02",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de estar grávida"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W03",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hemorragia antes do parto"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W05",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Vómitos/náuseas durante a gravidez"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W10",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Contracepção pós-coital"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W11",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Contracepção oral"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W12",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Contracepção intra-uterina/ Dispositivo Intrauterino/ DIU"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W13",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Esterilização"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W14",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Contracepção/outros"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W15",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Infertilidade/subfertildade"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W17",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hemorragia pós-parto"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W18",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas pós-parto"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W19",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas da mama/lactação"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W21",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Preocupação com a imagem corporal na gravidez"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W27",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de complicações na gravidez"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W28",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Limitação funcional/incapacidade"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W29",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas da gravidez, outros"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W70",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sepsis/infecção puerperal"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W71",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Infecções que complicam a gravidez"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W72",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia maligna relacionada com gravidez"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W73",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia benigna/incerta relacionada com a gravidez"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W75",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Lesões traumáticas que complicam a gravidez"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W76",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Malformação congénita que complica a gravidez"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W78",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Gravidez"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W79",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Gravidez não desejada"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W80",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Gravidez ectópica"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W81",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Toxemia gravídica/ DHEG"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W82",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Aborto espontâneo"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W83",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Aborto provocado"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W84",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Gravidez de alto risco"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W85",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Diabetes gestacional"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W90",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Parto sem complicações de nascido vivo"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W91",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Parto sem complicações de natimorto"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W92",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Parto com complicações de nascido vivo"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W93",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Parto com complicações de natimorto"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W94",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Mastite puerperal"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W95",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outros problemas da mama durante gravidez/puerpério"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W96",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outras complicações do puerpério"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "W99",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Outros problemas da gravidez/parto"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X01",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dor genital"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X02",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dores menstruais"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X03",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dores intermenstruais"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X04",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Relação sexual dolorosa na mulher"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X05",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Menstruação escassa/ausente"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X06",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Menstruação excessiva"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X07",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Menstruação irregular/frequente"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X08",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hemorragia intermenstrual"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X09",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas pré-menstruais"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X10",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Desejo de alterar a data menstruação"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X11",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas da menopausa/ climatério"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X12",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hemorragia pós-menopausa"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X13",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hemorragia pós-coital"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X14",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Secreção vaginal"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X15",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas da vagina"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X16",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas da vulva"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X17",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas da pélvis feminina"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X18",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dor na mama feminina"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X19",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Tumor ou nódulo na mama feminina"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X20",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas do mamilo da mulher"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X21",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas da mama feminina, outros"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X22",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Preocupação com a aparência da mama feminina"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X23",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de doença de transmissão sexual"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X24",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de disfunção sexual"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X25",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de câncer genital"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X26",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de câncer na mama"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X27",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de outra doença genital/mama"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X28",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Limitação funcional/incapacidade"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X29",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas do aparelho genital feminino, outra"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X70",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sífilis feminina"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X71",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Gonorréia feminina"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X72",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Candidíase genital feminina"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X73",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Tricomoníase genital feminina"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X74",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Doença inflamatória pélvica"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X75",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia maligna do colo"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X76",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia maligna da mama feminina"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X77",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia maligna genital feminina, outra"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X78",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Fibromioma uterino"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X79",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia benigna da mama feminina/ fibroadenoma"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X80",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia benigna genital"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X81",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia genital feminina, outra/NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X82",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Lesão traumática genital feminina"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X83",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Malformações congênitas genitais"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X84",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Vaginite/vulvite NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X85",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Doença do colo NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X86",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Esfregaço de Papanicolau/colpocitologia oncótica anormal"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X87",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Prolapso utero-vaginal"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X88",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Doença fibrocística da mama"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X89",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Síndrome da tensão pré-menstrual"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X90",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Herpes genital feminino"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X91",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Condiloma acuminado feminino"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X92",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Infecção por clamídia"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "X99",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Doença genital feminina, outra"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y01",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dor no pênis"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y02",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dor no escroto/testículos"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y03",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Secreção uretral"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y04",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas do pênis, outros"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y05",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas do escroto/testículos, outros"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y06",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas da próstata"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y07",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Impotência NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y08",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas da função sexual masculina, outros"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y10",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Infertilidade/subfertildade masculina"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y13",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Esterilização masculina"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y14",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Planejamento familiar, outros"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y16",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas da mama masculina"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y24",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de disfunção sexual masculina"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y25",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de doença sexualmente transmissível"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y26",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de câncer genital masculino"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y27",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de doença genital masculina, outra"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y28",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Limitação funcional/incapacidade"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y29",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinais/sintomas, outros"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y70",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sífilis masculina"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y71",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Gonorréia masculina"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y72",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Herpes genital"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y73",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Prostatite/vesiculite seminal"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y74",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Orquite/epididimite"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y75",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Balanite/ Balanopostite"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y76",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Condiloma acuminado"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y77",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia maligna da próstata"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y78",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia maligna genital masculina, outra"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y79",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neoplasia benigna genital masculina NE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y80",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Traumatismo genital masculino, outro"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y81",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Fimose/prepúcio redundante"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y82",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hipospádias"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y83",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Testículo não descido/ Criptorquidia/ Testículo ectópico"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y84",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Malformação genital congénita masculina, outra"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y85",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hipertrofia benigna da próstata/ hiperplasia prostática benigna"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y86",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hidrocele"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Y99",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Doença genital masculina, outra"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Z01",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Pobreza/problemas econômicos"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Z02",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Problemas relacionados a água/alimentação"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Z03",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Problemas de habitação/vizinhança"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Z04",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Problema socio-cultural"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Z05",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Problemas com condições de trabalho"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Z06",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Problemas de desemprego"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Z07",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Problemas relacionados com educação"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Z08",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Problema relacionado com sistema de segurança social"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Z09",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Problema de ordem legal"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Z10",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Problema relacionado com sistema de saúde"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Z11",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Problema relacionado com estar doente"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Z12",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Problema de relacionamento com parceiro/ conjugal"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Z13",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Problema comportamental do parceiro/  companheiro"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Z14",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Problema por doença do parceiro/ companheiro"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Z15",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Perda ou falecimento do parceiro/ companheiro"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Z16",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Problema de relacionamento com criança"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Z18",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Problema com criança doente"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Z19",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Perda ou falecimento de criança"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Z20",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Problema de relacionamento com familiares"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Z21",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Problema comportamental de familiar"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Z22",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Problema por doença familiar"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Z23",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Perda/falecimento de familiar"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Z24",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Problema de relacionamento com amigos"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Z25",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Ato ou acontecimento violento"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Z27",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Medo de problema social"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Z28",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Limitação funcional/incapacidade"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Z29",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Problema social NE"
+    }
+  ]
+}</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:var(--ig-left);">&#xA0;
+
+                <a href="CodeSystem-BRCIAP2.xml.html">&lt; prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:var(--ig-right);">&#xA0;
+
+                <a href="CodeSystem-BRCIAP2.ttl.html">next ></a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.saude.gov.br">Ministério da Saúde do Brasil</a>.  
+          Package br.gov.saude.rira.fhir#1.0.0-release based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-09-22 13:36:00 -0300">
+    2026-09-22
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

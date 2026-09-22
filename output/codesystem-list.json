@@ -16,6 +16,14 @@
     "description" : "Classifica as profissões do mercado de trabalho brasileiro."
   },
   {
+    "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCIAP2",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRCIAP2",
+    "title" : "Classificação Internacional de Atenção Primária - Segunda Edição - CIAP2",
+    "description" : "Classifica os problemas identificados no contato assistencial pelos profissionais de saúde, os motivos da contato assistencial e as respostas propostas pela equipe seguindo a sistematização SOAP."
+  },
+  {
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
     "version" : "1.0.0-release",
     "status" : "active",

@@ -1,0 +1,1586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+    <id value="BRRegulacaoAssistencial" />
+    <meta>
+        <versionId value="1" />
+        <lastUpdated value="2026-09-15T11:47:26-03:00" />
+    </meta>
+    <language value="pt-BR" />
+    <url value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial" />
+    <version value="1.2.0" />
+    <name value="BRRegulacaoAssistencial" />
+    <title value="Regulação Assistencial" />
+    <status value="active" />
+    <date value="2023-04-04" />
+    <publisher value="Ministério da Saúde do Brasil" />
+    <contact>
+        <name value="COPIS - Coordenação de Padrões e Interoperabilidade em Saúde" />
+        <telecom>
+            <system value="url" />
+            <value value="https://webatendimento.saude.gov.br/faq/rnds" />
+        </telecom>
+    </contact>
+    <description
+        value="Documento público que coleta os dados das solicitações de regulação assistencial" />
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166" />
+            <code value="BR" />
+            <display value="Brazil" />
+        </coding>
+    </jurisdiction>
+    <fhirVersion value="4.0.1" />
+    <kind value="resource" />
+    <abstract value="false" />
+    <type value="Composition" />
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Composition" />
+    <derivation value="constraint" />
+    <differential>
+        <element id="Composition">
+            <path value="Composition" />
+            <short value="Regulação Assistencial" />
+            <definition
+                value="Documento que representa o registro de uma solicitação de regulação assistencial." />
+            <constraint>
+                <key value="ident-4" />
+                <severity value="error" />
+                <human
+                    value="O número de CPF ou CNS do indivíduo deve ser igual em seus respecitivos elementos dos recursos (subject.identifier.value ou participant.actor.identifier.value)." />
+                <expression
+                    value="(subject.identifier.value = section.entry.resolve().ofType(Appointment).participant.actor.identifier.value) and (subject.identifier.value = section.entry.resolve().ofType(Appointment).basedOn.resolve().ofType(ServiceRequest).subject.identifier.value) and (section.entry.resolve().ofType(Appointment).reasonReference.exists().not() or (subject.identifier.value = section.entry.resolve().ofType(Appointment).reasonReference.resolve().ofType(Condition).subject.identifier.value))" />
+            </constraint>
+        </element>
+        <element id="Composition.identifier">
+            <path value="Composition.identifier" />
+            <max value="0" />
+        </element>
+        <element id="Composition.status">
+            <path value="Composition.status" />
+            <short value="final | entered-in-error" />
+            <mustSupport value="true" />
+            <binding>
+                <strength value="required" />
+                <description value="Estado do Documento" />
+                <valueSet value="http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoDocumento-1.0" />
+            </binding>
+        </element>
+        <element id="Composition.type">
+            <path value="Composition.type" />
+            <short value="Tipo de Documento" />
+            <definition value="Especifica o tipo de documento que está sendo enviado na composição." />
+            <mustSupport value="true" />
+            <binding>
+                <strength value="required" />
+                <description value="Tipo de Documento" />
+                <valueSet value="http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoDocumento-1.0" />
+            </binding>
+        </element>
+        <element id="Composition.type.id">
+            <path value="Composition.type.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.type.coding">
+            <path value="Composition.type.coding" />
+            <short value="Código definido por uma terminologia" />
+            <min value="1" />
+            <max value="1" />
+            <mustSupport value="true" />
+        </element>
+        <element id="Composition.type.coding.id">
+            <path value="Composition.type.coding.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.type.coding.system">
+            <path value="Composition.type.coding.system" />
+            <short value="Identificador do sistema de terminologia" />
+            <min value="1" />
+        </element>
+        <element id="Composition.type.coding.code">
+            <path value="Composition.type.coding.code" />
+            <short value="Código conforme terminologia" />
+            <min value="1" />
+            <fixedCode value="RA" />
+        </element>
+        <element id="Composition.type.coding.display">
+            <path value="Composition.type.coding.display" />
+            <max value="0" />
+        </element>
+        <element id="Composition.type.coding.userSelected">
+            <path value="Composition.type.coding.userSelected" />
+            <max value="0" />
+        </element>
+        <element id="Composition.type.text">
+            <path value="Composition.type.text" />
+            <max value="0" />
+        </element>
+        <element id="Composition.category">
+            <path value="Composition.category" />
+            <short value="Modalidade assistencial" />
+            <definition value="Modalidade assistencial que gerou a solicitação do procedimento." />
+            <min value="1" />
+            <max value="1" />
+            <mustSupport value="true" />
+            <binding>
+                <strength value="required" />
+                <description value="Modalidade Assistencial" />
+                <valueSet
+                    value="http://www.saude.gov.br/fhir/r4/ValueSet/BRModalidadeAssistencialMIRA" />
+            </binding>
+        </element>
+        <element id="Composition.category.coding">
+            <path value="Composition.category.coding" />
+            <min value="1" />
+            <max value="1" />
+            <mustSupport value="true" />
+        </element>
+        <element id="Composition.category.coding.system">
+            <path value="Composition.category.coding.system" />
+            <min value="1" />
+        </element>
+        <element id="Composition.category.coding.code">
+            <path value="Composition.category.coding.code" />
+            <min value="1" />
+        </element>
+        <element id="Composition.category.coding.display">
+            <path value="Composition.category.coding.display" />
+            <max value="0" />
+        </element>
+        <element id="Composition.category.coding.userSelected">
+            <path value="Composition.category.coding.userSelected" />
+            <max value="0" />
+        </element>
+        <element id="Composition.category.text">
+            <path value="Composition.category.text" />
+            <max value="0" />
+        </element>
+        <element id="Composition.subject">
+            <path value="Composition.subject" />
+            <short value="Identificador do indivíduo da solicitação de regulação assistencial" />
+            <definition value="Identificação única do paciente, por meio de CPF ou CNS." />
+            <comment value="Nesta versão, a RNDS suportará somente indivíduos." />
+            <min value="1" />
+            <type>
+                <code value="Reference" />
+                <targetProfile
+                    value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0" />
+            </type>
+            <mustSupport value="true" />
+        </element>
+        <element id="Composition.subject.extension:unidentifiedPatient">
+            <path value="Composition.subject.extension" />
+            <sliceName value="unidentifiedPatient" />
+            <short value="Dados do Indivíduo Não Identificado" />
+            <type>
+                <code value="Extension" />
+                <profile
+                    value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuoNaoIdentificado-1.0" />
+            </type>
+            <mustSupport value="true" />
+        </element>
+        <element id="Composition.subject.extension:unidentifiedPatient.extension">
+            <path value="Composition.subject.extension.extension" />
+            <min value="3" />
+        </element>
+        <element id="Composition.subject.extension:unidentifiedPatient.extension:gender">
+            <path value="Composition.subject.extension.extension" />
+            <sliceName value="gender" />
+            <mustSupport value="true" />
+        </element>
+        <element id="Composition.subject.extension:unidentifiedPatient.extension:birthYear">
+            <path value="Composition.subject.extension.extension" />
+            <sliceName value="birthYear" />
+            <mustSupport value="true" />
+        </element>
+        <element id="Composition.subject.extension:unidentifiedPatient.extension:reason">
+            <path value="Composition.subject.extension.extension" />
+            <sliceName value="reason" />
+            <mustSupport value="true" />
+        </element>
+        <element id="Composition.subject.reference">
+            <path value="Composition.subject.reference" />
+            <max value="0" />
+        </element>
+        <element id="Composition.subject.type">
+            <path value="Composition.subject.type" />
+            <max value="0" />
+            <fixedUri value="Patient" />
+        </element>
+        <element id="Composition.subject.identifier">
+            <path value="Composition.subject.identifier" />
+            <short value="Referência lógica, quando a referência literal não é conhecida" />
+            <constraint>
+                <key value="ident-1" />
+                <severity value="error" />
+                <human
+                    value="O número de CPF ou CNS informado é inválido (subject.identifier.value)." />
+                <expression
+                    value="value.matches('^(?!(\\d)\\1{10})\\d{11}$') or value.matches('^(?!(\\d)\\1{14})[125789]\\d{14}$')" />
+            </constraint>
+        </element>
+        <element id="Composition.subject.identifier.use">
+            <path value="Composition.subject.identifier.use" />
+            <max value="0" />
+        </element>
+        <element id="Composition.subject.identifier.type">
+            <path value="Composition.subject.identifier.type" />
+            <max value="0" />
+        </element>
+        <element id="Composition.subject.identifier.system">
+            <path value="Composition.subject.identifier.system" />
+            <min value="1" />
+        </element>
+        <element id="Composition.subject.identifier.value">
+            <path value="Composition.subject.identifier.value" />
+            <min value="1" />
+        </element>
+        <element id="Composition.subject.identifier.period">
+            <path value="Composition.subject.identifier.period" />
+            <max value="0" />
+        </element>
+        <element id="Composition.subject.identifier.assigner">
+            <path value="Composition.subject.identifier.assigner" />
+            <max value="0" />
+        </element>
+        <element id="Composition.subject.display">
+            <path value="Composition.subject.display" />
+            <max value="0" />
+        </element>
+        <element id="Composition.encounter">
+            <path value="Composition.encounter" />
+            <max value="0" />
+        </element>
+        <element id="Composition.date">
+            <path value="Composition.date" />
+            <short value="Data/hora de Geração do Documento" />
+            <definition value="Data e hora em que o documento foi gerado." />
+            <constraint>
+                <key value="date-1" />
+                <severity value="error" />
+                <human
+                    value="A data do documento (Composition.date) deve ser no formato 'Ano-Mês-Dia'. Exemplo: 2026-01-01." />
+                <expression
+                    value="value.matches('^(200[1-9]|20[1-9]\\d|[2-9]\\d{3})-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$')" />
+            </constraint>
+            <mustSupport value="true" />
+        </element>
+        <element id="Composition.author">
+            <path value="Composition.author" />
+            <short value="Autor do documento" />
+            <definition
+                value="Identifica o Estabelecimento de Saúde responsável por gerar o documento." />
+            <comment
+                value="Nesta versão da RNDS somente serão suportadas edições provenientes de Estabelecimentos de Saúde." />
+            <type>
+                <code value="Reference" />
+                <targetProfile
+                    value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0" />
+            </type>
+            <mustSupport value="true" />
+        </element>
+        <element id="Composition.author.reference">
+            <path value="Composition.author.reference" />
+            <max value="0" />
+        </element>
+        <element id="Composition.author.type">
+            <path value="Composition.author.type" />
+            <max value="0" />
+        </element>
+        <element id="Composition.author.identifier">
+            <path value="Composition.author.identifier" />
+            <short value="Referência lógica, quando a referência literal não é conhecida" />
+            <min value="1" />
+            <constraint>
+                <key value="estab-2" />
+                <severity value="error" />
+                <human
+                    value="O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números." />
+                <expression value="value.matches('^(?!(\\d)\\1{6})\\d{7}$')" />
+            </constraint>
+        </element>
+        <element id="Composition.author.identifier.use">
+            <path value="Composition.author.identifier.use" />
+            <max value="0" />
+        </element>
+        <element id="Composition.author.identifier.type">
+            <path value="Composition.author.identifier.type" />
+            <max value="0" />
+        </element>
+        <element id="Composition.author.identifier.system">
+            <path value="Composition.author.identifier.system" />
+            <min value="1" />
+        </element>
+        <element id="Composition.author.identifier.value">
+            <path value="Composition.author.identifier.value" />
+            <min value="1" />
+        </element>
+        <element id="Composition.author.identifier.period">
+            <path value="Composition.author.identifier.period" />
+            <max value="0" />
+        </element>
+        <element id="Composition.author.identifier.assigner">
+            <path value="Composition.author.identifier.assigner" />
+            <max value="0" />
+        </element>
+        <element id="Composition.author.display">
+            <path value="Composition.author.display" />
+            <max value="0" />
+        </element>
+        <element id="Composition.title">
+            <path value="Composition.title" />
+            <short value="Título do documento" />
+            <definition value="Título do documento em linguagem humana." />
+            <mustSupport value="true" />
+        </element>
+        <element id="Composition.confidentiality">
+            <path value="Composition.confidentiality" />
+            <max value="0" />
+        </element>
+        <element id="Composition.attester">
+            <path value="Composition.attester" />
+            <max value="0" />
+        </element>
+        <element id="Composition.custodian">
+            <path value="Composition.custodian" />
+            <max value="0" />
+        </element>
+        <element id="Composition.relatesTo">
+            <path value="Composition.relatesTo" />
+            <short value="Relação a Outros Documentos" />
+            <definition
+                value="Indica uma relação entre esse documento e outro documento (ou composição) existente." />
+            <requirements
+                value="Este elemento deve ser utilizado exclusivamente para indicar que este documento substitui (replaces) outro documento / composição; ou seja, é utilizado para cancelar o anterior e passar a considerar este no seu lugar. Este documento receberá um ID próprio; o documento anterior continuará disponível na RNDS e poderá ser recuperado integralmente por referência direta ao seu ID, garantindo a rastreabilidade do processo, mas não estará diretamente disponível na timeline do cidadão." />
+            <max value="1" />
+        </element>
+        <element id="Composition.relatesTo.code">
+            <path value="Composition.relatesTo.code" />
+            <short value="Tipo de Relacionamento" />
+            <definition
+                value="Indica o tipo de relacionamento que este documento tem com o outro documento (composição)." />
+            <requirements
+                value="O valor é fixado em replaces, pois a substituição de documentos é a única operação permitida na RNDS." />
+            <fixedCode value="replaces" />
+        </element>
+        <element id="Composition.relatesTo.target[x]">
+            <path value="Composition.relatesTo.target[x]" />
+            <short value="Documento a Ser Substituído" />
+            <definition
+                value="Referência ao documento anterior que este documento está substituindo." />
+            <requirements
+                value="O valor é fixado em replaces, pois a substituição de documentos é a única operação permitida na RNDS." />
+            <type>
+                <code value="Reference" />
+                <targetProfile
+                    value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial" />
+            </type>
+        </element>
+        <element id="Composition.relatesTo.target[x].id">
+            <path value="Composition.relatesTo.target[x].id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.relatesTo.target[x].reference">
+            <path value="Composition.relatesTo.target[x].reference" />
+            <min value="1" />
+        </element>
+        <element id="Composition.relatesTo.target[x].type">
+            <path value="Composition.relatesTo.target[x].type" />
+            <max value="0" />
+        </element>
+        <element id="Composition.relatesTo.target[x].identifier">
+            <path value="Composition.relatesTo.target[x].identifier" />
+            <max value="0" />
+        </element>
+        <element id="Composition.relatesTo.target[x].display">
+            <path value="Composition.relatesTo.target[x].display" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event">
+            <path value="Composition.event" />
+            <slicing>
+                <discriminator>
+                    <type value="value" />
+                    <path value="code.coding.code" />
+                </discriminator>
+                <rules value="open" />
+            </slicing>
+            <short value="Status da Solicitação" />
+            <definition
+                value="Definição dos eventos de um processo de regulação. Neste elemento será preenchido o código que identifica unicamente o status da solicitação, conforme tabela de status de solicitação." />
+            <min value="1" />
+            <max value="1" />
+        </element>
+        <element id="Composition.event:pending">
+            <path value="Composition.event" />
+            <sliceName value="pending" />
+            <short value="Evento de solicitação de procedimento regulado" />
+            <definition
+                value="Evento destinado a modelar a solicitação de um serviço, bem como o estabelecimento solicitante." />
+            <max value="1" />
+            <constraint>
+                <key value="mira-2" />
+                <severity value="error" />
+                <human
+                    value="A Data de Agendamento (Appointment.start e Appointment.end) não pode estar preenchida caso o status da solicitação seja Pendente (pending)." />
+                <expression
+                    value="code.coding.exists(code = 'pending') implies %resource.section.entry.resolve().start.empty() and %resource.section.entry.resolve().end.empty()" />
+            </constraint>
+            <constraint>
+                <key value="mira-3" />
+                <severity value="error" />
+                <human
+                    value="A Data de Execução (ServiceRequest.ocurrenceDateTime) não pode estar preenchida caso o status da solicitação seja Pendente (pending)." />
+                <expression
+                    value="code.coding.exists(code = 'pending') implies %resource.section.entry.resolve().basedOn.resolve().occurrenceDateTime.empty()" />
+            </constraint>
+            <constraint>
+                <key value="mira-4" />
+                <severity value="error" />
+                <human
+                    value="O identificador do Estabelecimento de Saúde executante (ServiceRequest.performer) não pode estar preenchido caso o status da solicitação seja Pendente (pending)." />
+                <expression
+                    value="code.coding.exists(code = 'pending') implies %resource.section.entry.resolve().basedOn.resolve().performer.empty()" />
+            </constraint>
+            <constraint>
+                <key value="mira-13" />
+                <severity value="error" />
+                <human
+                    value="Caso o status da solicitação seja Pendente (pending) o status do recurso Appointment deve ser proposed e o status do recurso ServiceRequest deve ser active." />
+                <expression
+                    value="code.coding.exists(code = 'pending') implies %resource.section.entry.resolve().status = 'proposed' and %resource.section.entry.resolve().basedOn.resolve().status = 'active'" />
+            </constraint>
+        </element>
+        <element id="Composition.event:pending.id">
+            <path value="Composition.event.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:pending.code">
+            <path value="Composition.event.code" />
+            <min value="1" />
+            <max value="1" />
+            <binding>
+                <strength value="required" />
+                <description value="O código que identifica unicamente o status da solicitação." />
+                <valueSet
+                    value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial" />
+            </binding>
+        </element>
+        <element id="Composition.event:pending.code.id">
+            <path value="Composition.event.code.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:pending.code.coding">
+            <path value="Composition.event.code.coding" />
+            <min value="1" />
+            <max value="1" />
+        </element>
+        <element id="Composition.event:pending.code.coding.system">
+            <path value="Composition.event.code.coding.system" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:pending.code.coding.code">
+            <path value="Composition.event.code.coding.code" />
+            <min value="1" />
+            <fixedCode value="pending" />
+            <condition value="mira-2" />
+            <condition value="mira-3" />
+            <condition value="mira-4" />
+            <condition value="mira-13" />
+        </element>
+        <element id="Composition.event:pending.code.coding.userSelected">
+            <path value="Composition.event.code.coding.userSelected" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:pending.code.text">
+            <path value="Composition.event.code.text" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:pending.period">
+            <path value="Composition.event.period" />
+            <short value="Data e hora de alteração do status" />
+            <definition
+                value="Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados." />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:pending.period.id">
+            <path value="Composition.event.period.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:pending.period.end">
+            <path value="Composition.event.period.end" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:pending.detail">
+            <path value="Composition.event.detail" />
+            <short value="Detalhes sobre o status da solicitação do procedimento regulado" />
+            <type>
+                <code value="Reference" />
+                <targetProfile
+                    value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0" />
+                <targetProfile
+                    value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial" />
+            </type>
+        </element>
+        <element id="Composition.event:pending.detail.id">
+            <path value="Composition.event.detail.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:pending.detail.type">
+            <path value="Composition.event.detail.type" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:pending.detail.identifier">
+            <path value="Composition.event.detail.identifier" />
+            <short value="Estabelecimento de saúde que realizou a alteração do status" />
+            <definition
+                value="Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES." />
+            <constraint>
+                <key value="estab-2" />
+                <severity value="error" />
+                <human
+                    value="O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números." />
+                <expression value="value.matches('^(?!(\\d)\\1{6})\\d{7}$')" />
+            </constraint>
+        </element>
+        <element id="Composition.event:pending.detail.identifier.id">
+            <path value="Composition.event.detail.identifier.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:pending.detail.identifier.use">
+            <path value="Composition.event.detail.identifier.use" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:pending.detail.identifier.type">
+            <path value="Composition.event.detail.identifier.type" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:pending.detail.identifier.type.id">
+            <path value="Composition.event.detail.identifier.type.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:pending.detail.identifier.type.coding">
+            <path value="Composition.event.detail.identifier.type.coding" />
+            <min value="1" />
+            <max value="1" />
+        </element>
+        <element id="Composition.event:pending.detail.identifier.type.coding.id">
+            <path value="Composition.event.detail.identifier.type.coding.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:pending.detail.identifier.type.coding.system">
+            <path value="Composition.event.detail.identifier.type.coding.system" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:pending.detail.identifier.type.coding.code">
+            <path value="Composition.event.detail.identifier.type.coding.code" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:pending.detail.identifier.type.coding.userSelected">
+            <path value="Composition.event.detail.identifier.type.coding.userSelected" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:pending.detail.identifier.type.text">
+            <path value="Composition.event.detail.identifier.type.text" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:pending.detail.identifier.system">
+            <path value="Composition.event.detail.identifier.system" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:pending.detail.identifier.value">
+            <path value="Composition.event.detail.identifier.value" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:pending.detail.identifier.period">
+            <path value="Composition.event.detail.identifier.period" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:pending.detail.identifier.assigner">
+            <path value="Composition.event.detail.identifier.assigner" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:pending.detail.display">
+            <path value="Composition.event.detail.display" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:returned-to-requester">
+            <path value="Composition.event" />
+            <sliceName value="returned-to-requester" />
+            <short value="Evento de devolução ao solicitante" />
+            <definition
+                value="Evento destinado a modelar a devolução (feita por um estabelecimento regulador) de um serviço ao estabelecimento solicitante." />
+            <max value="1" />
+            <constraint>
+                <key value="mira-14" />
+                <severity value="error" />
+                <human
+                    value="Caso o status da solicitação seja Devolvido para o solicitante (returned-to-requester) o status do recurso Appointment deve ser waitlist e o status do recurso ServiceRequest deve ser on-hold." />
+                <expression
+                    value="code.coding.exists(code = 'returned-to-requester') implies %resource.section.entry.resolve().status = 'waitlist' and %resource.section.entry.resolve().basedOn.resolve().status = 'on-hold'" />
+            </constraint>
+        </element>
+        <element id="Composition.event:returned-to-requester.id">
+            <path value="Composition.event.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:returned-to-requester.code">
+            <path value="Composition.event.code" />
+            <min value="1" />
+            <max value="1" />
+            <binding>
+                <strength value="required" />
+                <description value="O código que identifica unicamente o status da solicitação." />
+                <valueSet
+                    value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial" />
+            </binding>
+        </element>
+        <element id="Composition.event:returned-to-requester.code.id">
+            <path value="Composition.event.code.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:returned-to-requester.code.coding">
+            <path value="Composition.event.code.coding" />
+            <min value="1" />
+            <max value="1" />
+        </element>
+        <element id="Composition.event:returned-to-requester.code.coding.id">
+            <path value="Composition.event.code.coding.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:returned-to-requester.code.coding.system">
+            <path value="Composition.event.code.coding.system" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:returned-to-requester.code.coding.code">
+            <path value="Composition.event.code.coding.code" />
+            <min value="1" />
+            <fixedCode value="returned-to-requester" />
+            <condition value="mira-14" />
+        </element>
+        <element id="Composition.event:returned-to-requester.code.coding.userSelected">
+            <path value="Composition.event.code.coding.userSelected" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:returned-to-requester.code.text">
+            <path value="Composition.event.code.text" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:returned-to-requester.period">
+            <path value="Composition.event.period" />
+            <short value="Data e hora de alteração do status" />
+            <definition
+                value="Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados." />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:returned-to-requester.period.id">
+            <path value="Composition.event.period.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:returned-to-requester.period.end">
+            <path value="Composition.event.period.end" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:returned-to-requester.detail">
+            <path value="Composition.event.detail" />
+            <short value="Detalhes sobre o status da solicitação do procedimento regulado" />
+            <type>
+                <code value="Reference" />
+                <targetProfile
+                    value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0" />
+            </type>
+        </element>
+        <element id="Composition.event:returned-to-requester.detail.id">
+            <path value="Composition.event.detail.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:returned-to-requester.detail.reference">
+            <path value="Composition.event.detail.reference" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:returned-to-requester.detail.type">
+            <path value="Composition.event.detail.type" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:returned-to-requester.detail.identifier">
+            <path value="Composition.event.detail.identifier" />
+            <short value="Estabelecimento de saúde que realizou a alteração do status" />
+            <definition
+                value="Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES." />
+            <constraint>
+                <key value="estab-2" />
+                <severity value="error" />
+                <human
+                    value="O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números." />
+                <expression value="value.matches('^(?!(\\d)\\1{6})\\d{7}$')" />
+            </constraint>
+        </element>
+        <element id="Composition.event:returned-to-requester.detail.identifier.id">
+            <path value="Composition.event.detail.identifier.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:returned-to-requester.detail.identifier.use">
+            <path value="Composition.event.detail.identifier.use" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:returned-to-requester.detail.identifier.type">
+            <path value="Composition.event.detail.identifier.type" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:returned-to-requester.detail.identifier.system">
+            <path value="Composition.event.detail.identifier.system" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:returned-to-requester.detail.identifier.value">
+            <path value="Composition.event.detail.identifier.value" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:returned-to-requester.detail.identifier.period">
+            <path value="Composition.event.detail.identifier.period" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:returned-to-requester.detail.identifier.assigner">
+            <path value="Composition.event.detail.identifier.assigner" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:returned-to-requester.detail.display">
+            <path value="Composition.event.detail.display" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:booked">
+            <path value="Composition.event" />
+            <sliceName value="booked" />
+            <short value="Evento de agendamento de procedimento regulado" />
+            <definition
+                value="Evento destinado a modelar o agendamento de um serviço, bem como o estabelecimento executante." />
+            <max value="1" />
+            <constraint>
+                <key value="mira-5" />
+                <severity value="error" />
+                <human
+                    value="A Data de Agendamento (Appointment.start e Appointment.end) deve ser preenchida caso o status da solicitação seja Agendado (booked)." />
+                <expression
+                    value="code.coding.exists(code = 'booked') implies %resource.section.entry.resolve().start.exists() and %resource.section.entry.resolve().end.exists()" />
+            </constraint>
+            <constraint>
+                <key value="mira-6" />
+                <severity value="error" />
+                <human
+                    value="O identificador do Estabelecimento de Saúde executante (ServiceRequest.performer) deve ser preenchido caso o status da solicitação seja Agendado (booked)." />
+                <expression
+                    value="code.coding.exists(code = 'booked') implies %resource.section.entry.resolve().basedOn.resolve().performer.exists()" />
+            </constraint>
+            <constraint>
+                <key value="mira-15" />
+                <severity value="error" />
+                <human
+                    value="Caso o status da solicitação seja Agendado (booked) o status do recurso Appointment deve ser booked e o status do recurso ServiceRequest deve ser active." />
+                <expression
+                    value="code.coding.exists(code = 'booked') implies %resource.section.entry.resolve().status = 'booked' and %resource.section.entry.resolve().basedOn.resolve().status = 'active'" />
+            </constraint>
+        </element>
+        <element id="Composition.event:booked.id">
+            <path value="Composition.event.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:booked.code">
+            <path value="Composition.event.code" />
+            <min value="1" />
+            <max value="1" />
+            <binding>
+                <strength value="required" />
+                <description value="O código que identifica unicamente o status da solicitação." />
+                <valueSet
+                    value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial" />
+            </binding>
+        </element>
+        <element id="Composition.event:booked.code.id">
+            <path value="Composition.event.code.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:booked.code.coding">
+            <path value="Composition.event.code.coding" />
+            <min value="1" />
+            <max value="1" />
+        </element>
+        <element id="Composition.event:booked.code.coding.id">
+            <path value="Composition.event.code.coding.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:booked.code.coding.system">
+            <path value="Composition.event.code.coding.system" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:booked.code.coding.code">
+            <path value="Composition.event.code.coding.code" />
+            <min value="1" />
+            <fixedCode value="booked" />
+            <condition value="mira-5" />
+            <condition value="mira-6" />
+            <condition value="mira-15" />
+        </element>
+        <element id="Composition.event:booked.code.coding.userSelected">
+            <path value="Composition.event.code.coding.userSelected" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:booked.code.text">
+            <path value="Composition.event.code.text" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:booked.period">
+            <path value="Composition.event.period" />
+            <short value="Data e hora de alteração do status" />
+            <definition
+                value="Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados." />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:booked.period.id">
+            <path value="Composition.event.period.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:booked.period.end">
+            <path value="Composition.event.period.end" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:booked.detail">
+            <path value="Composition.event.detail" />
+            <short value="Detalhes sobre o status da solicitação do procedimento regulado" />
+            <type>
+                <code value="Reference" />
+                <targetProfile
+                    value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0" />
+                <targetProfile
+                    value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial" />
+            </type>
+        </element>
+        <element id="Composition.event:booked.detail.id">
+            <path value="Composition.event.detail.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:booked.detail.type">
+            <path value="Composition.event.detail.type" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:booked.detail.identifier">
+            <path value="Composition.event.detail.identifier" />
+            <short value="Estabelecimento de saúde que realizou a alteração do status" />
+            <definition
+                value="Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES." />
+            <constraint>
+                <key value="estab-2" />
+                <severity value="error" />
+                <human
+                    value="O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números." />
+                <expression value="value.matches('^(?!(\\d)\\1{6})\\d{7}$')" />
+            </constraint>
+        </element>
+        <element id="Composition.event:booked.detail.identifier.id">
+            <path value="Composition.event.detail.identifier.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:booked.detail.identifier.use">
+            <path value="Composition.event.detail.identifier.use" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:booked.detail.identifier.type">
+            <path value="Composition.event.detail.identifier.type" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:booked.detail.identifier.system">
+            <path value="Composition.event.detail.identifier.system" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:booked.detail.identifier.value">
+            <path value="Composition.event.detail.identifier.value" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:booked.detail.identifier.period">
+            <path value="Composition.event.detail.identifier.period" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:booked.detail.identifier.assigner">
+            <path value="Composition.event.detail.identifier.assigner" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:booked.detail.display">
+            <path value="Composition.event.detail.display" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:attended">
+            <path value="Composition.event" />
+            <sliceName value="attended" />
+            <short value="Evento de atendimento de procedimento regulado" />
+            <definition
+                value="Evento destinado a modelar o atendimento de um serviço, bem como o estabelecimento executante." />
+            <max value="1" />
+            <constraint>
+                <key value="mira-7" />
+                <severity value="error" />
+                <human
+                    value="A Data de Agendamento (Appointment.start e Appointment.end) deve ser preenchida caso o status da solicitação seja Atendido/Internado (attended)." />
+                <expression
+                    value="code.coding.exists(code = 'attended') implies %resource.section.entry.resolve().start.exists() and %resource.section.entry.resolve().end.exists()" />
+            </constraint>
+            <constraint>
+                <key value="mira-8" />
+                <severity value="error" />
+                <human
+                    value="O identificador do Estabelecimento de Saúde executante (ServiceRequest.performer) deve ser preenchido caso o status da solicitação seja Atendido/Internado (attended)." />
+                <expression
+                    value="code.coding.exists(code = 'attended') implies %resource.section.entry.resolve().basedOn.resolve().performer.exists()" />
+            </constraint>
+            <constraint>
+                <key value="mira-9" />
+                <severity value="error" />
+                <human
+                    value="A Data de Execução (ServiceRequest.ocurrenceDateTime) deve ser preenchida caso o status da solicitação seja Atendido/Internado (attended)." />
+                <expression
+                    value="code.coding.exists(code = 'attended') implies %resource.section.entry.resolve().basedOn.resolve().occurrenceDateTime.exists()" />
+            </constraint>
+            <constraint>
+                <key value="mira-16" />
+                <severity value="error" />
+                <human
+                    value="Caso o status da solicitação seja Atendido/Internado (attended) o status do recurso Appointment deve ser fulfilled e o status do recurso ServiceRequest deve ser completed." />
+                <expression
+                    value="code.coding.exists(code = 'attended') implies %resource.section.entry.resolve().status = 'fulfilled' and %resource.section.entry.resolve().basedOn.resolve().status = 'completed'" />
+            </constraint>
+        </element>
+        <element id="Composition.event:attended.id">
+            <path value="Composition.event.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:attended.code">
+            <path value="Composition.event.code" />
+            <min value="1" />
+            <max value="1" />
+            <binding>
+                <strength value="required" />
+                <description value="O código que identifica unicamente o status da solicitação." />
+                <valueSet
+                    value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial" />
+            </binding>
+        </element>
+        <element id="Composition.event:attended.code.id">
+            <path value="Composition.event.code.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:attended.code.coding">
+            <path value="Composition.event.code.coding" />
+            <min value="1" />
+            <max value="1" />
+        </element>
+        <element id="Composition.event:attended.code.coding.id">
+            <path value="Composition.event.code.coding.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:attended.code.coding.system">
+            <path value="Composition.event.code.coding.system" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:attended.code.coding.code">
+            <path value="Composition.event.code.coding.code" />
+            <min value="1" />
+            <fixedCode value="attended" />
+            <condition value="mira-7" />
+            <condition value="mira-8" />
+            <condition value="mira-9" />
+            <condition value="mira-16" />
+        </element>
+        <element id="Composition.event:attended.code.coding.userSelected">
+            <path value="Composition.event.code.coding.userSelected" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:attended.code.text">
+            <path value="Composition.event.code.text" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:attended.period">
+            <path value="Composition.event.period" />
+            <short value="Data e hora de alteração do status" />
+            <definition
+                value="Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados." />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:attended.period.id">
+            <path value="Composition.event.period.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:attended.period.end">
+            <path value="Composition.event.period.end" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:attended.detail">
+            <path value="Composition.event.detail" />
+            <short value="Detalhes sobre o status da solicitação do procedimento regulado" />
+            <type>
+                <code value="Reference" />
+                <targetProfile
+                    value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0" />
+                <targetProfile
+                    value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial" />
+            </type>
+        </element>
+        <element id="Composition.event:attended.detail.id">
+            <path value="Composition.event.detail.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:attended.detail.type">
+            <path value="Composition.event.detail.type" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:attended.detail.identifier">
+            <path value="Composition.event.detail.identifier" />
+            <short value="Estabelecimento de saúde que realizou a alteração do status" />
+            <definition
+                value="Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES." />
+            <constraint>
+                <key value="estab-2" />
+                <severity value="error" />
+                <human
+                    value="O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números." />
+                <expression value="value.matches('^(?!(\\d)\\1{6})\\d{7}$')" />
+            </constraint>
+        </element>
+        <element id="Composition.event:attended.detail.identifier.id">
+            <path value="Composition.event.detail.identifier.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:attended.detail.identifier.use">
+            <path value="Composition.event.detail.identifier.use" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:attended.detail.identifier.type">
+            <path value="Composition.event.detail.identifier.type" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:attended.detail.identifier.system">
+            <path value="Composition.event.detail.identifier.system" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:attended.detail.identifier.value">
+            <path value="Composition.event.detail.identifier.value" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:attended.detail.identifier.period">
+            <path value="Composition.event.detail.identifier.period" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:attended.detail.identifier.assigner">
+            <path value="Composition.event.detail.identifier.assigner" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:attended.detail.display">
+            <path value="Composition.event.detail.display" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:cancelled">
+            <path value="Composition.event" />
+            <sliceName value="cancelled" />
+            <max value="1" />
+            <constraint>
+                <key value="mira-17" />
+                <severity value="error" />
+                <human
+                    value="Caso o status da solicitação seja Negado/Cancelado (cancelled) o status do recurso Appointment deve ser cancelled e o status do recurso ServiceRequest deve ser revoked." />
+                <expression
+                    value="code.coding.exists(code = 'cancelled') implies %resource.section.entry.resolve().status = 'cancelled' and %resource.section.entry.resolve().basedOn.resolve().status = 'revoked'" />
+            </constraint>
+        </element>
+        <element id="Composition.event:cancelled.id">
+            <path value="Composition.event.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:cancelled.code">
+            <path value="Composition.event.code" />
+            <min value="1" />
+            <max value="1" />
+            <binding>
+                <strength value="required" />
+                <description value="O código que identifica unicamente o status da solicitação." />
+                <valueSet
+                    value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial" />
+            </binding>
+        </element>
+        <element id="Composition.event:cancelled.code.id">
+            <path value="Composition.event.code.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:cancelled.code.coding">
+            <path value="Composition.event.code.coding" />
+            <min value="1" />
+            <max value="1" />
+        </element>
+        <element id="Composition.event:cancelled.code.coding.id">
+            <path value="Composition.event.code.coding.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:cancelled.code.coding.system">
+            <path value="Composition.event.code.coding.system" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:cancelled.code.coding.code">
+            <path value="Composition.event.code.coding.code" />
+            <min value="1" />
+            <fixedCode value="cancelled" />
+            <condition value="mira-17" />
+        </element>
+        <element id="Composition.event:cancelled.code.coding.userSelected">
+            <path value="Composition.event.code.coding.userSelected" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:cancelled.code.text">
+            <path value="Composition.event.code.text" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:cancelled.period">
+            <path value="Composition.event.period" />
+            <short value="Data e hora de alteração do status" />
+            <definition
+                value="Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados." />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:cancelled.period.id">
+            <path value="Composition.event.period.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:cancelled.period.end">
+            <path value="Composition.event.period.end" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:cancelled.detail">
+            <path value="Composition.event.detail" />
+            <short value="Detalhes sobre o status da solicitação do procedimento regulado" />
+            <type>
+                <code value="Reference" />
+                <targetProfile
+                    value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0" />
+            </type>
+        </element>
+        <element id="Composition.event:cancelled.detail.id">
+            <path value="Composition.event.detail.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:cancelled.detail.type">
+            <path value="Composition.event.detail.type" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:cancelled.detail.identifier">
+            <path value="Composition.event.detail.identifier" />
+            <short value="Estabelecimento de saúde que realizou a alteração do status" />
+            <definition
+                value="Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES." />
+            <constraint>
+                <key value="estab-2" />
+                <severity value="error" />
+                <human
+                    value="O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números." />
+                <expression value="value.matches('^(?!(\\d)\\1{6})\\d{7}$')" />
+            </constraint>
+        </element>
+        <element id="Composition.event:cancelled.detail.identifier.id">
+            <path value="Composition.event.detail.identifier.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:cancelled.detail.identifier.use">
+            <path value="Composition.event.detail.identifier.use" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:cancelled.detail.identifier.type">
+            <path value="Composition.event.detail.identifier.type" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:cancelled.detail.identifier.system">
+            <path value="Composition.event.detail.identifier.system" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:cancelled.detail.identifier.value">
+            <path value="Composition.event.detail.identifier.value" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:cancelled.detail.identifier.period">
+            <path value="Composition.event.detail.identifier.period" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:cancelled.detail.identifier.assigner">
+            <path value="Composition.event.detail.identifier.assigner" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:cancelled.detail.display">
+            <path value="Composition.event.detail.display" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:absence">
+            <path value="Composition.event" />
+            <sliceName value="absence" />
+            <max value="1" />
+            <constraint>
+                <key value="mira-10" />
+                <severity value="error" />
+                <human
+                    value="A Data de Agendamento (Appointment.start e Appointment.end) deve ser preenchida caso o status da solicitação seja Falta (absence)." />
+                <expression
+                    value="code.coding.exists(code = 'absence') implies %resource.section.entry.resolve().start.exists() and %resource.section.entry.resolve().end.exists()" />
+            </constraint>
+            <constraint>
+                <key value="mira-11" />
+                <severity value="error" />
+                <human
+                    value="O identificador do Estabelecimento de Saúde executante (ServiceRequest.performer) deve ser preenchido caso o status da solicitação seja Falta (absence)." />
+                <expression
+                    value="code.coding.exists(code = 'absence') implies %resource.section.entry.resolve().basedOn.resolve().performer.exists()" />
+            </constraint>
+            <constraint>
+                <key value="mira-12" />
+                <severity value="error" />
+                <human
+                    value="A Data de Execução (ServiceRequest.ocurrenceDateTime) deve ser preenchida caso o status da solicitação seja Falta (absence)." />
+                <expression
+                    value="code.coding.exists(code = 'absence') implies %resource.section.entry.resolve().basedOn.resolve().occurrenceDateTime.exists()" />
+            </constraint>
+            <constraint>
+                <key value="mira-18" />
+                <severity value="error" />
+                <human
+                    value="Caso o status da solicitação seja Falta (absence) o status do recurso Appointment deve ser noshow e o status do recurso ServiceRequest deve ser completed." />
+                <expression
+                    value="code.coding.exists(code = 'absence') implies %resource.section.entry.resolve().status = 'noshow' and %resource.section.entry.resolve().basedOn.resolve().status = 'completed'" />
+            </constraint>
+        </element>
+        <element id="Composition.event:absence.id">
+            <path value="Composition.event.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:absence.code">
+            <path value="Composition.event.code" />
+            <min value="1" />
+            <max value="1" />
+            <binding>
+                <strength value="required" />
+                <description value="O código que identifica unicamente o status da solicitação." />
+                <valueSet
+                    value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial" />
+            </binding>
+        </element>
+        <element id="Composition.event:absence.code.id">
+            <path value="Composition.event.code.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:absence.code.coding">
+            <path value="Composition.event.code.coding" />
+            <min value="1" />
+            <max value="1" />
+        </element>
+        <element id="Composition.event:absence.code.coding.id">
+            <path value="Composition.event.code.coding.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:absence.code.coding.system">
+            <path value="Composition.event.code.coding.system" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:absence.code.coding.code">
+            <path value="Composition.event.code.coding.code" />
+            <fixedCode value="absence" />
+            <condition value="mira-10" />
+            <condition value="mira-11" />
+            <condition value="mira-12" />
+            <condition value="mira-18" />
+        </element>
+        <element id="Composition.event:absence.code.coding.userSelected">
+            <path value="Composition.event.code.coding.userSelected" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:absence.code.text">
+            <path value="Composition.event.code.text" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:absence.period">
+            <path value="Composition.event.period" />
+            <short value="Data e hora de alteração do status" />
+            <definition
+                value="Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados." />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:absence.period.id">
+            <path value="Composition.event.period.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:absence.period.end">
+            <path value="Composition.event.period.end" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:absence.detail">
+            <path value="Composition.event.detail" />
+            <short value="Detalhes sobre o status da solicitação do procedimento regulado" />
+            <type>
+                <code value="Reference" />
+                <targetProfile
+                    value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0" />
+                <targetProfile
+                    value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial" />
+            </type>
+        </element>
+        <element id="Composition.event:absence.detail.id">
+            <path value="Composition.event.detail.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:absence.detail.type">
+            <path value="Composition.event.detail.type" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:absence.detail.identifier">
+            <path value="Composition.event.detail.identifier" />
+            <short value="Estabelecimento de saúde que realizou a alteração do status" />
+            <definition
+                value="Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES." />
+            <constraint>
+                <key value="estab-2" />
+                <severity value="error" />
+                <human
+                    value="O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números." />
+                <expression value="value.matches('^(?!(\\d)\\1{6})\\d{7}$')" />
+            </constraint>
+        </element>
+        <element id="Composition.event:absence.detail.identifier.id">
+            <path value="Composition.event.detail.identifier.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:absence.detail.identifier.use">
+            <path value="Composition.event.detail.identifier.use" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:absence.detail.identifier.type">
+            <path value="Composition.event.detail.identifier.type" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:absence.detail.identifier.system">
+            <path value="Composition.event.detail.identifier.system" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:absence.detail.identifier.value">
+            <path value="Composition.event.detail.identifier.value" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:absence.detail.identifier.period">
+            <path value="Composition.event.detail.identifier.period" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:absence.detail.identifier.assigner">
+            <path value="Composition.event.detail.identifier.assigner" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:absence.detail.display">
+            <path value="Composition.event.detail.display" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:excluded">
+            <path value="Composition.event" />
+            <sliceName value="excluded" />
+            <max value="1" />
+            <constraint>
+                <key value="mira-19" />
+                <severity value="error" />
+                <human
+                    value="Caso o status da solicitação seja Excluído (excluded) o status do recurso Appointment deve ser cancelled e o status do recurso ServiceRequest deve ser revoked." />
+                <expression
+                    value="code.coding.exists(code = 'excluded') implies %resource.section.entry.resolve().status = 'cancelled' and %resource.section.entry.resolve().basedOn.resolve().status = 'revoked'" />
+            </constraint>
+        </element>
+        <element id="Composition.event:excluded.id">
+            <path value="Composition.event.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:excluded.code">
+            <path value="Composition.event.code" />
+            <min value="1" />
+            <max value="1" />
+            <binding>
+                <strength value="required" />
+                <description value="O código que identifica unicamente o status da solicitação." />
+                <valueSet
+                    value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial" />
+            </binding>
+        </element>
+        <element id="Composition.event:excluded.code.id">
+            <path value="Composition.event.code.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:excluded.code.coding">
+            <path value="Composition.event.code.coding" />
+            <min value="1" />
+            <max value="1" />
+        </element>
+        <element id="Composition.event:excluded.code.coding.id">
+            <path value="Composition.event.code.coding.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:excluded.code.coding.system">
+            <path value="Composition.event.code.coding.system" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:excluded.code.coding.code">
+            <path value="Composition.event.code.coding.code" />
+            <min value="1" />
+            <fixedCode value="excluded" />
+            <condition value="mira-19" />
+        </element>
+        <element id="Composition.event:excluded.code.coding.userSelected">
+            <path value="Composition.event.code.coding.userSelected" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:excluded.code.text">
+            <path value="Composition.event.code.text" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:excluded.period">
+            <path value="Composition.event.period" />
+            <short value="Data e hora de alteração do status" />
+            <definition
+                value="Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados." />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:excluded.period.id">
+            <path value="Composition.event.period.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:excluded.period.end">
+            <path value="Composition.event.period.end" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:excluded.detail">
+            <path value="Composition.event.detail" />
+            <short value="Detalhes sobre o status da solicitação do procedimento regulado" />
+        </element>
+        <element id="Composition.event:excluded.detail.id">
+            <path value="Composition.event.detail.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:excluded.detail.type">
+            <path value="Composition.event.detail.type" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:excluded.detail.identifier">
+            <path value="Composition.event.detail.identifier" />
+            <short value="Estabelecimento de saúde que realizou a alteração do status" />
+            <definition
+                value="Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES." />
+            <constraint>
+                <key value="estab-2" />
+                <severity value="error" />
+                <human
+                    value="O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números." />
+                <expression value="value.matches('^(?!(\\d)\\1{6})\\d{7}$')" />
+            </constraint>
+        </element>
+        <element id="Composition.event:excluded.detail.identifier.id">
+            <path value="Composition.event.detail.identifier.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:excluded.detail.identifier.use">
+            <path value="Composition.event.detail.identifier.use" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:excluded.detail.identifier.type">
+            <path value="Composition.event.detail.identifier.type" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:excluded.detail.identifier.system">
+            <path value="Composition.event.detail.identifier.system" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:excluded.detail.identifier.value">
+            <path value="Composition.event.detail.identifier.value" />
+            <min value="1" />
+        </element>
+        <element id="Composition.event:excluded.detail.identifier.period">
+            <path value="Composition.event.detail.identifier.period" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:excluded.detail.identifier.assigner">
+            <path value="Composition.event.detail.identifier.assigner" />
+            <max value="0" />
+        </element>
+        <element id="Composition.event:excluded.detail.display">
+            <path value="Composition.event.detail.display" />
+            <max value="0" />
+        </element>
+        <element id="Composition.section">
+            <path value="Composition.section" />
+            <short value="Seções do documento" />
+            <definition
+                value="Referencia todas as seções (profiles/resources) contidos neste documento." />
+            <min value="1" />
+            <max value="1" />
+            <mustSupport value="true" />
+        </element>
+        <element id="Composition.section.id">
+            <path value="Composition.section.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.section.title">
+            <path value="Composition.section.title" />
+            <max value="0" />
+        </element>
+        <element id="Composition.section.code">
+            <path value="Composition.section.code" />
+            <max value="0" />
+        </element>
+        <element id="Composition.section.author">
+            <path value="Composition.section.author" />
+            <max value="0" />
+        </element>
+        <element id="Composition.section.focus">
+            <path value="Composition.section.focus" />
+            <max value="0" />
+        </element>
+        <element id="Composition.section.text">
+            <path value="Composition.section.text" />
+            <max value="0" />
+        </element>
+        <element id="Composition.section.mode">
+            <path value="Composition.section.mode" />
+            <max value="0" />
+        </element>
+        <element id="Composition.section.orderedBy">
+            <path value="Composition.section.orderedBy" />
+            <max value="0" />
+        </element>
+        <element id="Composition.section.entry">
+            <path value="Composition.section.entry" />
+            <min value="1" />
+            <max value="1" />
+            <type>
+                <code value="Reference" />
+                <targetProfile
+                    value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial" />
+            </type>
+        </element>
+        <element id="Composition.section.entry.id">
+            <path value="Composition.section.entry.id" />
+            <max value="0" />
+        </element>
+        <element id="Composition.section.entry.reference">
+            <path value="Composition.section.entry.reference" />
+            <min value="1" />
+        </element>
+        <element id="Composition.section.entry.type">
+            <path value="Composition.section.entry.type" />
+            <max value="0" />
+        </element>
+        <element id="Composition.section.entry.identifier">
+            <path value="Composition.section.entry.identifier" />
+            <max value="0" />
+        </element>
+        <element id="Composition.section.entry.display">
+            <path value="Composition.section.entry.display" />
+            <max value="0" />
+        </element>
+        <element id="Composition.section.emptyReason">
+            <path value="Composition.section.emptyReason" />
+            <max value="0" />
+        </element>
+        <element id="Composition.section.section">
+            <path value="Composition.section.section" />
+            <max value="0" />
+        </element>
+    </differential>
+</StructureDefinition>

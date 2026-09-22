@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="BRCategoriaCondicao"/>
+  <meta>
+    <lastUpdated value="2020-03-11T19:14:51.806+00:00"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="extensions"/>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="ehr"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="normative">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+    <valueCode value="4.0.1"/>
+  </extension>
+  <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BRCategoriaCondicao"/>
+  <version value="1.0.0-release"/>
+  <name value="BRCategoriaCondicao"/>
+  <title value="Classificação de uma condição"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2020-03-11T19:15:12.2909517+00:00"/>
+  <publisher value="Ministério da Saúde do Brasil"/>
+  <contact>
+    <name value="Ministério da Saúde do Brasil"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.saude.gov.br"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="cgiis.datasus@saude.gov.br"/>
+    </telecom>
+  </contact>
+  <description value="Tradução para o português do brasil da classificação de uma condição"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="BR"/>
+    </coding>
+  </jurisdiction>
+  <immutable value="false"/>
+  <compose>
+    <include>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+      <concept>
+        <code value="problem-list-item"/>
+        <display value="Problem List Item"/>
+        <designation>
+          <language value="pt-BR"/>
+          <value value="Problema listado"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="encounter-diagnosis"/>
+        <display value="Encounter Diagnosis"/>
+        <designation>
+          <language value="pt-BR"/>
+          <value value="Diagnóstico"/>
+        </designation>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

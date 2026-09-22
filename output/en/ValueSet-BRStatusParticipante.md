@@ -1,4 +1,4 @@
-# Status do Participante do agendamento - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Status do Participante do agendamento - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
 
 ## ValueSet: Status do Participante do agendamento 
 

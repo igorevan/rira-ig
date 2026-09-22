@@ -1,4 +1,4 @@
-# Status de agendamento de regulação assistencial (ValueSet) - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Status de agendamento de regulação assistencial (ValueSet) - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
 
 ## ValueSet: Status de agendamento de regulação assistencial (ValueSet) 
 

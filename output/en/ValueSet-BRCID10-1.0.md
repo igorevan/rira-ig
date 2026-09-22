@@ -1,4 +1,4 @@
-# Classificação Internacional de Doenças - Décima Revisão - CID-10 - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Classificação Internacional de Doenças - Décima Revisão - CID-10 - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
 
 ## ValueSet: Classificação Internacional de Doenças - Décima Revisão - CID-10 
 
@@ -7,7 +7,7 @@ Classificação Internacional de Doenças - Décima Revisão - CID-10
 
  **References** 
 
-* [CID10 Avaliado](StructureDefinition-BRCID10Avaliado-1.0.md)
+Este conjunto de valores não é utilizado aqui; pode ser utilizado noutro local (por exemplo, especificações e/ou implementações que utilizem este conteúdo)
 
 ### Logical Definition (CLD)
 

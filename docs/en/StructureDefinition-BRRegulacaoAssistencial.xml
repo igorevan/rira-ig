@@ -4,7 +4,7 @@
   <id value="BRRegulacaoAssistencial"/>
   <meta>
     <versionId value="1"/>
-    <lastUpdated value="2025-03-31T16:10:52.7278664+00:00"/>
+    <lastUpdated value="2026-09-15T11:47:26-03:00"/>
   </meta>
   <language value="en"/>
   <text>
@@ -33,7 +33,7 @@
   <url value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial"/>
   <version value="1.0.0-release"/>
   <name value="BRRegulacaoAssistencial"/>
-  <title value="Regulação Assistencial (RIRA)"/>
+  <title value="Regulação Assistencial"/>
   <status value="active"/>
   <date value="2023-04-04"/>
   <publisher value="Ministério da Saúde do Brasil"/>
@@ -48,7 +48,7 @@
       <value value="cgiis.datasus@saude.gov.br"/>
     </telecom>
   </contact>
-  <description value="Documento público que coleta os dados da regulação assistencial"/>
+  <description value="Documento público que coleta os dados das solicitações de regulação assistencial"/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -93,7 +93,7 @@
     <element id="Composition">
       <path value="Composition"/>
       <short value="Regulação Assistencial"/>
-      <definition value="Documento que representa o documento de regulação assistencial."/>
+      <definition value="Documento que representa o registro de uma solicitação de regulação assistencial."/>
       <comment value="While the focus of this specification is on patient-specific clinical statements, this resource can also apply to other healthcare-related statements such as study protocol designs, healthcare invoices and other activities that are not necessarily patient-specific or clinical."/>
       <min value="0"/>
       <max value="*"/>
@@ -148,7 +148,12 @@
         <xpath value="exists(f:text/h:div)"/>
         <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
-      <mustSupport value="true"/>
+      <constraint>
+        <key value="ident-4"/>
+        <severity value="error"/>
+        <human value="O número de CPF ou CNS do indivíduo deve ser igual em seus respecitivos elementos dos recursos (subject.identifier.value ou participant.actor.identifier.value)."/>
+        <expression value="(subject.identifier.value = section.entry.resolve().ofType(Appointment).participant.actor.identifier.value) and (subject.identifier.value = section.entry.resolve().ofType(Appointment).basedOn.resolve().ofType(ServiceRequest).subject.identifier.value) and (section.entry.resolve().ofType(Appointment).reasonReference.exists().not() or (subject.identifier.value = section.entry.resolve().ofType(Appointment).reasonReference.resolve().ofType(Condition).subject.identifier.value))"/>
+      </constraint>
       <isModifier value="false"/>
       <isSummary value="false"/>
       <mapping>
@@ -651,7 +656,7 @@
     </element>
     <element id="Composition.type.coding">
       <path value="Composition.type.coding"/>
-      <short value="Code defined by a terminology system"/>
+      <short value="Código definido por uma terminologia"/>
       <definition value="A reference to a code defined by a terminology system."/>
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems."/>
@@ -764,7 +769,7 @@
     </element>
     <element id="Composition.type.coding.system">
       <path value="Composition.type.coding.system"/>
-      <short value="Identity of the terminology system"/>
+      <short value="Identificador do sistema de terminologia"/>
       <definition value="The identification of the code system that defines the meaning of the symbol in the code."/>
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously."/>
       <requirements value="Need to be unambiguous about the source of the definition of the symbol."/>
@@ -841,7 +846,7 @@
     </element>
     <element id="Composition.type.coding.code">
       <path value="Composition.type.coding.code"/>
-      <short value="Symbol in syntax defined by the system"/>
+      <short value="Código conforme terminologia"/>
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)."/>
       <requirements value="Need to refer to a particular code in the system."/>
       <min value="1"/>
@@ -1002,8 +1007,8 @@
     </element>
     <element id="Composition.category">
       <path value="Composition.category"/>
-      <short value="Modalidade Assistencial"/>
-      <definition value="Classifica os contatos assistenciais de acordo com as especificidades do modo, local e duração do atendimento.&#xD;&#xA;Referência: https://rts.saude.gov.br/#/modalidade-assistencial"/>
+      <short value="Modalidade assistencial"/>
+      <definition value="Modalidade assistencial que gerou a solicitação do procedimento."/>
       <comment value="This is a metadata field from [XDS/MHD](http://wiki.ihe.net/index.php?title=Mobile_access_to_Health_Documents_(MHD))."/>
       <requirements value="Helps humans to assess whether the composition is of interest when viewing an index of compositions or documents."/>
       <min value="1"/>
@@ -1478,8 +1483,8 @@
     </element>
     <element id="Composition.subject">
       <path value="Composition.subject"/>
-      <short value="Sujeito da Composição"/>
-      <definition value="Quem ou o quê a composição se refere. Pode ser um indivíduo, dispositivo, grupos (de indivíduos, dispositivos etc.)."/>
+      <short value="Identificador do indivíduo da solicitação de regulação assistencial"/>
+      <definition value="Identificação única do paciente, por meio de CPF ou CNS."/>
       <comment value="Nesta versão, a RNDS suportará somente indivíduos."/>
       <requirements value="Essential metadata for searching for the composition. Identifies who and/or what the composition/document is about."/>
       <min value="1"/>
@@ -2467,7 +2472,7 @@
     </element>
     <element id="Composition.subject.identifier">
       <path value="Composition.subject.identifier"/>
-      <short value="Logical reference, when literal reference is not known"/>
+      <short value="Referência lógica, quando a referência literal não é conhecida"/>
       <definition value="An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference."/>
       <comment value="When an identifier is provided in place of a reference, any system processing the reference will only be able to resolve the identifier to a reference if it understands the business context in which the identifier is used. Sometimes this is global (e.g. a national identifier) but often it is not. For this reason, none of the useful mechanisms described for working with references (e.g. chaining, includes) are possible, nor should servers be expected to be able resolve the reference. Servers may accept an identifier based reference untouched, resolve it, and/or reject it - see CapabilityStatement.rest.resource.referencePolicy. &#xA;&#xA;When both an identifier and a literal reference are provided, the literal reference is preferred. Applications processing the resource are allowed - but not required - to check that the identifier matches the literal reference&#xA;&#xA;Applications converting a logical reference to a literal reference may choose to leave the logical reference present, or remove it.&#xA;&#xA;Reference is intended to point to a structure that can potentially be expressed as a FHIR resource, though there is no need for it to exist as an actual FHIR resource instance - except in as much as an application wishes to actual find the target of the reference. The content referred to be the identifier must meet the logical constraints implied by any limitations on what resource types are permitted for the reference.  For example, it would not be legitimate to send the identifier for a drug prescription if the type were Reference(Observation|DiagnosticReport).  One of the use-cases for Reference.identifier is the situation where no FHIR representation exists (where the type is Reference (Any)."/>
       <min value="0"/>
@@ -2487,6 +2492,12 @@
         <expression value="hasValue() or (children().count() &gt; id.count())"/>
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ident-1"/>
+        <severity value="error"/>
+        <human value="O número de CPF ou CNS informado é inválido (subject.identifier.value)."/>
+        <expression value="value.matches('^(?!(\\d)\\1{10})\\d{11}$') or value.matches('^(?!(\\d)\\1{14})[125789]\\d{14}$')"/>
       </constraint>
       <isModifier value="false"/>
       <isSummary value="true"/>
@@ -2920,6 +2931,12 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
+      <constraint>
+        <key value="date-1"/>
+        <severity value="error"/>
+        <human value="A data do documento (Composition.date) deve ser no formato 'Ano-Mês-Dia'. Exemplo: 2026-01-01."/>
+        <expression value="value.matches('^(200[1-9]|20[1-9]\\d|[2-9]\\d{3})-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$')"/>
+      </constraint>
       <mustSupport value="true"/>
       <isModifier value="false"/>
       <isSummary value="true"/>
@@ -2946,8 +2963,8 @@
     </element>
     <element id="Composition.author">
       <path value="Composition.author"/>
-      <short value="Reponsável pelo Contato Assistencial"/>
-      <definition value="Identifica a Pessoa Jurídica ou Pessoa Física (profissional liberal) responsável por gerar o documento."/>
+      <short value="Autor do documento"/>
+      <definition value="Identifica o Estabelecimento de Saúde responsável por gerar o documento."/>
       <comment value="Nesta versão da RNDS somente serão suportadas edições provenientes de Estabelecimentos de Saúde."/>
       <requirements value="Identifies who is responsible for the content."/>
       <min value="1"/>
@@ -2960,7 +2977,6 @@
       <type>
         <code value="Reference"/>
         <targetProfile value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"/>
-        <targetProfile value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -3138,7 +3154,7 @@
     </element>
     <element id="Composition.author.identifier">
       <path value="Composition.author.identifier"/>
-      <short value="Logical reference, when literal reference is not known"/>
+      <short value="Referência lógica, quando a referência literal não é conhecida"/>
       <definition value="An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference."/>
       <comment value="When an identifier is provided in place of a reference, any system processing the reference will only be able to resolve the identifier to a reference if it understands the business context in which the identifier is used. Sometimes this is global (e.g. a national identifier) but often it is not. For this reason, none of the useful mechanisms described for working with references (e.g. chaining, includes) are possible, nor should servers be expected to be able resolve the reference. Servers may accept an identifier based reference untouched, resolve it, and/or reject it - see CapabilityStatement.rest.resource.referencePolicy. &#xA;&#xA;When both an identifier and a literal reference are provided, the literal reference is preferred. Applications processing the resource are allowed - but not required - to check that the identifier matches the literal reference&#xA;&#xA;Applications converting a logical reference to a literal reference may choose to leave the logical reference present, or remove it.&#xA;&#xA;Reference is intended to point to a structure that can potentially be expressed as a FHIR resource, though there is no need for it to exist as an actual FHIR resource instance - except in as much as an application wishes to actual find the target of the reference. The content referred to be the identifier must meet the logical constraints implied by any limitations on what resource types are permitted for the reference.  For example, it would not be legitimate to send the identifier for a drug prescription if the type were Reference(Observation|DiagnosticReport).  One of the use-cases for Reference.identifier is the situation where no FHIR representation exists (where the type is Reference (Any)."/>
       <min value="1"/>
@@ -3158,6 +3174,12 @@
         <expression value="hasValue() or (children().count() &gt; id.count())"/>
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="estab-2"/>
+        <severity value="error"/>
+        <human value="O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números."/>
+        <expression value="value.matches('^(?!(\\d)\\1{6})\\d{7}$')"/>
       </constraint>
       <isModifier value="false"/>
       <isSummary value="true"/>
@@ -4120,6 +4142,7 @@
       </base>
       <type>
         <code value="Reference"/>
+        <targetProfile value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -4358,8 +4381,8 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Evento de regulação"/>
-      <definition value="Definição dos eventos de um processo de regulação"/>
+      <short value="Status da Solicitação"/>
+      <definition value="Definição dos eventos de um processo de regulação. Neste elemento será preenchido o código que identifica unicamente o status da solicitação, conforme tabela de status de solicitação."/>
       <comment value="The event needs to be consistent with the type element, though can provide further information if desired."/>
       <requirements value="Provides context for the composition and creates a linkage between a resource describing an event and the composition created describing the event."/>
       <min value="1"/>
@@ -4645,6 +4668,30 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
+      <constraint>
+        <key value="mira-2"/>
+        <severity value="error"/>
+        <human value="A Data de Agendamento (Appointment.start e Appointment.end) não pode estar preenchida caso o status da solicitação seja Pendente (pending)."/>
+        <expression value="code.coding.exists(code = 'pending') implies %resource.section.entry.resolve().start.empty() and %resource.section.entry.resolve().end.empty()"/>
+      </constraint>
+      <constraint>
+        <key value="mira-3"/>
+        <severity value="error"/>
+        <human value="A Data de Execução (ServiceRequest.ocurrenceDateTime) não pode estar preenchida caso o status da solicitação seja Pendente (pending)."/>
+        <expression value="code.coding.exists(code = 'pending') implies %resource.section.entry.resolve().basedOn.resolve().occurrenceDateTime.empty()"/>
+      </constraint>
+      <constraint>
+        <key value="mira-4"/>
+        <severity value="error"/>
+        <human value="O identificador do Estabelecimento de Saúde executante (ServiceRequest.performer) não pode estar preenchido caso o status da solicitação seja Pendente (pending)."/>
+        <expression value="code.coding.exists(code = 'pending') implies %resource.section.entry.resolve().basedOn.resolve().performer.empty()"/>
+      </constraint>
+      <constraint>
+        <key value="mira-13"/>
+        <severity value="error"/>
+        <human value="Caso o status da solicitação seja Pendente (pending) o status do recurso Appointment deve ser proposed e o status do recurso ServiceRequest deve ser active."/>
+        <expression value="code.coding.exists(code = 'pending') implies %resource.section.entry.resolve().status = 'proposed' and %resource.section.entry.resolve().basedOn.resolve().status = 'active'"/>
+      </constraint>
       <isModifier value="false"/>
       <isSummary value="true"/>
       <mapping>
@@ -4795,7 +4842,7 @@
       <isSummary value="true"/>
       <binding>
         <strength value="required"/>
-        <description value="Lista de códigos descritores de um evento de regulação."/>
+        <description value="O código que identifica unicamente o status da solicitação."/>
         <valueSet value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"/>
       </binding>
       <mapping>
@@ -5089,6 +5136,10 @@
         <code value="code"/>
       </type>
       <fixedCode value="pending"/>
+      <condition value="mira-2"/>
+      <condition value="mira-3"/>
+      <condition value="mira-4"/>
+      <condition value="mira-13"/>
       <constraint>
         <key value="ele-1"/>
         <severity value="error"/>
@@ -5236,8 +5287,8 @@
     </element>
     <element id="Composition.event:pending.period">
       <path value="Composition.event.period"/>
-      <short value="Data da solicitação"/>
-      <definition value="The period of time covered by the documentation. There is no assertion that the documentation is a complete representation for this period, only that it documents events during this time."/>
+      <short value="Data e hora de alteração do status"/>
+      <definition value="Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados."/>
       <min value="1"/>
       <max value="1"/>
       <base>
@@ -5417,9 +5468,9 @@
     </element>
     <element id="Composition.event:pending.detail">
       <path value="Composition.event.detail"/>
-      <short value="The event(s) being documented"/>
+      <short value="Detalhes sobre o status da solicitação do procedimento regulado"/>
       <definition value="The description and/or reference of the event(s) being documented. For example, this could be used to document such a colonoscopy or an appendectomy."/>
-      <min value="1"/>
+      <min value="0"/>
       <max value="*"/>
       <base>
         <path value="Composition.event.detail"/>
@@ -5594,8 +5645,8 @@
     </element>
     <element id="Composition.event:pending.detail.identifier">
       <path value="Composition.event.detail.identifier"/>
-      <short value="Logical reference, when literal reference is not known"/>
-      <definition value="An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference."/>
+      <short value="Estabelecimento de saúde que realizou a alteração do status"/>
+      <definition value="Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES."/>
       <comment value="When an identifier is provided in place of a reference, any system processing the reference will only be able to resolve the identifier to a reference if it understands the business context in which the identifier is used. Sometimes this is global (e.g. a national identifier) but often it is not. For this reason, none of the useful mechanisms described for working with references (e.g. chaining, includes) are possible, nor should servers be expected to be able resolve the reference. Servers may accept an identifier based reference untouched, resolve it, and/or reject it - see CapabilityStatement.rest.resource.referencePolicy. &#xA;&#xA;When both an identifier and a literal reference are provided, the literal reference is preferred. Applications processing the resource are allowed - but not required - to check that the identifier matches the literal reference&#xA;&#xA;Applications converting a logical reference to a literal reference may choose to leave the logical reference present, or remove it.&#xA;&#xA;Reference is intended to point to a structure that can potentially be expressed as a FHIR resource, though there is no need for it to exist as an actual FHIR resource instance - except in as much as an application wishes to actual find the target of the reference. The content referred to be the identifier must meet the logical constraints implied by any limitations on what resource types are permitted for the reference.  For example, it would not be legitimate to send the identifier for a drug prescription if the type were Reference(Observation|DiagnosticReport).  One of the use-cases for Reference.identifier is the situation where no FHIR representation exists (where the type is Reference (Any)."/>
       <min value="0"/>
       <max value="1"/>
@@ -5614,6 +5665,12 @@
         <expression value="hasValue() or (children().count() &gt; id.count())"/>
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="estab-2"/>
+        <severity value="error"/>
+        <human value="O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números."/>
+        <expression value="value.matches('^(?!(\\d)\\1{6})\\d{7}$')"/>
       </constraint>
       <isModifier value="false"/>
       <isSummary value="true"/>
@@ -6423,6 +6480,12 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
+      <constraint>
+        <key value="mira-14"/>
+        <severity value="error"/>
+        <human value="Caso o status da solicitação seja Devolvido para o solicitante (returned-to-requester) o status do recurso Appointment deve ser waitlist e o status do recurso ServiceRequest deve ser on-hold."/>
+        <expression value="code.coding.exists(code = 'returned-to-requester') implies %resource.section.entry.resolve().status = 'waitlist' and %resource.section.entry.resolve().basedOn.resolve().status = 'on-hold'"/>
+      </constraint>
       <isModifier value="false"/>
       <isSummary value="true"/>
       <mapping>
@@ -6573,7 +6636,7 @@
       <isSummary value="true"/>
       <binding>
         <strength value="required"/>
-        <description value="Lista de códigos descritores de um evento de regulação."/>
+        <description value="O código que identifica unicamente o status da solicitação."/>
         <valueSet value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"/>
       </binding>
       <mapping>
@@ -6867,6 +6930,7 @@
         <code value="code"/>
       </type>
       <fixedCode value="returned-to-requester"/>
+      <condition value="mira-14"/>
       <constraint>
         <key value="ele-1"/>
         <severity value="error"/>
@@ -7014,9 +7078,9 @@
     </element>
     <element id="Composition.event:returned-to-requester.period">
       <path value="Composition.event.period"/>
-      <short value="The period covered by the documentation"/>
-      <definition value="The period of time covered by the documentation. There is no assertion that the documentation is a complete representation for this period, only that it documents events during this time."/>
-      <min value="0"/>
+      <short value="Data e hora de alteração do status"/>
+      <definition value="Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados."/>
+      <min value="1"/>
       <max value="1"/>
       <base>
         <path value="Composition.event.period"/>
@@ -7195,10 +7259,10 @@
     </element>
     <element id="Composition.event:returned-to-requester.detail">
       <path value="Composition.event.detail"/>
-      <short value="The event(s) being documented"/>
+      <short value="Detalhes sobre o status da solicitação do procedimento regulado"/>
       <definition value="The description and/or reference of the event(s) being documented. For example, this could be used to document such a colonoscopy or an appendectomy."/>
-      <min value="1"/>
-      <max value="1"/>
+      <min value="0"/>
+      <max value="*"/>
       <base>
         <path value="Composition.event.detail"/>
         <min value="0"/>
@@ -7371,10 +7435,10 @@
     </element>
     <element id="Composition.event:returned-to-requester.detail.identifier">
       <path value="Composition.event.detail.identifier"/>
-      <short value="Logical reference, when literal reference is not known"/>
-      <definition value="An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference."/>
+      <short value="Estabelecimento de saúde que realizou a alteração do status"/>
+      <definition value="Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES."/>
       <comment value="When an identifier is provided in place of a reference, any system processing the reference will only be able to resolve the identifier to a reference if it understands the business context in which the identifier is used. Sometimes this is global (e.g. a national identifier) but often it is not. For this reason, none of the useful mechanisms described for working with references (e.g. chaining, includes) are possible, nor should servers be expected to be able resolve the reference. Servers may accept an identifier based reference untouched, resolve it, and/or reject it - see CapabilityStatement.rest.resource.referencePolicy. &#xA;&#xA;When both an identifier and a literal reference are provided, the literal reference is preferred. Applications processing the resource are allowed - but not required - to check that the identifier matches the literal reference&#xA;&#xA;Applications converting a logical reference to a literal reference may choose to leave the logical reference present, or remove it.&#xA;&#xA;Reference is intended to point to a structure that can potentially be expressed as a FHIR resource, though there is no need for it to exist as an actual FHIR resource instance - except in as much as an application wishes to actual find the target of the reference. The content referred to be the identifier must meet the logical constraints implied by any limitations on what resource types are permitted for the reference.  For example, it would not be legitimate to send the identifier for a drug prescription if the type were Reference(Observation|DiagnosticReport).  One of the use-cases for Reference.identifier is the situation where no FHIR representation exists (where the type is Reference (Any)."/>
-      <min value="1"/>
+      <min value="0"/>
       <max value="1"/>
       <base>
         <path value="Reference.identifier"/>
@@ -7391,6 +7455,12 @@
         <expression value="hasValue() or (children().count() &gt; id.count())"/>
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="estab-2"/>
+        <severity value="error"/>
+        <human value="O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números."/>
+        <expression value="value.matches('^(?!(\\d)\\1{6})\\d{7}$')"/>
       </constraint>
       <isModifier value="false"/>
       <isSummary value="true"/>
@@ -7778,6 +7848,24 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
+      <constraint>
+        <key value="mira-5"/>
+        <severity value="error"/>
+        <human value="A Data de Agendamento (Appointment.start e Appointment.end) deve ser preenchida caso o status da solicitação seja Agendado (booked)."/>
+        <expression value="code.coding.exists(code = 'booked') implies %resource.section.entry.resolve().start.exists() and %resource.section.entry.resolve().end.exists()"/>
+      </constraint>
+      <constraint>
+        <key value="mira-6"/>
+        <severity value="error"/>
+        <human value="O identificador do Estabelecimento de Saúde executante (ServiceRequest.performer) deve ser preenchido caso o status da solicitação seja Agendado (booked)."/>
+        <expression value="code.coding.exists(code = 'booked') implies %resource.section.entry.resolve().basedOn.resolve().performer.exists()"/>
+      </constraint>
+      <constraint>
+        <key value="mira-15"/>
+        <severity value="error"/>
+        <human value="Caso o status da solicitação seja Agendado (booked) o status do recurso Appointment deve ser booked e o status do recurso ServiceRequest deve ser active."/>
+        <expression value="code.coding.exists(code = 'booked') implies %resource.section.entry.resolve().status = 'booked' and %resource.section.entry.resolve().basedOn.resolve().status = 'active'"/>
+      </constraint>
       <isModifier value="false"/>
       <isSummary value="true"/>
       <mapping>
@@ -7928,7 +8016,7 @@
       <isSummary value="true"/>
       <binding>
         <strength value="required"/>
-        <description value="Lista de códigos descritores de um evento de regulação."/>
+        <description value="O código que identifica unicamente o status da solicitação."/>
         <valueSet value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"/>
       </binding>
       <mapping>
@@ -8222,6 +8310,9 @@
         <code value="code"/>
       </type>
       <fixedCode value="booked"/>
+      <condition value="mira-5"/>
+      <condition value="mira-6"/>
+      <condition value="mira-15"/>
       <constraint>
         <key value="ele-1"/>
         <severity value="error"/>
@@ -8369,9 +8460,9 @@
     </element>
     <element id="Composition.event:booked.period">
       <path value="Composition.event.period"/>
-      <short value="The period covered by the documentation"/>
-      <definition value="The period of time covered by the documentation. There is no assertion that the documentation is a complete representation for this period, only that it documents events during this time."/>
-      <min value="0"/>
+      <short value="Data e hora de alteração do status"/>
+      <definition value="Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados."/>
+      <min value="1"/>
       <max value="1"/>
       <base>
         <path value="Composition.event.period"/>
@@ -8550,9 +8641,9 @@
     </element>
     <element id="Composition.event:booked.detail">
       <path value="Composition.event.detail"/>
-      <short value="The event(s) being documented"/>
+      <short value="Detalhes sobre o status da solicitação do procedimento regulado"/>
       <definition value="The description and/or reference of the event(s) being documented. For example, this could be used to document such a colonoscopy or an appendectomy."/>
-      <min value="1"/>
+      <min value="0"/>
       <max value="*"/>
       <base>
         <path value="Composition.event.detail"/>
@@ -8727,8 +8818,8 @@
     </element>
     <element id="Composition.event:booked.detail.identifier">
       <path value="Composition.event.detail.identifier"/>
-      <short value="Logical reference, when literal reference is not known"/>
-      <definition value="An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference."/>
+      <short value="Estabelecimento de saúde que realizou a alteração do status"/>
+      <definition value="Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES."/>
       <comment value="When an identifier is provided in place of a reference, any system processing the reference will only be able to resolve the identifier to a reference if it understands the business context in which the identifier is used. Sometimes this is global (e.g. a national identifier) but often it is not. For this reason, none of the useful mechanisms described for working with references (e.g. chaining, includes) are possible, nor should servers be expected to be able resolve the reference. Servers may accept an identifier based reference untouched, resolve it, and/or reject it - see CapabilityStatement.rest.resource.referencePolicy. &#xA;&#xA;When both an identifier and a literal reference are provided, the literal reference is preferred. Applications processing the resource are allowed - but not required - to check that the identifier matches the literal reference&#xA;&#xA;Applications converting a logical reference to a literal reference may choose to leave the logical reference present, or remove it.&#xA;&#xA;Reference is intended to point to a structure that can potentially be expressed as a FHIR resource, though there is no need for it to exist as an actual FHIR resource instance - except in as much as an application wishes to actual find the target of the reference. The content referred to be the identifier must meet the logical constraints implied by any limitations on what resource types are permitted for the reference.  For example, it would not be legitimate to send the identifier for a drug prescription if the type were Reference(Observation|DiagnosticReport).  One of the use-cases for Reference.identifier is the situation where no FHIR representation exists (where the type is Reference (Any)."/>
       <min value="0"/>
       <max value="1"/>
@@ -8747,6 +8838,12 @@
         <expression value="hasValue() or (children().count() &gt; id.count())"/>
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="estab-2"/>
+        <severity value="error"/>
+        <human value="O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números."/>
+        <expression value="value.matches('^(?!(\\d)\\1{6})\\d{7}$')"/>
       </constraint>
       <isModifier value="false"/>
       <isSummary value="true"/>
@@ -9134,6 +9231,30 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
+      <constraint>
+        <key value="mira-7"/>
+        <severity value="error"/>
+        <human value="A Data de Agendamento (Appointment.start e Appointment.end) deve ser preenchida caso o status da solicitação seja Atendido/Internado (attended)."/>
+        <expression value="code.coding.exists(code = 'attended') implies %resource.section.entry.resolve().start.exists() and %resource.section.entry.resolve().end.exists()"/>
+      </constraint>
+      <constraint>
+        <key value="mira-8"/>
+        <severity value="error"/>
+        <human value="O identificador do Estabelecimento de Saúde executante (ServiceRequest.performer) deve ser preenchido caso o status da solicitação seja Atendido/Internado (attended)."/>
+        <expression value="code.coding.exists(code = 'attended') implies %resource.section.entry.resolve().basedOn.resolve().performer.exists()"/>
+      </constraint>
+      <constraint>
+        <key value="mira-9"/>
+        <severity value="error"/>
+        <human value="A Data de Execução (ServiceRequest.ocurrenceDateTime) deve ser preenchida caso o status da solicitação seja Atendido/Internado (attended)."/>
+        <expression value="code.coding.exists(code = 'attended') implies %resource.section.entry.resolve().basedOn.resolve().occurrenceDateTime.exists()"/>
+      </constraint>
+      <constraint>
+        <key value="mira-16"/>
+        <severity value="error"/>
+        <human value="Caso o status da solicitação seja Atendido/Internado (attended) o status do recurso Appointment deve ser fulfilled e o status do recurso ServiceRequest deve ser completed."/>
+        <expression value="code.coding.exists(code = 'attended') implies %resource.section.entry.resolve().status = 'fulfilled' and %resource.section.entry.resolve().basedOn.resolve().status = 'completed'"/>
+      </constraint>
       <isModifier value="false"/>
       <isSummary value="true"/>
       <mapping>
@@ -9284,7 +9405,7 @@
       <isSummary value="true"/>
       <binding>
         <strength value="required"/>
-        <description value="Lista de códigos descritores de um evento de regulação."/>
+        <description value="O código que identifica unicamente o status da solicitação."/>
         <valueSet value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"/>
       </binding>
       <mapping>
@@ -9578,6 +9699,10 @@
         <code value="code"/>
       </type>
       <fixedCode value="attended"/>
+      <condition value="mira-7"/>
+      <condition value="mira-8"/>
+      <condition value="mira-9"/>
+      <condition value="mira-16"/>
       <constraint>
         <key value="ele-1"/>
         <severity value="error"/>
@@ -9725,9 +9850,9 @@
     </element>
     <element id="Composition.event:attended.period">
       <path value="Composition.event.period"/>
-      <short value="The period covered by the documentation"/>
-      <definition value="The period of time covered by the documentation. There is no assertion that the documentation is a complete representation for this period, only that it documents events during this time."/>
-      <min value="0"/>
+      <short value="Data e hora de alteração do status"/>
+      <definition value="Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados."/>
+      <min value="1"/>
       <max value="1"/>
       <base>
         <path value="Composition.event.period"/>
@@ -9906,9 +10031,9 @@
     </element>
     <element id="Composition.event:attended.detail">
       <path value="Composition.event.detail"/>
-      <short value="The event(s) being documented"/>
+      <short value="Detalhes sobre o status da solicitação do procedimento regulado"/>
       <definition value="The description and/or reference of the event(s) being documented. For example, this could be used to document such a colonoscopy or an appendectomy."/>
-      <min value="1"/>
+      <min value="0"/>
       <max value="*"/>
       <base>
         <path value="Composition.event.detail"/>
@@ -10083,8 +10208,8 @@
     </element>
     <element id="Composition.event:attended.detail.identifier">
       <path value="Composition.event.detail.identifier"/>
-      <short value="Logical reference, when literal reference is not known"/>
-      <definition value="An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference."/>
+      <short value="Estabelecimento de saúde que realizou a alteração do status"/>
+      <definition value="Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES."/>
       <comment value="When an identifier is provided in place of a reference, any system processing the reference will only be able to resolve the identifier to a reference if it understands the business context in which the identifier is used. Sometimes this is global (e.g. a national identifier) but often it is not. For this reason, none of the useful mechanisms described for working with references (e.g. chaining, includes) are possible, nor should servers be expected to be able resolve the reference. Servers may accept an identifier based reference untouched, resolve it, and/or reject it - see CapabilityStatement.rest.resource.referencePolicy. &#xA;&#xA;When both an identifier and a literal reference are provided, the literal reference is preferred. Applications processing the resource are allowed - but not required - to check that the identifier matches the literal reference&#xA;&#xA;Applications converting a logical reference to a literal reference may choose to leave the logical reference present, or remove it.&#xA;&#xA;Reference is intended to point to a structure that can potentially be expressed as a FHIR resource, though there is no need for it to exist as an actual FHIR resource instance - except in as much as an application wishes to actual find the target of the reference. The content referred to be the identifier must meet the logical constraints implied by any limitations on what resource types are permitted for the reference.  For example, it would not be legitimate to send the identifier for a drug prescription if the type were Reference(Observation|DiagnosticReport).  One of the use-cases for Reference.identifier is the situation where no FHIR representation exists (where the type is Reference (Any)."/>
       <min value="0"/>
       <max value="1"/>
@@ -10103,6 +10228,12 @@
         <expression value="hasValue() or (children().count() &gt; id.count())"/>
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="estab-2"/>
+        <severity value="error"/>
+        <human value="O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números."/>
+        <expression value="value.matches('^(?!(\\d)\\1{6})\\d{7}$')"/>
       </constraint>
       <isModifier value="false"/>
       <isSummary value="true"/>
@@ -10490,6 +10621,12 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
+      <constraint>
+        <key value="mira-17"/>
+        <severity value="error"/>
+        <human value="Caso o status da solicitação seja Negado/Cancelado (cancelled) o status do recurso Appointment deve ser cancelled e o status do recurso ServiceRequest deve ser revoked."/>
+        <expression value="code.coding.exists(code = 'cancelled') implies %resource.section.entry.resolve().status = 'cancelled' and %resource.section.entry.resolve().basedOn.resolve().status = 'revoked'"/>
+      </constraint>
       <isModifier value="false"/>
       <isSummary value="true"/>
       <mapping>
@@ -10640,7 +10777,7 @@
       <isSummary value="true"/>
       <binding>
         <strength value="required"/>
-        <description value="Lista de códigos descritores de um evento de regulação."/>
+        <description value="O código que identifica unicamente o status da solicitação."/>
         <valueSet value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"/>
       </binding>
       <mapping>
@@ -10934,6 +11071,7 @@
         <code value="code"/>
       </type>
       <fixedCode value="cancelled"/>
+      <condition value="mira-17"/>
       <constraint>
         <key value="ele-1"/>
         <severity value="error"/>
@@ -11081,9 +11219,9 @@
     </element>
     <element id="Composition.event:cancelled.period">
       <path value="Composition.event.period"/>
-      <short value="The period covered by the documentation"/>
-      <definition value="The period of time covered by the documentation. There is no assertion that the documentation is a complete representation for this period, only that it documents events during this time."/>
-      <min value="0"/>
+      <short value="Data e hora de alteração do status"/>
+      <definition value="Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados."/>
+      <min value="1"/>
       <max value="1"/>
       <base>
         <path value="Composition.event.period"/>
@@ -11262,7 +11400,7 @@
     </element>
     <element id="Composition.event:cancelled.detail">
       <path value="Composition.event.detail"/>
-      <short value="The event(s) being documented"/>
+      <short value="Detalhes sobre o status da solicitação do procedimento regulado"/>
       <definition value="The description and/or reference of the event(s) being documented. For example, this could be used to document such a colonoscopy or an appendectomy."/>
       <min value="0"/>
       <max value="*"/>
@@ -11438,8 +11576,8 @@
     </element>
     <element id="Composition.event:cancelled.detail.identifier">
       <path value="Composition.event.detail.identifier"/>
-      <short value="Logical reference, when literal reference is not known"/>
-      <definition value="An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference."/>
+      <short value="Estabelecimento de saúde que realizou a alteração do status"/>
+      <definition value="Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES."/>
       <comment value="When an identifier is provided in place of a reference, any system processing the reference will only be able to resolve the identifier to a reference if it understands the business context in which the identifier is used. Sometimes this is global (e.g. a national identifier) but often it is not. For this reason, none of the useful mechanisms described for working with references (e.g. chaining, includes) are possible, nor should servers be expected to be able resolve the reference. Servers may accept an identifier based reference untouched, resolve it, and/or reject it - see CapabilityStatement.rest.resource.referencePolicy. &#xA;&#xA;When both an identifier and a literal reference are provided, the literal reference is preferred. Applications processing the resource are allowed - but not required - to check that the identifier matches the literal reference&#xA;&#xA;Applications converting a logical reference to a literal reference may choose to leave the logical reference present, or remove it.&#xA;&#xA;Reference is intended to point to a structure that can potentially be expressed as a FHIR resource, though there is no need for it to exist as an actual FHIR resource instance - except in as much as an application wishes to actual find the target of the reference. The content referred to be the identifier must meet the logical constraints implied by any limitations on what resource types are permitted for the reference.  For example, it would not be legitimate to send the identifier for a drug prescription if the type were Reference(Observation|DiagnosticReport).  One of the use-cases for Reference.identifier is the situation where no FHIR representation exists (where the type is Reference (Any)."/>
       <min value="0"/>
       <max value="1"/>
@@ -11458,6 +11596,12 @@
         <expression value="hasValue() or (children().count() &gt; id.count())"/>
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="estab-2"/>
+        <severity value="error"/>
+        <human value="O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números."/>
+        <expression value="value.matches('^(?!(\\d)\\1{6})\\d{7}$')"/>
       </constraint>
       <isModifier value="false"/>
       <isSummary value="true"/>
@@ -11845,6 +11989,30 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
+      <constraint>
+        <key value="mira-10"/>
+        <severity value="error"/>
+        <human value="A Data de Agendamento (Appointment.start e Appointment.end) deve ser preenchida caso o status da solicitação seja Falta (absence)."/>
+        <expression value="code.coding.exists(code = 'absence') implies %resource.section.entry.resolve().start.exists() and %resource.section.entry.resolve().end.exists()"/>
+      </constraint>
+      <constraint>
+        <key value="mira-11"/>
+        <severity value="error"/>
+        <human value="O identificador do Estabelecimento de Saúde executante (ServiceRequest.performer) deve ser preenchido caso o status da solicitação seja Falta (absence)."/>
+        <expression value="code.coding.exists(code = 'absence') implies %resource.section.entry.resolve().basedOn.resolve().performer.exists()"/>
+      </constraint>
+      <constraint>
+        <key value="mira-12"/>
+        <severity value="error"/>
+        <human value="A Data de Execução (ServiceRequest.ocurrenceDateTime) deve ser preenchida caso o status da solicitação seja Falta (absence)."/>
+        <expression value="code.coding.exists(code = 'absence') implies %resource.section.entry.resolve().basedOn.resolve().occurrenceDateTime.exists()"/>
+      </constraint>
+      <constraint>
+        <key value="mira-18"/>
+        <severity value="error"/>
+        <human value="Caso o status da solicitação seja Falta (absence) o status do recurso Appointment deve ser noshow e o status do recurso ServiceRequest deve ser completed."/>
+        <expression value="code.coding.exists(code = 'absence') implies %resource.section.entry.resolve().status = 'noshow' and %resource.section.entry.resolve().basedOn.resolve().status = 'completed'"/>
+      </constraint>
       <isModifier value="false"/>
       <isSummary value="true"/>
       <mapping>
@@ -11995,7 +12163,7 @@
       <isSummary value="true"/>
       <binding>
         <strength value="required"/>
-        <description value="Lista de códigos descritores de um evento de regulação."/>
+        <description value="O código que identifica unicamente o status da solicitação."/>
         <valueSet value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"/>
       </binding>
       <mapping>
@@ -12289,6 +12457,10 @@
         <code value="code"/>
       </type>
       <fixedCode value="absence"/>
+      <condition value="mira-10"/>
+      <condition value="mira-11"/>
+      <condition value="mira-12"/>
+      <condition value="mira-18"/>
       <constraint>
         <key value="ele-1"/>
         <severity value="error"/>
@@ -12436,9 +12608,9 @@
     </element>
     <element id="Composition.event:absence.period">
       <path value="Composition.event.period"/>
-      <short value="The period covered by the documentation"/>
-      <definition value="The period of time covered by the documentation. There is no assertion that the documentation is a complete representation for this period, only that it documents events during this time."/>
-      <min value="0"/>
+      <short value="Data e hora de alteração do status"/>
+      <definition value="Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados."/>
+      <min value="1"/>
       <max value="1"/>
       <base>
         <path value="Composition.event.period"/>
@@ -12617,9 +12789,9 @@
     </element>
     <element id="Composition.event:absence.detail">
       <path value="Composition.event.detail"/>
-      <short value="The event(s) being documented"/>
+      <short value="Detalhes sobre o status da solicitação do procedimento regulado"/>
       <definition value="The description and/or reference of the event(s) being documented. For example, this could be used to document such a colonoscopy or an appendectomy."/>
-      <min value="1"/>
+      <min value="0"/>
       <max value="*"/>
       <base>
         <path value="Composition.event.detail"/>
@@ -12794,8 +12966,8 @@
     </element>
     <element id="Composition.event:absence.detail.identifier">
       <path value="Composition.event.detail.identifier"/>
-      <short value="Logical reference, when literal reference is not known"/>
-      <definition value="An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference."/>
+      <short value="Estabelecimento de saúde que realizou a alteração do status"/>
+      <definition value="Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES."/>
       <comment value="When an identifier is provided in place of a reference, any system processing the reference will only be able to resolve the identifier to a reference if it understands the business context in which the identifier is used. Sometimes this is global (e.g. a national identifier) but often it is not. For this reason, none of the useful mechanisms described for working with references (e.g. chaining, includes) are possible, nor should servers be expected to be able resolve the reference. Servers may accept an identifier based reference untouched, resolve it, and/or reject it - see CapabilityStatement.rest.resource.referencePolicy. &#xA;&#xA;When both an identifier and a literal reference are provided, the literal reference is preferred. Applications processing the resource are allowed - but not required - to check that the identifier matches the literal reference&#xA;&#xA;Applications converting a logical reference to a literal reference may choose to leave the logical reference present, or remove it.&#xA;&#xA;Reference is intended to point to a structure that can potentially be expressed as a FHIR resource, though there is no need for it to exist as an actual FHIR resource instance - except in as much as an application wishes to actual find the target of the reference. The content referred to be the identifier must meet the logical constraints implied by any limitations on what resource types are permitted for the reference.  For example, it would not be legitimate to send the identifier for a drug prescription if the type were Reference(Observation|DiagnosticReport).  One of the use-cases for Reference.identifier is the situation where no FHIR representation exists (where the type is Reference (Any)."/>
       <min value="0"/>
       <max value="1"/>
@@ -12814,6 +12986,12 @@
         <expression value="hasValue() or (children().count() &gt; id.count())"/>
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="estab-2"/>
+        <severity value="error"/>
+        <human value="O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números."/>
+        <expression value="value.matches('^(?!(\\d)\\1{6})\\d{7}$')"/>
       </constraint>
       <isModifier value="false"/>
       <isSummary value="true"/>
@@ -13201,6 +13379,12 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
+      <constraint>
+        <key value="mira-19"/>
+        <severity value="error"/>
+        <human value="Caso o status da solicitação seja Excluído (excluded) o status do recurso Appointment deve ser cancelled e o status do recurso ServiceRequest deve ser revoked."/>
+        <expression value="code.coding.exists(code = 'excluded') implies %resource.section.entry.resolve().status = 'cancelled' and %resource.section.entry.resolve().basedOn.resolve().status = 'revoked'"/>
+      </constraint>
       <isModifier value="false"/>
       <isSummary value="true"/>
       <mapping>
@@ -13351,7 +13535,7 @@
       <isSummary value="true"/>
       <binding>
         <strength value="required"/>
-        <description value="Lista de códigos descritores de um evento de regulação."/>
+        <description value="O código que identifica unicamente o status da solicitação."/>
         <valueSet value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"/>
       </binding>
       <mapping>
@@ -13645,6 +13829,7 @@
         <code value="code"/>
       </type>
       <fixedCode value="excluded"/>
+      <condition value="mira-19"/>
       <constraint>
         <key value="ele-1"/>
         <severity value="error"/>
@@ -13792,9 +13977,9 @@
     </element>
     <element id="Composition.event:excluded.period">
       <path value="Composition.event.period"/>
-      <short value="The period covered by the documentation"/>
-      <definition value="The period of time covered by the documentation. There is no assertion that the documentation is a complete representation for this period, only that it documents events during this time."/>
-      <min value="0"/>
+      <short value="Data e hora de alteração do status"/>
+      <definition value="Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados."/>
+      <min value="1"/>
       <max value="1"/>
       <base>
         <path value="Composition.event.period"/>
@@ -13973,7 +14158,7 @@
     </element>
     <element id="Composition.event:excluded.detail">
       <path value="Composition.event.detail"/>
-      <short value="The event(s) being documented"/>
+      <short value="Detalhes sobre o status da solicitação do procedimento regulado"/>
       <definition value="The description and/or reference of the event(s) being documented. For example, this could be used to document such a colonoscopy or an appendectomy."/>
       <min value="0"/>
       <max value="*"/>
@@ -14149,8 +14334,8 @@
     </element>
     <element id="Composition.event:excluded.detail.identifier">
       <path value="Composition.event.detail.identifier"/>
-      <short value="Logical reference, when literal reference is not known"/>
-      <definition value="An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference."/>
+      <short value="Estabelecimento de saúde que realizou a alteração do status"/>
+      <definition value="Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES."/>
       <comment value="When an identifier is provided in place of a reference, any system processing the reference will only be able to resolve the identifier to a reference if it understands the business context in which the identifier is used. Sometimes this is global (e.g. a national identifier) but often it is not. For this reason, none of the useful mechanisms described for working with references (e.g. chaining, includes) are possible, nor should servers be expected to be able resolve the reference. Servers may accept an identifier based reference untouched, resolve it, and/or reject it - see CapabilityStatement.rest.resource.referencePolicy. &#xA;&#xA;When both an identifier and a literal reference are provided, the literal reference is preferred. Applications processing the resource are allowed - but not required - to check that the identifier matches the literal reference&#xA;&#xA;Applications converting a logical reference to a literal reference may choose to leave the logical reference present, or remove it.&#xA;&#xA;Reference is intended to point to a structure that can potentially be expressed as a FHIR resource, though there is no need for it to exist as an actual FHIR resource instance - except in as much as an application wishes to actual find the target of the reference. The content referred to be the identifier must meet the logical constraints implied by any limitations on what resource types are permitted for the reference.  For example, it would not be legitimate to send the identifier for a drug prescription if the type were Reference(Observation|DiagnosticReport).  One of the use-cases for Reference.identifier is the situation where no FHIR representation exists (where the type is Reference (Any)."/>
       <min value="0"/>
       <max value="1"/>
@@ -14169,6 +14354,12 @@
         <expression value="hasValue() or (children().count() &gt; id.count())"/>
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="estab-2"/>
+        <severity value="error"/>
+        <human value="O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números."/>
+        <expression value="value.matches('^(?!(\\d)\\1{6})\\d{7}$')"/>
       </constraint>
       <isModifier value="false"/>
       <isSummary value="true"/>
@@ -15293,8 +15484,13 @@
     <element id="Composition">
       <path value="Composition"/>
       <short value="Regulação Assistencial"/>
-      <definition value="Documento que representa o documento de regulação assistencial."/>
-      <mustSupport value="true"/>
+      <definition value="Documento que representa o registro de uma solicitação de regulação assistencial."/>
+      <constraint>
+        <key value="ident-4"/>
+        <severity value="error"/>
+        <human value="O número de CPF ou CNS do indivíduo deve ser igual em seus respecitivos elementos dos recursos (subject.identifier.value ou participant.actor.identifier.value)."/>
+        <expression value="(subject.identifier.value = section.entry.resolve().ofType(Appointment).participant.actor.identifier.value) and (subject.identifier.value = section.entry.resolve().ofType(Appointment).basedOn.resolve().ofType(ServiceRequest).subject.identifier.value) and (section.entry.resolve().ofType(Appointment).reasonReference.exists().not() or (subject.identifier.value = section.entry.resolve().ofType(Appointment).reasonReference.resolve().ofType(Condition).subject.identifier.value))"/>
+      </constraint>
     </element>
     <element id="Composition.identifier">
       <path value="Composition.identifier"/>
@@ -15327,6 +15523,7 @@
     </element>
     <element id="Composition.type.coding">
       <path value="Composition.type.coding"/>
+      <short value="Código definido por uma terminologia"/>
       <min value="1"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -15337,10 +15534,12 @@
     </element>
     <element id="Composition.type.coding.system">
       <path value="Composition.type.coding.system"/>
+      <short value="Identificador do sistema de terminologia"/>
       <min value="1"/>
     </element>
     <element id="Composition.type.coding.code">
       <path value="Composition.type.coding.code"/>
+      <short value="Código conforme terminologia"/>
       <min value="1"/>
       <fixedCode value="RA"/>
     </element>
@@ -15358,8 +15557,8 @@
     </element>
     <element id="Composition.category">
       <path value="Composition.category"/>
-      <short value="Modalidade Assistencial"/>
-      <definition value="Classifica os contatos assistenciais de acordo com as especificidades do modo, local e duração do atendimento.&#xD;&#xA;Referência: https://rts.saude.gov.br/#/modalidade-assistencial"/>
+      <short value="Modalidade assistencial"/>
+      <definition value="Modalidade assistencial que gerou a solicitação do procedimento."/>
       <min value="1"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -15397,8 +15596,8 @@
     </element>
     <element id="Composition.subject">
       <path value="Composition.subject"/>
-      <short value="Sujeito da Composição"/>
-      <definition value="Quem ou o quê a composição se refere. Pode ser um indivíduo, dispositivo, grupos (de indivíduos, dispositivos etc.)."/>
+      <short value="Identificador do indivíduo da solicitação de regulação assistencial"/>
+      <definition value="Identificação única do paciente, por meio de CPF ou CNS."/>
       <comment value="Nesta versão, a RNDS suportará somente indivíduos."/>
       <min value="1"/>
       <type>
@@ -15416,6 +15615,10 @@
         <profile value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuoNaoIdentificado-1.0"/>
       </type>
       <mustSupport value="true"/>
+    </element>
+    <element id="Composition.subject.extension:unidentifiedPatient.extension">
+      <path value="Composition.subject.extension.extension"/>
+      <min value="3"/>
     </element>
     <element id="Composition.subject.extension:unidentifiedPatient.extension:gender">
       <path value="Composition.subject.extension.extension"/>
@@ -15440,6 +15643,16 @@
       <path value="Composition.subject.type"/>
       <max value="0"/>
       <fixedUri value="Patient"/>
+    </element>
+    <element id="Composition.subject.identifier">
+      <path value="Composition.subject.identifier"/>
+      <short value="Referência lógica, quando a referência literal não é conhecida"/>
+      <constraint>
+        <key value="ident-1"/>
+        <severity value="error"/>
+        <human value="O número de CPF ou CNS informado é inválido (subject.identifier.value)."/>
+        <expression value="value.matches('^(?!(\\d)\\1{10})\\d{11}$') or value.matches('^(?!(\\d)\\1{14})[125789]\\d{14}$')"/>
+      </constraint>
     </element>
     <element id="Composition.subject.identifier.use">
       <path value="Composition.subject.identifier.use"/>
@@ -15477,17 +15690,22 @@
       <path value="Composition.date"/>
       <short value="Data/hora de Geração do Documento"/>
       <definition value="Data e hora em que o documento foi gerado."/>
+      <constraint>
+        <key value="date-1"/>
+        <severity value="error"/>
+        <human value="A data do documento (Composition.date) deve ser no formato 'Ano-Mês-Dia'. Exemplo: 2026-01-01."/>
+        <expression value="value.matches('^(200[1-9]|20[1-9]\\d|[2-9]\\d{3})-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$')"/>
+      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.author">
       <path value="Composition.author"/>
-      <short value="Reponsável pelo Contato Assistencial"/>
-      <definition value="Identifica a Pessoa Jurídica ou Pessoa Física (profissional liberal) responsável por gerar o documento."/>
+      <short value="Autor do documento"/>
+      <definition value="Identifica o Estabelecimento de Saúde responsável por gerar o documento."/>
       <comment value="Nesta versão da RNDS somente serão suportadas edições provenientes de Estabelecimentos de Saúde."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"/>
-        <targetProfile value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -15501,7 +15719,14 @@
     </element>
     <element id="Composition.author.identifier">
       <path value="Composition.author.identifier"/>
+      <short value="Referência lógica, quando a referência literal não é conhecida"/>
       <min value="1"/>
+      <constraint>
+        <key value="estab-2"/>
+        <severity value="error"/>
+        <human value="O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números."/>
+        <expression value="value.matches('^(?!(\\d)\\1{6})\\d{7}$')"/>
+      </constraint>
     </element>
     <element id="Composition.author.identifier.use">
       <path value="Composition.author.identifier.use"/>
@@ -15570,6 +15795,7 @@
       <requirements value="O valor é fixado em replaces, pois a substituição de documentos é a única operação permitida na RNDS."/>
       <type>
         <code value="Reference"/>
+        <targetProfile value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial"/>
       </type>
     </element>
     <element id="Composition.relatesTo.target[x].id">
@@ -15601,8 +15827,8 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Evento de regulação"/>
-      <definition value="Definição dos eventos de um processo de regulação"/>
+      <short value="Status da Solicitação"/>
+      <definition value="Definição dos eventos de um processo de regulação. Neste elemento será preenchido o código que identifica unicamente o status da solicitação, conforme tabela de status de solicitação."/>
       <min value="1"/>
       <max value="1"/>
     </element>
@@ -15612,6 +15838,30 @@
       <short value="Evento de solicitação de procedimento regulado"/>
       <definition value="Evento destinado a modelar a solicitação de um serviço, bem como o estabelecimento solicitante."/>
       <max value="1"/>
+      <constraint>
+        <key value="mira-2"/>
+        <severity value="error"/>
+        <human value="A Data de Agendamento (Appointment.start e Appointment.end) não pode estar preenchida caso o status da solicitação seja Pendente (pending)."/>
+        <expression value="code.coding.exists(code = 'pending') implies %resource.section.entry.resolve().start.empty() and %resource.section.entry.resolve().end.empty()"/>
+      </constraint>
+      <constraint>
+        <key value="mira-3"/>
+        <severity value="error"/>
+        <human value="A Data de Execução (ServiceRequest.ocurrenceDateTime) não pode estar preenchida caso o status da solicitação seja Pendente (pending)."/>
+        <expression value="code.coding.exists(code = 'pending') implies %resource.section.entry.resolve().basedOn.resolve().occurrenceDateTime.empty()"/>
+      </constraint>
+      <constraint>
+        <key value="mira-4"/>
+        <severity value="error"/>
+        <human value="O identificador do Estabelecimento de Saúde executante (ServiceRequest.performer) não pode estar preenchido caso o status da solicitação seja Pendente (pending)."/>
+        <expression value="code.coding.exists(code = 'pending') implies %resource.section.entry.resolve().basedOn.resolve().performer.empty()"/>
+      </constraint>
+      <constraint>
+        <key value="mira-13"/>
+        <severity value="error"/>
+        <human value="Caso o status da solicitação seja Pendente (pending) o status do recurso Appointment deve ser proposed e o status do recurso ServiceRequest deve ser active."/>
+        <expression value="code.coding.exists(code = 'pending') implies %resource.section.entry.resolve().status = 'proposed' and %resource.section.entry.resolve().basedOn.resolve().status = 'active'"/>
+      </constraint>
     </element>
     <element id="Composition.event:pending.id">
       <path value="Composition.event.id"/>
@@ -15623,7 +15873,7 @@
       <max value="1"/>
       <binding>
         <strength value="required"/>
-        <description value="Lista de códigos descritores de um evento de regulação."/>
+        <description value="O código que identifica unicamente o status da solicitação."/>
         <valueSet value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"/>
       </binding>
     </element>
@@ -15644,6 +15894,10 @@
       <path value="Composition.event.code.coding.code"/>
       <min value="1"/>
       <fixedCode value="pending"/>
+      <condition value="mira-2"/>
+      <condition value="mira-3"/>
+      <condition value="mira-4"/>
+      <condition value="mira-13"/>
     </element>
     <element id="Composition.event:pending.code.coding.userSelected">
       <path value="Composition.event.code.coding.userSelected"/>
@@ -15655,7 +15909,8 @@
     </element>
     <element id="Composition.event:pending.period">
       <path value="Composition.event.period"/>
-      <short value="Data da solicitação"/>
+      <short value="Data e hora de alteração do status"/>
+      <definition value="Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados."/>
       <min value="1"/>
     </element>
     <element id="Composition.event:pending.period.id">
@@ -15668,7 +15923,7 @@
     </element>
     <element id="Composition.event:pending.detail">
       <path value="Composition.event.detail"/>
-      <min value="1"/>
+      <short value="Detalhes sobre o status da solicitação do procedimento regulado"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"/>
@@ -15682,6 +15937,17 @@
     <element id="Composition.event:pending.detail.type">
       <path value="Composition.event.detail.type"/>
       <max value="0"/>
+    </element>
+    <element id="Composition.event:pending.detail.identifier">
+      <path value="Composition.event.detail.identifier"/>
+      <short value="Estabelecimento de saúde que realizou a alteração do status"/>
+      <definition value="Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES."/>
+      <constraint>
+        <key value="estab-2"/>
+        <severity value="error"/>
+        <human value="O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números."/>
+        <expression value="value.matches('^(?!(\\d)\\1{6})\\d{7}$')"/>
+      </constraint>
     </element>
     <element id="Composition.event:pending.detail.identifier.id">
       <path value="Composition.event.detail.identifier.id"/>
@@ -15750,6 +16016,12 @@
       <short value="Evento de devolução ao solicitante"/>
       <definition value="Evento destinado a modelar a devolução (feita por um estabelecimento regulador) de um serviço ao estabelecimento solicitante."/>
       <max value="1"/>
+      <constraint>
+        <key value="mira-14"/>
+        <severity value="error"/>
+        <human value="Caso o status da solicitação seja Devolvido para o solicitante (returned-to-requester) o status do recurso Appointment deve ser waitlist e o status do recurso ServiceRequest deve ser on-hold."/>
+        <expression value="code.coding.exists(code = 'returned-to-requester') implies %resource.section.entry.resolve().status = 'waitlist' and %resource.section.entry.resolve().basedOn.resolve().status = 'on-hold'"/>
+      </constraint>
     </element>
     <element id="Composition.event:returned-to-requester.id">
       <path value="Composition.event.id"/>
@@ -15761,7 +16033,7 @@
       <max value="1"/>
       <binding>
         <strength value="required"/>
-        <description value="Lista de códigos descritores de um evento de regulação."/>
+        <description value="O código que identifica unicamente o status da solicitação."/>
         <valueSet value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"/>
       </binding>
     </element>
@@ -15786,6 +16058,7 @@
       <path value="Composition.event.code.coding.code"/>
       <min value="1"/>
       <fixedCode value="returned-to-requester"/>
+      <condition value="mira-14"/>
     </element>
     <element id="Composition.event:returned-to-requester.code.coding.userSelected">
       <path value="Composition.event.code.coding.userSelected"/>
@@ -15794,6 +16067,12 @@
     <element id="Composition.event:returned-to-requester.code.text">
       <path value="Composition.event.code.text"/>
       <max value="0"/>
+    </element>
+    <element id="Composition.event:returned-to-requester.period">
+      <path value="Composition.event.period"/>
+      <short value="Data e hora de alteração do status"/>
+      <definition value="Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados."/>
+      <min value="1"/>
     </element>
     <element id="Composition.event:returned-to-requester.period.id">
       <path value="Composition.event.period.id"/>
@@ -15805,8 +16084,7 @@
     </element>
     <element id="Composition.event:returned-to-requester.detail">
       <path value="Composition.event.detail"/>
-      <min value="1"/>
-      <max value="1"/>
+      <short value="Detalhes sobre o status da solicitação do procedimento regulado"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"/>
@@ -15826,7 +16104,14 @@
     </element>
     <element id="Composition.event:returned-to-requester.detail.identifier">
       <path value="Composition.event.detail.identifier"/>
-      <min value="1"/>
+      <short value="Estabelecimento de saúde que realizou a alteração do status"/>
+      <definition value="Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES."/>
+      <constraint>
+        <key value="estab-2"/>
+        <severity value="error"/>
+        <human value="O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números."/>
+        <expression value="value.matches('^(?!(\\d)\\1{6})\\d{7}$')"/>
+      </constraint>
     </element>
     <element id="Composition.event:returned-to-requester.detail.identifier.id">
       <path value="Composition.event.detail.identifier.id"/>
@@ -15866,6 +16151,24 @@
       <short value="Evento de agendamento de procedimento regulado"/>
       <definition value="Evento destinado a modelar o agendamento de um serviço, bem como o estabelecimento executante."/>
       <max value="1"/>
+      <constraint>
+        <key value="mira-5"/>
+        <severity value="error"/>
+        <human value="A Data de Agendamento (Appointment.start e Appointment.end) deve ser preenchida caso o status da solicitação seja Agendado (booked)."/>
+        <expression value="code.coding.exists(code = 'booked') implies %resource.section.entry.resolve().start.exists() and %resource.section.entry.resolve().end.exists()"/>
+      </constraint>
+      <constraint>
+        <key value="mira-6"/>
+        <severity value="error"/>
+        <human value="O identificador do Estabelecimento de Saúde executante (ServiceRequest.performer) deve ser preenchido caso o status da solicitação seja Agendado (booked)."/>
+        <expression value="code.coding.exists(code = 'booked') implies %resource.section.entry.resolve().basedOn.resolve().performer.exists()"/>
+      </constraint>
+      <constraint>
+        <key value="mira-15"/>
+        <severity value="error"/>
+        <human value="Caso o status da solicitação seja Agendado (booked) o status do recurso Appointment deve ser booked e o status do recurso ServiceRequest deve ser active."/>
+        <expression value="code.coding.exists(code = 'booked') implies %resource.section.entry.resolve().status = 'booked' and %resource.section.entry.resolve().basedOn.resolve().status = 'active'"/>
+      </constraint>
     </element>
     <element id="Composition.event:booked.id">
       <path value="Composition.event.id"/>
@@ -15877,7 +16180,7 @@
       <max value="1"/>
       <binding>
         <strength value="required"/>
-        <description value="Lista de códigos descritores de um evento de regulação."/>
+        <description value="O código que identifica unicamente o status da solicitação."/>
         <valueSet value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"/>
       </binding>
     </element>
@@ -15902,6 +16205,9 @@
       <path value="Composition.event.code.coding.code"/>
       <min value="1"/>
       <fixedCode value="booked"/>
+      <condition value="mira-5"/>
+      <condition value="mira-6"/>
+      <condition value="mira-15"/>
     </element>
     <element id="Composition.event:booked.code.coding.userSelected">
       <path value="Composition.event.code.coding.userSelected"/>
@@ -15910,6 +16216,12 @@
     <element id="Composition.event:booked.code.text">
       <path value="Composition.event.code.text"/>
       <max value="0"/>
+    </element>
+    <element id="Composition.event:booked.period">
+      <path value="Composition.event.period"/>
+      <short value="Data e hora de alteração do status"/>
+      <definition value="Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados."/>
+      <min value="1"/>
     </element>
     <element id="Composition.event:booked.period.id">
       <path value="Composition.event.period.id"/>
@@ -15921,7 +16233,7 @@
     </element>
     <element id="Composition.event:booked.detail">
       <path value="Composition.event.detail"/>
-      <min value="1"/>
+      <short value="Detalhes sobre o status da solicitação do procedimento regulado"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"/>
@@ -15935,6 +16247,17 @@
     <element id="Composition.event:booked.detail.type">
       <path value="Composition.event.detail.type"/>
       <max value="0"/>
+    </element>
+    <element id="Composition.event:booked.detail.identifier">
+      <path value="Composition.event.detail.identifier"/>
+      <short value="Estabelecimento de saúde que realizou a alteração do status"/>
+      <definition value="Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES."/>
+      <constraint>
+        <key value="estab-2"/>
+        <severity value="error"/>
+        <human value="O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números."/>
+        <expression value="value.matches('^(?!(\\d)\\1{6})\\d{7}$')"/>
+      </constraint>
     </element>
     <element id="Composition.event:booked.detail.identifier.id">
       <path value="Composition.event.detail.identifier.id"/>
@@ -15974,6 +16297,30 @@
       <short value="Evento de atendimento de procedimento regulado"/>
       <definition value="Evento destinado a modelar o atendimento de um serviço, bem como o estabelecimento executante."/>
       <max value="1"/>
+      <constraint>
+        <key value="mira-7"/>
+        <severity value="error"/>
+        <human value="A Data de Agendamento (Appointment.start e Appointment.end) deve ser preenchida caso o status da solicitação seja Atendido/Internado (attended)."/>
+        <expression value="code.coding.exists(code = 'attended') implies %resource.section.entry.resolve().start.exists() and %resource.section.entry.resolve().end.exists()"/>
+      </constraint>
+      <constraint>
+        <key value="mira-8"/>
+        <severity value="error"/>
+        <human value="O identificador do Estabelecimento de Saúde executante (ServiceRequest.performer) deve ser preenchido caso o status da solicitação seja Atendido/Internado (attended)."/>
+        <expression value="code.coding.exists(code = 'attended') implies %resource.section.entry.resolve().basedOn.resolve().performer.exists()"/>
+      </constraint>
+      <constraint>
+        <key value="mira-9"/>
+        <severity value="error"/>
+        <human value="A Data de Execução (ServiceRequest.ocurrenceDateTime) deve ser preenchida caso o status da solicitação seja Atendido/Internado (attended)."/>
+        <expression value="code.coding.exists(code = 'attended') implies %resource.section.entry.resolve().basedOn.resolve().occurrenceDateTime.exists()"/>
+      </constraint>
+      <constraint>
+        <key value="mira-16"/>
+        <severity value="error"/>
+        <human value="Caso o status da solicitação seja Atendido/Internado (attended) o status do recurso Appointment deve ser fulfilled e o status do recurso ServiceRequest deve ser completed."/>
+        <expression value="code.coding.exists(code = 'attended') implies %resource.section.entry.resolve().status = 'fulfilled' and %resource.section.entry.resolve().basedOn.resolve().status = 'completed'"/>
+      </constraint>
     </element>
     <element id="Composition.event:attended.id">
       <path value="Composition.event.id"/>
@@ -15985,7 +16332,7 @@
       <max value="1"/>
       <binding>
         <strength value="required"/>
-        <description value="Lista de códigos descritores de um evento de regulação."/>
+        <description value="O código que identifica unicamente o status da solicitação."/>
         <valueSet value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"/>
       </binding>
     </element>
@@ -16010,6 +16357,10 @@
       <path value="Composition.event.code.coding.code"/>
       <min value="1"/>
       <fixedCode value="attended"/>
+      <condition value="mira-7"/>
+      <condition value="mira-8"/>
+      <condition value="mira-9"/>
+      <condition value="mira-16"/>
     </element>
     <element id="Composition.event:attended.code.coding.userSelected">
       <path value="Composition.event.code.coding.userSelected"/>
@@ -16018,6 +16369,12 @@
     <element id="Composition.event:attended.code.text">
       <path value="Composition.event.code.text"/>
       <max value="0"/>
+    </element>
+    <element id="Composition.event:attended.period">
+      <path value="Composition.event.period"/>
+      <short value="Data e hora de alteração do status"/>
+      <definition value="Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados."/>
+      <min value="1"/>
     </element>
     <element id="Composition.event:attended.period.id">
       <path value="Composition.event.period.id"/>
@@ -16029,7 +16386,7 @@
     </element>
     <element id="Composition.event:attended.detail">
       <path value="Composition.event.detail"/>
-      <min value="1"/>
+      <short value="Detalhes sobre o status da solicitação do procedimento regulado"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"/>
@@ -16043,6 +16400,17 @@
     <element id="Composition.event:attended.detail.type">
       <path value="Composition.event.detail.type"/>
       <max value="0"/>
+    </element>
+    <element id="Composition.event:attended.detail.identifier">
+      <path value="Composition.event.detail.identifier"/>
+      <short value="Estabelecimento de saúde que realizou a alteração do status"/>
+      <definition value="Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES."/>
+      <constraint>
+        <key value="estab-2"/>
+        <severity value="error"/>
+        <human value="O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números."/>
+        <expression value="value.matches('^(?!(\\d)\\1{6})\\d{7}$')"/>
+      </constraint>
     </element>
     <element id="Composition.event:attended.detail.identifier.id">
       <path value="Composition.event.detail.identifier.id"/>
@@ -16080,6 +16448,12 @@
       <path value="Composition.event"/>
       <sliceName value="cancelled"/>
       <max value="1"/>
+      <constraint>
+        <key value="mira-17"/>
+        <severity value="error"/>
+        <human value="Caso o status da solicitação seja Negado/Cancelado (cancelled) o status do recurso Appointment deve ser cancelled e o status do recurso ServiceRequest deve ser revoked."/>
+        <expression value="code.coding.exists(code = 'cancelled') implies %resource.section.entry.resolve().status = 'cancelled' and %resource.section.entry.resolve().basedOn.resolve().status = 'revoked'"/>
+      </constraint>
     </element>
     <element id="Composition.event:cancelled.id">
       <path value="Composition.event.id"/>
@@ -16091,7 +16465,7 @@
       <max value="1"/>
       <binding>
         <strength value="required"/>
-        <description value="Lista de códigos descritores de um evento de regulação."/>
+        <description value="O código que identifica unicamente o status da solicitação."/>
         <valueSet value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"/>
       </binding>
     </element>
@@ -16116,6 +16490,7 @@
       <path value="Composition.event.code.coding.code"/>
       <min value="1"/>
       <fixedCode value="cancelled"/>
+      <condition value="mira-17"/>
     </element>
     <element id="Composition.event:cancelled.code.coding.userSelected">
       <path value="Composition.event.code.coding.userSelected"/>
@@ -16124,6 +16499,12 @@
     <element id="Composition.event:cancelled.code.text">
       <path value="Composition.event.code.text"/>
       <max value="0"/>
+    </element>
+    <element id="Composition.event:cancelled.period">
+      <path value="Composition.event.period"/>
+      <short value="Data e hora de alteração do status"/>
+      <definition value="Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados."/>
+      <min value="1"/>
     </element>
     <element id="Composition.event:cancelled.period.id">
       <path value="Composition.event.period.id"/>
@@ -16135,6 +16516,7 @@
     </element>
     <element id="Composition.event:cancelled.detail">
       <path value="Composition.event.detail"/>
+      <short value="Detalhes sobre o status da solicitação do procedimento regulado"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"/>
@@ -16147,6 +16529,17 @@
     <element id="Composition.event:cancelled.detail.type">
       <path value="Composition.event.detail.type"/>
       <max value="0"/>
+    </element>
+    <element id="Composition.event:cancelled.detail.identifier">
+      <path value="Composition.event.detail.identifier"/>
+      <short value="Estabelecimento de saúde que realizou a alteração do status"/>
+      <definition value="Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES."/>
+      <constraint>
+        <key value="estab-2"/>
+        <severity value="error"/>
+        <human value="O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números."/>
+        <expression value="value.matches('^(?!(\\d)\\1{6})\\d{7}$')"/>
+      </constraint>
     </element>
     <element id="Composition.event:cancelled.detail.identifier.id">
       <path value="Composition.event.detail.identifier.id"/>
@@ -16184,6 +16577,30 @@
       <path value="Composition.event"/>
       <sliceName value="absence"/>
       <max value="1"/>
+      <constraint>
+        <key value="mira-10"/>
+        <severity value="error"/>
+        <human value="A Data de Agendamento (Appointment.start e Appointment.end) deve ser preenchida caso o status da solicitação seja Falta (absence)."/>
+        <expression value="code.coding.exists(code = 'absence') implies %resource.section.entry.resolve().start.exists() and %resource.section.entry.resolve().end.exists()"/>
+      </constraint>
+      <constraint>
+        <key value="mira-11"/>
+        <severity value="error"/>
+        <human value="O identificador do Estabelecimento de Saúde executante (ServiceRequest.performer) deve ser preenchido caso o status da solicitação seja Falta (absence)."/>
+        <expression value="code.coding.exists(code = 'absence') implies %resource.section.entry.resolve().basedOn.resolve().performer.exists()"/>
+      </constraint>
+      <constraint>
+        <key value="mira-12"/>
+        <severity value="error"/>
+        <human value="A Data de Execução (ServiceRequest.ocurrenceDateTime) deve ser preenchida caso o status da solicitação seja Falta (absence)."/>
+        <expression value="code.coding.exists(code = 'absence') implies %resource.section.entry.resolve().basedOn.resolve().occurrenceDateTime.exists()"/>
+      </constraint>
+      <constraint>
+        <key value="mira-18"/>
+        <severity value="error"/>
+        <human value="Caso o status da solicitação seja Falta (absence) o status do recurso Appointment deve ser noshow e o status do recurso ServiceRequest deve ser completed."/>
+        <expression value="code.coding.exists(code = 'absence') implies %resource.section.entry.resolve().status = 'noshow' and %resource.section.entry.resolve().basedOn.resolve().status = 'completed'"/>
+      </constraint>
     </element>
     <element id="Composition.event:absence.id">
       <path value="Composition.event.id"/>
@@ -16195,7 +16612,7 @@
       <max value="1"/>
       <binding>
         <strength value="required"/>
-        <description value="Lista de códigos descritores de um evento de regulação."/>
+        <description value="O código que identifica unicamente o status da solicitação."/>
         <valueSet value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"/>
       </binding>
     </element>
@@ -16219,6 +16636,10 @@
     <element id="Composition.event:absence.code.coding.code">
       <path value="Composition.event.code.coding.code"/>
       <fixedCode value="absence"/>
+      <condition value="mira-10"/>
+      <condition value="mira-11"/>
+      <condition value="mira-12"/>
+      <condition value="mira-18"/>
     </element>
     <element id="Composition.event:absence.code.coding.userSelected">
       <path value="Composition.event.code.coding.userSelected"/>
@@ -16227,6 +16648,12 @@
     <element id="Composition.event:absence.code.text">
       <path value="Composition.event.code.text"/>
       <max value="0"/>
+    </element>
+    <element id="Composition.event:absence.period">
+      <path value="Composition.event.period"/>
+      <short value="Data e hora de alteração do status"/>
+      <definition value="Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados."/>
+      <min value="1"/>
     </element>
     <element id="Composition.event:absence.period.id">
       <path value="Composition.event.period.id"/>
@@ -16238,7 +16665,7 @@
     </element>
     <element id="Composition.event:absence.detail">
       <path value="Composition.event.detail"/>
-      <min value="1"/>
+      <short value="Detalhes sobre o status da solicitação do procedimento regulado"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"/>
@@ -16252,6 +16679,17 @@
     <element id="Composition.event:absence.detail.type">
       <path value="Composition.event.detail.type"/>
       <max value="0"/>
+    </element>
+    <element id="Composition.event:absence.detail.identifier">
+      <path value="Composition.event.detail.identifier"/>
+      <short value="Estabelecimento de saúde que realizou a alteração do status"/>
+      <definition value="Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES."/>
+      <constraint>
+        <key value="estab-2"/>
+        <severity value="error"/>
+        <human value="O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números."/>
+        <expression value="value.matches('^(?!(\\d)\\1{6})\\d{7}$')"/>
+      </constraint>
     </element>
     <element id="Composition.event:absence.detail.identifier.id">
       <path value="Composition.event.detail.identifier.id"/>
@@ -16289,6 +16727,12 @@
       <path value="Composition.event"/>
       <sliceName value="excluded"/>
       <max value="1"/>
+      <constraint>
+        <key value="mira-19"/>
+        <severity value="error"/>
+        <human value="Caso o status da solicitação seja Excluído (excluded) o status do recurso Appointment deve ser cancelled e o status do recurso ServiceRequest deve ser revoked."/>
+        <expression value="code.coding.exists(code = 'excluded') implies %resource.section.entry.resolve().status = 'cancelled' and %resource.section.entry.resolve().basedOn.resolve().status = 'revoked'"/>
+      </constraint>
     </element>
     <element id="Composition.event:excluded.id">
       <path value="Composition.event.id"/>
@@ -16300,7 +16744,7 @@
       <max value="1"/>
       <binding>
         <strength value="required"/>
-        <description value="Lista de códigos descritores de um evento de regulação."/>
+        <description value="O código que identifica unicamente o status da solicitação."/>
         <valueSet value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"/>
       </binding>
     </element>
@@ -16325,6 +16769,7 @@
       <path value="Composition.event.code.coding.code"/>
       <min value="1"/>
       <fixedCode value="excluded"/>
+      <condition value="mira-19"/>
     </element>
     <element id="Composition.event:excluded.code.coding.userSelected">
       <path value="Composition.event.code.coding.userSelected"/>
@@ -16334,6 +16779,12 @@
       <path value="Composition.event.code.text"/>
       <max value="0"/>
     </element>
+    <element id="Composition.event:excluded.period">
+      <path value="Composition.event.period"/>
+      <short value="Data e hora de alteração do status"/>
+      <definition value="Data e hora em que o status da solicitação de procedimento regulado foi alterado no sistema de origem dos dados."/>
+      <min value="1"/>
+    </element>
     <element id="Composition.event:excluded.period.id">
       <path value="Composition.event.period.id"/>
       <max value="0"/>
@@ -16342,6 +16793,10 @@
       <path value="Composition.event.period.end"/>
       <min value="1"/>
     </element>
+    <element id="Composition.event:excluded.detail">
+      <path value="Composition.event.detail"/>
+      <short value="Detalhes sobre o status da solicitação do procedimento regulado"/>
+    </element>
     <element id="Composition.event:excluded.detail.id">
       <path value="Composition.event.detail.id"/>
       <max value="0"/>
@@ -16349,6 +16804,17 @@
     <element id="Composition.event:excluded.detail.type">
       <path value="Composition.event.detail.type"/>
       <max value="0"/>
+    </element>
+    <element id="Composition.event:excluded.detail.identifier">
+      <path value="Composition.event.detail.identifier"/>
+      <short value="Estabelecimento de saúde que realizou a alteração do status"/>
+      <definition value="Identificação única do estabelecimento que realizou a alteração do status da solicitação de procedimento regulado, por meio do CNES."/>
+      <constraint>
+        <key value="estab-2"/>
+        <severity value="error"/>
+        <human value="O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números."/>
+        <expression value="value.matches('^(?!(\\d)\\1{6})\\d{7}$')"/>
+      </constraint>
     </element>
     <element id="Composition.event:excluded.detail.identifier.id">
       <path value="Composition.event.detail.identifier.id"/>

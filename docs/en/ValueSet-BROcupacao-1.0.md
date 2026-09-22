@@ -1,4 +1,4 @@
-# Classificação Brasileira de Ocupações - CBO - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Classificação Brasileira de Ocupações - CBO - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
 
 ## ValueSet: Classificação Brasileira de Ocupações - CBO 
 

@@ -1,0 +1,2839 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.saude.gov.br/rira/CodeSystem/BRCIAP2> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "BRCIAP2"] ;
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2020-03-11T19:10:04.975+00:00"^^xsd:dateTime ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg" ] ;
+     fhir:Extension.valueCode [ fhir:value "ehr" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm" ] ;
+     fhir:Extension.valueInteger [
+       fhir:value "1"^^xsd:integer ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom" ] ;
+         fhir:Extension.valueCanonical [
+           fhir:value "http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir" ;
+           fhir:link <http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir>
+         ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
+     fhir:Extension.valueCode [
+       fhir:value "normative" ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom" ] ;
+         fhir:Extension.valueCanonical [
+           fhir:value "http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir" ;
+           fhir:link <http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir>
+         ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
+     fhir:Extension.valueCode [ fhir:value "4.0.1" ]
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCIAP2"] ;
+  fhir:CodeSystem.version [ fhir:value "1.0.0-release"] ;
+  fhir:CodeSystem.name [ fhir:value "BRCIAP2"] ;
+  fhir:CodeSystem.title [ fhir:value "Classificação Internacional de Atenção Primária - Segunda Edição - CIAP2"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2020-03-11T19:10:21.0842411+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "Ministério da Saúde do Brasil"] ;
+  fhir:CodeSystem.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "Ministério da Saúde do Brasil" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "http://www.saude.gov.br" ]
+     ], [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "email" ] ;
+       fhir:ContactPoint.value [ fhir:value "cgiis.datasus@saude.gov.br" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "Classifica os problemas identificados no contato assistencial pelos profissionais de saúde, os motivos da contato assistencial e as respostas propostas pela equipe seguindo a sistematização SOAP."] ;
+  fhir:CodeSystem.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "BR" ]
+     ]
+  ] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.concept [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A01" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dor generalizada /múltipla" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A02" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Arrepios/ calafrios" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A03" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Febre" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A04" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Debilidade/cansaço geral/fadiga" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A05" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sentir-se doente" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A06" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Desmaio/síncope" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A07" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Coma" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A08" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Inchaço" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A09" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Problemas de sudorese" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A10" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sangramento/Hemorragia NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A11" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dores torácicas NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A13" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Receio/Medo do tratamento" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A16" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Criança irritável" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A18" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Preocupação com aparência" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A20" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Pedido/discussão eutanásia" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A21" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Fator de risco de malignidade" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A23" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Fator de risco NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A25" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de morrer/medo da morte" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A26" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de câncer NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A27" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de outra doença NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A28" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Limitação funcional/incapacidade NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A29" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outros sinais/sintomas gerais" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A70" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Tuberculose" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A71" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sarampo" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A72" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Varicela" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A73" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Malária" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A74" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Rubéola" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A75" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Mononucleose infecciosa" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A76" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outro exantema viral" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A77" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dengue e outras doenças virais NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A78" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hanseníase e outras doenças infecciosas NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A79" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Carcinomatose (localização primária desconhecida)" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A80" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Lesão traumática/acidente NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A81" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Politraumatismos/ferimentos múltiplos" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A82" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Efeito secundário de lesão traumática" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A84" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Intoxicação por medicamento" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A85" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Efeito adverso de fármaco dose correta" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A86" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Efeito tóxico de substância não medicinal" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A87" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Complicações de tratamento médico" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A88" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Efeito adverso de fator físico" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A89" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Efeito da prótese" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A90" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Malformação congênita NE/múltiplas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A91" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Investigação com resultado anormal NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A92" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Alergia/reação alérgica NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A93" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Recém nascido prematuro" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A94" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Morbidade perinatal, outra" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A95" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Mortalidade perinatal" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A96" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Morte" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A97" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sem doença" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A98" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medicina preventiva/manutenção da saúde" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "A99" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outras doenças gerais NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "B02" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Gânglio linfático aumentado/doloroso" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "B04" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas sangue" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "B25" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de VIH/ HIV/SIDA/ AIDS" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "B26" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de câncer no sangue/linfático" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "B27" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de outras doenças do sangue /vasos linfáticos" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "B28" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Limitação funcional/incapacidade" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "B29" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outros sinais/ sintomas do sangue/ sistema linfático/ baço NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "B70" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Linfadenite aguda" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "B71" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Linfadenite crónica NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "B72" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Doença de Hodgkin/linfomas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "B73" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Leucemia" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "B74" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outra neoplasia maligna no sangue" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "B75" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia benigna NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "B76" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Rotura traumática do baço" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "B77" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outras lesões traumáticas do sangue/linfa/baço" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "B78" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Anemia hemolítica hereditária" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "B79" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outra malformação congênita do sangue/linfática" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "B80" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Anemia por deficiência de ferro" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "B81" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Anemia perniciosa/deficiência de folatos" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "B82" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outras anemias NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "B83" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Púrpura/defeitos de coagulação" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "B84" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Glóbulos brancos anormais" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "B87" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Esplenomegalia" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "B90" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Infecção por VIH/ HIV/SIDA/ AIDS" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "B99" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outra doença do sangue/linfáticos/baço" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D01" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dor abdominal generalizada/cólicas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D02" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dores abdominais, epigástricas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D03" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Azia/ Queimação" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D04" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dor anal/retal" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D05" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Irritação perianal" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D06" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outras dores abdominais localizadas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D07" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dispepsia/indigestão" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D08" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Flatulência /gases/eructações" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D09" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Náusea" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D10" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Vomito" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D11" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Diarreia" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D12" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Obstipação" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D13" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Icterícia" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D14" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hematêmese/vómito sangue" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D15" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Melena" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D16" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hemorragia retal" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D17" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Incontinência fecal" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D18" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Alterações nas fezes/mov. intestinais" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D19" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas dos dentes/gengivas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D20" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas da boca/língua/lábios" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D21" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Problemas de deglutição" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D23" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hepatomegalia" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D24" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Massa abdominal NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D25" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Distensão abdominal" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D26" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de câncer no aparelho digestivo" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D27" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de outras doenças aparelho digestivo" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D28" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Limitação funcional/incapacidade" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D29" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outros sinais/sintomas digestivos" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D70" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Infecção gastrointestinal" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D71" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Caxumba/parotidite epidêmica" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D72" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hepatite viral" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D73" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Gastroenterite, presumível infecção" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D74" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia maligna do estômago" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D75" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia maligna do cólon/reto" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D76" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia maligna do pâncreas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D77" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia maligna do aparelho digestivo NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D78" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia benigna do aparelho digestivo/incerta" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D79" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Corpo estranho no aparelho digestivo" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D80" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outras lesões traumáticas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D81" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Malformações congênitas do aparelho digestivo" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D82" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Doença dos dentes/gengivas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D83" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Doença da boca/língua/lábios" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D84" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Doença do esôfago" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D85" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Úlcera do duodeno" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D86" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Úlcera péptica, outra" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D87" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Alterações funcionais estômago" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D88" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Apendicite" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D89" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hérnia inguinal" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D90" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hérnia de hiato /diafragmática" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D91" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hérnia abdominal, outras" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D92" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Doença diverticular intestinal" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D93" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Síndrome do cólon irritável" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D94" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Enterite crónica/colite ulcerosa" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D95" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Fissura anal / abcesso perianal" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D96" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Lombrigas /outros parasitas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D97" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Doenças do fígado /NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D98" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Colecistite, colelitiase" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "D99" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outra doença do aparelho digestivo" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F01" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dor no olho" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F02" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Olho vermelho" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F03" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Secreção ocular" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F04" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Moscas volantes/pontos luminosos/escotomas/ manchas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F05" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outras perturbações visuais" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F13" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sensações oculares anormais" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F14" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Movimentos oculares anormais" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F15" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Aparência anormal nos olhos" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F16" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas das pálpebras" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F17" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas relacionados a óculos" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F18" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas relacionados a lentes de contato" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F27" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de doença ocular" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F28" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Limitação funcional/incapacidade" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F29" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outros sinais/sintomas oculares" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F70" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Conjuntivite infecciosa" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F71" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Conjuntivite alérgica" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F72" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Blefarite/hordéolo/calázio" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F73" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outras infecções/inflamações oculares" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F74" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia do olho/anexos" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F75" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Contusão/hemorragia ocular" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F76" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Corpo estranho ocular" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F79" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outras lesões traumáticas oculares" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F80" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Obstrução canal lacrimal da criança" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F81" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outras malformações congênitas do olho" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F82" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Descolamento da retina" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F83" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Retinopatia" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F84" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Degeneração macular" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F85" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Ulcera da córnea" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F86" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Tracoma" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F91" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Erro de refração" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F92" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Catarata" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F93" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Glaucoma" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F94" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Cegueira" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F95" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Estrabismo" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "F99" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outra doenças oculares/anexos" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H01" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dor de ouvidos" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H02" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Problemas de audição" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H03" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Acufeno, zumbidos, ruído, assobios" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H04" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Secreção no ouvido" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H05" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hemorragia no ouvido" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H13" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sensação de ouvido tapado" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H15" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Preocupação com a aparência das orelhas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H27" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de doença do ouvido" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H28" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Limitação funcional/incapacidade" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H29" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outros sinais/sintomas ouvido" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H70" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Otite externa" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H71" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Otite media aguda/miringite" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H72" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Otite média serosa" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H73" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Infecção da Trompa de Eustáquio" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H74" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Otite media crónica" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H75" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia do ouvido" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H76" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Corpo estranho do ouvido" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H77" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Perfuração do tímpano" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H78" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Traumatismo superficial do ouvido" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H79" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outros traumatismos do ouvido" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H80" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Malformações congênitas do ouvido" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H81" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Cerúmen no ouvido em excesso" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H82" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Síndrome vertiginosa" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H83" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Otoesclerose" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H84" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Presbiacusia" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H85" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Lesão acústica" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H86" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Surdez" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "H99" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outra doença do ouvido/mastóide" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K01" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dor atribuída ao coração" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K02" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sensação de pressão/aperto atribuída ao coração" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K03" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dores atribuídas ao aparelho circulatório NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K04" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Palpitações/percepção dos batimentos cardíacos" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K05" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outras irregularidades dos batimentos cardíacos" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K06" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Veias proeminentes" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K07" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Tornozelos inchados/edema" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K22" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Fator de risco para doença cardiovascular" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K24" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de doença cardíaca" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K25" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de hipertensão" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K27" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de outra doença cardiovascular" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K28" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Limitação funcional/incapacidade" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K29" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outros sinais/sintomas cardiovasculares" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K70" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Doença infecciosa do aparelho circulatório" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K71" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Febre reumática/cardiopatia" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K72" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia do aparelho circulatório" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K73" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Malformações congênitas do aparelho circulatório" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K74" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Doença cardíaca isquémica com angina" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K75" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Infarto ou Enfarte agudo miocárdio" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K76" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Doença cardíaca isquémica sem angina" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K77" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Insuficiência cardíaca" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K78" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Fibrilação/flutter auricular/ atrial" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K79" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Taquicardia Paroxística" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K80" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Arritmia cardíaca NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K81" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sopro cardíaco/arterial NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K82" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Doença cardiopulmonar" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K83" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Doença valvular cardíaca NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K84" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outras doenças cardíacas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K85" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Pressão arterial elevada" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K86" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hipertensão sem complicações" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K87" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hipertensão com complicações" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K88" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hipotensão postural" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K89" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Isquêmia/ acidente cerebral transitória(o)" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K90" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Trombose/acidente vascular cerebral" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K91" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Doença vascular cerebral" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K92" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Aterosclerose/doença vascular periférica" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K93" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Embolia pulmonar" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K94" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Flebite/tromboflebite" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K95" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Veias varicosas da perna" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K96" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hemorróidas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "K99" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outras doenças do aparelho circulatório" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L01" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas do pescoço" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L02" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas da região dorsal" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L03" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas da região lombar" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L04" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas do tórax" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L05" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas da axila" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L07" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas da mandíbula" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L08" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas dos ombros" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L09" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas dos braços" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L10" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas dos cotovelos" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L11" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas dos punhos" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L12" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas das mãos e dedos" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L13" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas do quadril" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L14" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas da coxa/perna" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L15" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas do joelho" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L16" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas do tornozelo" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L17" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas do pé/dedos pé" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L18" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dores musculares" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L19" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas musculares NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L20" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas das articulações NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L26" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de câncer no aparelho músculo-esquelético" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L27" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de doença no aparelho músculo-esquelético, outro" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L28" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Limitação funcional/incapacidade" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L29" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outros sinais/sintomas do aparelho músculo-esquelético" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L70" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Infecções do aparelho músculo-esquelético" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L71" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia maligna do aparelho músculo-esquelético" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L72" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Fratura: rádio/cúbito" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L73" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Fratura: tíbia/perônio/ fíbula" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L74" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Fratura: osso da mão/pé" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L75" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Fratura: fémur" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L76" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outras fraturas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L77" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Entorses e distensões do tornozelo" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L78" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Entorses e distensões do joelho" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L79" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Entorses e distensões das articulações NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L80" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Luxação/subluxação" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L81" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Traumatismos do aparelho musculoesquelético NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L82" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Malformações congênitas do aparelho músculo-esquelético" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L83" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Doenças ou síndromes da coluna cervical" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L84" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Doenças ou síndromes da coluna sem irradiação de dor" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L85" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Deformação adquirida da coluna" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L86" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Síndrome vertebral com irradiação dor" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L87" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Bursite/tendinite/sinovite NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L88" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Artrite reumatóide/seropositiva" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L89" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Osteoartrose do quadril" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L90" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Osteoartrose do joelho" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L91" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outras osteoartroses" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L92" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Síndrome do ombro doloroso" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L93" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Cotovelo de tenista" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L94" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Osteocondrose" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L95" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Osteoporose" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L96" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Lesão interna aguda do joelho" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L97" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia benigna/incertas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L98" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Malformação adquirida de um membro" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "L99" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outra doença do aparelho músculo-esquelético" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N01" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Cefaléia" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N03" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dores da face" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N04" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Síndrome das pernas inquietas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N05" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Formigamento/ parestesia nos dedos das mãos/pés" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N06" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outras alterações da sensibilidade" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N07" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Convulsões/ataques" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N08" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Movimentos involuntários anormais" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N16" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Alterações do olfato/gosto" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N17" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Vertigens/tonturas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N18" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Paralisia/fraqueza" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N19" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Perturbações da fala" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N26" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de câncer do sistema neurológico" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N27" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de outras doenças neurológicas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N28" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Limitação funcional/incapacidade" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N29" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas do sistema neurológico, outros" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N70" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Poliomielite" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N71" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Meningite/encefalite" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N72" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Tétano" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N73" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outra infecção neurológica" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N74" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia maligna do sistema neurológico" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N75" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia benigna do sistema neurológico" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N76" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia do sistema neurológico de natureza incerta" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N79" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Concussão" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N80" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outras lesões cranianas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N81" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outra lesão do sistema neurológico" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N85" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Malformações congênitas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N86" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Esclerose múltipla" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N87" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Parkinsonismo" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N88" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Epilepsia" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N89" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Enxaqueca" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N90" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Cefaléia de cluster" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N91" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Paralisia facial/paralisia de Bell" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N92" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Nevralgia do trigémio" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N93" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Síndrome do túnel do carpo/ Síndrome do canal cárpico" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N94" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neurite/ Nevrite/neuropatia periférica" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N95" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Cefaléia tensional" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "N99" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outras doenças do sistema neurológico" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P01" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sensação de ansiedade/nervosismo/tensão" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P02" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Reação aguda ao estresse" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P03" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Tristeza/ Sensação de depressão" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P04" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sentir/comportar-se de forma irritável/zangada" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P05" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sensação/comportamento senil" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P06" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Perturbação do sono" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P07" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Diminuição do desejo sexual" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P08" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Diminuição da satisfação sexual" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P09" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Preocupação com a preferência sexual" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P10" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Gaguejar/balbuciar/tiques" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P11" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Problemas de alimentação da criança" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P12" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Molhar a cama/enurese" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P13" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Encoprese/outros problemas de incontinência fecal" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P15" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Abuso crônico de álcool" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P16" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Abuso agudo de álcool" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P17" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Abuso do tabaco" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P18" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Abuso de medicação" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P19" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Abuso de drogas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P20" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Alterações da memória" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P22" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas relacionados ao comportamento da criança" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P23" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas relacionados ao comportamento do adolescente" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P24" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dificuldades especificas de aprendizagem" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P25" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Problemas da fase de vida de adulto" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P27" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de perturbações mentais" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P28" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Limitação funcional/incapacidade" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P29" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas psicológicos, outros" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P70" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Demência" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P71" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outras psicoses orgânicas NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P72" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Esquizofrenia" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P73" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Psicose afetiva" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P74" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Distúrbio ansioso/estado de ansiedade" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P75" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Somatização" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P76" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Perturbações depressivas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P77" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Suicídio/tentativa de suicídio" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P78" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neurastenia" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P79" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Fobia/perturbação compulsiva" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P80" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Perturbações de personalidade" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P81" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Perturbação hipercinética" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P82" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Estresse pós traumático" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P85" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Retardo/ Atraso mental" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P86" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Anorexia nervosa, bulimia" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P98" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outras psicoses NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "P99" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outras perturbações psicológicas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R01" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dor atribuída ao aparelho respiratório" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R02" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dificuldade respiratória, dispneia" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R03" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Respiração ruidosa" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R04" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outros problemas respiratórios" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R05" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Tosse" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R06" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hemorragia nasal/epistaxe" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R07" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Espirro/congestão nasal" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R08" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outros sinais/sintomas nasais" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R09" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas dos seios paranasais" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R21" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas da garganta" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R23" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas da voz" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R24" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hemoptise" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R25" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Expectoração/mucosidade anormal" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R26" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de câncer do aparelho respiratório" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R27" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de outras doenças respiratórias" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R28" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Limitação funcional/incapacidade" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R29" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas do aparelho respiratório, outros" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R71" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Tosse convulsa/ pertussis" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R72" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Infecção estreptocócica da orofaringe" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R73" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Abcesso/furúnculo no nariz" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R74" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Infecção aguda do aparelho respiratório superior (IVAS)" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R75" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinusite crónica/aguda" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R76" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Amigdalite aguda" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R77" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Laringite/traqueíte aguda" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R78" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Bronquite/bronquiolite aguda" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R79" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Bronquite crônica" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R80" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Gripe" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R81" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Pneumonia" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R82" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Pleurite/derrame pleural" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R83" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outra infecção respiratória" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R84" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia maligna dos brônquios/pulmão" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R85" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outra neoplasia respiratória maligna" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R86" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia benigna respiratória" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R87" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Corpo estranho nariz/laringe/brônquios" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R88" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outra lesão respiratória" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R89" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Malformação congénita do aparelho respiratório" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R90" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hipertrofia das amígdalas/adenóides" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R92" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia respiratória NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R95" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Doença pulmonar obstrutiva crónica" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R96" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Asma" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R97" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Rinite alérgica" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R98" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Síndrome de hiperventilação" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "R99" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outras doenças respiratórias" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S01" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dor/sensibilidade dolorosa da pele" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S02" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Prurido" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S03" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Verrugas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S04" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Tumor/inchaço localizado" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S05" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Tumores/inchaços generalizados" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S06" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Erupção cutânea localizada" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S07" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Erupção cutânea generalizada" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S08" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Alterações da cor da pele" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S09" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Infecção dos dedos das mãos/pés" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S10" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Furúnculo/carbúnculo" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S11" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Infecção pós-traumática da pele" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S12" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Picada ou mordedura de inseto" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S13" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Mordedura animal/humana" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S14" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Queimadura/escaldão" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S15" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Corpo estranho na pele" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S16" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Traumatismo/contusão" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S17" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Abrasão/arranhão/bolhas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S18" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Laceração/corte" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S19" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outra lesão cutânea" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S20" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Calos/calosidades" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S21" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas da textura da pele" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S22" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas das unhas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S23" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Queda de cabelo/calvície" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S24" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas do cabelo/couro cabeludo" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S26" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de câncer de pele" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S27" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de outra doença da pele" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S28" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Limitação funcional/incapacidade" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S29" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas da pele, outros" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S70" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Herpes zoster" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S71" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Herpes simples" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S72" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Escabiose/outras acaríases" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S73" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Pediculose/outras infecções da pele" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S74" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dermatofitose" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S75" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Monilíase oral/candidíase na pele" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S76" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outras infecções da pele" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S77" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasias malignas da pele" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S78" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Lipoma" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S79" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia cutânea benigna/incerta" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S80" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Ceratose/ Queratose solar/queimadura solar" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S81" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hemangioma/linfangioma" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S82" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Nevos/sinais da pele" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S83" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Lesões da pele congênitas, outras" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S84" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Impetigo" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S85" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Cisto pilonidal/fistula" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S86" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dermatite seborreica" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S87" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dermatite/eczema atópico" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S88" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dermatite de contato/alérgica" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S89" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dermatite das fraldas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S90" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Pitiríase rosada" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S91" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Psoríase" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S92" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Doença das glândulas sudoríparas" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S93" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Cisto sebáceo" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S94" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Unha encravada" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S95" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Molusco contagioso" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S96" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Acne" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S97" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Úlcera crónica da pele" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S98" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Urticária" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "S99" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outras doenças da pele" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T01" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sede excessiva" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T02" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Apetite excessivo" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T03" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Perda de apetite" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T04" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Problemas alimentares de lactente/criança" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T05" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Problemas alimentares do adulto" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T07" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Aumento de peso" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T08" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Perda de peso" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T10" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Atraso do crescimento" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T11" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Desidratação" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T26" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de câncer do sistema endócrino" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T27" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de outra doença endócrina/metabólica" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T28" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Limitação funcional/incapacidade" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T29" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas endocrinológicos/metabolicos/nutricionais, outros" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T70" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Infecção endócrina" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T71" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia maligna da tiróide" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T72" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia benigna da tiróide" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T73" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outra neoplasia endócrina NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T78" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Cisto do canal tiroglosso" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T80" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Malformação congénita endócrina/metabólica" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T81" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Bócio" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T82" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Obesidade" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T83" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Excesso de peso" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T85" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hipertiroidismo/tireotoxicose" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T86" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hipotiroidismo/mixedema" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T87" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hipoglicemia" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T89" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Diabetes insulino-dependente" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T90" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Diabetes não insulino-dependente" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T91" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Deficiência vitamínica/nutricional" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T92" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Gota" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T93" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Alteração no metabolismo dos lípidos" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "T99" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outras doenças endocrinológica/metabólica/nutricionais" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U01" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Disúria/micção dolorosa" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U02" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Micção frequente/urgência urinária/ polaciúria" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U04" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Incontinência urinária" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U05" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outros problemas com a micção" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U06" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hematúria" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U07" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outros sinais/sintomas urinários" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U08" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Retenção urinária" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U13" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas da bexiga, outros" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U14" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas dos rins" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U26" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de câncer no aparelho urinário" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U27" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de outra doença urinária" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U28" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Limitação funcional/incapacidade" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U29" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas aparelho urinário, outros" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U70" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Pielonefrite" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U71" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Cistite/outra infecção urinária" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U72" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Uretrite" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U75" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia maligna do rim" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U76" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia benigna do rim" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U77" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia maligna do aparelho urinário, outra" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U78" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia benigna do aparelho urinário" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U79" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia do aparelho urinário NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U80" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Lesões traumáticas do aparelho urinário" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U85" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Malformação congénita do aparelho urinário" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U88" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Glomerulonefrite/ sindrome nefrótica" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U90" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Albuminúria/proteinúria ortostática" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U95" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Cálculo urinário" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U98" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Análise de urina anormal NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "U99" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outras doenças urinárias" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W01" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Questão sobre gravidez" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W02" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de estar grávida" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W03" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hemorragia antes do parto" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W05" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Vómitos/náuseas durante a gravidez" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W10" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Contracepção pós-coital" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W11" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Contracepção oral" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W12" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Contracepção intra-uterina/ Dispositivo Intrauterino/ DIU" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W13" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Esterilização" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W14" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Contracepção/outros" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W15" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Infertilidade/subfertildade" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W17" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hemorragia pós-parto" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W18" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas pós-parto" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W19" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas da mama/lactação" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W21" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Preocupação com a imagem corporal na gravidez" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W27" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de complicações na gravidez" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W28" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Limitação funcional/incapacidade" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W29" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas da gravidez, outros" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W70" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sepsis/infecção puerperal" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W71" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Infecções que complicam a gravidez" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W72" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia maligna relacionada com gravidez" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W73" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia benigna/incerta relacionada com a gravidez" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W75" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Lesões traumáticas que complicam a gravidez" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W76" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Malformação congénita que complica a gravidez" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W78" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Gravidez" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W79" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Gravidez não desejada" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W80" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Gravidez ectópica" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W81" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Toxemia gravídica/ DHEG" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W82" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Aborto espontâneo" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W83" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Aborto provocado" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W84" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Gravidez de alto risco" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W85" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Diabetes gestacional" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W90" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Parto sem complicações de nascido vivo" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W91" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Parto sem complicações de natimorto" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W92" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Parto com complicações de nascido vivo" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W93" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Parto com complicações de natimorto" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W94" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Mastite puerperal" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W95" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outros problemas da mama durante gravidez/puerpério" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W96" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outras complicações do puerpério" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "W99" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Outros problemas da gravidez/parto" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X01" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dor genital" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X02" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dores menstruais" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X03" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dores intermenstruais" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X04" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Relação sexual dolorosa na mulher" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X05" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Menstruação escassa/ausente" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X06" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Menstruação excessiva" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X07" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Menstruação irregular/frequente" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X08" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hemorragia intermenstrual" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X09" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas pré-menstruais" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X10" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Desejo de alterar a data menstruação" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X11" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas da menopausa/ climatério" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X12" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hemorragia pós-menopausa" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X13" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hemorragia pós-coital" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X14" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Secreção vaginal" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X15" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas da vagina" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X16" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas da vulva" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X17" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas da pélvis feminina" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X18" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dor na mama feminina" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X19" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Tumor ou nódulo na mama feminina" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X20" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas do mamilo da mulher" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X21" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas da mama feminina, outros" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X22" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Preocupação com a aparência da mama feminina" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X23" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de doença de transmissão sexual" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X24" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de disfunção sexual" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X25" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de câncer genital" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X26" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de câncer na mama" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X27" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de outra doença genital/mama" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X28" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Limitação funcional/incapacidade" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X29" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas do aparelho genital feminino, outra" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X70" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sífilis feminina" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X71" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Gonorréia feminina" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X72" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Candidíase genital feminina" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X73" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Tricomoníase genital feminina" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X74" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Doença inflamatória pélvica" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X75" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia maligna do colo" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X76" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia maligna da mama feminina" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X77" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia maligna genital feminina, outra" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X78" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Fibromioma uterino" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X79" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia benigna da mama feminina/ fibroadenoma" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X80" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia benigna genital" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X81" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia genital feminina, outra/NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X82" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Lesão traumática genital feminina" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X83" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Malformações congênitas genitais" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X84" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Vaginite/vulvite NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X85" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Doença do colo NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X86" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Esfregaço de Papanicolau/colpocitologia oncótica anormal" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X87" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Prolapso utero-vaginal" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X88" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Doença fibrocística da mama" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X89" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Síndrome da tensão pré-menstrual" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X90" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Herpes genital feminino" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X91" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Condiloma acuminado feminino" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X92" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Infecção por clamídia" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "X99" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Doença genital feminina, outra" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y01" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dor no pênis" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y02" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dor no escroto/testículos" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y03" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Secreção uretral" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y04" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas do pênis, outros" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y05" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas do escroto/testículos, outros" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y06" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas da próstata" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y07" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Impotência NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y08" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas da função sexual masculina, outros" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y10" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Infertilidade/subfertildade masculina" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y13" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Esterilização masculina" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y14" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Planejamento familiar, outros" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y16" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas da mama masculina" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y24" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de disfunção sexual masculina" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y25" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de doença sexualmente transmissível" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y26" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de câncer genital masculino" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y27" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de doença genital masculina, outra" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y28" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Limitação funcional/incapacidade" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y29" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sinais/sintomas, outros" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y70" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sífilis masculina" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y71" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Gonorréia masculina" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y72" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Herpes genital" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y73" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Prostatite/vesiculite seminal" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y74" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Orquite/epididimite" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y75" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Balanite/ Balanopostite" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y76" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Condiloma acuminado" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y77" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia maligna da próstata" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y78" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia maligna genital masculina, outra" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y79" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Neoplasia benigna genital masculina NE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y80" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Traumatismo genital masculino, outro" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y81" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Fimose/prepúcio redundante" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y82" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hipospádias" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y83" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Testículo não descido/ Criptorquidia/ Testículo ectópico" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y84" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Malformação genital congénita masculina, outra" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y85" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hipertrofia benigna da próstata/ hiperplasia prostática benigna" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y86" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hidrocele" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Y99" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Doença genital masculina, outra" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Z01" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Pobreza/problemas econômicos" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Z02" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Problemas relacionados a água/alimentação" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Z03" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Problemas de habitação/vizinhança" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Z04" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Problema socio-cultural" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Z05" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Problemas com condições de trabalho" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Z06" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Problemas de desemprego" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Z07" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Problemas relacionados com educação" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Z08" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Problema relacionado com sistema de segurança social" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Z09" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Problema de ordem legal" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Z10" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Problema relacionado com sistema de saúde" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Z11" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Problema relacionado com estar doente" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Z12" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Problema de relacionamento com parceiro/ conjugal" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Z13" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Problema comportamental do parceiro/  companheiro" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Z14" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Problema por doença do parceiro/ companheiro" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Z15" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Perda ou falecimento do parceiro/ companheiro" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Z16" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Problema de relacionamento com criança" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Z18" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Problema com criança doente" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Z19" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Perda ou falecimento de criança" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Z20" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Problema de relacionamento com familiares" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Z21" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Problema comportamental de familiar" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Z22" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Problema por doença familiar" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Z23" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Perda/falecimento de familiar" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Z24" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Problema de relacionamento com amigos" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Z25" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Ato ou acontecimento violento" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Z27" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medo de problema social" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Z28" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Limitação funcional/incapacidade" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Z29" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Problema social NE" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.saude.gov.br/rira/CodeSystem/BRCIAP2.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

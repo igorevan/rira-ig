@@ -167,9 +167,17 @@
         <td>2</td>
         <td>1..1</td>
         <td>Status da solicitação</td>
-        <td>Texto codificado:<br />- Pendente<br />- Agendado<br />- Atendido/Internado<br />- Falta<br />-
-          Negado/Cancelado<br />-
-          Excluído<br />- Devolvido para o solicitante</td>
+        <td>Texto codificado:
+          <ul>
+            <li>Pendente</li>
+            <li>Agendado</li>
+            <li>Atendido/Internado</li>
+            <li>Falta</li>
+            <li>Negado/Cancelado</li>
+            <li>Excluído</li>
+            <li>Devolvido para o solicitante</li>
+          </ul>
+        </td>
         <td>Status da solicitação do procedimento.</td>
         <td>O código que identifica unicamente o status da solicitação, conforme tabela de status de solicitação.</td>
         <td><a href="ValueSet-BRStatusRegulacaoAssistencial.html">Status de Regulação Assistencial</a></td>
@@ -423,13 +431,18 @@
         <td>1..1</td>
         <td>Motivo da solicitação</td>
         <td>Texto codificado</td>
-        <td>Identificação do motivo da solicitação do procedimento. Texto codificado por terminologia externa CID-10.
+        <td>Identificação do motivo da solicitação do procedimento. Texto codificado por terminologia externa CID-10 ou
+          CIAP-2.
         </td>
         <td>O código que identifica unicamente a condição clínica conforme tabela de Classificação Internacional de
-          Doenças na versão 10 (CID10).</td>
-        <td><a href="ValueSet-BRCID10-1.0.html">Classificação Internacional de Doenças - Décima Revisão (CID-10)</a>
+          Doenças na versão 10 (CID10) ou da Classificação Internacional de Atenção Primária (CIAP-2).</td>
+        <td>
+          <a href="CodeSystem-BRCID10.html">Classificação Internacional de Doenças (CID-10)</a><br />
+          <a href="CodeSystem-BRCIAP2.html">Classificação Internacional de Atenção Primária (CIAP-2)</a>
         </td>
-        <td><a href="StructureDefinition-BRCID10Avaliado-1.0.html">CID10 Avaliado</a> <i>(Condition)</i></td>
+        <td>
+          <a href="StructureDefinition-BRProblemaDiagnostico.html">Problema/Diagnóstico</a> <i>(Condition)</i>
+        </td>
       </tr>
     </tbody>
   </table>

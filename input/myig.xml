@@ -18,7 +18,7 @@
     value="http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir" />
   <version value="1.0.0-release" />
   <name value="RIRARNDSIG" />
-  <title value="Guia de Implementação da Regulação Assistencial (RIRA) da RNDS" />
+  <title value="Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS" />
   <status value="active" />
   <experimental value="false" />
   <publisher value="Ministério da Saúde do Brasil" />
@@ -65,43 +65,71 @@
   <definition>
     <resource>
       <reference>
-        <reference value="Bundle/Example-RIRA-Attended" />
+        <reference value="Bundle/example-rira-anterior-2025-com-ciap" />
       </reference>
-      <name value="Bundle de exemplo do RIRA (Atendido/Internado)" />
+      <name value="Bundle de exemplo do RIRA (Anterior à 2025 com CIAP-2)" />
       <description
-        value="Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Atendido/Internado
-    (Attended)" />
+        value="Bundle de exemplo do RIRA anterior à 2025 e com CIAP-2 no Motivo da Solicitação" />
       <exampleCanonical
         value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial" />
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/Example-RIRA-Booked" />
+        <reference value="Bundle/example-rira-anterior-2025-com-cid" />
       </reference>
-      <name value="Bundle de exemplo do RIRA (Agendado)" />
+      <name value="Bundle de exemplo do RIRA (Anterior à 2025 com CID-10)" />
       <description
-        value="Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Agendado (Booked)" />
+        value="Bundle de exemplo do RIRA anterior à 2025 e com CID-10 no Motivo da Solicitação" />
       <exampleCanonical
         value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial" />
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/Example-RIRA-Cancelled" />
+        <reference value="Bundle/example-rira-anterior-2025-sem-cid-ciap" />
       </reference>
-      <name value="Bundle de exemplo do RIRA (Negado/Cancelado)" />
+      <name value="Bundle de exemplo do RIRA (Anterior à 2025 sem CID-10 nem CIAP-2)" />
       <description
-        value="Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Negado/Cancelado (Cancelled)"
-      />
+        value="Bundle de exemplo do RIRA anterior à 2025 e sem CID-10 nem CIAP-2 no Motivo da Solicitação" />
       <exampleCanonical
         value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial" />
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/Example-RIRA-Pending" />
+        <reference value="Bundle/example-rira-anterior-2025-sem-cid" />
       </reference>
-      <name value="Bundle de exemplo do RIRA (Pendente)" />
+      <name value="Bundle de exemplo do RIRA (Anterior à 2025 sem CID-10)" />
       <description
-        value="Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Pendente (Pending)" />
+        value="Bundle de exemplo do RIRA anterior à 2025 e sem CID-10 no Motivo da Solicitação" />
+      <exampleCanonical
+        value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/example-rira-pendente-com-ciap" />
+      </reference>
+      <name value="Bundle de exemplo do RIRA (Pendente com CIAP-2)" />
+      <description
+        value="Bundle de exemplo do RIRA com CIAP-2 e Pendente (pending)" />
+      <exampleCanonical
+        value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/example-rira-posterior-2025-com-ciap" />
+      </reference>
+      <name value="Bundle de exemplo do RIRA (Posterior a 2025 com CIAP-2)" />
+      <description
+        value="Bundle de exemplo do RIRA posterior a 2025 e com CIAP-2" />
+      <exampleCanonical
+        value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/example-rira-posterior-2025-com-cid" />
+      </reference>
+      <name value="Bundle de exemplo do RIRA (Posterior a 2025 com CID-10)" />
+      <description
+        value="Bundle de exemplo do RIRA posterior a 2025 e com CID-10" />
       <exampleCanonical
         value="http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial" />
     </resource>

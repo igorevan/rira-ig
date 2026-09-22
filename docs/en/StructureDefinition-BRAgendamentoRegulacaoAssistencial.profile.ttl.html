@@ -12,7 +12,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Agendamento de Regulação Assistencial - TTL Representation - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0-release</title>
+    <title>Agendamento de Regulação Assistencial - TTL Representation - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -62,7 +62,7 @@
 
 
         <div id="ig-status" data-fhir="generated">
-          <p><span style="font-size:12pt;font-weight:bold">Guia de Implementação da Regulação Assistencial (RIRA) da RNDS</span>
+          <p><span style="font-size:12pt;font-weight:bold">Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS</span>
             <br/>
             <span style="display:inline-block;">1.0.0-release - STU1
 
@@ -187,7 +187,7 @@
 
             <a href="#bottom">bottom</a>
 
-          | <a href="StructureDefinition-BRCID10Avaliado-1.0.html">next &gt;</a>
+          | <a href="StructureDefinition-BRProblemaDiagnostico.html">next &gt;</a>
 
           </span>
 
@@ -202,7 +202,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 9" class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Guia de Implementação da Regulação Assistencial (RIRA) da RNDS - Compilação de desenvolvimento local (v1.0.0-release) construída pelas ferramentas de compilação FHIR (HL7&reg; FHIR&reg; Standard). Veja o <a href='http://fhir.saude.gov.br/rira/history.html'>Diretório de versões publicadas</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS - Compilação de desenvolvimento local (v1.0.0-release) construída pelas ferramentas de compilação FHIR (HL7&reg; FHIR&reg; Standard). Veja o <a href='http://fhir.saude.gov.br/rira/history.html'>Diretório de versões publicadas</a></p><!--EndReleaseHeader-->
   
 
 
@@ -315,6 +315,9 @@ TTL Profile
 &lt;http://hl7.org/fhir/StructureDefinition/BRAgendamentoRegulacaoAssistencial&gt; a fhir:StructureDefinition ;
   <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
   <a href="http://hl7.org/fhir/R4/resource.html#StructureDefinition.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;BRAgendamentoRegulacaoAssistencial&quot;] ;
+  <a href="http://hl7.org/fhir/R4/resource.html#StructureDefinition.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">fhir:Meta.lastUpdated</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#instant">fhir:value</a> &quot;2026-09-15T14:00:00-03:00&quot;^^xsd:dateTime ]
+  ] ;
   <a href="http://hl7.org/fhir/R4/resource.html#StructureDefinition.language">fhir:Resource.language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;en&quot;] ;
   <a href="http://hl7.org/fhir/R4/domainresource.html#StructureDefinition.text">fhir:DomainResource.text</a> [
      <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;extensions&quot; ]
@@ -361,7 +364,6 @@ TTL Profile
   <a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.name">fhir:StructureDefinition.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;BRAgendamentoRegulacaoAssistencial&quot;] ;
   <a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.title">fhir:StructureDefinition.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Agendamento de Regulação Assistencial&quot;] ;
   <a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.status">fhir:StructureDefinition.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;active&quot;] ;
-  <a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.experimental">fhir:StructureDefinition.experimental</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean] ;
   <a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.date">fhir:StructureDefinition.date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2023-04-04&quot;^^xsd:date] ;
   <a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.publisher">fhir:StructureDefinition.publisher</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Ministério da Saúde do Brasil&quot;] ;
   <a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.contact">fhir:StructureDefinition.contact</a> [
@@ -565,7 +567,7 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">fhir:ElementDefinition.comment</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;The only time that a resource does not have an id is when it is being submitted to the server using a create operation.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;0&quot;^^xsd:nonNegativeInteger ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;0&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Resource.id&quot; ] ;
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;0&quot;^^xsd:nonNegativeInteger ] ;
@@ -719,7 +721,7 @@ TTL Profile
          <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
        ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;0&quot;^^xsd:nonNegativeInteger ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;0&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;DomainResource.text&quot; ] ;
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;0&quot;^^xsd:nonNegativeInteger ] ;
@@ -951,8 +953,8 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.status&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.status&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Status da solicitação.&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;O código que identifica unicamente o status da solicitação, conforme tabela de status de solicitação.&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;proposed | pending | booked | arrived | fulfilled | cancelled | noshow | entered-in-error | checked-in | waitlist&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;The overall status of the Appointment. Each of the participants has their own participation status which indicates their involvement in the process, however this status indicates the shared status.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">fhir:ElementDefinition.comment</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;If the Appointment's status is \&quot;cancelled\&quot; then all participants are expected to have their calendars released for the appointment period, and as such any Slots that were marked as BUSY can be re-set to FREE.\n\nThis element is labeled as a modifier because the status contains the code entered-in-error that mark the Appointment as not currently valid.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;1&quot;^^xsd:nonNegativeInteger ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1&quot; ] ;
@@ -964,6 +966,28 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
          <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;code&quot; ]
+       ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.condition">fhir:ElementDefinition.condition</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-13&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+       ], [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-14&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+       ], [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-15&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+       ], [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-16&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+       ], [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-17&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+       ], [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-18&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+       ], [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-19&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
        ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">fhir:ElementDefinition.constraint</a> [
          <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
@@ -982,7 +1006,6 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">fhir:ElementDefinition.binding</a> [
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">fhir:ElementDefinition.binding.strength</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;required&quot; ] ;
-         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.description">fhir:ElementDefinition.binding.description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Status do agendamento&quot; ] ;
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet">fhir:ElementDefinition.binding.valueSet</a> [
            <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial&quot; ;
            <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial&gt;
@@ -1061,8 +1084,8 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.serviceCategory&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.serviceCategory&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Modalidade assistencial.&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;O código que identifica unicamente a modalidade, conforme tabela de modalidades.&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Modalidade assistencial&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;Modalidade assistencial que gerou a solicitação do procedimento.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;1&quot;^^xsd:nonNegativeInteger ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
@@ -1632,7 +1655,7 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.serviceType&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.serviceType&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Código do procedimento.&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Código do procedimento&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;O código que identifica unicamente o procedimento conforme tabela SUS.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">fhir:ElementDefinition.comment</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;For a provider to provider appointment the code \&quot;FOLLOWUP\&quot; may be appropriate, as this is expected to be discussing some patient that was seen in the past.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;1&quot;^^xsd:nonNegativeInteger ] ;
@@ -2204,8 +2227,8 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.specialty&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.specialty&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Identificador da especialidade médica do executante.&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;O código que identifica unicamente a especialidade do executante conforme tabela de CBO.&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Especialidade médica do executante&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;Identificação da especialidade médica do profissional executante do procedimento, conforme tabela de CBO. \r\nCaso o procedimento informado pertença à forma de organização 03.01.01 da tabela SUS, o código CBO será obrigatório.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;0&quot;^^xsd:nonNegativeInteger ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
@@ -2775,8 +2798,8 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.appointmentType&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.appointmentType&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Caráter da solicitação.&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;O código que identifica unicamente o caráter da solicitação, conforme tabela de caráter da solicitação.&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Caráter da solicitação&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;O código que identifica unicamente o caráter da solicitação do procedimento, conforme tabela de caráter da solicitação.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;1&quot;^^xsd:nonNegativeInteger ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
@@ -2803,7 +2826,7 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">fhir:ElementDefinition.isModifier</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">fhir:ElementDefinition.binding</a> [
-         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">fhir:ElementDefinition.binding.strength</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;preferred&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">fhir:ElementDefinition.binding.strength</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;required&quot; ] ;
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.description">fhir:ElementDefinition.binding.description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Caráter de atendimento.&quot; ] ;
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet">fhir:ElementDefinition.binding.valueSet</a> [
            <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://www.saude.gov.br/fhir/r4/ValueSet/BRCaraterAtendimentoMIRA&quot; ;
@@ -3408,8 +3431,8 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.reasonReference&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.reasonReference&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Motivo da solicitação&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;Reason the appointment has been scheduled to take place, as specified using information from another resource. When the patient arrives and the encounter begins it may be used as the admission diagnosis. The indication will typically be a Condition (with other resources referenced in the evidence.detail), or a Procedure.&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;1&quot;^^xsd:nonNegativeInteger ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;Identificação do motivo da solicitação do procedimento, conforme Classificação Internacional de Doenças - CID ou Classificação Internacional de Atenção Primária - CIAP.&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;0&quot;^^xsd:nonNegativeInteger ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.reasonReference&quot; ] ;
@@ -3420,9 +3443,9 @@ TTL Profile
          <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;Reference&quot; ] ;
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">fhir:ElementDefinition.type.targetProfile</a> [
-           <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0&quot; ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProblemaDiagnostico&quot; ;
            <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
-           <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0&gt;
+           <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProblemaDiagnostico&gt;
          ]
        ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">fhir:ElementDefinition.constraint</a> [
@@ -4548,8 +4571,8 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.supportingInformation:regulatoryOrganization&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.supportingInformation&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.sliceName">fhir:ElementDefinition.sliceName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;regulatoryOrganization&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Estabelecimento de Saúde Regulador&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;Additional information to support the appointment provided when making the appointment.&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Estabelecimento de saúde regulador&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;Identificação única do estabelecimento regulador, por meio do CNES.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;0&quot;^^xsd:nonNegativeInteger ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
@@ -4792,7 +4815,7 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Logical reference, when literal reference is not known&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">fhir:ElementDefinition.comment</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;When an identifier is provided in place of a reference, any system processing the reference will only be able to resolve the identifier to a reference if it understands the business context in which the identifier is used. Sometimes this is global (e.g. a national identifier) but often it is not. For this reason, none of the useful mechanisms described for working with references (e.g. chaining, includes) are possible, nor should servers be expected to be able resolve the reference. Servers may accept an identifier based reference untouched, resolve it, and/or reject it - see CapabilityStatement.rest.resource.referencePolicy. \n\nWhen both an identifier and a literal reference are provided, the literal reference is preferred. Applications processing the resource are allowed - but not required - to check that the identifier matches the literal reference\n\nApplications converting a logical reference to a literal reference may choose to leave the logical reference present, or remove it.\n\nReference is intended to point to a structure that can potentially be expressed as a FHIR resource, though there is no need for it to exist as an actual FHIR resource instance - except in as much as an application wishes to actual find the target of the reference. The content referred to be the identifier must meet the logical constraints implied by any limitations on what resource types are permitted for the reference.  For example, it would not be legitimate to send the identifier for a drug prescription if the type were Reference(Observation|DiagnosticReport).  One of the use-cases for Reference.identifier is the situation where no FHIR representation exists (where the type is Reference (Any).&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;0&quot;^^xsd:nonNegativeInteger ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;1&quot;^^xsd:nonNegativeInteger ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Reference.identifier&quot; ] ;
@@ -4814,6 +4837,12 @@ TTL Profile
            <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/Element&quot; ;
            <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/StructureDefinition/Element&gt;
          ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">fhir:ElementDefinition.constraint.key</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;estab-2&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">fhir:ElementDefinition.constraint.severity</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;error&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">fhir:ElementDefinition.constraint.human</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números.&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">fhir:ElementDefinition.constraint.expression</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;value.matches('^(?!(\\\\d)\\\\1{6})\\\\d{7}$')&quot; ]
        ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">fhir:ElementDefinition.isModifier</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ] ;
@@ -5038,7 +5067,7 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;Establishes the namespace for the value - that is, a URL that describes a set values that are unique.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">fhir:ElementDefinition.comment</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;Identifier.system is always case sensitive.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.requirements">fhir:ElementDefinition.requirements</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers.&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;0&quot;^^xsd:nonNegativeInteger ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;1&quot;^^xsd:nonNegativeInteger ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Identifier.system&quot; ] ;
@@ -5089,7 +5118,7 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;The value that is unique&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;The portion of the identifier typically relevant to the user and which is unique within the context of the system.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">fhir:ElementDefinition.comment</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](http://hl7.org/fhir/R4/extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe.&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;0&quot;^^xsd:nonNegativeInteger ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;1&quot;^^xsd:nonNegativeInteger ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Identifier.value&quot; ] ;
@@ -5272,8 +5301,8 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.start&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.start&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Data Inicial de Agendamento&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;A data e hora inicial em que o procedimento regulado foi agendado no padrão ISO 8601.&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Data de agendamento - início&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;A data e hora agendada para a realização do procedimento regulado no padrão ISO 8601.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;0&quot;^^xsd:nonNegativeInteger ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
@@ -5284,6 +5313,19 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
          <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;instant&quot; ]
+       ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.condition">fhir:ElementDefinition.condition</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-2&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+       ], [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-5&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+       ], [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-7&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+       ], [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-10&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
        ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">fhir:ElementDefinition.constraint</a> [
          <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
@@ -5324,8 +5366,8 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.end&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.end&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Data Final de Agendamento&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;A data e hora final em que o procedimento regulado foi agendado no padrão ISO 8601.&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Data de agendamento - fim&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;A data e hora agendada para a realização do procedimento regulado no padrão ISO 8601.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;0&quot;^^xsd:nonNegativeInteger ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
@@ -5336,6 +5378,19 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
          <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;instant&quot; ]
+       ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.condition">fhir:ElementDefinition.condition</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-2&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+       ], [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-5&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+       ], [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-7&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+       ], [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-10&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
        ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">fhir:ElementDefinition.constraint</a> [
          <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
@@ -5461,8 +5516,8 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.created&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.created&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Data da Autorização&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;A data e hora da autoriação do procedimento regulado no padrão ISO 8601.&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Data de autorização&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;A data e hora em que a solicitação de procedimento regulado foi autorizada no padrão ISO 8601.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">fhir:ElementDefinition.comment</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;This property is required for many use cases where the age of an appointment is considered in processing workflows for scheduling and billing of appointments.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;0&quot;^^xsd:nonNegativeInteger ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1&quot; ] ;
@@ -5490,11 +5545,6 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">fhir:ElementDefinition.isModifier</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">fhir:ElementDefinition.mapping</a> [
-         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
-         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;rnds&quot; ] ;
-         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Data de autorização&quot; ] ;
-         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">fhir:ElementDefinition.mapping.comment</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Portaria conjunta SAES/SEIDIGI nº 3, de 18 de abril de 2023&quot; ]
-       ], [
          <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;workflow&quot; ] ;
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Request.authoredOn&quot; ]
@@ -5920,8 +5970,8 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.participant&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.participant&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Paciente&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;List of participants involved in the appointment.&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Identificador do paciente&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;Identificação única do paciente, por meio de CPF ou CNS.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;1&quot;^^xsd:nonNegativeInteger ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
@@ -6704,8 +6754,8 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.participant.actor&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.participant.actor&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Person, Location/HealthcareService or Device&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;A Person, Location/HealthcareService or Device that is participating in the appointment.&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Identificador do paciente&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;Identificação única do paciente, por meio de CPF ou CNS.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;1&quot;^^xsd:nonNegativeInteger ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
@@ -6970,6 +7020,12 @@ TTL Profile
            <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/Element&quot; ;
            <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/StructureDefinition/Element&gt;
          ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">fhir:ElementDefinition.constraint.key</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;ident-1&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">fhir:ElementDefinition.constraint.severity</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;error&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">fhir:ElementDefinition.constraint.human</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;O número de CPF ou CNS informado é inválido (identifier.value).&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">fhir:ElementDefinition.constraint.expression</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;value.matches('^(?!(\\\\d)\\\\1{10})\\\\d{11}$') or value.matches('^(?!(\\\\d)\\\\1{14})[125789]\\\\d{14}$')&quot; ]
        ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">fhir:ElementDefinition.isModifier</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:ElementDefinition.isSummary</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ] ;
@@ -7480,7 +7536,7 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.participant.status&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.participant.status&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Status da participação no agendamento.&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Status da participação no agendamento&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;Participation status of the actor.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;1&quot;^^xsd:nonNegativeInteger ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1&quot; ] ;
@@ -7620,7 +7676,7 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.id&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.id&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1&quot; ]
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;0&quot; ]
      ], [
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.implicitRules&quot; ] ;
@@ -7635,7 +7691,7 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.text&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.text&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1&quot; ]
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;0&quot; ]
      ], [
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.contained&quot; ] ;
@@ -7650,11 +7706,30 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.status&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.status&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Status da solicitação.&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;O código que identifica unicamente o status da solicitação, conforme tabela de status de solicitação.&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.condition">fhir:ElementDefinition.condition</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-13&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+       ], [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-14&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+       ], [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-15&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+       ], [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-16&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+       ], [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-17&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+       ], [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-18&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+       ], [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-19&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+       ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">fhir:ElementDefinition.binding</a> [
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">fhir:ElementDefinition.binding.strength</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;required&quot; ] ;
-         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.description">fhir:ElementDefinition.binding.description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Status do agendamento&quot; ] ;
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet">fhir:ElementDefinition.binding.valueSet</a> [
            <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial&quot; ;
            <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial&gt;
@@ -7669,8 +7744,8 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.serviceCategory&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.serviceCategory&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Modalidade assistencial.&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;O código que identifica unicamente a modalidade, conforme tabela de modalidades.&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Modalidade assistencial&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;Modalidade assistencial que gerou a solicitação do procedimento.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;1&quot;^^xsd:nonNegativeInteger ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">fhir:ElementDefinition.binding</a> [
@@ -7706,7 +7781,7 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.serviceType&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.serviceType&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Código do procedimento.&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Código do procedimento&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;O código que identifica unicamente o procedimento conforme tabela SUS.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;1&quot;^^xsd:nonNegativeInteger ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1&quot; ] ;
@@ -7743,8 +7818,8 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.specialty&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.specialty&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Identificador da especialidade médica do executante.&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;O código que identifica unicamente a especialidade do executante conforme tabela de CBO.&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Especialidade médica do executante&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;Identificação da especialidade médica do profissional executante do procedimento, conforme tabela de CBO. \r\nCaso o procedimento informado pertença à forma de organização 03.01.01 da tabela SUS, o código CBO será obrigatório.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">fhir:ElementDefinition.binding</a> [
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">fhir:ElementDefinition.binding.strength</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;required&quot; ] ;
@@ -7779,11 +7854,11 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.appointmentType&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.appointmentType&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Caráter da solicitação.&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;O código que identifica unicamente o caráter da solicitação, conforme tabela de caráter da solicitação.&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Caráter da solicitação&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;O código que identifica unicamente o caráter da solicitação do procedimento, conforme tabela de caráter da solicitação.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;1&quot;^^xsd:nonNegativeInteger ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">fhir:ElementDefinition.binding</a> [
-         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">fhir:ElementDefinition.binding.strength</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;preferred&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">fhir:ElementDefinition.binding.strength</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;required&quot; ] ;
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.description">fhir:ElementDefinition.binding.description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Caráter de atendimento.&quot; ] ;
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet">fhir:ElementDefinition.binding.valueSet</a> [
            <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://www.saude.gov.br/fhir/r4/ValueSet/BRCaraterAtendimentoMIRA&quot; ;
@@ -7821,15 +7896,15 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.reasonReference&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.reasonReference&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Motivo da solicitação&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;1&quot;^^xsd:nonNegativeInteger ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;Identificação do motivo da solicitação do procedimento, conforme Classificação Internacional de Doenças - CID ou Classificação Internacional de Atenção Primária - CIAP.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
          <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;Reference&quot; ] ;
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">fhir:ElementDefinition.type.targetProfile</a> [
-           <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0&quot; ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProblemaDiagnostico&quot; ;
            <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
-           <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0&gt;
+           <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProblemaDiagnostico&gt;
          ]
        ]
      ], [
@@ -7934,7 +8009,8 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.supportingInformation:regulatoryOrganization&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.supportingInformation&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.sliceName">fhir:ElementDefinition.sliceName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;regulatoryOrganization&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Estabelecimento de Saúde Regulador&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Estabelecimento de saúde regulador&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;Identificação única do estabelecimento regulador, por meio do CNES.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
          <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
@@ -7957,6 +8033,18 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;0&quot; ]
      ], [
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.supportingInformation:regulatoryOrganization.identifier&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.supportingInformation.identifier&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;1&quot;^^xsd:nonNegativeInteger ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">fhir:ElementDefinition.constraint</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">fhir:ElementDefinition.constraint.key</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;estab-2&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">fhir:ElementDefinition.constraint.severity</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;error&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">fhir:ElementDefinition.constraint.human</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números.&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">fhir:ElementDefinition.constraint.expression</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;value.matches('^(?!(\\\\d)\\\\1{6})\\\\d{7}$')&quot; ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.supportingInformation:regulatoryOrganization.identifier.id&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.supportingInformation.identifier.id&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;0&quot; ]
@@ -7974,7 +8062,13 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.supportingInformation:regulatoryOrganization.identifier.system&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.supportingInformation.identifier.system&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;1&quot;^^xsd:nonNegativeInteger ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.fixed_x_">fhir:ElementDefinition.fixedUri</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0&quot; ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.supportingInformation:regulatoryOrganization.identifier.value&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.supportingInformation.identifier.value&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;1&quot;^^xsd:nonNegativeInteger ]
      ], [
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.supportingInformation:regulatoryOrganization.identifier.period&quot; ] ;
@@ -7994,14 +8088,40 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.start&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.start&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Data Inicial de Agendamento&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;A data e hora inicial em que o procedimento regulado foi agendado no padrão ISO 8601.&quot; ]
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Data de agendamento - início&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;A data e hora agendada para a realização do procedimento regulado no padrão ISO 8601.&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.condition">fhir:ElementDefinition.condition</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-2&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+       ], [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-5&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+       ], [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-7&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+       ], [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-10&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+       ]
      ], [
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.end&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.end&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Data Final de Agendamento&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;A data e hora final em que o procedimento regulado foi agendado no padrão ISO 8601.&quot; ]
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Data de agendamento - fim&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;A data e hora agendada para a realização do procedimento regulado no padrão ISO 8601.&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.condition">fhir:ElementDefinition.condition</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-2&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+       ], [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-5&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+       ], [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-7&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+       ], [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mira-10&quot; ;
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+       ]
      ], [
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.minutesDuration&quot; ] ;
@@ -8016,14 +8136,8 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.created&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.created&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Data da Autorização&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;A data e hora da autoriação do procedimento regulado no padrão ISO 8601.&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">fhir:ElementDefinition.mapping</a> [
-         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
-         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;rnds&quot; ] ;
-         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Data de autorização&quot; ] ;
-         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">fhir:ElementDefinition.mapping.comment</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Portaria conjunta SAES/SEIDIGI nº 3, de 18 de abril de 2023&quot; ]
-       ]
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Data de autorização&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;A data e hora em que a solicitação de procedimento regulado foi autorizada no padrão ISO 8601.&quot; ]
      ], [
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.comment&quot; ] ;
@@ -8078,7 +8192,8 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.participant&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.participant&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Paciente&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Identificador do paciente&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;Identificação única do paciente, por meio de CPF ou CNS.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1&quot; ]
      ], [
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
@@ -8141,6 +8256,8 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.participant.actor&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.participant.actor&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Identificador do paciente&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;Identificação única do paciente, por meio de CPF ou CNS.&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;1&quot;^^xsd:nonNegativeInteger ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
          <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
@@ -8170,7 +8287,14 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.participant.actor.identifier&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.participant.actor.identifier&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;1&quot;^^xsd:nonNegativeInteger ]
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;1&quot;^^xsd:nonNegativeInteger ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">fhir:ElementDefinition.constraint</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">fhir:ElementDefinition.constraint.key</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;ident-1&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">fhir:ElementDefinition.constraint.severity</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;error&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">fhir:ElementDefinition.constraint.human</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;O número de CPF ou CNS informado é inválido (identifier.value).&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">fhir:ElementDefinition.constraint.expression</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;value.matches('^(?!(\\\\d)\\\\1{10})\\\\d{11}$') or value.matches('^(?!(\\\\d)\\\\1{14})[125789]\\\\d{14}$')&quot; ]
+       ]
      ], [
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.participant.actor.identifier.id&quot; ] ;
@@ -8220,7 +8344,7 @@ TTL Profile
        <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.participant.status&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Appointment.participant.status&quot; ] ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Status da participação no agendamento.&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Status da participação no agendamento&quot; ] ;
        <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">fhir:ElementDefinition.binding</a> [
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">fhir:ElementDefinition.binding.strength</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;required&quot; ] ;
          <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.description">fhir:ElementDefinition.binding.description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Status da participação no agendamento.&quot; ] ;
@@ -8291,7 +8415,7 @@ TTL Profile
               </td>
               <td style="text-align:var(--ig-right);">&#xA0;
 
-                <a href="StructureDefinition-BRCID10Avaliado-1.0.html">next ></a>
+                <a href="StructureDefinition-BRProblemaDiagnostico.html">next ></a>
 
               </td>
             </tr>
@@ -8307,8 +8431,8 @@ TTL Profile
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.saude.gov.br">Ministério da Saúde do Brasil</a>.  
           Package br.gov.saude.rira.fhir#1.0.0-release based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-15 12:28:00 -0300">
-    2026-09-15
+  <span title="2026-09-22 13:36:00 -0300">
+    2026-09-22
   </span>
 
           <br/>

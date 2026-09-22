@@ -73,14 +73,14 @@
     ],
     "Condition": [
       {
-        "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0",
-        "title": "CID10 Avaliado"
+        "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProblemaDiagnostico",
+        "title": "Problema/Diagnóstico"
       }
     ],
     "Composition": [
       {
         "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial",
-        "title": "Regulação Assistencial (RIRA)"
+        "title": "Regulação Assistencial"
       }
     ],
     "ServiceRequest": [

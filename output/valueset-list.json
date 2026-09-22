@@ -18,13 +18,13 @@
     "systems" : ["http://hl7.org/fhir/request-priority"]
   },
   {
-    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCategoriaDiagnostico",
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCategoriaCondicao",
     "version" : "1.0.0-release",
     "status" : "active",
-    "name" : "BRCategoriaDiagnostico",
-    "title" : "Categoria do Diagnóstico (ValueSet)",
-    "description" : "ValueSet utilizado para definir o tipo de categoria do diagnóstico realizado.",
-    "systems" : ["http://www.saude.gov.br/fhir/r4/CodeSystem/BRCategoriaDiagnostico"]
+    "name" : "BRCategoriaCondicao",
+    "title" : "Classificação de uma condição",
+    "description" : "Tradução para o português do brasil da classificação de uma condição",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/condition-category"]
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoDocumento-1.0",
@@ -79,6 +79,16 @@
     "title" : "Classificação Brasileira de Ocupações - CBO",
     "description" : "Classifica as profissões do mercado de trabalho brasileiro.",
     "systems" : ["http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO"]
+  },
+  {
+    "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRProblemaDiagnostico",
+    "version" : "1.0.0-release",
+    "status" : "active",
+    "name" : "BRProblemaDiagnostico",
+    "title" : "Classificação Internacional de Doenças e Atenção Primária",
+    "description" : "Código Internacional de Atenção Primária (CIAP2) e Classificação Internacional de Doenças (CID10)",
+    "systems" : ["http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+    "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCIAP2"]
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRProcedimentosNacionais-1.0",

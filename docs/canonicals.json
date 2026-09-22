@@ -20,6 +20,13 @@
   "name" : "BRCBO"
 },
 {
+  "id" : "BRCIAP2",
+  "type" : "CodeSystem",
+  "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCIAP2",
+  "version" : "1.0.0-release",
+  "name" : "BRCIAP2"
+},
+{
   "id" : "BRCID10",
   "type" : "CodeSystem",
   "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
@@ -90,18 +97,18 @@
   "name" : "BRAgendamentoRegulacaoAssistencial"
 },
 {
-  "id" : "BRCID10Avaliado-1.0",
-  "type" : "StructureDefinition",
-  "url" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0",
-  "version" : "1.0.0-release",
-  "name" : "BRCID10Avaliado"
-},
-{
   "id" : "BRIndividuoNaoIdentificado-1.0",
   "type" : "StructureDefinition",
   "url" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuoNaoIdentificado-1.0",
   "version" : "1.0.0-release",
   "name" : "BRIndividuoNaoIdentificado"
+},
+{
+  "id" : "BRProblemaDiagnostico",
+  "type" : "StructureDefinition",
+  "url" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProblemaDiagnostico",
+  "version" : "1.0.0-release",
+  "name" : "BRProblemaDiagnostico"
 },
 {
   "id" : "BRRegulacaoAssistencial",
@@ -132,11 +139,11 @@
   "name" : "BRCaraterAtendimentoMIRA"
 },
 {
-  "id" : "BRCategoriaDiagnostico",
+  "id" : "BRCategoriaCondicao",
   "type" : "ValueSet",
-  "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCategoriaDiagnostico",
+  "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCategoriaCondicao",
   "version" : "1.0.0-release",
-  "name" : "BRCategoriaDiagnostico"
+  "name" : "BRCategoriaCondicao"
 },
 {
   "id" : "BREstadoDocumento-1.0",
@@ -179,6 +186,13 @@
   "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BROcupacao-1.0",
   "version" : "1.0.0-release",
   "name" : "BROcupacao"
+},
+{
+  "id" : "BRProblemaDiagnostico",
+  "type" : "ValueSet",
+  "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRProblemaDiagnostico",
+  "version" : "1.0.0-release",
+  "name" : "BRProblemaDiagnostico"
 },
 {
   "id" : "BRProcedimentosNacionais-1.0",

@@ -1,4 +1,4 @@
-# Estado do Documento - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Estado do Documento - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
 
 ## ValueSet: Estado do Documento 
 
@@ -7,7 +7,7 @@ Classifica o estado do documento que está sendo trafegado.
 
  **References** 
 
-* [Regulação Assistencial (RIRA)](StructureDefinition-BRRegulacaoAssistencial.md)
+* [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)
 
 ### Logical Definition (CLD)
 

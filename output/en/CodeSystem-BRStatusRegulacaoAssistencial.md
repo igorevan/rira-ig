@@ -1,4 +1,4 @@
-# Status da regulação assistencial - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Status da regulação assistencial - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
 
 ## CodeSystem: Status da regulação assistencial 
 

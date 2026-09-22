@@ -1,4 +1,4 @@
-# Modelo de Informação - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Modelo de Informação - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
 
 ## Modelo de Informação
 
@@ -56,7 +56,14 @@ Estabelecer a estrutura do Registro de Informações de Regulação Assistencial
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | 1..1 | Caracterização da regulação | Seção |  |  |  |  |
 | 2 | 1..1 | Identificador do registro | Identificador | Identificador do registro no sistema de origem.**Regra Negocial 01**: Deverá ser utilizado o identificador do registro no sistema de origem para registro da solicitação. Neste campo deverá constar o identificador único do registro no sistema de origem. **Regra Negocial 02**: Para as operações de consulta, alteração e exclusão, deverá ser considerado como identificador único do evento de regulação, o identificador do documento na Rede Nacional de Dados em Saúde (RNDS).  | O identificador único do registro de regulação no sistema de origem |  | *Bundle*de envio |
-| 2 | 1..1 | Status da solicitação | Texto codificado:- Pendente- Agendado- Atendido/Internado- Falta- Negado/Cancelado- Excluído- Devolvido para o solicitante | Status da solicitação do procedimento. | O código que identifica unicamente o status da solicitação, conforme tabela de status de solicitação. | [Status de Regulação Assistencial](ValueSet-BRStatusRegulacaoAssistencial.md) | [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)*(Composition)* |
+| 2 | 1..1 | Status da solicitação | Texto codificado:* Pendente
+* Agendado
+* Atendido/Internado
+* Falta
+* Negado/Cancelado
+* Excluído
+* Devolvido para o solicitante
+ | Status da solicitação do procedimento. | O código que identifica unicamente o status da solicitação, conforme tabela de status de solicitação. | [Status de Regulação Assistencial](ValueSet-BRStatusRegulacaoAssistencial.md) | [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)*(Composition)* |
 | 2 | 0..1 | Data de alteração de status | Data | Data e hora da alteração de status da solicitação do procedimento no padrão ISO8601. | A data e hora de alteração de status da solicitação de procedimento regulado. |  | [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)*(Composition)* |
 | 2 | 1..1 | Código do procedimento | Texto codificado | Identificador único do procedimento. Texto codificado: SIGTAP. | O código que identifica unicamente o procedimento conforme tabela SUS. | [Procedimento Realizado](ValueSet-BRProcedimentosNacionais-1.0.md) | [Requisição de Regulação Assistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md)*(ServiceRequest)*[Agendamento de Regulação Assistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md)*(Appointment)* |
 | 2 | 1..1 | Data da solicitação | Data | Data e hora da solicitação do procedimento no padrão ISO8601. | A data e hora de criação da solicitação inicial do procedimento regulado. |  | [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)*(Composition)*[Requisição de Regulação Assistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md)*(ServiceRequest)* |
@@ -82,5 +89,5 @@ Estabelecer a estrutura do Registro de Informações de Regulação Assistencial
 | 1 | 1..1 | Caracterização da solicitação | Seção |  |  |  |  |
 | 2 | 1..1 | Modalidade assistencial | Texto codificado:- Ambulatorial- Hospitalar | Modalidade assistencial que gerou a solicitação do procedimento. | O código que identifica unicamente a modalidade, conforme tabela de modalidades. | [Modalidade Assistencial (RIRA)](ValueSet-BRModalidadeAssistencialMIRA.md) | [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)*(Composition)*[Requisição de Regulação Assistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md)*(ServiceRequest)*[Agendamento de Regulação Assistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md)*(Appointment)* |
 | 2 | 1..1 | Caráter da solicitação | Texto codificado:- Eletivo- Urgência | Caráter da solicitação do procedimento. | O código que identifica unicamente o grau de prioridade da solicitação no modelo de informação assistencial, conforme tabela de caráter da solicitação. | [Caráter de Atendimento no MIRA](ValueSet-BRCaraterAtendimentoMIRA.md) | [Requisição de Regulação Assistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md)*(ServiceRequest)*[Agendamento de Regulação Assistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md)*(Appointment)* |
-| 2 | 1..1 | Motivo da solicitação | Texto codificado | Identificação do motivo da solicitação do procedimento. Texto codificado por terminologia externa CID-10. | O código que identifica unicamente a condição clínica conforme tabela de Classificação Internacional de Doenças na versão 10 (CID10). | [Classificação Internacional de Doenças - Décima Revisão (CID-10)](ValueSet-BRCID10-1.0.md) | [CID10 Avaliado](StructureDefinition-BRCID10Avaliado-1.0.md)*(Condition)* |
+| 2 | 1..1 | Motivo da solicitação | Texto codificado | Identificação do motivo da solicitação do procedimento. Texto codificado por terminologia externa CID-10 ou CIAP-2. | O código que identifica unicamente a condição clínica conforme tabela de Classificação Internacional de Doenças na versão 10 (CID10) ou da Classificação Internacional de Atenção Primária (CIAP-2). | [Classificação Internacional de Doenças (CID-10)](CodeSystem-BRCID10.md)[Classificação Internacional de Atenção Primária (CIAP-2)](CodeSystem-BRCIAP2.md) | [Problema/Diagnóstico](StructureDefinition-BRProblemaDiagnostico.md)*(Condition)* |
 

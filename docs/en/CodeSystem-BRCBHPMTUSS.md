@@ -1,4 +1,4 @@
-# Classificação Brasileira Hierarquizada de Procedimentos Médicos (CBHPM) e da Terminologia Unificada da Saúde Suplementar (TUSS) - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Classificação Brasileira Hierarquizada de Procedimentos Médicos (CBHPM) e da Terminologia Unificada da Saúde Suplementar (TUSS) - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
 
 ## CodeSystem: Classificação Brasileira Hierarquizada de Procedimentos Médicos (CBHPM) e da Terminologia Unificada da Saúde Suplementar (TUSS) 
 

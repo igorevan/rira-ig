@@ -1,4 +1,4 @@
-# Estado da Resolução de Diagnóstico ou Problema - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Estado da Resolução de Diagnóstico ou Problema - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
 
 ## ValueSet: Estado da Resolução de Diagnóstico ou Problema 
 
@@ -7,7 +7,7 @@ Estado da resolução de um diagnóstico ou problema.
 
  **References** 
 
-* [CID10 Avaliado](StructureDefinition-BRCID10Avaliado-1.0.md)
+* [Problema/Diagnóstico](StructureDefinition-BRProblemaDiagnostico.md)
 
 ### Logical Definition (CLD)
 

@@ -1,0 +1,112 @@
+# Classificação de uma condição - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+
+## ValueSet: Classificação de uma condição 
+
+ 
+Tradução para o português do brasil da classificação de uma condição 
+
+ **References** 
+
+* [Problema/Diagnóstico](StructureDefinition-BRProblemaDiagnostico.md)
+
+### Logical Definition (CLD)
+
+ 
+
+### Expansion
+
+-------
+
+ [Description of the above table(s)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ValueSet",
+  "id" : "BRCategoriaCondicao",
+  "meta" : {
+    "lastUpdated" : "2020-03-11T19:14:51.806+00:00"
+  },
+  "language" : "pt-BR",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "ehr"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "normative",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+    "valueCode" : "4.0.1"
+  }],
+  "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCategoriaCondicao",
+  "version" : "1.0.0-release",
+  "name" : "BRCategoriaCondicao",
+  "title" : "Classificação de uma condição",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2020-03-11T19:15:12.2909517+00:00",
+  "publisher" : "Ministério da Saúde do Brasil",
+  "contact" : [{
+    "name" : "Ministério da Saúde do Brasil",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.saude.gov.br"
+    },
+    {
+      "system" : "email",
+      "value" : "cgiis.datasus@saude.gov.br"
+    }]
+  }],
+  "description" : "Tradução para o português do brasil da classificação de uma condição",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "BR"
+    }]
+  }],
+  "immutable" : false,
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+      "concept" : [{
+        "code" : "problem-list-item",
+        "display" : "Problem List Item",
+        "designation" : [{
+          "language" : "pt-BR",
+          "value" : "Problema listado"
+        }]
+      },
+      {
+        "code" : "encounter-diagnosis",
+        "display" : "Encounter Diagnosis",
+        "designation" : [{
+          "language" : "pt-BR",
+          "value" : "Diagnóstico"
+        }]
+      }]
+    }]
+  }
+}
+
+```

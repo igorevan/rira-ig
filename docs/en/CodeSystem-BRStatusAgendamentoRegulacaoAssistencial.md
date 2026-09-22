@@ -1,4 +1,4 @@
-# Status de agendamento de regulação assistencial (CodeSystem) - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Status de agendamento de regulação assistencial (CodeSystem) - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
 
 ## CodeSystem: Status de agendamento de regulação assistencial (CodeSystem) 
 

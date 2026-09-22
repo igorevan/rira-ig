@@ -1,4 +1,4 @@
-# Modalidade Assistencial MIRA - Guia de Implementação da Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Modalidade Assistencial MIRA - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
 
 ## ValueSet: Modalidade Assistencial MIRA 
 
@@ -8,7 +8,7 @@ Modalidade assistencial que gerou a solicitação do procedimento.
  **References** 
 
 * [Agendamento de Regulação Assistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md)
-* [Regulação Assistencial (RIRA)](StructureDefinition-BRRegulacaoAssistencial.md)
+* [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)
 * [Requisição de Regulação Assistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md)
 
 ### Logical Definition (CLD)

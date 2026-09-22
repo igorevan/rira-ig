@@ -1,0 +1,236 @@
+{
+  "resourceType": "Bundle",
+  "id": "example-rira-anterior-2025-sem-cid",
+  "identifier": {
+    "system": "http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-12345",
+    "value": "AMB_271831370_0701172"
+  },
+  "type": "document",
+  "timestamp": "2024-11-18T12:14:01-03:00",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:transient-0",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "c1256970-5464-403d-99f9-f1ef1d1f81ea",
+        "meta": {
+          "profile": [
+            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial"
+          ]
+        },
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento",
+              "code": "RA"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial",
+                "code": "04"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "identifier": {
+            "system": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "708165325093340"
+          }
+        },
+        "date": "2024-11-18T12:14:01-03:00",
+        "author": [
+          {
+            "identifier": {
+              "system": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0",
+              "value": "6450091"
+            }
+          }
+        ],
+        "title": "Regulação Assistencial",
+        "event": [
+          {
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial",
+                    "code": "booked"
+                  }
+                ]
+              }
+            ],
+            "period": {
+              "end": "2024-06-10T16:18:43-03:00"
+            },
+            "detail": [
+              {
+                "identifier": {
+                  "system": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0",
+                  "value": "0440620"
+                }
+              },
+              {
+                "reference": "urn:uuid:transient-1"
+              }
+            ]
+          }
+        ],
+        "section": [
+          {
+            "entry": [
+              {
+                "reference": "urn:uuid:transient-1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:transient-1",
+      "resource": {
+        "resourceType": "Appointment",
+        "meta": {
+          "profile": [
+            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial"
+          ]
+        },
+        "status": "booked",
+        "serviceCategory": [
+          {
+            "coding": [
+              {
+                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial",
+                "code": "04"
+              }
+            ]
+          }
+        ],
+        "serviceType": [
+          {
+            "coding": [
+              {
+                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS",
+                "code": "0209010029"
+              }
+            ]
+          }
+        ],
+        "specialty": [
+          {
+            "coding": [
+              {
+                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO",
+                "code": "225225"
+              }
+            ]
+          }
+        ],
+        "appointmentType": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/request-priority",
+              "code": "routine"
+            }
+          ]
+        },
+        "start": "2024-09-25T09:00:00-03:00",
+        "end": "2024-09-25T09:30:00.000-03:00",
+        "created": "2024-03-02T14:18:43-03:00",
+        "basedOn": [
+          {
+            "reference": "urn:uuid:transient-2"
+          }
+        ],
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante",
+                    "code": "PCT"
+                  }
+                ]
+              }
+            ],
+            "actor": {
+              "identifier": {
+                "system": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+                "value": "708108612093340"
+              }
+            },
+            "status": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:transient-2",
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "meta": {
+          "profile": [
+            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial"
+          ]
+        },
+        "status": "active",
+        "intent": "proposal",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial",
+                "code": "04"
+              }
+            ]
+          }
+        ],
+        "priority": "routine",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS",
+              "code": "0209010029"
+            }
+          ]
+        },
+        "subject": {
+          "identifier": {
+            "system": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "708108612093340"
+          }
+        },
+        "authoredOn": "2024-03-02T14:18:43-03:00",
+        "requester": {
+          "identifier": {
+            "system": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0",
+            "value": "6994547"
+          }
+        },
+        "performerType": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO",
+              "code": "225225"
+            }
+          ]
+        },
+        "performer": [
+          {
+            "identifier": {
+              "system": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0",
+              "value": "0440620"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

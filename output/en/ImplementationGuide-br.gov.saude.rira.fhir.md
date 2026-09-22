@@ -1,4 +1,4 @@
-# Resource Guia de Implementação da Regulação Assistencial (RIRA) da RNDS
+# Resource Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS
 
 
 
@@ -28,10 +28,10 @@
   "url" : "http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir",
   "version" : "1.0.0-release",
   "name" : "RIRARNDSIG",
-  "title" : "Guia de Implementação da Regulação Assistencial (RIRA) da RNDS",
+  "title" : "Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-15T12:28:51-03:00",
+  "date" : "2026-09-22T13:36:15-03:00",
   "publisher" : "Ministério da Saúde do Brasil",
   "contact" : [{
     "name" : "Ministério da Saúde do Brasil",
@@ -62,7 +62,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.3.0"
+    "version" : "7.4.0"
   },
   {
     "id" : "hl7ext",
@@ -702,13 +702,13 @@
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Bundle-Example-RIRA-Attended.html"
+        "valueUri" : "Bundle-example-rira-anterior-2025-com-ciap.html"
       }],
       "reference" : {
-        "reference" : "Bundle/Example-RIRA-Attended"
+        "reference" : "Bundle/example-rira-anterior-2025-com-ciap"
       },
-      "name" : "Bundle de exemplo do RIRA (Atendido/Internado)",
-      "description" : "Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Atendido/Internado     (Attended)",
+      "name" : "Bundle de exemplo do RIRA (Anterior à 2025 com CIAP-2)",
+      "description" : "Bundle de exemplo do RIRA anterior à 2025 e com CIAP-2 no Motivo da Solicitação",
       "exampleCanonical" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial"
     },
     {
@@ -718,13 +718,13 @@
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Bundle-Example-RIRA-Booked.html"
+        "valueUri" : "Bundle-example-rira-anterior-2025-com-cid.html"
       }],
       "reference" : {
-        "reference" : "Bundle/Example-RIRA-Booked"
+        "reference" : "Bundle/example-rira-anterior-2025-com-cid"
       },
-      "name" : "Bundle de exemplo do RIRA (Agendado)",
-      "description" : "Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Agendado (Booked)",
+      "name" : "Bundle de exemplo do RIRA (Anterior à 2025 com CID-10)",
+      "description" : "Bundle de exemplo do RIRA anterior à 2025 e com CID-10 no Motivo da Solicitação",
       "exampleCanonical" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial"
     },
     {
@@ -734,13 +734,13 @@
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Bundle-Example-RIRA-Cancelled.html"
+        "valueUri" : "Bundle-example-rira-anterior-2025-sem-cid-ciap.html"
       }],
       "reference" : {
-        "reference" : "Bundle/Example-RIRA-Cancelled"
+        "reference" : "Bundle/example-rira-anterior-2025-sem-cid-ciap"
       },
-      "name" : "Bundle de exemplo do RIRA (Negado/Cancelado)",
-      "description" : "Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Negado/Cancelado (Cancelled)",
+      "name" : "Bundle de exemplo do RIRA (Anterior à 2025 sem CID-10 nem CIAP-2)",
+      "description" : "Bundle de exemplo do RIRA anterior à 2025 e sem CID-10 nem CIAP-2 no Motivo da Solicitação",
       "exampleCanonical" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial"
     },
     {
@@ -750,13 +750,61 @@
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Bundle-Example-RIRA-Pending.html"
+        "valueUri" : "Bundle-example-rira-anterior-2025-sem-cid.html"
       }],
       "reference" : {
-        "reference" : "Bundle/Example-RIRA-Pending"
+        "reference" : "Bundle/example-rira-anterior-2025-sem-cid"
       },
-      "name" : "Bundle de exemplo do RIRA (Pendente)",
-      "description" : "Bundle de exemplo do Registro de Regulação Assistencial (RIRA) Pendente (Pending)",
+      "name" : "Bundle de exemplo do RIRA (Anterior à 2025 sem CID-10)",
+      "description" : "Bundle de exemplo do RIRA anterior à 2025 e sem CID-10 no Motivo da Solicitação",
+      "exampleCanonical" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-example-rira-pendente-com-ciap.html"
+      }],
+      "reference" : {
+        "reference" : "Bundle/example-rira-pendente-com-ciap"
+      },
+      "name" : "Bundle de exemplo do RIRA (Pendente com CIAP-2)",
+      "description" : "Bundle de exemplo do RIRA com CIAP-2 e Pendente (pending)",
+      "exampleCanonical" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-example-rira-posterior-2025-com-ciap.html"
+      }],
+      "reference" : {
+        "reference" : "Bundle/example-rira-posterior-2025-com-ciap"
+      },
+      "name" : "Bundle de exemplo do RIRA (Posterior a 2025 com CIAP-2)",
+      "description" : "Bundle de exemplo do RIRA posterior a 2025 e com CIAP-2",
+      "exampleCanonical" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-example-rira-posterior-2025-com-cid.html"
+      }],
+      "reference" : {
+        "reference" : "Bundle/example-rira-posterior-2025-com-cid"
+      },
+      "name" : "Bundle de exemplo do RIRA (Posterior a 2025 com CID-10)",
+      "description" : "Bundle de exemplo do RIRA posterior a 2025 e com CID-10",
       "exampleCanonical" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial"
     },
     {
@@ -788,6 +836,21 @@
       },
       "name" : "Classificação Brasileira de Ocupações (CBO)",
       "description" : "Classifica as profissões do mercado de trabalho brasileiro."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-BRCIAP2.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/BRCIAP2"
+      },
+      "name" : "Classificação Internacional de Atenção Primária - Segunda Edição - CIAP2",
+      "description" : "Classifica os problemas identificados no contato assistencial pelos profissionais de saúde, os motivos da contato assistencial e as respostas propostas pela equipe seguindo a sistematização SOAP."
     },
     {
       "extension" : [{
@@ -942,21 +1005,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "StructureDefinition-BRCID10Avaliado-1.0.html"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/BRCID10Avaliado-1.0"
-      },
-      "name" : "CID10 Avaliado",
-      "description" : "Diagnóstico atribuído pelo profissional de saúde ao indivíduo no contato assistencial."
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
       },
       {
@@ -976,13 +1024,28 @@
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-BRProblemaDiagnostico.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/BRProblemaDiagnostico"
+      },
+      "name" : "Problema/Diagnóstico",
+      "description" : "Problema e/ou diagnóstico atribuído pelo profissional de saúde ao indivíduo no contato assistencial."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
         "valueUri" : "StructureDefinition-BRRegulacaoAssistencial.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/BRRegulacaoAssistencial"
       },
-      "name" : "Regulação Assistencial (RIRA)",
-      "description" : "Documento público que coleta os dados da regulação assistencial"
+      "name" : "Regulação Assistencial",
+      "description" : "Documento público que coleta os dados das solicitações de regulação assistencial"
     },
     {
       "extension" : [{
@@ -1036,13 +1099,13 @@
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ValueSet-BRCategoriaDiagnostico.html"
+        "valueUri" : "ValueSet-BRCategoriaCondicao.html"
       }],
       "reference" : {
-        "reference" : "ValueSet/BRCategoriaDiagnostico"
+        "reference" : "ValueSet/BRCategoriaCondicao"
       },
-      "name" : "Categoria do Diagnóstico (ValueSet)",
-      "description" : "ValueSet utilizado para definir o tipo de categoria do diagnóstico realizado."
+      "name" : "Classificação de uma condição",
+      "description" : "Tradução para o português do brasil da classificação de uma condição"
     },
     {
       "extension" : [{
@@ -1133,6 +1196,21 @@
       },
       "name" : "Classificação Brasileira de Ocupações - CBO",
       "description" : "Classifica as profissões do mercado de trabalho brasileiro."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-BRProblemaDiagnostico.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/BRProblemaDiagnostico"
+      },
+      "name" : "Classificação Internacional de Doenças e Atenção Primária",
+      "description" : "Código Internacional de Atenção Primária (CIAP2) e Classificação Internacional de Doenças (CID10)"
     },
     {
       "extension" : [{

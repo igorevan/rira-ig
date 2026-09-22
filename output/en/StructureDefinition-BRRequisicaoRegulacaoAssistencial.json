@@ -38,7 +38,6 @@
   "name" : "BRRequisicaoRegulacaoAssistencial",
   "title" : "Requisição de Regulação Assistencial",
   "status" : "active",
-  "experimental" : false,
   "date" : "2023-04-04",
   "publisher" : "Ministério da Saúde do Brasil",
   "contact" : [{
@@ -166,6 +165,12 @@
         "expression" : "orderDetail.empty() or code.exists()",
         "xpath" : "exists(f:code) or not(exists(f:orderDetail))",
         "source" : "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
+      },
+      {
+        "key" : "mira-1",
+        "severity" : "error",
+        "human" : "O Motivo da Solicitação (Condition.code) deve ser preenchido caso a Data da Solicitação (ServiceRequest.authoredOn) seja posterior a 01/01/2025.",
+        "expression" : "(authoredOn > @2025-01-01T01:00:00) implies reasonReference.resolve().code.exists()"
       }],
       "isModifier" : false,
       "isSummary" : false,
@@ -193,7 +198,7 @@
       "definition" : "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
       "comment" : "The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
       "min" : 0,
-      "max" : "1",
+      "max" : "0",
       "base" : {
         "path" : "Resource.id",
         "min" : 0,
@@ -314,7 +319,7 @@
       "xhtml",
       "display"],
       "min" : 0,
-      "max" : "1",
+      "max" : "0",
       "base" : {
         "path" : "DomainResource.text",
         "min" : 0,
@@ -717,6 +722,13 @@
       "type" : [{
         "code" : "code"
       }],
+      "condition" : ["mira-13",
+      "mira-14",
+      "mira-15",
+      "mira-16",
+      "mira-17",
+      "mira-18",
+      "mira-19"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -756,7 +768,7 @@
     {
       "id" : "ServiceRequest.intent",
       "path" : "ServiceRequest.intent",
-      "short" : "proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option",
+      "short" : "proposal | plan |  directive | order | original-order | reflex-order | filler-order | instance-order | option",
       "definition" : "Whether the request is a proposal, plan, an original order or a reflex order.",
       "comment" : "This element is labeled as a modifier because the intent alters when and how the resource is actually applicable.",
       "min" : 1,
@@ -769,6 +781,7 @@
       "type" : [{
         "code" : "code"
       }],
+      "fixedCode" : "proposal",
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -804,8 +817,8 @@
     {
       "id" : "ServiceRequest.category",
       "path" : "ServiceRequest.category",
-      "short" : "Modalidade assistencial.",
-      "definition" : "A code that classifies the service for searching, sorting and display purposes (e.g. \"Surgical Procedure\").",
+      "short" : "Modalidade assistencial",
+      "definition" : "Modalidade assistencial que gerou a solicitação do procedimento.",
       "comment" : "There may be multiple axis of categorization depending on the context or use case for retrieving or displaying the resource.  The level of granularity is defined by the category concepts in the value set.",
       "requirements" : "Used for filtering what service request are retrieved and displayed.",
       "min" : 1,
@@ -1286,8 +1299,8 @@
     {
       "id" : "ServiceRequest.priority",
       "path" : "ServiceRequest.priority",
-      "short" : "Caráter do atendimento.",
-      "definition" : "Indicates how quickly the ServiceRequest should be addressed with respect to other requests.",
+      "short" : "Caráter da solicitação",
+      "definition" : "Modalidade assistencial que gerou a solicitação do procedimento.",
       "min" : 1,
       "max" : "1",
       "base" : {
@@ -1372,8 +1385,8 @@
     {
       "id" : "ServiceRequest.code",
       "path" : "ServiceRequest.code",
-      "short" : "Código do procedimento.",
-      "definition" : "A code that identifies a particular service (i.e., procedure, diagnostic investigation, or panel of investigations) that have been requested.",
+      "short" : "Código do procedimento",
+      "definition" : "O código que identifica unicamente o procedimento conforme tabela SUS.",
       "comment" : "Many laboratory and radiology procedure codes embed the specimen/organ system in the test order name, for example,  serum or serum/plasma glucose, or a chest x-ray. The specimen might not be recorded separately from the test code.",
       "alias" : ["service requested"],
       "min" : 1,
@@ -1953,8 +1966,8 @@
     {
       "id" : "ServiceRequest.subject",
       "path" : "ServiceRequest.subject",
-      "short" : "Paciente",
-      "definition" : "On whom or what the service is to be performed. This is usually a human patient, but can also be requested on animals, groups of humans or animals, devices such as dialysis machines, or even locations (typically for environmental scans).",
+      "short" : "Identificador do paciente",
+      "definition" : "Identificação única do paciente, por meio de CPF ou CNS.",
       "min" : 1,
       "max" : "1",
       "base" : {
@@ -2172,6 +2185,12 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      },
+      {
+        "key" : "ident-1",
+        "severity" : "error",
+        "human" : "O número de CPF ou CNS informado é inválido (subject.identifier.value).",
+        "expression" : "value.matches('^(?!(\\\\d)\\\\1{10})\\\\d{11}$') or value.matches('^(?!(\\\\d)\\\\1{14})[125789]\\\\d{14}$')"
       }],
       "isModifier" : false,
       "isSummary" : true,
@@ -2598,8 +2617,8 @@
     {
       "id" : "ServiceRequest.occurrence[x]",
       "path" : "ServiceRequest.occurrence[x]",
-      "short" : "Data de execução",
-      "definition" : "Data e hora da execução do procedimento no padrão ISO8601.",
+      "short" : "Data da execução",
+      "definition" : "A data e hora em que o procedimento regulado foi executado no padrão ISO 8601.",
       "alias" : ["schedule"],
       "min" : 0,
       "max" : "1",
@@ -2611,6 +2630,9 @@
       "type" : [{
         "code" : "dateTime"
       }],
+      "condition" : ["mira-3",
+      "mira-9",
+      "mira-12"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -2778,8 +2800,8 @@
     {
       "id" : "ServiceRequest.authoredOn",
       "path" : "ServiceRequest.authoredOn",
-      "short" : "Data e hora em que o procediento foi solicitado.",
-      "definition" : "Data e hora da solicitação do procedimento no padrão ISO8601.",
+      "short" : "Data da solicitação",
+      "definition" : "A data e hora da solicitação do procedimento regulado no padrão ISO 8601.",
       "alias" : ["orderedOn"],
       "min" : 1,
       "max" : "1",
@@ -2791,6 +2813,7 @@
       "type" : [{
         "code" : "dateTime"
       }],
+      "condition" : ["mira-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -2802,10 +2825,6 @@
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "rnds",
-        "map" : "MI-RIRA - Data da Solicitação"
-      },
-      {
         "identity" : "workflow",
         "map" : "Request.authoredOn"
       },
@@ -2830,7 +2849,7 @@
       "id" : "ServiceRequest.requester",
       "path" : "ServiceRequest.requester",
       "short" : "Estabelecimento de saúde solicitante",
-      "definition" : "The individual who initiated the request and has responsibility for its activation.",
+      "definition" : "Identificação única do estabelecimento solicitante, por meio do CNES.",
       "comment" : "This not the dispatcher, but rather who is the authorizer.  This element is not intended to handle delegation which would generally be managed through the Provenance resource.",
       "alias" : ["author",
       "orderer"],
@@ -3047,6 +3066,12 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      },
+      {
+        "key" : "estab-2",
+        "severity" : "error",
+        "human" : "O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números.",
+        "expression" : "value.matches('^(?!(\\\\d)\\\\1{6})\\\\d{7}$')"
       }],
       "isModifier" : false,
       "isSummary" : true,
@@ -3425,8 +3450,8 @@
     {
       "id" : "ServiceRequest.performerType",
       "path" : "ServiceRequest.performerType",
-      "short" : "Identificador da especialidade médica do executante.",
-      "definition" : "Desired type of performer for doing the requested service.",
+      "short" : "Especialidade médica do executante",
+      "definition" : "Identificação da especialidade médica do profissional executante do procedimento, conforme tabela de CBO. \r\nCaso o procedimento informado pertença à forma de organização 03.01.01 da tabela SUS, o código CBO será obrigatório.",
       "comment" : "This is a  role, not  a participation type.  In other words, does not describe the task but describes the capacity.  For example, “compounding pharmacy”, “psychiatrist” or “internal referral”.",
       "alias" : ["specialty"],
       "min" : 0,
@@ -3911,8 +3936,8 @@
     {
       "id" : "ServiceRequest.performer",
       "path" : "ServiceRequest.performer",
-      "short" : "Estabelecimento de sáude executante",
-      "definition" : "The desired performer for doing the requested service.  For example, the surgeon, dermatopathologist, endoscopist, etc.",
+      "short" : "Estabelecimento de saúde executante",
+      "definition" : "Identificação única do estabelecimento executante, por meio do CNES.",
       "comment" : "If multiple performers are present, it is interpreted as a list of *alternative* performers without any preference regardless of order.  If order of preference is needed use the [request-performerOrder extension](http://hl7.org/fhir/R4/extension-request-performerorder.html).  Use CareTeam to represent a group of performers (for example, Practitioner A *and* Practitioner B).",
       "alias" : ["request recipient"],
       "min" : 0,
@@ -3926,6 +3951,10 @@
         "code" : "Reference",
         "targetProfile" : ["http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"]
       }],
+      "condition" : ["mira-4",
+      "mira-6",
+      "mira-8",
+      "mira-11"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -4124,6 +4153,12 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      },
+      {
+        "key" : "estab-2",
+        "severity" : "error",
+        "human" : "O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números.",
+        "expression" : "value.matches('^(?!(\\\\d)\\\\1{6})\\\\d{7}$')"
       }],
       "isModifier" : false,
       "isSummary" : true,
@@ -4633,9 +4668,9 @@
       "id" : "ServiceRequest.reasonReference",
       "path" : "ServiceRequest.reasonReference",
       "short" : "Motivo da solicitação",
-      "definition" : "Indicates another resource that provides a justification for why this service is being requested.   May relate to the resources referred to in `supportingInfo`.",
+      "definition" : "Identificação do motivo da solicitação do procedimento, conforme Classificação Internacional de Doenças - CID ou Classificação Internacional de Atenção Primária - CIAP.",
       "comment" : "This element represents why the referral is being made and may be used to decide how the service will be performed, or even if it will be performed at all.    To be as specific as possible,  a reference to  *Observation* or *Condition* should be used if available.  Otherwise when referencing  *DiagnosticReport*  it should contain a finding  in `DiagnosticReport.conclusion` and/or `DiagnosticReport.conclusionCode`.   When using a reference to *DocumentReference*, the target document should contain clear findings language providing the relevant reason for this service request.  Use  the CodeableConcept text element in `ServiceRequest.reasonCode` if the data is free (uncoded) text as shown in the [CT Scan example](http://hl7.org/fhir/R4/servicerequest-example-di.html).",
-      "min" : 1,
+      "min" : 0,
       "max" : "1",
       "base" : {
         "path" : "ServiceRequest.reasonReference",
@@ -4644,7 +4679,7 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0"]
+        "targetProfile" : ["http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProblemaDiagnostico"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -5175,12 +5210,18 @@
   "differential" : {
     "element" : [{
       "id" : "ServiceRequest",
-      "path" : "ServiceRequest"
+      "path" : "ServiceRequest",
+      "constraint" : [{
+        "key" : "mira-1",
+        "severity" : "error",
+        "human" : "O Motivo da Solicitação (Condition.code) deve ser preenchido caso a Data da Solicitação (ServiceRequest.authoredOn) seja posterior a 01/01/2025.",
+        "expression" : "(authoredOn > @2025-01-01T01:00:00) implies reasonReference.resolve().code.exists()"
+      }]
     },
     {
       "id" : "ServiceRequest.id",
       "path" : "ServiceRequest.id",
-      "max" : "1"
+      "max" : "0"
     },
     {
       "id" : "ServiceRequest.implicitRules",
@@ -5195,7 +5236,7 @@
     {
       "id" : "ServiceRequest.text",
       "path" : "ServiceRequest.text",
-      "max" : "1"
+      "max" : "0"
     },
     {
       "id" : "ServiceRequest.contained",
@@ -5235,6 +5276,13 @@
     {
       "id" : "ServiceRequest.status",
       "path" : "ServiceRequest.status",
+      "condition" : ["mira-13",
+      "mira-14",
+      "mira-15",
+      "mira-16",
+      "mira-17",
+      "mira-18",
+      "mira-19"],
       "binding" : {
         "strength" : "required",
         "valueSet" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRequisicaoRegulacaoAssistencial"
@@ -5243,6 +5291,8 @@
     {
       "id" : "ServiceRequest.intent",
       "path" : "ServiceRequest.intent",
+      "short" : "proposal | plan |  directive | order | original-order | reflex-order | filler-order | instance-order | option",
+      "fixedCode" : "proposal",
       "binding" : {
         "strength" : "required",
         "valueSet" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRIntencaoRegulacao"
@@ -5251,7 +5301,8 @@
     {
       "id" : "ServiceRequest.category",
       "path" : "ServiceRequest.category",
-      "short" : "Modalidade assistencial.",
+      "short" : "Modalidade assistencial",
+      "definition" : "Modalidade assistencial que gerou a solicitação do procedimento.",
       "min" : 1,
       "max" : "1",
       "binding" : {
@@ -5299,7 +5350,8 @@
     {
       "id" : "ServiceRequest.priority",
       "path" : "ServiceRequest.priority",
-      "short" : "Caráter do atendimento.",
+      "short" : "Caráter da solicitação",
+      "definition" : "Modalidade assistencial que gerou a solicitação do procedimento.",
       "min" : 1,
       "binding" : {
         "strength" : "required",
@@ -5315,7 +5367,8 @@
     {
       "id" : "ServiceRequest.code",
       "path" : "ServiceRequest.code",
-      "short" : "Código do procedimento.",
+      "short" : "Código do procedimento",
+      "definition" : "O código que identifica unicamente o procedimento conforme tabela SUS.",
       "min" : 1,
       "binding" : {
         "strength" : "required",
@@ -5372,7 +5425,8 @@
     {
       "id" : "ServiceRequest.subject",
       "path" : "ServiceRequest.subject",
-      "short" : "Paciente",
+      "short" : "Identificador do paciente",
+      "definition" : "Identificação única do paciente, por meio de CPF ou CNS.",
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"]
@@ -5396,7 +5450,13 @@
     {
       "id" : "ServiceRequest.subject.identifier",
       "path" : "ServiceRequest.subject.identifier",
-      "min" : 1
+      "min" : 1,
+      "constraint" : [{
+        "key" : "ident-1",
+        "severity" : "error",
+        "human" : "O número de CPF ou CNS informado é inválido (subject.identifier.value).",
+        "expression" : "value.matches('^(?!(\\\\d)\\\\1{10})\\\\d{11}$') or value.matches('^(?!(\\\\d)\\\\1{14})[125789]\\\\d{14}$')"
+      }]
     },
     {
       "id" : "ServiceRequest.subject.identifier.id",
@@ -5446,11 +5506,14 @@
     {
       "id" : "ServiceRequest.occurrence[x]",
       "path" : "ServiceRequest.occurrence[x]",
-      "short" : "Data de execução",
-      "definition" : "Data e hora da execução do procedimento no padrão ISO8601.",
+      "short" : "Data da execução",
+      "definition" : "A data e hora em que o procedimento regulado foi executado no padrão ISO 8601.",
       "type" : [{
         "code" : "dateTime"
-      }]
+      }],
+      "condition" : ["mira-3",
+      "mira-9",
+      "mira-12"]
     },
     {
       "id" : "ServiceRequest.occurrence[x].id",
@@ -5465,18 +5528,16 @@
     {
       "id" : "ServiceRequest.authoredOn",
       "path" : "ServiceRequest.authoredOn",
-      "short" : "Data e hora em que o procediento foi solicitado.",
-      "definition" : "Data e hora da solicitação do procedimento no padrão ISO8601.",
+      "short" : "Data da solicitação",
+      "definition" : "A data e hora da solicitação do procedimento regulado no padrão ISO 8601.",
       "min" : 1,
-      "mapping" : [{
-        "identity" : "rnds",
-        "map" : "MI-RIRA - Data da Solicitação"
-      }]
+      "condition" : ["mira-1"]
     },
     {
       "id" : "ServiceRequest.requester",
       "path" : "ServiceRequest.requester",
       "short" : "Estabelecimento de saúde solicitante",
+      "definition" : "Identificação única do estabelecimento solicitante, por meio do CNES.",
       "min" : 1,
       "type" : [{
         "code" : "Reference",
@@ -5501,7 +5562,13 @@
     {
       "id" : "ServiceRequest.requester.identifier",
       "path" : "ServiceRequest.requester.identifier",
-      "min" : 1
+      "min" : 1,
+      "constraint" : [{
+        "key" : "estab-2",
+        "severity" : "error",
+        "human" : "O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números.",
+        "expression" : "value.matches('^(?!(\\\\d)\\\\1{6})\\\\d{7}$')"
+      }]
     },
     {
       "id" : "ServiceRequest.requester.identifier.id",
@@ -5546,7 +5613,8 @@
     {
       "id" : "ServiceRequest.performerType",
       "path" : "ServiceRequest.performerType",
-      "short" : "Identificador da especialidade médica do executante.",
+      "short" : "Especialidade médica do executante",
+      "definition" : "Identificação da especialidade médica do profissional executante do procedimento, conforme tabela de CBO. \r\nCaso o procedimento informado pertença à forma de organização 03.01.01 da tabela SUS, o código CBO será obrigatório.",
       "binding" : {
         "strength" : "required",
         "description" : "Classificação Brasileira de Ocupações.",
@@ -5592,12 +5660,17 @@
     {
       "id" : "ServiceRequest.performer",
       "path" : "ServiceRequest.performer",
-      "short" : "Estabelecimento de sáude executante",
+      "short" : "Estabelecimento de saúde executante",
+      "definition" : "Identificação única do estabelecimento executante, por meio do CNES.",
       "max" : "1",
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"]
-      }]
+      }],
+      "condition" : ["mira-4",
+      "mira-6",
+      "mira-8",
+      "mira-11"]
     },
     {
       "id" : "ServiceRequest.performer.id",
@@ -5617,7 +5690,13 @@
     {
       "id" : "ServiceRequest.performer.identifier",
       "path" : "ServiceRequest.performer.identifier",
-      "min" : 1
+      "min" : 1,
+      "constraint" : [{
+        "key" : "estab-2",
+        "severity" : "error",
+        "human" : "O número do CNES do estabelecimento de saúde é inválido (identifier.value). O número deve conter 7 dígitos e não pode conter letras ou caracteres especiais, apenas números.",
+        "expression" : "value.matches('^(?!(\\\\d)\\\\1{6})\\\\d{7}$')"
+      }]
     },
     {
       "id" : "ServiceRequest.performer.identifier.id",
@@ -5678,11 +5757,11 @@
       "id" : "ServiceRequest.reasonReference",
       "path" : "ServiceRequest.reasonReference",
       "short" : "Motivo da solicitação",
-      "min" : 1,
+      "definition" : "Identificação do motivo da solicitação do procedimento, conforme Classificação Internacional de Doenças - CID ou Classificação Internacional de Atenção Primária - CIAP.",
       "max" : "1",
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0"]
+        "targetProfile" : ["http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProblemaDiagnostico"]
       }]
     },
     {
