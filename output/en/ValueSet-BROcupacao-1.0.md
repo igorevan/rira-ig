@@ -2,9 +2,6 @@
 
 ## ValueSet: Classificação Brasileira de Ocupações - CBO 
 
- 
-Classifica as profissões do mercado de trabalho brasileiro. 
-
  **References** 
 
 * [Agendamento de Regulação Assistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md)

@@ -2,9 +2,6 @@
 
 ## CodeSystem: Classificação Internacional de Doenças - Décima Revisão (CID-10) 
 
- 
-Classifica as doenças e outros problemas em saúde registrados em diversos tipos de documentos clínicos. 
-
 This Code system is referenced in the definition of the following value sets:
 
 * [Classificação Internacional de Doenças - Décima Revisão - CID-10](ValueSet-BRCID10-1.0.md)

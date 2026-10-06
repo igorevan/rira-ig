@@ -2,9 +2,6 @@
 
 ## ValueSet: Tipo de Documento (ValueSet) 
 
- 
-Classifica o tipo de documento que está sendo trafegado. 
-
  **References** 
 
 * [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)

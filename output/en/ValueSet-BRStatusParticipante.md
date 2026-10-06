@@ -2,9 +2,6 @@
 
 ## ValueSet: Status do Participante do agendamento 
 
- 
-Status do Participante do agendamento. 
-
  **References** 
 
 * [Agendamento de Regulação Assistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md)

@@ -2,9 +2,6 @@
 
 ## ValueSet: Sexo 
 
- 
-Sexo de um indivíduo. 
-
  **References** 
 
 * [Informações Complementares de Indivíduos Não Identificados](StructureDefinition-BRIndividuoNaoIdentificado-1.0.md)

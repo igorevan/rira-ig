@@ -2,9 +2,6 @@
 
 ## CodeSystem: Modalidade Assistencial 
 
- 
-Classifica os contatos assistenciais de acordo com as especificidades do modo, local e duração do atendimento 
-
 This Code system is referenced in the definition of the following value sets:
 
 * [Modalidade Assistencial MIRA](ValueSet-BRModalidadeAssistencialMIRA.md)

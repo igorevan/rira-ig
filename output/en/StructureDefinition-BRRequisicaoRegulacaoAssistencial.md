@@ -2,9 +2,6 @@
 
 ## Resource Profile: Requisição de Regulação Assistencial 
 
- 
-Requisição de Regulação Assistencial 
-
 **Usos:**
 
 * Refere a este Perfil: [Agendamento de Regulação Assistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md) and [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)

@@ -2,9 +2,6 @@
 
 ## Resource Profile: Agendamento de Regulação Assistencial 
 
- 
-Agendamento de Regulação Assistencial 
-
 **Usos:**
 
 * Refere a este Perfil: [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)

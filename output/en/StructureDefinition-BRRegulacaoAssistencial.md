@@ -2,9 +2,6 @@
 
 ## Resource Profile: Regulação Assistencial 
 
- 
-Documento público que coleta os dados das solicitações de regulação assistencial 
-
 **Usos:**
 
 * Refere a este Perfil: [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)

@@ -2,9 +2,6 @@
 
 ## ValueSet: Modalidade Assistencial MIRA 
 
- 
-Modalidade assistencial que gerou a solicitação do procedimento. 
-
  **References** 
 
 * [Agendamento de Regulação Assistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md)

@@ -2,9 +2,6 @@
 
 ## CodeSystem: Tabela de procedimentos, medicamentos e OPM do SUS 
 
- 
-Padroniza os códigos e as nomenclaturas dos procedimentos, medicamentos e OPM para as informações trafegadas no SUS 
-
 This Code system is referenced in the definition of the following value sets:
 
 * [Procedimento realizado](ValueSet-BRProcedimentosNacionais-1.0.md)

@@ -2,9 +2,6 @@
 
 ## ValueSet: Tipo Participante 
 
- 
-Identificação do tipo do participante envolvido na solicitação. 
-
  **References** 
 
 * [Agendamento de Regulação Assistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md)

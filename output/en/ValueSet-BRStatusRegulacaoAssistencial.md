@@ -2,9 +2,6 @@
 
 ## ValueSet: Status de regulação assistencial 
 
- 
-Status de agendamento de regulação assistencial. 
-
  **References** 
 
 * [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)

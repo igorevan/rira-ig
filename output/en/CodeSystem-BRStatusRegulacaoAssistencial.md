@@ -2,9 +2,6 @@
 
 ## CodeSystem: Status da regulação assistencial 
 
- 
-Status da regulação assistencial. 
-
 This Code system is referenced in the definition of the following value sets:
 
 * [Status de regulação assistencial](ValueSet-BRStatusRegulacaoAssistencial.md)

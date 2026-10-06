@@ -2,9 +2,6 @@
 
 ## ValueSet: Justificativa da Impossibilidade de Identificação do Indivíduo (ValueSet) 
 
- 
-Classifica as razões pelo qual não foi possível obter os dados de identificação do indivíduo em um contato assistencial. (Port. nº 84/SAS/MS/1997 e Port. nº02/SAS/SGEP/MS/2012) 
-
  **References** 
 
 * [Informações Complementares de Indivíduos Não Identificados](StructureDefinition-BRIndividuoNaoIdentificado-1.0.md)

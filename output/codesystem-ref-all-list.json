@@ -164,14 +164,14 @@
     "oids" : ["2.16.840.1.113883.6.96"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-manifestation-or-symptom.html" : "Manifestation and Symptom Codes",
-    "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes",
-    "http://hl7.org/fhir/R4/valueset-condition-stage-type.html" : "Condition Stage Type",
-    "http://hl7.org/fhir/R4/valueset-encounter-reason.html" : "Encounter Reason Codes",
-    "http://hl7.org/fhir/R4/valueset-servicerequest-orderdetail.html" : "Service Request Order Details Codes",
     "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
+    "http://hl7.org/fhir/R4/valueset-servicerequest-orderdetail.html" : "Service Request Order Details Codes",
+    "http://hl7.org/fhir/R4/valueset-encounter-reason.html" : "Encounter Reason Codes",
     "http://hl7.org/fhir/R4/valueset-condition-severity.html" : "Condition/Diagnosis Severity",
     "http://hl7.org/fhir/R4/valueset-medication-as-needed-reason.html" : "SNOMED CT Medication As Needed Reason Codes",
+    "http://hl7.org/fhir/R4/valueset-condition-stage-type.html" : "Condition Stage Type",
+    "http://hl7.org/fhir/R4/valueset-manifestation-or-symptom.html" : "Manifestation and Symptom Codes",
+    "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes",
     "http://hl7.org/fhir/R4/valueset-condition-stage.html" : "Condition Stage"
   },
   {
@@ -336,8 +336,8 @@
     "description" : "Classifica as doenças e outros problemas em saúde registrados em diversos tipos de documentos clínicos.",
     "uses" : {
     },
-    "ValueSet-BRCID10-1.0.html" : "Classificação Internacional de Doenças - Décima Revisão - CID-10",
-    "ValueSet-BRProblemaDiagnostico.html" : "Classificação Internacional de Doenças e Atenção Primária"
+    "ValueSet-BRProblemaDiagnostico.html" : "Classificação Internacional de Doenças e Atenção Primária",
+    "ValueSet-BRCID10-1.0.html" : "Classificação Internacional de Doenças - Décima Revisão - CID-10"
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRJustificativaIndividuoNaoIdentificado",

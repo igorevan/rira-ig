@@ -2,9 +2,6 @@
 
 ## ValueSet: Classificação Internacional de Doenças - Décima Revisão - CID-10 
 
- 
-Classificação Internacional de Doenças - Décima Revisão - CID-10 
-
  **References** 
 
 Este conjunto de valores não é utilizado aqui; pode ser utilizado noutro local (por exemplo, especificações e/ou implementações que utilizem este conteúdo)

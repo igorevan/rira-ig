@@ -2,9 +2,6 @@
 
 ## CodeSystem: Classificação Brasileira Hierarquizada de Procedimentos Médicos (CBHPM) e da Terminologia Unificada da Saúde Suplementar (TUSS) 
 
- 
-Classificações de procedimentos utilizadas no Brasil, no contexto da assistência à saúde privada, não complementar ao SUS, e eventualmente no SUS para classificar procedimento inexistente na Tabela SUS. 
-
 This Code system is referenced in the definition of the following value sets:
 
 * [Procedimento realizado](ValueSet-BRProcedimentosNacionais-1.0.md)

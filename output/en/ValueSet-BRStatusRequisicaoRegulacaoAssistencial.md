@@ -2,9 +2,6 @@
 
 ## ValueSet: Status de requisição de regulação assistencial 
 
- 
-Status de requisição de regulação assistencial. 
-
  **References** 
 
 * [Requisição de Regulação Assistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md)

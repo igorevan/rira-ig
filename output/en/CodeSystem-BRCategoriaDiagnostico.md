@@ -2,9 +2,6 @@
 
 ## CodeSystem: Categoria do Diagnóstico (CodeSystem) 
 
- 
-Códigos para representação do tipo de categoria do diagnóstico realizado. 
-
 This Code system is referenced in the definition of the following value sets:
 
 * Este CodeSystem não é utilizado aqui; pode ser utilizado noutro local (por exemplo, em especificações e/ou implementações que utilizem este conteúdo)

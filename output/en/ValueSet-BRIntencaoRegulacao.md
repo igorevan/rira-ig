@@ -2,9 +2,6 @@
 
 ## ValueSet: Intenção de requisição de regulação assistencial 
 
- 
-Intenção de requisição de regulação assistencial. 
-
  **References** 
 
 * [Requisição de Regulação Assistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md)

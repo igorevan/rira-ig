@@ -2,9 +2,6 @@
 
 ## ValueSet: Estado da Resolução de Diagnóstico ou Problema 
 
- 
-Estado da resolução de um diagnóstico ou problema. 
-
  **References** 
 
 * [Problema/Diagnóstico](StructureDefinition-BRProblemaDiagnostico.md)

@@ -2,8 +2,6 @@
 
 ## Extension: Informações Complementares de Indivíduos Não Identificados 
 
-Informações complementares necessárias ao Contato Assistencial na hipótese do indivíduo não poder ser identificado.
-
 **Context of Use**
 
 **Usage info**

@@ -8,6 +8,12 @@
 
 Foi criado um [Projeto Rede Nacional de Dados em Saúde](https://simplifier.net/redenacionaldedadosemsaude/), na plataforma [SIMPLIFIER.NET](https://simplifier.net/), para a publicação e distribuição dos perfis relacionados aos documentos computacionais em produção na rede.
 
+### Bundle de Envio do RIRA
+
+ O diagrama abaixo apresenta o pacote *Bundle* no qual é condensado o RIRA, referenciando todos os dados relevantes para caracterizar uma regulação assistencial. 
+
+ **Figura 1 - Diagrama do *Bundle* do RIRA** 
+
 ### Recursos FHIR
 
  O modelo computacional do RIRA é definido pelo perfil Regulação Assistencial (RIRA) [`Composition`] e os demais Recursos FHIR apresentados abaixo.

@@ -2,9 +2,6 @@
 
 ## CodeSystem: Justificativa da Impossibilidade de Identificação do Indivíduo (CodeSystem) 
 
- 
-Classifica as razões pelo qual não foi possível obter os dados de identificação do indivíduo em um contato assistencial. (Port. nº 84/SAS/MS/1997 e Port. nº02/SAS/SGEP/MS/2012) 
-
 This Code system is referenced in the definition of the following value sets:
 
 * [Justificativa da Impossibilidade de Identificação do Indivíduo (ValueSet)](ValueSet-BRJustificativaIndividuoNaoIdentificado-1.0.md)

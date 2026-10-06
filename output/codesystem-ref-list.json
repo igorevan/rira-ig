@@ -149,8 +149,8 @@
     "description" : "Classifica as doenças e outros problemas em saúde registrados em diversos tipos de documentos clínicos.",
     "uses" : {
     },
-    "ValueSet-BRCID10-1.0.html" : "Classificação Internacional de Doenças - Décima Revisão - CID-10",
-    "ValueSet-BRProblemaDiagnostico.html" : "Classificação Internacional de Doenças e Atenção Primária"
+    "ValueSet-BRProblemaDiagnostico.html" : "Classificação Internacional de Doenças e Atenção Primária",
+    "ValueSet-BRCID10-1.0.html" : "Classificação Internacional de Doenças - Décima Revisão - CID-10"
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRJustificativaIndividuoNaoIdentificado",

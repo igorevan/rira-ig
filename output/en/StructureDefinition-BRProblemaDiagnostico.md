@@ -2,9 +2,6 @@
 
 ## Resource Profile: Problema/Diagnóstico 
 
- 
-Problema e/ou diagnóstico atribuído pelo profissional de saúde ao indivíduo no contato assistencial. 
-
 **Usos:**
 
 * Refere a este Perfil: [Agendamento de Regulação Assistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md) and [Requisição de Regulação Assistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md)

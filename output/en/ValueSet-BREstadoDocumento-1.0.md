@@ -2,9 +2,6 @@
 
 ## ValueSet: Estado do Documento 
 
- 
-Classifica o estado do documento que está sendo trafegado. 
-
  **References** 
 
 * [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)

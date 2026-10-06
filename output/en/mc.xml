@@ -12,18 +12,133 @@
       Nacional de Dados em Saúde</a>, na plataforma <a href="https://simplifier.net/">SIMPLIFIER.NET</a>,
     para a publicação e distribuição dos perfis relacionados aos documentos computacionais em produção na rede.</p>
 
-  <!-- <a name="bundle-rira"> </a>
+  <a name="bundle-rira"> </a>
   <h3>Bundle de Envio do RIRA</h3>
   <p> O diagrama abaixo apresenta o pacote <i>Bundle</i> no qual é condensado o RIRA, referenciando todos os dados
     relevantes para caracterizar uma regulação assistencial. </p>
+
   <p>
     <b>Figura 1 - Diagrama do <i>Bundle</i> do RIRA</b>
   </p>
-  <div>
 
-    <img height="500" src="riraMC.png" alt="Diagrama do Bundle do RIRA" />
+  <div xmlns="http://www.w3.org/1999/xhtml">
+    <svg xmlns="http://www.w3.org/2000/svg" width="700" height="661" viewBox="0 0 1420 1150"
+      style="max-width:100%; height:auto;" role="img" aria-labelledby="rira-title rira-desc">
+      <title id="rira-title">Estrutura do Bundle RIRA</title>
+      <desc id="rira-desc">Bundle inclui Composition, Appointment, ServiceRequest e Condition nas entries 0 a 3.
+        Composition referencia Appointment e ServiceRequest. Appointment referencia ServiceRequest e Condition.
+        ServiceRequest referencia Condition. Cada perfil possui um link relativo para sua página no IG.</desc>
+      <defs>
+        <marker id="rira-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+          <path d="M 1 1 L 9 5 L 1 9" fill="none" stroke="#334155" stroke-width="1.5" />
+        </marker>
+      </defs>
 
-  </div> -->
+      <path d="M 710 125 V 225" fill="none" stroke="#64748b" stroke-width="2.6" stroke-linejoin="round"
+        marker-end="url(#rira-arrow)" stroke-dasharray="8 6" />
+      <path d="M 600 80 H 140 V 500" fill="none" stroke="#64748b" stroke-width="2.6" stroke-linejoin="round"
+        marker-end="url(#rira-arrow)" stroke-dasharray="8 6" />
+      <path d="M 820 80 H 1200 V 500" fill="none" stroke="#64748b" stroke-width="2.6" stroke-linejoin="round"
+        marker-end="url(#rira-arrow)" stroke-dasharray="8 6" />
+      <path d="M 850 60 H 1335 V 1040 H 710 V 975" fill="none" stroke="#64748b" stroke-width="2.6"
+        stroke-linejoin="round" marker-end="url(#rira-arrow)" stroke-dasharray="8 6" />
+      <path d="M 610 325 L 340 500" fill="none" stroke="#334155" stroke-width="2.6" stroke-linejoin="round"
+        marker-end="url(#rira-arrow)" />
+      <path d="M 810 325 L 1000 500" fill="none" stroke="#334155" stroke-width="2.6" stroke-linejoin="round"
+        marker-end="url(#rira-arrow)" />
+      <path d="M 570 580 H 640 V 650 H 740 V 580 H 800" fill="none" stroke="#334155" stroke-width="2.6"
+        stroke-linejoin="round" marker-end="url(#rira-arrow)" />
+      <path d="M 340 610 L 610 875" fill="none" stroke="#334155" stroke-width="2.6" stroke-linejoin="round"
+        marker-end="url(#rira-arrow)" />
+      <path d="M 1030 610 L 810 875" fill="none" stroke="#334155" stroke-width="2.6" stroke-linejoin="round"
+        marker-end="url(#rira-arrow)" />
+      <g>
+        <rect x="600.25" y="155" width="219.5" height="40" rx="8" fill="#ffffff" /><text x="710" y="182"
+          text-anchor="middle" font-family="Consolas, monospace" font-size="20" fill="#334155">entry[0].resource</text>
+      </g>
+      <g>
+        <rect x="30.25" y="360" width="219.5" height="40" rx="8" fill="#ffffff" /><text x="140" y="387"
+          text-anchor="middle" font-family="Consolas, monospace" font-size="20" fill="#334155">entry[1].resource</text>
+      </g>
+      <g>
+        <rect x="1090.25" y="360" width="219.5" height="40" rx="8" fill="#ffffff" /><text x="1200" y="387"
+          text-anchor="middle" font-family="Consolas, monospace" font-size="20" fill="#334155">entry[2].resource</text>
+      </g>
+      <g>
+        <rect x="1180.25" y="730" width="219.5" height="40" rx="8" fill="#ffffff" /><text x="1290" y="757"
+          text-anchor="middle" font-family="Consolas, monospace" font-size="20" fill="#334155">entry[3].resource</text>
+      </g>
+      <g>
+        <rect x="261.25" y="394" width="357.5" height="40" rx="8" fill="#ffffff" /><text x="440" y="421"
+          text-anchor="middle" font-family="Consolas, monospace" font-size="20"
+          fill="#334155">section[0].entry[0].reference</text>
+      </g>
+      <g>
+        <rect x="802.0" y="394" width="346.0" height="40" rx="8" fill="#ffffff" /><text x="975" y="421"
+          text-anchor="middle" font-family="Consolas, monospace" font-size="20"
+          fill="#334155">event[0].detail[1].reference</text>
+      </g>
+      <g>
+        <rect x="558.0" y="675" width="254.0" height="40" rx="8" fill="#ffffff" /><text x="685" y="702"
+          text-anchor="middle" font-family="Consolas, monospace" font-size="20"
+          fill="#334155">basedOn[0].reference</text>
+      </g>
+      <g>
+        <rect x="307.0" y="730" width="346.0" height="40" rx="8" fill="#ffffff" /><text x="480" y="757"
+          text-anchor="middle" font-family="Consolas, monospace" font-size="20"
+          fill="#334155">reasonReference[0].reference</text>
+      </g>
+      <g>
+        <rect x="767.0" y="790" width="346.0" height="40" rx="8" fill="#ffffff" /><text x="940" y="817"
+          text-anchor="middle" font-family="Consolas, monospace" font-size="20"
+          fill="#334155">reasonReference[0].reference</text>
+      </g>
+      <g font-family="Arial, Helvetica, sans-serif" fill="#172b4d" text-anchor="middle">
+        <rect x="570" y="30" width="280" height="95" rx="18" fill="#e8edf5" stroke="#526781" stroke-width="2.5" /><text
+          x="710.0" y="82" font-size="30" font-weight="700">Bundle</text>
+      </g>
+      <a href="StructureDefinition-BRRegulacaoAssistencial.html" aria-label="Abrir perfil BRRegulacaoAssistencial">
+        <title>Abrir perfil BRRegulacaoAssistencial</title>
+        <g font-family="Arial, Helvetica, sans-serif" fill="#172b4d" text-anchor="middle">
+          <rect x="445" y="225" width="530" height="100" rx="18" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5" />
+          <text x="710.0" y="273" font-size="30" font-weight="700">Composition</text>
+          <text x="710.0" y="307" font-size="22">BRRegulacaoAssistencial</text>
+        </g>
+      </a>
+      <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html"
+        aria-label="Abrir perfil BRAgendamentoRegulacaoAssistencial">
+        <title>Abrir perfil BRAgendamentoRegulacaoAssistencial</title>
+        <g font-family="Arial, Helvetica, sans-serif" fill="#172b4d" text-anchor="middle">
+          <rect x="70" y="500" width="500" height="110" rx="18" fill="#fce7f3" stroke="#db2777" stroke-width="2.5" />
+          <text x="320.0" y="548" font-size="30" font-weight="700">Appointment</text>
+          <text x="320.0" y="582" font-size="22">BRAgendamentoRegulacaoAssistencial</text>
+        </g>
+      </a>
+      <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html"
+        aria-label="Abrir perfil BRRequisicaoRegulacaoAssistencial">
+        <title>Abrir perfil BRRequisicaoRegulacaoAssistencial</title>
+        <g font-family="Arial, Helvetica, sans-serif" fill="#172b4d" text-anchor="middle">
+          <rect x="800" y="500" width="470" height="110" rx="18" fill="#ccfbf1" stroke="#0d9488" stroke-width="2.5" />
+          <text x="1035.0" y="548" font-size="30" font-weight="700">ServiceRequest</text>
+          <text x="1035.0" y="582" font-size="22">BRRequisicaoRegulacaoAssistencial</text>
+        </g>
+      </a>
+      <a href="StructureDefinition-BRProblemaDiagnostico.html" aria-label="Abrir perfil BRProblemaDiagnostico">
+        <title>Abrir perfil BRProblemaDiagnostico</title>
+        <g font-family="Arial, Helvetica, sans-serif" fill="#172b4d" text-anchor="middle">
+          <rect x="475" y="875" width="470" height="100" rx="18" fill="#ffedd5" stroke="#d97706" stroke-width="2.5" />
+          <text x="710.0" y="923" font-size="30" font-weight="700">Condition</text>
+          <text x="710.0" y="957" font-size="22">BRProblemaDiagnostico</text>
+        </g>
+      </a>
+      <g font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#64748b">
+        <path d="M 390 1110 H 440" stroke="#64748b" stroke-width="2.5" stroke-dasharray="8 6" /><text x="455"
+          y="1116">Inclusão no Bundle</text>
+        <path d="M 735 1110 H 785" stroke="#334155" stroke-width="2.5" /><text x="800" y="1116">Referência entre
+          recursos</text>
+      </g>
+    </svg>
+  </div>
 
   <a name="recursos"> </a>
   <h3>Recursos FHIR</h3>

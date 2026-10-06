@@ -2,9 +2,6 @@
 
 ## CodeSystem: Classificação Internacional de Atenção Primária - Segunda Edição - CIAP2 
 
- 
-Classifica os problemas identificados no contato assistencial pelos profissionais de saúde, os motivos da contato assistencial e as respostas propostas pela equipe seguindo a sistematização SOAP. 
-
 This Code system is referenced in the definition of the following value sets:
 
 * [Classificação Internacional de Doenças e Atenção Primária](ValueSet-BRProblemaDiagnostico.md)
