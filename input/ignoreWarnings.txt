@@ -8,8 +8,13 @@ Esta propriedade tem apenas um código ('healthcare') e não um URI, pelo que n�
 Esta propriedade tem apenas um código ('regulated') e não um URI, pelo que não tem um significado claramente definido no ecossistema terminológico
 %http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet%
 The value set expansion is too large, and only a subset has been displayed
-%Referência ao projeto CodeSystem%
 Binding http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial is not a subset of binding http://hl7.org/fhir/ValueSet/appointmentstatus|4.0.1 because The codes 'excluded,returned-to-requester' are not in the base valueset
+%http://hl7.org/fhir/composition-status%
+%http://hl7.org/fhir/request-priority%
+%http://hl7.org/fhir/request-intent%
+%http://hl7.org/fhir/appointmentstatus%
+%http://hl7.org/fhir/participationstatus%
+%http://hl7.org/fhir/request-status%
 
 # Erros de validação de exemplos
 %StructureDefinition/BREstabelecimentoSaude-1.0%

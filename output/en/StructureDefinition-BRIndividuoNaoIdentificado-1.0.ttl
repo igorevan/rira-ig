@@ -292,7 +292,14 @@
          ]
        ] ;
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://www.saude.gov.br/fhir/r4/ValueSet/BRSexo-1.0" ;
+           fhir:link <http://www.saude.gov.br/fhir/r4/ValueSet/BRSexo-1.0>
+         ]
+       ]
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Extension.extension:gender.id" ] ;
@@ -714,7 +721,14 @@
          ]
        ] ;
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://www.saude.gov.br/fhir/r4/ValueSet/BRJustificativaIndividuoNaoIdentificado-1.0" ;
+           fhir:link <http://www.saude.gov.br/fhir/r4/ValueSet/BRJustificativaIndividuoNaoIdentificado-1.0>
+         ]
+       ]
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Extension.extension:reason.id" ] ;

@@ -4,7 +4,8 @@ window.artifactsTableData = {
       "type":        "Type",
       "category":    "Category",
       "useGrouping": "Use grouping",
-      "clearAll":    "Clear all"
+      "clearAll":      "Clear all",
+      "linkToSection": "Link to this section"
     },
     "groupDescriptions": {
       "-str-profile": "<p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>\n"

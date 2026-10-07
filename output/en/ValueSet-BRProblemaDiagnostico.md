@@ -6,7 +6,7 @@
 
 * [Problema/Diagnóstico](StructureDefinition-BRProblemaDiagnostico.md)
 
-### Logical Definition (CLD)
+### Definição lógica (CLD)
 
  
 

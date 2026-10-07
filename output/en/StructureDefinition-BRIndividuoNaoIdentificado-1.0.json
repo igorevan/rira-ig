@@ -232,7 +232,11 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "isModifier" : false,
-      "isSummary" : false
+      "isSummary" : false,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRSexo-1.0"
+      }
     },
     {
       "id" : "Extension.extension:gender.id",
@@ -572,7 +576,11 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "isModifier" : false,
-      "isSummary" : false
+      "isSummary" : false,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRJustificativaIndividuoNaoIdentificado-1.0"
+      }
     },
     {
       "id" : "Extension.extension:reason.id",

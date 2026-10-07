@@ -220,6 +220,10 @@
       </constraint>
       <isModifier value="false"/>
       <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="http://www.saude.gov.br/fhir/r4/ValueSet/BRSexo-1.0"/>
+      </binding>
     </element>
     <element id="Extension.extension:gender.id">
       <path value="Extension.extension.id"/>
@@ -546,6 +550,10 @@
       </constraint>
       <isModifier value="false"/>
       <isSummary value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="http://www.saude.gov.br/fhir/r4/ValueSet/BRJustificativaIndividuoNaoIdentificado-1.0"/>
+      </binding>
     </element>
     <element id="Extension.extension:reason.id">
       <path value="Extension.extension.id"/>

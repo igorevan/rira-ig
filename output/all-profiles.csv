@@ -537,7 +537,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "BRIndividuoNaoIdentificado-1.0","Extension.extension:gender","Extension.extension","gender","","",1,1,"","","","Extension {[]} {[]}
-","Sexo","Sexo biológico obtido por meio de exame clínico ou de outros métodos diagnósticos referente ao indivíduo da hipótese de impossibilidade de identificação.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Sexo","Sexo biológico obtido por meio de exame clínico ou de outros métodos diagnósticos referente ao indivíduo da hipótese de impossibilidade de identificação.","","","","","","","","","",,"required","","http://www.saude.gov.br/fhir/r4/ValueSet/BRSexo-1.0","",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "BRIndividuoNaoIdentificado-1.0","Extension.extension:gender.id","Extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
@@ -567,7 +567,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "BRIndividuoNaoIdentificado-1.0","Extension.extension:reason","Extension.extension","reason","","",1,1,"","","","Extension {[]} {[]}
-","Justificativa da impossibilidade de identificação do indivíduo","Razão pela qual não foi possível obter os dados de identificação do indivíduo no contato assistencial.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Justificativa da impossibilidade de identificação do indivíduo","Razão pela qual não foi possível obter os dados de identificação do indivíduo no contato assistencial.","","","","","","","","","",,"required","","http://www.saude.gov.br/fhir/r4/ValueSet/BRJustificativaIndividuoNaoIdentificado-1.0","",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "BRIndividuoNaoIdentificado-1.0","Extension.extension:reason.id","Extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
@@ -736,7 +736,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "BRProblemaDiagnostico","Condition.subject.extension:unidentifiedPatient.extension:gender","Condition.subject.extension.extension","gender","","",1,1,"Y","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Sexo","Sexo biológico obtido por meio de exame clínico ou de outros métodos diagnósticos referente ao indivíduo da hipótese de impossibilidade de identificação.","","","","","","","","","",,"required","","http://www.saude.gov.br/fhir/r4/ValueSet/BRSexo-1.0","",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "BRProblemaDiagnostico","Condition.subject.extension:unidentifiedPatient.extension:gender.id","Condition.subject.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
@@ -751,7 +751,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "BRProblemaDiagnostico","Condition.subject.extension:unidentifiedPatient.extension:birthYear","Condition.subject.extension.extension","birthYear","","",1,1,"Y","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Ano de nascimento estimado","Estimativa do ano de nascimento por meio de observação direta da idade do indivíduo na hipótese de impossibilidade de identificação..","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "BRProblemaDiagnostico","Condition.subject.extension:unidentifiedPatient.extension:birthYear.id","Condition.subject.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
@@ -766,7 +766,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "BRProblemaDiagnostico","Condition.subject.extension:unidentifiedPatient.extension:reason","Condition.subject.extension.extension","reason","","",1,1,"Y","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Justificativa da impossibilidade de identificação do indivíduo","Razão pela qual não foi possível obter os dados de identificação do indivíduo no contato assistencial.","","","","","","","","","",,"required","","http://www.saude.gov.br/fhir/r4/ValueSet/BRJustificativaIndividuoNaoIdentificado-1.0","",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "BRProblemaDiagnostico","Condition.subject.extension:unidentifiedPatient.extension:reason.id","Condition.subject.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
@@ -1053,7 +1053,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "BRRegulacaoAssistencial","Composition.subject.extension:unidentifiedPatient.extension:gender","Composition.subject.extension.extension","gender","","",1,1,"Y","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Sexo","Sexo biológico obtido por meio de exame clínico ou de outros métodos diagnósticos referente ao indivíduo da hipótese de impossibilidade de identificação.","","","","","","","","","",,"required","","http://www.saude.gov.br/fhir/r4/ValueSet/BRSexo-1.0","",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "BRRegulacaoAssistencial","Composition.subject.extension:unidentifiedPatient.extension:gender.id","Composition.subject.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
@@ -1068,7 +1068,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "BRRegulacaoAssistencial","Composition.subject.extension:unidentifiedPatient.extension:birthYear","Composition.subject.extension.extension","birthYear","","",1,1,"Y","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Ano de nascimento estimado","Estimativa do ano de nascimento por meio de observação direta da idade do indivíduo na hipótese de impossibilidade de identificação..","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "BRRegulacaoAssistencial","Composition.subject.extension:unidentifiedPatient.extension:birthYear.id","Composition.subject.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
@@ -1083,7 +1083,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "BRRegulacaoAssistencial","Composition.subject.extension:unidentifiedPatient.extension:reason","Composition.subject.extension.extension","reason","","",1,1,"Y","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Justificativa da impossibilidade de identificação do indivíduo","Razão pela qual não foi possível obter os dados de identificação do indivíduo no contato assistencial.","","","","","","","","","",,"required","","http://www.saude.gov.br/fhir/r4/ValueSet/BRJustificativaIndividuoNaoIdentificado-1.0","",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "BRRegulacaoAssistencial","Composition.subject.extension:unidentifiedPatient.extension:reason.id","Composition.subject.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""

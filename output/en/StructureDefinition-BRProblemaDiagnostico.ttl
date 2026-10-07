@@ -2475,8 +2475,8 @@
        fhir:Element.id [ fhir:value "Condition.subject.extension:unidentifiedPatient.extension:gender" ] ;
        fhir:ElementDefinition.path [ fhir:value "Condition.subject.extension.extension" ] ;
        fhir:ElementDefinition.sliceName [ fhir:value "gender" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Extension" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "An Extension" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Sexo" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Sexo biológico obtido por meio de exame clínico ou de outros métodos diagnósticos referente ao indivíduo da hipótese de impossibilidade de identificação." ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.base [
@@ -2513,7 +2513,14 @@
        ] ;
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ] ;
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://www.saude.gov.br/fhir/r4/ValueSet/BRSexo-1.0" ;
+           fhir:link <http://www.saude.gov.br/fhir/r4/ValueSet/BRSexo-1.0>
+         ]
+       ]
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Condition.subject.extension:unidentifiedPatient.extension:gender.id" ] ;
@@ -2687,8 +2694,8 @@
        fhir:Element.id [ fhir:value "Condition.subject.extension:unidentifiedPatient.extension:birthYear" ] ;
        fhir:ElementDefinition.path [ fhir:value "Condition.subject.extension.extension" ] ;
        fhir:ElementDefinition.sliceName [ fhir:value "birthYear" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Extension" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "An Extension" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Ano de nascimento estimado" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Estimativa do ano de nascimento por meio de observação direta da idade do indivíduo na hipótese de impossibilidade de identificação.." ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.base [
@@ -2899,8 +2906,8 @@
        fhir:Element.id [ fhir:value "Condition.subject.extension:unidentifiedPatient.extension:reason" ] ;
        fhir:ElementDefinition.path [ fhir:value "Condition.subject.extension.extension" ] ;
        fhir:ElementDefinition.sliceName [ fhir:value "reason" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Extension" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "An Extension" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Justificativa da impossibilidade de identificação do indivíduo" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Razão pela qual não foi possível obter os dados de identificação do indivíduo no contato assistencial." ] ;
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.base [
@@ -2937,7 +2944,14 @@
        ] ;
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ] ;
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://www.saude.gov.br/fhir/r4/ValueSet/BRJustificativaIndividuoNaoIdentificado-1.0" ;
+           fhir:link <http://www.saude.gov.br/fhir/r4/ValueSet/BRJustificativaIndividuoNaoIdentificado-1.0>
+         ]
+       ]
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Condition.subject.extension:unidentifiedPatient.extension:reason.id" ] ;

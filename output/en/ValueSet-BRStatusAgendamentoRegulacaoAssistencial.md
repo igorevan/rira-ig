@@ -6,7 +6,7 @@
 
 * [Agendamento de Regulação Assistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md)
 
-### Logical Definition (CLD)
+### Definição lógica (CLD)
 
  
 
