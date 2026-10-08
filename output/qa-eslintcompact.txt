@@ -27,5 +27,5 @@ RIRARNDSIG
 /home/igor/rira-ig/input/resources/StructureDefinition-BRAgendamentoRegulacaoAssistencial.xml: line 0, col 0, Error - Binding http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial is not a subset of binding http://hl7.org/fhir/ValueSet/appointmentstatus|4.0.1 because The codes 'excluded,returned-to-requester' are not in the base valueset (BUSINESSRULE)
 /home/igor/rira-ig/input/resources/StructureDefinition-BRRegulacaoAssistencial.xml: line 1, col 726350, Error - Erro na restrição 'date-1' com a expressão 'value.matches('^(200[1-9]|20[1-9]\\d|[2-9]\\d{3})-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$')': Erro ao avaliar a expressão FHIRPath: A função matches só pode ser usada em string, uri, url, code, id mas encontrou [http://hl7.org/fhir/StructureDefinition/dateTime] (@char 7) (INVALID)
 
-err = 25, warn = 0, info = 0
-IG Publisher Version: 2.3.5
+err = 25, warn = 0, info = 0, broken links = 0
+IG Publisher Version: 3.0.0

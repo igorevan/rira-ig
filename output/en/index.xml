@@ -12,24 +12,26 @@
       href="https://rnds-guia.saude.gov.br/docs/rira/mi-rira/">Regulação Assistencial (RIRA)</a>
     seguindo as especificações do padrão <a href="https://hl7.org/fhir/R4/">HL7
       FHIR versão R4</a>. </p>
+
   <a name="contextualizacao"> </a>
   <h3>Contextualização</h3>
-  <p> A RNDS é uma plataforma nacional de integração de dados em saúde que faz parte do <a
-      href="https://www.gov.br/saude/pt-br/composicao/seidigi/meu-sus-digital">Meu SUS Digital</a>,
-    um programa do Governo Federal que tem como principal missão materializar a <a
-      href="https://www.gov.br/saude/pt-br/composicao/seidigi/saude-digital">Estratégia de Saúde
-      Digital do Brasil</a>. </p>
-  <p>
-    A RNDS utiliza computação em nuvem e tecnologias emergentes para criar um repositório de
-    documentos responsável por armazenar informações de saúde dos cidadãos, mantendo a
-    privacidade, integridade e auditabilidade dos dados de maneira acessível e interoperável. Com
-    isso, fornece aos profissionais de saúde acesso à história clínica do paciente, permitindo a
-    transição e a continuidade do cuidado, além de possibilitar aos indivíduos acesso aos seus dados
-    de saúde.
-  </p>
-  <p> Dessa forma, os serviços (<i>web services</i>) permitirão que as entidades da área da saúde
-    compartilhem as informações de Regulação Assistencial (RIRA) com a RNDS de forma oportuna e
-    confiável a quem precisa desta informação. </p>
+  <p>A Rede Nacional de Dados em Saúde (RNDS), instituída pela <a
+      href="https://www.in.gov.br/en/web/dou/-/portaria-n-1.434-de-28-de-maio-de-2020-259143327">Portaria GM/MS nº
+      1.434</a>, de 28 de maio de 2020, e posteriormente disciplinada pelo <a
+      href="https://www.in.gov.br/en/web/dou/-/decreto-n-12.560-de-23-de-julho-de-2025-643871577">Decreto nº 12.560, de
+      23 de julho de 2025</a>, é a plataforma nacional de
+    interoperabilidade do ecossistema de dados do Sistema Único de Saúde (SUS), alinhada à <a
+      href="https://bvsms.saude.gov.br/bvs/publicacoes/estrategia_saude_digital_Brasil.pdf">Estratégia
+      de Saúde Digital para o Brasil</a>, destinada à integração e ao compartilhamento seguro e padronizado de
+    informações em saúde.</p>
+  <p>A RNDS contribui para a continuidade do cuidado, a vigilância e a gestão em saúde, observando os requisitos de
+    segurança, privacidade e integridade dos dados. As informações compartilhadas podem ser disponibilizadas por meio
+    das Plataformas SUS Digital, incluindo o <a
+      href="https://www.gov.br/saude/pt-br/composicao/seidigi/meu-sus-digital">Meu SUS Digital</a>, observadas as regras
+    de acesso e de proteção de dados pessoais.</p>
+  <p>Nesse contexto, os serviços de integração (<i>web services</i>) permitem o envio dos registros à RNDS, conforme os
+    modelos informacionais e computacionais e as especificações técnicas estabelecidas nos Guias de Implementação.</p>
+
   <a name="interoperabilidade"> </a>
   <h3>Interoperabilidade</h3>
   <p> Para garantir a interoperabilidade entre as aplicações de Saúde Digital, em especial

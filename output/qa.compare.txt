@@ -1,7 +1,7 @@
 RIRARNDSIG : Validation Results
 =========================================
 
-err = 25, warn = 0, info = 0
+err = 25, warn = 0, info = 0, broken links = 0
 $--
 Generated $--. FHIR version $-- for br.gov.saude.rira.fhir#$-- (canonical = http://fhir.saude.gov.br/rira)
  Build Errors : 0 / 0 / 0

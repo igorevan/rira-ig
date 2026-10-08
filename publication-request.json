@@ -9,7 +9,7 @@
   "changes": "changes.html",
   "first": true,
   "title": "RIRA IG",
-  "ci-build": "https://igorevan.github.io/rira-ig/",
+  "ci-build": "https://github.com/igorevan/rira-ig",
   "registry-description": "Primeira versão do Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS",
   "registry-country": "BR",
   "registry-authority": "Ministério da Saúde do Brasil",

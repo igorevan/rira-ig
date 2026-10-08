@@ -8,11 +8,11 @@
 
 ### Contextualização
 
- A RNDS é uma plataforma nacional de integração de dados em saúde que faz parte do [Meu SUS Digital](https://www.gov.br/saude/pt-br/composicao/seidigi/meu-sus-digital), um programa do Governo Federal que tem como principal missão materializar a [Estratégia de Saúde Digital do Brasil](https://www.gov.br/saude/pt-br/composicao/seidigi/saude-digital). 
+A Rede Nacional de Dados em Saúde (RNDS), instituída pela [Portaria GM/MS nº 1.434](https://www.in.gov.br/en/web/dou/-/portaria-n-1.434-de-28-de-maio-de-2020-259143327), de 28 de maio de 2020, e posteriormente disciplinada pelo [Decreto nº 12.560, de 23 de julho de 2025](https://www.in.gov.br/en/web/dou/-/decreto-n-12.560-de-23-de-julho-de-2025-643871577), é a plataforma nacional de interoperabilidade do ecossistema de dados do Sistema Único de Saúde (SUS), alinhada à [Estratégia de Saúde Digital para o Brasil](https://bvsms.saude.gov.br/bvs/publicacoes/estrategia_saude_digital_Brasil.pdf), destinada à integração e ao compartilhamento seguro e padronizado de informações em saúde.
 
- A RNDS utiliza computação em nuvem e tecnologias emergentes para criar um repositório de documentos responsável por armazenar informações de saúde dos cidadãos, mantendo a privacidade, integridade e auditabilidade dos dados de maneira acessível e interoperável. Com isso, fornece aos profissionais de saúde acesso à história clínica do paciente, permitindo a transição e a continuidade do cuidado, além de possibilitar aos indivíduos acesso aos seus dados de saúde. 
+A RNDS contribui para a continuidade do cuidado, a vigilância e a gestão em saúde, observando os requisitos de segurança, privacidade e integridade dos dados. As informações compartilhadas podem ser disponibilizadas por meio das Plataformas SUS Digital, incluindo o [Meu SUS Digital](https://www.gov.br/saude/pt-br/composicao/seidigi/meu-sus-digital), observadas as regras de acesso e de proteção de dados pessoais.
 
- Dessa forma, os serviços (*web services*) permitirão que as entidades da área da saúde compartilhem as informações de Regulação Assistencial (RIRA) com a RNDS de forma oportuna e confiável a quem precisa desta informação. 
+Nesse contexto, os serviços de integração (*web services*) permitem o envio dos registros à RNDS, conforme os modelos informacionais e computacionais e as especificações técnicas estabelecidas nos Guias de Implementação.
 
 ### Interoperabilidade
 
