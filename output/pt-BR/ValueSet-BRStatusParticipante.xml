@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="BRStatusParticipante"/>
+  <language value="pt-BR"/>
+  <text>
+    <status value="extensions"/>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="ehr"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="normative">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+    <valueCode value="4.0.1"/>
+  </extension>
+  <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusParticipante"/>
+  <version value="1.0.0-release"/>
+  <name value="BRStatusParticipante"/>
+  <title value="Status do Participante do agendamento"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2023-04-13T13:17:18.5012669+00:00"/>
+  <publisher value="Ministério da Saúde do Brasil"/>
+  <contact>
+    <name value="Ministério da Saúde do Brasil"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.saude.gov.br"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="cgiis.datasus@saude.gov.br"/>
+    </telecom>
+  </contact>
+  <description value="Status do Participante do agendamento."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="BR"/>
+    </coding>
+  </jurisdiction>
+  <immutable value="false"/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/participationstatus"/>
+      <concept>
+        <code value="accepted"/>
+        <display value="Accepted"/>
+        <designation>
+          <language value="pt-BR"/>
+          <value value="Aceito"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="declined"/>
+        <display value="Declined"/>
+        <designation>
+          <language value="pt-BR"/>
+          <value value="Negado"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="tentative"/>
+        <display value="Tentative"/>
+        <designation>
+          <language value="pt-BR"/>
+          <value value="Tentativa"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="needs-action"/>
+        <display value="Needs Action"/>
+        <designation>
+          <language value="pt-BR"/>
+          <value value="Aguardando resposta"/>
+        </designation>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

@@ -223,6 +223,10 @@
       <value value="input/pagecontent" />
     </parameter>
     <parameter>
+      <code value="i18n-default-lang" />
+      <value value="pt-BR" />
+    </parameter>
+    <parameter>
       <code value="special-url-base" />
       <value value="http://www.saude.gov.br/fhir/r4" />
     </parameter>

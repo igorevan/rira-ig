@@ -1,0 +1,178 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.saude.gov.br/rira/ValueSet/BRIntencaoRegulacao> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "BRIntencaoRegulacao"] ;
+  fhir:Resource.language [ fhir:value "pt-BR"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ]
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg" ] ;
+     fhir:Extension.valueCode [ fhir:value "ehr" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm" ] ;
+     fhir:Extension.valueInteger [
+       fhir:value "1"^^xsd:integer ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom" ] ;
+         fhir:Extension.valueCanonical [
+           fhir:value "http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir" ;
+           fhir:link <http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir>
+         ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
+     fhir:Extension.valueCode [
+       fhir:value "normative" ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom" ] ;
+         fhir:Extension.valueCanonical [
+           fhir:value "http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir" ;
+           fhir:link <http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir>
+         ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
+     fhir:Extension.valueCode [ fhir:value "4.0.1" ]
+  ] ;
+  fhir:ValueSet.url [ fhir:value "http://www.saude.gov.br/fhir/r4/ValueSet/BRIntencaoRegulacao"] ;
+  fhir:ValueSet.version [ fhir:value "1.0.0-release"] ;
+  fhir:ValueSet.name [ fhir:value "BRIntencaoRegulacao"] ;
+  fhir:ValueSet.title [ fhir:value "Intenção de requisição de regulação assistencial"] ;
+  fhir:ValueSet.status [ fhir:value "active"] ;
+  fhir:ValueSet.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2023-04-13T13:17:18.5012669+00:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "Ministério da Saúde do Brasil"] ;
+  fhir:ValueSet.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "Ministério da Saúde do Brasil" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "http://www.saude.gov.br" ]
+     ], [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "email" ] ;
+       fhir:ContactPoint.value [ fhir:value "cgiis.datasus@saude.gov.br" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "Intenção de requisição de regulação assistencial."] ;
+  fhir:ValueSet.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "BR" ]
+     ]
+  ] ;
+  fhir:ValueSet.immutable [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index -1 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/request-intent" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "proposal" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Proposal" ] ;
+         fhir:ValueSet.compose.include.concept.designation [
+           fhir:index -1 ;
+           fhir:ValueSet.compose.include.concept.designation.language [ fhir:value "pt-BR" ] ;
+           fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "Proposto" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "plan" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Plan" ] ;
+         fhir:ValueSet.compose.include.concept.designation [
+           fhir:index -1 ;
+           fhir:ValueSet.compose.include.concept.designation.language [ fhir:value "pt-BR" ] ;
+           fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "Planejado" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "directive" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Directive" ] ;
+         fhir:ValueSet.compose.include.concept.designation [
+           fhir:index -1 ;
+           fhir:ValueSet.compose.include.concept.designation.language [ fhir:value "pt-BR" ] ;
+           fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "Diretriz" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "order" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Order" ] ;
+         fhir:ValueSet.compose.include.concept.designation [
+           fhir:index -1 ;
+           fhir:ValueSet.compose.include.concept.designation.language [ fhir:value "pt-BR" ] ;
+           fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "Autorizado" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "original-order" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Original Order" ] ;
+         fhir:ValueSet.compose.include.concept.designation [
+           fhir:index -1 ;
+           fhir:ValueSet.compose.include.concept.designation.language [ fhir:value "pt-BR" ] ;
+           fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "Autorização original" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "reflex-order" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Reflex Order" ] ;
+         fhir:ValueSet.compose.include.concept.designation [
+           fhir:index -1 ;
+           fhir:ValueSet.compose.include.concept.designation.language [ fhir:value "pt-BR" ] ;
+           fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "Autorização suplementar" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "filler-order" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Filler Order" ] ;
+         fhir:ValueSet.compose.include.concept.designation [
+           fhir:index -1 ;
+           fhir:ValueSet.compose.include.concept.designation.language [ fhir:value "pt-BR" ] ;
+           fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "Intenção de autorização" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "instance-order" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Instance Order" ] ;
+         fhir:ValueSet.compose.include.concept.designation [
+           fhir:index -1 ;
+           fhir:ValueSet.compose.include.concept.designation.language [ fhir:value "pt-BR" ] ;
+           fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "Autorização de atividade única" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "option" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Option" ] ;
+         fhir:ValueSet.compose.include.concept.designation [
+           fhir:index -1 ;
+           fhir:ValueSet.compose.include.concept.designation.language [ fhir:value "pt-BR" ] ;
+           fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "Condicional" ]
+         ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.saude.gov.br/rira/ValueSet/BRIntencaoRegulacao.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
