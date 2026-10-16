@@ -43,7 +43,7 @@
             "designation": [
               {
                 "language": "pt-BR",
-                "value": "Atualizado"
+                "value": "Documento atualizado e com versão válida"
               }
             ]
           },
@@ -53,7 +53,7 @@
             "designation": [
               {
                 "language": "pt-BR",
-                "value": "Em estado de erro"
+                "value": "Documento registrado com erro ou cuja versão foi invalidada após sua substituição"
               }
             ]
           }

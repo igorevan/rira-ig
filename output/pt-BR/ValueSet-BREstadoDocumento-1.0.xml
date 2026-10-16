@@ -77,7 +77,7 @@
         <display value="Amended"/>
         <designation>
           <language value="pt-BR"/>
-          <value value="Atualizado"/>
+          <value value="Documento atualizado e com versão válida"/>
         </designation>
       </concept>
       <concept>
@@ -85,7 +85,7 @@
         <display value="Entered in error"/>
         <designation>
           <language value="pt-BR"/>
-          <value value="Em estado de erro"/>
+          <value value="Documento registrado com erro ou cuja versão foi invalidada após sua substituição"/>
         </designation>
       </concept>
     </include>

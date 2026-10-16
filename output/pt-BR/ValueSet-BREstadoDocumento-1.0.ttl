@@ -109,7 +109,7 @@
          fhir:ValueSet.compose.include.concept.designation [
            fhir:index -1 ;
            fhir:ValueSet.compose.include.concept.designation.language [ fhir:value "pt-BR" ] ;
-           fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "Atualizado" ]
+           fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "Documento atualizado e com versão válida" ]
          ]
        ], [
          fhir:index -1 ;
@@ -118,7 +118,7 @@
          fhir:ValueSet.compose.include.concept.designation [
            fhir:index -1 ;
            fhir:ValueSet.compose.include.concept.designation.language [ fhir:value "pt-BR" ] ;
-           fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "Em estado de erro" ]
+           fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "Documento registrado com erro ou cuja versão foi invalidada após sua substituição" ]
          ]
        ]
      ]

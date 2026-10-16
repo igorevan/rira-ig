@@ -35,5 +35,5 @@ An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xh
 
 # Erros relacionados a versão do validador da RNDS
 %pode falhar ou devolver%
-%Erro na restrição%
 %restrição falhou%
+%Error in constraint%

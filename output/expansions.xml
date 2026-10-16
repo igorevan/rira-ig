@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="f3c82fc3-c97c-4071-bc52-892fc0bf736a"/>
+  <id value="4886fe2a-fc89-40d4-b445-e8719ea88ede"/>
   <meta>
-    <lastUpdated value="2026-10-14T16:21:57.446-03:00"/>
+    <lastUpdated value="2026-10-16T15:05:05.725-03:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -20058,8 +20058,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:ff2910a1-9514-477c-802a-0d8e1f69febb"/>
-          <timestamp value="2026-10-14T16:36:35-03:00"/>
+          <identifier value="urn:uuid:1954f9c3-f492-4e7b-89c8-d58197d96415"/>
+          <timestamp value="2026-10-16T15:06:46-03:00"/>
           <total value="14230"/>
           <offset value="0"/>
           <parameter>
@@ -45138,8 +45138,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:aa21387f-bfd3-4e62-93b9-a278954a2626"/>
-          <timestamp value="2026-10-14T16:36:35-03:00"/>
+          <identifier value="urn:uuid:70188551-0b9f-4bb6-89e8-31671d9f2691"/>
+          <timestamp value="2026-10-16T15:06:46-03:00"/>
           <total value="14230"/>
           <offset value="0"/>
           <parameter>
@@ -50263,8 +50263,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:0d36782f-530c-4b37-ae60-2c2415034652"/>
-          <timestamp value="2026-10-14T16:36:35-03:00"/>
+          <identifier value="urn:uuid:0e37a1fa-77b3-41af-9716-64e65cd40ea8"/>
+          <timestamp value="2026-10-16T15:06:46-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -50402,8 +50402,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:b7538f04-b62b-4be0-a744-28a461f996fc"/>
-          <timestamp value="2026-10-14T16:36:35-03:00"/>
+          <identifier value="urn:uuid:29acf72d-7881-456f-91db-5676d581625c"/>
+          <timestamp value="2026-10-16T15:06:46-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -50544,8 +50544,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:a447bc5a-afdb-4178-9a39-3209be4b161b"/>
-          <timestamp value="2026-10-14T16:36:35-03:00"/>
+          <identifier value="urn:uuid:53a773cc-490f-452a-aa7f-099f0f126a77"/>
+          <timestamp value="2026-10-16T15:06:46-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -50682,8 +50682,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:ebe10fd7-1c19-43de-b98b-4d47e6d64a3b"/>
-          <timestamp value="2026-10-14T16:36:35-03:00"/>
+          <identifier value="urn:uuid:4d03c410-b364-470e-83ae-7a9f0aee6b04"/>
+          <timestamp value="2026-10-16T15:06:46-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -50807,16 +50807,16 @@
                 <td style="white-space:nowrap">  
                   <a href="http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-amended">amended</a>
                 </td>
-                <td>Atualizado</td>
+                <td>Documento atualizado e com versão válida</td>
                 <td>The composition content or the referenced resources have been modified (edited or added to) subsequent to being released as &quot;final&quot; and the composition is complete and verified by an authorized person.</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://hl7.org/fhir/composition-status&quot;, &quot;version&quot;: &quot;4.0.1&quot;, &quot;code&quot;: &quot;amended&quot;, &quot;display&quot;: &quot;Atualizado&quot;}" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://hl7.org/fhir/composition-status&quot;, &quot;version&quot;: &quot;4.0.1&quot;, &quot;code&quot;: &quot;amended&quot;, &quot;display&quot;: &quot;Documento atualizado e com versão válida&quot;}" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/composition-status&quot;/&gt;&lt;version value=&quot;4.0.1&quot;/&gt;&lt;code value=&quot;amended&quot;/&gt;&lt;display value=&quot;Atualizado&quot;/&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/composition-status&quot;/&gt;&lt;version value=&quot;4.0.1&quot;/&gt;&lt;code value=&quot;amended&quot;/&gt;&lt;display value=&quot;Documento atualizado e com versão válida&quot;/&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -50828,16 +50828,16 @@
                 <td style="white-space:nowrap">  
                   <a href="http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-entered-in-error">entered-in-error</a>
                 </td>
-                <td>Em estado de erro</td>
+                <td>Documento registrado com erro ou cuja versão foi invalidada após sua substituição</td>
                 <td>The composition or document was originally created/issued in error, and this is an amendment that marks that the entire series should not be considered as valid.</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://hl7.org/fhir/composition-status&quot;, &quot;version&quot;: &quot;4.0.1&quot;, &quot;code&quot;: &quot;entered-in-error&quot;, &quot;display&quot;: &quot;Em estado de erro&quot;}" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://hl7.org/fhir/composition-status&quot;, &quot;version&quot;: &quot;4.0.1&quot;, &quot;code&quot;: &quot;entered-in-error&quot;, &quot;display&quot;: &quot;Documento registrado com erro ou cuja versão foi invalidada após sua substituição&quot;}" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/composition-status&quot;/&gt;&lt;version value=&quot;4.0.1&quot;/&gt;&lt;code value=&quot;entered-in-error&quot;/&gt;&lt;display value=&quot;Em estado de erro&quot;/&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/composition-status&quot;/&gt;&lt;version value=&quot;4.0.1&quot;/&gt;&lt;code value=&quot;entered-in-error&quot;/&gt;&lt;display value=&quot;Documento registrado com erro ou cuja versão foi invalidada após sua substituição&quot;/&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -50859,8 +50859,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:b4952a78-fe9d-49c1-ab70-7a9d3eff5ca4"/>
-          <timestamp value="2026-10-14T16:36:35-03:00"/>
+          <identifier value="urn:uuid:308e7df0-0bee-48fe-a225-078be2b0b243"/>
+          <timestamp value="2026-10-16T15:06:46-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -50900,12 +50900,12 @@
           <contains>
             <system value="http://hl7.org/fhir/composition-status"/>
             <code value="amended"/>
-            <display value="Atualizado"/>
+            <display value="Documento atualizado e com versão válida"/>
           </contains>
           <contains>
             <system value="http://hl7.org/fhir/composition-status"/>
             <code value="entered-in-error"/>
-            <display value="Em estado de erro"/>
+            <display value="Documento registrado com erro ou cuja versão foi invalidada após sua substituição"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -50998,16 +50998,16 @@
                 <td style="white-space:nowrap">  
                   <a href="http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-amended">amended</a>
                 </td>
-                <td>Atualizado</td>
+                <td>Documento atualizado e com versão válida</td>
                 <td>The composition content or the referenced resources have been modified (edited or added to) subsequent to being released as &quot;final&quot; and the composition is complete and verified by an authorized person.</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://hl7.org/fhir/composition-status&quot;, &quot;version&quot;: &quot;4.0.1&quot;, &quot;code&quot;: &quot;amended&quot;, &quot;display&quot;: &quot;Atualizado&quot;}" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://hl7.org/fhir/composition-status&quot;, &quot;version&quot;: &quot;4.0.1&quot;, &quot;code&quot;: &quot;amended&quot;, &quot;display&quot;: &quot;Documento atualizado e com versão válida&quot;}" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/composition-status&quot;/&gt;&lt;version value=&quot;4.0.1&quot;/&gt;&lt;code value=&quot;amended&quot;/&gt;&lt;display value=&quot;Atualizado&quot;/&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/composition-status&quot;/&gt;&lt;version value=&quot;4.0.1&quot;/&gt;&lt;code value=&quot;amended&quot;/&gt;&lt;display value=&quot;Documento atualizado e com versão válida&quot;/&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -51019,16 +51019,16 @@
                 <td style="white-space:nowrap">  
                   <a href="http://hl7.org/fhir/R4/codesystem-composition-status.html#composition-status-entered-in-error">entered-in-error</a>
                 </td>
-                <td>Em estado de erro</td>
+                <td>Documento registrado com erro ou cuja versão foi invalidada após sua substituição</td>
                 <td>The composition or document was originally created/issued in error, and this is an amendment that marks that the entire series should not be considered as valid.</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://hl7.org/fhir/composition-status&quot;, &quot;version&quot;: &quot;4.0.1&quot;, &quot;code&quot;: &quot;entered-in-error&quot;, &quot;display&quot;: &quot;Em estado de erro&quot;}" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://hl7.org/fhir/composition-status&quot;, &quot;version&quot;: &quot;4.0.1&quot;, &quot;code&quot;: &quot;entered-in-error&quot;, &quot;display&quot;: &quot;Documento registrado com erro ou cuja versão foi invalidada após sua substituição&quot;}" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/composition-status&quot;/&gt;&lt;version value=&quot;4.0.1&quot;/&gt;&lt;code value=&quot;entered-in-error&quot;/&gt;&lt;display value=&quot;Em estado de erro&quot;/&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/composition-status&quot;/&gt;&lt;version value=&quot;4.0.1&quot;/&gt;&lt;code value=&quot;entered-in-error&quot;/&gt;&lt;display value=&quot;Documento registrado com erro ou cuja versão foi invalidada após sua substituição&quot;/&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -51050,8 +51050,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:2caa2e44-2d1e-40d6-a152-1bda4f77581a"/>
-          <timestamp value="2026-10-14T16:36:35-03:00"/>
+          <identifier value="urn:uuid:c473115a-74d5-4e0e-833c-e8f522828e7d"/>
+          <timestamp value="2026-10-16T15:06:46-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -51091,12 +51091,12 @@
           <contains>
             <system value="http://hl7.org/fhir/composition-status"/>
             <code value="amended"/>
-            <display value="Atualizado"/>
+            <display value="Documento atualizado e com versão válida"/>
           </contains>
           <contains>
             <system value="http://hl7.org/fhir/composition-status"/>
             <code value="entered-in-error"/>
-            <display value="Em estado de erro"/>
+            <display value="Documento registrado com erro ou cuja versão foi invalidada após sua substituição"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -51286,8 +51286,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:2e023bda-c13c-4d5f-9f3b-88f38cb3c054"/>
-          <timestamp value="2026-10-14T16:36:35-03:00"/>
+          <identifier value="urn:uuid:998b7ab5-4641-44a3-a14f-7f02780fa80e"/>
+          <timestamp value="2026-10-16T15:06:46-03:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -51528,8 +51528,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:50bc25d0-8da1-4429-b862-b8ceee4f9823"/>
-          <timestamp value="2026-10-14T16:36:35-03:00"/>
+          <identifier value="urn:uuid:c3c8a82c-c210-4f7b-bfe8-566b7c9c09b6"/>
+          <timestamp value="2026-10-16T15:06:46-03:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -51877,8 +51877,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:755a4772-a058-46d3-8fc4-275b9dd9a88a"/>
-          <timestamp value="2026-10-14T16:36:35-03:00"/>
+          <identifier value="urn:uuid:73912577-b12e-41e5-aa26-966db96630b2"/>
+          <timestamp value="2026-10-16T15:06:46-03:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>
@@ -52245,8 +52245,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:11266cc6-a9f1-4934-9e95-54b29ed74096"/>
-          <timestamp value="2026-10-14T16:36:35-03:00"/>
+          <identifier value="urn:uuid:788ec097-5e2f-4d69-a8cc-2105f8506342"/>
+          <timestamp value="2026-10-16T15:06:46-03:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>
@@ -52497,8 +52497,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:1561410a-0c7d-406f-8d69-6dea2aeff1f9"/>
-          <timestamp value="2026-10-14T16:36:35-03:00"/>
+          <identifier value="urn:uuid:3144bb86-ea8f-4f4e-a161-94c92ae93a5c"/>
+          <timestamp value="2026-10-16T15:06:46-03:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -52730,8 +52730,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:fb80f431-2cfd-4945-b6ff-dd7596ff2429"/>
-          <timestamp value="2026-10-14T16:36:35-03:00"/>
+          <identifier value="urn:uuid:bd6d89c0-f115-4672-96f3-b9a36419da01"/>
+          <timestamp value="2026-10-16T15:06:46-03:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -52880,8 +52880,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:e0e801c4-9708-43c3-a228-64e197457e80"/>
-          <timestamp value="2026-10-14T16:36:35-03:00"/>
+          <identifier value="urn:uuid:1e67cbf7-1f56-4bd4-a6ec-00a4e8c77be1"/>
+          <timestamp value="2026-10-16T15:06:46-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -53010,8 +53010,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:7cd43801-e196-43e0-a490-0168885ea2e0"/>
-          <timestamp value="2026-10-14T16:36:35-03:00"/>
+          <identifier value="urn:uuid:f1635bc6-5d03-47d0-b71c-c28b261f6101"/>
+          <timestamp value="2026-10-16T15:06:46-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -73103,8 +73103,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:245f7cf2-90f4-42c6-b1cd-f94eb21b51d1"/>
-          <timestamp value="2026-10-14T16:36:35-03:00"/>
+          <identifier value="urn:uuid:567405a3-af96-4dd3-92b1-2b3e08207f8d"/>
+          <timestamp value="2026-10-16T15:06:46-03:00"/>
           <total value="2714"/>
           <offset value="0"/>
           <parameter>
@@ -98186,8 +98186,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:62e1cc11-ff74-4667-93e5-d7845ac010ed"/>
-          <timestamp value="2026-10-14T16:36:35-03:00"/>
+          <identifier value="urn:uuid:36520574-3f04-4a29-a346-33f0e43917c2"/>
+          <timestamp value="2026-10-16T15:06:46-03:00"/>
           <total value="2714"/>
           <offset value="0"/>
           <parameter>
@@ -123280,8 +123280,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:d6df1470-f442-4e18-bb62-44f89420636a"/>
-          <timestamp value="2026-10-14T16:36:35-03:00"/>
+          <identifier value="urn:uuid:455c9c2c-2085-45db-a7dd-7b56d1ee0103"/>
+          <timestamp value="2026-10-16T15:06:46-03:00"/>
           <total value="14916"/>
           <offset value="0"/>
           <parameter>
@@ -148378,8 +148378,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:4f1009c0-b744-4eba-99c7-2460d2fb1ea6"/>
-          <timestamp value="2026-10-14T16:36:36-03:00"/>
+          <identifier value="urn:uuid:859eb380-7bf4-4d5d-bfe6-125edc27df25"/>
+          <timestamp value="2026-10-16T15:06:47-03:00"/>
           <total value="14916"/>
           <offset value="0"/>
           <parameter>
@@ -174479,8 +174479,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:fde38dce-6d7b-436e-be29-ad48220fb870"/>
-          <timestamp value="2026-10-14T16:36:36-03:00"/>
+          <identifier value="urn:uuid:985ffed7-845c-4590-b5ad-0f0c970b03aa"/>
+          <timestamp value="2026-10-16T15:06:47-03:00"/>
           <total value="55698"/>
           <offset value="0"/>
           <parameter>
@@ -200580,8 +200580,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:9a2aa029-fd2f-49e7-954c-d07c2ffbc9e6"/>
-          <timestamp value="2026-10-14T16:36:36-03:00"/>
+          <identifier value="urn:uuid:4395d1e0-e174-4ac7-87d6-ec3423735a34"/>
+          <timestamp value="2026-10-16T15:06:47-03:00"/>
           <total value="55698"/>
           <offset value="0"/>
           <parameter>
@@ -205730,8 +205730,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:da8cb9f6-d53d-486a-b021-1b29077f3ba8"/>
-          <timestamp value="2026-10-14T16:36:36-03:00"/>
+          <identifier value="urn:uuid:6acf35b7-41cf-4f96-93c2-0fe6cf31c0aa"/>
+          <timestamp value="2026-10-16T15:06:47-03:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -205891,8 +205891,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:bee765cd-bcfd-47d8-bf7f-eb6afb7035c4"/>
-          <timestamp value="2026-10-14T16:36:36-03:00"/>
+          <identifier value="urn:uuid:2980e4b5-1784-4e81-bff4-0cefe8cc646b"/>
+          <timestamp value="2026-10-16T15:06:47-03:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -206303,8 +206303,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:b04ab9b4-b76a-4202-b5d3-992542f49e66"/>
-          <timestamp value="2026-10-14T16:36:36-03:00"/>
+          <identifier value="urn:uuid:9a5d4394-23de-4a9d-b445-a5454971fbe3"/>
+          <timestamp value="2026-10-16T15:06:47-03:00"/>
           <total value="12"/>
           <offset value="0"/>
           <parameter>
@@ -206768,8 +206768,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:9a705e69-cc9c-411b-bdd4-62612487698d"/>
-          <timestamp value="2026-10-14T16:36:36-03:00"/>
+          <identifier value="urn:uuid:111f0ccb-8eb1-4134-bfa1-c63cee2a0ef8"/>
+          <timestamp value="2026-10-16T15:06:47-03:00"/>
           <total value="12"/>
           <offset value="0"/>
           <parameter>
@@ -207003,8 +207003,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:861136c2-7fd1-44aa-99a2-fcc65bc17039"/>
-          <timestamp value="2026-10-14T16:36:36-03:00"/>
+          <identifier value="urn:uuid:e06149ca-04c2-4cb2-9d0b-1417a6c6667d"/>
+          <timestamp value="2026-10-16T15:06:47-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -207194,8 +207194,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:8ab6ea7c-d00c-4dc0-ba0d-9e54d27aa76a"/>
-          <timestamp value="2026-10-14T16:36:36-03:00"/>
+          <identifier value="urn:uuid:c7a5b79a-e9f2-42ab-a863-d6a290a21758"/>
+          <timestamp value="2026-10-16T15:06:47-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -207438,8 +207438,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:b9627858-d93e-4709-9679-c6314efdbc53"/>
-          <timestamp value="2026-10-14T16:36:36-03:00"/>
+          <identifier value="urn:uuid:efe68ff7-ab68-48c6-95a4-d4ffb9a20592"/>
+          <timestamp value="2026-10-16T15:06:47-03:00"/>
           <total value="7"/>
           <offset value="0"/>
           <parameter>
@@ -207693,8 +207693,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:1329f2ed-f843-4f21-b25f-c87dba380fe4"/>
-          <timestamp value="2026-10-14T16:36:36-03:00"/>
+          <identifier value="urn:uuid:71bba10b-5f9d-4069-8e04-9eb96898e1ef"/>
+          <timestamp value="2026-10-16T15:06:47-03:00"/>
           <total value="7"/>
           <offset value="0"/>
           <parameter>
@@ -207958,8 +207958,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:cea4d8ee-1961-4036-b8fb-f3cb9ff23579"/>
-          <timestamp value="2026-10-14T16:36:36-03:00"/>
+          <identifier value="urn:uuid:a66490f1-813b-4352-8523-6c5d253c17eb"/>
+          <timestamp value="2026-10-16T15:06:47-03:00"/>
           <total value="7"/>
           <offset value="0"/>
           <parameter>
@@ -208227,8 +208227,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:22d6c0be-e5c3-46fa-b960-e2f01ceee559"/>
-          <timestamp value="2026-10-14T16:36:36-03:00"/>
+          <identifier value="urn:uuid:77397ada-073e-4a69-a745-c027108129f0"/>
+          <timestamp value="2026-10-16T15:06:47-03:00"/>
           <total value="7"/>
           <offset value="0"/>
           <parameter>
@@ -208580,8 +208580,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:4edf791e-6def-4ad7-acde-1c62b05365c7"/>
-          <timestamp value="2026-10-14T16:36:36-03:00"/>
+          <identifier value="urn:uuid:af46ea66-912d-4729-bb81-bf677e820621"/>
+          <timestamp value="2026-10-16T15:06:47-03:00"/>
           <total value="11"/>
           <offset value="0"/>
           <parameter>
@@ -208949,8 +208949,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:7db0300e-e0dc-4f86-851e-da542a607e43"/>
-          <timestamp value="2026-10-14T16:36:36-03:00"/>
+          <identifier value="urn:uuid:b5d3e941-be45-4461-bbfb-5a6bb5b62a9b"/>
+          <timestamp value="2026-10-16T15:06:47-03:00"/>
           <total value="11"/>
           <offset value="0"/>
           <parameter>
@@ -209164,8 +209164,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:6d324314-edb6-4b54-ba03-90dc988dcc75"/>
-          <timestamp value="2026-10-14T16:36:36-03:00"/>
+          <identifier value="urn:uuid:998de734-6aa1-45a0-8f5b-cd6e742bfe09"/>
+          <timestamp value="2026-10-16T15:06:47-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -209344,8 +209344,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:7d8483b2-fd93-48f0-8552-f8449d240880"/>
-          <timestamp value="2026-10-14T16:36:36-03:00"/>
+          <identifier value="urn:uuid:3da90a16-6888-466a-89a9-4edd94239e37"/>
+          <timestamp value="2026-10-16T15:06:47-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>

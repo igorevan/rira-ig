@@ -6,8 +6,8 @@
   "status" : "active",
   "package-id" : "br.gov.saude.rira.fhir",
   "ig-ver" : "1.0.0-release",
-  "date" : "Wed, 14 Oct, 2026 16:21:57 -0300",
-  "dateISO8601" : "2026-10-14T16:21:57-03:00",
+  "date" : "Fri, 16 Oct, 2026 15:05:05 -0300",
+  "dateISO8601" : "2026-10-16T15:05:05-03:00",
   "errs" : 25,
   "warnings" : 0,
   "hints" : 0,
@@ -16,5 +16,5 @@
   "suppressed-warnings" : 148,
   "version" : "4.0.1",
   "tool" : "6.0.0-snapshot1 (3)",
-  "maxMemory" : 5217250128
+  "maxMemory" : 5044233256
 }
