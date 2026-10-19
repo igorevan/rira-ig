@@ -400,7 +400,12 @@
         <td>2</td>
         <td>1..1</td>
         <td>Modalidade assistencial</td>
-        <td>Texto codificado:<br />- Ambulatorial<br />- Hospitalar</td>
+        <td>Texto codificado:
+          <ul>
+            <li>Ambulatorial</li>
+            <li>Hospitalar</li>
+          </ul>
+        </td>
         <td>Modalidade assistencial que gerou a solicitação do procedimento.</td>
         <td>O código que identifica unicamente a modalidade, conforme tabela de modalidades.</td>
         <td><a href="ValueSet-BRModalidadeAssistencialMIRA.html">Modalidade Assistencial (RIRA)</a></td>
@@ -415,7 +420,12 @@
         <td>2</td>
         <td>1..1</td>
         <td>Caráter da solicitação</td>
-        <td>Texto codificado:<br />- Eletivo<br />- Urgência</td>
+        <td>Texto codificado:
+          <ul>
+            <li>Eletivo</li>
+            <li>Urgência</li>
+          </ul>
+        </td>
         <td>Caráter da solicitação do procedimento.</td>
         <td>O código que identifica unicamente o grau de prioridade da solicitação no modelo de informação assistencial,
           conforme tabela de caráter da solicitação.</td>

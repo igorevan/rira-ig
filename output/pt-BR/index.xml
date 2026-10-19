@@ -44,12 +44,7 @@
   <h3>Fluxo para Integração com a RNDS</h3>
   <p>Abaixo você encontra um material com o fluxo oficial para integração com a RNDS.</p>
 
-  <iframe
-    src="https://mobileapps-prd.saude.gov.br/portal-servicos/files/f3bd659c8c8ae3ee966e575fde27eb58/0e3affbe4f1b86b50ae78ab652b2ebaa_pgst0fpqe.pdf"
-    width="100%" height="600px"> Seu navegador não suporta visualização de PDF. <a
-      href="https://mobileapps-prd.saude.gov.br/portal-servicos/files/f3bd659c8c8ae3ee966e575fde27eb58/0e3affbe4f1b86b50ae78ab652b2ebaa_pgst0fpqe.pdf">Clique
-      aqui para abrir</a>. </iframe>
-
+  <img src="fluxoIntegracao.png" alt="Fluxo para integração com a RNDS" style="max-width: 100%; height: auto;" />
 
   <a name="walkthrough"> </a>
   <h3>Roteiro</h3>
