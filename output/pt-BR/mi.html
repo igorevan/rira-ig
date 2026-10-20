@@ -297,39 +297,37 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </p>
   <ul>
     <li>
-      <b>Coluna 1</b> - Nível: apresenta o nível do elemento no modelo de informação;
+      <b>Nível</b>: indica a relação de dependência do elemento aos demais. Um número maior
+      significa que aquele item depende ou está subordinado ao de número menor e anterior
+      a ele no modelo. Assim, um elemento de nível 2 é subitem de um elemento de nível 1,
+      um de nível 3 é subitem de um de nível 2 e assim sucessivamente;
     </li>
     <li>
-      <p><b>Coluna 2</b> - Ocorrência: descreve o número de vezes (cardinalidade) que o elemento
-        deve/pode aparecer:</p>
-
+      <b>Seção/Item</b>: nome do bloco (seção) ou da informação a ser enviada;
+    </li>
+    <li>
+      <b>Tipo de dados</b>: descreve o tipo de dado a ser preenchido, ou seja, a forma de representar o elemento;
+    </li>
+    <li>
+      <p><b>Ocorrência</b>: descreve o número mínimo e máximo de vezes que o elemento deve/pode
+        ocorrer, ou seja, demonstra a obrigatoriedade e a quantidade de ocorrências
+        do elemento:</p>
       <pre><code>
           [0..1] - O elemento é opcional e, se ocorrer, aparece uma vez
           [1..1] - O elemento é obrigatório e deve estar presente uma única vez
           [0..N] - O elemento é opcional e pode ocorrer várias vezes
           [1..N] - O elemento é obrigatório e pode ocorrer várias vezes</code>
         </pre>
-
     </li>
     <li>
-      <b>Coluna 3</b> - Seção/Item: nome do bloco ou da informação a ser enviada;
+      <b>Conceito/Observações</b>: conceitua ou esclarece a forma de utilizar o elemento;
     </li>
     <li>
-      <b>Coluna 4</b> - Tipo de dado: descreve o tipo de dado a ser preenchido;
+      <b>Mapeamento Computacional - FHIR</b>: relaciona o atributo do Modelo Informacional com o
+      campo do Modelo Computacional em FHIR.
     </li>
     <li>
-      <b>Coluna 5</b> - Conceito: apresenta as definições do elemento;
-    </li>
-    <li>
-      <b>Coluna 6</b> - Definição de uso do elemento: Observações e regras de negócio relacionadas
-      ao elemento;
-    </li>
-    <li>
-      <b>Coluna 7</b> - Conteúdo: apresenta, quando necessário, o grupo de códigos (<i>ValueSet</i>)
-      a ser utilizado para preenchimento do elemento;
-    </li>
-    <li>
-      <b>Coluna 8</b> - Recurso FHIR: relaciona o atributo do Modelo Informacional com o perfil do
+      <b>Perfil FHIR</b>: relaciona o atributo do Modelo Informacional com o perfil do
       Modelo Computacional em FHIR.
     </li>
   </ul>
@@ -341,345 +339,315 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     Segue abaixo o modelo de informação para o RIRA:
   </p>
 
-  <a name="regulacao">  </a>
-  <h4>Caracterização da Regulação</h4>
-
-
   <table class="grid">
     <thead>
-      <tr style="background-color: #538ce9">
-        <th>Nível</th>
-        <th>Ocorrência</th>
+      <tr style="background-color: #538ce9;">
+        <th>Nível
+        </th>
         <th>Seção/Item</th>
-        <th>Tipo de Dado</th>
-        <th>Conceito</th>
-        <th>Definição de uso do elemento</th>
-        <th>Conteúdo (ValueSet/CodeSystem)</th>
-        <th>Recurso FHIR</th>
-      </tr>
-    </thead>
-    <thead>
-      <tr style="background-color: #4dbf4d">
-        <td>1</td>
-        <td>1..1</td>
-        <td>Caracterização da regulação</td>
-        <td>Seção</td>
-        <td/>
-        <td/>
-        <td/>
-        <td/>
+        <th>Tipo de Dados</th>
+        <th>Ocorrência</th>
+        <th>Conceito/Observações</th>
+        <th>Mapeamento Computacional - FHIR</th>
+        <th>Perfil FHIR</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>2</td>
-        <td>1..1</td>
-        <td>Identificador do registro</td>
-        <td>Identificador</td>
-        <td>Identificador do registro no sistema de origem.<br/>
-          <p style="color: red;"><b>Regra Negocial 01</b>: Deverá ser utilizado o identificador
-            do registro no sistema de origem para registro da solicitação. Neste campo deverá constar o identificador
-            único do registro no sistema de origem.</p>
-          <p style="color: red;">
-            <b>Regra Negocial 02</b>: Para as operações de consulta, alteração e
-            exclusão, deverá ser considerado como identificador único do evento de regulação, o identificador do
-            documento
-            na Rede Nacional de Dados em Saúde (RNDS).
-          </p>
-        </td>
-        <td>O identificador único do registro de regulação no sistema de origem</td>
-        <td/>
-        <td><i>Bundle</i> de envio</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>1..1</td>
-        <td>Status da solicitação</td>
-        <td>Texto codificado:
-          <ul>
-            <li>Pendente</li>
-            <li>Agendado</li>
-            <li>Atendido/Internado</li>
-            <li>Falta</li>
-            <li>Negado/Cancelado</li>
-            <li>Excluído</li>
-            <li>Devolvido para o solicitante</li>
-          </ul>
-        </td>
-        <td>Status da solicitação do procedimento.</td>
-        <td>O código que identifica unicamente o status da solicitação, conforme tabela de status de solicitação.</td>
-        <td><a href="ValueSet-BRStatusRegulacaoAssistencial.html">Status de Regulação Assistencial</a></td>
-        <td><a href="StructureDefinition-BRRegulacaoAssistencial.html">Regulação Assistencial</a> <i>(Composition)</i>
-        </td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>0..1</td>
-        <td>Data de alteração de status</td>
-        <td>Data</td>
-        <td>Data e hora da alteração de status da solicitação do procedimento no padrão ISO8601.</td>
-        <td>A data e hora de alteração de status da solicitação de procedimento regulado.</td>
-        <td/>
-        <td><a href="StructureDefinition-BRRegulacaoAssistencial.html">Regulação Assistencial</a> <i>(Composition)</i>
-        </td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>1..1</td>
-        <td>Código do procedimento</td>
-        <td>Texto codificado</td>
-        <td>Identificador único do procedimento. Texto codificado: SIGTAP.</td>
-        <td>O código que identifica unicamente o procedimento conforme tabela SUS.</td>
-        <td><a href="ValueSet-BRProcedimentosNacionais-1.0.html">Procedimento Realizado</a></td>
-        <td><a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">Requisição de Regulação
-            Assistencial</a> <i>(ServiceRequest)</i>
-          <br/> <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">Agendamento de Regulação
-            Assistencial</a> <i>(Appointment)</i>
-        </td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>1..1</td>
-        <td>Data da solicitação</td>
-        <td>Data</td>
-        <td>Data e hora da solicitação do procedimento no padrão ISO8601.</td>
-        <td>A data e hora de criação da solicitação inicial do procedimento regulado.</td>
-        <td/>
-        <td><a href="StructureDefinition-BRRegulacaoAssistencial.html">Regulação Assistencial</a> <i>(Composition)</i>
-          <br/> <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">Requisição de Regulação
-            Assistencial</a> <i>(ServiceRequest)</i>
-        </td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>0..1</td>
-        <td>Data de autorização</td>
-        <td>Data</td>
-        <td>Data e hora da autorização do procedimento no padrão ISO8601.</td>
-        <td>A data e hora em que a solicitação de procedimento regulado foi autorizada.</td>
-        <td/>
-        <td><a href="StructureDefinition-BRRegulacaoAssistencial.html">Regulação Assistencial</a> <i>(Composition)</i>
-          <br/> <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">Agendamento de Regulação
-            Assistencial</a> <i>(Appointment)</i>
-        </td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>0..1</td>
-        <td>Data de agendamento</td>
-        <td>Data</td>
-        <td>Data e hora da autorização do procedimento no padrão ISO8601.</td>
-        <td>A data e hora do agendamento da solicitação de procedimento regulado.</td>
-        <td/>
-        <td><a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">Agendamento de Regulação
-            Assistencial</a> <i>(Appointment)</i></td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>0..1</td>
-        <td>Data da execução</td>
-        <td>Data</td>
-        <td>Data e hora da execução do procedimento no padrão ISO8601.</td>
-        <td>A data e hora em que o procedimento regulado foi executado.</td>
-        <td/>
-        <td><a href="StructureDefinition-BRRegulacaoAssistencial.html">Regulação Assistencial</a> <i>(Composition)</i>
-          <br/> <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">Requisição de Regulação
-            Assistencial</a> <i>(ServiceRequest)</i>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
-  <a name="participantes">  </a>
-  <h4>Caracterização dos Participantes</h4>
-
-  <table class="grid">
-    <thead>
-      <tr style="background-color: #538ce9">
-        <th>Nível</th>
-        <th>Ocorrência</th>
-        <th>Seção/Item</th>
-        <th>Tipo de Dado</th>
-        <th>Conceito</th>
-        <th>Definição de uso do elemento</th>
-        <th>Conteúdo (ValueSet/CodeSystem)</th>
-        <th>Recurso FHIR</th>
-      </tr>
-    </thead>
-    <thead>
       <tr style="background-color: #4dbf4d">
         <td>1</td>
+        <td>Caracterização da
+          Regulação</td>
+        <td>SECTION</td>
         <td>1..1</td>
-        <td>Caracterização dos participantes</td>
-        <td>Seção</td>
-        <td/>
-        <td/>
-        <td/>
-        <td/>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>2</td>
-        <td>1..1</td>
-        <td>Identificador de paciente</td>
-        <td>Identificador</td>
-        <td>Identificação única do participante, por meio de CPF ou CNS.</td>
-        <td>O identificador nacional do participante que poderá ser CPF ou CNS</td>
-        <td/>
-        <td><a href="StructureDefinition-BRRegulacaoAssistencial.html">Regulação Assistencial</a> <i>(Composition)</i>
-          <br/> <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">Requisição de Regulação
-            Assistencial</a> <i>(ServiceRequest)</i>
-          <br/> <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">Agendamento de Regulação
-            Assistencial</a> <i>(Appointment)</i>
-        </td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>1..1</td>
-        <td>Identificador do estabelecimento de saúde solicitante</td>
-        <td>Identificador</td>
-        <td>Identificação única do estabelecimento solicitante, por meio do CNES.</td>
-        <td>O identificador nacional do estabelecimento no Cadastro Nacional de Estabelecimento de Saúde</td>
-        <td/>
-        <td><a href="StructureDefinition-BRRegulacaoAssistencial.html">Regulação Assistencial</a> <i>(Composition)</i>
-          <br/> <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">Requisição de Regulação
-            Assistencial</a> <i>(ServiceRequest)</i>
-        </td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>0..1</td>
-        <td>Identificador do estabelecimento de saúde regulador</td>
-        <td>Identificador</td>
-        <td>Identificação única do estabelecimento regulador , por meio do CNES.</td>
-        <td>O identificador nacional do estabelecimento no Cadastro Nacional de Estabelecimento de Saúde</td>
-        <td/>
-        <td><a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">Agendamento de Regulação
-            Assistencial</a> <i>(Appointment)</i></td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>0..1</td>
-        <td>Identificador do estabelecimento de saúde executante</td>
-        <td>Identificador</td>
-        <td>Identificação única do estabelecimento executante, por meio do CNES.</td>
-        <td>O identificador nacional do estabelecimento no Cadastro Nacional de Estabelecimento de Saúde</td>
-        <td/>
-        <td><a href="StructureDefinition-BRRegulacaoAssistencial.html">Regulação Assistencial</a> <i>(Composition)</i>
-          <br/> <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">Requisição de Regulação
-            Assistencial</a> <i>(ServiceRequest)</i>
-        </td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>0..1</td>
-        <td>Especialidade médica do executante</td>
-        <td>Texto codificado</td>
-        <td>Identificação da especialidade médica do profissional executante do procedimento. Texto codificado: CBO.
-          <br/>
-          <p style="color: red;"><b>Regra Negocial 03</b>: Caso o procedimento informado pertença aos grupos 03 ou 04 da
-            tabela SUS, o código CBO será obrigatório.</p>
-        </td>
-        <td>O código que identifica unicamente a especialidade do executante conforme tabela de CBO. O código CBO da
-          especialidade está diretamente vinculado ao procedimento solicitado. Assim, para determinados procedimentos
-          esse ponto será obrigatório.</td>
-        <td><a href="ValueSet-BROcupacao-1.0.html">Classificação Brasileira de Ocupações (CBO)</a></td>
-        <td><a href="StructureDefinition-BRRegulacaoAssistencial.html">Regulação Assistencial</a> <i>(Composition)</i>
-          <br/> <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">Requisição de Regulação
-            Assistencial</a> <i>(ServiceRequest)</i>
-          <br/> <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">Agendamento de Regulação
-            Assistencial</a> <i>(Appointment)</i>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
-  <a name="solicitacao">  </a>
-  <h4>Caracterização da Solicitação</h4>
-
-  <table class="grid">
-    <thead>
-      <tr style="background-color: #538ce9">
-        <th>Nível</th>
-        <th>Ocorrência</th>
-        <th>Seção/Item</th>
-        <th>Tipo de Dado</th>
-        <th>Conceito</th>
-        <th>Definição de uso do elemento</th>
-        <th>Conteúdo (ValueSet/CodeSystem)</th>
-        <th>Recurso FHIR</th>
-      </tr>
-    </thead>
-    <thead>
-      <tr style="background-color: #4dbf4d">
-        <td>1</td>
-        <td>1..1</td>
-        <td>Caracterização da solicitação</td>
-        <td>Seção</td>
-        <td/>
-        <td/>
-        <td/>
-        <td/>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>2</td>
-        <td>1..1</td>
-        <td>Modalidade assistencial</td>
-        <td>Texto codificado:
-          <ul>
-            <li>Ambulatorial</li>
-            <li>Hospitalar</li>
-          </ul>
-        </td>
-        <td>Modalidade assistencial que gerou a solicitação do procedimento.</td>
-        <td>O código que identifica unicamente a modalidade, conforme tabela de modalidades.</td>
-        <td><a href="ValueSet-BRModalidadeAssistencialMIRA.html">Modalidade Assistencial (RIRA)</a></td>
-        <td><a href="StructureDefinition-BRRegulacaoAssistencial.html">Regulação Assistencial</a> <i>(Composition)</i>
-          <br/> <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">Requisição de Regulação
-            Assistencial</a> <i>(ServiceRequest)</i>
-          <br/> <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">Agendamento de Regulação
-            Assistencial</a> <i>(Appointment)</i>
-        </td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>1..1</td>
-        <td>Caráter da solicitação</td>
-        <td>Texto codificado:
-          <ul>
-            <li>Eletivo</li>
-            <li>Urgência</li>
-          </ul>
-        </td>
-        <td>Caráter da solicitação do procedimento.</td>
-        <td>O código que identifica unicamente o grau de prioridade da solicitação no modelo de informação assistencial,
-          conforme tabela de caráter da solicitação.</td>
-        <td><a href="ValueSet-BRCaraterAtendimentoMIRA.html">Caráter de Atendimento no MIRA</a></td>
-        <td><a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">Requisição de Regulação
-            Assistencial</a> <i>(ServiceRequest)</i>
-          <br/> <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">Agendamento de Regulação
-            Assistencial</a> <i>(Appointment)</i>
-        </td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>1..1</td>
-        <td>Motivo da solicitação</td>
-        <td>Texto codificado</td>
-        <td>Identificação do motivo da solicitação do procedimento. Texto codificado por terminologia externa CID-10 ou
-          CIAP-2.
-        </td>
-        <td>O código que identifica unicamente a condição clínica conforme tabela de Classificação Internacional de
-          Doenças na versão 10 (CID10) ou da Classificação Internacional de Atenção Primária (CIAP-2).</td>
+        <td>Bloco de
+          informações de identificação do registro enviado à RNDS.</td>
         <td>
-          <a href="CodeSystem-BRCID10.html">Classificação Internacional de Doenças (CID-10)</a><br/>
-          <a href="CodeSystem-BRCIAP2.html">Classificação Internacional de Atenção Primária (CIAP-2)</a>
+          N/A</td>
+        <td>
+          N/A</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Identificador do
+          Registro no Sistema de Origem</td>
+        <td>II</td>
+        <td>1..1</td>
+        <td>Id no sistema de
+          origem.</td>
+        <td>
+          <code>Bundle.identifier.value</code>
         </td>
         <td>
-          <a href="StructureDefinition-BRProblemaDiagnostico.html">Problema/Diagnóstico</a> <i>(Condition)</i>
+          <code>Bundle</code>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Status da
+          Solicitação</td>
+        <td>CD</td>
+        <td>1..1</td>
+        <td>Status da
+          solicitação do procedimento.</td>
+        <td>
+          <code>Composition.event.code.coding.code</code>
+        </td>
+        <td>
+          <a href="StructureDefinition-BRRegulacaoAssistencial.html">BRRegulacaoAssistencial</a>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Código do
+          Procedimento</td>
+        <td>CD</td>
+        <td>1..1</td>
+        <td>Identificador
+          único do procedimento. Texto codificado:
+          <ul>
+            <li>SIGTAP</li>
+          </ul>
+        </td>
+        <td>
+          <code>ServiceRequest.code.coding.code</code><br/><code>Appointment.serviceType.coding.code</code>
+        </td>
+        <td>
+          <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">BRRequisicaoRegulacaoAssistencial</a><br/><a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">BRAgendamentoRegulacaoAssistencial</a>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Data da
+          Solicitação</td>
+        <td>TS</td>
+        <td>1..1</td>
+        <td>Data e hora da
+          solicitação do procedimento, no padrão ISO8601.</td>
+        <td>
+          <code>ServiceRequest.authoredOn</code>
+        </td>
+        <td>
+          <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">BRRequisicaoRegulacaoAssistencial</a>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Data de
+          Autorização</td>
+        <td>TS</td>
+        <td>0..1</td>
+        <td>Data e hora da
+          autorização do procedimento, no padrão ISO8601.</td>
+        <td>
+          <code>Appointment.created</code>
+        </td>
+        <td>
+          <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">BRAgendamentoRegulacaoAssistencial</a>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Data de
+          Agendamento</td>
+        <td>TS</td>
+        <td>0..1</td>
+        <td>Data e hora da
+          solicitação do procedimento, no padrão ISO8601.</td>
+        <td>
+          <code>ServiceRequest.occurrenceDateTime</code>
+        </td>
+        <td>
+          <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">BRRequisicaoRegulacaoAssistencial</a>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Data da Execução
+        </td>
+        <td>TS</td>
+        <td>0..1</td>
+        <td>Data e hora
+          agendada para a realização do procedimento, no padrão ISO8601.</td>
+        <td>
+          <code>Appointment.start</code><br/><code>Appointment.end</code>
+        </td>
+        <td>
+          <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">BRAgendamentoRegulacaoAssistencial</a>
+        </td>
+      </tr>
+      <tr style="background-color: #4dbf4d">
+        <td>1</td>
+        <td>Caracterização
+          dos Participantes</td>
+        <td>SECTION</td>
+        <td>1..1</td>
+        <td>Bloco de
+          informações referentes ao indivíduo e aos estabelecimentos envolvidos na solicitação.</td>
+        <td>
+          N/A</td>
+        <td>
+          N/A</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Identificador do
+          Paciente</td>
+        <td>II</td>
+        <td>1..1</td>
+        <td>Identificação
+          unívoca do usuário das ações e serviços de saúde, mediante número único válido em todo o território
+          nacional, sendo:
+          <ul>
+            <li>Cadastro de Pessoa Física (CPF)</li>
+            <li>Cartão Nacional de Saúde (CNS)</li>
+          </ul>
+        </td>
+        <td>
+          <code>Composition.subject.identifier.value</code><br/><code>ServiceRequest.subject.identifier.value</code><br/><code>Appointment.participant.actor.identifier.value</code><br/><code>Condition.subject.identifier.value</code>
+        </td>
+        <td>
+          <a href="StructureDefinition-BRRegulacaoAssistencial.html">BRRegulacaoAssistencial</a><br/><a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">BRRequisicaoRegulacaoAssistencial</a><br/><a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">BRAgendamentoRegulacaoAssistencial</a><br/><a href="StructureDefinition-BRProblemaDiagnostico.html">BRProblemaDiagnostico</a>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Identificador do
+          Estabelecimento de Saúde Solicitante</td>
+        <td>II</td>
+        <td>0..1</td>
+        <td>Identificação
+          unívoca do estabelecimento solicitante, mediante número único válido em todo o território nacional,
+          sendo:
+          <ul>
+            <li>Cadastro Nacional de Estabelecimentos de Saúde (CNES)</li>
+          </ul>
+        </td>
+        <td>
+          <code>ServiceRequest.requester.identifier.value</code>
+        </td>
+        <td>
+          <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">BRRequisicaoRegulacaoAssistencial</a>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Identificador do
+          Estabelecimento de Saúde Regulador</td>
+        <td>II</td>
+        <td>0..1</td>
+        <td>Identificação
+          unívoca do estabelecimento regulador, mediante número único válido em todo o território nacional,
+          sendo:
+          <ul>
+            <li>Cadastro Nacional de Estabelecimentos de Saúde (CNES)</li>
+          </ul>
+        </td>
+        <td>
+          <code>Appointment.supportingInformation.identifier.value</code>
+        </td>
+        <td>
+          <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">BRAgendamentoRegulacaoAssistencial</a>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Identificador do
+          Estabelecimento de Saúde Executante</td>
+        <td>II</td>
+        <td>0..1</td>
+        <td>Identificação
+          unívoca do estabelecimento executante, mediante número único válido em todo o território nacional,
+          sendo:
+          <ul>
+            <li>Cadastro Nacional de Estabelecimentos de Saúde (CNES)</li>
+          </ul>
+        </td>
+        <td>
+          <code>ServiceRequest.performer.identifier.value</code>
+        </td>
+        <td>
+          <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">BRRequisicaoRegulacaoAssistencial</a>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Especialidade
+          Médica do Executante</td>
+        <td>CD</td>
+        <td>0..1</td>
+        <td>Especialidade
+          médica do profissional executante do procedimento, de acordo com a:
+          <ul>
+            <li>Classificação Brasileira de Ocupações (CBO)</li>
+          </ul>
+        </td>
+        <td>
+          <code>Appointment.specialty.coding.code</code><br/><code>ServiceRequest.performerType.coding.code</code>
+        </td>
+        <td>
+          <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">BRAgendamentoRegulacaoAssistencial</a><br/><a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">BRRequisicaoRegulacaoAssistencial</a>
+        </td>
+      </tr>
+      <tr style="background-color: #4dbf4d">
+        <td>1</td>
+        <td>Caracterização da
+          Solicitação</td>
+        <td>SECTION</td>
+        <td>1..1</td>
+        <td>Bloco de
+          informações adicionais referentes à solicitação</td>
+        <td>
+          N/A</td>
+        <td>
+          N/A</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Modalidade
+          Assistencial</td>
+        <td>CD</td>
+        <td>1..1</td>
+        <td>Modalidade
+          assistencial que gerou a solicitação do procedimento.</td>
+        <td>
+          <code>Composition.category.coding.code</code><br/><code>ServiceRequest.category.coding.code</code><br/><code>Appointment.serviceCategory.coding.code</code>
+        </td>
+        <td>
+          <a href="StructureDefinition-BRRegulacaoAssistencial.html">BRRegulacaoAssistencial</a><br/><a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">BRRequisicaoRegulacaoAssistencial</a><br/><a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">BRAgendamentoRegulacaoAssistencial</a>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Caráter da
+          Solicitação</td>
+        <td>CD</td>
+        <td>1..1</td>
+        <td>Caráter da
+          solicitação do procedimento.</td>
+        <td>
+          <code>Appointment.appointmentType.coding.code</code><br/><code>ServiceRequest.priority</code>
+        </td>
+        <td>
+          <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">BRAgendamentoRegulacaoAssistencial</a><br/><a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">BRRequisicaoRegulacaoAssistencial</a>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Motivo da
+          Solicitação</td>
+        <td>URI</td>
+        <td>1..1</td>
+        <td>Motivo da solicitação do procedimento, conforme:
+          <ul>
+            <li>Classificação Internacional de Doenças - CID</li>
+            <li>Classificação Internacional de Atenção Primária - CIAP</li>
+          </ul>
+        </td>
+        <td>
+          <code>Condition.code.coding.code</code>
+        </td>
+        <td>
+          <a href="StructureDefinition-BRProblemaDiagnostico.html">BRProblemaDiagnostico</a>
         </td>
       </tr>
     </tbody>
@@ -733,8 +701,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.saude.gov.br">Ministério da Saúde do Brasil</a>.  
           Pacote br.gov.saude.rira.fhir#1.0.0-release baseado em <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Gerado em 
-  <span title="2026-10-19 16:14:00 -0300">
-    2026-10-19
+  <span title="2026-10-20 12:10:00 -0300">
+    2026-10-20
   </span>
 
           <br/>

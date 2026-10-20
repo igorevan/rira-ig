@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "f2f4b782-bff0-46ce-94f6-cc3163c59ae9",
+  "id" : "a42d3a12-165a-4221-9ce5-8c1324c5af2d",
   "meta" : {
-    "lastUpdated" : "2026-10-19T16:14:26.240-03:00"
+    "lastUpdated" : "2026-10-20T12:10:02.174-03:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -29,8 +29,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:c5f6584a-b8c8-4cf6-91dc-4fe2d97a5e1e",
-        "timestamp" : "2026-10-19T16:16:24-03:00",
+        "identifier" : "urn:uuid:63e2e461-78c7-45ae-92aa-7694069addbf",
+        "timestamp" : "2026-10-20T12:12:06-03:00",
         "total" : 14230,
         "offset" : 0,
         "parameter" : [{
@@ -5080,8 +5080,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:937e047c-c5ec-4b36-90af-e065ad14e903",
-        "timestamp" : "2026-10-19T16:16:24-03:00",
+        "identifier" : "urn:uuid:54014aa1-d2a1-407e-a37c-7af075bbe59f",
+        "timestamp" : "2026-10-20T12:12:06-03:00",
         "total" : 14230,
         "offset" : 0,
         "parameter" : [{
@@ -10131,8 +10131,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:58d47f14-c527-4494-a3a2-8a9ce3ef1e61",
-        "timestamp" : "2026-10-19T16:16:24-03:00",
+        "identifier" : "urn:uuid:5511c95b-be95-4b7e-b417-5228367a5581",
+        "timestamp" : "2026-10-20T12:12:06-03:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -10196,8 +10196,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:a73ff0d4-2818-4443-aa48-7b4adf2443f2",
-        "timestamp" : "2026-10-19T16:16:24-03:00",
+        "identifier" : "urn:uuid:e9a86799-9299-48df-abbe-567a9616c1da",
+        "timestamp" : "2026-10-20T12:12:06-03:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -10264,8 +10264,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:e0d27cf4-be02-499b-9817-e8ae0f9a7c18",
-        "timestamp" : "2026-10-19T16:16:24-03:00",
+        "identifier" : "urn:uuid:9fb86a09-2e31-41b4-8a35-b8bc8deab1a7",
+        "timestamp" : "2026-10-20T12:12:06-03:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -10328,8 +10328,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:4972a0c8-51ca-4adf-bf9c-abdc19d5f8c0",
-        "timestamp" : "2026-10-19T16:16:24-03:00",
+        "identifier" : "urn:uuid:95668c84-3b62-4867-8bf1-8687d140b908",
+        "timestamp" : "2026-10-20T12:12:06-03:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -10389,8 +10389,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:84f97990-5abe-4625-99dc-792fc79e79a7",
-        "timestamp" : "2026-10-19T16:16:24-03:00",
+        "identifier" : "urn:uuid:5b4e7966-73e9-4caf-a7af-d1bd33bc9612",
+        "timestamp" : "2026-10-20T12:12:06-03:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
@@ -10464,8 +10464,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:db2a1f92-7cf3-4d87-a654-6ad28b46a772",
-        "timestamp" : "2026-10-19T16:16:24-03:00",
+        "identifier" : "urn:uuid:ae076858-607f-4bfa-86fc-0ebc58b9e0fa",
+        "timestamp" : "2026-10-20T12:12:06-03:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
@@ -10542,8 +10542,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:71f8a61c-c6a4-4ebd-9a4d-e5f2e14a1246",
-        "timestamp" : "2026-10-19T16:16:24-03:00",
+        "identifier" : "urn:uuid:45766580-68df-41f3-a606-9e250f7ddaf6",
+        "timestamp" : "2026-10-20T12:12:06-03:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -10626,8 +10626,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:c7501405-7d3e-42d5-9772-4cb314272f23",
-        "timestamp" : "2026-10-19T16:16:24-03:00",
+        "identifier" : "urn:uuid:92984c66-0958-4ee2-82c9-114fdb83dbf4",
+        "timestamp" : "2026-10-20T12:12:06-03:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -10707,8 +10707,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:f42e474a-6900-4ed4-9a0b-872bff8b590c",
-        "timestamp" : "2026-10-19T16:16:25-03:00",
+        "identifier" : "urn:uuid:bc595fc6-d3b5-4b1c-927d-af1391665ff3",
+        "timestamp" : "2026-10-20T12:12:06-03:00",
         "total" : 9,
         "offset" : 0,
         "parameter" : [{
@@ -10807,8 +10807,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:483c0c3a-220b-4d01-8edc-29e60b760565",
-        "timestamp" : "2026-10-19T16:16:25-03:00",
+        "identifier" : "urn:uuid:6d53ff7f-cb53-4779-ad24-535d21e1b02b",
+        "timestamp" : "2026-10-20T12:12:06-03:00",
         "total" : 9,
         "offset" : 0,
         "parameter" : [{
@@ -10910,8 +10910,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:41bccf00-1ae4-41c1-b049-13f8f5fb875f",
-        "timestamp" : "2026-10-19T16:16:25-03:00",
+        "identifier" : "urn:uuid:1ef60687-4009-4c1d-84d8-f2d94abf6df2",
+        "timestamp" : "2026-10-20T12:12:06-03:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -10994,8 +10994,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:3563170f-e997-4fac-ba20-db3473323e08",
-        "timestamp" : "2026-10-19T16:16:25-03:00",
+        "identifier" : "urn:uuid:de9a51f2-9503-4455-8071-fc0a9ec55b54",
+        "timestamp" : "2026-10-20T12:12:06-03:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -11075,8 +11075,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:cd89e00f-b5b2-454c-9b8c-14aa107a83db",
-        "timestamp" : "2026-10-19T16:16:25-03:00",
+        "identifier" : "urn:uuid:d9afb99e-f37a-4825-b004-dd2012f82b99",
+        "timestamp" : "2026-10-20T12:12:06-03:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -11136,8 +11136,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:ca869f7b-779a-4083-92e8-4be34e89878b",
-        "timestamp" : "2026-10-19T16:16:25-03:00",
+        "identifier" : "urn:uuid:177aa3d3-523b-4c1b-9b67-a2e470bbbb2b",
+        "timestamp" : "2026-10-20T12:12:06-03:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -11200,8 +11200,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:61c3264f-80b2-45f4-9c69-850804c798e5",
-        "timestamp" : "2026-10-19T16:16:25-03:00",
+        "identifier" : "urn:uuid:77541c60-e6f4-4840-83a9-65575e5e006f",
+        "timestamp" : "2026-10-20T12:12:06-03:00",
         "total" : 2714,
         "offset" : 0,
         "parameter" : [{
@@ -16254,8 +16254,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:0ed780df-fa17-45af-9dfe-8c4881be2c82",
-        "timestamp" : "2026-10-19T16:16:25-03:00",
+        "identifier" : "urn:uuid:243c72a2-be7b-4255-9cc7-e5d85c60e994",
+        "timestamp" : "2026-10-20T12:12:06-03:00",
         "total" : 2714,
         "offset" : 0,
         "parameter" : [{
@@ -21308,8 +21308,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:098838ef-dbfd-42fa-8390-071013138dff",
-        "timestamp" : "2026-10-19T16:16:25-03:00",
+        "identifier" : "urn:uuid:d818f719-f143-4422-808b-a97047974a5f",
+        "timestamp" : "2026-10-20T12:12:06-03:00",
         "total" : 14916,
         "offset" : 0,
         "parameter" : [{
@@ -26366,8 +26366,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:17b22936-9bf9-4d60-aa80-6c4335703ca3",
-        "timestamp" : "2026-10-19T16:16:25-03:00",
+        "identifier" : "urn:uuid:2ae9ef14-0511-4f88-a9a5-9ce19fad9590",
+        "timestamp" : "2026-10-20T12:12:06-03:00",
         "total" : 14916,
         "offset" : 0,
         "parameter" : [{
@@ -31424,8 +31424,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:382a3e87-b5aa-4fe0-94d1-a674d966b648",
-        "timestamp" : "2026-10-19T16:16:25-03:00",
+        "identifier" : "urn:uuid:5df2d937-93b1-4563-a63f-7933b504abd6",
+        "timestamp" : "2026-10-20T12:12:06-03:00",
         "total" : 55698,
         "offset" : 0,
         "parameter" : [{
@@ -36482,8 +36482,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:172fafcb-287c-4acc-b464-970ccf028748",
-        "timestamp" : "2026-10-19T16:16:25-03:00",
+        "identifier" : "urn:uuid:2487e33c-1fe0-42f0-ba0f-75328dc791a7",
+        "timestamp" : "2026-10-20T12:12:07-03:00",
         "total" : 55698,
         "offset" : 0,
         "parameter" : [{
@@ -41537,8 +41537,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:73b80ab8-d5dd-4e40-99b8-3e20f38f6495",
-        "timestamp" : "2026-10-19T16:16:25-03:00",
+        "identifier" : "urn:uuid:b25d8903-8b9c-45ab-9279-eb6cb7e1d78b",
+        "timestamp" : "2026-10-20T12:12:07-03:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -41603,8 +41603,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:76a79600-2358-4d89-8e0d-9ca640492a41",
-        "timestamp" : "2026-10-19T16:16:25-03:00",
+        "identifier" : "urn:uuid:7e468e98-b3df-4be8-a475-990b0bb5d881",
+        "timestamp" : "2026-10-20T12:12:07-03:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -41669,8 +41669,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:0f662dbe-403e-40ab-8bf0-db5f88baf7e5",
-        "timestamp" : "2026-10-19T16:16:25-03:00",
+        "identifier" : "urn:uuid:bcf280a1-ef88-4cc6-a4df-de77b3d5b44d",
+        "timestamp" : "2026-10-20T12:12:07-03:00",
         "total" : 12,
         "offset" : 0,
         "parameter" : [{
@@ -41788,8 +41788,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:894a921f-4947-465f-a2cd-4bd39839d1ef",
-        "timestamp" : "2026-10-19T16:16:25-03:00",
+        "identifier" : "urn:uuid:f1ae4343-a511-4377-9d31-c987c7f00fb6",
+        "timestamp" : "2026-10-20T12:12:07-03:00",
         "total" : 12,
         "offset" : 0,
         "parameter" : [{
@@ -41907,8 +41907,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:5d00aa2f-056a-4c3f-8322-1d476d722acf",
-        "timestamp" : "2026-10-19T16:16:25-03:00",
+        "identifier" : "urn:uuid:833ae928-d23c-440c-bee9-3581d79ff810",
+        "timestamp" : "2026-10-20T12:12:07-03:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
@@ -41982,8 +41982,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:bd86e904-b8a6-4bd2-a7ca-34dd35f948e3",
-        "timestamp" : "2026-10-19T16:16:25-03:00",
+        "identifier" : "urn:uuid:ddeab6f3-780d-436b-a962-53fb9e81078e",
+        "timestamp" : "2026-10-20T12:12:07-03:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
@@ -42057,8 +42057,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:d4843473-d28f-4a2c-99c7-dd4fc74e9f74",
-        "timestamp" : "2026-10-19T16:16:25-03:00",
+        "identifier" : "urn:uuid:f4542959-d7da-435f-b9e6-5033bedfc060",
+        "timestamp" : "2026-10-20T12:12:07-03:00",
         "total" : 7,
         "offset" : 0,
         "parameter" : [{
@@ -42143,8 +42143,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:94469ae5-9280-4bfa-9eda-8a7cec5ab5f4",
-        "timestamp" : "2026-10-19T16:16:25-03:00",
+        "identifier" : "urn:uuid:da32144a-b879-494c-b4db-edfc771bd894",
+        "timestamp" : "2026-10-20T12:12:07-03:00",
         "total" : 7,
         "offset" : 0,
         "parameter" : [{
@@ -42229,8 +42229,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:8bfcce11-e60e-474f-957b-fab238a10185",
-        "timestamp" : "2026-10-19T16:16:25-03:00",
+        "identifier" : "urn:uuid:394cf385-32f4-4b0f-ad15-8313ca51d430",
+        "timestamp" : "2026-10-20T12:12:07-03:00",
         "total" : 7,
         "offset" : 0,
         "parameter" : [{
@@ -42319,8 +42319,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:d9b3f93b-697b-4b5c-a2a8-23a1564c8f31",
-        "timestamp" : "2026-10-19T16:16:26-03:00",
+        "identifier" : "urn:uuid:117d94be-9a39-405d-885d-68fe9c15f824",
+        "timestamp" : "2026-10-20T12:12:07-03:00",
         "total" : 7,
         "offset" : 0,
         "parameter" : [{
@@ -42409,8 +42409,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:285aaa20-0ca9-4646-b3c0-071315130427",
-        "timestamp" : "2026-10-19T16:16:26-03:00",
+        "identifier" : "urn:uuid:5a6b6297-652b-4396-b4b6-3ef9ef881f4e",
+        "timestamp" : "2026-10-20T12:12:07-03:00",
         "total" : 11,
         "offset" : 0,
         "parameter" : [{
@@ -42515,8 +42515,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:5b5a4b4e-d9b3-4750-a377-6e571c3e7b22",
-        "timestamp" : "2026-10-19T16:16:26-03:00",
+        "identifier" : "urn:uuid:3ce206d7-6d6c-430c-9c14-93d9ffdb4ba4",
+        "timestamp" : "2026-10-20T12:12:07-03:00",
         "total" : 11,
         "offset" : 0,
         "parameter" : [{
@@ -42621,8 +42621,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:d5b9d50a-0080-4158-b0f6-6d058832e15d",
-        "timestamp" : "2026-10-19T16:16:26-03:00",
+        "identifier" : "urn:uuid:0a385dc7-edec-48c0-939a-b58e98392be1",
+        "timestamp" : "2026-10-20T12:12:07-03:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
@@ -42692,8 +42692,8 @@
       }],
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:ac39ed0b-0005-464b-bd81-04a459338bc0",
-        "timestamp" : "2026-10-19T16:16:26-03:00",
+        "identifier" : "urn:uuid:0ba8c89f-6803-4548-80c6-2095f58c3311",
+        "timestamp" : "2026-10-20T12:12:07-03:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{

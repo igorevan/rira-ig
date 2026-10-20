@@ -37,61 +37,45 @@ Estabelecer a estrutura do Registro de Informações de Regulação Assistencial
 
  O modelo de informação é uma representação conceitual e canônica, onde os elementos referentes a um documento específico são modelados em seções e blocos de dados, com seus respectivos tipos de dados a serem informados. Também são apresentadas as referências para o uso de recursos terminológicos, da seguinte maneira: 
 
-*  **Coluna 1** - Nível: apresenta o nível do elemento no modelo de informação; 
-* **Coluna 2** - Ocorrência: descreve o número de vezes (cardinalidade) que o elemento deve/pode aparecer:
-*  **Coluna 3** - Seção/Item: nome do bloco ou da informação a ser enviada; 
-*  **Coluna 4** - Tipo de dado: descreve o tipo de dado a ser preenchido; 
-*  **Coluna 5** - Conceito: apresenta as definições do elemento; 
-*  **Coluna 6** - Definição de uso do elemento: Observações e regras de negócio relacionadas ao elemento; 
-*  **Coluna 7** - Conteúdo: apresenta, quando necessário, o grupo de códigos (*ValueSet*) a ser utilizado para preenchimento do elemento; 
-*  **Coluna 8** - Recurso FHIR: relaciona o atributo do Modelo Informacional com o perfil do Modelo Computacional em FHIR. 
+*  **Nível**: indica a relação de dependência do elemento aos demais. Um número maior significa que aquele item depende ou está subordinado ao de número menor e anterior a ele no modelo. Assim, um elemento de nível 2 é subitem de um elemento de nível 1, um de nível 3 é subitem de um de nível 2 e assim sucessivamente; 
+*  **Seção/Item**: nome do bloco (seção) ou da informação a ser enviada; 
+*  **Tipo de dados**: descreve o tipo de dado a ser preenchido, ou seja, a forma de representar o elemento; 
+* **Ocorrência**: descreve o número mínimo e máximo de vezes que o elemento deve/pode ocorrer, ou seja, demonstra a obrigatoriedade e a quantidade de ocorrências do elemento:
+*  **Conceito/Observações**: conceitua ou esclarece a forma de utilizar o elemento; 
+*  **Mapeamento Computacional - FHIR**: relaciona o atributo do Modelo Informacional com o campo do Modelo Computacional em FHIR. 
+*  **Perfil FHIR**: relaciona o atributo do Modelo Informacional com o perfil do Modelo Computacional em FHIR. 
 
 ### Blocos do Modelo de Informação
 
  Segue abaixo o modelo de informação para o RIRA: 
 
-#### Caracterização da Regulação
-
-| | | | | | | | |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | 1..1 | Caracterização da regulação | Seção |  |  |  |  |
-| 2 | 1..1 | Identificador do registro | Identificador | Identificador do registro no sistema de origem.**Regra Negocial 01**: Deverá ser utilizado o identificador do registro no sistema de origem para registro da solicitação. Neste campo deverá constar o identificador único do registro no sistema de origem. **Regra Negocial 02**: Para as operações de consulta, alteração e exclusão, deverá ser considerado como identificador único do evento de regulação, o identificador do documento na Rede Nacional de Dados em Saúde (RNDS).  | O identificador único do registro de regulação no sistema de origem |  | *Bundle*de envio |
-| 2 | 1..1 | Status da solicitação | Texto codificado:* Pendente
-* Agendado
-* Atendido/Internado
-* Falta
-* Negado/Cancelado
-* Excluído
-* Devolvido para o solicitante
- | Status da solicitação do procedimento. | O código que identifica unicamente o status da solicitação, conforme tabela de status de solicitação. | [Status de Regulação Assistencial](ValueSet-BRStatusRegulacaoAssistencial.md) | [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)*(Composition)* |
-| 2 | 0..1 | Data de alteração de status | Data | Data e hora da alteração de status da solicitação do procedimento no padrão ISO8601. | A data e hora de alteração de status da solicitação de procedimento regulado. |  | [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)*(Composition)* |
-| 2 | 1..1 | Código do procedimento | Texto codificado | Identificador único do procedimento. Texto codificado: SIGTAP. | O código que identifica unicamente o procedimento conforme tabela SUS. | [Procedimento Realizado](ValueSet-BRProcedimentosNacionais-1.0.md) | [Requisição de Regulação Assistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md)*(ServiceRequest)*[Agendamento de Regulação Assistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md)*(Appointment)* |
-| 2 | 1..1 | Data da solicitação | Data | Data e hora da solicitação do procedimento no padrão ISO8601. | A data e hora de criação da solicitação inicial do procedimento regulado. |  | [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)*(Composition)*[Requisição de Regulação Assistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md)*(ServiceRequest)* |
-| 2 | 0..1 | Data de autorização | Data | Data e hora da autorização do procedimento no padrão ISO8601. | A data e hora em que a solicitação de procedimento regulado foi autorizada. |  | [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)*(Composition)*[Agendamento de Regulação Assistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md)*(Appointment)* |
-| 2 | 0..1 | Data de agendamento | Data | Data e hora da autorização do procedimento no padrão ISO8601. | A data e hora do agendamento da solicitação de procedimento regulado. |  | [Agendamento de Regulação Assistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md)*(Appointment)* |
-| 2 | 0..1 | Data da execução | Data | Data e hora da execução do procedimento no padrão ISO8601. | A data e hora em que o procedimento regulado foi executado. |  | [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)*(Composition)*[Requisição de Regulação Assistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md)*(ServiceRequest)* |
-
-#### Caracterização dos Participantes
-
-| | | | | | | | |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | 1..1 | Caracterização dos participantes | Seção |  |  |  |  |
-| 2 | 1..1 | Identificador de paciente | Identificador | Identificação única do participante, por meio de CPF ou CNS. | O identificador nacional do participante que poderá ser CPF ou CNS |  | [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)*(Composition)*[Requisição de Regulação Assistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md)*(ServiceRequest)*[Agendamento de Regulação Assistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md)*(Appointment)* |
-| 2 | 1..1 | Identificador do estabelecimento de saúde solicitante | Identificador | Identificação única do estabelecimento solicitante, por meio do CNES. | O identificador nacional do estabelecimento no Cadastro Nacional de Estabelecimento de Saúde |  | [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)*(Composition)*[Requisição de Regulação Assistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md)*(ServiceRequest)* |
-| 2 | 0..1 | Identificador do estabelecimento de saúde regulador | Identificador | Identificação única do estabelecimento regulador , por meio do CNES. | O identificador nacional do estabelecimento no Cadastro Nacional de Estabelecimento de Saúde |  | [Agendamento de Regulação Assistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md)*(Appointment)* |
-| 2 | 0..1 | Identificador do estabelecimento de saúde executante | Identificador | Identificação única do estabelecimento executante, por meio do CNES. | O identificador nacional do estabelecimento no Cadastro Nacional de Estabelecimento de Saúde |  | [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)*(Composition)*[Requisição de Regulação Assistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md)*(ServiceRequest)* |
-| 2 | 0..1 | Especialidade médica do executante | Texto codificado | Identificação da especialidade médica do profissional executante do procedimento. Texto codificado: CBO.**Regra Negocial 03**: Caso o procedimento informado pertença aos grupos 03 ou 04 da tabela SUS, o código CBO será obrigatório. | O código que identifica unicamente a especialidade do executante conforme tabela de CBO. O código CBO da especialidade está diretamente vinculado ao procedimento solicitado. Assim, para determinados procedimentos esse ponto será obrigatório. | [Classificação Brasileira de Ocupações (CBO)](ValueSet-BROcupacao-1.0.md) | [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)*(Composition)*[Requisição de Regulação Assistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md)*(ServiceRequest)*[Agendamento de Regulação Assistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md)*(Appointment)* |
-
-#### Caracterização da Solicitação
-
-| | | | | | | | |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | 1..1 | Caracterização da solicitação | Seção |  |  |  |  |
-| 2 | 1..1 | Modalidade assistencial | Texto codificado:* Ambulatorial
-* Hospitalar
- | Modalidade assistencial que gerou a solicitação do procedimento. | O código que identifica unicamente a modalidade, conforme tabela de modalidades. | [Modalidade Assistencial (RIRA)](ValueSet-BRModalidadeAssistencialMIRA.md) | [Regulação Assistencial](StructureDefinition-BRRegulacaoAssistencial.md)*(Composition)*[Requisição de Regulação Assistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md)*(ServiceRequest)*[Agendamento de Regulação Assistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md)*(Appointment)* |
-| 2 | 1..1 | Caráter da solicitação | Texto codificado:* Eletivo
-* Urgência
- | Caráter da solicitação do procedimento. | O código que identifica unicamente o grau de prioridade da solicitação no modelo de informação assistencial, conforme tabela de caráter da solicitação. | [Caráter de Atendimento no MIRA](ValueSet-BRCaraterAtendimentoMIRA.md) | [Requisição de Regulação Assistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md)*(ServiceRequest)*[Agendamento de Regulação Assistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md)*(Appointment)* |
-| 2 | 1..1 | Motivo da solicitação | Texto codificado | Identificação do motivo da solicitação do procedimento. Texto codificado por terminologia externa CID-10 ou CIAP-2. | O código que identifica unicamente a condição clínica conforme tabela de Classificação Internacional de Doenças na versão 10 (CID10) ou da Classificação Internacional de Atenção Primária (CIAP-2). | [Classificação Internacional de Doenças (CID-10)](CodeSystem-BRCID10.md)[Classificação Internacional de Atenção Primária (CIAP-2)](CodeSystem-BRCIAP2.md) | [Problema/Diagnóstico](StructureDefinition-BRProblemaDiagnostico.md)*(Condition)* |
+| | | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | Caracterização da Regulação | SECTION | 1..1 | Bloco de informações de identificação do registro enviado à RNDS. | N/A | N/A |
+| 2 | Identificador do Registro no Sistema de Origem | II | 1..1 | Id no sistema de origem. | `Bundle.identifier.value` | `Bundle` |
+| 2 | Status da Solicitação | CD | 1..1 | Status da solicitação do procedimento. | `Composition.event.code.coding.code` | [BRRegulacaoAssistencial](StructureDefinition-BRRegulacaoAssistencial.md) |
+| 2 | Código do Procedimento | CD | 1..1 | Identificador único do procedimento. Texto codificado:* SIGTAP
+ | `ServiceRequest.code.coding.code``Appointment.serviceType.coding.code` | [BRRequisicaoRegulacaoAssistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md)[BRAgendamentoRegulacaoAssistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md) |
+| 2 | Data da Solicitação | TS | 1..1 | Data e hora da solicitação do procedimento, no padrão ISO8601. | `ServiceRequest.authoredOn` | [BRRequisicaoRegulacaoAssistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md) |
+| 2 | Data de Autorização | TS | 0..1 | Data e hora da autorização do procedimento, no padrão ISO8601. | `Appointment.created` | [BRAgendamentoRegulacaoAssistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md) |
+| 2 | Data de Agendamento | TS | 0..1 | Data e hora da solicitação do procedimento, no padrão ISO8601. | `ServiceRequest.occurrenceDateTime` | [BRRequisicaoRegulacaoAssistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md) |
+| 2 | Data da Execução | TS | 0..1 | Data e hora agendada para a realização do procedimento, no padrão ISO8601. | `Appointment.start``Appointment.end` | [BRAgendamentoRegulacaoAssistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md) |
+| 1 | Caracterização dos Participantes | SECTION | 1..1 | Bloco de informações referentes ao indivíduo e aos estabelecimentos envolvidos na solicitação. | N/A | N/A |
+| 2 | Identificador do Paciente | II | 1..1 | Identificação unívoca do usuário das ações e serviços de saúde, mediante número único válido em todo o território nacional, sendo:* Cadastro de Pessoa Física (CPF)
+* Cartão Nacional de Saúde (CNS)
+ | `Composition.subject.identifier.value``ServiceRequest.subject.identifier.value``Appointment.participant.actor.identifier.value``Condition.subject.identifier.value` | [BRRegulacaoAssistencial](StructureDefinition-BRRegulacaoAssistencial.md)[BRRequisicaoRegulacaoAssistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md)[BRAgendamentoRegulacaoAssistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md)[BRProblemaDiagnostico](StructureDefinition-BRProblemaDiagnostico.md) |
+| 2 | Identificador do Estabelecimento de Saúde Solicitante | II | 0..1 | Identificação unívoca do estabelecimento solicitante, mediante número único válido em todo o território nacional, sendo:* Cadastro Nacional de Estabelecimentos de Saúde (CNES)
+ | `ServiceRequest.requester.identifier.value` | [BRRequisicaoRegulacaoAssistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md) |
+| 2 | Identificador do Estabelecimento de Saúde Regulador | II | 0..1 | Identificação unívoca do estabelecimento regulador, mediante número único válido em todo o território nacional, sendo:* Cadastro Nacional de Estabelecimentos de Saúde (CNES)
+ | `Appointment.supportingInformation.identifier.value` | [BRAgendamentoRegulacaoAssistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md) |
+| 2 | Identificador do Estabelecimento de Saúde Executante | II | 0..1 | Identificação unívoca do estabelecimento executante, mediante número único válido em todo o território nacional, sendo:* Cadastro Nacional de Estabelecimentos de Saúde (CNES)
+ | `ServiceRequest.performer.identifier.value` | [BRRequisicaoRegulacaoAssistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md) |
+| 2 | Especialidade Médica do Executante | CD | 0..1 | Especialidade médica do profissional executante do procedimento, de acordo com a:* Classificação Brasileira de Ocupações (CBO)
+ | `Appointment.specialty.coding.code``ServiceRequest.performerType.coding.code` | [BRAgendamentoRegulacaoAssistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md)[BRRequisicaoRegulacaoAssistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md) |
+| 1 | Caracterização da Solicitação | SECTION | 1..1 | Bloco de informações adicionais referentes à solicitação | N/A | N/A |
+| 2 | Modalidade Assistencial | CD | 1..1 | Modalidade assistencial que gerou a solicitação do procedimento. | `Composition.category.coding.code``ServiceRequest.category.coding.code``Appointment.serviceCategory.coding.code` | [BRRegulacaoAssistencial](StructureDefinition-BRRegulacaoAssistencial.md)[BRRequisicaoRegulacaoAssistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md)[BRAgendamentoRegulacaoAssistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md) |
+| 2 | Caráter da Solicitação | CD | 1..1 | Caráter da solicitação do procedimento. | `Appointment.appointmentType.coding.code``ServiceRequest.priority` | [BRAgendamentoRegulacaoAssistencial](StructureDefinition-BRAgendamentoRegulacaoAssistencial.md)[BRRequisicaoRegulacaoAssistencial](StructureDefinition-BRRequisicaoRegulacaoAssistencial.md) |
+| 2 | Motivo da Solicitação | URI | 1..1 | Motivo da solicitação do procedimento, conforme:* Classificação Internacional de Doenças - CID
+* Classificação Internacional de Atenção Primária - CIAP
+ | `Condition.code.coding.code` | [BRProblemaDiagnostico](StructureDefinition-BRProblemaDiagnostico.md) |
 
