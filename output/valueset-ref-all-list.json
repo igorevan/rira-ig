@@ -25,8 +25,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.141"],
     "uses" : {
     },
-    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
-    "StructureDefinition-BRProblemaDiagnostico.html" : "Problema/Diagnóstico"
+    "StructureDefinition-BRProblemaDiagnostico.html" : "Problema/Diagnóstico",
+    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/composition-attestation-mode",
@@ -152,10 +152,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.45"],
     "uses" : {
     },
-    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
     "StructureDefinition-BRProblemaDiagnostico.html" : "Problema/Diagnóstico",
-    "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial",
-    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial"
+    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial",
+    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
+    "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
@@ -169,10 +169,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.57"],
     "uses" : {
     },
-    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
     "StructureDefinition-BRProblemaDiagnostico.html" : "Problema/Diagnóstico",
-    "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial",
-    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial"
+    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial",
+    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
+    "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/languages",
@@ -186,10 +186,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
-    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
     "StructureDefinition-BRProblemaDiagnostico.html" : "Problema/Diagnóstico",
-    "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial",
-    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial"
+    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial",
+    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
+    "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/list-empty-reason",
@@ -301,10 +301,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.27"],
     "uses" : {
     },
-    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
     "StructureDefinition-BRProblemaDiagnostico.html" : "Problema/Diagnóstico",
-    "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial",
-    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial"
+    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial",
+    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
+    "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/servicerequest-orderdetail",
@@ -454,9 +454,9 @@
     "systems" : ["http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial"],
     "uses" : {
     },
+    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial",
     "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
-    "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial",
-    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial"
+    "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial"
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BROcupacao-1.0",

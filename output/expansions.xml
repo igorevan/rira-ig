@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="a42d3a12-165a-4221-9ce5-8c1324c5af2d"/>
+  <id value="b02ce475-9396-4edb-864a-9c357cc199cf"/>
   <meta>
-    <lastUpdated value="2026-10-20T12:10:02.174-03:00"/>
+    <lastUpdated value="2026-10-29T15:26:45.760-03:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -20058,8 +20058,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:63e2e461-78c7-45ae-92aa-7694069addbf"/>
-          <timestamp value="2026-10-20T12:12:06-03:00"/>
+          <identifier value="urn:uuid:923e6239-a4a3-4e9b-83f7-e76fb3e734ef"/>
+          <timestamp value="2026-10-29T15:28:18-03:00"/>
           <total value="14230"/>
           <offset value="0"/>
           <parameter>
@@ -45138,8 +45138,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:54014aa1-d2a1-407e-a37c-7af075bbe59f"/>
-          <timestamp value="2026-10-20T12:12:06-03:00"/>
+          <identifier value="urn:uuid:21ecd6c4-2110-44cd-923d-f3abc3efe978"/>
+          <timestamp value="2026-10-29T15:28:19-03:00"/>
           <total value="14230"/>
           <offset value="0"/>
           <parameter>
@@ -50263,8 +50263,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:5511c95b-be95-4b7e-b417-5228367a5581"/>
-          <timestamp value="2026-10-20T12:12:06-03:00"/>
+          <identifier value="urn:uuid:22db8c99-4ae0-4064-a7e2-c008e7ab0af9"/>
+          <timestamp value="2026-10-29T15:28:19-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -50402,8 +50402,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:e9a86799-9299-48df-abbe-567a9616c1da"/>
-          <timestamp value="2026-10-20T12:12:06-03:00"/>
+          <identifier value="urn:uuid:35b9e257-5282-4415-9283-4ef2b5ca3f48"/>
+          <timestamp value="2026-10-29T15:28:19-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -50457,7 +50457,7 @@
           <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR" data-fhir="generated">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansão efectuada internamente com base em 
-              <a href="http://terminology.hl7.org/7.4.0/CodeSystem-condition-category.html">codesystem Condition Category Codes v2.0.0 (CodeSystem)</a>
+              <a href="http://terminology.hl7.org/7.5.0/CodeSystem-condition-category.html">codesystem Condition Category Codes v2.0.0 (CodeSystem)</a>
               <span class="copy-text-inline">
                 <button data-clipboard-text="http://terminology.hl7.org/CodeSystem/condition-category|2.0.0" title="Clique para copiar o URL" class="btn-copy" aria-label="copy"> </button>
               </span>
@@ -50490,7 +50490,7 @@
                   <code>http://terminology.hl7.org/CodeSystem/condition-category</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="http://terminology.hl7.org/7.4.0/CodeSystem-condition-category.html#condition-category-problem-list-item">problem-list-item</a>
+                  <a href="http://terminology.hl7.org/7.5.0/CodeSystem-condition-category.html#condition-category-problem-list-item">problem-list-item</a>
                 </td>
                 <td>Problem List Item</td>
                 <td>An item on a problem list that can be managed over time and can be expressed by a practitioner (e.g. physician, nurse), patient, or related person.</td>
@@ -50511,7 +50511,7 @@
                   <code>http://terminology.hl7.org/CodeSystem/condition-category</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="http://terminology.hl7.org/7.4.0/CodeSystem-condition-category.html#condition-category-encounter-diagnosis">encounter-diagnosis</a>
+                  <a href="http://terminology.hl7.org/7.5.0/CodeSystem-condition-category.html#condition-category-encounter-diagnosis">encounter-diagnosis</a>
                 </td>
                 <td>Encounter Diagnosis</td>
                 <td>A point in time diagnosis (e.g. from a physician or nurse) in context of an encounter.</td>
@@ -50544,8 +50544,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:9fb86a09-2e31-41b4-8a35-b8bc8deab1a7"/>
-          <timestamp value="2026-10-20T12:12:06-03:00"/>
+          <identifier value="urn:uuid:8e063c09-0768-4ddd-b284-6d5dedd53cbc"/>
+          <timestamp value="2026-10-29T15:28:19-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -50595,7 +50595,7 @@
           <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR" data-fhir="generated">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansão efectuada internamente com base em 
-              <a href="http://terminology.hl7.org/7.4.0/CodeSystem-condition-category.html">codesystem Condition Category Codes v2.0.0 (CodeSystem)</a>
+              <a href="http://terminology.hl7.org/7.5.0/CodeSystem-condition-category.html">codesystem Condition Category Codes v2.0.0 (CodeSystem)</a>
               <span class="copy-text-inline">
                 <button data-clipboard-text="http://terminology.hl7.org/CodeSystem/condition-category|2.0.0" title="Clique para copiar o URL" class="btn-copy" aria-label="copy"> </button>
               </span>
@@ -50628,7 +50628,7 @@
                   <code>http://terminology.hl7.org/CodeSystem/condition-category</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="http://terminology.hl7.org/7.4.0/CodeSystem-condition-category.html#condition-category-problem-list-item">problem-list-item</a>
+                  <a href="http://terminology.hl7.org/7.5.0/CodeSystem-condition-category.html#condition-category-problem-list-item">problem-list-item</a>
                 </td>
                 <td>Problem List Item</td>
                 <td>An item on a problem list that can be managed over time and can be expressed by a practitioner (e.g. physician, nurse), patient, or related person.</td>
@@ -50649,7 +50649,7 @@
                   <code>http://terminology.hl7.org/CodeSystem/condition-category</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="http://terminology.hl7.org/7.4.0/CodeSystem-condition-category.html#condition-category-encounter-diagnosis">encounter-diagnosis</a>
+                  <a href="http://terminology.hl7.org/7.5.0/CodeSystem-condition-category.html#condition-category-encounter-diagnosis">encounter-diagnosis</a>
                 </td>
                 <td>Encounter Diagnosis</td>
                 <td>A point in time diagnosis (e.g. from a physician or nurse) in context of an encounter.</td>
@@ -50682,8 +50682,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:95668c84-3b62-4867-8bf1-8687d140b908"/>
-          <timestamp value="2026-10-20T12:12:06-03:00"/>
+          <identifier value="urn:uuid:9ae23eff-db40-485c-9126-beb43c00df6a"/>
+          <timestamp value="2026-10-29T15:28:19-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -50859,8 +50859,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:5b4e7966-73e9-4caf-a7af-d1bd33bc9612"/>
-          <timestamp value="2026-10-20T12:12:06-03:00"/>
+          <identifier value="urn:uuid:39b8322b-5c52-45ab-a0dd-0beb7bc3bce1"/>
+          <timestamp value="2026-10-29T15:28:19-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -51050,8 +51050,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:ae076858-607f-4bfa-86fc-0ebc58b9e0fa"/>
-          <timestamp value="2026-10-20T12:12:06-03:00"/>
+          <identifier value="urn:uuid:86294c56-d8a0-4f4e-91e2-239d0ab783eb"/>
+          <timestamp value="2026-10-29T15:28:19-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -51115,7 +51115,7 @@
           <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-fhir="generated">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansão efectuada internamente com base em 
-              <a href="http://terminology.hl7.org/7.4.0/CodeSystem-condition-clinical.html">codesystem Condition Clinical Status Codes v3.0.0 (CodeSystem)</a>
+              <a href="http://terminology.hl7.org/7.5.0/CodeSystem-condition-clinical.html">codesystem Condition Clinical Status Codes v3.0.0 (CodeSystem)</a>
               <span class="copy-text-inline">
                 <button data-clipboard-text="http://terminology.hl7.org/CodeSystem/condition-clinical|3.0.0" title="Clique para copiar o URL" class="btn-copy" aria-label="copy"> </button>
               </span>
@@ -51148,7 +51148,7 @@
                   <code>http://terminology.hl7.org/CodeSystem/condition-clinical</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="http://terminology.hl7.org/7.4.0/CodeSystem-condition-clinical.html#condition-clinical-active">active</a>
+                  <a href="http://terminology.hl7.org/7.5.0/CodeSystem-condition-clinical.html#condition-clinical-active">active</a>
                 </td>
                 <td>Ativo</td>
                 <td>The subject is currently experiencing the condition or situation, there is evidence of the condition or situation, or considered to be a significant risk.</td>
@@ -51169,7 +51169,7 @@
                   <code>http://terminology.hl7.org/CodeSystem/condition-clinical</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="http://terminology.hl7.org/7.4.0/CodeSystem-condition-clinical.html#condition-clinical-recurrence">recurrence</a>
+                  <a href="http://terminology.hl7.org/7.5.0/CodeSystem-condition-clinical.html#condition-clinical-recurrence">recurrence</a>
                 </td>
                 <td>Recorrente</td>
                 <td>The subject is experiencing a reoccurence or repeating of a previously resolved condition or situation, e.g. urinary tract infection, food insecurity.</td>
@@ -51190,7 +51190,7 @@
                   <code>http://terminology.hl7.org/CodeSystem/condition-clinical</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="http://terminology.hl7.org/7.4.0/CodeSystem-condition-clinical.html#condition-clinical-relapse">relapse</a>
+                  <a href="http://terminology.hl7.org/7.5.0/CodeSystem-condition-clinical.html#condition-clinical-relapse">relapse</a>
                 </td>
                 <td>Recidiva</td>
                 <td>The subject is experiencing a return of a condition or situation after a period of improvement or remission, e.g. relapse of cancer, alcoholism.</td>
@@ -51211,7 +51211,7 @@
                   <code>http://terminology.hl7.org/CodeSystem/condition-clinical</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="http://terminology.hl7.org/7.4.0/CodeSystem-condition-clinical.html#condition-clinical-inactive">inactive</a>
+                  <a href="http://terminology.hl7.org/7.5.0/CodeSystem-condition-clinical.html#condition-clinical-inactive">inactive</a>
                 </td>
                 <td>Inativo</td>
                 <td>The subject is no longer experiencing the condition or situation and there is no longer evidence or appreciable risk of the condition or situation.</td>
@@ -51232,7 +51232,7 @@
                   <code>http://terminology.hl7.org/CodeSystem/condition-clinical</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="http://terminology.hl7.org/7.4.0/CodeSystem-condition-clinical.html#condition-clinical-remission">remission</a>
+                  <a href="http://terminology.hl7.org/7.5.0/CodeSystem-condition-clinical.html#condition-clinical-remission">remission</a>
                 </td>
                 <td>Remissão</td>
                 <td>The subject is not presently experiencing the condition or situation, but there is a risk of the condition or situation returning.</td>
@@ -51253,7 +51253,7 @@
                   <code>http://terminology.hl7.org/CodeSystem/condition-clinical</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="http://terminology.hl7.org/7.4.0/CodeSystem-condition-clinical.html#condition-clinical-resolved">resolved</a>
+                  <a href="http://terminology.hl7.org/7.5.0/CodeSystem-condition-clinical.html#condition-clinical-resolved">resolved</a>
                 </td>
                 <td>Resolvido</td>
                 <td>The subject is not presently experiencing the condition or situation and there is a negligible perceived risk of the condition or situation returning.</td>
@@ -51286,8 +51286,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:45766580-68df-41f3-a606-9e250f7ddaf6"/>
-          <timestamp value="2026-10-20T12:12:06-03:00"/>
+          <identifier value="urn:uuid:7025f843-04fb-449c-9c12-d687121d1b56"/>
+          <timestamp value="2026-10-29T15:28:19-03:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -51357,7 +51357,7 @@
           <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-fhir="generated">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansão efectuada internamente com base em 
-              <a href="http://terminology.hl7.org/7.4.0/CodeSystem-condition-clinical.html">codesystem Condition Clinical Status Codes v3.0.0 (CodeSystem)</a>
+              <a href="http://terminology.hl7.org/7.5.0/CodeSystem-condition-clinical.html">codesystem Condition Clinical Status Codes v3.0.0 (CodeSystem)</a>
               <span class="copy-text-inline">
                 <button data-clipboard-text="http://terminology.hl7.org/CodeSystem/condition-clinical|3.0.0" title="Clique para copiar o URL" class="btn-copy" aria-label="copy"> </button>
               </span>
@@ -51390,7 +51390,7 @@
                   <code>http://terminology.hl7.org/CodeSystem/condition-clinical</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="http://terminology.hl7.org/7.4.0/CodeSystem-condition-clinical.html#condition-clinical-active">active</a>
+                  <a href="http://terminology.hl7.org/7.5.0/CodeSystem-condition-clinical.html#condition-clinical-active">active</a>
                 </td>
                 <td>Ativo</td>
                 <td>The subject is currently experiencing the condition or situation, there is evidence of the condition or situation, or considered to be a significant risk.</td>
@@ -51411,7 +51411,7 @@
                   <code>http://terminology.hl7.org/CodeSystem/condition-clinical</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="http://terminology.hl7.org/7.4.0/CodeSystem-condition-clinical.html#condition-clinical-recurrence">recurrence</a>
+                  <a href="http://terminology.hl7.org/7.5.0/CodeSystem-condition-clinical.html#condition-clinical-recurrence">recurrence</a>
                 </td>
                 <td>Recorrente</td>
                 <td>The subject is experiencing a reoccurence or repeating of a previously resolved condition or situation, e.g. urinary tract infection, food insecurity.</td>
@@ -51432,7 +51432,7 @@
                   <code>http://terminology.hl7.org/CodeSystem/condition-clinical</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="http://terminology.hl7.org/7.4.0/CodeSystem-condition-clinical.html#condition-clinical-relapse">relapse</a>
+                  <a href="http://terminology.hl7.org/7.5.0/CodeSystem-condition-clinical.html#condition-clinical-relapse">relapse</a>
                 </td>
                 <td>Recidiva</td>
                 <td>The subject is experiencing a return of a condition or situation after a period of improvement or remission, e.g. relapse of cancer, alcoholism.</td>
@@ -51453,7 +51453,7 @@
                   <code>http://terminology.hl7.org/CodeSystem/condition-clinical</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="http://terminology.hl7.org/7.4.0/CodeSystem-condition-clinical.html#condition-clinical-inactive">inactive</a>
+                  <a href="http://terminology.hl7.org/7.5.0/CodeSystem-condition-clinical.html#condition-clinical-inactive">inactive</a>
                 </td>
                 <td>Inativo</td>
                 <td>The subject is no longer experiencing the condition or situation and there is no longer evidence or appreciable risk of the condition or situation.</td>
@@ -51474,7 +51474,7 @@
                   <code>http://terminology.hl7.org/CodeSystem/condition-clinical</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="http://terminology.hl7.org/7.4.0/CodeSystem-condition-clinical.html#condition-clinical-remission">remission</a>
+                  <a href="http://terminology.hl7.org/7.5.0/CodeSystem-condition-clinical.html#condition-clinical-remission">remission</a>
                 </td>
                 <td>Remissão</td>
                 <td>The subject is not presently experiencing the condition or situation, but there is a risk of the condition or situation returning.</td>
@@ -51495,7 +51495,7 @@
                   <code>http://terminology.hl7.org/CodeSystem/condition-clinical</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="http://terminology.hl7.org/7.4.0/CodeSystem-condition-clinical.html#condition-clinical-resolved">resolved</a>
+                  <a href="http://terminology.hl7.org/7.5.0/CodeSystem-condition-clinical.html#condition-clinical-resolved">resolved</a>
                 </td>
                 <td>Resolvido</td>
                 <td>The subject is not presently experiencing the condition or situation and there is a negligible perceived risk of the condition or situation returning.</td>
@@ -51528,8 +51528,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:92984c66-0958-4ee2-82c9-114fdb83dbf4"/>
-          <timestamp value="2026-10-20T12:12:06-03:00"/>
+          <identifier value="urn:uuid:b3cdcb8d-febe-49ca-bf40-50045dd7b5eb"/>
+          <timestamp value="2026-10-29T15:28:19-03:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -51877,8 +51877,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:bc595fc6-d3b5-4b1c-927d-af1391665ff3"/>
-          <timestamp value="2026-10-20T12:12:06-03:00"/>
+          <identifier value="urn:uuid:55fcc3ad-b316-4ac9-80bb-b6bf2efef007"/>
+          <timestamp value="2026-10-29T15:28:19-03:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>
@@ -52245,8 +52245,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:6d53ff7f-cb53-4779-ad24-535d21e1b02b"/>
-          <timestamp value="2026-10-20T12:12:06-03:00"/>
+          <identifier value="urn:uuid:ae699b19-11b3-4730-948c-9b0fd7540669"/>
+          <timestamp value="2026-10-29T15:28:19-03:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>
@@ -52497,8 +52497,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:1ef60687-4009-4c1d-84d8-f2d94abf6df2"/>
-          <timestamp value="2026-10-20T12:12:06-03:00"/>
+          <identifier value="urn:uuid:1b3f5df5-3661-4380-a96a-e86e4a7a8f43"/>
+          <timestamp value="2026-10-29T15:28:19-03:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -52730,8 +52730,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:de9a51f2-9503-4455-8071-fc0a9ec55b54"/>
-          <timestamp value="2026-10-20T12:12:06-03:00"/>
+          <identifier value="urn:uuid:fa04e1a4-37d6-43c2-aada-07f4e3cac7a8"/>
+          <timestamp value="2026-10-29T15:28:19-03:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -52880,8 +52880,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:d9afb99e-f37a-4825-b004-dd2012f82b99"/>
-          <timestamp value="2026-10-20T12:12:06-03:00"/>
+          <identifier value="urn:uuid:db5d9847-4152-4518-be6c-754165e82d72"/>
+          <timestamp value="2026-10-29T15:28:19-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -53010,8 +53010,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:177aa3d3-523b-4c1b-9b67-a2e470bbbb2b"/>
-          <timestamp value="2026-10-20T12:12:06-03:00"/>
+          <identifier value="urn:uuid:b53876cb-cfb7-4ed1-af9c-039e968b356a"/>
+          <timestamp value="2026-10-29T15:28:19-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -73103,8 +73103,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:77541c60-e6f4-4840-83a9-65575e5e006f"/>
-          <timestamp value="2026-10-20T12:12:06-03:00"/>
+          <identifier value="urn:uuid:7b9ce1eb-b83d-49cc-be07-7a900d5296b5"/>
+          <timestamp value="2026-10-29T15:28:19-03:00"/>
           <total value="2714"/>
           <offset value="0"/>
           <parameter>
@@ -98186,8 +98186,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:243c72a2-be7b-4255-9cc7-e5d85c60e994"/>
-          <timestamp value="2026-10-20T12:12:06-03:00"/>
+          <identifier value="urn:uuid:f92bb991-2ad9-41ba-a7ed-a6ae8b70d104"/>
+          <timestamp value="2026-10-29T15:28:19-03:00"/>
           <total value="2714"/>
           <offset value="0"/>
           <parameter>
@@ -123280,8 +123280,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:d818f719-f143-4422-808b-a97047974a5f"/>
-          <timestamp value="2026-10-20T12:12:06-03:00"/>
+          <identifier value="urn:uuid:0cd4736f-069e-4d5f-bf0e-4834869f39ba"/>
+          <timestamp value="2026-10-29T15:28:19-03:00"/>
           <total value="14916"/>
           <offset value="0"/>
           <parameter>
@@ -148378,8 +148378,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:2ae9ef14-0511-4f88-a9a5-9ce19fad9590"/>
-          <timestamp value="2026-10-20T12:12:06-03:00"/>
+          <identifier value="urn:uuid:6e50c09e-2dfe-497d-915a-8873b8b87409"/>
+          <timestamp value="2026-10-29T15:28:19-03:00"/>
           <total value="14916"/>
           <offset value="0"/>
           <parameter>
@@ -174479,8 +174479,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:5df2d937-93b1-4563-a63f-7933b504abd6"/>
-          <timestamp value="2026-10-20T12:12:06-03:00"/>
+          <identifier value="urn:uuid:d46d7b52-8eb7-47f3-bf76-a8ee8e0feccd"/>
+          <timestamp value="2026-10-29T15:28:19-03:00"/>
           <total value="55698"/>
           <offset value="0"/>
           <parameter>
@@ -200580,8 +200580,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:2487e33c-1fe0-42f0-ba0f-75328dc791a7"/>
-          <timestamp value="2026-10-20T12:12:07-03:00"/>
+          <identifier value="urn:uuid:135fdd8f-14f0-4225-bd55-105e3ea0e1c3"/>
+          <timestamp value="2026-10-29T15:28:19-03:00"/>
           <total value="55698"/>
           <offset value="0"/>
           <parameter>
@@ -205730,8 +205730,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:b25d8903-8b9c-45ab-9279-eb6cb7e1d78b"/>
-          <timestamp value="2026-10-20T12:12:07-03:00"/>
+          <identifier value="urn:uuid:7746c52c-3dd8-4129-a266-ddccf916b1c1"/>
+          <timestamp value="2026-10-29T15:28:19-03:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -205891,8 +205891,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:7e468e98-b3df-4be8-a475-990b0bb5d881"/>
-          <timestamp value="2026-10-20T12:12:07-03:00"/>
+          <identifier value="urn:uuid:19da3676-2ebb-4c6a-9d29-19554e867d53"/>
+          <timestamp value="2026-10-29T15:28:20-03:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -206303,8 +206303,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:bcf280a1-ef88-4cc6-a4df-de77b3d5b44d"/>
-          <timestamp value="2026-10-20T12:12:07-03:00"/>
+          <identifier value="urn:uuid:53488b46-616c-4d61-b790-760c6f83a3ff"/>
+          <timestamp value="2026-10-29T15:28:20-03:00"/>
           <total value="12"/>
           <offset value="0"/>
           <parameter>
@@ -206768,8 +206768,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:f1ae4343-a511-4377-9d31-c987c7f00fb6"/>
-          <timestamp value="2026-10-20T12:12:07-03:00"/>
+          <identifier value="urn:uuid:57c626f3-1043-48c6-bc0f-d5234ba18355"/>
+          <timestamp value="2026-10-29T15:28:20-03:00"/>
           <total value="12"/>
           <offset value="0"/>
           <parameter>
@@ -207003,8 +207003,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:833ae928-d23c-440c-bee9-3581d79ff810"/>
-          <timestamp value="2026-10-20T12:12:07-03:00"/>
+          <identifier value="urn:uuid:7b9cbf85-23cb-4570-94b3-e7f928d60474"/>
+          <timestamp value="2026-10-29T15:28:20-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -207194,8 +207194,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:ddeab6f3-780d-436b-a962-53fb9e81078e"/>
-          <timestamp value="2026-10-20T12:12:07-03:00"/>
+          <identifier value="urn:uuid:2f03f766-3f12-48c0-8f0f-5cd2c498bae0"/>
+          <timestamp value="2026-10-29T15:28:20-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -207438,8 +207438,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:f4542959-d7da-435f-b9e6-5033bedfc060"/>
-          <timestamp value="2026-10-20T12:12:07-03:00"/>
+          <identifier value="urn:uuid:349371fb-542b-47f2-b61c-b0b17292cf14"/>
+          <timestamp value="2026-10-29T15:28:20-03:00"/>
           <total value="7"/>
           <offset value="0"/>
           <parameter>
@@ -207693,8 +207693,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:da32144a-b879-494c-b4db-edfc771bd894"/>
-          <timestamp value="2026-10-20T12:12:07-03:00"/>
+          <identifier value="urn:uuid:713c260d-3575-4179-ad52-3c2966b0f01c"/>
+          <timestamp value="2026-10-29T15:28:20-03:00"/>
           <total value="7"/>
           <offset value="0"/>
           <parameter>
@@ -207958,8 +207958,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:394cf385-32f4-4b0f-ad15-8313ca51d430"/>
-          <timestamp value="2026-10-20T12:12:07-03:00"/>
+          <identifier value="urn:uuid:b20f2088-d7c6-454a-83d5-8c1964fb9772"/>
+          <timestamp value="2026-10-29T15:28:20-03:00"/>
           <total value="7"/>
           <offset value="0"/>
           <parameter>
@@ -208227,8 +208227,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:117d94be-9a39-405d-885d-68fe9c15f824"/>
-          <timestamp value="2026-10-20T12:12:07-03:00"/>
+          <identifier value="urn:uuid:bd67e33d-aedd-40c8-bae6-2c15c321dcf2"/>
+          <timestamp value="2026-10-29T15:28:20-03:00"/>
           <total value="7"/>
           <offset value="0"/>
           <parameter>
@@ -208580,8 +208580,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:5a6b6297-652b-4396-b4b6-3ef9ef881f4e"/>
-          <timestamp value="2026-10-20T12:12:07-03:00"/>
+          <identifier value="urn:uuid:b08a0ef5-9130-45c4-8ae9-3aaf43d9d5da"/>
+          <timestamp value="2026-10-29T15:28:20-03:00"/>
           <total value="11"/>
           <offset value="0"/>
           <parameter>
@@ -208949,8 +208949,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:3ce206d7-6d6c-430c-9c14-93d9ffdb4ba4"/>
-          <timestamp value="2026-10-20T12:12:07-03:00"/>
+          <identifier value="urn:uuid:70a576c2-699b-4819-a94d-660302012447"/>
+          <timestamp value="2026-10-29T15:28:20-03:00"/>
           <total value="11"/>
           <offset value="0"/>
           <parameter>
@@ -209164,8 +209164,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:0a385dc7-edec-48c0-939a-b58e98392be1"/>
-          <timestamp value="2026-10-20T12:12:07-03:00"/>
+          <identifier value="urn:uuid:ab54777b-0813-4762-83c9-6d425276a003"/>
+          <timestamp value="2026-10-29T15:28:20-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -209344,8 +209344,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:0ba8c89f-6803-4548-80c6-2095f58c3311"/>
-          <timestamp value="2026-10-20T12:12:07-03:00"/>
+          <identifier value="urn:uuid:b3d829b5-4e70-47aa-ab71-8a738985eca3"/>
+          <timestamp value="2026-10-29T15:28:20-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>

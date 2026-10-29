@@ -4,18 +4,20 @@
 
   <a name="computacional"> </a>
   <h3>Modelo Computacional</h3>
-  <p> Para a modelagem do modelo computacionais do Registro de Informação de Regulação Assistencial (RIRA),
-    foram mapeados os campos do Modelo de Informação (MI) aos recursos do <a href="https://hl7.org/fhir/R4/">FHIR
+  <p> Para a modelagem do modelo computacionais do Registro de Informação de Regulação Assistencial
+    (RIRA), foram mapeados os campos do Modelo de Informação (MI) aos recursos do <a
+      href="https://hl7.org/fhir/R4/">FHIR
       R4</a>. Assim, foi realizada a modelagem fechada dos perfis de modo a atender o contexto
     nacional. </p>
   <p>Foi criado um <a href="https://simplifier.net/redenacionaldedadosemsaude/">Projeto Rede
       Nacional de Dados em Saúde</a>, na plataforma <a href="https://simplifier.net/">SIMPLIFIER.NET</a>,
-    para a publicação e distribuição dos perfis relacionados aos documentos computacionais em produção na rede.</p>
+    para a publicação e distribuição dos perfis relacionados aos documentos computacionais em
+    produção na rede.</p>
 
   <a name="bundle-rira"> </a>
   <h3>Bundle de Envio do RIRA</h3>
-  <p> O diagrama abaixo apresenta o pacote <i>Bundle</i> no qual é condensado o RIRA, referenciando todos os dados
-    relevantes para caracterizar uma regulação assistencial. </p>
+  <p> O diagrama abaixo apresenta o pacote <i>Bundle</i> no qual é condensado o RIRA, referenciando
+    todos os dados relevantes para caracterizar uma regulação assistencial. </p>
 
   <p>
     <b>Figura 1 - Diagrama do <i>Bundle</i> do RIRA</b>
@@ -25,9 +27,12 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="700" height="661" viewBox="0 0 1420 1150"
       style="max-width:100%; height:auto;" role="img" aria-labelledby="rira-title rira-desc">
       <title id="rira-title">Estrutura do Bundle RIRA</title>
-      <desc id="rira-desc">Bundle inclui Composition, Appointment, ServiceRequest e Condition nas entries 0 a 3.
-        Composition referencia Appointment e ServiceRequest. Appointment referencia ServiceRequest e Condition.
-        ServiceRequest referencia Condition. Cada perfil possui um link relativo para sua página no IG.</desc>
+      <desc id="rira-desc">Bundle inclui Composition, Appointment, ServiceRequest e Condition nas
+        entries 0 a 3.
+        Composition referencia Appointment e ServiceRequest. Appointment referencia ServiceRequest e
+        Condition.
+        ServiceRequest referencia Condition. Cada perfil possui um link relativo para sua página no
+        IG.</desc>
       <defs>
         <marker id="rira-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
           <path d="M 1 1 L 9 5 L 1 9" fill="none" stroke="#334155" stroke-width="1.5" />
@@ -53,49 +58,53 @@
       <path d="M 1030 610 L 810 875" fill="none" stroke="#334155" stroke-width="2.6" stroke-linejoin="round"
         marker-end="url(#rira-arrow)" />
       <g>
-        <rect x="600.25" y="155" width="219.5" height="40" rx="8" fill="#ffffff" /><text x="710" y="182"
-          text-anchor="middle" font-family="Consolas, monospace" font-size="20" fill="#334155">entry[0].resource</text>
+        <rect x="600.25" y="155" width="219.5" height="40" rx="8" fill="#ffffff" />
+        <text x="710" y="182" text-anchor="middle" font-family="Consolas, monospace" font-size="20" fill="#334155">
+          entry[0].resource</text>
       </g>
       <g>
-        <rect x="30.25" y="360" width="219.5" height="40" rx="8" fill="#ffffff" /><text x="140" y="387"
-          text-anchor="middle" font-family="Consolas, monospace" font-size="20" fill="#334155">entry[1].resource</text>
+        <rect x="30.25" y="360" width="219.5" height="40" rx="8" fill="#ffffff" />
+        <text x="140" y="387" text-anchor="middle" font-family="Consolas, monospace" font-size="20" fill="#334155">
+          entry[1].resource</text>
       </g>
       <g>
-        <rect x="1090.25" y="360" width="219.5" height="40" rx="8" fill="#ffffff" /><text x="1200" y="387"
-          text-anchor="middle" font-family="Consolas, monospace" font-size="20" fill="#334155">entry[2].resource</text>
+        <rect x="1090.25" y="360" width="219.5" height="40" rx="8" fill="#ffffff" />
+        <text x="1200" y="387" text-anchor="middle" font-family="Consolas, monospace" font-size="20" fill="#334155">
+          entry[2].resource</text>
       </g>
       <g>
-        <rect x="1180.25" y="730" width="219.5" height="40" rx="8" fill="#ffffff" /><text x="1290" y="757"
-          text-anchor="middle" font-family="Consolas, monospace" font-size="20" fill="#334155">entry[3].resource</text>
+        <rect x="1180.25" y="730" width="219.5" height="40" rx="8" fill="#ffffff" />
+        <text x="1290" y="757" text-anchor="middle" font-family="Consolas, monospace" font-size="20" fill="#334155">
+          entry[3].resource</text>
       </g>
       <g>
-        <rect x="261.25" y="394" width="357.5" height="40" rx="8" fill="#ffffff" /><text x="440" y="421"
-          text-anchor="middle" font-family="Consolas, monospace" font-size="20"
+        <rect x="261.25" y="394" width="357.5" height="40" rx="8" fill="#ffffff" />
+        <text x="440" y="421" text-anchor="middle" font-family="Consolas, monospace" font-size="20"
           fill="#334155">section[0].entry[0].reference</text>
       </g>
       <g>
-        <rect x="802.0" y="394" width="346.0" height="40" rx="8" fill="#ffffff" /><text x="975" y="421"
-          text-anchor="middle" font-family="Consolas, monospace" font-size="20"
+        <rect x="802.0" y="394" width="346.0" height="40" rx="8" fill="#ffffff" />
+        <text x="975" y="421" text-anchor="middle" font-family="Consolas, monospace" font-size="20"
           fill="#334155">event[0].detail[1].reference</text>
       </g>
       <g>
-        <rect x="558.0" y="675" width="254.0" height="40" rx="8" fill="#ffffff" /><text x="685" y="702"
-          text-anchor="middle" font-family="Consolas, monospace" font-size="20"
+        <rect x="558.0" y="675" width="254.0" height="40" rx="8" fill="#ffffff" />
+        <text x="685" y="702" text-anchor="middle" font-family="Consolas, monospace" font-size="20"
           fill="#334155">basedOn[0].reference</text>
       </g>
       <g>
-        <rect x="307.0" y="730" width="346.0" height="40" rx="8" fill="#ffffff" /><text x="480" y="757"
-          text-anchor="middle" font-family="Consolas, monospace" font-size="20"
+        <rect x="307.0" y="730" width="346.0" height="40" rx="8" fill="#ffffff" />
+        <text x="480" y="757" text-anchor="middle" font-family="Consolas, monospace" font-size="20"
           fill="#334155">reasonReference[0].reference</text>
       </g>
       <g>
-        <rect x="767.0" y="790" width="346.0" height="40" rx="8" fill="#ffffff" /><text x="940" y="817"
-          text-anchor="middle" font-family="Consolas, monospace" font-size="20"
+        <rect x="767.0" y="790" width="346.0" height="40" rx="8" fill="#ffffff" />
+        <text x="940" y="817" text-anchor="middle" font-family="Consolas, monospace" font-size="20"
           fill="#334155">reasonReference[0].reference</text>
       </g>
       <g font-family="Arial, Helvetica, sans-serif" fill="#172b4d" text-anchor="middle">
-        <rect x="570" y="30" width="280" height="95" rx="18" fill="#e8edf5" stroke="#526781" stroke-width="2.5" /><text
-          x="710.0" y="82" font-size="30" font-weight="700">Bundle</text>
+        <rect x="570" y="30" width="280" height="95" rx="18" fill="#e8edf5" stroke="#526781" stroke-width="2.5" />
+        <text x="710.0" y="82" font-size="30" font-weight="700">Bundle</text>
       </g>
       <a href="StructureDefinition-BRRegulacaoAssistencial.html" aria-label="Abrir perfil BRRegulacaoAssistencial">
         <title>Abrir perfil BRRegulacaoAssistencial</title>
@@ -132,9 +141,10 @@
         </g>
       </a>
       <g font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#64748b">
-        <path d="M 390 1110 H 440" stroke="#64748b" stroke-width="2.5" stroke-dasharray="8 6" /><text x="455"
-          y="1116">Inclusão no Bundle</text>
-        <path d="M 735 1110 H 785" stroke="#334155" stroke-width="2.5" /><text x="800" y="1116">Referência entre
+        <path d="M 390 1110 H 440" stroke="#64748b" stroke-width="2.5" stroke-dasharray="8 6" />
+        <text x="455" y="1116">Inclusão no Bundle</text>
+        <path d="M 735 1110 H 785" stroke="#334155" stroke-width="2.5" />
+        <text x="800" y="1116">Referência entre
           recursos</text>
       </g>
     </svg>
@@ -142,9 +152,8 @@
 
   <a name="recursos"> </a>
   <h3>Recursos FHIR</h3>
-  <p> O modelo computacional do RIRA é definido pelo perfil Regulação Assistencial (RIRA) [<code>Composition</code>] e
-    os
-    demais Recursos FHIR apresentados abaixo.</p>
+  <p> O modelo computacional do RIRA é definido pelo perfil Regulação Assistencial (RIRA) [<code>
+    Composition</code>] e os demais Recursos FHIR apresentados abaixo.</p>
 
   <table class="grid">
     <thead>
@@ -155,34 +164,44 @@
     </thead>
     <tbody>
       <tr>
-        <td><i>Composition</i></td>
+        <td>
+          <i>Composition</i>
+        </td>
         <td>
           <code>
-                <a href="StructureDefinition-BRRegulacaoAssistencial.html">BRRegulacaoAssistencial</a>
+            <a href="StructureDefinition-BRRegulacaoAssistencial.html">BRRegulacaoAssistencial</a>
           </code>
         </td>
       </tr>
       <tr>
-        <td><i>Appointment</i></td>
+        <td>
+          <i>Appointment</i>
+        </td>
         <td>
           <code>
-                <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">BRAgendamentoRegulacaoAssistencial</a>
+            <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">
+              BRAgendamentoRegulacaoAssistencial</a>
           </code>
         </td>
       </tr>
       <tr>
-        <td><i>ServiceRequest</i></td>
+        <td>
+          <i>ServiceRequest</i>
+        </td>
         <td>
           <code>
-                <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">BRRequisicaoRegulacaoAssistencial</a>
+            <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">
+              BRRequisicaoRegulacaoAssistencial</a>
           </code>
         </td>
       </tr>
       <tr>
-        <td><i>Condition</i></td>
+        <td>
+          <i>Condition</i>
+        </td>
         <td>
           <code>
-                <a href="StructureDefinition-BRProblemaDiagnostico.html">BRProblemaDiagnostico</a>
+            <a href="StructureDefinition-BRProblemaDiagnostico.html">BRProblemaDiagnostico</a>
           </code>
         </td>
       </tr>
@@ -190,16 +209,15 @@
   </table>
 
   <p>Perfis dos tipos <i>ValueSet</i> e <i>CodeSystem</i> estão associados a recursos
-    terminológicos. No contexto de regulação assistencial e os domínios utilizados, foram criados <i>CodeSystems</i>
-    específicos
-    definidos pelo <a
+    terminológicos. No contexto de regulação assistencial e os domínios utilizados, foram criados <i>
+      CodeSystems</i> específicos definidos pelo <a
       href="https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/cgsd">Comitê
       Gestor de Saúde Digital (CGSD)</a>.</p>
 
   <p>Vale destacar que os perfis terminológicos podem passar por atualizações e versionamentos com
     periodicidade específica de cada domínio, por isso é importante acompanhar a disponibilização
-    dessas atualizações no projeto <a href="https://simplifier.net/redenacionaldedadosemsaude">RNDS no Simplifier</a>.
-  </p>
+    dessas atualizações no projeto <a href="https://simplifier.net/redenacionaldedadosemsaude">RNDS
+      no Simplifier</a>. </p>
 
   <p>Note que na estrutura dos perfis há elementos com bindings para <i>ValueSets</i> que apontam
     para <i>CodeSystems</i>. Já no JSON (<code>Bundle</code>), o elemento “<i>system</i>” sempre
@@ -219,141 +237,232 @@
       <tr>
         <td rowspan="5">
           <code>
-          <a href="StructureDefinition-BRRegulacaoAssistencial.html">BRRegulacaoAssistencial</a>
+            <a href="StructureDefinition-BRRegulacaoAssistencial.html">BRRegulacaoAssistencial</a>
           </code>
         </td>
         <td>status</td>
-        <td><a href="ValueSet-BREstadoDocumento-1.0.html">BREstadoDocumento-1.0</a></td>
-        <td><a href="http://hl7.org/fhir/composition-status">composition-status</a></td>
+        <td>
+          <a href="ValueSet-BREstadoDocumento-1.0.html">BREstadoDocumento-1.0</a>
+        </td>
+        <td>
+          <a href="http://hl7.org/fhir/composition-status">composition-status</a>
+        </td>
       </tr>
       <tr>
         <td>type</td>
-        <td><a href="ValueSet-BRTipoDocumento-1.0.html">BRTipoDocumento-1.0</a></td>
-        <td><a href="CodeSystem-BRTipoDocumento.html">BRTipoDocumento</a></td>
+        <td>
+          <a href="ValueSet-BRTipoDocumento-1.0.html">BRTipoDocumento-1.0</a>
+        </td>
+        <td>
+          <a href="CodeSystem-BRTipoDocumento.html">BRTipoDocumento</a>
+        </td>
       </tr>
       <tr>
         <td>category</td>
-        <td><a href="ValueSet-BRModalidadeAssistencialMIRA.html">BRModalidadeAssistencialMIRA</a></td>
-        <td><a href="CodeSystem-BRModalidadeAssistencial.html">BRModalidadeAssistencial</a></td>
+        <td>
+          <a href="ValueSet-BRModalidadeAssistencialMIRA.html">BRModalidadeAssistencialMIRA</a>
+        </td>
+        <td>
+          <a href="CodeSystem-BRModalidadeAssistencial.html">BRModalidadeAssistencial</a>
+        </td>
       </tr>
       <tr>
         <td>relatesTo.code</td>
-        <td><a href="http://hl7.org/fhir/ValueSet/document-relationship-type">document-relationship-type</a></td>
-        <td><a href="http://hl7.org/fhir/document-relationship-type">document-relationship-type</a></td>
+        <td>
+          <a href="http://hl7.org/fhir/ValueSet/document-relationship-type">
+            document-relationship-type</a>
+        </td>
+        <td>
+          <a href="http://hl7.org/fhir/document-relationship-type">document-relationship-type</a>
+        </td>
       </tr>
       <tr>
         <td>event.code</td>
-        <td><a href="ValueSet-BRStatusRegulacaoAssistencial.html">BRStatusRegulacaoAssistencial</a></td>
-        <td><a href="CodeSystem-BRStatusRegulacaoAssistencial.html">BRStatusRegulacaoAssistencial</a></td>
+        <td>
+          <a href="ValueSet-BRStatusRegulacaoAssistencial.html">BRStatusRegulacaoAssistencial</a>
+        </td>
+        <td>
+          <a href="CodeSystem-BRStatusRegulacaoAssistencial.html">BRStatusRegulacaoAssistencial</a>
+        </td>
       </tr>
       <tr>
         <td rowspan="8">
           <code>
-          <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">BRAgendamentoRegulacaoAssistencial</a>
+            <a href="StructureDefinition-BRAgendamentoRegulacaoAssistencial.html">
+              BRAgendamentoRegulacaoAssistencial</a>
           </code>
         </td>
         <td>status</td>
-        <td><a
-            href="ValueSet-BRStatusAgendamentoRegulacaoAssistencial.html">BRStatusAgendamentoRegulacaoAssistencial</a>
+        <td>
+          <a href="ValueSet-BRStatusAgendamentoRegulacaoAssistencial.html">
+            BRStatusAgendamentoRegulacaoAssistencial</a>
         </td>
-        <td><a href="http://hl7.org/fhir/appointmentstatus">appointmentstatus</a></td>
+        <td>
+          <a href="http://hl7.org/fhir/appointmentstatus">appointmentstatus</a>
+        </td>
       </tr>
       <tr>
         <td>serviceCategory</td>
-        <td><a href="ValueSet-BRModalidadeAssistencialMIRA.html">BRModalidadeAssistencialMIRA</a></td>
-        <td><a href="CodeSystem-BRModalidadeAssistencial.html">BRModalidadeAssistencial</a></td>
+        <td>
+          <a href="ValueSet-BRModalidadeAssistencialMIRA.html">BRModalidadeAssistencialMIRA</a>
+        </td>
+        <td>
+          <a href="CodeSystem-BRModalidadeAssistencial.html">BRModalidadeAssistencial</a>
+        </td>
       </tr>
       <tr>
         <td rowspan="2">serviceType</td>
-        <td rowspan="2"><a href="ValueSet-BRProcedimentosNacionais-1.0.html">BRProcedimentosNacionais-1.0</a></td>
-        <td><a href="CodeSystem-BRTabelaSUS.html">BRTabelaSUS</a></td>
+        <td rowspan="2">
+          <a href="ValueSet-BRProcedimentosNacionais-1.0.html">BRProcedimentosNacionais-1.0</a>
+        </td>
+        <td>
+          <a href="CodeSystem-BRTabelaSUS.html">BRTabelaSUS</a>
+        </td>
       </tr>
       <tr>
-        <td><a href="CodeSystem-BRCBHPMTUSS.html">BRCBHPMTUSS</a></td>
+        <td>
+          <a href="CodeSystem-BRCBHPMTUSS.html">BRCBHPMTUSS</a>
+        </td>
       </tr>
       <tr>
         <td>specialty</td>
-        <td><a href="ValueSet-BROcupacao-1.0.html">BROcupacao-1.0</a></td>
-        <td><a href="CodeSystem-BRCBO.html">BRCBO</a></td>
+        <td>
+          <a href="ValueSet-BROcupacao-1.0.html">BROcupacao-1.0</a>
+        </td>
+        <td>
+          <a href="CodeSystem-BRCBO.html">BRCBO</a>
+        </td>
       </tr>
       <tr>
         <td>appointmentType</td>
-        <td><a href="ValueSet-BRCaraterAtendimentoMIRA.html">BRCaraterAtendimentoMIRA</a></td>
-        <td><a href="http://hl7.org/fhir/request-priority">request-priority</a></td>
+        <td>
+          <a href="ValueSet-BRCaraterAtendimentoMIRA.html">BRCaraterAtendimentoMIRA</a>
+        </td>
+        <td>
+          <a href="http://hl7.org/fhir/request-priority">request-priority</a>
+        </td>
       </tr>
       <tr>
         <td>participant.type</td>
-        <td><a href="ValueSet-BRTipoParticipante.html">BRTipoParticipante</a></td>
-        <td><a href="CodeSystem-BRTipoParticipante.html">BRTipoParticipante</a></td>
+        <td>
+          <a href="ValueSet-BRTipoParticipante.html">BRTipoParticipante</a>
+        </td>
+        <td>
+          <a href="CodeSystem-BRTipoParticipante.html">BRTipoParticipante</a>
+        </td>
       </tr>
       <tr>
         <td>participant.status</td>
-        <td><a href="ValueSet-BRStatusParticipante.html">BRStatusParticipante</a></td>
-        <td><a href="http://hl7.org/fhir/participationstatus">participationstatus</a></td>
+        <td>
+          <a href="ValueSet-BRStatusParticipante.html">BRStatusParticipante</a>
+        </td>
+        <td>
+          <a href="http://hl7.org/fhir/participationstatus">participationstatus</a>
+        </td>
       </tr>
       <tr>
         <td rowspan="7">
           <code>
-          <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">BRRequisicaoRegulacaoAssistencial</a>
+            <a href="StructureDefinition-BRRequisicaoRegulacaoAssistencial.html">
+              BRRequisicaoRegulacaoAssistencial</a>
           </code>
         </td>
         <td>status</td>
-        <td><a href="ValueSet-BRStatusRequisicaoRegulacaoAssistencial.html">BRStatusRequisicaoRegulacaoAssistencial</a>
+        <td>
+          <a href="ValueSet-BRStatusRequisicaoRegulacaoAssistencial.html">
+            BRStatusRequisicaoRegulacaoAssistencial</a>
         </td>
-        <td><a href="http://hl7.org/fhir/request-status">request-status</a></td>
+        <td>
+          <a href="http://hl7.org/fhir/request-status">request-status</a>
+        </td>
       </tr>
       <tr>
         <td>intent</td>
-        <td><a href="ValueSet-BRIntencaoRegulacao.html">BRIntencaoRegulacao</a></td>
-        <td><a href="http://hl7.org/fhir/request-intent">request-intent</a></td>
+        <td>
+          <a href="ValueSet-BRIntencaoRegulacao.html">BRIntencaoRegulacao</a>
+        </td>
+        <td>
+          <a href="http://hl7.org/fhir/request-intent">request-intent</a>
+        </td>
       </tr>
       <tr>
         <td>category</td>
-        <td><a href="ValueSet-BRModalidadeAssistencialMIRA.html">BRModalidadeAssistencialMIRA</a></td>
-        <td><a href="CodeSystem-BRModalidadeAssistencial.html">BRModalidadeAssistencial</a></td>
+        <td>
+          <a href="ValueSet-BRModalidadeAssistencialMIRA.html">BRModalidadeAssistencialMIRA</a>
+        </td>
+        <td>
+          <a href="CodeSystem-BRModalidadeAssistencial.html">BRModalidadeAssistencial</a>
+        </td>
       </tr>
       <tr>
         <td>priority</td>
-        <td><a href="ValueSet-BRCaraterAtendimentoMIRA.html">BRCaraterAtendimentoMIRA</a></td>
-        <td><a href="http://hl7.org/fhir/request-priority">request-priority</a></td>
+        <td>
+          <a href="ValueSet-BRCaraterAtendimentoMIRA.html">BRCaraterAtendimentoMIRA</a>
+        </td>
+        <td>
+          <a href="http://hl7.org/fhir/request-priority">request-priority</a>
+        </td>
       </tr>
       <tr>
         <td rowspan="2">code</td>
-        <td rowspan="2"><a href="ValueSet-BRProcedimentosNacionais-1.0.html">BRProcedimentosNacionais-1.0</a></td>
-        <td><a href="CodeSystem-BRTabelaSUS.html">BRTabelaSUS</a></td>
+        <td rowspan="2">
+          <a href="ValueSet-BRProcedimentosNacionais-1.0.html">BRProcedimentosNacionais-1.0</a>
+        </td>
+        <td>
+          <a href="CodeSystem-BRTabelaSUS.html">BRTabelaSUS</a>
+        </td>
       </tr>
       <tr>
-        <td><a href="CodeSystem-BRCBHPMTUSS.html">BRCBHPMTUSS</a></td>
+        <td>
+          <a href="CodeSystem-BRCBHPMTUSS.html">BRCBHPMTUSS</a>
+        </td>
       </tr>
       <tr>
         <td>performerType</td>
-        <td><a href="ValueSet-BROcupacao-1.0.html">BROcupacao-1.0</a></td>
-        <td><a href="CodeSystem-BRCBO.html">BRCBO</a></td>
+        <td>
+          <a href="ValueSet-BROcupacao-1.0.html">BROcupacao-1.0</a>
+        </td>
+        <td>
+          <a href="CodeSystem-BRCBO.html">BRCBO</a>
+        </td>
       </tr>
       <tr>
         <td rowspan="4">
           <code>
-          <a href="StructureDefinition-BRProblemaDiagnostico.html">BRProblemaDiagnostico</a>
+            <a href="StructureDefinition-BRProblemaDiagnostico.html">BRProblemaDiagnostico</a>
           </code>
         </td>
         <td>clinicalStatus</td>
-        <td><a
-            href="ValueSet-BREstadoResolucaoDiagnosticoProblema-1.0.html">BREstadoResolucaoDiagnosticoProblema-1.0</a>
+        <td>
+          <a href="ValueSet-BREstadoResolucaoDiagnosticoProblema-1.0.html">
+            BREstadoResolucaoDiagnosticoProblema-1.0</a>
         </td>
-        <td><a href="http://terminology.hl7.org/CodeSystem/condition-clinical">condition-clinical</a></td>
+        <td>
+          <a href="http://terminology.hl7.org/CodeSystem/condition-clinical">condition-clinical</a>
+        </td>
       </tr>
       <tr>
         <td>category</td>
-        <td><a href="ValueSet-BRCategoriaCondicao.html">BRCategoriaCondicao</a></td>
-        <td><a href="http://terminology.hl7.org/CodeSystem/condition-category">condition-category</a></td>
+        <td>
+          <a href="ValueSet-BRCategoriaCondicao.html">BRCategoriaCondicao</a>
+        </td>
+        <td>
+          <a href="http://terminology.hl7.org/CodeSystem/condition-category">condition-category</a>
+        </td>
       </tr>
       <tr>
         <td rowspan="2">code</td>
-        <td rowspan="2"><a href="ValueSet-BRProblemaDiagnostico.html">BRProblemaDiagnostico</a></td>
-        <td><a href="CodeSystem-BRCID10.html">BRCID10</a></td>
+        <td rowspan="2">
+          <a href="ValueSet-BRProblemaDiagnostico.html">BRProblemaDiagnostico</a>
+        </td>
+        <td>
+          <a href="CodeSystem-BRCID10.html">BRCID10</a>
+        </td>
       </tr>
       <tr>
-        <td><a href="CodeSystem-BRCIAP2.html">BRCIAP2</a></td>
+        <td>
+          <a href="CodeSystem-BRCIAP2.html">BRCIAP2</a>
+        </td>
       </tr>
     </tbody>
   </table>
@@ -361,6 +470,22 @@
   <a name="status"> </a>
   <h3>Relação de Status</h3>
   <p>Abaixo é apresentado uma relação dos Status possíveis no MC do RIRA.</p>
+
+  <div class="alert alert-info" role="note">
+    <p>
+      <strong>ⓘ ATENÇÃO</strong>
+    </p>
+    <p>
+      A tabela a seguir apresenta uma recomendação de correspondência entre os status, baseada na
+      lógica estrutural do modelo RIRA. Essas correspondências não constituem regras de negócio para
+      validação de entrada na RNDS.
+    </p>
+    <p>Cabe aos sistemas de origem ajustar e enviar os status de forma coerente com a
+      situação da solicitação e com o fluxo de regulação representado. O recebimento dos dados pela RNDS não
+      assegura essa coerência, e o envio de combinações inadequadas pode comprometer a
+      interpretação, a análise e a apresentação das informações pelos sistemas que consomem esses
+      dados.</p>
+  </div>
 
   <p>
     <b>Figura 2 - Relação de Status possíveis no MC do RIRA</b>

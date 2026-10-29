@@ -91,9 +91,9 @@
     "systems" : ["http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial"],
     "uses" : {
     },
+    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial",
     "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
-    "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial",
-    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial"
+    "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial"
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BROcupacao-1.0",
