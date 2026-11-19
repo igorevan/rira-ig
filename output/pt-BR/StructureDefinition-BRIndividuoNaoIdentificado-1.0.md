@@ -37,7 +37,7 @@ Esta estrutura deriva de [Extension](http://hl7.org/fhir/R4/extensibility.html#E
 
 #### Terminologia Ligações (Diferencial)
 
- **Visão Total** 
+ **Visão Completa** 
 
 #### Terminologia Ligações
 

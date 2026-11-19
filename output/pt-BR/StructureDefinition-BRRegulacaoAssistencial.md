@@ -48,7 +48,7 @@ Esta estrutura deriva de [Composition](http://hl7.org/fhir/R4/composition.html)
 
 #### Restrições
 
- **Visão TotalView** 
+ **Visão CompletaView** 
 
 #### Terminologia Ligações
 

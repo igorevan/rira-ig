@@ -44,7 +44,7 @@ Esta estrutura deriva de [Condition](http://hl7.org/fhir/R4/condition.html)
 
 #### Terminologia Ligações (Diferencial)
 
- **Visão TotalView** 
+ **Visão CompletaView** 
 
 #### Terminologia Ligações
 

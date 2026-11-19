@@ -48,7 +48,7 @@ Esta estrutura deriva de [Appointment](http://hl7.org/fhir/R4/appointment.html)
 
 #### Restrições
 
- **Visão TotalView** 
+ **Visão CompletaView** 
 
 #### Terminologia Ligações
 

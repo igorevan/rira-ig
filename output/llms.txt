@@ -10,7 +10,7 @@
 * [Feedback](pt-BR/forms.md)
 * [Abstract](pt-BR/abstract.md)
 * [Integração](pt-BR/integracao.md)
-* [Artefatos](pt-BR/artifacts.md)
+* [Resumo de Artefatos](pt-BR/artifacts.md)
 * [Histórico de mudanças](pt-BR/changes.md)
 * [Exemplos](pt-BR/exemplos.md)
 * [Modelo de Informação](pt-BR/mi.md)

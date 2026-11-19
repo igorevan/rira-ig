@@ -48,7 +48,7 @@ Esta estrutura deriva de [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.
 
 #### Restrições
 
- **Visão TotalView** 
+ **Visão CompletaView** 
 
 #### Terminologia Ligações
 

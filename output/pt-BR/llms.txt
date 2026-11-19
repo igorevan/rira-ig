@@ -10,7 +10,7 @@
 * [Feedback](forms.md)
 * [Abstract](abstract.md)
 * [Integração](integracao.md)
-* [Artefatos](artifacts.md)
+* [Resumo de Artefatos](artifacts.md)
 * [Histórico de mudanças](changes.md)
 * [Exemplos](exemplos.md)
 * [Modelo de Informação](mi.md)
