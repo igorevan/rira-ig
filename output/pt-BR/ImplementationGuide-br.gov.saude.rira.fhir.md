@@ -31,7 +31,7 @@
   "title" : "Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-19T16:30:35-03:00",
+  "date" : "2026-11-23T11:21:14-03:00",
   "publisher" : "Ministério da Saúde do Brasil",
   "contact" : [{
     "name" : "Ministério da Saúde do Brasil",

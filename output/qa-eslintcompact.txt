@@ -28,4 +28,4 @@ RIRARNDSIG
 /home/igor/rira-ig/input/resources/StructureDefinition-BRRegulacaoAssistencial.xml: line 1, col 547261, Error - Error in constraint 'date-1' on element Composition.date with expression 'value.matches('^(200[1-9]|20[1-9]\\d|[2-9]\\d{3})-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$')': Erro ao avaliar a expressão FHIRPath: A função matches só pode ser usada em string, uri, url, code, id mas encontrou [http://hl7.org/fhir/StructureDefinition/dateTime] (@char 7) (INVALID)
 
 err = 25, warn = 0, info = 0, broken links = 0
-IG Publisher Version: 3.0.4
+IG Publisher Version: 3.0.5
