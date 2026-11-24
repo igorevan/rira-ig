@@ -1,4 +1,4 @@
-# Tipo do Participante - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Tipo do Participante - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0
 
 ## CodeSystem: Tipo do Participante 
 
@@ -19,36 +19,8 @@ Este sistema de códigos é referenciado na definição dos seguintes conjuntos 
   "resourceType" : "CodeSystem",
   "id" : "BRTipoParticipante",
   "language" : "pt-BR",
-  "extension" : [{
-    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
-    "valueCode" : "ehr"
-  },
-  {
-    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
-    "valueInteger" : 1,
-    "_valueInteger" : {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
-        "valueCanonical" : "http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir"
-      }]
-    }
-  },
-  {
-    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    "valueCode" : "normative",
-    "_valueCode" : {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
-        "valueCanonical" : "http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir"
-      }]
-    }
-  },
-  {
-    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-    "valueCode" : "4.0.1"
-  }],
   "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante",
-  "version" : "1.0.0-release",
+  "version" : "1.0.0",
   "name" : "BRTipoParticipante",
   "title" : "Tipo do Participante",
   "status" : "active",

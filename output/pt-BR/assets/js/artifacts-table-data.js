@@ -5,7 +5,11 @@ window.artifactsTableData = {
       "category":    "Categoria",
       "useGrouping": "Usar agrupamento",
       "clearAll":      "Limpar tudo",
-      "linkToSection": "Link para esta seção"
+      "linkToSection": "Link para esta seção",
+      "headings":      "Cabeçalhos",
+      "headingsFull":  "Completos",
+      "headingsTitle": "Título",
+      "headingsNone":  "Nenhum"
     },
     "groupDescriptions": {
       "-str-profile": "<p>Definem restrições em recursos FHIR para sistemas em conformidade com este guia de implementação.</p>\n"

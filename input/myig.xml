@@ -2,21 +2,9 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="br.gov.saude.rira.fhir" />
   <language value="pt-BR" />
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-    <valueCode value="normative" />
-  </extension>
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-    <valueInteger value="1" />
-  </extension>
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
-    <valueCode value="ehr" />
-  </extension>
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-    <valueCode value="4.0.1" />
-  </extension>
   <url
     value="http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir" />
-  <version value="1.0.0-release" />
+  <version value="1.0.0" />
   <name value="RIRARNDSIG" />
   <title value="Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS" />
   <status value="active" />
@@ -204,11 +192,11 @@
     </parameter>
     <parameter>
       <code value="releaselabel" />
-      <value value="STU1" />
+      <value value="Release 1.0.0" />
     </parameter>
     <parameter>
       <code value="path-resource" />
-      <value value="input\history" />
+      <value value="input/history" />
     </parameter>
     <parameter>
       <code value="shownav" />

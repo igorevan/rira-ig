@@ -164,15 +164,15 @@
     "oids" : ["2.16.840.1.113883.6.96"],
     "uses" : {
     },
+    "http://hl7.org/fhir/R4/valueset-encounter-reason.html" : "Encounter Reason Codes",
+    "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
     "http://hl7.org/fhir/R4/valueset-servicerequest-orderdetail.html" : "Service Request Order Details Codes",
     "http://hl7.org/fhir/R4/valueset-medication-as-needed-reason.html" : "SNOMED CT Medication As Needed Reason Codes",
-    "http://hl7.org/fhir/R4/valueset-condition-stage.html" : "Condition Stage",
-    "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes",
-    "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
-    "http://hl7.org/fhir/R4/valueset-condition-severity.html" : "Condition/Diagnosis Severity",
-    "http://hl7.org/fhir/R4/valueset-manifestation-or-symptom.html" : "Manifestation and Symptom Codes",
     "http://hl7.org/fhir/R4/valueset-condition-stage-type.html" : "Condition Stage Type",
-    "http://hl7.org/fhir/R4/valueset-encounter-reason.html" : "Encounter Reason Codes"
+    "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes",
+    "http://hl7.org/fhir/R4/valueset-condition-severity.html" : "Condition/Diagnosis Severity",
+    "http://hl7.org/fhir/R4/valueset-condition-stage.html" : "Condition Stage",
+    "http://hl7.org/fhir/R4/valueset-manifestation-or-symptom.html" : "Manifestation and Symptom Codes"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason",
@@ -296,7 +296,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBHPMTUSS",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRCBHPMTUSS",
     "title" : "Classificação Brasileira Hierarquizada de Procedimentos Médicos (CBHPM) e da Terminologia Unificada da Saúde Suplementar (TUSS)",
@@ -307,7 +307,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRCBO",
     "title" : "Classificação Brasileira de Ocupações (CBO)",
@@ -318,7 +318,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCIAP2",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRCIAP2",
     "title" : "Classificação Internacional de Atenção Primária - Segunda Edição - CIAP2",
@@ -329,19 +329,19 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRCID10",
     "title" : "Classificação Internacional de Doenças - Décima Revisão (CID-10)",
     "description" : "Classifica as doenças e outros problemas em saúde registrados em diversos tipos de documentos clínicos.",
     "uses" : {
     },
-    "ValueSet-BRCID10-1.0.html" : "Classificação Internacional de Doenças - Décima Revisão - CID-10",
-    "ValueSet-BRProblemaDiagnostico.html" : "Classificação Internacional de Doenças e Atenção Primária"
+    "ValueSet-BRProblemaDiagnostico.html" : "Classificação Internacional de Doenças e Atenção Primária",
+    "ValueSet-BRCID10-1.0.html" : "Classificação Internacional de Doenças - Décima Revisão - CID-10"
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRJustificativaIndividuoNaoIdentificado",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRJustificativaIndividuoNaoIdentificado",
     "title" : "Justificativa da Impossibilidade de Identificação do Indivíduo (CodeSystem)",
@@ -352,7 +352,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRModalidadeAssistencial",
     "title" : "Modalidade Assistencial",
@@ -363,7 +363,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusAgendamentoRegulacaoAssistencial",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRStatusAgendamentoRegulacaoAssistencial",
     "title" : "Status de agendamento de regulação assistencial (CodeSystem)",
@@ -374,7 +374,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRStatusRegulacaoAssistencial",
     "title" : "Status da regulação assistencial",
@@ -385,7 +385,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRTabelaSUS",
     "title" : "Tabela de procedimentos, medicamentos e OPM do SUS",
@@ -396,7 +396,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRTipoDocumento",
     "title" : "Tipo de Documento (CodeSystem)",
@@ -407,7 +407,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRTipoParticipante",
     "title" : "Tipo do Participante",

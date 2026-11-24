@@ -1,11 +1,10 @@
-
 /*
  * Artifacts table (DataTables) — behaviour for includes/fragment-artifacts-table.html.
  *
  * Reads its data from window.artifactsTableData (assets/js/artifacts-table-data.js, rendered by Jekyll
  * with one block per language) and picks the block matching the page's <html lang="..."> attribute.
  *
- * The view (column filters, grouping, sort, page length and current page) is persisted in localStorage
+ * The view (column filters, grouping, headings, sort, page length and current page) is persisted in localStorage
  * per page path, so a visitor returning to the page sees the same filtered view and page they left.
  */
 document.addEventListener('DOMContentLoaded', function(){
@@ -31,13 +30,13 @@ document.addEventListener('DOMContentLoaded', function(){
   var typeLabel        = labels.type        || 'Type';
   var categoryLabel    = labels.category    || 'Category';
   var clearAllLabel    = labels.clearAll    || 'Clear all';
-  var linkLabel        = labels.linkToSection || 'Link to this section';
-
-  // Chain-link glyph for the group self-links; drawn in currentColor so it follows the header text.
-  var LINK_ICON =
-    '<svg class="artifacts-link-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false">' +
-    '<path fill="currentColor" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"/>' +
-    '</svg>';
+  var headingsLabel    = labels.headings    || 'Headings';
+  var HEADINGS_MODES = ['full', 'title', 'none'];
+  var headingsModeLabels = {
+    full:  labels.headingsFull  || 'Full',
+    title: labels.headingsTitle || 'Title',
+    none:  labels.headingsNone  || 'None'
+  };
 
   // Column model. Data keys: p=grouping position, g=grouping label, n=title, i=id, t=type, d=description.
   var columnDefs = [
@@ -82,22 +81,69 @@ document.addEventListener('DOMContentLoaded', function(){
     return out;
   })();
 
-  // Grouping ids, in table order — these are the section anchors used by artifacts.html#<groupingId>
-  var groupIds = (function(){
-    var s = new Set(), out = [];
-    data.slice().sort(function(a,b){ return a.p - b.p; }).forEach(function(r){
-      if (r.gid && !s.has(r.gid)) { s.add(r.gid); out.push(r.gid); }
-    });
-    return out;
-  })();
+  // Category fragments: an exact group name or its 1-based position in the
+  // complete category list (before filtering/pagination). Unknown anchors are ignored.
+  function categoryFromFragment(hash = window.location.hash) {
+    var value;
+    try { value = decodeURIComponent(hash.replace(/^#/, '')); }
+    catch(e) { return null; }
+    if (!value) return null;
+    if (uniqueCategories.indexOf(value) !== -1) return value;
+    if (/^[1-9]\d*$/.test(value)) {
+      return uniqueCategories[Number(value) - 1] || null;
+    }
+    return null;
+  }
 
   // ----- View state -----
   var grouping = true;
+  // Group header display: 'full' (name + description), 'title' (name only) or 'none'
+  var headings = 'full';
   var selectedTypes = [];
   var selectedCategories = [];
   // Per-column text filters keyed by data key (plain substring, case-insensitive)
   var colTextFilters = {};
+  // Free-text filter from ?text=, matched against any of TEXT_FILTER_KEYS
+  var anyTextFilter = '';  
   var pageLength = 200;
+
+  // ----- URL Parameters view request -----
+  // Uses filters, grouping, sort order, page length and the current page so that a visitor
+  // can be directed to this page with specific view parameters selected.
+  function loadParameters(queryString = window.location.search) {
+    try {
+      const params = new URLSearchParams(queryString);
+
+      if(params.size > 0)
+      {
+        const commaList = (name, fallback = []) =>
+          params.has(name)
+            ? params.get(name).split(",").map(value => value.trim()).filter(Boolean)
+            : fallback;
+
+        return {
+          grouping: params.has("grouping")
+            ? params.get("grouping") === "true"
+            : true,
+          types: commaList("types"),
+          categories: commaList("categories", []),
+          text: params.has("text") ? { value: params.get("text") } : {},
+          start: params.has("start") ? Number(params.get("start")) : 0,
+          length: params.has("length") ? Number(params.get("length")) : 200,
+          order: params.has("order")
+            ? [commaList("order").map((value, index) =>
+                index === 0 ? Number(value) : value
+              )]
+            : [[0, "asc"]]
+        };
+      }
+      else
+      {
+        // null lets the caller fall back to saved state when there is no URL view.
+        return null;
+      }
+    } catch(e) { return null; }
+  }
 
   // ----- Persisted view state (localStorage, per page) -----
   // Stores filters, grouping, sort order, page length and the current page so that a visitor
@@ -116,6 +162,7 @@ document.addEventListener('DOMContentLoaded', function(){
     pageLength = info.length;
     var st = {
       grouping:   grouping,
+      headings:   headings,
       types:      selectedTypes,
       categories: selectedCategories,
       text:       colTextFilters,
@@ -136,23 +183,40 @@ document.addEventListener('DOMContentLoaded', function(){
     return o.map(function(e){ return [e[0], e[1]]; });
   }
 
-  var saved = loadState();
-  if (typeof saved.grouping === 'boolean') grouping = saved.grouping;
-  if (Array.isArray(saved.types)) {
-    selectedTypes = saved.types.filter(function(v){ return uniqueTypes.indexOf(v) !== -1; });
+  // Explicit query categories win; otherwise a recognized fragment supplies
+  // one category. A fragment-only URL uses the same defaults as ?categories=...
+  // rather than inheriting unrelated saved filters.
+  function loadUrlView(search = window.location.search, hash = window.location.hash) {
+    var state = loadParameters(search);
+    var category = categoryFromFragment(hash);
+    if (category !== null && !(new URLSearchParams(search)).has('categories')) {
+      state = state || loadParameters('?categories=');
+      state.categories = [category];
+    }
+    return state;
   }
-  if (Array.isArray(saved.categories)) {
-    selectedCategories = saved.categories.filter(function(v){ return uniqueCategories.indexOf(v) !== -1; });
+
+  var viewState = loadUrlView() || loadState();
+  if (typeof viewState.grouping === 'boolean') grouping = viewState.grouping;
+  if (HEADINGS_MODES.indexOf(viewState.headings) !== -1) headings = viewState.headings;
+  if (Array.isArray(viewState.types)) {
+    selectedTypes = viewState.types.filter(function(v){ return uniqueTypes.indexOf(v) !== -1; });
   }
-  if (saved.text && typeof saved.text === 'object') {
+  if (Array.isArray(viewState.categories)) {
+    selectedCategories = viewState.categories.filter(function(v){ return uniqueCategories.indexOf(v) !== -1; });
+  }
+  if (viewState.text && typeof viewState.text === 'object') {
     TEXT_FILTER_KEYS.forEach(function(k){
-      if (typeof saved.text[k] === 'string' && saved.text[k]) colTextFilters[k] = saved.text[k];
+      if (typeof viewState.text[k] === 'string' && viewState.text[k]) colTextFilters[k] = viewState.text[k];
     });
   }
-  if (typeof saved.length === 'number' && saved.length > 0) pageLength = saved.length;
+  if (viewState.text && typeof viewState.text.value === 'string') {
+    anyTextFilter = viewState.text.value;
+  }  
+  if (typeof viewState.length === 'number' && viewState.length > 0) pageLength = viewState.length;
   var initialView = {
-    start: (typeof saved.start === 'number' && saved.start > 0) ? saved.start : 0,
-    order: validOrder(saved.order)
+    start: (typeof viewState.start === 'number' && viewState.start > 0) ? viewState.start : 0,
+    order: validOrder(viewState.order)
   };
 
   // Custom row filter — registered once globally
@@ -161,6 +225,13 @@ document.addEventListener('DOMContentLoaded', function(){
     jQuery.fn.dataTable.ext.search.push(function(settings, dataArr, dataIndex){
       if (settings.nTable.id !== 'artifactsTable') return true;
       var row = settings.aoData[dataIndex]._aData;
+      if (anyTextFilter) {
+        var anyNeedle = anyTextFilter.toLowerCase();
+        var anyMatch = TEXT_FILTER_KEYS.some(function(k){
+          return String(row[k] == null ? '' : row[k]).replace(/<[^>]*>/g, '').toLowerCase().indexOf(anyNeedle) !== -1;
+        });
+        if (!anyMatch) return false;
+      }
       for (var key in colTextFilters) {
         var needle = colTextFilters[key];
         if (!needle) continue;
@@ -218,10 +289,37 @@ document.addEventListener('DOMContentLoaded', function(){
     return wrap;
   }
 
-  // Register Category popup as a layout feature
+  // Headings popup: single choice, so radios instead of checkboxes, and no chips or Clear all
+  function makeHeadingsPopup(){
+    var wrap = document.createElement('div');
+    wrap.className = 'dt-filter-popup';
+    wrap.setAttribute('data-id', 'headings');
+    wrap.innerHTML =
+      '<button type="button" class="dt-filter-trigger' + (headings !== 'full' ? ' has-filter' : '') + '" aria-expanded="false">' +
+        '<span>' + escapeHtml(headingsLabel) + '</span>' +
+        '<span class="caret">▾</span>' +
+      '</button>' +
+      '<div class="dt-filter-menu" hidden>' +
+        '<div class="dt-filter-menu-header"><span>' + escapeHtml(headingsLabel) + '</span></div>' +
+        HEADINGS_MODES.map(function(v){
+          return '<label><input type="radio" name="artifactsHeadings" value="' + v + '"' + (headings === v ? ' checked' : '') + '/><span>' + escapeHtml(headingsModeLabels[v]) + '</span></label>';
+        }).join('') +
+      '</div>';
+    return wrap;
+  }
+
+  // Register Category and Headings popups as layout features
   if (!jQuery.fn.dataTable.feature.__artifactsToolsRegistered) {
     jQuery.fn.dataTable.feature.__artifactsToolsRegistered = true;
     jQuery.fn.dataTable.feature.register('filterByCategory', makeCategoryPopup);
+    jQuery.fn.dataTable.feature.register('headingsSelect', makeHeadingsPopup);
+  }
+
+  // Hiding is done with CSS classes on the table so switching modes needs no redraw
+  function applyHeadings(){
+    jQuery(tableEl).removeClass('artifacts-headings-title artifacts-headings-none');
+    if (headings !== 'full') jQuery(tableEl).addClass('artifacts-headings-' + headings);
+    jQuery('.dt-filter-popup[data-id="headings"] .dt-filter-trigger').toggleClass('has-filter', headings !== 'full');
   }
 
   function setHeaderFilterMark(colIdx, active){
@@ -242,6 +340,10 @@ document.addEventListener('DOMContentLoaded', function(){
       table.column(colIdx).search(buildSearchPattern(values), true, false);
     }
     var $popup = jQuery('.dt-filter-popup[data-id="' + id + '"]');
+    // Keep checkboxes aligned with URL-driven changes as well as user changes.
+    $popup.find('input[type=checkbox]:not(#artifactsGroupToggle)').each(function(){
+      this.checked = values.indexOf(this.value) !== -1;
+    });
     // Re-render selected chips
     $popup.find('.dt-filter-selected').html(values.map(chipHtml).join(''));
     if (values.length) {
@@ -258,7 +360,7 @@ document.addEventListener('DOMContentLoaded', function(){
     var cfg = {
       orderCellsTop: true,
       layout: {
-        topStart: ['filterByCategory'],
+        topStart: ['filterByCategory', 'headingsSelect'],
         topEnd: ['paging', 'pageLength'],
         bottomStart: 'info',
         bottomEnd: 'paging'
@@ -275,25 +377,12 @@ document.addEventListener('DOMContentLoaded', function(){
         dataSrc: 'g',
         startRender: function(rows, group){
           var first = rows.data().toArray()[0];
-          var gid = first && first.gid;
           var desc = first && groupDescriptions[first.gid];
           var $header = jQuery('<tr/>').append(
             jQuery('<td/>').attr('colspan', VISIBLE_COLS).addClass('artifacts-group-header')
           );
           var $cell = $header.find('td');
-          // The grouping id doubles as the section anchor, so artifacts.html#<groupingId>
-          // links to this section the same way the stock artifacts page does.
-          if (gid) $header.attr('id', gid);
-          var $name = jQuery('<div/>').addClass('artifacts-group-name').text(group).appendTo($cell);
-          if (gid) {
-            var anchor = document.createElement('a');
-            anchor.className = 'artifacts-group-anchor';
-            anchor.setAttribute('href', '#' + encodeURIComponent(gid));
-            anchor.setAttribute('title', linkLabel);
-            anchor.setAttribute('aria-label', linkLabel);
-            anchor.innerHTML = LINK_ICON;
-            $name[0].appendChild(anchor);
-          }
+          jQuery('<div/>').addClass('artifacts-group-name').text(group).appendTo($cell);
           if (desc) {
             jQuery('<div/>').addClass('artifacts-group-desc').html(desc).appendTo($cell);
           }
@@ -310,6 +399,7 @@ document.addEventListener('DOMContentLoaded', function(){
     view = view || {};
     if (table) table.destroy();
     table = jQuery('#artifactsTable').DataTable(buildConfig(grouping, view));
+    applyHeadings();
 
     // Drop the Type multi-select into its column's filter cell
     var typeCell = document.getElementById('filterCellType');
@@ -346,68 +436,35 @@ document.addEventListener('DOMContentLoaded', function(){
   // Persist the view after every draw (page change, sort, length change, filter)
   jQuery(document).on('draw.dt', '#artifactsTable', saveState);
 
+  // DataTables stripes with tr:nth-child, which counts group rows even when Headings = None hides
+  // them. Mark alternate data rows so the CSS can stripe on data rows alone in that mode.
+  jQuery(document).on('draw.dt', '#artifactsTable', function(){
+    jQuery('#artifactsTable > tbody > tr').not('.dtrg-group').each(function(i){
+      jQuery(this).toggleClass('artifacts-stripe', i % 2 === 0);
+    });
+  });
+
   renderTable(grouping, initialView);
 
-  // ----- Deep links: artifacts.html#<groupingId> -----
-  // Resolve a URL fragment to a grouping id (exact match first, then case-insensitive).
-  function resolveGroupId(hash){
-    var h = String(hash || '').replace(/^#/, '');
-    if (!h) return null;
-    try { h = decodeURIComponent(h); } catch(e) {}
-    if (groupIds.indexOf(h) !== -1) return h;
-    var lower = h.toLowerCase();
-    for (var i = 0; i < groupIds.length; i++) {
-      if (groupIds[i].toLowerCase() === lower) return groupIds[i];
-    }
-    return null;
-  }
-
-  function scrollToGroup(gid){
-    var el = document.getElementById(gid);
-    if (!el) return false;
-    var top = el.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop) - 12;
-    window.scrollTo(0, top > 0 ? top : 0);
-    jQuery(el).addClass('artifacts-group-target');
-    window.setTimeout(function(){ jQuery(el).removeClass('artifacts-group-target'); }, 2500);
-    return true;
-  }
-
-  function hasActiveFilter(){
-    if (selectedTypes.length || selectedCategories.length) return true;
-    for (var i = 0; i < TEXT_FILTER_KEYS.length; i++) {
-      if (colTextFilters[TEXT_FILTER_KEYS[i]]) return true;
-    }
-    return false;
-  }
-
-  // Show the requested section: a filtered or ungrouped view may not contain it, so clear the
-  // filters and switch grouping back on, then page to the group's first row and scroll to it.
-  function goToGroup(gid){
-    if (!grouping || hasActiveFilter()) {
-      grouping = true;
-      selectedTypes = [];
+  // Apply fragment links and Back/Forward navigation without reloading the page.
+  // Preserve the current grouping, other filters, length and sort; start on page 1.
+  var fragmentControlsCategory = categoryFromFragment() !== null &&
+    !(new URLSearchParams(window.location.search)).has('categories');
+  window.addEventListener('hashchange', function(){
+    if ((new URLSearchParams(window.location.search)).has('categories')) return;
+    var category = categoryFromFragment();
+    if (category === null) {
+      // Unrelated/invalid anchors do not alter the current view. Removing a
+      // previously recognized fragment clears its category filter.
+      if (window.location.hash || !fragmentControlsCategory) return;
       selectedCategories = [];
-      TEXT_FILTER_KEYS.forEach(function(k){ delete colTextFilters[k]; });
-      renderTable(grouping, {});
+      fragmentControlsCategory = false;
+    } else {
+      selectedCategories = [category];
+      fragmentControlsCategory = true;
     }
-    var idxs = table.rows({ order: 'applied', search: 'applied' }).indexes().toArray();
-    var pos = -1;
-    for (var i = 0; i < idxs.length; i++) {
-      if (table.row(idxs[i]).data().gid === gid) { pos = i; break; }
-    }
-    if (pos === -1) return false;
-    var len = table.page.len();
-    var pg = (len > 0) ? Math.floor(pos / len) : 0;
-    if (pg !== table.page.info().page) table.page(pg).draw(false);
-    return scrollToGroup(gid);
-  }
-
-  function handleHash(){
-    var gid = resolveGroupId(window.location.hash);
-    if (gid) goToGroup(gid);
-  }
-  handleHash();
-  jQuery(window).on('hashchange', handleHash);
+    applyFilter('category');
+  });
 
   // ----- Document-delegated handlers (survive table rebuilds) -----
 
@@ -417,6 +474,12 @@ document.addEventListener('DOMContentLoaded', function(){
     grouping = this.checked;
     // Sort semantics differ between grouped and flat views, so fall back to the default order and first page
     renderTable(grouping, {});
+  });
+
+  jQuery(document).on('change', 'input[name=artifactsHeadings]', function(){
+    headings = this.value;
+    applyHeadings();
+    saveState();
   });
 
   // Open/close popup

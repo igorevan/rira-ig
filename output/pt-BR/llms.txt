@@ -1,4 +1,4 @@
-# br.gov.saude.rira.fhir#1.0.0-release: Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS(pt-BR)
+# br.gov.saude.rira.fhir#1.0.0: Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS(pt-BR)
 
 ## Pages
 

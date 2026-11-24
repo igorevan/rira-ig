@@ -1,4 +1,4 @@
-# Bundle de exemplo do RIRA (Anterior à 2025 com CIAP-2) - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Bundle de exemplo do RIRA (Anterior à 2025 com CIAP-2) - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0
 
 ## Exemplo Bundle: Bundle de exemplo do RIRA (Anterior à 2025 com CIAP-2)
 

@@ -1,4 +1,4 @@
-# Exemplos - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Exemplos - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0
 
 ## Exemplos
 

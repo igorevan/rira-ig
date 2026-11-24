@@ -1,6 +1,6 @@
 {
-  "version" : "1.0.0-release",
-  "date" : "20261123112114",
+  "version" : "1.0.0",
+  "date" : "20261124154135",
   "notForPublication" : true,
   "name" : "br.gov.saude.rira.fhir.r4"
 }

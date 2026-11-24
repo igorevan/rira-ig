@@ -1,4 +1,4 @@
-# Bundle de exemplo do RIRA (Posterior a 2025 com CID-10) - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Bundle de exemplo do RIRA (Posterior a 2025 com CID-10) - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0
 
 ## Exemplo Bundle: Bundle de exemplo do RIRA (Posterior a 2025 com CID-10)
 

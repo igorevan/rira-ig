@@ -1,4 +1,4 @@
-# Informações Complementares de Indivíduos Não Identificados - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Informações Complementares de Indivíduos Não Identificados - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0
 
 ## Extensão: Informações Complementares de Indivíduos Não Identificados 
 
@@ -61,36 +61,8 @@ Outras representações do perfil: [CSV](../StructureDefinition-BRIndividuoNaoId
     "lastUpdated" : "2020-03-11T03:42:05.139+00:00"
   },
   "language" : "pt-BR",
-  "extension" : [{
-    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
-    "valueCode" : "ehr"
-  },
-  {
-    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
-    "valueInteger" : 1,
-    "_valueInteger" : {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
-        "valueCanonical" : "http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir"
-      }]
-    }
-  },
-  {
-    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    "valueCode" : "normative",
-    "_valueCode" : {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
-        "valueCanonical" : "http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir"
-      }]
-    }
-  },
-  {
-    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-    "valueCode" : "4.0.1"
-  }],
   "url" : "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuoNaoIdentificado-1.0",
-  "version" : "1.0.0-release",
+  "version" : "1.0.0",
   "name" : "BRIndividuoNaoIdentificado",
   "title" : "Informações Complementares de Indivíduos Não Identificados",
   "status" : "active",

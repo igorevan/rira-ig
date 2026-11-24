@@ -9,28 +9,8 @@
   <text>
     <status value="extensions"/>
   </text>
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
-    <valueCode value="ehr"/>
-  </extension>
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-    <valueInteger value="1">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
-        <valueCanonical value="http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir"/>
-      </extension>
-    </valueInteger>
-  </extension>
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-    <valueCode value="normative">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
-        <valueCanonical value="http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir"/>
-      </extension>
-    </valueCode>
-  </extension>
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-    <valueCode value="4.0.1"/>
-  </extension>
   <url value="http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoResolucaoDiagnosticoProblema-1.0"/>
-  <version value="1.0.0-release"/>
+  <version value="1.0.0"/>
   <name value="BREstadoResolucaoDiagnosticoProblema"/>
   <title value="Estado da Resolução de Diagnóstico ou Problema"/>
   <status value="active"/>

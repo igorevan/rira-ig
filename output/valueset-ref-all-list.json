@@ -25,8 +25,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.141"],
     "uses" : {
     },
-    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
-    "StructureDefinition-BRProblemaDiagnostico.html" : "Problema/Diagnóstico"
+    "StructureDefinition-BRProblemaDiagnostico.html" : "Problema/Diagnóstico",
+    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/composition-attestation-mode",
@@ -152,10 +152,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.45"],
     "uses" : {
     },
-    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
-    "StructureDefinition-BRProblemaDiagnostico.html" : "Problema/Diagnóstico",
     "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial",
-    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial"
+    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial",
+    "StructureDefinition-BRProblemaDiagnostico.html" : "Problema/Diagnóstico",
+    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
@@ -169,10 +169,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.57"],
     "uses" : {
     },
-    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
-    "StructureDefinition-BRProblemaDiagnostico.html" : "Problema/Diagnóstico",
     "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial",
-    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial"
+    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial",
+    "StructureDefinition-BRProblemaDiagnostico.html" : "Problema/Diagnóstico",
+    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/languages",
@@ -186,10 +186,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
-    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
-    "StructureDefinition-BRProblemaDiagnostico.html" : "Problema/Diagnóstico",
     "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial",
-    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial"
+    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial",
+    "StructureDefinition-BRProblemaDiagnostico.html" : "Problema/Diagnóstico",
+    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/list-empty-reason",
@@ -301,10 +301,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.27"],
     "uses" : {
     },
-    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
-    "StructureDefinition-BRProblemaDiagnostico.html" : "Problema/Diagnóstico",
     "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial",
-    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial"
+    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial",
+    "StructureDefinition-BRProblemaDiagnostico.html" : "Problema/Diagnóstico",
+    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/servicerequest-orderdetail",
@@ -362,7 +362,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCID10-1.0",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRCID10",
     "title" : "Classificação Internacional de Doenças - Décima Revisão - CID-10",
@@ -371,7 +371,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCaraterAtendimentoMIRA",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRCaraterAtendimentoMIRA",
     "title" : "Caráter de Atendimento no MIRA",
@@ -379,12 +379,12 @@
     "systems" : ["http://hl7.org/fhir/request-priority"],
     "uses" : {
     },
-    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
-    "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial"
+    "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial",
+    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial"
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCategoriaCondicao",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRCategoriaCondicao",
     "title" : "Classificação de uma condição",
@@ -396,7 +396,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoDocumento-1.0",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BREstadoDocumento",
     "title" : "Estado do Documento",
@@ -408,7 +408,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoResolucaoDiagnosticoProblema-1.0",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BREstadoResolucaoDiagnosticoProblema",
     "title" : "Estado da Resolução de Diagnóstico ou Problema",
@@ -420,7 +420,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRIntencaoRegulacao",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRIntencaoRegulacao",
     "title" : "Intenção de requisição de regulação assistencial",
@@ -432,7 +432,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRJustificativaIndividuoNaoIdentificado-1.0",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRJustificativaIndividuoNaoIdentificado",
     "title" : "Justificativa da Impossibilidade de Identificação do Indivíduo (ValueSet)",
@@ -440,13 +440,13 @@
     "systems" : ["http://www.saude.gov.br/fhir/r4/CodeSystem/BRJustificativaIndividuoNaoIdentificado"],
     "uses" : {
     },
-    "StructureDefinition-BRProblemaDiagnostico.html" : "Problema/Diagnóstico",
+    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial",
     "StructureDefinition-BRIndividuoNaoIdentificado-1.0.html" : "Informações Complementares de Indivíduos Não Identificados",
-    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial"
+    "StructureDefinition-BRProblemaDiagnostico.html" : "Problema/Diagnóstico"
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRModalidadeAssistencialMIRA",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRModalidadeAssistencialMIRA",
     "title" : "Modalidade Assistencial MIRA",
@@ -454,13 +454,13 @@
     "systems" : ["http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial"],
     "uses" : {
     },
-    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
     "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial",
-    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial"
+    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial",
+    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial"
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BROcupacao-1.0",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BROcupacao",
     "title" : "Classificação Brasileira de Ocupações - CBO",
@@ -468,12 +468,12 @@
     "systems" : ["http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO"],
     "uses" : {
     },
-    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
-    "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial"
+    "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial",
+    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial"
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRProblemaDiagnostico",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRProblemaDiagnostico",
     "title" : "Classificação Internacional de Doenças e Atenção Primária",
@@ -486,7 +486,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRProcedimentosNacionais-1.0",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRProcedimentosNacionais",
     "title" : "Procedimento realizado",
@@ -495,12 +495,12 @@
     "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBHPMTUSS"],
     "uses" : {
     },
-    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial",
-    "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial"
+    "StructureDefinition-BRAgendamentoRegulacaoAssistencial.html" : "Agendamento de Regulação Assistencial",
+    "StructureDefinition-BRRequisicaoRegulacaoAssistencial.html" : "Requisição de Regulação Assistencial"
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRSexo-1.0",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRSexo",
     "title" : "Sexo",
@@ -508,13 +508,13 @@
     "systems" : ["http://hl7.org/fhir/administrative-gender"],
     "uses" : {
     },
-    "StructureDefinition-BRProblemaDiagnostico.html" : "Problema/Diagnóstico",
+    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial",
     "StructureDefinition-BRIndividuoNaoIdentificado-1.0.html" : "Informações Complementares de Indivíduos Não Identificados",
-    "StructureDefinition-BRRegulacaoAssistencial.html" : "Regulação Assistencial"
+    "StructureDefinition-BRProblemaDiagnostico.html" : "Problema/Diagnóstico"
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRStatusAgendamentoRegulacaoAssistencial",
     "title" : "Status de agendamento de regulação assistencial (ValueSet)",
@@ -527,7 +527,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusParticipante",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRStatusParticipante",
     "title" : "Status do Participante do agendamento",
@@ -539,7 +539,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRStatusRegulacaoAssistencial",
     "title" : "Status de regulação assistencial",
@@ -551,7 +551,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRequisicaoRegulacaoAssistencial",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRStatusRequisicaoRegulacaoAssistencial",
     "title" : "Status de requisição de regulação assistencial",
@@ -563,7 +563,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoDocumento-1.0",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRTipoDocumento",
     "title" : "Tipo de Documento (ValueSet)",
@@ -575,7 +575,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoParticipante",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRTipoParticipante",
     "title" : "Tipo Participante",

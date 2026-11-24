@@ -1,4 +1,4 @@
-# Classificação Internacional de Doenças - Décima Revisão (CID-10) - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Classificação Internacional de Doenças - Décima Revisão (CID-10) - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0
 
 ## CodeSystem: Classificação Internacional de Doenças - Décima Revisão (CID-10) 
 
@@ -20,36 +20,8 @@ Este sistema de códigos é referenciado na definição dos seguintes conjuntos 
   "resourceType" : "CodeSystem",
   "id" : "BRCID10",
   "language" : "pt-BR",
-  "extension" : [{
-    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
-    "valueCode" : "ehr"
-  },
-  {
-    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
-    "valueInteger" : 1,
-    "_valueInteger" : {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
-        "valueCanonical" : "http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir"
-      }]
-    }
-  },
-  {
-    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    "valueCode" : "normative",
-    "_valueCode" : {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
-        "valueCanonical" : "http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir"
-      }]
-    }
-  },
-  {
-    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-    "valueCode" : "4.0.1"
-  }],
   "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
-  "version" : "1.0.0-release",
+  "version" : "1.0.0",
   "name" : "BRCID10",
   "title" : "Classificação Internacional de Doenças - Décima Revisão (CID-10)",
   "status" : "active",

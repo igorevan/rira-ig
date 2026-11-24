@@ -13,30 +13,13 @@
      fhir:Narrative.status [ fhir:value "generated" ] ;
      fhir:Narrative.div "<div xml:lang=\"pt-BR\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"pt-BR\"><p class=\"res-header-id\"><b>Narrativa gerada: ImplementationGuide br.gov.saude.rira.fhir</b></p><a name=\"br.gov.saude.rira.fhir\"> </a><a name=\"hcbr.gov.saude.rira.fhir\"> </a><div style=\"display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Língua: pt-BR</p></div><h2>RIRARNDSIG</h2><p>O URL oficial para este guia de implementação é: </p><pre>http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir</pre><div><p>Guia de Implementação da Rede Nacional de Dados em Saúde (RNDS)</p>\n</div></div>"
   ] ;
-  fhir:DomainResource.extension [
-     fhir:index -1 ;
-     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-     fhir:Extension.valueCode [ fhir:value "normative" ]
-  ], [
-     fhir:index -1 ;
-     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm" ] ;
-     fhir:Extension.valueInteger [ fhir:value "1"^^xsd:integer ]
-  ], [
-     fhir:index -1 ;
-     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg" ] ;
-     fhir:Extension.valueCode [ fhir:value "ehr" ]
-  ], [
-     fhir:index -1 ;
-     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-     fhir:Extension.valueCode [ fhir:value "4.0.1" ]
-  ] ;
   fhir:ImplementationGuide.url [ fhir:value "http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir"] ;
-  fhir:ImplementationGuide.version [ fhir:value "1.0.0-release"] ;
+  fhir:ImplementationGuide.version [ fhir:value "1.0.0"] ;
   fhir:ImplementationGuide.name [ fhir:value "RIRARNDSIG"] ;
   fhir:ImplementationGuide.title [ fhir:value "Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS"] ;
   fhir:ImplementationGuide.status [ fhir:value "active"] ;
   fhir:ImplementationGuide.experimental [ fhir:value "false"^^xsd:boolean] ;
-  fhir:ImplementationGuide.date [ fhir:value "2026-11-23T11:21:14-03:00"^^xsd:dateTime] ;
+  fhir:ImplementationGuide.date [ fhir:value "2026-11-24T15:41:35-03:00"^^xsd:dateTime] ;
   fhir:ImplementationGuide.publisher [ fhir:value "Ministério da Saúde do Brasil"] ;
   fhir:ImplementationGuide.contact [
      fhir:index -1 ;
@@ -121,7 +104,7 @@
        ], [
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "value" ] ;
-         fhir:Extension.valueString [ fhir:value "STU1" ]
+         fhir:Extension.valueString [ fhir:value "Release 1.0.0" ]
        ] ;
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
@@ -1015,10 +998,6 @@
      fhir:ImplementationGuide.definition.page [
        fhir:Element.extension [
          fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "informative" ]
-       ], [
-         fhir:index -1 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
          fhir:Extension.valueUrl [ fhir:value "toc.html" ]
        ] ;
@@ -1028,10 +1007,6 @@
        fhir:ImplementationGuide.definition.page.page [
          fhir:index -1 ;
          fhir:Element.extension [
-           fhir:index -1 ;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-           fhir:Extension.valueCode [ fhir:value "informative" ]
-         ], [
            fhir:index -1 ;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
            fhir:Extension.valueUrl [ fhir:value "index.html" ]
@@ -1043,10 +1018,6 @@
          fhir:index -1 ;
          fhir:Element.extension [
            fhir:index -1 ;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-           fhir:Extension.valueCode [ fhir:value "informative" ]
-         ], [
-           fhir:index -1 ;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
            fhir:Extension.valueUrl [ fhir:value "abstract.html" ]
          ] ;
@@ -1056,10 +1027,6 @@
        ], [
          fhir:index -1 ;
          fhir:Element.extension [
-           fhir:index -1 ;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-           fhir:Extension.valueCode [ fhir:value "informative" ]
-         ], [
            fhir:index -1 ;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
            fhir:Extension.valueUrl [ fhir:value "credenciamento.html" ]
@@ -1071,10 +1038,6 @@
          fhir:index -1 ;
          fhir:Element.extension [
            fhir:index -1 ;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-           fhir:Extension.valueCode [ fhir:value "informative" ]
-         ], [
-           fhir:index -1 ;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
            fhir:Extension.valueUrl [ fhir:value "integracao.html" ]
          ] ;
@@ -1084,10 +1047,6 @@
        ], [
          fhir:index -1 ;
          fhir:Element.extension [
-           fhir:index -1 ;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-           fhir:Extension.valueCode [ fhir:value "informative" ]
-         ], [
            fhir:index -1 ;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
            fhir:Extension.valueUrl [ fhir:value "mi.html" ]
@@ -1099,10 +1058,6 @@
          fhir:index -1 ;
          fhir:Element.extension [
            fhir:index -1 ;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-           fhir:Extension.valueCode [ fhir:value "informative" ]
-         ], [
-           fhir:index -1 ;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
            fhir:Extension.valueUrl [ fhir:value "mc.html" ]
          ] ;
@@ -1112,10 +1067,6 @@
        ], [
          fhir:index -1 ;
          fhir:Element.extension [
-           fhir:index -1 ;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-           fhir:Extension.valueCode [ fhir:value "informative" ]
-         ], [
            fhir:index -1 ;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
            fhir:Extension.valueUrl [ fhir:value "exemplos.html" ]
@@ -1127,10 +1078,6 @@
          fhir:index -1 ;
          fhir:Element.extension [
            fhir:index -1 ;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-           fhir:Extension.valueCode [ fhir:value "informative" ]
-         ], [
-           fhir:index -1 ;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
            fhir:Extension.valueUrl [ fhir:value "changes.html" ]
          ] ;
@@ -1140,10 +1087,6 @@
        ], [
          fhir:index -1 ;
          fhir:Element.extension [
-           fhir:index -1 ;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-           fhir:Extension.valueCode [ fhir:value "informative" ]
-         ], [
            fhir:index -1 ;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
            fhir:Extension.valueUrl [ fhir:value "downloads.html" ]
@@ -1155,10 +1098,6 @@
          fhir:index -1 ;
          fhir:Element.extension [
            fhir:index -1 ;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-           fhir:Extension.valueCode [ fhir:value "informative" ]
-         ], [
-           fhir:index -1 ;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
            fhir:Extension.valueUrl [ fhir:value "forms.html" ]
          ] ;
@@ -1168,10 +1107,6 @@
        ], [
          fhir:index -1 ;
          fhir:Element.extension [
-           fhir:index -1 ;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-           fhir:Extension.valueCode [ fhir:value "informative" ]
-         ], [
            fhir:index -1 ;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
            fhir:Extension.valueUrl [ fhir:value "suporte.html" ]
@@ -1184,7 +1119,7 @@
      fhir:ImplementationGuide.definition.parameter [
        fhir:index -1 ;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
-       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input\\history" ]
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/history" ]
      ], [
        fhir:index -1 ;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
@@ -1225,10 +1160,6 @@
        fhir:index -1 ;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
        fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/testing" ]
-     ], [
-       fhir:index -1 ;
-       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
-       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/history" ]
      ], [
        fhir:index -1 ;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;

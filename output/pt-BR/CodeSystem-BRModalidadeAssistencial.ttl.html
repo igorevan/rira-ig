@@ -10,7 +10,7 @@
 <html xml:lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Modalidade Assistencial - TTL Representation - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release</title>
+    <title>Modalidade Assistencial - TTL Representation - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -49,7 +49,6 @@
 	  <script type="text/javascript" src="assets/js/prism.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"12.30"}
     h3,h4,h5,h6{--heading-prefix:"12.30"}</style>
@@ -62,7 +61,7 @@
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS</span>
             <br/>
-            <span style="display:inline-block;">1.0.0-release - STU1
+            <span style="display:inline-block;">1.0.0 - Release 1.0.0
 
 
 
@@ -201,7 +200,7 @@
 
 <!-- layouts\layout-instance-format -->
 <div style="counter-reset: section 9" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS - Compilação de desenvolvimento local (v1.0.0-release) construída pelas ferramentas de compilação FHIR (HL7&reg; FHIR&reg; Standard). Veja o <a href='http://fhir.saude.gov.br/rira/history.html'>Diretório de versões publicadas</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS - Compilação de desenvolvimento local (v1.0.0) construída pelas ferramentas de compilação FHIR (HL7&reg; FHIR&reg; Standard). Veja o <a href='http://fhir.saude.gov.br/rira/history.html'>Diretório de versões publicadas</a></p><!--EndReleaseHeader-->
 
 
 
@@ -252,18 +251,18 @@
 
 <h2 id="root">: Modalidade Assistencial</h2>
 
-  <table class="colsn" data-fhir="generated">
+  <table class="colsi" data-fhir="generated">
     <tr>
 
-      <td colspan="1">
+      <td colspan="2">
         
-          <i>Status dos padrões da página:</i> <a href="http://hl7.org/fhir/R4/versions.html#std-process" title="Status dos padrões">Normative</a>
+          Active
           
-        
-      </td>
 
-      <td>
-        <a href="http://hl7.org/fhir/versions.html#maturity">Nível de maturidade</a>: 1
+            a partir de 
+2020-03-11
+
+          
         
       </td>
 
@@ -294,45 +293,8 @@
      <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ] ;
      fhir:Narrative.div &quot;&lt;div xml:lang=\&quot;pt-BR\&quot; xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot; lang=\&quot;pt-BR\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narrativa gerada: CodeSystem BRModalidadeAssistencial&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;BRModalidadeAssistencial\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcBRModalidadeAssistencial\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Língua: pt-BR&lt;/p&gt;&lt;/div&gt;&lt;p&gt;Este case-sensitive sistema de código &lt;code&gt;http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial&lt;/code&gt; define o seguinte códigos:&lt;/p&gt;&lt;table class=\&quot;codes\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Código&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Ecrã&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;01&lt;a name=\&quot;BRModalidadeAssistencial-01\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Atenção Básica&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;02&lt;a name=\&quot;BRModalidadeAssistencial-02\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Atenção Domiciliar&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;03&lt;a name=\&quot;BRModalidadeAssistencial-03\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Atenção Intermediária&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;04&lt;a name=\&quot;BRModalidadeAssistencial-04\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Atenção Hospitalar&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;05&lt;a name=\&quot;BRModalidadeAssistencial-05\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Atenção Psicossocial&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;06&lt;a name=\&quot;BRModalidadeAssistencial-06\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Atenção à Urgência/Emergência&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;07&lt;a name=\&quot;BRModalidadeAssistencial-07\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ambulatorial Especializada&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;08&lt;a name=\&quot;BRModalidadeAssistencial-08\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Assistência Farmacêutica&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;09&lt;a name=\&quot;BRModalidadeAssistencial-09\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Assistência Ambulatorial&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
   ] ;
-  <a href="http://hl7.org/fhir/R4/domainresource.html#CodeSystem.extension">fhir:DomainResource.extension</a> [
-     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
-     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-wg&quot; ] ;
-     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ehr&quot; ]
-  ], [
-     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
-     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm&quot; ] ;
-     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueInteger</a> [
-       <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;1&quot;^^xsd:integer ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#Element#integer.extension">fhir:Element.extension</a> [
-         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
-         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom&quot; ] ;
-         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueCanonical</a> [
-           <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir&quot; ;
-           <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir&gt;
-         ]
-       ]
-     ]
-  ], [
-     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
-     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status&quot; ] ;
-     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueCode</a> [
-       <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;normative&quot; ;
-       <a href="http://hl7.org/fhir/R4/datatypes.html#Element#code.extension">fhir:Element.extension</a> [
-         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
-         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom&quot; ] ;
-         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueCanonical</a> [
-           <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir&quot; ;
-           <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir&gt;
-         ]
-       ]
-     ]
-  ], [
-     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
-     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version&quot; ] ;
-     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;4.0.1&quot; ]
-  ] ;
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.url">fhir:CodeSystem.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial&quot;] ;
-  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.version">fhir:CodeSystem.version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1.0.0-release&quot;] ;
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.version">fhir:CodeSystem.version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1.0.0&quot;] ;
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.name">fhir:CodeSystem.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;BRModalidadeAssistencial&quot;] ;
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.title">fhir:CodeSystem.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Modalidade Assistencial&quot;] ;
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.status">fhir:CodeSystem.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;active&quot;] ;
@@ -447,7 +409,7 @@
               </td>
               <td style="text-align:var(--ig-right);">&#xA0;
 
-                <a href="CodeSystem-BRStatusAgendamentoRegulacaoAssistencial.html">seguinte ></a>
+                <a href="CodeSystem-BRStatusAgendamentoRegulacaoAssistencial.html">seguinte &gt;</a>
 
               </td>
             </tr>
@@ -461,10 +423,10 @@
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.saude.gov.br">Ministério da Saúde do Brasil</a>.  
-          Pacote br.gov.saude.rira.fhir#1.0.0-release baseado em <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Pacote br.gov.saude.rira.fhir#1.0.0 baseado em <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Gerado 
-  <span title="2026-11-23 11:21:00 -0300">
-    2026-11-23
+  <span title="2026-11-24 15:41:00 -0300">
+    2026-11-24
   </span>
 
           <br/>

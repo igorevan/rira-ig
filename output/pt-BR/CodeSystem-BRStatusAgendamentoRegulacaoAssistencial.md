@@ -1,4 +1,4 @@
-# Status de agendamento de regulação assistencial (CodeSystem) - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release
+# Status de agendamento de regulação assistencial (CodeSystem) - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0
 
 ## CodeSystem: Status de agendamento de regulação assistencial (CodeSystem) 
 
@@ -19,36 +19,8 @@ Este sistema de códigos é referenciado na definição dos seguintes conjuntos 
   "resourceType" : "CodeSystem",
   "id" : "BRStatusAgendamentoRegulacaoAssistencial",
   "language" : "en",
-  "extension" : [{
-    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
-    "valueCode" : "ehr"
-  },
-  {
-    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
-    "valueInteger" : 1,
-    "_valueInteger" : {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
-        "valueCanonical" : "http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir"
-      }]
-    }
-  },
-  {
-    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    "valueCode" : "normative",
-    "_valueCode" : {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
-        "valueCanonical" : "http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir"
-      }]
-    }
-  },
-  {
-    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-    "valueCode" : "4.0.1"
-  }],
   "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusAgendamentoRegulacaoAssistencial",
-  "version" : "1.0.0-release",
+  "version" : "1.0.0",
   "name" : "BRStatusAgendamentoRegulacaoAssistencial",
   "title" : "Status de agendamento de regulação assistencial (CodeSystem)",
   "status" : "active",

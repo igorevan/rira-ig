@@ -1,7 +1,7 @@
 {
   "codeSystems" : [{
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBHPMTUSS",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRCBHPMTUSS",
     "title" : "Classificação Brasileira Hierarquizada de Procedimentos Médicos (CBHPM) e da Terminologia Unificada da Saúde Suplementar (TUSS)",
@@ -9,7 +9,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRCBO",
     "title" : "Classificação Brasileira de Ocupações (CBO)",
@@ -17,7 +17,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCIAP2",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRCIAP2",
     "title" : "Classificação Internacional de Atenção Primária - Segunda Edição - CIAP2",
@@ -25,7 +25,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRCID10",
     "title" : "Classificação Internacional de Doenças - Décima Revisão (CID-10)",
@@ -33,7 +33,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCategoriaDiagnostico",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRCategoriaDiagnostico",
     "title" : "Categoria do Diagnóstico (CodeSystem)",
@@ -41,7 +41,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRJustificativaIndividuoNaoIdentificado",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRJustificativaIndividuoNaoIdentificado",
     "title" : "Justificativa da Impossibilidade de Identificação do Indivíduo (CodeSystem)",
@@ -49,7 +49,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRModalidadeAssistencial",
     "title" : "Modalidade Assistencial",
@@ -57,7 +57,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusAgendamentoRegulacaoAssistencial",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRStatusAgendamentoRegulacaoAssistencial",
     "title" : "Status de agendamento de regulação assistencial (CodeSystem)",
@@ -65,7 +65,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRStatusRegulacaoAssistencial",
     "title" : "Status da regulação assistencial",
@@ -73,7 +73,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRTabelaSUS",
     "title" : "Tabela de procedimentos, medicamentos e OPM do SUS",
@@ -81,7 +81,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRTipoDocumento",
     "title" : "Tipo de Documento (CodeSystem)",
@@ -89,7 +89,7 @@
   },
   {
     "url" : "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante",
-    "version" : "1.0.0-release",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BRTipoParticipante",
     "title" : "Tipo do Participante",

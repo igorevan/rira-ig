@@ -10,7 +10,7 @@
 <html xml:lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Classificação de uma condição - JSON Representation - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0-release</title>
+    <title>Classificação de uma condição - JSON Representation - Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS v1.0.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -49,7 +49,6 @@
 	  <script type="text/javascript" src="assets/js/prism.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"12.8"}
     h3,h4,h5,h6{--heading-prefix:"12.8"}</style>
@@ -62,7 +61,7 @@
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS</span>
             <br/>
-            <span style="display:inline-block;">1.0.0-release - STU1
+            <span style="display:inline-block;">1.0.0 - Release 1.0.0
 
 
 
@@ -201,7 +200,7 @@
 
 <!-- layouts\layout-instance-format -->
 <div style="counter-reset: section 8" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS - Compilação de desenvolvimento local (v1.0.0-release) construída pelas ferramentas de compilação FHIR (HL7&reg; FHIR&reg; Standard). Veja o <a href='http://fhir.saude.gov.br/rira/history.html'>Diretório de versões publicadas</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">Guia de Implementação do Registro de Regulação Assistencial (RIRA) da RNDS - Compilação de desenvolvimento local (v1.0.0) construída pelas ferramentas de compilação FHIR (HL7&reg; FHIR&reg; Standard). Veja o <a href='http://fhir.saude.gov.br/rira/history.html'>Diretório de versões publicadas</a></p><!--EndReleaseHeader-->
 
 
 
@@ -252,18 +251,18 @@
 
 <h2 id="root">: Classificação de uma condição</h2>
 
-  <table class="colsn" data-fhir="generated">
+  <table class="colsi" data-fhir="generated">
     <tr>
 
-      <td colspan="1">
+      <td colspan="2">
         
-          <i>Status dos padrões da página:</i> <a href="http://hl7.org/fhir/R4/versions.html#std-process" title="Status dos padrões">Normative</a>
+          Active
           
-        
-      </td>
 
-      <td>
-        <a href="http://hl7.org/fhir/versions.html#maturity">Nível de maturidade</a>: 1
+            a partir de 
+2020-03-11
+
+          
         
       </td>
 
@@ -289,42 +288,8 @@
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xml:lang=\&quot;pt-BR\&quot; xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot; lang=\&quot;pt-BR\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narrativa gerada: ValueSet BRCategoriaCondicao&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;BRCategoriaCondicao\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcBRCategoriaCondicao\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Última atualização: 2020-03-11 19:14:51+0000; Língua: pt-BR&lt;/p&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Include estes códigos, tal como definidos em &lt;a href=\&quot;http://terminology.hl7.org/7.5.0/CodeSystem-condition-category.html\&quot;&gt;&lt;code&gt;http://terminology.hl7.org/CodeSystem/condition-category&lt;/code&gt;&lt;/a&gt;&lt;span title=\&quot;Version is not explicitly stated, which means it is fixed to 2.0.0, the version found through the package references\&quot;&gt; versão &amp;#x1F4E6;2.0.0&lt;/span&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Código&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Ecrã&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definição&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Portuguese (Brazil) (pt)&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://terminology.hl7.org/7.5.0/CodeSystem-condition-category.html#condition-category-problem-list-item\&quot;&gt;problem-list-item&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Problem List Item&lt;/td&gt;&lt;td&gt;An item on a problem list that can be managed over time and can be expressed by a practitioner (e.g. physician, nurse), patient, or related person.&lt;/td&gt;&lt;td&gt;Problema listado&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://terminology.hl7.org/7.5.0/CodeSystem-condition-category.html#condition-category-encounter-diagnosis\&quot;&gt;encounter-diagnosis&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter Diagnosis&lt;/td&gt;&lt;td&gt;A point in time diagnosis (e.g. from a physician or nurse) in context of an encounter.&lt;/td&gt;&lt;td&gt;Diagnóstico&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"
   },
-  "<a href="http://hl7.org/fhir/R4/domainresource.html#ValueSet.extension">extension</a>" : [
-    {
-      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
-      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "ehr"
-    },
-    {
-      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
-      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueInteger</a>" : 1,
-      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">_valueInteger</a>" : {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#integer.extension">extension</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir"
-          }
-        ]
-      }
-    },
-    {
-      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "normative",
-      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">_valueCode</a>" : {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#code.extension">extension</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://fhir.saude.gov.br/rira/ImplementationGuide/br.gov.saude.rira.fhir"
-          }
-        ]
-      }
-    },
-    {
-      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "4.0.1"
-    }
-  ],
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">url</a>" : "http://www.saude.gov.br/fhir/r4/ValueSet/BRCategoriaCondicao",
-  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">version</a>" : "1.0.0-release",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">version</a>" : "1.0.0",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.name">name</a>" : "BRCategoriaCondicao",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">title</a>" : "Classificação de uma condição",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">status</a>" : "active",
@@ -426,7 +391,7 @@
               </td>
               <td style="text-align:var(--ig-right);">&#xA0;
 
-                <a href="ValueSet-BRCategoriaCondicao.ttl.html">seguinte ></a>
+                <a href="ValueSet-BRCategoriaCondicao.ttl.html">seguinte &gt;</a>
 
               </td>
             </tr>
@@ -440,10 +405,10 @@
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.saude.gov.br">Ministério da Saúde do Brasil</a>.  
-          Pacote br.gov.saude.rira.fhir#1.0.0-release baseado em <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Pacote br.gov.saude.rira.fhir#1.0.0 baseado em <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Gerado 
-  <span title="2026-11-23 11:21:00 -0300">
-    2026-11-23
+  <span title="2026-11-24 15:41:00 -0300">
+    2026-11-24
   </span>
 
           <br/>
