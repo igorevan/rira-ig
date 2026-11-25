@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="8f2dd93e-251f-4864-b6ea-24af9d8668d2"/>
+  <id value="ab1babb8-64a4-49fe-9910-7cdff02d5d4b"/>
   <meta>
-    <lastUpdated value="2026-11-24T15:41:35.423-03:00"/>
+    <lastUpdated value="2026-11-25T09:52:17.389-03:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -20058,8 +20058,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:0f99b188-cade-4099-99e1-6dde5e82fb44"/>
-          <timestamp value="2026-11-24T15:43:22-03:00"/>
+          <identifier value="urn:uuid:bf3963d3-4f32-4752-868a-a6734761d2fc"/>
+          <timestamp value="2026-11-25T09:53:20-03:00"/>
           <total value="14230"/>
           <offset value="0"/>
           <parameter>
@@ -45138,8 +45138,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:0f99b188-cade-4099-99e1-6dde5e82fb44"/>
-          <timestamp value="2026-11-24T15:43:22-03:00"/>
+          <identifier value="urn:uuid:bf3963d3-4f32-4752-868a-a6734761d2fc"/>
+          <timestamp value="2026-11-25T09:53:20-03:00"/>
           <total value="14230"/>
           <offset value="0"/>
           <parameter>
@@ -50263,8 +50263,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:1de6bc4b-5e38-49ed-a6be-62b4c0a1cd1f"/>
-          <timestamp value="2026-11-24T15:43:22-03:00"/>
+          <identifier value="urn:uuid:2cbd32ae-46a1-41d2-8d20-12f8a897d5ad"/>
+          <timestamp value="2026-11-25T09:53:20-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -50402,8 +50402,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:1de6bc4b-5e38-49ed-a6be-62b4c0a1cd1f"/>
-          <timestamp value="2026-11-24T15:43:22-03:00"/>
+          <identifier value="urn:uuid:2cbd32ae-46a1-41d2-8d20-12f8a897d5ad"/>
+          <timestamp value="2026-11-25T09:53:20-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -50544,8 +50544,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:868aa63d-1df7-45e6-9908-44a8561f050d"/>
-          <timestamp value="2026-11-24T15:43:22-03:00"/>
+          <identifier value="urn:uuid:f59f4a6c-09f1-4d57-aa53-833825479704"/>
+          <timestamp value="2026-11-25T09:53:20-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -50682,8 +50682,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:868aa63d-1df7-45e6-9908-44a8561f050d"/>
-          <timestamp value="2026-11-24T15:43:22-03:00"/>
+          <identifier value="urn:uuid:f59f4a6c-09f1-4d57-aa53-833825479704"/>
+          <timestamp value="2026-11-25T09:53:20-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -50859,8 +50859,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:93e04c04-8005-4f53-8aca-6c3986bc6486"/>
-          <timestamp value="2026-11-24T15:43:22-03:00"/>
+          <identifier value="urn:uuid:a226265e-684b-487a-ad3d-50ced62cd3ad"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -51050,8 +51050,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:93e04c04-8005-4f53-8aca-6c3986bc6486"/>
-          <timestamp value="2026-11-24T15:43:22-03:00"/>
+          <identifier value="urn:uuid:a226265e-684b-487a-ad3d-50ced62cd3ad"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -51286,8 +51286,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:b75b6730-88cb-495f-a67f-93e03ac5a88e"/>
-          <timestamp value="2026-11-24T15:43:22-03:00"/>
+          <identifier value="urn:uuid:647acdb9-0b94-4d39-a1e0-2dd20504d223"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -51528,8 +51528,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:b75b6730-88cb-495f-a67f-93e03ac5a88e"/>
-          <timestamp value="2026-11-24T15:43:22-03:00"/>
+          <identifier value="urn:uuid:647acdb9-0b94-4d39-a1e0-2dd20504d223"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -51877,8 +51877,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:559cbb47-7034-4e72-b323-d894eb0d9abf"/>
-          <timestamp value="2026-11-24T15:43:22-03:00"/>
+          <identifier value="urn:uuid:0bc03b03-0e35-4c2a-8639-5ce63c32119d"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>
@@ -52245,8 +52245,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:559cbb47-7034-4e72-b323-d894eb0d9abf"/>
-          <timestamp value="2026-11-24T15:43:22-03:00"/>
+          <identifier value="urn:uuid:0bc03b03-0e35-4c2a-8639-5ce63c32119d"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>
@@ -52497,8 +52497,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:cc28aa3e-9412-40fe-be42-7ff2a07f506f"/>
-          <timestamp value="2026-11-24T15:43:22-03:00"/>
+          <identifier value="urn:uuid:af0b3697-07e9-4ad9-a2f8-317d0a173c16"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -52730,8 +52730,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:cc28aa3e-9412-40fe-be42-7ff2a07f506f"/>
-          <timestamp value="2026-11-24T15:43:22-03:00"/>
+          <identifier value="urn:uuid:af0b3697-07e9-4ad9-a2f8-317d0a173c16"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -52880,8 +52880,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:507ccf82-b1d9-4eb4-93ab-c0dd46a52548"/>
-          <timestamp value="2026-11-24T15:43:22-03:00"/>
+          <identifier value="urn:uuid:4718f45d-4aaf-4733-b83d-3f0dda17e4fd"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -53010,8 +53010,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:507ccf82-b1d9-4eb4-93ab-c0dd46a52548"/>
-          <timestamp value="2026-11-24T15:43:22-03:00"/>
+          <identifier value="urn:uuid:4718f45d-4aaf-4733-b83d-3f0dda17e4fd"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -73103,8 +73103,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:0643c8a0-b287-4d7d-bb8b-db009f77f377"/>
-          <timestamp value="2026-11-24T15:43:22-03:00"/>
+          <identifier value="urn:uuid:3012935e-90c1-43a0-af0a-a7b5db434d38"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="2714"/>
           <offset value="0"/>
           <parameter>
@@ -98186,8 +98186,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:0643c8a0-b287-4d7d-bb8b-db009f77f377"/>
-          <timestamp value="2026-11-24T15:43:22-03:00"/>
+          <identifier value="urn:uuid:3012935e-90c1-43a0-af0a-a7b5db434d38"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="2714"/>
           <offset value="0"/>
           <parameter>
@@ -123280,8 +123280,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:fcd4c215-8486-437d-b7bb-afcee4036585"/>
-          <timestamp value="2026-11-24T15:43:22-03:00"/>
+          <identifier value="urn:uuid:beb8fde1-6e9b-4047-af54-905137946ce3"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="14916"/>
           <offset value="0"/>
           <parameter>
@@ -148378,8 +148378,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:fcd4c215-8486-437d-b7bb-afcee4036585"/>
-          <timestamp value="2026-11-24T15:43:22-03:00"/>
+          <identifier value="urn:uuid:beb8fde1-6e9b-4047-af54-905137946ce3"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="14916"/>
           <offset value="0"/>
           <parameter>
@@ -174479,8 +174479,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:949170cb-9ed1-4e60-b91b-56d6599c26bd"/>
-          <timestamp value="2026-11-24T15:43:22-03:00"/>
+          <identifier value="urn:uuid:676299c0-5f21-41c7-9244-5f8406e4209f"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="55698"/>
           <offset value="0"/>
           <parameter>
@@ -200580,8 +200580,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:949170cb-9ed1-4e60-b91b-56d6599c26bd"/>
-          <timestamp value="2026-11-24T15:43:22-03:00"/>
+          <identifier value="urn:uuid:676299c0-5f21-41c7-9244-5f8406e4209f"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="55698"/>
           <offset value="0"/>
           <parameter>
@@ -205730,8 +205730,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:425f659a-9377-4970-b6ee-4c80d0d4aa25"/>
-          <timestamp value="2026-11-24T15:43:23-03:00"/>
+          <identifier value="urn:uuid:a73c1265-7562-4713-9b51-a72867d1421e"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -205891,8 +205891,8 @@
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:425f659a-9377-4970-b6ee-4c80d0d4aa25"/>
-          <timestamp value="2026-11-24T15:43:23-03:00"/>
+          <identifier value="urn:uuid:a73c1265-7562-4713-9b51-a72867d1421e"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -206303,8 +206303,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:72f39142-cbfc-44af-8264-7c7c6fdc9e08"/>
-          <timestamp value="2026-11-24T15:43:23-03:00"/>
+          <identifier value="urn:uuid:c958244f-9ac6-4c02-bbe9-123a42c9990d"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="12"/>
           <offset value="0"/>
           <parameter>
@@ -206768,8 +206768,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:72f39142-cbfc-44af-8264-7c7c6fdc9e08"/>
-          <timestamp value="2026-11-24T15:43:23-03:00"/>
+          <identifier value="urn:uuid:c958244f-9ac6-4c02-bbe9-123a42c9990d"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="12"/>
           <offset value="0"/>
           <parameter>
@@ -207003,8 +207003,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:5ecf90b1-b09e-4d62-867e-43eebc99ba54"/>
-          <timestamp value="2026-11-24T15:43:23-03:00"/>
+          <identifier value="urn:uuid:141b3ab7-bef0-4c8d-808c-c8a93e495981"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -207194,8 +207194,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:5ecf90b1-b09e-4d62-867e-43eebc99ba54"/>
-          <timestamp value="2026-11-24T15:43:23-03:00"/>
+          <identifier value="urn:uuid:141b3ab7-bef0-4c8d-808c-c8a93e495981"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -207438,8 +207438,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:112b8fe0-e503-4a2c-8e03-a912ecf8a78f"/>
-          <timestamp value="2026-11-24T15:43:23-03:00"/>
+          <identifier value="urn:uuid:9c0e8d88-cc23-4dd9-b2ac-36a909b27666"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="7"/>
           <offset value="0"/>
           <parameter>
@@ -207693,8 +207693,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:112b8fe0-e503-4a2c-8e03-a912ecf8a78f"/>
-          <timestamp value="2026-11-24T15:43:23-03:00"/>
+          <identifier value="urn:uuid:9c0e8d88-cc23-4dd9-b2ac-36a909b27666"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="7"/>
           <offset value="0"/>
           <parameter>
@@ -207958,8 +207958,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:9dc076d8-97a4-4b38-b69c-e891d6bf4a56"/>
-          <timestamp value="2026-11-24T15:43:23-03:00"/>
+          <identifier value="urn:uuid:8d35366f-1e12-4161-ad9b-4c11ecf86e5b"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="7"/>
           <offset value="0"/>
           <parameter>
@@ -208227,8 +208227,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:9dc076d8-97a4-4b38-b69c-e891d6bf4a56"/>
-          <timestamp value="2026-11-24T15:43:23-03:00"/>
+          <identifier value="urn:uuid:8d35366f-1e12-4161-ad9b-4c11ecf86e5b"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="7"/>
           <offset value="0"/>
           <parameter>
@@ -208580,8 +208580,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:e8f95728-1e27-4d56-9476-d24e752816fc"/>
-          <timestamp value="2026-11-24T15:43:23-03:00"/>
+          <identifier value="urn:uuid:070a8474-d67a-4c13-8a7c-490389510660"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="11"/>
           <offset value="0"/>
           <parameter>
@@ -208949,8 +208949,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:e8f95728-1e27-4d56-9476-d24e752816fc"/>
-          <timestamp value="2026-11-24T15:43:23-03:00"/>
+          <identifier value="urn:uuid:070a8474-d67a-4c13-8a7c-490389510660"/>
+          <timestamp value="2026-11-25T09:53:21-03:00"/>
           <total value="11"/>
           <offset value="0"/>
           <parameter>
@@ -209164,8 +209164,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:97cb27d6-8d9d-4b53-854e-f608dc6dde1a"/>
-          <timestamp value="2026-11-24T15:43:23-03:00"/>
+          <identifier value="urn:uuid:fce03fc6-bbc2-4ce2-8685-5e535e897f10"/>
+          <timestamp value="2026-11-25T09:53:22-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -209344,8 +209344,8 @@ A specific time might or might not be pre-allocated.</p>
         </jurisdiction>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:97cb27d6-8d9d-4b53-854e-f608dc6dde1a"/>
-          <timestamp value="2026-11-24T15:43:23-03:00"/>
+          <identifier value="urn:uuid:fce03fc6-bbc2-4ce2-8685-5e535e897f10"/>
+          <timestamp value="2026-11-25T09:53:22-03:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
